@@ -33,214 +33,68 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public FrameAnimationLayer(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
 			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "FrameAnimationLayer")
 		{
-			//IL_006e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0073: Unknown result type (might be due to invalid IL or missing references)
-			//IL_009b: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00a0: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
-			while (true)
+			//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0061: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0089: Unknown result type (might be due to invalid IL or missing references)
+			//IL_008e: Unknown result type (might be due to invalid IL or missing references)
+			//IL_009a: Unknown result type (might be due to invalid IL or missing references)
+			//IL_009f: Unknown result type (might be due to invalid IL or missing references)
+			_animationTexture = FrameAnimationLayer.smethod_1(FrameAnimationLayer.smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)).Load<Texture2D>(string_0);
+			_timePerFrame = float_0 / (float)int_0;
+			_numberOfFrames = int_0;
+			_currentFrame = 0;
+			_sourceRectangle = new Rectangle(0, 0, (int)((float)FrameAnimationLayer.smethod_2(_animationTexture) / (float)int_0), FrameAnimationLayer.smethod_3(_animationTexture));
+			_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * float_1), (int)((float)_sourceRectangle.Height * float_1));
+			_origin = new Vector2((float)int_1, (float)int_2);
+			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime time)
 			{
-				int num = -394294418;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xA7528129u) % 6u)
-					{
-					case 5u:
-						base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime time)
-						{
-							MyUpdate((float)FrameAnimationLayer.smethod_9(time).Milliseconds / 1000f);
-						};
-						base._B6VrMlmWofCGqEzjzgFJiAliCge = MyDraw;
-						num = ((int)num2 * -966892724) ^ 0x2939BCF7;
-						continue;
-					case 3u:
-						_currentFrame = 0;
-						_sourceRectangle = new Rectangle(0, 0, (int)((float)FrameAnimationLayer.smethod_2(_animationTexture) / (float)int_0), FrameAnimationLayer.smethod_3(_animationTexture));
-						_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * float_1), (int)((float)_sourceRectangle.Height * float_1));
-						_origin = new Vector2((float)int_1, (float)int_2);
-						num = ((int)num2 * -188304956) ^ 0x160C2E98;
-						continue;
-					case 1u:
-						_animationTexture = FrameAnimationLayer.smethod_1(FrameAnimationLayer.smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)).Load<Texture2D>(string_0);
-						_timePerFrame = float_0 / (float)int_0;
-						num = (int)((num2 * 897694781) ^ 0xB01D76);
-						continue;
-					case 0u:
-						_numberOfFrames = int_0;
-						num = (int)(num2 * 416486307) ^ -1827423376;
-						continue;
-					default:
-						return;
-					case 4u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-				}
-			}
+				MyUpdate((float)FrameAnimationLayer.smethod_9(time).Milliseconds / 1000f);
+			};
+			base._B6VrMlmWofCGqEzjzgFJiAliCge = MyDraw;
 		}
 
 		public void Play(int x, int y, int startFrame, float angle)
 		{
 			_destinationRectangle.X = x;
 			_destinationRectangle.Y = y;
-			while (true)
-			{
-				int num = 857711303;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x74A834B0u) % 3u)
-					{
-					case 1u:
-						goto IL_001a;
-					case 2u:
-						break;
-					default:
-						_angle = FrameAnimationLayer.smethod_4(angle);
-						return;
-					}
-					break;
-					IL_001a:
-					_currentFrame = startFrame;
-					num = ((int)num2 * -1055463645) ^ 0x11943D3;
-				}
-			}
+			_currentFrame = startFrame;
+			_angle = FrameAnimationLayer.smethod_4(angle);
 		}
 
 		private void MyUpdate(float deltaTime)
 		{
-			if (_currentFrame < 0)
+			if (_currentFrame >= 0)
 			{
-				goto IL_0084;
-			}
-			goto IL_0101;
-			IL_0101:
-			_time += deltaTime;
-			int num = 1682114882;
-			goto IL_00c7;
-			IL_00c7:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x6F6CEAB6u) % 10u)
+				_time += deltaTime;
+				while (_time > _timePerFrame)
 				{
-				case 9u:
 					_time -= _timePerFrame;
 					_currentFrame++;
-					num = 759553877;
-					continue;
-				case 7u:
-					break;
-				case 6u:
+				}
+				if (_currentFrame < _numberOfFrames)
+				{
 					_sourceRectangle.X = _currentFrame * _sourceRectangle.Width;
-					num = 345150992;
-					continue;
-				case 5u:
-					goto end_IL_00c7;
-				case 4u:
-					num = ((int)num2 * -1279316238) ^ -268268547;
-					continue;
-				case 0u:
-				{
-					int num3;
-					int num4;
-					if (_currentFrame < _numberOfFrames)
-					{
-						num3 = 1900414154;
-						num4 = 1900414154;
-					}
-					else
-					{
-						num3 = 415976630;
-						num4 = 415976630;
-					}
-					num = num3 ^ ((int)num2 * -137036105);
-					continue;
-				}
-				default:
-					return;
-				case 3u:
-					goto IL_0101;
-				case 1u:
-					return;
-				case 2u:
-					return;
-				case 8u:
-					_currentFrame = 0;
-					return;
-				}
-				int num5;
-				if (!(_time <= _timePerFrame))
-				{
-					num = 1660245577;
-					num5 = 1660245577;
 				}
 				else
 				{
-					num = 968276006;
-					num5 = 968276006;
+					_currentFrame = 0;
 				}
-				continue;
-				end_IL_00c7:
-				break;
 			}
-			goto IL_0084;
-			IL_0084:
-			num = 1426995957;
-			goto IL_00c7;
 		}
 
 		private void MyDraw(SpriteBatch spriteBatch)
 		{
-			//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0031: Unknown result type (might be due to invalid IL or missing references)
-			//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0047: Unknown result type (might be due to invalid IL or missing references)
-			//IL_009c: Unknown result type (might be due to invalid IL or missing references)
-			if (_currentFrame < 0)
+			//IL_0012: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+			//IL_002f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0039: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0045: Unknown result type (might be due to invalid IL or missing references)
+			if (_currentFrame >= 0)
 			{
-				goto IL_0066;
+				FrameAnimationLayer.smethod_6(spriteBatch, (SpriteSortMode)0, (BlendState)null, (SamplerState)null, (DepthStencilState)null, (RasterizerState)null, (Effect)null, (Matrix?)FrameAnimationLayer.smethod_5((_fAUddQEKfZyemRb327NhM3GGlmzA)this));
+				FrameAnimationLayer.smethod_7(spriteBatch, _animationTexture, _destinationRectangle, (Rectangle?)_sourceRectangle, Color.get_White(), _angle, _origin, (SpriteEffects)0, 0f);
+				FrameAnimationLayer.smethod_8(spriteBatch);
 			}
-			goto IL_0094;
-			IL_0094:
-			FrameAnimationLayer.smethod_6(spriteBatch, (SpriteSortMode)0, (BlendState)null, (SamplerState)null, (DepthStencilState)null, (RasterizerState)null, (Effect)null, (Matrix?)FrameAnimationLayer.smethod_5((_fAUddQEKfZyemRb327NhM3GGlmzA)this));
-			int num = -1720762027;
-			goto IL_006b;
-			IL_006b:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x85004368u) % 6u)
-				{
-				case 3u:
-					FrameAnimationLayer.smethod_8(spriteBatch);
-					num = ((int)num2 * -897735691) ^ 0x7349949B;
-					continue;
-				case 1u:
-					FrameAnimationLayer.smethod_7(spriteBatch, _animationTexture, _destinationRectangle, (Rectangle?)_sourceRectangle, Color.get_White(), _angle, _origin, (SpriteEffects)0, 0f);
-					num = ((int)num2 * -1358630786) ^ 0x6BA610F1;
-					continue;
-				case 0u:
-					break;
-				default:
-					return;
-				case 5u:
-					goto IL_0094;
-				case 2u:
-					return;
-				case 4u:
-					return;
-				}
-				break;
-			}
-			goto IL_0066;
-			IL_0066:
-			num = -595600180;
-			goto IL_006b;
 		}
 
 		static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
@@ -335,298 +189,85 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public override void Start()
 	{
 		this.method_0();
-		ClubPoolStaticGHINPC clubPoolStaticGHINPC2 = default(ClubPoolStaticGHINPC);
-		ClubPoolStaticJKNPC clubPoolStaticJKNPC2 = default(ClubPoolStaticJKNPC);
-		ClubPoolStaticCNPC clubPoolStaticCNPC = default(ClubPoolStaticCNPC);
-		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = default(ClubPoolStaticCNPC2);
-		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = default(ClubPoolStaticDNPC2);
-		ClubPoolStaticDNPC clubPoolStaticDNPC = default(ClubPoolStaticDNPC);
-		ClubPoolStaticMNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_2 = default(ClubPoolStaticMNPC);
-		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC = default(ClubPoolStaticGHINPC2);
-		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC = default(ClubPoolStaticJKNPC2);
-		ClubPoolStaticANPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_7 = default(ClubPoolStaticANPC);
-		ClubPoolStaticNNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_4 = default(ClubPoolStaticNNPC);
-		ClubPoolStaticOPNPC clubPoolStaticOPNPC2 = default(ClubPoolStaticOPNPC);
-		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC = default(ClubPoolStaticOPNPC2);
-		while (true)
+		ClubPoolStaticANPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_ = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_, -1400f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_, 910f);
+		ClubPoolStaticBNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_2, -1401f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_2, 230f);
+		ClubPoolStaticENPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_3 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticENPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_3, 106f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_3, 397f);
+		ClubPoolStaticCNPC clubPoolStaticCNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC, -180f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC, 450f);
+		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticCNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticCNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC));
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC));
+		ClubPoolStaticFNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_4 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticFNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_4, 500f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_4, 180f);
+		ClubPoolStaticGHINPC clubPoolStaticGHINPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC, 370f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC, 450f);
+		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticGHINPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticGHINPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC));
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC));
+		ClubPoolStaticDNPC clubPoolStaticDNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC, 50f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC, 690f);
+		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticDNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticDNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC));
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC));
+		if (_showRemy)
 		{
-			int num = -849694252;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xDAACFC62u) % 31u)
-				{
-				case 30u:
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2, 450f);
-					num = (int)((num2 * 213031639) ^ 0x7E823C26);
-					continue;
-				case 29u:
-					clubPoolStaticJKNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = -599646474;
-					continue;
-				case 28u:
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC, 450f);
-					clubPoolStaticCNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					num = (int)(num2 * 683544111) ^ -1374563880;
-					continue;
-				case 27u:
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC, -180f);
-					num = ((int)num2 * -1980323773) ^ -159446121;
-					continue;
-				case 26u:
-				{
-					ClubPoolStaticFNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_8 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticFNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_8, 500f);
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_8, 180f);
-					num = (int)(num2 * 492586341) ^ -115800533;
-					continue;
-				}
-				case 25u:
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC));
-					num = ((int)num2 * -795474363) ^ 0x3CFDC5E0;
-					continue;
-				case 24u:
-					clubPoolStaticCNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticCNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC));
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC));
-					num = ((int)num2 * -1518523120) ^ -1467177452;
-					continue;
-				case 23u:
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC, 690f);
-					clubPoolStaticDNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					num = (int)(num2 * 17859633) ^ -1008921678;
-					continue;
-				case 22u:
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_2, 1879f);
-					num = (int)(num2 * 2063991849) ^ -689012140;
-					continue;
-				case 21u:
-					clubPoolStaticGHINPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					num = (int)(num2 * 198105442) ^ -1320787367;
-					continue;
-				case 20u:
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, 150f);
-					ClubPoolScene.smethod_29((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, (Action)OnRemyClick);
-					num = (int)(num2 * 850531904) ^ -1076411890;
-					continue;
-				case 19u:
-					clubPoolStaticDNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticDNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-					num = (int)(num2 * 11900237) ^ -325469046;
-					continue;
-				case 18u:
-					clubPoolStaticJKNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					clubPoolStaticJKNPC._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticJKNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA;
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2));
-					num = (int)((num2 * 1018564336) ^ 0x5D84DE7E);
-					continue;
-				case 17u:
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2, 1269f);
-					num = (int)(num2 * 895245480) ^ -2099627873;
-					continue;
-				case 16u:
-					_remy = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticRemyNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, 1010f);
-					num = (int)(num2 * 1552579201) ^ -72235970;
-					continue;
-				case 15u:
-					qGGOTxZ8aNWGh0hc26wcmx8wmwT_7 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					num = (int)(num2 * 1627727695) ^ -596356059;
-					continue;
-				case 14u:
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2, 370f);
-					num = (int)((num2 * 1567641972) ^ 0x2C719C60);
-					continue;
-				case 13u:
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2, 383f);
-					num = ((int)num2 * -336060421) ^ 0x268F1C36;
-					continue;
-				case 12u:
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_4, 106f);
-					clubPoolStaticOPNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2, 2223f);
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2, 442f);
-					num = (int)((num2 * 859421961) ^ 0x4F8ED53);
-					continue;
-				case 11u:
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_7, -1400f);
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_7, 910f);
-					num = (int)((num2 * 1670846470) ^ 0x61B42ACE);
-					continue;
-				case 10u:
-				{
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC));
-					int num3;
-					int num4;
-					if (_showRemy)
-					{
-						num3 = -166608524;
-						num4 = -166608524;
-					}
-					else
-					{
-						num3 = -499149193;
-						num4 = -499149193;
-					}
-					num = num3 ^ (int)(num2 * 1012251925);
-					continue;
-				}
-				case 9u:
-					clubPoolStaticOPNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					clubPoolStaticOPNPC._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticOPNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA;
-					num = ((int)num2 * -464967005) ^ -68737174;
-					continue;
-				case 8u:
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC, 50f);
-					num = ((int)num2 * -1454979047) ^ -397509967;
-					continue;
-				case 7u:
-				{
-					ClubPoolStaticBNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_5 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_5, -1401f);
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_5, 230f);
-					ClubPoolStaticENPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_6 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticENPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_6, 106f);
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_6, 397f);
-					clubPoolStaticCNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = ((int)num2 * -299658423) ^ 0x36DE736B;
-					continue;
-				}
-				case 6u:
-					clubPoolStaticGHINPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = ((int)num2 * -1304101851) ^ -1001113445;
-					continue;
-				case 4u:
-					clubPoolStaticGHINPC._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticGHINPC2._qFVIvzuvIuKKG5vOrovLtn4NplA;
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2));
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2));
-					clubPoolStaticDNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = (int)(num2 * 186609916) ^ -534495206;
-					continue;
-				case 3u:
-					qGGOTxZ8aNWGh0hc26wcmx8wmwT_4 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticNNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_4, 2039f);
-					num = (int)((num2 * 1615221052) ^ 0x755866EC);
-					continue;
-				case 2u:
-				{
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2));
-					ClubPoolStaticLNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_3 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticLNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_3, 1630f);
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_3, 106f);
-					qGGOTxZ8aNWGh0hc26wcmx8wmwT_2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticMNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					num = (int)(num2 * 274151110) ^ -715657279;
-					continue;
-				}
-				case 0u:
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_2, 106f);
-					num = (int)((num2 * 1450165441) ^ 0x331D6517);
-					continue;
-				case 5u:
-					break;
-				default:
-				{
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2));
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2));
-					ClubPoolStaticQRNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_ = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticQRNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_, 2694f);
-					ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_, 97f);
-					return;
-				}
-				}
-				break;
-			}
+			_remy = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticRemyNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+			ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, 1010f);
+			ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, 150f);
+			ClubPoolScene.smethod_29((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, (Action)OnRemyClick);
 		}
+		ClubPoolStaticJKNPC clubPoolStaticJKNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC, 1269f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC, 383f);
+		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticJKNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticJKNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC));
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC));
+		ClubPoolStaticLNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_5 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticLNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_5, 1630f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_5, 106f);
+		ClubPoolStaticMNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_6 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticMNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_6, 1879f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_6, 106f);
+		ClubPoolStaticNNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_7 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticNNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_7, 2039f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_7, 106f);
+		ClubPoolStaticOPNPC clubPoolStaticOPNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC, 2223f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC, 442f);
+		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticOPNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticOPNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC));
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC));
+		ClubPoolStaticQRNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_8 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticQRNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_8, 2694f);
+		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_8, 97f);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		if (_Bj3jScuqBJCFV58AWBDg8HofpqY)
 		{
-			while (true)
+			List<_ujAkjlfN5TywwbLAUDzPvtab6uJ> list = (from x in ClubPoolScene.smethod_30((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)
+				where x is _3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve && (!(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticNPC) || !(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticSpineNPC))
+				select x).ToList();
+			list.ForEach(delegate(_ujAkjlfN5TywwbLAUDzPvtab6uJ x)
 			{
-				int num = -531908628;
-				while (true)
-				{
-					switch ((uint)(num ^ -42112052) % 3u)
-					{
-					case 2u:
-					{
-						List<_ujAkjlfN5TywwbLAUDzPvtab6uJ> list = ClubPoolScene.smethod_30((_7UlnfykmEmZDFt3BmCKZekI43Ih)this).Where(delegate(_ujAkjlfN5TywwbLAUDzPvtab6uJ x)
-						{
-							_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve = x as _3IHp43rpkJgOBcY9lrIrwMuwWve;
-							while (true)
-							{
-								int num2 = 2139648054;
-								while (true)
-								{
-									uint num3;
-									switch ((num3 = (uint)num2 ^ 0x2E4AB0ECu) % 6u)
-									{
-									case 5u:
-									{
-										int num6;
-										int num7;
-										if (!(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticNPC))
-										{
-											num6 = 2085972234;
-											num7 = 2085972234;
-										}
-										else
-										{
-											num6 = 751692615;
-											num7 = 751692615;
-										}
-										num2 = num6 ^ (int)(num3 * 724862403);
-										continue;
-									}
-									case 4u:
-									{
-										int num4;
-										int num5;
-										if (_3IHp43rpkJgOBcY9lrIrwMuwWve != null)
-										{
-											num4 = -629927197;
-											num5 = -629927197;
-										}
-										else
-										{
-											num4 = -803395575;
-											num5 = -803395575;
-										}
-										num2 = num4 ^ (int)(num3 * 1698782013);
-										continue;
-									}
-									case 0u:
-										break;
-									default:
-										return false;
-									case 2u:
-										return !(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticSpineNPC);
-									case 3u:
-										return true;
-									}
-									break;
-								}
-							}
-						}).ToList();
-						list.ForEach(delegate(_ujAkjlfN5TywwbLAUDzPvtab6uJ x)
-						{
-							x._ac2H6kMdrgPhXXxabsikjji4SiT = 3;
-						});
-						num = -2144597947;
-						continue;
-					}
-					case 0u:
-						break;
-					default:
-						goto end_IL_007f;
-					}
-					break;
-				}
-				continue;
-				end_IL_007f:
-				break;
-			}
+				x._ac2H6kMdrgPhXXxabsikjji4SiT = 3;
+			});
 		}
 		this.method_1(gameTime);
 	}

@@ -17,57 +17,13 @@ public class LivingRoomScene : TimeOfDayScene
 	public override void Update(GameTime gameTime)
 	{
 		_tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
-		while (true)
-		{
-			int num = 1813602651;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x1E68F367u) % 3u)
-				{
-				case 1u:
-					goto IL_0009;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-				IL_0009:
-				_phoneNag._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
-				num = (int)((num2 * 2139518781) ^ 0x4CCCA19F);
-			}
-		}
+		_phoneNag._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
 	}
 
 	public override void End()
 	{
 		this.method_3();
-		while (true)
-		{
-			int num = 885460122;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x6FCC987Eu) % 3u)
-				{
-				case 1u:
-					goto IL_0008;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-				IL_0008:
-				_phoneNag._tO46aYSBLFIuhFNlhbrAeWbFDSf();
-				num = (int)(num2 * 349949570) ^ -1942601087;
-			}
-		}
+		_phoneNag._tO46aYSBLFIuhFNlhbrAeWbFDSf();
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_18(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

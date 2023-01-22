@@ -26,28 +26,6 @@ public class _Qzndj0TwqO8yTQMbRwL4FFwlTbv
 
 	public _Qzndj0TwqO8yTQMbRwL4FFwlTbv()
 	{
-		while (true)
-		{
-			int num = -253315684;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x8A289CA6u) % 3u)
-				{
-				case 1u:
-					goto IL_0008;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-				IL_0008:
-				_Ig69b1o9628MyPRXaYUwjVa31Xf = new List<string>();
-				num = ((int)num2 * -1031328948) ^ 0x7B0894A0;
-			}
-		}
+		_Ig69b1o9628MyPRXaYUwjVa31Xf = new List<string>();
 	}
 }

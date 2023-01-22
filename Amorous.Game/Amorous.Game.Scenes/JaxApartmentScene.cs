@@ -5,28 +5,8 @@ public class JaxApartmentScene : TimeOfDayScene
 	public JaxApartmentScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		while (true)
-		{
-			int num = 285740870;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x1EF7C8D6u) % 3u)
-				{
-				case 1u:
-					goto IL_0009;
-				case 0u:
-					break;
-				default:
-					JaxApartmentScene.smethod_19("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
-					return;
-				}
-				break;
-				IL_0009:
-				JaxApartmentScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/JaxApartment/jax background apartment", 0, 0);
-				num = (int)((num2 * 430504250) ^ 0x18698391);
-			}
-		}
+		JaxApartmentScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/JaxApartment/jax background apartment", 0, 0);
+		JaxApartmentScene.smethod_19("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_18(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

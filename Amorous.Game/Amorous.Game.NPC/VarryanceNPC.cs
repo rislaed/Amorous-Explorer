@@ -30,49 +30,13 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 	public VarryanceNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Varryance", 1f)
 	{
-		while (true)
-		{
-			int num = -1797181613;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xFD6C932Au) % 8u)
-				{
-				case 7u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Varryance Body");
-					num = ((int)num2 * -1499453910) ^ 0xD123FF9;
-					continue;
-				case 6u:
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					num = (int)((num2 * 545146963) ^ 0x2D970DF2);
-					continue;
-				case 5u:
-					VarryanceNPC.smethod_17(VarryanceNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Varryance Shirt")));
-					num = (int)((num2 * 2128211301) ^ 0x474269DB);
-					continue;
-				case 3u:
-					_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1649;
-					num = ((int)num2 * -497855552) ^ -901334467;
-					continue;
-				case 1u:
-					_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 850;
-					num = (int)(num2 * 1126153955) ^ -1846952774;
-					continue;
-				case 0u:
-					VarryanceNPC.smethod_17(VarryanceNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Varryance Pants")));
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-					num = ((int)num2 * -1203273739) ^ 0x130FADC;
-					continue;
-				default:
-					return;
-				case 4u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-			}
-		}
+		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 850;
+		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1649;
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Varryance Body");
+		VarryanceNPC.smethod_17(VarryanceNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Varryance Shirt")));
+		VarryanceNPC.smethod_17(VarryanceNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Varryance Pants")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
@@ -83,79 +47,26 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
+		case NPCLocation.Middle:
+			VarryanceNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			VarryanceNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 735f);
+			VarryanceNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			VarryanceNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			break;
 		case NPCLocation.Left:
 			VarryanceNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
 			VarryanceNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -300f);
-			num = 781010604;
-			goto IL_00e3;
-		case NPCLocation.Middle:
-			goto IL_007b;
-		default:
-			goto IL_0094;
+			VarryanceNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			VarryanceNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			break;
 		case NPCLocation.Right:
-			goto IL_0125;
-			IL_00e3:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x29ACA4A8u) % 12u)
-				{
-				case 9u:
-					VarryanceNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
-					num = ((int)num2 * -422567317) ^ -2099650117;
-					continue;
-				case 7u:
-					break;
-				case 6u:
-					VarryanceNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-					VarryanceNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
-					num = ((int)num2 * -1975189466) ^ -37050603;
-					continue;
-				case 4u:
-					goto IL_007b;
-				case 3u:
-					goto IL_0094;
-				case 2u:
-					VarryanceNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1370f);
-					VarryanceNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-					num = (int)(num2 * 1795485830) ^ -1200918283;
-					continue;
-				case 0u:
-					VarryanceNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-					VarryanceNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
-					num = ((int)num2 * -1880553026) ^ 0x6EB3E99B;
-					continue;
-				default:
-					return;
-				case 5u:
-					goto IL_0125;
-				case 1u:
-					return;
-				case 8u:
-					return;
-				case 10u:
-					return;
-				case 11u:
-					return;
-				}
-				break;
-			}
-			goto case NPCLocation.Left;
-			IL_0125:
 			VarryanceNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = 1489795186;
-			goto IL_00e3;
-			IL_0094:
-			num = 423362786;
-			goto IL_00e3;
-			IL_007b:
-			VarryanceNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			VarryanceNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 735f);
-			num = 1793759830;
-			goto IL_00e3;
+			VarryanceNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1370f);
+			VarryanceNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			VarryanceNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			break;
 		}
 	}
 

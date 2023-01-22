@@ -19,29 +19,7 @@ public class _noCtOrWje2WCEbkCre6cfHiMXh5 : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<PlaySex
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
 		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		while (true)
-		{
-			int num = -858769617;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x85F0569Bu) % 3u)
-				{
-				case 1u:
-					goto IL_0008;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-				IL_0008:
-				base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._gYGB98heFqsLp9tgJbdCP01IKV2(_hZ0bFFCDXp4CkpoVdtAUZT5cpIK);
-				num = ((int)num2 * -30858773) ^ 0x281C96CE;
-			}
-		}
+		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._gYGB98heFqsLp9tgJbdCP01IKV2(_hZ0bFFCDXp4CkpoVdtAUZT5cpIK);
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)

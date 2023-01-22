@@ -40,71 +40,24 @@ public class ChefAssissantNPC : LayerNPC<ChefAssissantNPC.EHeads, ChefAssissantN
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
 			ChefAssissantNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = 1746873237;
-			goto IL_0089;
-		default:
-			goto IL_005f;
-		case NPCLocation.Left:
-			goto IL_00c3;
-		case NPCLocation.Right:
+			ChefAssissantNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 636f);
+			ChefAssissantNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 117f);
 			break;
-			IL_0089:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xC774C8Fu) % 10u)
-				{
-				case 8u:
-					ChefAssissantNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 636f);
-					num = ((int)num2 * -1932015554) ^ -476054247;
-					continue;
-				case 7u:
-					break;
-				case 4u:
-					ChefAssissantNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 117f);
-					num = (int)((num2 * 1359353144) ^ 0x16EF9796);
-					continue;
-				case 2u:
-					goto IL_005f;
-				case 0u:
-					ChefAssissantNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-					ChefAssissantNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 117f);
-					num = (int)((num2 * 524641321) ^ 0x2572544A);
-					continue;
-				default:
-					return;
-				case 5u:
-					goto IL_00c3;
-				case 1u:
-					return;
-				case 3u:
-					return;
-				case 9u:
-					return;
-				case 6u:
-					goto end_IL_000a;
-				}
-				break;
-			}
-			goto case NPCLocation.Middle;
-			IL_00c3:
+		case NPCLocation.Left:
 			ChefAssissantNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			num = 325751357;
-			goto IL_0089;
-			IL_005f:
-			num = 19239176;
-			goto IL_0089;
-			end_IL_000a:
+			ChefAssissantNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			ChefAssissantNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 117f);
+			break;
+		case NPCLocation.Right:
+			ChefAssissantNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			ChefAssissantNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1272f);
+			ChefAssissantNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 117f);
 			break;
 		}
-		ChefAssissantNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-		ChefAssissantNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1272f);
-		ChefAssissantNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 117f);
 	}
 
 	static _EZ0kOLXoEoEfWGQDdTbNqaPzDUh smethod_16(_EZ0kOLXoEoEfWGQDdTbNqaPzDUh _EZ0kOLXoEoEfWGQDdTbNqaPzDUh_0)

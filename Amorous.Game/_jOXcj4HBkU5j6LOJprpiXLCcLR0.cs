@@ -43,73 +43,26 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 
 		internal void _K6ChlThGNJzhDniJ1it7PMagA2d(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0218: Unknown result type (might be due to invalid IL or missing references)
+			//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0225: Unknown result type (might be due to invalid IL or missing references)
+			//IL_022a: Unknown result type (might be due to invalid IL or missing references)
 			RenderTargetBinding[] renderTargetBinding_ = _BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_2(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)));
-			float num3 = default(float);
-			while (true)
-			{
-				int num = 1708838492;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xCFBAD5Du) % 12u)
-					{
-					case 10u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskEnd"), num3 / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Inverse"), _wr6xcvFOgUbaTATC17S6Y9v3y3S._z63evmklawgrVTepZWr3BQhfZCK);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_18(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_17(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_16(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_15(_2e92rEtSCXO9jXcjI77aTgE9ZBq)), 0));
-						spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.X, (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Y), Color.get_White());
-						num = (int)((num2 * 2100513107) ^ 0x47B06A7C);
-						continue;
-					case 9u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskStart"), _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
-						num = ((int)num2 * -742408634) ^ -1887275123;
-						continue;
-					case 8u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_5(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
-						num = ((int)num2 * -369931997) ^ -1903507603;
-						continue;
-					case 6u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolOffset"), 0);
-						num = ((int)num2 * -1020670258) ^ -433298044;
-						continue;
-					case 5u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskTexture"), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
-						num = (int)((num2 * 532984158) ^ 0x4A1A8F42);
-						continue;
-					case 4u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_6(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), renderTargetBinding_);
-						num = ((int)num2 * -1339763536) ^ 0x57054935;
-						continue;
-					case 3u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_4(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), Color.get_Transparent());
-						num = (int)((num2 * 63321381) ^ 0x782F6E9A);
-						continue;
-					case 2u:
-						num3 = _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF + (float)_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_8(_0NizriMRCkKJuXStgvnNKe6Lo4y);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolSpeed"), 0.1f);
-						num = ((int)num2 * -1369051648) ^ 0x47D6EDCB;
-						continue;
-					case 1u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_3(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), _YazjYDLENT6HQ0JTluCcQMsqZaB);
-						num = (int)(num2 * 1866149394) ^ -746670092;
-						continue;
-					case 0u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_7(spriteBatch_0, (SpriteSortMode)1, BlendState.AlphaBlend);
-						num = ((int)num2 * -229338112) ^ 0x4E3F06FF;
-						continue;
-					case 11u:
-						break;
-					default:
-						spriteBatch_0.End();
-						return;
-					}
-					break;
-				}
-			}
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_3(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), _YazjYDLENT6HQ0JTluCcQMsqZaB);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_4(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), Color.get_Transparent());
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_5(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_6(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), renderTargetBinding_);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_7(spriteBatch_0, (SpriteSortMode)1, BlendState.AlphaBlend);
+			float num = _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF + (float)_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_8(_0NizriMRCkKJuXStgvnNKe6Lo4y);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolSpeed"), 0.1f);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolOffset"), 0);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskTexture"), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskStart"), _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskEnd"), num / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Inverse"), _wr6xcvFOgUbaTATC17S6Y9v3y3S._z63evmklawgrVTepZWr3BQhfZCK);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_18(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_17(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_16(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_15(_2e92rEtSCXO9jXcjI77aTgE9ZBq)), 0));
+			spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.X, (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Y), Color.get_White());
+			spriteBatch_0.End();
 		}
 
 		static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
@@ -251,73 +204,26 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 		});
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_9((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)this, (Action<SpriteBatch, SkeletonMeshRenderer>)delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0218: Unknown result type (might be due to invalid IL or missing references)
+			//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0225: Unknown result type (might be due to invalid IL or missing references)
+			//IL_022a: Unknown result type (might be due to invalid IL or missing references)
 			RenderTargetBinding[] renderTargetBinding_ = _BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_2(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)));
-			float num3 = default(float);
-			while (true)
-			{
-				int num = 1708838492;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xCFBAD5Du) % 12u)
-					{
-					case 10u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskEnd"), num3 / (float)rectangle_0.Height);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Inverse"), bool_0);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_18(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_17(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_16(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_15(_2e92rEtSCXO9jXcjI77aTgE9ZBq)), 0));
-						spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)rectangle_0.X, (float)rectangle_0.Y), Color.get_White());
-						num = (int)((num2 * 2100513107) ^ 0x47B06A7C);
-						continue;
-					case 9u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskStart"), float_0 / (float)rectangle_0.Height);
-						num = ((int)num2 * -742408634) ^ -1887275123;
-						continue;
-					case 8u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_5(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
-						num = ((int)num2 * -369931997) ^ -1903507603;
-						continue;
-					case 6u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolOffset"), 0);
-						num = ((int)num2 * -1020670258) ^ -433298044;
-						continue;
-					case 5u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskTexture"), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
-						num = (int)((num2 * 532984158) ^ 0x4A1A8F42);
-						continue;
-					case 4u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_6(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), renderTargetBinding_);
-						num = ((int)num2 * -1339763536) ^ 0x57054935;
-						continue;
-					case 3u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_4(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), Color.get_Transparent());
-						num = (int)((num2 * 63321381) ^ 0x782F6E9A);
-						continue;
-					case 2u:
-						num3 = float_0 + (float)_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_8(_0NizriMRCkKJuXStgvnNKe6Lo4y);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolSpeed"), 0.1f);
-						num = ((int)num2 * -1369051648) ^ 0x47D6EDCB;
-						continue;
-					case 1u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_3(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), _YazjYDLENT6HQ0JTluCcQMsqZaB);
-						num = (int)(num2 * 1866149394) ^ -746670092;
-						continue;
-					case 0u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_7(spriteBatch_0, (SpriteSortMode)1, BlendState.AlphaBlend);
-						num = ((int)num2 * -229338112) ^ 0x4E3F06FF;
-						continue;
-					case 11u:
-						break;
-					default:
-						spriteBatch_0.End();
-						return;
-					}
-					break;
-				}
-			}
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_3(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), _YazjYDLENT6HQ0JTluCcQMsqZaB);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_4(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), Color.get_Transparent());
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_5(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_6(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), renderTargetBinding_);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_7(spriteBatch_0, (SpriteSortMode)1, BlendState.AlphaBlend);
+			float num = float_0 + (float)_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_8(_0NizriMRCkKJuXStgvnNKe6Lo4y);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolSpeed"), 0.1f);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolOffset"), 0);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskTexture"), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskStart"), float_0 / (float)rectangle_0.Height);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskEnd"), num / (float)rectangle_0.Height);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Inverse"), bool_0);
+			_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_18(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_17(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_16(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_15(_2e92rEtSCXO9jXcjI77aTgE9ZBq)), 0));
+			spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)rectangle_0.X, (float)rectangle_0.Y), Color.get_White());
+			spriteBatch_0.End();
 		});
 		_9kpyWj69TJrEE13VPDWRIsYgsND = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_10(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_7(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/ClubPool/Club Pool water", 1f, bool_0: true, (List<SpineEvent>)null);
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_1(_9kpyWj69TJrEE13VPDWRIsYgsND, 0f);

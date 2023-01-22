@@ -32,65 +32,13 @@ public class _rmc1e7Ng50C4uLmgllAoRtxaZiB : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= _rmc1e7Ng50C4uLmgllAoRtxaZiB.smethod_2(gameTime_0).Milliseconds;
-		while (true)
+		if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < 0)
 		{
-			int num = 43107295;
-			while (true)
+			_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = _LYcgggYAzSIbIyLQB6fJYp9GPs6;
+			_3wk7bXUbhNqSQ9kMD9hieEubOhG++;
+			if (_3wk7bXUbhNqSQ9kMD9hieEubOhG >= _I1ZbHemGfJWozEfpDc9aFgiZQhEb.Count)
 			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x3AF3B6AAu) % 6u)
-				{
-				case 4u:
-					_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = _LYcgggYAzSIbIyLQB6fJYp9GPs6;
-					_3wk7bXUbhNqSQ9kMD9hieEubOhG++;
-					num = (int)((num2 * 416405234) ^ 0x6369E37A);
-					continue;
-				case 3u:
-					_3wk7bXUbhNqSQ9kMD9hieEubOhG = 0;
-					num = ((int)num2 * -1131619533) ^ 0x6A2A9C3B;
-					continue;
-				case 2u:
-				{
-					int num5;
-					int num6;
-					if (_3wk7bXUbhNqSQ9kMD9hieEubOhG >= _I1ZbHemGfJWozEfpDc9aFgiZQhEb.Count)
-					{
-						num5 = -302400601;
-						num6 = -302400601;
-					}
-					else
-					{
-						num5 = -1656369620;
-						num6 = -1656369620;
-					}
-					num = num5 ^ ((int)num2 * -577372203);
-					continue;
-				}
-				case 1u:
-				{
-					int num3;
-					int num4;
-					if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < 0)
-					{
-						num3 = -1389481125;
-						num4 = -1389481125;
-					}
-					else
-					{
-						num3 = -1338160067;
-						num4 = -1338160067;
-					}
-					num = num3 ^ (int)(num2 * 336640125);
-					continue;
-				}
-				default:
-					return;
-				case 5u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
+				_3wk7bXUbhNqSQ9kMD9hieEubOhG = 0;
 			}
 		}
 	}

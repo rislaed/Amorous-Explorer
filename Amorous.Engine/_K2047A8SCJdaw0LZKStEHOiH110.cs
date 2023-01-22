@@ -25,34 +25,7 @@ public static class _K2047A8SCJdaw0LZKStEHOiH110
 		{
 			if (streamReader != null)
 			{
-				while (true)
-				{
-					IL_004a:
-					int num = -249643824;
-					while (true)
-					{
-						uint num2;
-						switch ((num2 = (uint)num ^ 0xA62BFE0Au) % 3u)
-						{
-						case 1u:
-							goto IL_001a;
-						default:
-							goto end_IL_002d;
-						case 0u:
-							break;
-						case 2u:
-							goto end_IL_002d;
-						}
-						goto IL_004a;
-						IL_001a:
-						_K2047A8SCJdaw0LZKStEHOiH110.smethod_4((IDisposable)streamReader);
-						num = (int)(num2 * 889469680) ^ -1737744004;
-						continue;
-						end_IL_002d:
-						break;
-					}
-					break;
-				}
+				_K2047A8SCJdaw0LZKStEHOiH110.smethod_4((IDisposable)streamReader);
 			}
 		}
 	}
@@ -68,34 +41,7 @@ public static class _K2047A8SCJdaw0LZKStEHOiH110
 		{
 			if (streamReader != null)
 			{
-				while (true)
-				{
-					IL_004a:
-					int num = -1002206790;
-					while (true)
-					{
-						uint num2;
-						switch ((num2 = (uint)num ^ 0xCD6709ADu) % 3u)
-						{
-						case 1u:
-							goto IL_001a;
-						default:
-							goto end_IL_002d;
-						case 0u:
-							break;
-						case 2u:
-							goto end_IL_002d;
-						}
-						goto IL_004a;
-						IL_001a:
-						_K2047A8SCJdaw0LZKStEHOiH110.smethod_4((IDisposable)streamReader);
-						num = (int)(num2 * 1038411068) ^ -2057501093;
-						continue;
-						end_IL_002d:
-						break;
-					}
-					break;
-				}
+				_K2047A8SCJdaw0LZKStEHOiH110.smethod_4((IDisposable)streamReader);
 			}
 		}
 	}

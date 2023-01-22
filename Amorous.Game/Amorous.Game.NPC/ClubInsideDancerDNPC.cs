@@ -27,38 +27,13 @@ public class ClubInsideDancerDNPC : SpineNPC<ClubInsideDancerDNPC.EHeads, ClubIn
 	public ClubInsideDancerDNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubInsideStatic/Dancer D", 0.8f, bool_0: true)
 	{
-		while (true)
-		{
-			int num = -536911078;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xDF11EAECu) % 5u)
-				{
-				case 4u:
-					ClubInsideDancerDNPC.smethod_22(ClubInsideDancerDNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt", "Shirt arm right", "Shirt left forearm")));
-					ClubInsideDancerDNPC.smethod_24(ClubInsideDancerDNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Pants, "Pants")));
-					num = (int)((num2 * 1502332715) ^ 0x4761E651);
-					continue;
-				case 1u:
-					ClubInsideDancerDNPC.smethod_19(ClubInsideDancerDNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dancing", (Action<int>)null);
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Head");
-					ClubInsideDancerDNPC.smethod_20(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arm right", "Body", "Left forearm", "Tail"), new string[1] { "Cock" });
-					num = (int)(num2 * 1579949375) ^ -2093111767;
-					continue;
-				case 0u:
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-					num = ((int)num2 * -649933277) ^ 0x7DF72B30;
-					continue;
-				case 2u:
-					break;
-				default:
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					return;
-				}
-				break;
-			}
-		}
+		ClubInsideDancerDNPC.smethod_19(ClubInsideDancerDNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dancing", (Action<int>)null);
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Head");
+		ClubInsideDancerDNPC.smethod_20(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arm right", "Body", "Left forearm", "Tail"), new string[1] { "Cock" });
+		ClubInsideDancerDNPC.smethod_22(ClubInsideDancerDNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt", "Shirt arm right", "Shirt left forearm")));
+		ClubInsideDancerDNPC.smethod_24(ClubInsideDancerDNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Pants, "Pants")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_18(_tfDAeR6npiqJMLRSXPO1DxGA0TgA _tfDAeR6npiqJMLRSXPO1DxGA0TgA_0)

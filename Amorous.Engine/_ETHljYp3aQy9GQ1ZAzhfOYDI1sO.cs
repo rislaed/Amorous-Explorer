@@ -32,163 +32,43 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_1(_fW0XUSoDEDzTuYfvYXFC3oVcKvN);
 		string text = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_5(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_4(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_3(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_2())));
 		string object_ = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_8(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_7(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_6()), text);
-		while (true)
+		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_10(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9());
+		if (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_12(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)))
 		{
-			int num = 205235362;
-			while (true)
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_14(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_13("{0}-log-backup-{1:yyyy.MM.dd-HH.mm.ss}.txt", (object)object_, (object)DateTime.Now));
+		}
+		string[] source = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_15(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_7(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_6()), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log-backup-*.txt", (object)text));
+		IEnumerator<string> enumerator = source.OrderByDescending((string string_0) => string_0).Skip(10).GetEnumerator();
+		try
+		{
+			while (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_17((IEnumerator)enumerator))
 			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x1C082481u) % 4u)
-				{
-				case 3u:
-				{
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_10(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9());
-					int num6;
-					int num7;
-					if (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_12(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)))
-					{
-						num6 = 1390897583;
-						num7 = 1390897583;
-					}
-					else
-					{
-						num6 = 1979884760;
-						num7 = 1979884760;
-					}
-					num = num6 ^ ((int)num2 * -1217874800);
-					continue;
-				}
-				case 2u:
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_14(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_13("{0}-log-backup-{1:yyyy.MM.dd-HH.mm.ss}.txt", (object)object_, (object)DateTime.Now));
-					num = ((int)num2 * -359327722) ^ -1645722884;
-					continue;
-				case 0u:
-					break;
-				default:
-				{
-					string[] source = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_15(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_7(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_6()), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log-backup-*.txt", (object)text));
-					IEnumerator<string> enumerator = source.OrderByDescending((string string_0) => string_0).Skip(10).GetEnumerator();
-					try
-					{
-						while (true)
-						{
-							IL_0183:
-							int num3;
-							int num4;
-							if (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_17((IEnumerator)enumerator))
-							{
-								num3 = 2037272019;
-								num4 = 2037272019;
-							}
-							else
-							{
-								num3 = 210328108;
-								num4 = 210328108;
-							}
-							while (true)
-							{
-								switch ((num2 = (uint)num3 ^ 0x1C082481u) % 4u)
-								{
-								case 2u:
-								{
-									string current = enumerator.Current;
-									_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_16(current);
-									num3 = 806070398;
-									continue;
-								}
-								case 0u:
-									num3 = 2037272019;
-									continue;
-								default:
-									goto end_IL_0155;
-								case 3u:
-									break;
-								case 1u:
-									goto end_IL_0155;
-								}
-								goto IL_0183;
-								continue;
-								end_IL_0155:
-								break;
-							}
-							break;
-						}
-					}
-					finally
-					{
-						if (enumerator != null)
-						{
-							while (true)
-							{
-								IL_01c6:
-								int num5 = 536617194;
-								while (true)
-								{
-									switch ((num2 = (uint)num5 ^ 0x1C082481u) % 3u)
-									{
-									case 1u:
-										goto IL_0194;
-									default:
-										goto end_IL_01a8;
-									case 2u:
-										break;
-									case 0u:
-										goto end_IL_01a8;
-									}
-									goto IL_01c6;
-									IL_0194:
-									_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_18((IDisposable)enumerator);
-									num5 = (int)(num2 * 686932994) ^ -620651783;
-									continue;
-									end_IL_01a8:
-									break;
-								}
-								break;
-							}
-						}
-					}
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_19(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)));
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_21(bool_0: false));
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_22(bool_0: true);
-					return;
-				}
-				}
-				break;
+				string current = enumerator.Current;
+				_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_16(current);
 			}
 		}
+		finally
+		{
+			if (enumerator != null)
+			{
+				_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_18((IDisposable)enumerator);
+			}
+		}
+		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_19(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)));
+		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_21(bool_0: false));
+		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_22(bool_0: true);
 	}
 
 	public static void _8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor consoleColor_0, string string_0, string string_1, params object[] object_0)
 	{
 		if (object_0.Length != 0)
 		{
-			while (true)
-			{
-				int num = 1458881507;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x869F6A5u) % 4u)
-					{
-					case 2u:
-						_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_24(string_1, object_0)));
-						num = ((int)num2 * -548473028) ^ 0x43D74930;
-						continue;
-					case 0u:
-						break;
-					case 1u:
-						return;
-					default:
-						goto end_IL_0062;
-					}
-					break;
-				}
-				continue;
-				end_IL_0062:
-				break;
-			}
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_24(string_1, object_0)));
 		}
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)string_1));
+		else
+		{
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)string_1));
+		}
 	}
 
 	public static void _8GJSgyb6FWRvKxxAcjyaU02i18E(string string_0, params object[] object_0)

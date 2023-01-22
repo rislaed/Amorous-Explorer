@@ -10,30 +10,8 @@ public class _xmfdPa5IagU3cXbLL61gyoXAV7gA : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 
 	public _xmfdPa5IagU3cXbLL61gyoXAV7gA(string string_0, params string[] string_1)
 	{
-		while (true)
-		{
-			int num = 320170209;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x673478E6u) % 3u)
-				{
-				case 1u:
-					goto IL_0008;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-				IL_0008:
-				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
-				_CjFYKEH7Vq8U6urMqr8ixn5Z8li = new List<string>(string_1);
-				num = ((int)num2 * -1633932206) ^ -289516788;
-			}
-		}
+		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
+		_CjFYKEH7Vq8U6urMqr8ixn5Z8li = new List<string>(string_1);
 	}
 
 	public _xmfdPa5IagU3cXbLL61gyoXAV7gA _qL2MEiFtBpbdxqUUTSqOgOsEK4j(string string_0)

@@ -5,32 +5,8 @@ public class BuildingInsideScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public BuildingInsideScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		while (true)
-		{
-			int num = 481194093;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x4693C9FCu) % 4u)
-				{
-				case 2u:
-					BuildingInsideScene.smethod_15("Assets/Music/DJ-ZEK - Simulate", 0.4f);
-					num = ((int)num2 * -904671676) ^ -1233916648;
-					continue;
-				case 1u:
-					BuildingInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/BuildingInside/Background", 0, 0);
-					num = ((int)num2 * -2041568641) ^ -1225864823;
-					continue;
-				default:
-					return;
-				case 3u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-			}
-		}
+		BuildingInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/BuildingInside/Background", 0, 0);
+		BuildingInsideScene.smethod_15("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

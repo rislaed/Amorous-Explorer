@@ -5,28 +5,8 @@ public class LibraryScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public LibraryScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		while (true)
-		{
-			int num = -2107253163;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x8038A13Bu) % 3u)
-				{
-				case 2u:
-					goto IL_0009;
-				case 0u:
-					break;
-				default:
-					LibraryScene.smethod_15("Assets/Music/RyeGuyHead - Outdated", 0.4f);
-					return;
-				}
-				break;
-				IL_0009:
-				LibraryScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Library/Background", 0, 0);
-				num = (int)(num2 * 1656556741) ^ -2066216365;
-			}
-		}
+		LibraryScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Library/Background", 0, 0);
+		LibraryScene.smethod_15("Assets/Music/RyeGuyHead - Outdated", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

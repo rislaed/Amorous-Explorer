@@ -36,136 +36,41 @@ public class SethNPC : SpineNPC<SethNPC.EHeads, SethNPC.EPoses, SethNPC.EClothes
 	public SethNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Seth/Seth", 1f, bool_0: true)
 	{
-		while (true)
-		{
-			int num = -456979302;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xE0A02225u) % 12u)
-				{
-				case 11u:
-					SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Top, "Shy top")));
-					num = ((int)num2 * -2140277277) ^ -109503643;
-					continue;
-				case 10u:
-					SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Top, "Gesture top")));
-					num = (int)((num2 * 1940880305) ^ 0x4185EC4D);
-					continue;
-				case 9u:
-					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Smirk Head", "Smirk Pupil", "Smirk eye back"), "Smirk Blink");
-					SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, "Shy body"), new string[1] { "Seth cock" });
-					num = ((int)num2 * -1370198624) ^ 0x6551E922;
-					continue;
-				case 8u:
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					num = (int)((num2 * 1318789066) ^ 0x7B4A3419);
-					continue;
-				case 7u:
-					SethNPC.smethod_19(SethNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Idle", (Action<int>)null);
-					num = (int)((num2 * 346423980) ^ 0x202F6DBF);
-					continue;
-				case 6u:
-					SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Pants, "Pants")));
-					num = ((int)num2 * -1269712522) ^ -1109104563;
-					continue;
-				case 5u:
-					SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Pants, "Pants")));
-					num = (int)((num2 * 778804989) ^ 0x278EA92E);
-					continue;
-				case 3u:
-					SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, "Gesture Body"), new string[1] { "Seth cock" });
-					num = ((int)num2 * -976838956) ^ -1442795402;
-					continue;
-				case 2u:
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Blush head", "Blush pupils", "Blush eyeback");
-					num = (int)((num2 * 780462747) ^ 0x217505D6);
-					continue;
-				case 1u:
-					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Happy head", "Happy Pupils", "Happy eyeback", "Happy jaw"), "Happy blink");
-					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad head", "Sad pupils", "Sad eye back"), "Sad blink");
-					num = ((int)num2 * -1980443707) ^ -2112772803;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 4u:
-					return;
-				}
-				break;
-			}
-		}
+		SethNPC.smethod_19(SethNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Idle", (Action<int>)null);
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Blush head", "Blush pupils", "Blush eyeback");
+		SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Happy head", "Happy Pupils", "Happy eyeback", "Happy jaw"), "Happy blink");
+		SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad head", "Sad pupils", "Sad eye back"), "Sad blink");
+		SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Smirk Head", "Smirk Pupil", "Smirk eye back"), "Smirk Blink");
+		SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, "Shy body"), new string[1] { "Seth cock" });
+		SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, "Gesture Body"), new string[1] { "Seth cock" });
+		SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Top, "Shy top")));
+		SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Pants, "Pants")));
+		SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Top, "Gesture top")));
+		SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Pants, "Pants")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
 			SethNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = -2102847422;
-			goto IL_0088;
-		default:
-			goto IL_005f;
-		case NPCLocation.Left:
-			goto IL_0066;
-		case NPCLocation.Right:
-			goto IL_00c2;
-			IL_0088:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x87DFC910u) % 10u)
-				{
-				case 5u:
-					SethNPC.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
-					num = ((int)num2 * -1655781745) ^ -1898961134;
-					continue;
-				case 4u:
-					SethNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
-					num = ((int)num2 * -2100688588) ^ -1948904961;
-					continue;
-				case 3u:
-					break;
-				case 2u:
-					goto IL_005f;
-				case 0u:
-					goto IL_0066;
-				default:
-					return;
-				case 6u:
-					goto IL_00c2;
-				case 1u:
-					return;
-				case 7u:
-					return;
-				case 8u:
-					return;
-				case 9u:
-					return;
-				}
-				break;
-			}
-			goto case NPCLocation.Middle;
-			IL_00c2:
-			SethNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			SethNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1520f);
+			SethNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
 			SethNPC.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
-			num = -2069348931;
-			goto IL_0088;
-			IL_0066:
+			break;
+		case NPCLocation.Left:
 			SethNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
 			SethNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 400f);
 			SethNPC.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
-			num = -299914114;
-			goto IL_0088;
-			IL_005f:
-			num = -1767709855;
-			goto IL_0088;
+			break;
+		case NPCLocation.Right:
+			SethNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			SethNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1520f);
+			SethNPC.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
+			break;
 		}
 	}
 

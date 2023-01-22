@@ -40,68 +40,23 @@ public class ExBoyfriendNPC : LayerNPC<ExBoyfriendNPC.EHeads, ExBoyfriendNPC.EPo
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		while (true)
+		switch (npclocation_0)
 		{
-			int num = -1531662088;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xB010C456u) % 10u)
-				{
-				case 6u:
-					ExBoyfriendNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-					num = -2116263868;
-					continue;
-				case 5u:
-					ExBoyfriendNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 177f);
-					num = ((int)num2 * -1829611475) ^ -280216020;
-					continue;
-				case 4u:
-					switch (npclocation_0)
-					{
-					case NPCLocation.Right:
-						break;
-					default:
-						goto IL_0048;
-					case NPCLocation.Middle:
-						goto IL_0057;
-					case NPCLocation.Left:
-						goto IL_0065;
-					}
-					goto case 6u;
-				case 3u:
-					goto IL_0057;
-				case 2u:
-					goto IL_0065;
-				case 7u:
-					break;
-				case 0u:
-					ExBoyfriendNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1412f);
-					ExBoyfriendNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 177f);
-					return;
-				case 1u:
-					return;
-				default:
-					ExBoyfriendNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 546f);
-					ExBoyfriendNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 177f);
-					return;
-				case 9u:
-					return;
-					IL_0065:
-					ExBoyfriendNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					ExBoyfriendNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -120f);
-					num = -1797823047;
-					continue;
-					IL_0057:
-					ExBoyfriendNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					num = -1632586292;
-					continue;
-					IL_0048:
-					num = (int)(num2 * 745334949) ^ -557613971;
-					continue;
-				}
-				break;
-			}
+		case NPCLocation.Middle:
+			ExBoyfriendNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			ExBoyfriendNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 546f);
+			ExBoyfriendNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 177f);
+			break;
+		case NPCLocation.Left:
+			ExBoyfriendNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			ExBoyfriendNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -120f);
+			ExBoyfriendNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 177f);
+			break;
+		case NPCLocation.Right:
+			ExBoyfriendNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			ExBoyfriendNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1412f);
+			ExBoyfriendNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 177f);
+			break;
 		}
 	}
 

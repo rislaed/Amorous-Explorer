@@ -14,103 +14,30 @@ public class _d4ad1i8rcZMvfN9iaxggA1KtVgx : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 
 	public _d4ad1i8rcZMvfN9iaxggA1KtVgx(Texture2D texture2D_0, Texture2D texture2D_1, Action action_0)
 	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		while (true)
-		{
-			int num = -486871576;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x9B7661DBu) % 5u)
-				{
-				case 4u:
-					_cE3kSvrhsTV9gIQPkCoBhOFAs2c = Color.get_White();
-					_08zyjvaMqKYuX4vqqPYy5W1Cp9A = action_0;
-					num = (int)(num2 * 1929541771) ^ -1544455783;
-					continue;
-				case 2u:
-					_eGxbzBRO3Gff6qF4UvzTSaP4XTl = texture2D_0;
-					num = (int)(num2 * 1644369189) ^ -2135781371;
-					continue;
-				case 1u:
-					_NsW6nQWUMy3K32z4OlInvOro6nF = texture2D_1;
-					num = (int)(num2 * 1624719984) ^ -409564578;
-					continue;
-				default:
-					return;
-				case 3u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-			}
-		}
+		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
+		_eGxbzBRO3Gff6qF4UvzTSaP4XTl = texture2D_0;
+		_NsW6nQWUMy3K32z4OlInvOro6nF = texture2D_1;
+		_cE3kSvrhsTV9gIQPkCoBhOFAs2c = Color.get_White();
+		_08zyjvaMqKYuX4vqqPYy5W1Cp9A = action_0;
 	}
 
 	public override void _eJedLbGgSejIX7Xyx6RoIYD1soJA()
 	{
-		if (_08zyjvaMqKYuX4vqqPYy5W1Cp9A == null)
+		if (_08zyjvaMqKYuX4vqqPYy5W1Cp9A != null)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = -1067847265;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xA4F83AF4u) % 3u)
-				{
-				case 1u:
-					goto IL_000a;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_000a:
-				_08zyjvaMqKYuX4vqqPYy5W1Cp9A();
-				num = (int)(num2 * 1350337464) ^ -1528613339;
-			}
+			_08zyjvaMqKYuX4vqqPYy5W1Cp9A();
 		}
 	}
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
 		if (base._NUP8Fs8I7oMuI6vfg25DFKFlQqE)
 		{
-			while (true)
-			{
-				int num = 1806039602;
-				while (true)
-				{
-					switch ((uint)(num ^ 0x7DB1F355) % 4u)
-					{
-					case 3u:
-						_d4ad1i8rcZMvfN9iaxggA1KtVgx.smethod_0(spriteBatch_0, _NsW6nQWUMy3K32z4OlInvOro6nF ?? _eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _cE3kSvrhsTV9gIQPkCoBhOFAs2c);
-						num = 1645557692;
-						continue;
-					case 0u:
-						break;
-					case 1u:
-						return;
-					default:
-						goto end_IL_0050;
-					}
-					break;
-				}
-				continue;
-				end_IL_0050:
-				break;
-			}
+			_d4ad1i8rcZMvfN9iaxggA1KtVgx.smethod_0(spriteBatch_0, _NsW6nQWUMy3K32z4OlInvOro6nF ?? _eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _cE3kSvrhsTV9gIQPkCoBhOFAs2c);
 		}
 		_d4ad1i8rcZMvfN9iaxggA1KtVgx.smethod_0(spriteBatch_0, _eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
 	}

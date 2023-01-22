@@ -34,61 +34,23 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public _k8LAl8bPyzLGEpo59dKFGU4sCQ(Game game_0)
 	{
-		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Expected O, but got Unknown
-		while (true)
+		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0094: Unknown result type (might be due to invalid IL or missing references)
+		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b0: Expected O, but got Unknown
+		_4L7hfXrWoDdArQiscG4ukHCV46B = game_0;
+		_OaIpAM8LUMZnUHberg4zeLNyWCd = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_1(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_0(game_0));
+		_5YcBaRKou3OVWCywHF9K49yk2u9 = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_2(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_0(_4L7hfXrWoDdArQiscG4ukHCV46B), 1, 1);
+		_5YcBaRKou3OVWCywHF9K49yk2u9.SetData<Color>((Color[])(object)new Color[1]
 		{
-			int num = -1142689067;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x88D4D264u) % 8u)
-				{
-				case 7u:
-				{
-					_5YcBaRKou3OVWCywHF9K49yk2u9.SetData<Color>((Color[])(object)new Color[1]
-					{
-						new Color(255, 255, 255, 255)
-					});
-					RasterizerState val = new RasterizerState();
-					val.set_ScissorTestEnable(true);
-					_T3zdQhKBBD6DNUg8RQ7EupUHIoE = val;
-					num = (int)(num2 * 1230093176) ^ -520824680;
-					continue;
-				}
-				case 4u:
-					_Al96gNPtV1ulU681NMxd1IeQxQq.Add(string.Empty, 0);
-					num = (int)((num2 * 1661841796) ^ 0x7D19A0E7);
-					continue;
-				case 3u:
-					_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(0, _5YcBaRKou3OVWCywHF9K49yk2u9);
-					num = ((int)num2 * -177394561) ^ -1930266060;
-					continue;
-				case 2u:
-					_OaIpAM8LUMZnUHberg4zeLNyWCd = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_1(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_0(game_0));
-					num = ((int)num2 * -154605321) ^ -796087950;
-					continue;
-				case 1u:
-					_4L7hfXrWoDdArQiscG4ukHCV46B = game_0;
-					num = ((int)num2 * -1340901696) ^ 0x783DF83E;
-					continue;
-				case 0u:
-					_5YcBaRKou3OVWCywHF9K49yk2u9 = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_2(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_0(_4L7hfXrWoDdArQiscG4ukHCV46B), 1, 1);
-					num = ((int)num2 * -475116872) ^ -673533933;
-					continue;
-				default:
-					return;
-				case 6u:
-					break;
-				case 5u:
-					return;
-				}
-				break;
-			}
-		}
+			new Color(255, 255, 255, 255)
+		});
+		RasterizerState val = new RasterizerState();
+		val.set_ScissorTestEnable(true);
+		_T3zdQhKBBD6DNUg8RQ7EupUHIoE = val;
+		_Al96gNPtV1ulU681NMxd1IeQxQq.Add(string.Empty, 0);
+		_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(0, _5YcBaRKou3OVWCywHF9K49yk2u9);
 	}
 
 	private Color _TmKnNO76rW7a4nj5ivlAGl4rlrd(int int_0)
@@ -103,208 +65,67 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 	{
 		if (_Al96gNPtV1ulU681NMxd1IeQxQq.TryGetValue(name ?? string.Empty, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
 		{
-			goto IL_0075;
+			return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
 		}
-		goto IL_00a7;
-		IL_0075:
-		int num = -1889344637;
-		goto IL_007a;
-		IL_007a:
-		int count = default(int);
-		Texture2D value = default(Texture2D);
-		while (true)
-		{
-			uint num2;
-			switch ((num2 = (uint)num ^ 0xFFA4D1EDu) % 7u)
-			{
-			case 5u:
-				_Al96gNPtV1ulU681NMxd1IeQxQq.Add(name, count);
-				num = ((int)num2 * -1393212663) ^ -1867121848;
-				continue;
-			case 4u:
-				count = _Al96gNPtV1ulU681NMxd1IeQxQq.Count;
-				num = (int)(num2 * 2044598477) ^ -224353287;
-				continue;
-			case 1u:
-				_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(count, value);
-				num = ((int)num2 * -343835074) ^ 0x295AF867;
-				continue;
-			case 0u:
-				break;
-			case 3u:
-				goto IL_00a7;
-			default:
-				return count;
-			case 6u:
-				return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
-			}
-			break;
-		}
-		goto IL_0075;
-		IL_00a7:
-		value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_7(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_5(name), "/", _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_6(name)));
-		num = -2028055299;
-		goto IL_007a;
+		Texture2D value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_7(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_5(name), "/", _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_6(name)));
+		int count = _Al96gNPtV1ulU681NMxd1IeQxQq.Count;
+		_Al96gNPtV1ulU681NMxd1IeQxQq.Add(name, count);
+		_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(count, value);
+		return count;
 	}
 
 	public void SetTexture(string name, object texture)
 	{
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0038: Expected O, but got Unknown
-		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0065: Expected O, but got Unknown
+		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002b: Expected O, but got Unknown
+		//IL_004d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0057: Expected O, but got Unknown
 		if (_Al96gNPtV1ulU681NMxd1IeQxQq.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
 		{
-			goto IL_0047;
+			_48Ia4uIlwwllIw0MIzPjdWOBDqx[_SfJPevkmlfWx0UJQBD7GNI1bOPA] = (Texture2D)texture;
+			return;
 		}
-		goto IL_009b;
-		IL_009b:
 		int count = _Al96gNPtV1ulU681NMxd1IeQxQq.Count;
-		int num = -1182125039;
-		goto IL_0072;
-		IL_0072:
-		while (true)
-		{
-			uint num2;
-			switch ((num2 = (uint)num ^ 0xE2053070u) % 6u)
-			{
-			case 5u:
-				_Al96gNPtV1ulU681NMxd1IeQxQq.Add(name, count);
-				_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(count, (Texture2D)texture);
-				num = ((int)num2 * -139575084) ^ -1683627176;
-				continue;
-			case 3u:
-				break;
-			case 2u:
-				_48Ia4uIlwwllIw0MIzPjdWOBDqx[_SfJPevkmlfWx0UJQBD7GNI1bOPA] = (Texture2D)texture;
-				num = ((int)num2 * -1327941972) ^ 0x317C2CA5;
-				continue;
-			default:
-				return;
-			case 0u:
-				goto IL_009b;
-			case 1u:
-				return;
-			case 4u:
-				return;
-			}
-			break;
-		}
-		goto IL_0047;
-		IL_0047:
-		num = -1898270668;
-		goto IL_0072;
+		_Al96gNPtV1ulU681NMxd1IeQxQq.Add(name, count);
+		_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(count, (Texture2D)texture);
 	}
 
 	public int GetFont(string name)
 	{
 		if (_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_8(name, "default"))
 		{
-			goto IL_0048;
+			name = _3qOVW0rru0fnFsK9qtJ6Gk1F0bE;
 		}
-		goto IL_00b9;
-		IL_00b9:
-		int num;
-		int num2;
-		if (_ludG33HqMIBuda5aoAUm6woMHdh.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
+		if (!_ludG33HqMIBuda5aoAUm6woMHdh.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
 		{
-			num = -1135542331;
-			num2 = -1135542331;
+			SpriteFont value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<SpriteFont>(name);
+			int count = _ludG33HqMIBuda5aoAUm6woMHdh.Count;
+			_ludG33HqMIBuda5aoAUm6woMHdh.Add(name, count);
+			_Ks5fhSCbnJp6pmRDanq4sn9DlRF.Add(count, value);
+			return count;
 		}
-		else
-		{
-			num = -960486932;
-			num2 = -960486932;
-		}
-		goto IL_007d;
-		IL_007d:
-		int count = default(int);
-		SpriteFont value = default(SpriteFont);
-		while (true)
-		{
-			uint num3;
-			switch ((num3 = (uint)num ^ 0xA20B5DC8u) % 7u)
-			{
-			case 6u:
-				count = _ludG33HqMIBuda5aoAUm6woMHdh.Count;
-				_ludG33HqMIBuda5aoAUm6woMHdh.Add(name, count);
-				num = ((int)num3 * -467158512) ^ -1835790372;
-				continue;
-			case 3u:
-				break;
-			case 2u:
-				value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<SpriteFont>(name);
-				num = -236889666;
-				continue;
-			case 1u:
-				name = _3qOVW0rru0fnFsK9qtJ6Gk1F0bE;
-				num = (int)(num3 * 1564583496) ^ -1417693182;
-				continue;
-			case 0u:
-				goto IL_00b9;
-			default:
-				_Ks5fhSCbnJp6pmRDanq4sn9DlRF.Add(count, value);
-				return count;
-			case 5u:
-				return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
-			}
-			break;
-		}
-		goto IL_0048;
-		IL_0048:
-		num = -705253990;
-		goto IL_007d;
+		return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
 	}
 
 	public Point GetTextSize(string text, int font)
 	{
-		//IL_0061: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0073: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0088: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
 		if (_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_9(text))
 		{
-			goto IL_0017;
-		}
-		goto IL_004b;
-		IL_004b:
-		int num;
-		int num2;
-		if (!_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
-		{
-			num = -192276159;
-			num2 = -192276159;
-		}
-		else
-		{
-			num = -950021684;
-			num2 = -950021684;
-		}
-		goto IL_001c;
-		IL_001c:
-		switch ((uint)(num ^ -1679735997) % 5u)
-		{
-		case 2u:
-			break;
-		case 3u:
-			goto IL_004b;
-		case 0u:
 			return Point.Zero;
-		default:
+		}
+		if (_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
 		{
 			Vector2 val = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_10(_YWublsgGSMYGc5V0KPieIYbXfdl, text);
 			return new Point((int)val.X, (int)val.Y);
 		}
-		case 4u:
-			return Point.Zero;
-		}
-		goto IL_0017;
-		IL_0017:
-		num = -593904789;
-		goto IL_001c;
+		return Point.Zero;
 	}
 
 	public Point GetTextureSize(int texture)
@@ -327,69 +148,23 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public void DrawText(string text, int x, int y, int font, int color)
 	{
-		//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		if (!_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
+		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
+		if (_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = 6407517;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x24E1FD48u) % 3u)
-				{
-				case 1u:
-					goto IL_0017;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_0017:
-				_OaIpAM8LUMZnUHberg4zeLNyWCd._FY70IFLoBond3ORPe0ndCLvIeVcA(_YWublsgGSMYGc5V0KPieIYbXfdl, text, new Vector2((float)x, (float)y), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
-				num = ((int)num2 * -1567693409) ^ -140931720;
-			}
+			_OaIpAM8LUMZnUHberg4zeLNyWCd._FY70IFLoBond3ORPe0ndCLvIeVcA(_YWublsgGSMYGc5V0KPieIYbXfdl, text, new Vector2((float)x, (float)y), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
 		}
 	}
 
 	public void DrawTexture(int texture, int x, int y, int w, int h, Rectangle rect, int color)
 	{
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		if (!_48Ia4uIlwwllIw0MIzPjdWOBDqx.TryGetValue(texture, out _lruDd2bffYslbTUZZOo7HsfbTFA))
+		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0047: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
+		if (_48Ia4uIlwwllIw0MIzPjdWOBDqx.TryGetValue(texture, out _lruDd2bffYslbTUZZOo7HsfbTFA))
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = -818339543;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xF5D86B75u) % 3u)
-				{
-				case 2u:
-					goto IL_001c;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-				IL_001c:
-				_OaIpAM8LUMZnUHberg4zeLNyWCd.Draw(_lruDd2bffYslbTUZZOo7HsfbTFA, new Rectangle(x, y, w, h), (Rectangle?)new Rectangle(((Rectangle)(ref rect)).get_Left(), ((Rectangle)(ref rect)).get_Top(), ((Rectangle)(ref rect)).get_Width(), ((Rectangle)(ref rect)).get_Height()), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color), 0f, Vector2.get_Zero(), (SpriteEffects)0, 0f);
-				num = ((int)num2 * -1942296904) ^ 0x4B7DCD9F;
-			}
+			_OaIpAM8LUMZnUHberg4zeLNyWCd.Draw(_lruDd2bffYslbTUZZOo7HsfbTFA, new Rectangle(x, y, w, h), (Rectangle?)new Rectangle(((Rectangle)(ref rect)).get_Left(), ((Rectangle)(ref rect)).get_Top(), ((Rectangle)(ref rect)).get_Width(), ((Rectangle)(ref rect)).get_Height()), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color), 0f, Vector2.get_Zero(), (SpriteEffects)0, 0f);
 		}
 	}
 

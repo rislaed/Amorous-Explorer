@@ -10,29 +10,9 @@ public class _uqydQVaCmCvK7zzWs5W4gZFpKBu : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	public _uqydQVaCmCvK7zzWs5W4gZFpKBu(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, Texture2D texture2D_0)
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
 	{
-		while (true)
-		{
-			int num = 2061742032;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x19EA5A89u) % 3u)
-				{
-				case 1u:
-					goto IL_000a;
-				case 0u:
-					break;
-				default:
-					base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = _uqydQVaCmCvK7zzWs5W4gZFpKBu.smethod_1(texture2D_0);
-					return;
-				}
-				break;
-				IL_000a:
-				_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
-				base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _uqydQVaCmCvK7zzWs5W4gZFpKBu.smethod_0(texture2D_0);
-				num = ((int)num2 * -762295557) ^ -1618770391;
-			}
-		}
+		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _uqydQVaCmCvK7zzWs5W4gZFpKBu.smethod_0(texture2D_0);
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = _uqydQVaCmCvK7zzWs5W4gZFpKBu.smethod_1(texture2D_0);
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)

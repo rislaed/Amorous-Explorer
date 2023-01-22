@@ -33,64 +33,21 @@ public class ClubUpstairsScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void Start()
 	{
-		if (!_showZenith)
+		if (_showZenith)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = 979570115;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x5EAD7276u) % 10u)
-				{
-				case 9u:
-					_roseWood = ClubUpstairsScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<RoseWoodNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					ClubUpstairsScene.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, bool_0: false);
-					_roseWood._g3oEqGBkN3YHUPosRq2nIP2sX0D(RoseWoodNPC.EHeads.None);
-					_roseWood._tDFvus0ZCanjp81eOiDzoMXJiuf(RoseWoodNPC.EPoses.Standing);
-					num = ((int)num2 * -13411397) ^ -1124735854;
-					continue;
-				case 7u:
-					ClubUpstairsScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_zenith, 10f);
-					ClubUpstairsScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_zenith, (Action)OnZenithClick);
-					num = ((int)num2 * -130006595) ^ -1447660108;
-					continue;
-				case 6u:
-					_zenith = ClubUpstairsScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticZenithNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = (int)(num2 * 2015590612) ^ -864012116;
-					continue;
-				case 5u:
-					_roseWood._09vxUzgOn7J7DFZEwsTh7lgEIhB(RoseWoodNPC.EClothes.Shirt, RoseWoodNPC.EClothes.Shorts);
-					ClubUpstairsScene.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, 950f);
-					num = (int)(num2 * 1724338127) ^ -486474888;
-					continue;
-				case 4u:
-					ClubUpstairsScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, bool_0: true);
-					num = (int)(num2 * 829587640) ^ -822864282;
-					continue;
-				case 3u:
-					ClubUpstairsScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, 160f);
-					num = (int)(num2 * 2007485741) ^ -1712133283;
-					continue;
-				case 2u:
-					ClubUpstairsScene.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_zenith, 580f);
-					num = ((int)num2 * -2097942095) ^ -700866219;
-					continue;
-				case 0u:
-					ClubUpstairsScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, 0.4f);
-					num = (int)((num2 * 1753707268) ^ 0x1DC8664);
-					continue;
-				default:
-					return;
-				case 8u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-			}
+			_roseWood = ClubUpstairsScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<RoseWoodNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+			ClubUpstairsScene.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, bool_0: false);
+			_roseWood._g3oEqGBkN3YHUPosRq2nIP2sX0D(RoseWoodNPC.EHeads.None);
+			_roseWood._tDFvus0ZCanjp81eOiDzoMXJiuf(RoseWoodNPC.EPoses.Standing);
+			_roseWood._09vxUzgOn7J7DFZEwsTh7lgEIhB(RoseWoodNPC.EClothes.Shirt, RoseWoodNPC.EClothes.Shorts);
+			ClubUpstairsScene.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, 950f);
+			ClubUpstairsScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, 160f);
+			ClubUpstairsScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, 0.4f);
+			ClubUpstairsScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_roseWood, bool_0: true);
+			_zenith = ClubUpstairsScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticZenithNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+			ClubUpstairsScene.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_zenith, 580f);
+			ClubUpstairsScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_zenith, 10f);
+			ClubUpstairsScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_zenith, (Action)OnZenithClick);
 		}
 	}
 

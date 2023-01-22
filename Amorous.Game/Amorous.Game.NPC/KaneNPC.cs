@@ -49,79 +49,26 @@ public class KaneNPC : LayerNPC<KaneNPC.EHeads, KaneNPC.EPoses, KaneNPC.EClothes
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		while (true)
+		switch (npclocation_0)
 		{
-			int num = 2047578937;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x73846171u) % 12u)
-				{
-				case 10u:
-					KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1070f);
-					num = (int)((num2 * 1836406970) ^ 0x49AF9CD1);
-					continue;
-				case 9u:
-					KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
-					num = ((int)num2 * -179245258) ^ -352869768;
-					continue;
-				case 8u:
-					KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-					KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
-					num = ((int)num2 * -80609302) ^ -617810677;
-					continue;
-				case 7u:
-					KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-					num = ((int)num2 * -1079539424) ^ -650554080;
-					continue;
-				case 6u:
-					KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-					num = 1346629675;
-					continue;
-				case 4u:
-					switch (npclocation_0)
-					{
-					case NPCLocation.Right:
-						break;
-					default:
-						goto IL_00a7;
-					case NPCLocation.Left:
-						goto IL_00b6;
-					case NPCLocation.Middle:
-						goto IL_0117;
-					}
-					goto case 6u;
-				case 1u:
-					goto IL_00b6;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				case 3u:
-					goto IL_0117;
-				case 5u:
-					return;
-				case 11u:
-					return;
-					IL_0117:
-					KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 305f);
-					KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-					KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
-					return;
-					IL_00b6:
-					KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -260f);
-					num = 816061090;
-					continue;
-					IL_00a7:
-					num = (int)((num2 * 1610289366) ^ 0x34028E44);
-					continue;
-				}
-				break;
-			}
+		case NPCLocation.Middle:
+			KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 305f);
+			KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			break;
+		case NPCLocation.Left:
+			KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -260f);
+			KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			break;
+		case NPCLocation.Right:
+			KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1070f);
+			KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			break;
 		}
 	}
 

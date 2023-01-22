@@ -5,30 +5,8 @@ public class KitchenScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public KitchenScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		while (true)
-		{
-			int num = -705229721;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xBE5A6899u) % 3u)
-				{
-				case 1u:
-					goto IL_0009;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_0009:
-				KitchenScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Kitchen/Background", 0, 0);
-				KitchenScene.smethod_15("Assets/Music/Warhector - Free Floating", 0.4f);
-				num = (int)(num2 * 486198742) ^ -405418565;
-			}
-		}
+		KitchenScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Kitchen/Background", 0, 0);
+		KitchenScene.smethod_15("Assets/Music/Warhector - Free Floating", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

@@ -5,30 +5,8 @@ public class ConCenterScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ConCenterScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		while (true)
-		{
-			int num = -274196358;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x8EA384F9u) % 3u)
-				{
-				case 2u:
-					goto IL_0009;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-				IL_0009:
-				ConCenterScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ConCenter/Con Center BG", 0, 0);
-				ConCenterScene.smethod_15("Assets/Music/Warhector - Free Floating", 0.4f);
-				num = (int)((num2 * 382761120) ^ 0x4A565338);
-			}
-		}
+		ConCenterScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ConCenter/Con Center BG", 0, 0);
+		ConCenterScene.smethod_15("Assets/Music/Warhector - Free Floating", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

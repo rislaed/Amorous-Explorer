@@ -27,40 +27,13 @@ public class ClubLoungeDancerANPC : SpineNPC<ClubLoungeDancerANPC.EHeads, ClubLo
 	public ClubLoungeDancerANPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubLoungeStatic/Dancer A", 1f, bool_0: true)
 	{
-		while (true)
-		{
-			int num = 622064657;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x47DBF6CCu) % 5u)
-				{
-				case 4u:
-					ClubLoungeDancerANPC.smethod_21(ClubLoungeDancerANPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")));
-					ClubLoungeDancerANPC.smethod_23(ClubLoungeDancerANPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, "Shorts left", "Shorts right")));
-					num = ((int)num2 * -626765912) ^ 0x90363C5;
-					continue;
-				case 2u:
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					num = (int)((num2 * 1634815871) ^ 0x39D5B6CF);
-					continue;
-				case 1u:
-					ClubLoungeDancerANPC.smethod_19(ClubLoungeDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Ear", "Eye back", "Fringe", "Head", "Pupil");
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arms", "Body", "Breast", "Leg left", "Leg right", "Tail base", "Tail head", "Tail head jaw", "Tail head tongue tip");
-					num = (int)(num2 * 296986908) ^ -1478927738;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 3u:
-					return;
-				}
-				break;
-			}
-		}
+		ClubLoungeDancerANPC.smethod_19(ClubLoungeDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Ear", "Eye back", "Fringe", "Head", "Pupil");
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arms", "Body", "Breast", "Leg left", "Leg right", "Tail base", "Tail head", "Tail head jaw", "Tail head tongue tip");
+		ClubLoungeDancerANPC.smethod_21(ClubLoungeDancerANPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")));
+		ClubLoungeDancerANPC.smethod_23(ClubLoungeDancerANPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, "Shorts left", "Shorts right")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_18(_tfDAeR6npiqJMLRSXPO1DxGA0TgA _tfDAeR6npiqJMLRSXPO1DxGA0TgA_0)

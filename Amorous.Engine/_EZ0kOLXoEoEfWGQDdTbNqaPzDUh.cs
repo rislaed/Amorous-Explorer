@@ -22,31 +22,9 @@ public class _EZ0kOLXoEoEfWGQDdTbNqaPzDUh : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 
 	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh(string string_0, params string[] string_1)
 	{
-		while (true)
-		{
-			int num = -1753297294;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xE74C9B5Cu) % 3u)
-				{
-				case 2u:
-					goto IL_0008;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-				IL_0008:
-				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
-				_CjFYKEH7Vq8U6urMqr8ixn5Z8li = new List<string>(string_1);
-				_k6wM5wdPLS8b9QWZ30CqiepJHCd = true;
-				num = ((int)num2 * -1895831342) ^ -1570729618;
-			}
-		}
+		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
+		_CjFYKEH7Vq8U6urMqr8ixn5Z8li = new List<string>(string_1);
+		_k6wM5wdPLS8b9QWZ30CqiepJHCd = true;
 	}
 
 	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh _9mDS3yizOswyCzK6V3LBhafV7Dh()

@@ -11,42 +11,15 @@ public class _SsogwGgurAXPoDRtNVTCVKq9yRE : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 	public _SsogwGgurAXPoDRtNVTCVKq9yRE(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0094: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f1: Unknown result type (might be due to invalid IL or missing references)
-		while (true)
-		{
-			int num = -1052742225;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xA2DEF090u) % 5u)
-				{
-				case 4u:
-					_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/credits", "Assets/Scenes/MainMenu/Credits hover", 1583, 1000, new Rectangle(1583, 1000, 146, 58), _1UonNHUCNgrMS8Z0CyaGApPKtqM);
-					_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/Patreon", null, 1749, 1000, Rectangle.get_Empty(), null);
-					num = ((int)num2 * -762982953) ^ 0x739870AC;
-					continue;
-				case 3u:
-					_83EecuYIFalvL6Gd1s9MoTLHdgq("Assets/Gui/Fonts/Bold-14", string.Format("Version {0}", "1.0.4"), (Alignment)5, Color.get_White(), 1885, 830);
-					num = ((int)num2 * -1815327498) ^ 0x70B4B234;
-					continue;
-				case 2u:
-					_QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/MainMenu/Version", "Assets/Scenes/MainMenu/Version hover", "Assets/Gui/Fonts/Bold-14", "Options", Color.get_White(), 1417, 1000, new Rectangle(1417, 1000, 146, 58), _OtbNWfcfKRIxEBenRG9bmom5ssK);
-					num = (int)((num2 * 916181746) ^ 0x45E07FDE);
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-			}
-		}
+		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0079: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
+		_QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/MainMenu/Version", "Assets/Scenes/MainMenu/Version hover", "Assets/Gui/Fonts/Bold-14", "Options", Color.get_White(), 1417, 1000, new Rectangle(1417, 1000, 146, 58), _OtbNWfcfKRIxEBenRG9bmom5ssK);
+		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/credits", "Assets/Scenes/MainMenu/Credits hover", 1583, 1000, new Rectangle(1583, 1000, 146, 58), _1UonNHUCNgrMS8Z0CyaGApPKtqM);
+		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/Patreon", null, 1749, 1000, Rectangle.get_Empty(), null);
+		_83EecuYIFalvL6Gd1s9MoTLHdgq("Assets/Gui/Fonts/Bold-14", string.Format("Version {0}", "1.0.4"), (Alignment)5, Color.get_White(), 1885, 830);
 	}
 
 	private void _1UonNHUCNgrMS8Z0CyaGApPKtqM()
@@ -56,32 +29,9 @@ public class _SsogwGgurAXPoDRtNVTCVKq9yRE : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	private void _OtbNWfcfKRIxEBenRG9bmom5ssK()
 	{
-		if (_a6EfzLkl5vzR053eenrcOponhUA == null)
+		if (_a6EfzLkl5vzR053eenrcOponhUA != null)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = -1717678378;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xC9F87F44u) % 3u)
-				{
-				case 2u:
-					goto IL_000a;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-				IL_000a:
-				_a6EfzLkl5vzR053eenrcOponhUA();
-				num = ((int)num2 * -1000899874) ^ -14306993;
-			}
+			_a6EfzLkl5vzR053eenrcOponhUA();
 		}
 	}
 

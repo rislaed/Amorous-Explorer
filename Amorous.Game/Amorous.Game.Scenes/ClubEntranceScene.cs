@@ -12,215 +12,60 @@ public class ClubEntranceScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ClubEntranceScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = default(_opIJo2jLUqdOL5yAFP4yzXce0DG);
-		while (true)
+		ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubEntrance/Club Front", -535, 0);
+		ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Rope Back", "Assets/Scenes/ClubEntrance/Club Front Ropes (behind)", -535, 0);
+		ClubEntranceScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Lights", -535, 0, 500, new string[2] { "Assets/Scenes/ClubEntrance/Club Front Glow (option one)", "Assets/Scenes/ClubEntrance/Club Front Glow (option two)" });
+		ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Entrance", "Assets/Scenes/ClubEntrance/Club Entrance Door Selectable", 410, 96, (Action)OnDoorClick);
+		ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Club Back", "Assets/Scenes/ClubEntrance/Back of Club Selectable", -535, 0, (Action)OnClubBackClick);
+		ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Rope Front", "Assets/Scenes/ClubEntrance/Club Front Ropes (infront)", -535, 0);
+		ClubEntranceScene.smethod_18(ClubEntranceScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -535, 535, 0, 0);
+		ClubEntranceScene.smethod_19(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = ClubEntranceScene.smethod_20();
+		if (ClubEntranceScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue") >= 20)
 		{
-			int num = -1232202995;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xFE534442u) % 11u)
-				{
-				case 10u:
-					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Rope Back", "Assets/Scenes/ClubEntrance/Club Front Ropes (behind)", -535, 0);
-					num = (int)((num2 * 1311701399) ^ 0x20698A50);
-					continue;
-				case 9u:
-					ClubEntranceScene.smethod_18(ClubEntranceScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -535, 535, 0, 0);
-					num = (int)((num2 * 697501499) ^ 0x5C8B1E8B);
-					continue;
-				case 8u:
-					_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
-					num = (int)(num2 * 1792778721) ^ -1749390244;
-					continue;
-				case 7u:
-					ClubEntranceScene.smethod_19(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
-					opIJo2jLUqdOL5yAFP4yzXce0DG_ = ClubEntranceScene.smethod_20();
-					num = ((int)num2 * -1741445963) ^ -516687160;
-					continue;
-				case 5u:
-					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubEntrance/Club Front", -535, 0);
-					num = (int)(num2 * 1881360938) ^ -135237582;
-					continue;
-				case 4u:
-					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Rope Front", "Assets/Scenes/ClubEntrance/Club Front Ropes (infront)", -535, 0);
-					num = ((int)num2 * -591594063) ^ -1050660732;
-					continue;
-				case 3u:
-				{
-					int num3;
-					int num4;
-					if (ClubEntranceScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue") < 20)
-					{
-						num3 = 1930675680;
-						num4 = 1930675680;
-					}
-					else
-					{
-						num3 = 914657534;
-						num4 = 914657534;
-					}
-					num = num3 ^ ((int)num2 * -1008542046);
-					continue;
-				}
-				case 1u:
-					ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Entrance", "Assets/Scenes/ClubEntrance/Club Entrance Door Selectable", 410, 96, (Action)OnDoorClick);
-					ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Club Back", "Assets/Scenes/ClubEntrance/Back of Club Selectable", -535, 0, (Action)OnClubBackClick);
-					num = ((int)num2 * -1961955718) ^ 0x297FC6F;
-					continue;
-				case 0u:
-					ClubEntranceScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Lights", -535, 0, 500, new string[2] { "Assets/Scenes/ClubEntrance/Club Front Glow (option one)", "Assets/Scenes/ClubEntrance/Club Front Glow (option two)" });
-					num = (int)(num2 * 828320904) ^ -480263842;
-					continue;
-				default:
-					return;
-				case 6u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-			}
+			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
 		}
 	}
 
 	public override void Start()
 	{
 		_kane = ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<KaneNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve2 = default(_3IHp43rpkJgOBcY9lrIrwMuwWve);
-		_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve = default(_3IHp43rpkJgOBcY9lrIrwMuwWve);
-		ClubEntranceCNPC clubEntranceCNPC = default(ClubEntranceCNPC);
-		ClubEntranceDNPC clubEntranceDNPC = default(ClubEntranceDNPC);
-		ClubEntranceABNPC clubEntranceABNPC = default(ClubEntranceABNPC);
-		while (true)
+		_kaneLayer = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<KaneNPC>();
+		ClubEntranceScene.smethod_23(_kaneLayer, (Action)delegate
 		{
-			int num = 189674090;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x26866470u) % 16u)
-				{
-				case 15u:
-					_3IHp43rpkJgOBcY9lrIrwMuwWve2._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 1;
-					num = ((int)num2 * -1975458355) ^ 0x7697ACA5;
-					continue;
-				case 13u:
-					_3IHp43rpkJgOBcY9lrIrwMuwWve._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 1;
-					num = ((int)num2 * -891318629) ^ -19762486;
-					continue;
-				case 12u:
-				{
-					_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve3 = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<ClubEntranceABNPC>();
-					_3IHp43rpkJgOBcY9lrIrwMuwWve3._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 1;
-					clubEntranceCNPC = ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					num = (int)((num2 * 1019694872) ^ 0x621C6F57);
-					continue;
-				}
-				case 11u:
-					clubEntranceDNPC = ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceDNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					clubEntranceDNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
-					clubEntranceDNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
-					num = (int)((num2 * 325193454) ^ 0x1E4185A8);
-					continue;
-				case 10u:
-					_kaneLayer = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<KaneNPC>();
-					num = (int)((num2 * 1696317952) ^ 0x23A60793);
-					continue;
-				case 9u:
-					clubEntranceABNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
-					ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceABNPC, -325f);
-					ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceABNPC, 300f);
-					num = ((int)num2 * -423066818) ^ 0x23370752;
-					continue;
-				case 8u:
-					ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceCNPC, 205f);
-					num = ((int)num2 * -350169654) ^ 0x16D3AA1B;
-					continue;
-				case 7u:
-					clubEntranceCNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
-					clubEntranceCNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
-					num = (int)((num2 * 46999799) ^ 0x283AF501);
-					continue;
-				case 5u:
-					_3IHp43rpkJgOBcY9lrIrwMuwWve2 = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<ClubEntranceDNPC>();
-					num = (int)((num2 * 274484111) ^ 0x2DCAEE14);
-					continue;
-				case 4u:
-					clubEntranceABNPC = ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceABNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					clubEntranceABNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
-					num = ((int)num2 * -1168756532) ^ 0x35ECF6B9;
-					continue;
-				case 3u:
-					ClubEntranceScene.smethod_23(_kaneLayer, (Action)delegate
-					{
-						_kaneLayer._ac2H6kMdrgPhXXxabsikjji4SiT = 1;
-						while (true)
-						{
-							int num3 = -1287105468;
-							while (true)
-							{
-								uint num4;
-								switch ((num4 = (uint)num3 ^ 0xAC46E1DCu) % 7u)
-								{
-								case 6u:
-									ClubEntranceScene.smethod_30((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, bool_0: false);
-									num3 = ((int)num4 * -1327693077) ^ 0x3F62E3D2;
-									continue;
-								case 4u:
-									_kaneLayer._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 0;
-									num3 = (int)(num4 * 486558849) ^ -1984461864;
-									continue;
-								case 3u:
-									_kane._09vxUzgOn7J7DFZEwsTh7lgEIhB(KaneNPC.EClothes.Shirt, KaneNPC.EClothes.Shorts);
-									ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, -25f);
-									ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, 180f);
-									num3 = (int)(num4 * 1543687581) ^ -2069020883;
-									continue;
-								case 1u:
-									_kane._g3oEqGBkN3YHUPosRq2nIP2sX0D(KaneNPC.EHeads.Angry);
-									_kane._tDFvus0ZCanjp81eOiDzoMXJiuf(KaneNPC.EPoses.Stern);
-									num3 = ((int)num4 * -1000646547) ^ -436107241;
-									continue;
-								case 0u:
-									ClubEntranceScene.smethod_31((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, 0.4f);
-									ClubEntranceScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, (Action)OnKaneClick);
-									num3 = ((int)num4 * -509039476) ^ 0x690A4795;
-									continue;
-								case 2u:
-									break;
-								default:
-									ClubEntranceScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this);
-									return;
-								}
-								break;
-							}
-						}
-					});
-					num = ((int)num2 * -1276647914) ^ -1807430410;
-					continue;
-				case 2u:
-					ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceDNPC, 1930f);
-					num = (int)(num2 * 1262658405) ^ -695640197;
-					continue;
-				case 1u:
-					ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceDNPC, 255f);
-					_3IHp43rpkJgOBcY9lrIrwMuwWve = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<ClubEntranceCNPC>();
-					num = (int)(num2 * 1263601491) ^ -1511955394;
-					continue;
-				case 0u:
-					ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceCNPC, 1630f);
-					num = (int)(num2 * 192614281) ^ -1418308264;
-					continue;
-				default:
-					return;
-				case 14u:
-					break;
-				case 6u:
-					return;
-				}
-				break;
-			}
-		}
+			_kaneLayer._ac2H6kMdrgPhXXxabsikjji4SiT = 1;
+			_kaneLayer._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 0;
+			ClubEntranceScene.smethod_30((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, bool_0: false);
+			_kane._g3oEqGBkN3YHUPosRq2nIP2sX0D(KaneNPC.EHeads.Angry);
+			_kane._tDFvus0ZCanjp81eOiDzoMXJiuf(KaneNPC.EPoses.Stern);
+			_kane._09vxUzgOn7J7DFZEwsTh7lgEIhB(KaneNPC.EClothes.Shirt, KaneNPC.EClothes.Shorts);
+			ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, -25f);
+			ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, 180f);
+			ClubEntranceScene.smethod_31((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, 0.4f);
+			ClubEntranceScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, (Action)OnKaneClick);
+			ClubEntranceScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this);
+		});
+		ClubEntranceABNPC clubEntranceABNPC = ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceABNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubEntranceABNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
+		clubEntranceABNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
+		ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceABNPC, -325f);
+		ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceABNPC, 300f);
+		_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<ClubEntranceABNPC>();
+		_3IHp43rpkJgOBcY9lrIrwMuwWve._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 1;
+		ClubEntranceCNPC clubEntranceCNPC = ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubEntranceCNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
+		clubEntranceCNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
+		ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceCNPC, 1630f);
+		ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceCNPC, 205f);
+		ClubEntranceDNPC clubEntranceDNPC = ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceDNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubEntranceDNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
+		clubEntranceDNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
+		ClubEntranceScene.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceDNPC, 1930f);
+		ClubEntranceScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubEntranceDNPC, 255f);
+		_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve2 = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<ClubEntranceCNPC>();
+		_3IHp43rpkJgOBcY9lrIrwMuwWve2._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 1;
+		_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve3 = _VvFE2zgy4FbDjvaEvb67tXJ7aRm<ClubEntranceDNPC>();
+		_3IHp43rpkJgOBcY9lrIrwMuwWve3._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 1;
 	}
 
 	private void OnDoorClick()
@@ -236,38 +81,11 @@ public class ClubEntranceScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	private void OnKaneClick()
 	{
 		_kaneLayer._ac2H6kMdrgPhXXxabsikjji4SiT = 3;
-		while (true)
-		{
-			int num = 643231515;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x4B70D049u) % 5u)
-				{
-				case 4u:
-					ClubEntranceScene.smethod_29(ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Kane");
-					num = (int)((num2 * 539605991) ^ 0x78674437);
-					continue;
-				case 3u:
-					ClubEntranceScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, (Action)null);
-					ClubEntranceScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, bool_0: false);
-					ClubEntranceScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this);
-					num = ((int)num2 * -1293178336) ^ 0x4835C493;
-					continue;
-				case 2u:
-					_kaneLayer._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 0;
-					num = (int)(num2 * 1689893163) ^ -496617472;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-			}
-		}
+		_kaneLayer._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 0;
+		ClubEntranceScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, (Action)null);
+		ClubEntranceScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_kane, bool_0: false);
+		ClubEntranceScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this);
+		ClubEntranceScene.smethod_29(ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Kane");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

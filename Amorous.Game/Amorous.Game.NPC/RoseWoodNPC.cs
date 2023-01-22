@@ -30,105 +30,33 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 	public RoseWoodNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/RoseWood", 1f)
 	{
-		while (true)
-		{
-			int num = -2011707511;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xA02503D4u) % 5u)
-				{
-				case 4u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Rose Wood Body");
-					num = (int)(num2 * 106022831) ^ -2034179393;
-					continue;
-				case 1u:
-					RoseWoodNPC.smethod_19(RoseWoodNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Rose Wood Shirt")));
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					num = (int)((num2 * 512282757) ^ 0x3184DCFC);
-					continue;
-				case 0u:
-					RoseWoodNPC.smethod_17(RoseWoodNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts")));
-					num = ((int)num2 * -1337295347) ^ 0x1F574259;
-					continue;
-				default:
-					return;
-				case 2u:
-					break;
-				case 3u:
-					return;
-				}
-				break;
-			}
-		}
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Rose Wood Body");
+		RoseWoodNPC.smethod_17(RoseWoodNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts")));
+		RoseWoodNPC.smethod_19(RoseWoodNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Rose Wood Shirt")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
-		case NPCLocation.Left:
-			RoseWoodNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = -314874322;
-			goto IL_007d;
 		case NPCLocation.Middle:
-			goto IL_0045;
-		default:
-			goto IL_005e;
-		case NPCLocation.Right:
-			goto IL_00b7;
-			IL_007d:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xD0EE8CA3u) % 10u)
-				{
-				case 9u:
-					RoseWoodNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
-					num = ((int)num2 * -584087302) ^ 0x6FE3431A;
-					continue;
-				case 8u:
-					break;
-				case 7u:
-					goto IL_0045;
-				case 4u:
-					goto IL_005e;
-				case 0u:
-					RoseWoodNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 130f);
-					num = ((int)num2 * -1397497777) ^ -3486022;
-					continue;
-				case 6u:
-					goto IL_00b7;
-				case 1u:
-					return;
-				case 2u:
-					return;
-				default:
-					RoseWoodNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 130f);
-					return;
-				case 5u:
-					RoseWoodNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 130f);
-					return;
-				}
-				break;
-			}
-			goto case NPCLocation.Left;
-			IL_00b7:
-			RoseWoodNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			RoseWoodNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1351f);
-			num = -791092261;
-			goto IL_007d;
-			IL_005e:
-			num = -577718917;
-			goto IL_007d;
-			IL_0045:
 			RoseWoodNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
 			RoseWoodNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 725f);
-			num = -772522132;
-			goto IL_007d;
+			RoseWoodNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 130f);
+			break;
+		case NPCLocation.Left:
+			RoseWoodNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			RoseWoodNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
+			RoseWoodNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 130f);
+			break;
+		case NPCLocation.Right:
+			RoseWoodNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			RoseWoodNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1351f);
+			RoseWoodNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 130f);
+			break;
 		}
 	}
 

@@ -20,33 +20,9 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 		{
 			if (int_0 == 1)
 			{
-				while (true)
-				{
-					int num = -345956989;
-					while (true)
-					{
-						uint num2;
-						switch ((num2 = (uint)num ^ 0xADF9882Eu) % 4u)
-						{
-						case 1u:
-							_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-							num = (int)(num2 * 1159333574) ^ -1241465216;
-							continue;
-						case 0u:
-							ProloguePlayerCustomizationScene.smethod_58(ProloguePlayerCustomizationScene.smethod_57(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-							ProloguePlayerCustomizationScene.smethod_59(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
-							num = (int)(num2 * 1556080477) ^ -961952976;
-							continue;
-						default:
-							return;
-						case 3u:
-							break;
-						case 2u:
-							return;
-						}
-						break;
-					}
-				}
+				_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+				ProloguePlayerCustomizationScene.smethod_58(ProloguePlayerCustomizationScene.smethod_57(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
+				ProloguePlayerCustomizationScene.smethod_59(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
 			}
 		});
 	}
@@ -54,36 +30,11 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 	[CompilerGenerated]
 	private void _HmcC92wrccEn9iOEGKt7s7lfxJx(int int_0)
 	{
-		if (int_0 != 1)
+		if (int_0 == 1)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = -345956989;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xADF9882Eu) % 4u)
-				{
-				case 1u:
-					_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-					num = (int)(num2 * 1159333574) ^ -1241465216;
-					continue;
-				case 0u:
-					ProloguePlayerCustomizationScene.smethod_58(ProloguePlayerCustomizationScene.smethod_57(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-					ProloguePlayerCustomizationScene.smethod_59(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
-					num = (int)(num2 * 1556080477) ^ -961952976;
-					continue;
-				default:
-					return;
-				case 3u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-			}
+			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			ProloguePlayerCustomizationScene.smethod_58(ProloguePlayerCustomizationScene.smethod_57(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
+			ProloguePlayerCustomizationScene.smethod_59(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
 		}
 	}
 

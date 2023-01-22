@@ -30,47 +30,13 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
 	{
 		this.method_0(string_0);
-		while (true)
+		if (CobyTeaseScene.smethod_22(string_0, "Panties"))
 		{
-			int num = -468792248;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xA1D226DAu) % 5u)
-				{
-				case 4u:
-				{
-					int num3;
-					int num4;
-					if (CobyTeaseScene.smethod_22(string_0, "Panties"))
-					{
-						num3 = -1985814189;
-						num4 = -1985814189;
-					}
-					else
-					{
-						num3 = -1333901667;
-						num4 = -1333901667;
-					}
-					num = num3 ^ (int)(num2 * 660490821);
-					continue;
-				}
-				case 1u:
-					CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, "default");
-					num = -2016440876;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				case 3u:
-					CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, "Panties");
-					return;
-				}
-				break;
-			}
+			CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, "Panties");
+		}
+		else
+		{
+			CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, "default");
 		}
 	}
 
@@ -84,29 +50,7 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		this.method_2(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
-		while (true)
-		{
-			int num = -1174724664;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xB350C817u) % 3u)
-				{
-				case 1u:
-					goto IL_000b;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_000b:
-				CobyTeaseScene.smethod_25(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, 1f);
-				num = ((int)num2 * -1387931265) ^ 0x129BC5A0;
-			}
-		}
+		CobyTeaseScene.smethod_25(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, 1f);
 	}
 
 	static ContentManager smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)

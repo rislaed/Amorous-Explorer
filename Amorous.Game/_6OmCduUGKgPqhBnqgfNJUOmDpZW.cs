@@ -19,73 +19,16 @@ internal sealed class _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U>
 	[DebuggerHidden]
 	public _6OmCduUGKgPqhBnqgfNJUOmDpZW(T gparam_0, U gparam_1)
 	{
-		while (true)
-		{
-			int num = -249420628;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xBAE7DC75u) % 3u)
-				{
-				case 2u:
-					goto IL_0008;
-				case 0u:
-					break;
-				default:
-					_qHXlCugFudIXDTksrDHhh1eusHD = gparam_1;
-					return;
-				}
-				break;
-				IL_0008:
-				_fStemwWB2D6lHHxMgfgDO4E5w2G = gparam_0;
-				num = (int)((num2 * 292440415) ^ 0x5D6388E4);
-			}
-		}
+		_fStemwWB2D6lHHxMgfgDO4E5w2G = gparam_0;
+		_qHXlCugFudIXDTksrDHhh1eusHD = gparam_1;
 	}
 
 	[DebuggerHidden]
 	public override bool _LS9lnS2o8mIczclV735RvXVZkmk(object obj)
 	{
-		if (obj is _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U> _6OmCduUGKgPqhBnqgfNJUOmDpZW2)
+		if (obj is _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U> _6OmCduUGKgPqhBnqgfNJUOmDpZW2 && EqualityComparer<T>.Default.Equals(_fStemwWB2D6lHHxMgfgDO4E5w2G, _6OmCduUGKgPqhBnqgfNJUOmDpZW2._fStemwWB2D6lHHxMgfgDO4E5w2G))
 		{
-			while (true)
-			{
-				int num = -762813459;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xD13F2B9Au) % 4u)
-					{
-					case 3u:
-					{
-						int num3;
-						int num4;
-						if (!EqualityComparer<T>.Default.Equals(_fStemwWB2D6lHHxMgfgDO4E5w2G, _6OmCduUGKgPqhBnqgfNJUOmDpZW2._fStemwWB2D6lHHxMgfgDO4E5w2G))
-						{
-							num3 = 746227158;
-							num4 = 746227158;
-						}
-						else
-						{
-							num3 = 753974009;
-							num4 = 753974009;
-						}
-						num = num3 ^ (int)(num2 * 556801682);
-						continue;
-					}
-					case 0u:
-						break;
-					case 1u:
-						return EqualityComparer<U>.Default.Equals(_qHXlCugFudIXDTksrDHhh1eusHD, _6OmCduUGKgPqhBnqgfNJUOmDpZW2._qHXlCugFudIXDTksrDHhh1eusHD);
-					default:
-						goto end_IL_0064;
-					}
-					break;
-				}
-				continue;
-				end_IL_0064:
-				break;
-			}
+			return EqualityComparer<U>.Default.Equals(_qHXlCugFudIXDTksrDHhh1eusHD, _6OmCduUGKgPqhBnqgfNJUOmDpZW2._qHXlCugFudIXDTksrDHhh1eusHD);
 		}
 		return false;
 	}

@@ -12,33 +12,9 @@ public class MakeoutPointScene : TimeOfDayScene
 	public MakeoutPointScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		while (true)
-		{
-			int num = 1059814176;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x6CD9281Bu) % 4u)
-				{
-				case 3u:
-					_4Hew2VldDt2hPLjc5fBPbqIVUEQ = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
-					num = ((int)num2 * -2144539568) ^ 0x3F2DEDD6;
-					continue;
-				case 1u:
-					_bYgAJ7foDqpxOElDOYhOkQFMzrz = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
-					MakeoutPointScene.smethod_19("Assets/Music/DJ-ZEK - Simulate", 0.4f);
-					num = ((int)num2 * -1100710363) ^ -114680260;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-			}
-		}
+		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
+		_bYgAJ7foDqpxOElDOYhOkQFMzrz = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
+		MakeoutPointScene.smethod_19("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 	}
 
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
@@ -46,75 +22,21 @@ public class MakeoutPointScene : TimeOfDayScene
 		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
 		if (MakeoutPointScene.smethod_20(string_0, "Night"))
 		{
-			goto IL_005f;
+			((Color)(ref _bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A(byte.MaxValue);
+			((Color)(ref _4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A((byte)0);
 		}
-		goto IL_008d;
-		IL_008d:
-		((Color)(ref _bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A((byte)0);
-		int num = 252582205;
-		goto IL_0064;
-		IL_0064:
-		while (true)
+		else
 		{
-			uint num2;
-			switch ((num2 = (uint)num ^ 0x585EBBFEu) % 6u)
-			{
-			case 5u:
-				((Color)(ref _4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A(byte.MaxValue);
-				num = (int)((num2 * 1279944586) ^ 0x219A6231);
-				continue;
-			case 4u:
-				((Color)(ref _bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A(byte.MaxValue);
-				num = ((int)num2 * -1235448350) ^ 0x70E17945;
-				continue;
-			case 0u:
-				break;
-			default:
-				return;
-			case 2u:
-				goto IL_008d;
-			case 1u:
-				return;
-			case 3u:
-				((Color)(ref _4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A((byte)0);
-				return;
-			}
-			break;
+			((Color)(ref _bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A((byte)0);
+			((Color)(ref _4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A(byte.MaxValue);
 		}
-		goto IL_005f;
-		IL_005f:
-		num = 544577936;
-		goto IL_0064;
 	}
 
 	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
 	{
-		if (_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q == _RRECH42isVc35MkZPyLEGkp0hjs.Night)
+		if (_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q != _RRECH42isVc35MkZPyLEGkp0hjs.Night)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = 1453940841;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x21ABF684u) % 3u)
-				{
-				case 1u:
-					goto IL_000a;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_000a:
-				base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
-				num = (int)(num2 * 1527724374) ^ -218955014;
-			}
+			base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
 		}
 	}
 

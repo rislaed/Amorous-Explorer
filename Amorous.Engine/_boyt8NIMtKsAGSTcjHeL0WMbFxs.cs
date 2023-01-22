@@ -34,61 +34,12 @@ public static class _boyt8NIMtKsAGSTcjHeL0WMbFxs
 		byte[] byte_ = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_5(_boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_4(), string_0);
 		byte[] array = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_6((HashAlgorithm)hashAlgorithm_, byte_);
 		StringBuilder stringBuilder = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_7();
-		byte[] array2 = default(byte[]);
-		int num3 = default(int);
-		while (true)
+		byte[] array2 = array;
+		foreach (byte b in array2)
 		{
-			int num = -2053750986;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xB0D9E99Du) % 8u)
-				{
-				case 7u:
-				{
-					byte b = array2[num3];
-					stringBuilder.Append(b.ToString("X2"));
-					num = -45308932;
-					continue;
-				}
-				case 6u:
-					num = ((int)num2 * -1616442664) ^ -1285377144;
-					continue;
-				case 5u:
-				{
-					int num4;
-					if (num3 >= array2.Length)
-					{
-						num = -138954803;
-						num4 = -138954803;
-					}
-					else
-					{
-						num = -454864558;
-						num4 = -454864558;
-					}
-					continue;
-				}
-				case 4u:
-					num3 = 0;
-					num = (int)((num2 * 915591477) ^ 0x248ABA5F);
-					continue;
-				case 3u:
-					array2 = array;
-					num = ((int)num2 * -208122556) ^ 0x1243F41D;
-					continue;
-				case 1u:
-					num3++;
-					num = ((int)num2 * -1654724354) ^ -551111962;
-					continue;
-				case 2u:
-					break;
-				default:
-					return stringBuilder.ToString().ToLower();
-				}
-				break;
-			}
+			stringBuilder.Append(b.ToString("X2"));
 		}
+		return stringBuilder.ToString().ToLower();
 	}
 
 	static double smethod_0(Random random_0)

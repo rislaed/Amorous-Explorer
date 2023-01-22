@@ -18,34 +18,12 @@ public class _xGEYVq41yf0ul2Cmx7FszeTIVuf : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<PlayDia
 
 	public override void _dCiaLpIow7UQ0MLMp2O4J0yeVfF(PlayDialogueEventData playDialogueEventData_0)
 	{
-		//IL_0067: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
 		base._dCiaLpIow7UQ0MLMp2O4J0yeVfF(playDialogueEventData_0);
-		while (true)
-		{
-			int num = 76037530;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x4365CBC0u) % 4u)
-				{
-				case 3u:
-					_D5QiLGGNtfoCEnZIUPvH4OKqUabA = playDialogueEventData_0._D5QiLGGNtfoCEnZIUPvH4OKqUabA;
-					num = (int)((num2 * 444999263) ^ 0x3CA5C40);
-					continue;
-				case 2u:
-					_K87Hdb6ToAR0us3tN3ZmvHdPdeJ = playDialogueEventData_0._K87Hdb6ToAR0us3tN3ZmvHdPdeJ;
-					num = ((int)num2 * -532992940) ^ 0x40B2BFFF;
-					continue;
-				case 0u:
-					break;
-				default:
-					_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = playDialogueEventData_0._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
-					_sYTI9KQ6wWFbqvMDTbLkrgpPx6E = false;
-					return;
-				}
-				break;
-			}
-		}
+		_K87Hdb6ToAR0us3tN3ZmvHdPdeJ = playDialogueEventData_0._K87Hdb6ToAR0us3tN3ZmvHdPdeJ;
+		_D5QiLGGNtfoCEnZIUPvH4OKqUabA = playDialogueEventData_0._D5QiLGGNtfoCEnZIUPvH4OKqUabA;
+		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = playDialogueEventData_0._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
+		_sYTI9KQ6wWFbqvMDTbLkrgpPx6E = false;
 	}
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
@@ -59,43 +37,14 @@ public class _xGEYVq41yf0ul2Cmx7FszeTIVuf : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<PlayDia
 	{
 		if (_sYTI9KQ6wWFbqvMDTbLkrgpPx6E)
 		{
-			goto IL_0008;
+			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 		}
-		goto IL_006f;
-		IL_006f:
-		_sYTI9KQ6wWFbqvMDTbLkrgpPx6E = true;
-		int num = 1957993536;
-		goto IL_0046;
-		IL_0046:
-		while (true)
+		else
 		{
-			uint num2;
-			switch ((num2 = (uint)num ^ 0x1628B446u) % 6u)
-			{
-			case 4u:
-				break;
-			case 3u:
-				num = ((int)num2 * -45773520) ^ -2025845551;
-				continue;
-			case 1u:
-				base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
-				num = ((int)num2 * -1003380266) ^ -243245627;
-				continue;
-			case 0u:
-				_nkzqFdEfDyLcyGikIKGcHjklI4y._NeIQsy78kWqF9jXLl8vb2lOyZgO();
-				num = (int)((num2 * 452892743) ^ 0x1C378CCB);
-				continue;
-			case 2u:
-				goto IL_006f;
-			default:
-				return false;
-			}
-			break;
+			_sYTI9KQ6wWFbqvMDTbLkrgpPx6E = true;
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._NeIQsy78kWqF9jXLl8vb2lOyZgO();
 		}
-		goto IL_0008;
-		IL_0008:
-		num = 646427233;
-		goto IL_0046;
+		return false;
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)

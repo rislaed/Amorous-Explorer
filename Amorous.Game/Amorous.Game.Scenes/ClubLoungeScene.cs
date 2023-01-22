@@ -44,161 +44,44 @@ public class ClubLoungeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		ClubLoungeBNPC clubLoungeBNPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
 		clubLoungeBNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
-		ClubLoungeEFNPC clubLoungeEFNPC = default(ClubLoungeEFNPC);
-		ClubLoungeDancerANPC clubLoungeDancerANPC = default(ClubLoungeDancerANPC);
-		ClubLoungeANPC clubLoungeANPC = default(ClubLoungeANPC);
-		ClubLoungeCNPC clubLoungeCNPC = default(ClubLoungeCNPC);
-		while (true)
+		clubLoungeBNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Shirt, ClubStaticNPC.EClothes.Pants);
+		ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeBNPC, 700f);
+		ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeBNPC, 275f);
+		ClubLoungeCNPC clubLoungeCNPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubLoungeCNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
+		clubLoungeCNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Shirt, ClubStaticNPC.EClothes.Pants);
+		ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeCNPC, 1000f);
+		ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeCNPC, 275f);
+		ClubLoungeEFNPC clubLoungeEFNPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeEFNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubLoungeEFNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubLoungeEFNPC.EPoses.Sitting);
+		clubLoungeEFNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubLoungeEFNPC.EClothes.Shirt, ClubLoungeEFNPC.EClothes.Pants);
+		ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeEFNPC, 1600f);
+		ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeEFNPC, 250f);
+		ClubLoungeANPC clubLoungeANPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubLoungeANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
+		clubLoungeANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Shirt);
+		ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeANPC, 40f);
+		ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeANPC, 55f);
+		clubLoungeANPC._YyDeMNgCbNCOMTBX2QLUb4ruMp9A = false;
+		ClubLoungeDancerANPC clubLoungeDancerANPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeDancerANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubLoungeDancerANPC._g3oEqGBkN3YHUPosRq2nIP2sX0D(ClubLoungeDancerANPC.EHeads.Smirk);
+		clubLoungeDancerANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubLoungeDancerANPC.EPoses.Dancing);
+		clubLoungeDancerANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubLoungeDancerANPC.EClothes.Shirt, ClubLoungeDancerANPC.EClothes.Shorts);
+		ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeDancerANPC, 1450f);
+		ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeDancerANPC, 1000f);
+		if (_showDustin)
 		{
-			int num = -131656132;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x80653D4Bu) % 27u)
-				{
-				case 26u:
-					clubLoungeEFNPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeEFNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					num = (int)((num2 * 1137370713) ^ 0x854BC56);
-					continue;
-				case 25u:
-				{
-					ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeDancerANPC, 1450f);
-					ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeDancerANPC, 1000f);
-					int num4;
-					int num5;
-					if (_showDustin)
-					{
-						num4 = 1481210808;
-						num5 = 1481210808;
-					}
-					else
-					{
-						num4 = 585111016;
-						num5 = 585111016;
-					}
-					num = num4 ^ (int)(num2 * 254406091);
-					continue;
-				}
-				case 24u:
-					ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeANPC, 40f);
-					ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeANPC, 55f);
-					num = ((int)num2 * -1776498319) ^ 0x486E7FB8;
-					continue;
-				case 22u:
-					clubLoungeANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Shirt);
-					num = (int)(num2 * 1565353247) ^ -1993344003;
-					continue;
-				case 21u:
-					ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeBNPC, 700f);
-					num = ((int)num2 * -1283703805) ^ 0x1303DAD8;
-					continue;
-				case 20u:
-					clubLoungeEFNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubLoungeEFNPC.EPoses.Sitting);
-					num = (int)((num2 * 227663206) ^ 0x2AA0C10E);
-					continue;
-				case 19u:
-					clubLoungeDancerANPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeDancerANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = (int)(num2 * 1857838674) ^ -1916403547;
-					continue;
-				case 18u:
-					clubLoungeBNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Shirt, ClubStaticNPC.EClothes.Pants);
-					num = (int)(num2 * 2061949623) ^ -438167209;
-					continue;
-				case 17u:
-					clubLoungeDancerANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubLoungeDancerANPC.EPoses.Dancing);
-					num = ((int)num2 * -298366285) ^ 0x2500FC1D;
-					continue;
-				case 16u:
-					_dustin = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticDustinNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_dustin, -370f);
-					num = (int)((num2 * 1602854794) ^ 0x6C114021);
-					continue;
-				case 15u:
-					clubLoungeANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
-					num = ((int)num2 * -1163354828) ^ 0x2AF7586F;
-					continue;
-				case 14u:
-					ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeCNPC, 275f);
-					num = (int)((num2 * 1781249465) ^ 0x23C75EAF);
-					continue;
-				case 12u:
-					ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_dustin, 246f);
-					ClubLoungeScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_dustin, (Action)OnDustinClick);
-					num = (int)(num2 * 964919393) ^ -1728609299;
-					continue;
-				case 11u:
-					ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeBNPC, 275f);
-					num = (int)((num2 * 1042662932) ^ 0x5FB27A59);
-					continue;
-				case 10u:
-					clubLoungeDancerANPC._g3oEqGBkN3YHUPosRq2nIP2sX0D(ClubLoungeDancerANPC.EHeads.Smirk);
-					num = ((int)num2 * -229581051) ^ 0x61B0D9A1;
-					continue;
-				case 9u:
-					ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeCNPC, 1000f);
-					num = ((int)num2 * -85112404) ^ 0x70C3AF74;
-					continue;
-				case 8u:
-					_mercy = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticMercyNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = (int)(num2 * 828752462) ^ -802821296;
-					continue;
-				case 7u:
-					ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_mercy, 2300f);
-					ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_mercy, 225f);
-					ClubLoungeScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_mercy, (Action)OnMercyClick);
-					num = ((int)num2 * -811572505) ^ -1828664916;
-					continue;
-				case 6u:
-					clubLoungeANPC._YyDeMNgCbNCOMTBX2QLUb4ruMp9A = false;
-					num = ((int)num2 * -1667764284) ^ 0x2E5FE064;
-					continue;
-				case 5u:
-					clubLoungeEFNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubLoungeEFNPC.EClothes.Shirt, ClubLoungeEFNPC.EClothes.Pants);
-					num = (int)(num2 * 1260352375) ^ -691777011;
-					continue;
-				case 4u:
-					clubLoungeCNPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					clubLoungeCNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(ClubStaticNPC.EPoses.Nude);
-					clubLoungeCNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubStaticNPC.EClothes.Shirt, ClubStaticNPC.EClothes.Pants);
-					num = (int)((num2 * 928706191) ^ 0x4895DC91);
-					continue;
-				case 3u:
-					ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeEFNPC, 250f);
-					clubLoungeANPC = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					num = (int)((num2 * 672548339) ^ 0x202B0873);
-					continue;
-				case 2u:
-					ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubLoungeEFNPC, 1600f);
-					num = (int)((num2 * 1291015316) ^ 0x17B860D4);
-					continue;
-				case 1u:
-					clubLoungeDancerANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(ClubLoungeDancerANPC.EClothes.Shirt, ClubLoungeDancerANPC.EClothes.Shorts);
-					num = (int)(num2 * 1626528104) ^ -1325598306;
-					continue;
-				case 0u:
-				{
-					int num3;
-					if (!_showMercy)
-					{
-						num = -199201667;
-						num3 = -199201667;
-					}
-					else
-					{
-						num = -718504631;
-						num3 = -718504631;
-					}
-					continue;
-				}
-				default:
-					return;
-				case 13u:
-					break;
-				case 23u:
-					return;
-				}
-				break;
-			}
+			_dustin = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticDustinNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+			ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_dustin, -370f);
+			ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_dustin, 246f);
+			ClubLoungeScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_dustin, (Action)OnDustinClick);
+		}
+		if (_showMercy)
+		{
+			_mercy = ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticMercyNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+			ClubLoungeScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_mercy, 2300f);
+			ClubLoungeScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_mercy, 225f);
+			ClubLoungeScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_mercy, (Action)OnMercyClick);
 		}
 	}
 

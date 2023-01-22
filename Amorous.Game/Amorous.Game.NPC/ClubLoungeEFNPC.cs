@@ -25,33 +25,11 @@ public class ClubLoungeEFNPC : LayerNPC<ClubLoungeEFNPC.EHeads, ClubLoungeEFNPC.
 	public ClubLoungeEFNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubLoungeStatic", 1f)
 	{
-		while (true)
-		{
-			int num = 882287335;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x69E5F88Eu) % 3u)
-				{
-				case 1u:
-					goto IL_0017;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_0017:
-				ClubLoungeEFNPC.smethod_16(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Sitting, "E F club nude"), new string[1] { "E F club nude cock" });
-				ClubLoungeEFNPC.smethod_18(ClubLoungeEFNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Shirt, "E F club shirt")));
-				ClubLoungeEFNPC.smethod_20(ClubLoungeEFNPC.smethod_19(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Pants, "E F club pants")));
-				_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-				_upl1k7yzBzlU7vErvbydGmXROfA = true;
-				num = (int)(num2 * 1487517905) ^ -1297025496;
-			}
-		}
+		ClubLoungeEFNPC.smethod_16(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Sitting, "E F club nude"), new string[1] { "E F club nude cock" });
+		ClubLoungeEFNPC.smethod_18(ClubLoungeEFNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Shirt, "E F club shirt")));
+		ClubLoungeEFNPC.smethod_20(ClubLoungeEFNPC.smethod_19(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Pants, "E F club pants")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	static _NaKchYC4I4GjWR34SfBLAktysCE smethod_16(_NaKchYC4I4GjWR34SfBLAktysCE _NaKchYC4I4GjWR34SfBLAktysCE_0, string[] string_0)

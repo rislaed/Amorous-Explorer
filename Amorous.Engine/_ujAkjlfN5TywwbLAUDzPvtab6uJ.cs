@@ -53,44 +53,14 @@ public abstract class _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	protected _ujAkjlfN5TywwbLAUDzPvtab6uJ(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)
 	{
-		//IL_004a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004f: Unknown result type (might be due to invalid IL or missing references)
-		while (true)
-		{
-			int num = -770775008;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x866752C9u) % 6u)
-				{
-				case 5u:
-					_XbOXR6AypLIdJ3gBMGseGi3Wi2i = _7UlnfykmEmZDFt3BmCKZekI43Ih_0;
-					num = ((int)num2 * -1755756811) ^ -1054044884;
-					continue;
-				case 3u:
-					_3ZeCDXqcWHY4XJDBGyav3UzxYaHA = true;
-					num = ((int)num2 * -1200234628) ^ -262638254;
-					continue;
-				case 1u:
-					_Fxy2SlgceW90FloFw6a1AEJODYA = true;
-					_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.get_White();
-					_ac2H6kMdrgPhXXxabsikjji4SiT = 0;
-					num = ((int)num2 * -640369711) ^ -62666110;
-					continue;
-				case 0u:
-					_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
-					num = (int)(num2 * 80987108) ^ -1220844140;
-					continue;
-				default:
-					return;
-				case 2u:
-					break;
-				case 4u:
-					return;
-				}
-				break;
-			}
-		}
+		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
+		_XbOXR6AypLIdJ3gBMGseGi3Wi2i = _7UlnfykmEmZDFt3BmCKZekI43Ih_0;
+		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
+		_3ZeCDXqcWHY4XJDBGyav3UzxYaHA = true;
+		_Fxy2SlgceW90FloFw6a1AEJODYA = true;
+		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.get_White();
+		_ac2H6kMdrgPhXXxabsikjji4SiT = 0;
 	}
 
 	public abstract void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0);

@@ -28,29 +28,7 @@ public class _gJR4g7ak0hsZAUWX1vJbMqG2P5I : _RlrsL89bialFQa9mzWurgsdr6FK<Color>
 		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
 		_gJR4g7ak0hsZAUWX1vJbMqG2P5I.smethod_2(spriteBatch_0);
 		spriteBatch_0.Draw(_OzFEGvZu5tqLcitcWhX3j9pIBZM, new Rectangle(0, 0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._L7Fbjq2u4uL5uJIyoRAHpKNXmDI, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._omy3Cp1IbOKtE3eoz7lAP5DqhT9), base._SWODlbUkQEqfwrtprjLPOeGF7HO);
-		while (true)
-		{
-			int num = -353009836;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xFB81DEB1u) % 3u)
-				{
-				case 1u:
-					goto IL_002d;
-				default:
-					return;
-				case 0u:
-					break;
-				case 2u:
-					return;
-				}
-				break;
-				IL_002d:
-				spriteBatch_0.End();
-				num = (int)((num2 * 883572674) ^ 0x63B3574E);
-			}
-		}
+		spriteBatch_0.End();
 	}
 
 	public void _PYAXEqRAOkDRRNqm1k71R7GJTJK(Action action_0 = null)

@@ -31,29 +31,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_3(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 1930589732;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x63DF44B7u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)(num2 * 1963195574) ^ -118239148;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -96,29 +74,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_9(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1684372120;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x809DAEDBu) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -881250369) ^ -1975697552;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -146,29 +102,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_13(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1357096740;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x9C2903C5u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)(num2 * 2129428027) ^ -1157055040;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -211,29 +145,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_19(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 1412988661;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x36DC95B3u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)(num2 * 1228467079) ^ -409573003;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -263,29 +175,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_23(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1277148574;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x954E5879u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)(num2 * 1010807657) ^ -1017497744;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -457,29 +347,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_47(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -170141763;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xEF98CB93u) % 3u)
-					{
-					case 2u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 1u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)((num2 * 98473802) ^ 0x2E628C41);
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -509,29 +377,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_51(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 140294339;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x59B6551Au) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)((num2 * 801248840) ^ 0x7DA60598);
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -559,29 +405,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_55(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 467543334;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x26738D86u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)((num2 * 725376123) ^ 0x38D9570A);
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -624,29 +448,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_61(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 1275829613;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x498F23B4u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)(num2 * 1928133883) ^ -662661268;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -659,29 +461,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_63(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 1582917731;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x5766DCCCu) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -1594457092) ^ -995515928;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -709,29 +489,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_67(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 1999413813;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x69F17BDEu) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -378128233) ^ 0x4A557DB4;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -746,29 +504,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_69(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -651181621;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xD6859DCFu) % 3u)
-					{
-					case 2u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 1u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)((num2 * 35355882) ^ 0x43D6FF87);
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -781,29 +517,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_71(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1938609671;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xC45C769Fu) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)(num2 * 2087469200) ^ -213675926;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -902,29 +616,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_85(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1309663265;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xBCFF7418u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -2125609718) ^ -836098997;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -997,29 +689,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_95(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 190012413;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x2A5E68D7u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -1999850745) ^ 0x7DC330EE;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1049,29 +719,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_99(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 1250559095;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x596568E0u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -356204622) ^ -228145936;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1086,29 +734,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_101(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1220227310;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x9F1B21AAu) % 3u)
-					{
-					case 2u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 1u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -332868575) ^ 0x5649CE92;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1123,29 +749,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_103(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -61363563;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x9D13B3EDu) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -715928454) ^ 0x3837F6F7;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1173,29 +777,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_107(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = 1137937971;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x5308E0FEu) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -1769811096) ^ 0x1B1E8B50;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1253,29 +835,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_115(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -37500181;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xE2F5FA78u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -1815574309) ^ 0x41A32F6E;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1288,29 +848,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		set
 		{
 			PlayerDataProxy.smethod_117(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1633523825;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xF5E0C24Fu) % 3u)
-					{
-					case 2u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 1u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = ((int)num2 * -1779173430) ^ -694138021;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1325,29 +863,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_119(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -793071862;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0x89744AD7u) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)((num2 * 1784475747) ^ 0x68421635);
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1375,29 +891,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			PlayerDataProxy.smethod_123(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
-			while (true)
-			{
-				int num = -1118204970;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xB4C5E80Au) % 3u)
-					{
-					case 1u:
-						goto IL_000e;
-					default:
-						return;
-					case 0u:
-						break;
-					case 2u:
-						return;
-					}
-					break;
-					IL_000e:
-					_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
-					num = (int)(num2 * 602813590) ^ -586432417;
-				}
-			}
+			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
@@ -1422,134 +916,33 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		add
 		{
 			Action action = this._jCsrJ38OEkr542qwd48oa3BLDIB;
-			Action action2 = default(Action);
-			Action value2 = default(Action);
-			while (true)
+			Action action2;
+			do
 			{
-				int num = -239373147;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xE406ED9Bu) % 6u)
-					{
-					case 5u:
-					{
-						int num3;
-						int num4;
-						if ((object)action != action2)
-						{
-							num3 = 1873247712;
-							num4 = 1873247712;
-						}
-						else
-						{
-							num3 = 281761482;
-							num4 = 281761482;
-						}
-						num = num3 ^ (int)(num2 * 1565539827);
-						continue;
-					}
-					case 4u:
-						action = Interlocked.CompareExchange(ref this._jCsrJ38OEkr542qwd48oa3BLDIB, value2, action2);
-						num = (int)(num2 * 1606229424) ^ -1816225892;
-						continue;
-					case 2u:
-						action2 = action;
-						num = -1167518516;
-						continue;
-					case 1u:
-						value2 = (Action)PlayerDataProxy.smethod_126((Delegate)action2, (Delegate)value);
-						num = ((int)num2 * -241477338) ^ 0x6356B7EB;
-						continue;
-					default:
-						return;
-					case 3u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-				}
+				action2 = action;
+				Action value2 = (Action)PlayerDataProxy.smethod_126((Delegate)action2, (Delegate)value);
+				action = Interlocked.CompareExchange(ref this._jCsrJ38OEkr542qwd48oa3BLDIB, value2, action2);
 			}
+			while ((object)action != action2);
 		}
 		[CompilerGenerated]
 		remove
 		{
 			Action action = this._jCsrJ38OEkr542qwd48oa3BLDIB;
-			Action action2 = default(Action);
-			Action value2 = default(Action);
-			while (true)
+			Action action2;
+			do
 			{
-				int num = -160540429;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xD10EFC74u) % 5u)
-					{
-					case 4u:
-						action2 = action;
-						num = -345095219;
-						continue;
-					case 3u:
-					{
-						action = Interlocked.CompareExchange(ref this._jCsrJ38OEkr542qwd48oa3BLDIB, value2, action2);
-						int num3;
-						int num4;
-						if ((object)action == action2)
-						{
-							num3 = -842274135;
-							num4 = -842274135;
-						}
-						else
-						{
-							num3 = -281384789;
-							num4 = -281384789;
-						}
-						num = num3 ^ ((int)num2 * -227991928);
-						continue;
-					}
-					case 0u:
-						value2 = (Action)PlayerDataProxy.smethod_127((Delegate)action2, (Delegate)value);
-						num = (int)((num2 * 1253511529) ^ 0x2D80988E);
-						continue;
-					default:
-						return;
-					case 2u:
-						break;
-					case 1u:
-						return;
-					}
-					break;
-				}
+				action2 = action;
+				Action value2 = (Action)PlayerDataProxy.smethod_127((Delegate)action2, (Delegate)value);
+				action = Interlocked.CompareExchange(ref this._jCsrJ38OEkr542qwd48oa3BLDIB, value2, action2);
 			}
+			while ((object)action != action2);
 		}
 	}
 
 	public PlayerDataProxy(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		while (true)
-		{
-			int num = -800386201;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x911B4B7Fu) % 3u)
-				{
-				case 2u:
-					goto IL_0008;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-				IL_0008:
-				_3t4w2BwPGr8GQDmJlQU929IFD8f = _opIJo2jLUqdOL5yAFP4yzXce0DG_0;
-				num = ((int)num2 * -2058315027) ^ 0x76D05940;
-			}
-		}
+		_3t4w2BwPGr8GQDmJlQU929IFD8f = _opIJo2jLUqdOL5yAFP4yzXce0DG_0;
 	}
 
 	public bool _Oms9lumBodLGrGZ09YJaEuzmlAf(string string_0)

@@ -37,51 +37,18 @@ public class _99nxpM4875DlpTJ1IMF4j4oCXiD : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 	public _99nxpM4875DlpTJ1IMF4j4oCXiD(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "Campfire")
 	{
-		while (true)
+		_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_4((_fAUddQEKfZyemRb327NhM3GGlmzA)this, (Action<GameTime>)delegate(GameTime gameTime_0)
 		{
-			int num = -2025367356;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xBFFA1AA3u) % 7u)
-				{
-				case 6u:
-					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_5((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)this, (Action<SpriteBatch, SkeletonMeshRenderer>)delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
-					{
-						_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_11(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
-					});
-					num = ((int)num2 * -2029958427) ^ 0x1C3F227A;
-					continue;
-				case 4u:
-					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_1(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, 960f);
-					num = (int)(num2 * 1156155311) ^ -1212859004;
-					continue;
-				case 3u:
-					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_4((_fAUddQEKfZyemRb327NhM3GGlmzA)this, (Action<GameTime>)delegate(GameTime gameTime_0)
-					{
-						_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_10(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, gameTime_0, 1000f);
-					});
-					num = (int)(num2 * 2042545506) ^ -2037616570;
-					continue;
-				case 2u:
-					_aWAfh7vUNHnjdyRPQNHL6D9yrCg = _99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_8(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_7(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_6(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/Campfire/Campfire", 1f, bool_0: true, (List<SpineEvent>)null);
-					num = (int)((num2 * 525837351) ^ 0x34B23585);
-					continue;
-				case 1u:
-					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_3(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, 540f);
-					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_9(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, "animation", (Action<int>)null);
-					num = (int)((num2 * 992813771) ^ 0x7E5C24E2);
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 5u:
-					return;
-				}
-				break;
-			}
-		}
+			_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_10(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, gameTime_0, 1000f);
+		});
+		_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_5((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)this, (Action<SpriteBatch, SkeletonMeshRenderer>)delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
+		{
+			_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_11(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+		});
+		_aWAfh7vUNHnjdyRPQNHL6D9yrCg = _99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_8(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_7(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_6(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/Campfire/Campfire", 1f, bool_0: true, (List<SpineEvent>)null);
+		_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_1(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, 960f);
+		_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_3(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, 540f);
+		_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_9(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, "animation", (Action<int>)null);
 	}
 
 	[CompilerGenerated]

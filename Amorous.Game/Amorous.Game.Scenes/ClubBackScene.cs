@@ -33,37 +33,12 @@ public class ClubBackScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void Start()
 	{
-		if (!_showLex)
+		if (_showLex)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = 50588526;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x776E17E8u) % 4u)
-				{
-				case 2u:
-					_lex = ClubBackScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticLexNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-					ClubBackScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_lex, -535f);
-					num = (int)(num2 * 464451840) ^ -1349106803;
-					continue;
-				case 1u:
-					ClubBackScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_lex, 250f);
-					ClubBackScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_lex, (Action)OnLexClick);
-					num = (int)((num2 * 1374661108) ^ 0x51993EAB);
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 3u:
-					return;
-				}
-				break;
-			}
+			_lex = ClubBackScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticLexNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+			ClubBackScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_lex, -535f);
+			ClubBackScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_lex, 250f);
+			ClubBackScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_lex, (Action)OnLexClick);
 		}
 	}
 

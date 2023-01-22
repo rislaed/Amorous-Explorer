@@ -23,33 +23,9 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 		{
 			if (int_0 == 1)
 			{
-				while (true)
-				{
-					int num = -1027556224;
-					while (true)
-					{
-						uint num2;
-						switch ((num2 = (uint)num ^ 0xCCF28FC9u) % 4u)
-						{
-						case 2u:
-							SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
-							_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
-							num = ((int)num2 * -1115515197) ^ 0x6E73241B;
-							continue;
-						case 1u:
-							SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-							num = ((int)num2 * -578363603) ^ -1169211634;
-							continue;
-						default:
-							return;
-						case 3u:
-							break;
-						case 0u:
-							return;
-						}
-						break;
-					}
-				}
+				SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
+				SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
+				_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 			}
 		});
 	}
@@ -57,139 +33,29 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		this.method_0(gameTime_0);
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = default(_opIJo2jLUqdOL5yAFP4yzXce0DG);
-		while (true)
+		if (_e1Kru66UIN1SkWkBreRDCF5RsWA && !SkipProloguePlayerCustomizationScene.smethod_57(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) && SkipProloguePlayerCustomizationScene.smethod_58(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) == null)
 		{
-			int num = -1278627100;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xC37E3AEBu) % 11u)
-				{
-				case 10u:
-				{
-					int num5;
-					int num6;
-					if (SkipProloguePlayerCustomizationScene.smethod_58(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) == null)
-					{
-						num5 = 216813867;
-						num6 = 216813867;
-					}
-					else
-					{
-						num5 = 263447691;
-						num6 = 263447691;
-					}
-					num = num5 ^ (int)(num2 * 814805874);
-					continue;
-				}
-				case 9u:
-					_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-					num = ((int)num2 * -2144620913) ^ -1717643148;
-					continue;
-				case 8u:
-				{
-					int num7;
-					int num8;
-					if (SkipProloguePlayerCustomizationScene.smethod_57(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)))
-					{
-						num7 = -1678010733;
-						num8 = -1678010733;
-					}
-					else
-					{
-						num7 = -1263304751;
-						num8 = -1263304751;
-					}
-					num = num7 ^ (int)(num2 * 1332285163);
-					continue;
-				}
-				case 7u:
-					SkipProloguePlayerCustomizationScene.smethod_61(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue", 40);
-					num = ((int)num2 * -1926507596) ^ 0x751CA2DF;
-					continue;
-				case 6u:
-					SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric4");
-					SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubEntranceScene>();
-					num = (int)((num2 * 37688924) ^ 0x488EE5B);
-					continue;
-				case 4u:
-					_e1Kru66UIN1SkWkBreRDCF5RsWA = false;
-					opIJo2jLUqdOL5yAFP4yzXce0DG_ = SkipProloguePlayerCustomizationScene.smethod_59();
-					SkipProloguePlayerCustomizationScene.smethod_60(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
-					num = (int)((num2 * 558830294) ^ 0x7298CEDB);
-					continue;
-				case 3u:
-					SkipProloguePlayerCustomizationScene.smethod_64(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
-					num = (int)(num2 * 1514281406) ^ -1403623560;
-					continue;
-				case 2u:
-					SkipProloguePlayerCustomizationScene.smethod_62(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyLeftClub", bool_0: true);
-					_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
-					num = ((int)num2 * -931895477) ^ -1516820463;
-					continue;
-				case 1u:
-				{
-					int num3;
-					int num4;
-					if (!_e1Kru66UIN1SkWkBreRDCF5RsWA)
-					{
-						num3 = 962278223;
-						num4 = 962278223;
-					}
-					else
-					{
-						num3 = 116114239;
-						num4 = 116114239;
-					}
-					num = num3 ^ ((int)num2 * -1436532952);
-					continue;
-				}
-				default:
-					return;
-				case 0u:
-					break;
-				case 5u:
-					return;
-				}
-				break;
-			}
+			_e1Kru66UIN1SkWkBreRDCF5RsWA = false;
+			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = SkipProloguePlayerCustomizationScene.smethod_59();
+			SkipProloguePlayerCustomizationScene.smethod_60(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
+			SkipProloguePlayerCustomizationScene.smethod_61(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue", 40);
+			SkipProloguePlayerCustomizationScene.smethod_62(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyLeftClub", bool_0: true);
+			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
+			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			SkipProloguePlayerCustomizationScene.smethod_64(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
+			SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric4");
+			SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubEntranceScene>();
 		}
 	}
 
 	[CompilerGenerated]
 	private void _uT0nhPqOYeKCBWg0fkE9TeKYm4l(int int_0)
 	{
-		if (int_0 != 1)
+		if (int_0 == 1)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = -1027556224;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xCCF28FC9u) % 4u)
-				{
-				case 2u:
-					SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
-					_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
-					num = ((int)num2 * -1115515197) ^ 0x6E73241B;
-					continue;
-				case 1u:
-					SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-					num = ((int)num2 * -578363603) ^ -1169211634;
-					continue;
-				default:
-					return;
-				case 3u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-			}
+			SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
+			SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
+			_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 		}
 	}
 

@@ -25,55 +25,16 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
 		float num = _rlJEdnItzlU5efWtBjMCaC5Nizb + (float)ClubPoolStaticNPC.smethod_22(_za9QLzJUpOFmy4hIqyTdGh34IpD);
-		while (true)
-		{
-			int num2 = 537984139;
-			while (true)
-			{
-				uint num3;
-				switch ((num3 = (uint)num2 ^ 0x248E8834u) % 9u)
-				{
-				case 8u:
-					ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskStart"), _rlJEdnItzlU5efWtBjMCaC5Nizb / (float)ClubPoolStaticNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this));
-					num2 = ((int)num3 * -1411779134) ^ 0xEE2CE89;
-					continue;
-				case 6u:
-					ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "BreathingOffset"), _jSsdHgef86oxWXEOENwyht1nIvn);
-					num2 = (int)((num3 * 1725210380) ^ 0x63D60B7);
-					continue;
-				case 5u:
-					ClubPoolStaticNPC.smethod_26(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskTexture"), (Texture)(object)_za9QLzJUpOFmy4hIqyTdGh34IpD);
-					num2 = ((int)num3 * -1538155490) ^ -1817108397;
-					continue;
-				case 4u:
-					ClubPoolStaticNPC.smethod_32(ClubPoolStaticNPC.smethod_31(ClubPoolStaticNPC.smethod_30(ClubPoolStaticNPC.smethod_29(_2dDfDHYjKMlOJWKHdOpvafF417M)), 0));
-					num2 = ((int)num3 * -1004809215) ^ -2075483750;
-					continue;
-				case 2u:
-					ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskEnd"), num / (float)ClubPoolStaticNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this));
-					ClubPoolStaticNPC.smethod_28(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "Inverse"), _vAix6GBEcVh3peB11tbKy7HJWwb);
-					num2 = (int)(num3 * 1787211690) ^ -295433786;
-					continue;
-				case 1u:
-					ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-					ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "PoolSpeed"), 0.1f);
-					ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "PoolOffset"), _qFVIvzuvIuKKG5vOrovLtn4NplA);
-					num2 = ((int)num3 * -598718272) ^ -1213640465;
-					continue;
-				case 0u:
-					_DIJ98g9A80rhmS3Wk1l8KTVfV8x(spriteBatch_0);
-					num2 = ((int)num3 * -1260159437) ^ 0x3E5A06C0;
-					continue;
-				default:
-					return;
-				case 7u:
-					break;
-				case 3u:
-					return;
-				}
-				break;
-			}
-		}
+		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "PoolSpeed"), 0.1f);
+		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "PoolOffset"), _qFVIvzuvIuKKG5vOrovLtn4NplA);
+		ClubPoolStaticNPC.smethod_26(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskTexture"), (Texture)(object)_za9QLzJUpOFmy4hIqyTdGh34IpD);
+		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskStart"), _rlJEdnItzlU5efWtBjMCaC5Nizb / (float)ClubPoolStaticNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this));
+		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskEnd"), num / (float)ClubPoolStaticNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this));
+		ClubPoolStaticNPC.smethod_28(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "Inverse"), _vAix6GBEcVh3peB11tbKy7HJWwb);
+		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "BreathingOffset"), _jSsdHgef86oxWXEOENwyht1nIvn);
+		ClubPoolStaticNPC.smethod_32(ClubPoolStaticNPC.smethod_31(ClubPoolStaticNPC.smethod_30(ClubPoolStaticNPC.smethod_29(_2dDfDHYjKMlOJWKHdOpvafF417M)), 0));
+		_DIJ98g9A80rhmS3Wk1l8KTVfV8x(spriteBatch_0);
 	}
 
 	static float smethod_19(float float_0, float float_1)

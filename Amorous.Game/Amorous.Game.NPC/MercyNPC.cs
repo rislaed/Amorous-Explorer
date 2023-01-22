@@ -67,55 +67,24 @@ public class MercyNPC : SpineNPC<MercyNPC.EHeads, MercyNPC.EPoses, MercyNPC.EClo
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
-		default:
-			num = 1869106861;
-			goto IL_002e;
 		case NPCLocation.Middle:
-			goto IL_0022;
-		case NPCLocation.Right:
-			goto IL_0059;
-		case NPCLocation.Left:
-			break;
-			IL_002e:
-			switch ((uint)(num ^ 0x102195A4) % 7u)
-			{
-			case 6u:
-				break;
-			case 2u:
-				goto IL_0022;
-			case 1u:
-				goto IL_0059;
-			default:
-				MercyNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
-				MercyNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1090f);
-				return;
-			case 3u:
-				return;
-			case 4u:
-				goto end_IL_000a;
-			case 5u:
-				MercyNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1600f);
-				MercyNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1090f);
-				return;
-			}
-			goto default;
-			IL_0059:
-			MercyNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			num = 39716073;
-			goto IL_002e;
-			IL_0022:
 			MercyNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = 409823781;
-			goto IL_002e;
-			end_IL_000a:
+			MercyNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
+			MercyNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1090f);
+			break;
+		case NPCLocation.Left:
+			MercyNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			MercyNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 320f);
+			MercyNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1090f);
+			break;
+		case NPCLocation.Right:
+			MercyNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			MercyNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1600f);
+			MercyNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1090f);
 			break;
 		}
-		MercyNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-		MercyNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 320f);
-		MercyNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1090f);
 	}
 
 	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_18(_tfDAeR6npiqJMLRSXPO1DxGA0TgA _tfDAeR6npiqJMLRSXPO1DxGA0TgA_0)

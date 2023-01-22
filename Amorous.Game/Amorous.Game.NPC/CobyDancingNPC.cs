@@ -31,114 +31,38 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 	public CobyDancingNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CobyDancing/Coby", 0.8f, bool_0: true)
 	{
-		while (true)
-		{
-			int num = -1056255311;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xE1731893u) % 10u)
-				{
-				case 9u:
-					CobyDancingNPC.smethod_24(CobyDancingNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, "Shorts right", "Shorts crotch", "Shorts left")));
-					num = (int)((num2 * 1042631655) ^ 0x79DC3F1);
-					continue;
-				case 8u:
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					num = (int)((num2 * 613473034) ^ 0x4624A3E);
-					continue;
-				case 7u:
-					CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Sleeves, "Sleeves right", "Sleeves left")));
-					num = (int)((num2 * 90662058) ^ 0x3D97DC6B);
-					continue;
-				case 6u:
-					CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")));
-					num = ((int)num2 * -1554209423) ^ 0x50CD81E2;
-					continue;
-				case 5u:
-					CobyDancingNPC.smethod_19(CobyDancingNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
-					num = (int)(num2 * 673706798) ^ -738237062;
-					continue;
-				case 4u:
-					_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 600;
-					num = ((int)num2 * -1795829623) ^ -992035461;
-					continue;
-				case 3u:
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Eyes Back", "Pupil", "Jaw", "Head");
-					CobyDancingNPC.smethod_20(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Tail", "Leg right", "Arm right", "Body", "left leg", "Arm left"), new string[2] { "Balls", "Cock" });
-					num = (int)(num2 * 1588930926) ^ -1813722303;
-					continue;
-				case 2u:
-					_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 800;
-					num = ((int)num2 * -2033589756) ^ 0x76BF777C;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 1u:
-					return;
-				}
-				break;
-			}
-		}
+		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 600;
+		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 800;
+		CobyDancingNPC.smethod_19(CobyDancingNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Eyes Back", "Pupil", "Jaw", "Head");
+		CobyDancingNPC.smethod_20(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Tail", "Leg right", "Arm right", "Body", "left leg", "Arm left"), new string[2] { "Balls", "Cock" });
+		CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")));
+		CobyDancingNPC.smethod_24(CobyDancingNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, "Shorts right", "Shorts crotch", "Shorts left")));
+		CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Sleeves, "Sleeves right", "Sleeves left")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		while (true)
+		switch (npclocation_0)
 		{
-			int num = -1205501701;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xBB1947DBu) % 7u)
-				{
-				case 6u:
-					switch (npclocation_0)
-					{
-					case NPCLocation.Middle:
-						goto IL_002c;
-					case NPCLocation.Left:
-						goto IL_0084;
-					case NPCLocation.Right:
-						goto IL_00a2;
-					}
-					num = ((int)num2 * -474530595) ^ 0xB09BBE4;
-					continue;
-				case 4u:
-					goto IL_002c;
-				case 5u:
-					break;
-				default:
-					CobyDancingNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
-					return;
-				case 3u:
-					return;
-				case 0u:
-					goto IL_0084;
-				case 2u:
-					goto IL_00a2;
-					IL_00a2:
-					CobyDancingNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-					CobyDancingNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1520f);
-					CobyDancingNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
-					return;
-					IL_0084:
-					CobyDancingNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					CobyDancingNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 400f);
-					CobyDancingNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
-					return;
-					IL_002c:
-					CobyDancingNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					CobyDancingNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
-					num = -139590120;
-					continue;
-				}
-				break;
-			}
+		case NPCLocation.Middle:
+			CobyDancingNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			CobyDancingNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
+			CobyDancingNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
+			break;
+		case NPCLocation.Left:
+			CobyDancingNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			CobyDancingNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 400f);
+			CobyDancingNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
+			break;
+		case NPCLocation.Right:
+			CobyDancingNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			CobyDancingNPC.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1520f);
+			CobyDancingNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1120f);
+			break;
 		}
 	}
 

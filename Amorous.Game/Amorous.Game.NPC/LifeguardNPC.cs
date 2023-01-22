@@ -30,105 +30,33 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 	public LifeguardNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Lifeguard", 1f)
 	{
-		while (true)
-		{
-			int num = 973118402;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x1310CC70u) % 5u)
-				{
-				case 3u:
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					num = ((int)num2 * -1399120277) ^ -1496239523;
-					continue;
-				case 2u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Riptide - Nude");
-					LifeguardNPC.smethod_17(LifeguardNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Riptide - Pants")));
-					num = ((int)num2 * -980979245) ^ 0x51BA0089;
-					continue;
-				case 1u:
-					LifeguardNPC.smethod_19(LifeguardNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Riptide - Shirt")));
-					num = (int)(num2 * 1891576724) ^ -1090276498;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 4u:
-					return;
-				}
-				break;
-			}
-		}
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Riptide - Nude");
+		LifeguardNPC.smethod_17(LifeguardNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Riptide - Pants")));
+		LifeguardNPC.smethod_19(LifeguardNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Riptide - Shirt")));
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
-		default:
-			num = -1061270968;
-			goto IL_0072;
 		case NPCLocation.Middle:
-			goto IL_003e;
+			LifeguardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			LifeguardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 689f);
+			LifeguardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 102f);
+			break;
 		case NPCLocation.Left:
-			goto IL_004c;
+			LifeguardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			LifeguardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -271f);
+			LifeguardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 102f);
+			break;
 		case NPCLocation.Right:
-			goto IL_00ac;
-			IL_0072:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xE9C5584Cu) % 10u)
-				{
-				case 9u:
-					LifeguardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -271f);
-					num = ((int)num2 * -833666327) ^ 0xBFA9DA1;
-					continue;
-				case 5u:
-					break;
-				case 4u:
-					goto IL_003e;
-				case 2u:
-					goto IL_004c;
-				case 1u:
-					LifeguardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 689f);
-					num = ((int)num2 * -2087495138) ^ 0x15284B21;
-					continue;
-				case 0u:
-					goto IL_00ac;
-				default:
-					LifeguardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 102f);
-					return;
-				case 6u:
-					return;
-				case 7u:
-					LifeguardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 102f);
-					return;
-				case 8u:
-					LifeguardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 102f);
-					return;
-				}
-				break;
-			}
-			goto default;
-			IL_00ac:
 			LifeguardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
 			LifeguardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1320f);
-			num = -70541059;
-			goto IL_0072;
-			IL_004c:
-			LifeguardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			num = -875263205;
-			goto IL_0072;
-			IL_003e:
-			LifeguardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = -2139807671;
-			goto IL_0072;
+			LifeguardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 102f);
+			break;
 		}
 	}
 

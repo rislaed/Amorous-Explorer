@@ -5,28 +5,8 @@ public class CarParkScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public CarParkScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		while (true)
-		{
-			int num = -670213133;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xDD6269ABu) % 3u)
-				{
-				case 2u:
-					goto IL_0009;
-				case 0u:
-					break;
-				default:
-					CarParkScene.smethod_15("Assets/Music/Hopeku - In A Finger Blink", 0.4f);
-					return;
-				}
-				break;
-				IL_0009:
-				CarParkScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CarPark/Car Park Background", 0, 0);
-				num = (int)((num2 * 802462811) ^ 0x5E2AC639);
-			}
-		}
+		CarParkScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CarPark/Car Park Background", 0, 0);
+		CarParkScene.smethod_15("Assets/Music/Hopeku - In A Finger Blink", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

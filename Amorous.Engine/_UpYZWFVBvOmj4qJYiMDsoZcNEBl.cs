@@ -16,29 +16,7 @@ public class _UpYZWFVBvOmj4qJYiMDsoZcNEBl : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<SetStag
 	{
 		base._dCiaLpIow7UQ0MLMp2O4J0yeVfF(setStageEventData_0);
 		_nIb6iPWBb2Jh3KMGwSSK9BKEP98 = setStageEventData_0._nIb6iPWBb2Jh3KMGwSSK9BKEP98;
-		while (true)
-		{
-			int num = -130433276;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xADFA35DFu) % 3u)
-				{
-				case 1u:
-					goto IL_0015;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_0015:
-				_8NBsjeWoi7V64KoA9ZtIybPpcom = setStageEventData_0._8NBsjeWoi7V64KoA9ZtIybPpcom;
-				num = (int)((num2 * 481174782) ^ 0x2AC60320);
-			}
-		}
+		_8NBsjeWoi7V64KoA9ZtIybPpcom = setStageEventData_0._8NBsjeWoi7V64KoA9ZtIybPpcom;
 	}
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()

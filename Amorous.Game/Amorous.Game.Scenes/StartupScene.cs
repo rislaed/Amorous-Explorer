@@ -46,65 +46,65 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public StartupScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0080: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0095: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00aa: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0079: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0099: Unknown result type (might be due to invalid IL or missing references)
+		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c8: Expected O, but got Unknown
-		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c0: Expected O, but got Unknown
+		//IL_00c0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00df: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f3: Expected O, but got Unknown
-		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0104: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0116: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0120: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012c: Expected O, but got Unknown
-		//IL_014d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0152: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0164: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0179: Expected O, but got Unknown
-		//IL_017a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00de: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ea: Expected O, but got Unknown
+		//IL_00eb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00fb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0117: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0123: Expected O, but got Unknown
+		//IL_0144: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0149: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0151: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0162: Unknown result type (might be due to invalid IL or missing references)
+		//IL_016f: Expected O, but got Unknown
+		//IL_0170: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0175: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0180: Unknown result type (might be due to invalid IL or missing references)
 		//IL_018a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0194: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0192: Unknown result type (might be due to invalid IL or missing references)
 		//IL_019c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b9: Expected O, but got Unknown
-		//IL_01ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01a3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01af: Expected O, but got Unknown
+		//IL_01b0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01bd: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01c7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01cf: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01d9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fb: Expected O, but got Unknown
-		//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0200: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0208: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0212: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0220: Expected O, but got Unknown
-		//IL_0229: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0233: Expected O, but got Unknown
-		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0238: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0240: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0252: Unknown result type (might be due to invalid IL or missing references)
-		//IL_025c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026a: Expected O, but got Unknown
-		//IL_0273: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027d: Expected O, but got Unknown
+		//IL_01e4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f0: Expected O, but got Unknown
+		//IL_01f0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0207: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0214: Expected O, but got Unknown
+		//IL_021d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0227: Expected O, but got Unknown
+		//IL_0227: Unknown result type (might be due to invalid IL or missing references)
+		//IL_022c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0234: Unknown result type (might be due to invalid IL or missing references)
+		//IL_023e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0246: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0250: Unknown result type (might be due to invalid IL or missing references)
+		//IL_025d: Expected O, but got Unknown
+		//IL_0266: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0270: Expected O, but got Unknown
 		StartupScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Intro/Background", 0, -540);
 		StartupScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Intro/Scenery", 0, -170);
 		StartupScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
@@ -158,171 +158,49 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			try
 			{
 				WebRequest webRequest_ = _003C_003Ec__DisplayClass5_0.smethod_0("https://download.amorousgame.com/api/v4/launcherLogin");
-				while (true)
+				_003C_003Ec__DisplayClass5_0.smethod_1(webRequest_, "POST");
+				StreamWriter streamWriter = _003C_003Ec__DisplayClass5_0.smethod_3(_003C_003Ec__DisplayClass5_0.smethod_2(webRequest_));
+				try
 				{
-					int num = -437185949;
-					while (true)
+					_003C_003Ec__DisplayClass5_0.smethod_6((TextWriter)streamWriter, _003C_003Ec__DisplayClass5_0.smethod_5((object)new ApiLogin
 					{
-						uint num2;
-						switch ((num2 = (uint)num ^ 0x869C7D9Au) % 3u)
+						_LG9P2ATIfMzK27guq7fnGxxILwD = _003C_003Ec__DisplayClass5_0.smethod_4(_njC7ZfEM6PTCffwkw18LisM3W9E),
+						_zGqOm5iY9wKtyOLEu81UskKVggC = _003C_003Ec__DisplayClass5_0.smethod_4(_mzwWNbSlBetGnbEr0j6IpMenjkp)
+					}));
+				}
+				finally
+				{
+					if (streamWriter != null)
+					{
+						_003C_003Ec__DisplayClass5_0.smethod_7((IDisposable)streamWriter);
+					}
+				}
+				StreamReader streamReader = _003C_003Ec__DisplayClass5_0.smethod_10(_003C_003Ec__DisplayClass5_0.smethod_9(_003C_003Ec__DisplayClass5_0.smethod_8(webRequest_)));
+				try
+				{
+					ApiReponse apiReponse = JsonConvert.DeserializeObject<ApiReponse>(_003C_003Ec__DisplayClass5_0.smethod_11((TextReader)streamReader));
+					if (!apiReponse._0rEYVY1cDKfLPVuLw54UlaIts2m)
+					{
+						string string_ = _003C_003Ec__DisplayClass5_0.smethod_15(_003C_003Ec__DisplayClass5_0.smethod_14(_003C_003Ec__DisplayClass5_0.smethod_4(_njC7ZfEM6PTCffwkw18LisM3W9E), _003C_003Ec__DisplayClass5_0.smethod_4(_mzwWNbSlBetGnbEr0j6IpMenjkp), apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5, apiReponse._3QVueTX1TxhBB03hZbnibQdussEb));
+						if (_003C_003Ec__DisplayClass5_0.smethod_16(string_, apiReponse._uNi8yrQVBFzFdV8f7FGmr8Vhobf))
 						{
-						case 1u:
-							goto IL_000e;
-						case 2u:
-							break;
-						default:
+							_x8adRt6rvrXniPFYijbzqvPFr4j();
+						}
+						else
 						{
-							StreamWriter streamWriter = _003C_003Ec__DisplayClass5_0.smethod_3(_003C_003Ec__DisplayClass5_0.smethod_2(webRequest_));
-							try
-							{
-								_003C_003Ec__DisplayClass5_0.smethod_6((TextWriter)streamWriter, _003C_003Ec__DisplayClass5_0.smethod_5((object)new ApiLogin
-								{
-									_LG9P2ATIfMzK27guq7fnGxxILwD = _003C_003Ec__DisplayClass5_0.smethod_4(_njC7ZfEM6PTCffwkw18LisM3W9E),
-									_zGqOm5iY9wKtyOLEu81UskKVggC = _003C_003Ec__DisplayClass5_0.smethod_4(_mzwWNbSlBetGnbEr0j6IpMenjkp)
-								}));
-							}
-							finally
-							{
-								if (streamWriter != null)
-								{
-									while (true)
-									{
-										IL_00c5:
-										int num3 = -1691695578;
-										while (true)
-										{
-											switch ((num2 = (uint)num3 ^ 0x869C7D9Au) % 3u)
-											{
-											case 1u:
-												goto IL_0095;
-											default:
-												goto end_IL_00a8;
-											case 0u:
-												break;
-											case 2u:
-												goto end_IL_00a8;
-											}
-											goto IL_00c5;
-											IL_0095:
-											_003C_003Ec__DisplayClass5_0.smethod_7((IDisposable)streamWriter);
-											num3 = (int)(num2 * 613339861) ^ -1184267403;
-											continue;
-											end_IL_00a8:
-											break;
-										}
-										break;
-									}
-								}
-							}
-							StreamReader streamReader = _003C_003Ec__DisplayClass5_0.smethod_10(_003C_003Ec__DisplayClass5_0.smethod_9(_003C_003Ec__DisplayClass5_0.smethod_8(webRequest_)));
-							try
-							{
-								ApiReponse apiReponse = JsonConvert.DeserializeObject<ApiReponse>(_003C_003Ec__DisplayClass5_0.smethod_11((TextReader)streamReader));
-								while (true)
-								{
-									int num4 = -808294528;
-									while (true)
-									{
-										switch ((num2 = (uint)num4 ^ 0x869C7D9Au) % 8u)
-										{
-										case 7u:
-											_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5, 500, "OK", (Action)null);
-											num4 = (int)(num2 * 1944003615) ^ -1579978723;
-											continue;
-										case 5u:
-											_x8adRt6rvrXniPFYijbzqvPFr4j();
-											num4 = (int)(num2 * 1041979734) ^ -1549281700;
-											continue;
-										case 3u:
-											_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Sorry, please try again!", 250, "OK", (Action)null);
-											num4 = -1458244276;
-											continue;
-										case 2u:
-										{
-											int num6;
-											int num7;
-											if (!apiReponse._0rEYVY1cDKfLPVuLw54UlaIts2m)
-											{
-												num6 = -1544626045;
-												num7 = -1544626045;
-											}
-											else
-											{
-												num6 = -1985841515;
-												num7 = -1985841515;
-											}
-											num4 = num6 ^ (int)(num2 * 1586276544);
-											continue;
-										}
-										case 1u:
-										{
-											string string_ = _003C_003Ec__DisplayClass5_0.smethod_15(_003C_003Ec__DisplayClass5_0.smethod_14(_003C_003Ec__DisplayClass5_0.smethod_4(_njC7ZfEM6PTCffwkw18LisM3W9E), _003C_003Ec__DisplayClass5_0.smethod_4(_mzwWNbSlBetGnbEr0j6IpMenjkp), apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5, apiReponse._3QVueTX1TxhBB03hZbnibQdussEb));
-											int num5;
-											if (_003C_003Ec__DisplayClass5_0.smethod_16(string_, apiReponse._uNi8yrQVBFzFdV8f7FGmr8Vhobf))
-											{
-												num4 = -2128223729;
-												num5 = -2128223729;
-											}
-											else
-											{
-												num4 = -161076639;
-												num5 = -161076639;
-											}
-											continue;
-										}
-										case 0u:
-											num4 = ((int)num2 * -2061249757) ^ 0x27CB8C14;
-											continue;
-										default:
-											return;
-										case 4u:
-											break;
-										case 6u:
-											return;
-										}
-										break;
-									}
-								}
-							}
-							finally
-							{
-								if (streamReader != null)
-								{
-									while (true)
-									{
-										IL_0272:
-										int num8 = -574922076;
-										while (true)
-										{
-											switch ((num2 = (uint)num8 ^ 0x869C7D9Au) % 3u)
-											{
-											case 1u:
-												goto IL_0242;
-											default:
-												goto end_IL_0255;
-											case 0u:
-												break;
-											case 2u:
-												goto end_IL_0255;
-											}
-											goto IL_0272;
-											IL_0242:
-											_003C_003Ec__DisplayClass5_0.smethod_7((IDisposable)streamReader);
-											num8 = ((int)num2 * -1148353869) ^ -713398814;
-											continue;
-											end_IL_0255:
-											break;
-										}
-										break;
-									}
-								}
-							}
+							_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Sorry, please try again!", 250, "OK", (Action)null);
 						}
-						}
-						break;
-						IL_000e:
-						_003C_003Ec__DisplayClass5_0.smethod_1(webRequest_, "POST");
-						num = (int)((num2 * 544097791) ^ 0x2A3C6730);
+					}
+					else
+					{
+						_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5, 500, "OK", (Action)null);
+					}
+				}
+				finally
+				{
+					if (streamReader != null)
+					{
+						_003C_003Ec__DisplayClass5_0.smethod_7((IDisposable)streamReader);
 					}
 				}
 			}
@@ -354,90 +232,24 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
 		CoupleANPC coupleANPC = StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		CoupleBNPC coupleBNPC = default(CoupleBNPC);
-		while (true)
-		{
-			int num = -14711584;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xDA4DCFF1u) % 8u)
-				{
-				case 7u:
-					coupleBNPC = StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-					StartupScene.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleBNPC, 550f);
-					num = (int)((num2 * 839937122) ^ 0x240BA35D);
-					continue;
-				case 4u:
-					coupleBNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
-					num = (int)((num2 * 1146500409) ^ 0x69277F5B);
-					continue;
-				case 3u:
-					coupleANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
-					num = (int)((num2 * 388787959) ^ 0x12431C0B);
-					continue;
-				case 2u:
-					StartupScene.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleBNPC, 1090f);
-					coupleBNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleBNPC.EPoses.Waving);
-					num = ((int)num2 * -431074657) ^ 0x288BA05B;
-					continue;
-				case 1u:
-					StartupScene.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleANPC, 350f);
-					num = (int)(num2 * 363542561) ^ -1818447544;
-					continue;
-				case 0u:
-					StartupScene.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleANPC, 1090f);
-					coupleANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleANPC.EPoses.Waving);
-					num = ((int)num2 * -1165224046) ^ -1283536262;
-					continue;
-				default:
-					return;
-				case 5u:
-					break;
-				case 6u:
-					return;
-				}
-				break;
-			}
-		}
+		StartupScene.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleANPC, 350f);
+		StartupScene.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleANPC, 1090f);
+		coupleANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleANPC.EPoses.Waving);
+		coupleANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
+		CoupleBNPC coupleBNPC = StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		StartupScene.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleBNPC, 550f);
+		StartupScene.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)coupleBNPC, 1090f);
+		coupleBNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleBNPC.EPoses.Waving);
+		coupleBNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
 	}
 
 	private void _x8adRt6rvrXniPFYijbzqvPFr4j()
 	{
 		if (StartupScene.smethod_21(_9nCiJkYgPYczxXJNlo8Z7BbfdsB))
 		{
-			goto IL_0033;
+			StartupScene.smethod_23(_Pxncvon3rRvuowKL1yYBOZjpf2y, StartupScene.smethod_22(_njC7ZfEM6PTCffwkw18LisM3W9E));
 		}
-		goto IL_0059;
-		IL_0059:
 		StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<MainMenuScene>();
-		int num = -1957975650;
-		goto IL_0038;
-		IL_0038:
-		while (true)
-		{
-			uint num2;
-			switch ((num2 = (uint)num ^ 0xB90485F9u) % 4u)
-			{
-			case 2u:
-				StartupScene.smethod_23(_Pxncvon3rRvuowKL1yYBOZjpf2y, StartupScene.smethod_22(_njC7ZfEM6PTCffwkw18LisM3W9E));
-				num = (int)(num2 * 260091322) ^ -2110397400;
-				continue;
-			case 0u:
-				break;
-			default:
-				return;
-			case 1u:
-				goto IL_0059;
-			case 3u:
-				return;
-			}
-			break;
-		}
-		goto IL_0033;
-		IL_0033:
-		num = -2013978765;
-		goto IL_0038;
 	}
 
 	[CompilerGenerated]

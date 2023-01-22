@@ -40,34 +40,10 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 	public override void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
 	{
 		this.method_0();
-		while (true)
-		{
-			int num = -1380512481;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xAD1F4ABEu) % 4u)
-				{
-				case 1u:
-					_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
-					_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
-					_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);
-					num = (int)((num2 * 1428734000) ^ 0x67255946);
-					continue;
-				case 0u:
-					ClubStaticSpineNPC.smethod_23(ClubStaticSpineNPC.smethod_22((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
-					num = ((int)num2 * -1054481406) ^ -834301907;
-					continue;
-				default:
-					return;
-				case 2u:
-					break;
-				case 3u:
-					return;
-				}
-				break;
-			}
-		}
+		_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
+		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
+		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);
+		ClubStaticSpineNPC.smethod_23(ClubStaticSpineNPC.smethod_22((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
 	}
 
 	static _EZ0kOLXoEoEfWGQDdTbNqaPzDUh smethod_18(_EZ0kOLXoEoEfWGQDdTbNqaPzDUh _EZ0kOLXoEoEfWGQDdTbNqaPzDUh_0)

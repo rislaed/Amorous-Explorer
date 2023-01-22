@@ -28,48 +28,12 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 		{
 			if (int_0 == 1)
 			{
-				while (true)
-				{
-					int num = -277523763;
-					while (true)
-					{
-						uint num2;
-						switch ((num2 = (uint)num ^ 0xD99D4326u) % 8u)
-						{
-						case 7u:
-							BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
-							num = (int)((num2 * 1864778244) ^ 0x808B76B);
-							continue;
-						case 6u:
-							_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
-							num = (int)(num2 * 919358732) ^ -958413674;
-							continue;
-						case 4u:
-							BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
-							num = ((int)num2 * -658024311) ^ -87273508;
-							continue;
-						case 3u:
-							BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-							num = ((int)num2 * -195282626) ^ -389842117;
-							continue;
-						case 2u:
-							BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
-							num = (int)((num2 * 1243217287) ^ 0x332EE074);
-							continue;
-						case 1u:
-							BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
-							num = ((int)num2 * -1642411554) ^ -1547486486;
-							continue;
-						default:
-							return;
-						case 5u:
-							break;
-						case 0u:
-							return;
-						}
-						break;
-					}
-				}
+				BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
+				BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
+				BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
+				BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
+				BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
+				_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 			}
 		});
 	}
@@ -77,125 +41,26 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		this.method_0(gameTime_0);
-		if (!_e1Kru66UIN1SkWkBreRDCF5RsWA)
+		if (_e1Kru66UIN1SkWkBreRDCF5RsWA && !BackToPlayerCustomizationScene.smethod_57(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) && BackToPlayerCustomizationScene.smethod_58(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) == null)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = 1305278125;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x5A28B5E4u) % 7u)
-				{
-				case 6u:
-					_e1Kru66UIN1SkWkBreRDCF5RsWA = false;
-					num = (int)(num2 * 1923931104) ^ -1998481135;
-					continue;
-				case 4u:
-					_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-					BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubEntranceScene>();
-					num = (int)((num2 * 781957908) ^ 0x49890D6);
-					continue;
-				case 3u:
-				{
-					int num5;
-					int num6;
-					if (BackToPlayerCustomizationScene.smethod_58(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) == null)
-					{
-						num5 = -585731538;
-						num6 = -585731538;
-					}
-					else
-					{
-						num5 = -144594633;
-						num6 = -144594633;
-					}
-					num = num5 ^ ((int)num2 * -1831074853);
-					continue;
-				}
-				case 1u:
-				{
-					int num3;
-					int num4;
-					if (BackToPlayerCustomizationScene.smethod_57(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)))
-					{
-						num3 = 1109147332;
-						num4 = 1109147332;
-					}
-					else
-					{
-						num3 = 1112266509;
-						num4 = 1112266509;
-					}
-					num = num3 ^ ((int)num2 * -510254698);
-					continue;
-				}
-				case 0u:
-					_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
-					num = (int)((num2 * 1085209379) ^ 0x3A4CCB8A);
-					continue;
-				default:
-					return;
-				case 2u:
-					break;
-				case 5u:
-					return;
-				}
-				break;
-			}
+			_e1Kru66UIN1SkWkBreRDCF5RsWA = false;
+			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
+			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubEntranceScene>();
 		}
 	}
 
 	[CompilerGenerated]
 	private void _fTIM8HHDf1dAB7gLwN34Fjcjf0qA(int int_0)
 	{
-		if (int_0 != 1)
+		if (int_0 == 1)
 		{
-			return;
-		}
-		while (true)
-		{
-			int num = -277523763;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xD99D4326u) % 8u)
-				{
-				case 7u:
-					BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
-					num = (int)((num2 * 1864778244) ^ 0x808B76B);
-					continue;
-				case 6u:
-					_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
-					num = (int)(num2 * 919358732) ^ -958413674;
-					continue;
-				case 4u:
-					BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
-					num = ((int)num2 * -658024311) ^ -87273508;
-					continue;
-				case 3u:
-					BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-					num = ((int)num2 * -195282626) ^ -389842117;
-					continue;
-				case 2u:
-					BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
-					num = (int)((num2 * 1243217287) ^ 0x332EE074);
-					continue;
-				case 1u:
-					BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
-					num = ((int)num2 * -1642411554) ^ -1547486486;
-					continue;
-				default:
-					return;
-				case 5u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-			}
+			BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
+			BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
+			BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
+			BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
+			BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
+			_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 		}
 	}
 

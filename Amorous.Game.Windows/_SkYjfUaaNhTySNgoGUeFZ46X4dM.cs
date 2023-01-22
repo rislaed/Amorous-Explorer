@@ -32,66 +32,15 @@ public class _SkYjfUaaNhTySNgoGUeFZ46X4dM : Game
 	{
 		if (_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_7((Game)(object)this))
 		{
-			goto IL_0025;
+			_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_8(_4L7hfXrWoDdArQiscG4ukHCV46B, gameTime);
 		}
-		goto IL_004b;
-		IL_004b:
 		((Game)this).Update(gameTime);
-		int num = 316602297;
-		goto IL_002a;
-		IL_002a:
-		while (true)
-		{
-			uint num2;
-			switch ((num2 = (uint)num ^ 0x1546E317u) % 4u)
-			{
-			case 3u:
-				_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_8(_4L7hfXrWoDdArQiscG4ukHCV46B, gameTime);
-				num = ((int)num2 * -760663183) ^ -381018719;
-				continue;
-			case 0u:
-				break;
-			default:
-				return;
-			case 1u:
-				goto IL_004b;
-			case 2u:
-				return;
-			}
-			break;
-		}
-		goto IL_0025;
-		IL_0025:
-		num = 1540256912;
-		goto IL_002a;
 	}
 
 	protected override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(GameTime gameTime)
 	{
 		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_9(_4L7hfXrWoDdArQiscG4ukHCV46B, gameTime);
-		while (true)
-		{
-			int num = -804524134;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xBA1FDAC3u) % 3u)
-				{
-				case 1u:
-					goto IL_000e;
-				default:
-					return;
-				case 2u:
-					break;
-				case 0u:
-					return;
-				}
-				break;
-				IL_000e:
-				((Game)this).Draw(gameTime);
-				num = (int)((num2 * 1651025806) ^ 0x488863A6);
-			}
-		}
+		((Game)this).Draw(gameTime);
 	}
 
 	static GameWindow smethod_0(Game game_0)

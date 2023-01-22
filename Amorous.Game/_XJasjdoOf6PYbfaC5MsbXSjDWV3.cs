@@ -41,16 +41,16 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 	public _XJasjdoOf6PYbfaC5MsbXSjDWV3()
 	{
 		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005a: Expected O, but got Unknown
+		//IL_0046: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0057: Expected O, but got Unknown
+		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dc: Expected O, but got Unknown
+		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d7: Expected O, but got Unknown
 		Desktop obj = _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_0();
 		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_2(obj, _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_1());
 		((Control)obj).set_Size(new Point(1920, 1080));
@@ -73,31 +73,31 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 
 	public void _EXfoFnp1OKxeZbd4GcVZMCO2urH(string string_0, string string_1, string string_2)
 	{
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0044: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0077: Expected O, but got Unknown
-		//IL_0102: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0107: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0133: Expected O, but got Unknown
-		//IL_0133: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0146: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014f: Expected O, but got Unknown
-		//IL_017b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0180: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0187: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018f: Expected O, but got Unknown
+		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
+		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0076: Expected O, but got Unknown
+		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008a: Expected O, but got Unknown
+		//IL_008a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0096: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b8: Expected O, but got Unknown
+		//IL_00b8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d4: Expected O, but got Unknown
 		Frame obj = _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_3();
 		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_4((Control)(object)obj, (DockStyle)4);
 		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_5((Control)(object)obj, "window");
@@ -111,201 +111,48 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		((Control)val2).set_Size(new Point(100, 100));
 		val2.set_Texture(string_0);
 		ImageControl val3 = val2;
-		Frame val5 = default(Frame);
-		Label val7 = default(Label);
-		Label val9 = default(Label);
-		while (true)
+		Frame val4 = new Frame();
+		((Control)val4).set_Dock((DockStyle)5);
+		((Control)val4).set_Scissor(true);
+		Frame val5 = val4;
+		Label val6 = new Label();
+		((Control)val6).set_Dock((DockStyle)2);
+		((Control)val6).set_Style("header");
+		val6.set_Text("New message: " + string_1 + "!");
+		Label val7 = val6;
+		Label val8 = new Label();
+		((Control)val8).set_Dock((DockStyle)5);
+		val8.set_Text(string_2);
+		val8.set_TextWrap(true);
+		Label val9 = val8;
+		((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val3);
+		((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val5);
+		((ActiveList<Control>)(object)val5.get_Controls()).Add((Control)(object)val7);
+		((ActiveList<Control>)(object)val5.get_Controls()).Add((Control)(object)val9);
+		((ActiveList<Control>)(object)_g1jCwh8QFyZkbnduUiAjCzKbLWF.get_Controls()).Add((Control)(object)val);
+		_IRRZMMioeCJC8zGoIaJiRaRSSiM.Add(new _RQQdLVHyZm4GNvRCeQfcIx1OlwJ
 		{
-			int num = 501602228;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x3594EFF5u) % 8u)
-				{
-				case 6u:
-					((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val5);
-					((ActiveList<Control>)(object)val5.get_Controls()).Add((Control)(object)val7);
-					num = ((int)num2 * -369741197) ^ -1223029765;
-					continue;
-				case 5u:
-					((ActiveList<Control>)(object)_g1jCwh8QFyZkbnduUiAjCzKbLWF.get_Controls()).Add((Control)(object)val);
-					_IRRZMMioeCJC8zGoIaJiRaRSSiM.Add(new _RQQdLVHyZm4GNvRCeQfcIx1OlwJ
-					{
-						_kvuzph4c9LD4fDAaURHVjkfJKwk = val
-					});
-					num = (int)((num2 * 408418893) ^ 0x68AE396B);
-					continue;
-				case 4u:
-					((ActiveList<Control>)(object)val5.get_Controls()).Add((Control)(object)val9);
-					num = ((int)num2 * -1998102767) ^ 0x6136C374;
-					continue;
-				case 3u:
-				{
-					Label val6 = new Label();
-					((Control)val6).set_Dock((DockStyle)2);
-					((Control)val6).set_Style("header");
-					val6.set_Text("New message: " + string_1 + "!");
-					val7 = val6;
-					Label val8 = new Label();
-					((Control)val8).set_Dock((DockStyle)5);
-					val8.set_Text(string_2);
-					val8.set_TextWrap(true);
-					val9 = val8;
-					num = ((int)num2 * -1272526873) ^ 0xC5EFA42;
-					continue;
-				}
-				case 2u:
-					((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val3);
-					num = (int)((num2 * 1609473995) ^ 0x89EEC05);
-					continue;
-				case 1u:
-				{
-					Frame val4 = new Frame();
-					((Control)val4).set_Dock((DockStyle)5);
-					((Control)val4).set_Scissor(true);
-					val5 = val4;
-					num = (int)(num2 * 1942288578) ^ -2074549228;
-					continue;
-				}
-				default:
-					return;
-				case 0u:
-					break;
-				case 7u:
-					return;
-				}
-				break;
-			}
-		}
+			_kvuzph4c9LD4fDAaURHVjkfJKwk = val
+		});
 	}
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_6(_9GQBAH2pi8Sm6ph1s6InjyQGe6R);
-		_RQQdLVHyZm4GNvRCeQfcIx1OlwJ current = default(_RQQdLVHyZm4GNvRCeQfcIx1OlwJ);
-		float num5 = default(float);
-		while (true)
+		float num = (float)(_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_7(gameTime_0).TotalMilliseconds / 1000.0);
+		foreach (_RQQdLVHyZm4GNvRCeQfcIx1OlwJ item in _IRRZMMioeCJC8zGoIaJiRaRSSiM)
 		{
-			int num = -1041302847;
-			while (true)
+			item._AmIUCcrmrrQiiirja7DoiZSjXuv += num;
+			if (item._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f)
 			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xAF9E8682u) % 3u)
-				{
-				case 2u:
-					goto IL_000d;
-				case 0u:
-					break;
-				default:
-				{
-					using (List<_RQQdLVHyZm4GNvRCeQfcIx1OlwJ>.Enumerator enumerator = _IRRZMMioeCJC8zGoIaJiRaRSSiM.GetEnumerator())
-					{
-						while (true)
-						{
-							IL_015c:
-							int num3;
-							int num4;
-							if (!enumerator.MoveNext())
-							{
-								num3 = -1143679784;
-								num4 = -1143679784;
-							}
-							else
-							{
-								num3 = -1201679305;
-								num4 = -1201679305;
-							}
-							while (true)
-							{
-								switch ((num2 = (uint)num3 ^ 0xAF9E8682u) % 8u)
-								{
-								case 7u:
-									((ActiveList<Control>)(object)_g1jCwh8QFyZkbnduUiAjCzKbLWF.get_Controls()).Remove((Control)(object)current._kvuzph4c9LD4fDAaURHVjkfJKwk);
-									num3 = ((int)num2 * -2058843000) ^ -304165269;
-									continue;
-								case 6u:
-								{
-									int num6;
-									int num7;
-									if (current._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f)
-									{
-										num6 = -605037575;
-										num7 = -605037575;
-									}
-									else
-									{
-										num6 = -1365139218;
-										num7 = -1365139218;
-									}
-									num3 = num6 ^ ((int)num2 * -41903990);
-									continue;
-								}
-								case 5u:
-									current = enumerator.Current;
-									num3 = -1254784935;
-									continue;
-								case 4u:
-									num3 = -1201679305;
-									continue;
-								case 3u:
-									current._AmIUCcrmrrQiiirja7DoiZSjXuv += num5;
-									num3 = (int)(num2 * 1185170177) ^ -591295121;
-									continue;
-								case 1u:
-									_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = true;
-									num3 = (int)((num2 * 210681208) ^ 0x1EAE870A);
-									continue;
-								default:
-									goto end_IL_011b;
-								case 0u:
-									break;
-								case 2u:
-									goto end_IL_011b;
-								}
-								goto IL_015c;
-								continue;
-								end_IL_011b:
-								break;
-							}
-							break;
-						}
-					}
-					if (!_0WBDNE6IV1uJhHzUHzdiNj5c9bcA)
-					{
-						return;
-					}
-					while (true)
-					{
-						int num8 = -1397836797;
-						while (true)
-						{
-							switch ((num2 = (uint)num8 ^ 0xAF9E8682u) % 4u)
-							{
-							case 2u:
-								_IRRZMMioeCJC8zGoIaJiRaRSSiM.RemoveAll((_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0) => _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f);
-								num8 = -1657219090;
-								continue;
-							case 1u:
-								_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = false;
-								num8 = (int)((num2 * 784407347) ^ 0x170277B);
-								continue;
-							default:
-								return;
-							case 3u:
-								break;
-							case 0u:
-								return;
-							}
-							break;
-						}
-					}
-				}
-				}
-				break;
-				IL_000d:
-				num5 = (float)(_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_7(gameTime_0).TotalMilliseconds / 1000.0);
-				num = (int)((num2 * 898558536) ^ 0x2FCB6470);
+				((ActiveList<Control>)(object)_g1jCwh8QFyZkbnduUiAjCzKbLWF.get_Controls()).Remove((Control)(object)item._kvuzph4c9LD4fDAaURHVjkfJKwk);
+				_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = true;
 			}
+		}
+		if (_0WBDNE6IV1uJhHzUHzdiNj5c9bcA)
+		{
+			_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = false;
+			_IRRZMMioeCJC8zGoIaJiRaRSSiM.RemoveAll((_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0) => _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f);
 		}
 	}
 

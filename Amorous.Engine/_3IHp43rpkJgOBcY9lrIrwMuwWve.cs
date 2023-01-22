@@ -20,35 +20,7 @@ public class _3IHp43rpkJgOBcY9lrIrwMuwWve : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		set
 		{
 			_U1ntvSBQ11Vut0Wd1Vmb115ghn = value;
-			while (true)
-			{
-				int num = -699317391;
-				while (true)
-				{
-					uint num2;
-					Action u1ntvSBQ11Vut0Wd1Vmb115ghn;
-					switch ((num2 = (uint)num ^ 0xC6AB6E8Fu) % 3u)
-					{
-					case 1u:
-						u1ntvSBQ11Vut0Wd1Vmb115ghn = _U1ntvSBQ11Vut0Wd1Vmb115ghn;
-						if (u1ntvSBQ11Vut0Wd1Vmb115ghn != null)
-						{
-							goto IL_0012;
-						}
-						return;
-					default:
-						return;
-					case 2u:
-						break;
-					case 0u:
-						return;
-					}
-					break;
-					IL_0012:
-					u1ntvSBQ11Vut0Wd1Vmb115ghn();
-					num = (int)((num2 * 273964742) ^ 0x545185CD);
-				}
-			}
+			_U1ntvSBQ11Vut0Wd1Vmb115ghn?.Invoke();
 		}
 	}
 
@@ -63,67 +35,11 @@ public class _3IHp43rpkJgOBcY9lrIrwMuwWve : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	{
 		if (_U1ntvSBQ11Vut0Wd1Vmb115ghn != null)
 		{
-			while (true)
+			if (_sVephzY32oTa3X109UReGPT9rd != null && base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._5zNdOw7qHmuCAPJFMr3SsZdBlCr == null)
 			{
-				int num = -1412661631;
-				while (true)
-				{
-					uint num2;
-					switch ((num2 = (uint)num ^ 0xD1ED3BF0u) % 6u)
-					{
-					case 5u:
-					{
-						int num5;
-						int num6;
-						if (base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._5zNdOw7qHmuCAPJFMr3SsZdBlCr == null)
-						{
-							num5 = 1433699573;
-							num6 = 1433699573;
-						}
-						else
-						{
-							num5 = 1084176074;
-							num6 = 1084176074;
-						}
-						num = num5 ^ ((int)num2 * -647893195);
-						continue;
-					}
-					case 3u:
-						_sVephzY32oTa3X109UReGPT9rd = base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._5zNdOw7qHmuCAPJFMr3SsZdBlCr;
-						num = -63506844;
-						continue;
-					case 1u:
-					{
-						int num3;
-						int num4;
-						if (_sVephzY32oTa3X109UReGPT9rd != null)
-						{
-							num3 = -998817942;
-							num4 = -998817942;
-						}
-						else
-						{
-							num3 = -496946356;
-							num4 = -496946356;
-						}
-						num = num3 ^ (int)(num2 * 1983647607);
-						continue;
-					}
-					case 0u:
-						_U1ntvSBQ11Vut0Wd1Vmb115ghn();
-						num = ((int)num2 * -1920484845) ^ 0x4C336987;
-						continue;
-					case 4u:
-						break;
-					default:
-						goto end_IL_00ca;
-					}
-					break;
-				}
-				continue;
-				end_IL_00ca:
-				break;
+				_U1ntvSBQ11Vut0Wd1Vmb115ghn();
 			}
+			_sVephzY32oTa3X109UReGPT9rd = base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._5zNdOw7qHmuCAPJFMr3SsZdBlCr;
 		}
 		_4QLHHCk23T1BjK7acKxASbkCefG._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 	}

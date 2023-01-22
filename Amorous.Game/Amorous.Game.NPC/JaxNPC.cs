@@ -90,55 +90,24 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
-		default:
-			num = 183588928;
-			goto IL_0044;
-		case NPCLocation.Left:
-			goto IL_0022;
-		case NPCLocation.Right:
-			goto IL_006f;
 		case NPCLocation.Middle:
-			break;
-			IL_0044:
-			switch ((uint)(num ^ 0x797D9EB5) % 7u)
-			{
-			case 6u:
-				break;
-			case 2u:
-				goto IL_0022;
-			case 5u:
-				goto IL_006f;
-			default:
-				goto end_IL_000a;
-			case 1u:
-				JaxNPC.smethod_30((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1520f);
-				JaxNPC.smethod_31((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1100f);
-				return;
-			case 3u:
-				return;
-			case 4u:
-				return;
-			}
-			goto default;
-			IL_006f:
 			JaxNPC.smethod_29((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = 1255791056;
-			goto IL_0044;
-			IL_0022:
+			JaxNPC.smethod_30((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
+			JaxNPC.smethod_31((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1100f);
+			break;
+		case NPCLocation.Left:
 			JaxNPC.smethod_29((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
 			JaxNPC.smethod_30((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 400f);
 			JaxNPC.smethod_31((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1100f);
-			num = 1252511167;
-			goto IL_0044;
-			end_IL_000a:
+			break;
+		case NPCLocation.Right:
+			JaxNPC.smethod_29((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			JaxNPC.smethod_30((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1520f);
+			JaxNPC.smethod_31((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1100f);
 			break;
 		}
-		JaxNPC.smethod_29((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-		JaxNPC.smethod_30((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 960f);
-		JaxNPC.smethod_31((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1100f);
 	}
 
 	static Type smethod_18(RuntimeTypeHandle runtimeTypeHandle_0)

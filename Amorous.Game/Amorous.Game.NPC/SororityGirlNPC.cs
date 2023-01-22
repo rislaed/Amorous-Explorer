@@ -40,73 +40,23 @@ public class SororityGirlNPC : LayerNPC<SororityGirlNPC.EHeads, SororityGirlNPC.
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		while (true)
+		switch (npclocation_0)
 		{
-			int num = -1711865782;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x92CED239u) % 11u)
-				{
-				case 9u:
-					SororityGirlNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					num = -396770710;
-					continue;
-				case 8u:
-					SororityGirlNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -60f);
-					num = (int)(num2 * 1370335207) ^ -1128080050;
-					continue;
-				case 5u:
-					goto IL_0034;
-				case 4u:
-					switch (npclocation_0)
-					{
-					case NPCLocation.Middle:
-						break;
-					case NPCLocation.Left:
-						goto IL_0034;
-					default:
-						goto IL_0056;
-					case NPCLocation.Right:
-						goto IL_0065;
-					}
-					goto case 9u;
-				case 1u:
-					goto IL_0065;
-				case 0u:
-					SororityGirlNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1390f);
-					SororityGirlNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 126f);
-					num = ((int)num2 * -1781951580) ^ 0x7EFE1F2C;
-					continue;
-				case 2u:
-					break;
-				case 3u:
-					SororityGirlNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 126f);
-					return;
-				case 6u:
-					return;
-				case 7u:
-					return;
-				default:
-					{
-						SororityGirlNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 665f);
-						SororityGirlNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 126f);
-						return;
-					}
-					IL_0065:
-					SororityGirlNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-					num = -1627526896;
-					continue;
-					IL_0056:
-					num = ((int)num2 * -2049392748) ^ 0x5B7C8FF2;
-					continue;
-					IL_0034:
-					SororityGirlNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-					num = -1036942942;
-					continue;
-				}
-				break;
-			}
+		case NPCLocation.Middle:
+			SororityGirlNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			SororityGirlNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 665f);
+			SororityGirlNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 126f);
+			break;
+		case NPCLocation.Left:
+			SororityGirlNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
+			SororityGirlNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -60f);
+			SororityGirlNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 126f);
+			break;
+		case NPCLocation.Right:
+			SororityGirlNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
+			SororityGirlNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1390f);
+			SororityGirlNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 126f);
+			break;
 		}
 	}
 

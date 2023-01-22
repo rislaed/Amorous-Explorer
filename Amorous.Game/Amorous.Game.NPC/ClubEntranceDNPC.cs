@@ -5,29 +5,9 @@ public class ClubEntranceDNPC : ClubStaticNPC
 	public ClubEntranceDNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubEntranceStatic", "D", bool_0: true, bool_1: true)
 	{
-		while (true)
-		{
-			int num = 1618417763;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x7BEA4F53u) % 3u)
-				{
-				case 1u:
-					goto IL_0017;
-				case 0u:
-					break;
-				default:
-					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-					_upl1k7yzBzlU7vErvbydGmXROfA = true;
-					return;
-				}
-				break;
-				IL_0017:
-				ClubEntranceDNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0.7f);
-				num = ((int)num2 * -941753236) ^ 0x51E8B8F1;
-			}
-		}
+		ClubEntranceDNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0.7f);
+		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
+		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	static void smethod_19(_QGGOTxZ8aNWGh0hc26wcmx8wmwT _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0, float float_0)

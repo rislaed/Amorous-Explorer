@@ -20,41 +20,9 @@ public class _AUtA43NfhBNYDqRrVB1t9VQxe1v : TextureLoader
 	public void Load(AtlasPage page, string path)
 	{
 		string text = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_2(_AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_0(path), _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_1(path));
-		Texture2D val = default(Texture2D);
-		while (true)
-		{
-			int num = -926980900;
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0xEB828E6Fu) % 6u)
-				{
-				case 5u:
-					val = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Texture2D>(text);
-					num = (int)((num2 * 1460076939) ^ 0x1B6ECE68);
-					continue;
-				case 4u:
-					page.width = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_3(val);
-					num = ((int)num2 * -1231016990) ^ -1936889660;
-					continue;
-				case 2u:
-					page.rendererObject = val;
-					num = ((int)num2 * -1910345332) ^ 0x70DA52A1;
-					continue;
-				case 1u:
-					page.height = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_4(val);
-					num = ((int)num2 * -453636112) ^ -1280805424;
-					continue;
-				default:
-					return;
-				case 0u:
-					break;
-				case 3u:
-					return;
-				}
-				break;
-			}
-		}
+		Texture2D texture2D_ = (Texture2D)(page.rendererObject = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Texture2D>(text));
+		page.width = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_3(texture2D_);
+		page.height = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_4(texture2D_);
 	}
 
 	public void Unload(object texture)

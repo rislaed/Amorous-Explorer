@@ -40,68 +40,23 @@ public class AuthorNPC : LayerNPC<AuthorNPC.EHeads, AuthorNPC.EPoses, AuthorNPC.
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
 		this.method_0(npclocation_0);
-		int num;
 		switch (npclocation_0)
 		{
-		default:
-			num = 893629513;
-			goto IL_0088;
 		case NPCLocation.Middle:
-			goto IL_0058;
-		case NPCLocation.Left:
-			goto IL_0066;
-		case NPCLocation.Right:
-			goto IL_00c2;
-			IL_0088:
-			while (true)
-			{
-				uint num2;
-				switch ((num2 = (uint)num ^ 0x7BEB355Bu) % 10u)
-				{
-				case 9u:
-					AuthorNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 618f);
-					num = (int)((num2 * 2026411880) ^ 0x3BC4A4AC);
-					continue;
-				case 7u:
-					AuthorNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 30f);
-					num = (int)((num2 * 2057244075) ^ 0x1B27AC90);
-					continue;
-				case 5u:
-					break;
-				case 4u:
-					goto IL_0058;
-				case 3u:
-					goto IL_0066;
-				case 1u:
-					goto IL_00c2;
-				case 0u:
-					return;
-				default:
-					AuthorNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1206f);
-					AuthorNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 30f);
-					return;
-				case 6u:
-					return;
-				case 8u:
-					return;
-				}
-				break;
-			}
-			goto default;
-			IL_00c2:
 			AuthorNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = 442805357;
-			goto IL_0088;
-			IL_0066:
+			AuthorNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 618f);
+			AuthorNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 30f);
+			break;
+		case NPCLocation.Left:
 			AuthorNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
 			AuthorNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 60f);
 			AuthorNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 30f);
-			num = 1031330559;
-			goto IL_0088;
-			IL_0058:
+			break;
+		case NPCLocation.Right:
 			AuthorNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			num = 45521558;
-			goto IL_0088;
+			AuthorNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1206f);
+			AuthorNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 30f);
+			break;
 		}
 	}
 
