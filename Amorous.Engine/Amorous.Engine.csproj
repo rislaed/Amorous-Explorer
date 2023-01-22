@@ -1,33 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <AssemblyName>Amorous.Engine</AssemblyName>
-    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-    <TargetFramework>net40</TargetFramework>
-  </PropertyGroup>
-  <PropertyGroup>
-    <LangVersion>Preview</LangVersion>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup />
-  <ItemGroup />
-  <ItemGroup>
-    <Reference Include="FNA">
-      <HintPath>../FNA.dll</HintPath>
-    </Reference>
-    <Reference Include="Spine">
-      <HintPath>../Spine.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>../Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Squid">
-      <HintPath>../Squid.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Core.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<PropertyGroup>
+		<AssemblyName>Amorous.Engine</AssemblyName>
+		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+		<TargetFramework>net40</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup>
+		<LangVersion>Preview</LangVersion>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<PropertyGroup />
+	<ItemGroup />
+	<ItemGroup>
+		<Reference Include="FNA">
+			<HintPath>../FNA.dll</HintPath>
+		</Reference>
+		<Reference Include="Spine">
+			<HintPath>../Spine.dll</HintPath>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>../Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Squid">
+			<HintPath>../Squid.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Xml">
+			<HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Core">
+			<HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Core.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>
