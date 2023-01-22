@@ -302,7 +302,7 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 		}
 		if (!_ywu0wbAnB2eAf8NYXzXKWpX6S3L)
 		{
-			_FgMIm3ypHD6s3Iyg8XUBnOP5doA -= gameTime_0.get_ElapsedGameTime().Milliseconds;
+			_FgMIm3ypHD6s3Iyg8XUBnOP5doA -= gameTime_0.ElapsedGameTime.Milliseconds;
 			if (_FgMIm3ypHD6s3Iyg8XUBnOP5doA <= 0)
 			{
 				_ywu0wbAnB2eAf8NYXzXKWpX6S3L = true;
@@ -310,7 +310,7 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 			}
 			return;
 		}
-		_o2qr36sQch9lHBwAXuGG3xV8R7H += gameTime_0.get_ElapsedGameTime().Milliseconds;
+		_o2qr36sQch9lHBwAXuGG3xV8R7H += gameTime_0.ElapsedGameTime.Milliseconds;
 		float float_ = 0f;
 		if (_o2qr36sQch9lHBwAXuGG3xV8R7H < 375)
 		{
@@ -526,7 +526,7 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 			_t4JsGFBOTJyNXqWLeAvYMj8Tnlf();
 			return;
 		}
-		_XTvGE1JB69E9GLYnSRCwUVGb5PR -= gameTime_0.get_ElapsedGameTime().Milliseconds;
+		_XTvGE1JB69E9GLYnSRCwUVGb5PR -= gameTime_0.ElapsedGameTime.Milliseconds;
 		if (_XTvGE1JB69E9GLYnSRCwUVGb5PR > 0)
 		{
 			_PdRLTpsImBScBFQhILtCHJpcsllA((float)_XTvGE1JB69E9GLYnSRCwUVGb5PR / 500f);
@@ -582,7 +582,7 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 
 	static TimeSpan smethod_2(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static bool smethod_3(IEnumerator ienumerator_0)

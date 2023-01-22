@@ -53,7 +53,6 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		//IL_0179: Unknown result type (might be due to invalid IL or missing references)
 		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
 		if (!(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f == typeof(Commands.CookingSelectIngredient).Name))
 		{
@@ -85,7 +84,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 				}
 				else
 				{
-					_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq("A unknown command is triggered: " + _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, "[Command]", Color.get_Green());
+					_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq("A unknown command is triggered: " + _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, "[Command]", Color.Green);
 					_7TpbhhncTYU8N40kUaAahODEjQT = _NjQNLofcM2wbpSVJX5f9ltGMCNg;
 					_YY04FeZbOVc47HHNN5R0M1nZYpc = _T09IZIRhbGpjZWBAffDLYRnGVST;
 				}
@@ -183,7 +182,6 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 
 	static void smethod_8(string string_0, string string_1, Color color_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq(string_0, string_1, color_0);
 	}
 

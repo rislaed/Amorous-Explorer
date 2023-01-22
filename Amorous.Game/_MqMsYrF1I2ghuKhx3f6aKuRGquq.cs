@@ -61,7 +61,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	private int _kpLvTY6XXVX762n2WA2bxMWl8eL;
 
-	private readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO;
+	private readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO = new JsonSerializerSettings
+	{
+		TypeNameHandling = TypeNameHandling.Auto,
+		Converters = { (JsonConverter)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA() }
+	};
 
 	private int _wO2k8QO0Jb1ECTFpHuFC2wQFtRB;
 
@@ -107,20 +111,12 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 	public IEnumerable<_xJL9E6vKdg1LYZtKQU5RQKikpvE> _I6gsCHlb2BKFCJSAk9Cn5fCMAPu => _hFBs7DhxsNnkc55oFfnyfMJ6PKb;
 
 	public _MqMsYrF1I2ghuKhx3f6aKuRGquq(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0043: Expected O, but got Unknown
-		JsonSerializerSettings val = new JsonSerializerSettings();
-		val.set_TypeNameHandling((TypeNameHandling)4);
-		val.get_Converters().Add((JsonConverter)(object)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA());
-		_ONuPEFW55mKuOlkBaBx5Jvmw3gO = val;
-		base._002Ector(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
-		string text = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_RootDirectory(), "Data/PlayerCustomization/Customization.json"));
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<_oVHccpskJmMcOYan50N52Esmi8k>(text, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
-		text = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_RootDirectory(), "Data/PlayerCustomization/DefaultTemplates.json"));
-		_Q0ZahtTsyov6ogSphMEhTo0NJfz q0ZahtTsyov6ogSphMEhTo0NJfz = JsonConvert.DeserializeObject<_Q0ZahtTsyov6ogSphMEhTo0NJfz>(text, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+		string value = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.RootDirectory, "Data/PlayerCustomization/Customization.json"));
+		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<_oVHccpskJmMcOYan50N52Esmi8k>(value, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+		value = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.RootDirectory, "Data/PlayerCustomization/DefaultTemplates.json"));
+		_Q0ZahtTsyov6ogSphMEhTo0NJfz q0ZahtTsyov6ogSphMEhTo0NJfz = JsonConvert.DeserializeObject<_Q0ZahtTsyov6ogSphMEhTo0NJfz>(value, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
 		_HnbIDkSG3bmzUQyE7hhFdFKUaCcA.AddRange(q0ZahtTsyov6ogSphMEhTo0NJfz._mwRhFH6kYLkktZ4wFHTyCBgCcBO);
 		_NTp4LybfIeImwrI3gGcIHmtkkDF();
 		_i8C0PwO83NRzGvNoyMhHwLV9HeC = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j._WJfGWBzn4wgdGBnMWRH2pcJ3AqH;
@@ -129,16 +125,8 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 	}
 
 	public _MqMsYrF1I2ghuKhx3f6aKuRGquq(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _oVHccpskJmMcOYan50N52Esmi8k _oVHccpskJmMcOYan50N52Esmi8k_0, IEnumerable<_xJL9E6vKdg1LYZtKQU5RQKikpvE> ienumerable_0)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0043: Expected O, but got Unknown
-		JsonSerializerSettings val = new JsonSerializerSettings();
-		val.set_TypeNameHandling((TypeNameHandling)4);
-		val.get_Converters().Add((JsonConverter)(object)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA());
-		_ONuPEFW55mKuOlkBaBx5Jvmw3gO = val;
-		base._002Ector(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
 		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = _oVHccpskJmMcOYan50N52Esmi8k_0;
 		_HnbIDkSG3bmzUQyE7hhFdFKUaCcA.AddRange(ienumerable_0);
 		_i8C0PwO83NRzGvNoyMhHwLV9HeC = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j._WJfGWBzn4wgdGBnMWRH2pcJ3AqH;
@@ -148,7 +136,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	public _xJL9E6vKdg1LYZtKQU5RQKikpvE _aeTnyiKZSEemnK3AXL8to8blcUj(_xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
 	{
-		return JsonConvert.DeserializeObject<_xJL9E6vKdg1LYZtKQU5RQKikpvE>(JsonConvert.SerializeObject((object)_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, _ONuPEFW55mKuOlkBaBx5Jvmw3gO), _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+		return JsonConvert.DeserializeObject<_xJL9E6vKdg1LYZtKQU5RQKikpvE>(JsonConvert.SerializeObject(_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, _ONuPEFW55mKuOlkBaBx5Jvmw3gO), _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
 	}
 
 	public void _0S3oMrwxDtOTcbzkglSllPfRq53(string string_0, _opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
@@ -217,7 +205,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 		{
 			Directory.CreateDirectory(_U8RMOUb18ulpoDDaA6ORCGlTl9P);
 		}
-		File.WriteAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o, JsonConvert.SerializeObject((object)_hFBs7DhxsNnkc55oFfnyfMJ6PKb, _ONuPEFW55mKuOlkBaBx5Jvmw3gO));
+		File.WriteAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o, JsonConvert.SerializeObject(_hFBs7DhxsNnkc55oFfnyfMJ6PKb, _ONuPEFW55mKuOlkBaBx5Jvmw3gO));
 	}
 
 	private void _NTp4LybfIeImwrI3gGcIHmtkkDF()
@@ -267,8 +255,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	private void _MvwR0kE4wvi2cZX9CN5Dfu3jPWG(string string_0, string string_1, Color color_0)
 	{
-		//IL_0077: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0078: Unknown result type (might be due to invalid IL or missing references)
 		_WmDwUqOXqj6xpaw8SzHUPXR0uwB wmDwUqOXqj6xpaw8SzHUPXR0uwB = _KyRTfqdr2zZtsEAgkvOlUoQoB5j._ZWquBFoc0aD37PZyAGrp8WqVxBC.FirstOrDefault((_WmDwUqOXqj6xpaw8SzHUPXR0uwB _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0) => _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == string_0);
 		if (wmDwUqOXqj6xpaw8SzHUPXR0uwB == null)
 		{
@@ -291,51 +277,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	public override void _oD87G7SXjsTukw7IVWxVlVFEgvA(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0124: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0152: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0180: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0196: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0219: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0249: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0279: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02db: Unknown result type (might be due to invalid IL or missing references)
-		//IL_030b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_033b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0363: Unknown result type (might be due to invalid IL or missing references)
-		//IL_039b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0429: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0487: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04bf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_052c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0573: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0602: Unknown result type (might be due to invalid IL or missing references)
-		//IL_064a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0692: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0728: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0758: Unknown result type (might be due to invalid IL or missing references)
-		//IL_077e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_080c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0843: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0873: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0889: Unknown result type (might be due to invalid IL or missing references)
-		//IL_089e: Unknown result type (might be due to invalid IL or missing references)
 		_wO2k8QO0Jb1ECTFpHuFC2wQFtRB = 0;
 		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("BodyTypes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8CtoV1bqn0CwCzb1tuoNppBt0Gg.ToString(), _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
 		if (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly))
@@ -453,7 +394,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Nails", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LZ8c6hRMRYKjnlLOPhbZHcWqUGG.ToString() + "Nails", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._in5HHYmrdLTFpkgc8aimJpXqAXB);
 		}
 		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Phone", "Case", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._uOkbmfW26QVAvyEMQakki9kTMDbA);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Phone", "Screen", Color.get_White());
+		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Phone", "Screen", Color.White);
 	}
 
 	public void _h7FmRKqsiolCVDHSPyo8tOOxJjI()
@@ -496,7 +437,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 		int y = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b.Y;
 		if (_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E <= 0)
 		{
@@ -512,7 +452,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 			_fqUhMheAq3WxPgLgXhgAKkZQOss = y;
 			return;
 		}
-		_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E -= gameTime_0.get_ElapsedGameTime().Milliseconds;
+		_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E -= gameTime_0.ElapsedGameTime.Milliseconds;
 		if (_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E <= 0)
 		{
 			_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E = 0;
@@ -521,9 +461,9 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 		}
 		else
 		{
-			float num2 = (float)_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E / 350f;
-			_i8C0PwO83NRzGvNoyMhHwLV9HeC = MathHelper.Lerp(_ZTkD3TiiqWMrAbMLsoeIOBirnQc, _iM7i7fLtaIJgLy3ciRpenDbf5CHb, num2);
-			_LkckKdvuh9GaAwn7XojfbJBd91r = (int)MathHelper.Lerp((float)_kpLvTY6XXVX762n2WA2bxMWl8eL, (float)_wBWHhq9jY0K2NLTqM11LsE4yDM, num2);
+			float amount = (float)_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E / 350f;
+			_i8C0PwO83NRzGvNoyMhHwLV9HeC = MathHelper.Lerp(_ZTkD3TiiqWMrAbMLsoeIOBirnQc, _iM7i7fLtaIJgLy3ciRpenDbf5CHb, amount);
+			_LkckKdvuh9GaAwn7XojfbJBd91r = (int)MathHelper.Lerp(_kpLvTY6XXVX762n2WA2bxMWl8eL, _wBWHhq9jY0K2NLTqM11LsE4yDM, amount);
 		}
 		_kmVTSqclXrApKmHKAamak6kRUjl();
 		_fqUhMheAq3WxPgLgXhgAKkZQOss = y;
@@ -542,20 +482,17 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static JsonSerializerSettings smethod_2()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
 		return new JsonSerializerSettings();
 	}
 
 	static void smethod_3(JsonSerializerSettings jsonSerializerSettings_0, TypeNameHandling typeNameHandling_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		jsonSerializerSettings_0.set_TypeNameHandling(typeNameHandling_0);
+		jsonSerializerSettings_0.TypeNameHandling = typeNameHandling_0;
 	}
 
 	static IList<JsonConverter> smethod_4(JsonSerializerSettings jsonSerializerSettings_0)
 	{
-		return jsonSerializerSettings_0.get_Converters();
+		return jsonSerializerSettings_0.Converters;
 	}
 
 	static _VSQz6uDf5A6KqE8xqKxxcrkhZkA smethod_5()
@@ -570,7 +507,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static string smethod_7(ContentManager contentManager_0)
 	{
-		return contentManager_0.get_RootDirectory();
+		return contentManager_0.RootDirectory;
 	}
 
 	static string smethod_8(string string_0, string string_1)
@@ -660,7 +597,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 	}
 
@@ -681,7 +617,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ;
 	}
 
@@ -692,19 +627,16 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._1qfGl3Oc2JyQEpnQtdOxMeMkqhi;
 	}
 
 	static Color smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._VWdlqWB4z2wNtm197Oiv32QGVbE;
 	}
 
 	static Color smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._sbSAaAmkhONcFX6f0JtHbVQbEfG;
 	}
 
@@ -715,25 +647,21 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_35(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt;
 	}
 
 	static Color smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._WvoLJ4MA4gYEsgOmmIQvfK3xFlu;
 	}
 
 	static Color smethod_37(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._lUyqwDvFCoXEZ6VM9PVCQ970jps;
 	}
 
 	static Color smethod_38(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._qKGefHxdjIUD6ObjxrxnLwbBEsh;
 	}
 
@@ -744,13 +672,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_40(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._GXnDb1oaJlPbAQV2mjAwCQFK0nmb;
 	}
 
 	static Color smethod_41(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._0K4lcN7iwo5q0iP1YlkpY9GdayR;
 	}
 
@@ -761,7 +687,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_43(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._HRPv5rzDY5zNiP4NADDEGhrzGTe;
 	}
 
@@ -772,19 +697,16 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_45(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._9b2asKZDwVM1TcSfmfeFCuk0TJZb;
 	}
 
 	static Color smethod_46(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._vUhBAXEgvpGKopOUkDJFoc4EYQ3;
 	}
 
 	static Color smethod_47(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._uaBF7rEib15d42vH8AzoXWFMMkE;
 	}
 
@@ -795,19 +717,16 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_49(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._VsEYbNSam3IFYYWY4QC2lb4ia61;
 	}
 
 	static Color smethod_50(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._y1SiMmRVXWDhDtY17knDpitt46F;
 	}
 
 	static Color smethod_51(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._T98drEOtEEZKeB5tXzsuPrhb5Xk;
 	}
 
@@ -818,7 +737,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_53(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._q2iDxJYfqribHB1bD8aSkSjqrfnA;
 	}
 
@@ -829,7 +747,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_55(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._phJrpk3rql5MfNJxPQ9X7nC8aAk;
 	}
 
@@ -840,7 +757,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_57(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._bJmvnPs69aVDXxG48lmruYZFHKt;
 	}
 
@@ -851,7 +767,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_59(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._EvdUMrkAAdTeMv6fOpGrOLCAMq8A;
 	}
 
@@ -862,7 +777,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_61(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._qsK1J3jktKH3eJ2i8sL1oaxXtLc;
 	}
 
@@ -873,7 +787,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_63(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._62dl1HYYkor3TZL58k5Y33Tj83;
 	}
 
@@ -884,7 +797,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_65(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LufmRsAZrlyDgRKYocQXPzANMaF;
 	}
 
@@ -895,55 +807,46 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_67(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LZfuQybASevOsCykEWqdvA5GqUF;
 	}
 
 	static Color smethod_68(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
 	}
 
 	static Color smethod_69(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 	}
 
 	static Color smethod_70(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._1ZKGQXLRAHEJR8v7jhlDsyOVLcz;
 	}
 
 	static Color smethod_71(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8rDSn6e9Ip9WdOogjhIn8YlL1oM;
 	}
 
 	static Color smethod_72(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._FrsyMDX7TebzFk8nSLTyRDPi1QH;
 	}
 
 	static Color smethod_73(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._cUtgkG5qDvgFmI8c29I9xsLVNON;
 	}
 
 	static Color smethod_74(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LcOPiDaC2j5vzxOEYhvW4vRoaRX;
 	}
 
 	static Color smethod_75(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._meyNS02iTIxo212B6c5eoKns2wj;
 	}
 
@@ -959,7 +862,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_78(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8qQ7XVlyRYW4icBFxPQCJqgueYD;
 	}
 
@@ -970,13 +872,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_80(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
 	}
 
 	static Color smethod_81(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._o6OnmHi5rZIQPHESokp9rTaO1ei;
 	}
 
@@ -987,7 +887,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_83(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._pigzqi6DgcSToQkL9g7Ns2QrLfp;
 	}
 
@@ -998,7 +897,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_85(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._2yydfEIrSiLPTti2dT8JXGoIaM3;
 	}
 
@@ -1009,13 +907,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Color smethod_87(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._in5HHYmrdLTFpkgc8aimJpXqAXB;
 	}
 
 	static Color smethod_88(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._uOkbmfW26QVAvyEMQakki9kTMDbA;
 	}
 
@@ -1026,7 +922,6 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static Point smethod_90(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _3FFZvGWTAe7rsviKkDPTXEVjxWf_0._U7CeYBJ1v1SoUxpX8emsQ9mWl5b;
 	}
 
@@ -1047,7 +942,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	static TimeSpan smethod_94(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static void smethod_95(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0, float float_0)

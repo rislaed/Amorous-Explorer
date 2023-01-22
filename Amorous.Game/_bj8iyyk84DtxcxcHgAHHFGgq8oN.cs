@@ -431,7 +431,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	private RenderTarget2D _j2ynkEUaNLywHdchuAYJWHF3l9DA;
 
-	private Rectangle _CCbe95wREA1VhjgpntSpzsQ19He;
+	private Microsoft.Xna.Framework.Rectangle _CCbe95wREA1VhjgpntSpzsQ19He;
 
 	private _gJR4g7ak0hsZAUWX1vJbMqG2P5I _RA1aFlOff0jGfI2cKUGhYI1MRLBA;
 
@@ -487,17 +487,17 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 		typeof(ClubUpstairsScene).Name
 	};
 
-	private Keys[] _gylJZYyc3mVB0fbHPCctDIg4UAE;
+	private Microsoft.Xna.Framework.Input.Keys[] _gylJZYyc3mVB0fbHPCctDIg4UAE;
 
 	private string[] _sUwMzXXmi9PdDQ0bFQhbGQJUPTe;
 
 	private Vector2 _Vh2qdN4Ha62herl19def6PyuanQ;
 
-	public GameWindow _8k7Do3TGW5NrB22zl8QzInP2j7k => _4L7hfXrWoDdArQiscG4ukHCV46B.get_Window();
+	public GameWindow _8k7Do3TGW5NrB22zl8QzInP2j7k => _4L7hfXrWoDdArQiscG4ukHCV46B.Window;
 
-	public GraphicsDevice _2yepMkVENnecIsduggABaU2qhXW => _4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice();
+	public GraphicsDevice _2yepMkVENnecIsduggABaU2qhXW => _4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice;
 
-	public ContentManager _uwNDZuqdFb9tyQtlQMxiz1DQ7x8 => _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content();
+	public ContentManager _uwNDZuqdFb9tyQtlQMxiz1DQ7x8 => _4L7hfXrWoDdArQiscG4ukHCV46B.Content;
 
 	public _3FFZvGWTAe7rsviKkDPTXEVjxWf _RbWJ7YGnYHCSoD44MRW1h5X6E7E => _YNCmHGUHBydamu5BEECMWoB65VfA;
 
@@ -515,7 +515,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public _691ooXdgg17CWFkMkjedKBBBfYw _aJh9CibG5YKhkExxgRyVopdfSeJ => _db5uuwyBnUwxthW14pfDBlBoqUp;
 
-	public bool _kSReo0whY1pgfTnFOSc44ppANOe => _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_IsFullScreen();
+	public bool _kSReo0whY1pgfTnFOSc44ppANOe => _ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen;
 
 	public bool _NdzU0m9x8QDKpVv3DrQmzY5KduB { get; set; }
 
@@ -525,69 +525,54 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public _bj8iyyk84DtxcxcHgAHHFGgq8oN(Game game_0, bool bool_0)
 	{
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Expected O, but got Unknown
-		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0063: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008e: Expected O, but got Unknown
-		//IL_0092: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d3: Expected O, but got Unknown
 		_4L7hfXrWoDdArQiscG4ukHCV46B = game_0;
 		_eJWqL2MhFZHNHP960nsWLJJmyPD._sabDA8yXNR8DIRSbHjOcXx1e1Ax();
 		if (bool_0)
 		{
-			GraphicsDeviceManager val = new GraphicsDeviceManager(game_0);
-			val.set_IsFullScreen(false);
-			val.set_PreferredBackBufferWidth(1024);
-			val.set_PreferredBackBufferHeight(768);
-			val.set_SynchronizeWithVerticalRetrace(true);
-			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = val;
+			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = new GraphicsDeviceManager(game_0)
+			{
+				IsFullScreen = false,
+				PreferredBackBufferWidth = 1024,
+				PreferredBackBufferHeight = 768,
+				SynchronizeWithVerticalRetrace = true
+			};
 		}
 		else if (!_eJWqL2MhFZHNHP960nsWLJJmyPD._5shlzNYVaJPuzrQfwyRBEphDX6p())
 		{
-			DisplayMode currentDisplayMode = GraphicsAdapter.get_DefaultAdapter().get_CurrentDisplayMode();
-			GraphicsDeviceManager val2 = new GraphicsDeviceManager(game_0);
-			val2.set_IsFullScreen(true);
-			val2.set_PreferredBackBufferWidth(currentDisplayMode.get_Width());
-			val2.set_PreferredBackBufferHeight(currentDisplayMode.get_Height());
-			val2.set_SynchronizeWithVerticalRetrace(true);
-			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = val2;
+			DisplayMode currentDisplayMode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
+			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = new GraphicsDeviceManager(game_0)
+			{
+				IsFullScreen = true,
+				PreferredBackBufferWidth = currentDisplayMode.Width,
+				PreferredBackBufferHeight = currentDisplayMode.Height,
+				SynchronizeWithVerticalRetrace = true
+			};
 		}
 		else
 		{
-			GraphicsDeviceManager val3 = new GraphicsDeviceManager(game_0);
-			val3.set_IsFullScreen(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Bbx3oCtJkeUN6asRLqH0DJ3kkFg);
-			val3.set_PreferredBackBufferWidth(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Iv7AHXGOFR9WoLBFx6PjEgEHmYI);
-			val3.set_PreferredBackBufferHeight(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._84wHcdDxJz5ElyDPXXlgRgsiW8g);
-			val3.set_SynchronizeWithVerticalRetrace(true);
-			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = val3;
+			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = new GraphicsDeviceManager(game_0)
+			{
+				IsFullScreen = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Bbx3oCtJkeUN6asRLqH0DJ3kkFg,
+				PreferredBackBufferWidth = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Iv7AHXGOFR9WoLBFx6PjEgEHmYI,
+				PreferredBackBufferHeight = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._84wHcdDxJz5ElyDPXXlgRgsiW8g,
+				SynchronizeWithVerticalRetrace = true
+			};
 		}
-		_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.set_RootDirectory("Content-Release");
-		_4L7hfXrWoDdArQiscG4ukHCV46B.set_Content((ContentManager)(object)new _xM5N1Fg3VZCSTaBWtPXoS6nJ82E(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_ServiceProvider(), _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_RootDirectory()));
+		_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.RootDirectory = "Content-Release";
+		_4L7hfXrWoDdArQiscG4ukHCV46B.Content = new _xM5N1Fg3VZCSTaBWtPXoS6nJ82E(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.ServiceProvider, _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.RootDirectory);
 	}
 
 	public void _oD87G7SXjsTukw7IVWxVlVFEgvA()
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B.add_Disposed((EventHandler<EventArgs>)delegate
+		_4L7hfXrWoDdArQiscG4ukHCV46B.Disposed += delegate
 		{
 			_eJWqL2MhFZHNHP960nsWLJJmyPD._7cuPUL8aamrg9daETH6zQk3RwbF();
-		});
-		Gui.set_GetClipboardCallback((Func<string>)Delegate.Combine(Gui.get_GetClipboardCallback(), new Func<string>(SDL.SDL_GetClipboardText)));
-		Gui.set_SetClipboardCallback((Action<string>)Delegate.Combine(Gui.get_SetClipboardCallback(), (Action<string>)delegate(string string_0)
+		};
+		Gui.GetClipboardCallback = (Func<string>)Delegate.Combine(Gui.GetClipboardCallback, new Func<string>(SDL.SDL_GetClipboardText));
+		Gui.SetClipboardCallback = (Action<string>)Delegate.Combine(Gui.SetClipboardCallback, (Action<string>)delegate(string string_0)
 		{
 			SDL.SDL_SetClipboardText(string_0);
-		}));
+		});
 		string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NonSteam");
 		if (!File.Exists(text) && !File.Exists(text + ".txt"))
 		{
@@ -602,41 +587,33 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public void _eW1Nkl8VqFHVExM8l3IqxgSbMBg()
 	{
-		//IL_0073: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007d: Expected O, but got Unknown
-		//IL_0089: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0093: Expected O, but got Unknown
-		//IL_00f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0100: Expected O, but got Unknown
-		//IL_0139: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013e: Unknown result type (might be due to invalid IL or missing references)
 		string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ShowMeSomeBooty");
 		_iExD93IWLlzVfXsU9wyrEvWgJsg._qrFhbSiCFS6nLCN231ubbRQQeXE(File.Exists(text) || File.Exists(text + ".txt"));
 		_YNCmHGUHBydamu5BEECMWoB65VfA = new _3FFZvGWTAe7rsviKkDPTXEVjxWf(this);
-		_gylJZYyc3mVB0fbHPCctDIg4UAE = (Keys[])Enum.GetValues(typeof(Keys));
+		_gylJZYyc3mVB0fbHPCctDIg4UAE = (Microsoft.Xna.Framework.Input.Keys[])Enum.GetValues(typeof(Microsoft.Xna.Framework.Input.Keys));
 		_RbWJ7YGnYHCSoD44MRW1h5X6E7E._tZI6Co0uB31aGK7Qk4qvEImgcnO = true;
-		_ZXUztyGtStF4WzGVig7wu43cfnf = new SpriteBatch(_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice());
-		_BuJyoOT5ylWcIMxjcKRnxVmYvBd = new SkeletonMeshRenderer(_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice());
+		_ZXUztyGtStF4WzGVig7wu43cfnf = new SpriteBatch(_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice);
+		_BuJyoOT5ylWcIMxjcKRnxVmYvBd = new SkeletonMeshRenderer(_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice);
 		_chds2l0ZCMMghly7dv4eik3iSH5 = new _wRd4nHuQQlAPEwrHOGkBfut6Uip(this, 1920, 1080);
-		_chds2l0ZCMMghly7dv4eik3iSH5._2lMgp1KOzK9I6kd7CHrDq2A2CHm(_ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferWidth(), _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferHeight(), _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferWidth(), _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferHeight());
-		_j2ynkEUaNLywHdchuAYJWHF3l9DA = new RenderTarget2D(_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice(), 1920, 1080);
-		_j2ynkEUaNLywHdchuAYJWHF3l9DA._w2YD42TXOY22EP4Mpp7wzDUO4xv((RenderTargetUsage)1);
-		_CCbe95wREA1VhjgpntSpzsQ19He = new Rectangle(_chds2l0ZCMMghly7dv4eik3iSH5._jDxCg7GJnIKcLXDcUVSdbEIQL3Yb, _chds2l0ZCMMghly7dv4eik3iSH5._ILCBrSipj1Qk4CsYzkEELxHvkkY, _chds2l0ZCMMghly7dv4eik3iSH5._HZrLDiX4EPtS6jM8Odd9yJAatHq, _chds2l0ZCMMghly7dv4eik3iSH5._ypqaDJqrkQlUKOrdZIXld5qQQ4x);
-		Gui.set_Renderer((ISquidRenderer)(object)new _k8LAl8bPyzLGEpo59dKFGU4sCQ(_4L7hfXrWoDdArQiscG4ukHCV46B));
-		Gui.get_Renderer().SetTexture("PhoneScreen", (object)_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
-		Gui.get_Renderer().SetTexture("Contact_DJ", (object)_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
+		_chds2l0ZCMMghly7dv4eik3iSH5._2lMgp1KOzK9I6kd7CHrDq2A2CHm(_ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight);
+		_j2ynkEUaNLywHdchuAYJWHF3l9DA = new RenderTarget2D(_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice, 1920, 1080);
+		_j2ynkEUaNLywHdchuAYJWHF3l9DA._w2YD42TXOY22EP4Mpp7wzDUO4xv(RenderTargetUsage.PreserveContents);
+		_CCbe95wREA1VhjgpntSpzsQ19He = new Microsoft.Xna.Framework.Rectangle(_chds2l0ZCMMghly7dv4eik3iSH5._jDxCg7GJnIKcLXDcUVSdbEIQL3Yb, _chds2l0ZCMMghly7dv4eik3iSH5._ILCBrSipj1Qk4CsYzkEELxHvkkY, _chds2l0ZCMMghly7dv4eik3iSH5._HZrLDiX4EPtS6jM8Odd9yJAatHq, _chds2l0ZCMMghly7dv4eik3iSH5._ypqaDJqrkQlUKOrdZIXld5qQQ4x);
+		Gui.Renderer = new _k8LAl8bPyzLGEpo59dKFGU4sCQ(_4L7hfXrWoDdArQiscG4ukHCV46B);
+		Gui.Renderer.SetTexture("PhoneScreen", _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
+		Gui.Renderer.SetTexture("Contact_DJ", _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
 		_KyKsjBAROeUAsKraBIxtuHTSPwg._Uh2GhEF2pLNc3a7l5WMdPGP2bZd = _pql4s9X0U3svdBghGax6VsdF2Gq;
 		_CCtbrNWS4Gi5hRSEsXYI5VzS7gI = new _Z6EKIW3ycAwV2npYuxbFLcnCTrJ();
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA = new _gJR4g7ak0hsZAUWX1vJbMqG2P5I(_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice());
-		_6M30VBCyHzfi1RYZYx7uJAHl1EC = new _UmxbIbk7pgaod0bD7pS309P3Lns(_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content());
-		_PxO28nve6nqbBLBJKrzHMRbOasHA = new _AUtA43NfhBNYDqRrVB1t9VQxe1v(_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content());
+		_RA1aFlOff0jGfI2cKUGhYI1MRLBA = new _gJR4g7ak0hsZAUWX1vJbMqG2P5I(_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice);
+		_6M30VBCyHzfi1RYZYx7uJAHl1EC = new _UmxbIbk7pgaod0bD7pS309P3Lns(_4L7hfXrWoDdArQiscG4ukHCV46B.Content);
+		_PxO28nve6nqbBLBJKrzHMRbOasHA = new _AUtA43NfhBNYDqRrVB1t9VQxe1v(_4L7hfXrWoDdArQiscG4ukHCV46B.Content);
 		_9rxbJ7LsE3DhACUHVlPZaixc5Jp = new _XJasjdoOf6PYbfaC5MsbXSjDWV3();
-		Texture2D texture2D_ = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
-		Texture2D texture2D_2 = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Dialogue/button");
-		_0SvmBhkBX8SImQwyvuy5xVObqLn = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Squid/DefaultCursor");
+		Texture2D texture2D_ = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
+		Texture2D texture2D_2 = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<Texture2D>("Assets/GUI/Dialogue/button");
+		_0SvmBhkBX8SImQwyvuy5xVObqLn = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<Texture2D>("Assets/GUI/Squid/DefaultCursor");
 		_LWcoDwIWvf8DT3nQmNe5z8fkUvI = true;
-		_xnYepZuegigJCU2jcbZsfVIakzF = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		SpriteFont spriteFont_ = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>("Assets/GUI/Fonts/BoldItalic-26");
+		_xnYepZuegigJCU2jcbZsfVIakzF = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		SpriteFont spriteFont_ = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<SpriteFont>("Assets/GUI/Fonts/BoldItalic-26");
 		_P62DygY6CKZG8s5wqDu0uAFksjs = new _nkzqFdEfDyLcyGikIKGcHjklI4y(this, texture2D_, texture2D_2, _xnYepZuegigJCU2jcbZsfVIakzF, spriteFont_);
 		_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _DW9IcpdMEINZmuzfrqmwsduBGih._jVNnsNFMjoGC9t7v83qLI8vEZSH();
 		if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
@@ -647,29 +624,28 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._Hnb6mPvrZFgOMCIApIeMW88jSsF = lRHDfpOTd4PxClZkjMpoakPEA9d._M29jWtsDcmPvHjIYYSiTa8TbWri;
 			}
 		}
-		_SUHe9KzfAd477MCCYxTvqFf3efl = new _poenyHBGUusBcnNcTFB9MQBV72R(this, _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content());
+		_SUHe9KzfAd477MCCYxTvqFf3efl = new _poenyHBGUusBcnNcTFB9MQBV72R(this, _4L7hfXrWoDdArQiscG4ukHCV46B.Content);
 		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = true;
 		_5Anqe6GAAkzemoAXYpJmgMlk1yz._LsIdcBLhaqZr03JCpCYZrI9ztVF();
 		_DNbNFzOKO7vtoVmjI32p1Snwmpe = true;
-		Gui.get_Renderer().SetTexture("MessageIconCoby", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Coby"));
-		Gui.get_Renderer().SetTexture("MessageIconDustin", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Dustin"));
-		Gui.get_Renderer().SetTexture("MessageIconJax", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Jax"));
-		Gui.get_Renderer().SetTexture("MessageIconLex", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Lex"));
-		Gui.get_Renderer().SetTexture("MessageIconMercy", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Mercy"));
-		Gui.get_Renderer().SetTexture("MessageIconRemy", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Remy"));
-		Gui.get_Renderer().SetTexture("MessageIconSeth", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Seth"));
-		Gui.get_Renderer().SetTexture("MessageIconSkye", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Skye"));
-		Gui.get_Renderer().SetTexture("MessageIconZenith", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Zenith"));
-		Gui.get_Renderer().SetTexture("MessageIconGeneric", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Generic"));
-		Gui.get_Renderer().SetTexture("MessageIconDJ", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_DJ"));
-		Gui.get_Renderer().SetTexture("MessageIconShootingRange", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_ShootingRange"));
-		Gui.get_Renderer().SetTexture("MessageIconCooking", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Cooking"));
+		Gui.Renderer.SetTexture("MessageIconCoby", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Coby"));
+		Gui.Renderer.SetTexture("MessageIconDustin", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Dustin"));
+		Gui.Renderer.SetTexture("MessageIconJax", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Jax"));
+		Gui.Renderer.SetTexture("MessageIconLex", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Lex"));
+		Gui.Renderer.SetTexture("MessageIconMercy", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Mercy"));
+		Gui.Renderer.SetTexture("MessageIconRemy", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Remy"));
+		Gui.Renderer.SetTexture("MessageIconSeth", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Seth"));
+		Gui.Renderer.SetTexture("MessageIconSkye", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Skye"));
+		Gui.Renderer.SetTexture("MessageIconZenith", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Zenith"));
+		Gui.Renderer.SetTexture("MessageIconGeneric", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Generic"));
+		Gui.Renderer.SetTexture("MessageIconDJ", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_DJ"));
+		Gui.Renderer.SetTexture("MessageIconShootingRange", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_ShootingRange"));
+		Gui.Renderer.SetTexture("MessageIconCooking", _uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Cooking"));
 		_g9Sx54kMPiHz5jrqWh4Kb1pTijH();
 	}
 
 	protected virtual void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
 	{
-		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
 		_xfiKuXXh5LQA9CUQiex6tutzFKQ = new EmptyScene(this);
 		_Qj2G6fpAF4mGsATgkV8DPBF3aA1A._E7yBM68AWt7OGHJ5D6xYA8RK8tAA(new Color(0, 0, 0, 255));
 		_OxLRmpxixplTKChiTPUKAx4uTLG<MainMenuScene>(delegate
@@ -684,21 +660,6 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		//IL_0206: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0210: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0232: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0241: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0257: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0259: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0271: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0285: Expected I4, but got Unknown
-		//IL_0287: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0315: Unknown result type (might be due to invalid IL or missing references)
-		//IL_031b: Unknown result type (might be due to invalid IL or missing references)
 		if (_NdzU0m9x8QDKpVv3DrQmzY5KduB && _Z8BClcChRJrlB6tR1VPJcycVpHN == null)
 		{
 			_NdzU0m9x8QDKpVv3DrQmzY5KduB = false;
@@ -710,19 +671,19 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			}
 		}
 		_YNCmHGUHBydamu5BEECMWoB65VfA._tiBFUHPEkedkbgvuX3whdeyjhKo();
-		if (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ((Keys)164) && _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)112))
+		if (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.F1))
 		{
 			_DNbNFzOKO7vtoVmjI32p1Snwmpe = !_DNbNFzOKO7vtoVmjI32p1Snwmpe;
 		}
-		if ((_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ((Keys)164) && _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)13)) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)113))
+		if ((_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.Enter)) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.F2))
 		{
 			_qGU55VUfbqFJ4l6ArNW4JRcLekg();
 		}
-		if (_p3BLtW5bCDzTS86VFihe1pfwDoP == null && (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)123) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)44)))
+		if (_p3BLtW5bCDzTS86VFihe1pfwDoP == null && (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.F12) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.PrintScreen)))
 		{
 			_VN2LxjGLZldLNfiJ1OniiaXfYBg();
 		}
-		if (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)9))
+		if (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.Tab))
 		{
 			_Fs6y8qquj1mRHLz6xw6KoI4SAvH = !_Fs6y8qquj1mRHLz6xw6KoI4SAvH;
 		}
@@ -762,22 +723,22 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			_fp8jsuSnELXqf2yy2JQDaXDCBVQ._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 		}
 		_9rxbJ7LsE3DhACUHVlPZaixc5Jp._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-		Point val = _chds2l0ZCMMghly7dv4eik3iSH5._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		Microsoft.Xna.Framework.Point point = _chds2l0ZCMMghly7dv4eik3iSH5._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
 		List<KeyData> list = new List<KeyData>();
-		Keys[] gylJZYyc3mVB0fbHPCctDIg4UAE = _gylJZYyc3mVB0fbHPCctDIg4UAE;
-		foreach (Keys val2 in gylJZYyc3mVB0fbHPCctDIg4UAE)
+		Microsoft.Xna.Framework.Input.Keys[] gylJZYyc3mVB0fbHPCctDIg4UAE = _gylJZYyc3mVB0fbHPCctDIg4UAE;
+		foreach (Microsoft.Xna.Framework.Input.Keys keys in gylJZYyc3mVB0fbHPCctDIg4UAE)
 		{
-			bool flag = _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(val2);
-			bool flag2 = _RbWJ7YGnYHCSoD44MRW1h5X6E7E._KGCwEHf8akeXdkHLKFg1caFxXUJ(val2);
+			bool flag = _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(keys);
+			bool flag2 = _RbWJ7YGnYHCSoD44MRW1h5X6E7E._KGCwEHf8akeXdkHLKFg1caFxXUJ(keys);
 			if (flag || flag2)
 			{
-				Keys? val3 = _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl._HSj1lr89AFIB9adVhSrAeWjS1xC[Keyboard.GetKeyFromScancodeEXT(val2)];
-				if (val3.HasValue)
+				Squid.Keys? keys2 = _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl._HSj1lr89AFIB9adVhSrAeWjS1xC[Keyboard.GetKeyFromScancodeEXT(keys)];
+				if (keys2.HasValue)
 				{
 					list.Add(new KeyData
 					{
-						Scancode = (int)val3.Value,
-						Char = val2._O2N6YVYHWf1FQNPMGlnVDG8GTqe(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ((Keys)160) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ((Keys)161)),
+						Scancode = (int)keys2.Value,
+						Char = keys._O2N6YVYHWf1FQNPMGlnVDG8GTqe(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.LeftShift) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.RightShift)),
 						Pressed = flag,
 						Released = flag2
 					});
@@ -785,13 +746,9 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			}
 		}
 		Gui.SetKeyboard(list.ToArray());
-		Gui.SetButtons(new bool[2]
-		{
-			_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton),
-			_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton)
-		});
-		Gui.SetMouse(val.X, val.Y, _RbWJ7YGnYHCSoD44MRW1h5X6E7E._xFrCcVNAYrShLz07HqDph01nGwX);
-		Gui.set_TimeElapsed((float)gameTime_0.get_ElapsedGameTime().Milliseconds);
+		Gui.SetButtons(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton), _RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton));
+		Gui.SetMouse(point.X, point.Y, _RbWJ7YGnYHCSoD44MRW1h5X6E7E._xFrCcVNAYrShLz07HqDph01nGwX);
+		Gui.TimeElapsed = gameTime_0.ElapsedGameTime.Milliseconds;
 		if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
 		{
 			_p3BLtW5bCDzTS86VFihe1pfwDoP._tiBFUHPEkedkbgvuX3whdeyjhKo();
@@ -800,42 +757,9 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(GameTime gameTime_0)
 	{
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0226: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0260: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0265: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0280: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02c9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0312: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0317: Unknown result type (might be due to invalid IL or missing references)
-		//IL_035f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0364: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03e8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0425: Unknown result type (might be due to invalid IL or missing references)
-		//IL_042a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_045c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0461: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04aa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0678: Unknown result type (might be due to invalid IL or missing references)
-		//IL_069a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_069f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06c3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06d3: Unknown result type (might be due to invalid IL or missing references)
-		_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv = (float)gameTime_0.get_TotalGameTime().TotalSeconds;
-		_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice().SetRenderTarget(_j2ynkEUaNLywHdchuAYJWHF3l9DA);
-		_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice().Clear(Color.get_Black());
+		_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv = (float)gameTime_0.TotalGameTime.TotalSeconds;
+		_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice.SetRenderTarget(_j2ynkEUaNLywHdchuAYJWHF3l9DA);
+		_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice.Clear(Color.Black);
 		_xfiKuXXh5LQA9CUQiex6tutzFKQ._f5ctqAmdNsZ889UjM4LxDm8WGxA(_ZXUztyGtStF4WzGVig7wu43cfnf, _BuJyoOT5ylWcIMxjcKRnxVmYvBd, _chds2l0ZCMMghly7dv4eik3iSH5._oLRK3f26Sw9AKBKi0iR44APDZEt);
 		if (_chds2l0ZCMMghly7dv4eik3iSH5._q1DGEI79OguKnK8dCIgPvfGc9Bi)
 		{
@@ -876,7 +800,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			_Vh2qdN4Ha62herl19def6PyuanQ.X = 10f;
 			_Vh2qdN4Ha62herl19def6PyuanQ.Y = 10f;
 			_ZXUztyGtStF4WzGVig7wu43cfnf.Begin();
-			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "[Generic]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "[Generic]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 			zXUztyGtStF4WzGVig7wu43cfnf = _ZXUztyGtStF4WzGVig7wu43cfnf;
 			xnYepZuegigJCU2jcbZsfVIakzF = _xnYepZuegigJCU2jcbZsfVIakzF;
@@ -898,44 +822,41 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 		}
 		goto IL_04d3;
 		IL_0220:
-		zXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(xnYepZuegigJCU2jcbZsfVIakzF, "Scene: " + (string?)obj, _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+		zXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(xnYepZuegigJCU2jcbZsfVIakzF, "Scene: " + (string?)obj, _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		SpriteBatch zXUztyGtStF4WzGVig7wu43cfnf2 = _ZXUztyGtStF4WzGVig7wu43cfnf;
-		SpriteFont xnYepZuegigJCU2jcbZsfVIakzF2 = _xnYepZuegigJCU2jcbZsfVIakzF;
-		Color sWODlbUkQEqfwrtprjLPOeGF7HO = _RA1aFlOff0jGfI2cKUGhYI1MRLBA._SWODlbUkQEqfwrtprjLPOeGF7HO;
-		zXUztyGtStF4WzGVig7wu43cfnf2._FY70IFLoBond3ORPe0ndCLvIeVcA(xnYepZuegigJCU2jcbZsfVIakzF2, "ScreenFader: " + ((Color)(ref sWODlbUkQEqfwrtprjLPOeGF7HO)).get_A(), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+		_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "ScreenFader: " + _RA1aFlOff0jGfI2cKUGhYI1MRLBA._SWODlbUkQEqfwrtprjLPOeGF7HO.A, _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "[Cutscenes]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+		_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "[Cutscenes]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, string.Format("Cutscene in progress: {0}", (_Ta8oiGRfjrRGtgUaA5S061UepZb == null) ? "No" : "Yes"), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+		_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, string.Format("Cutscene in progress: {0}", (_Ta8oiGRfjrRGtgUaA5S061UepZb == null) ? "No" : "Yes"), _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 		if (_sUwMzXXmi9PdDQ0bFQhbGQJUPTe != null)
 		{
-			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[0], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[0], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Stage: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[1], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Stage: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[1], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Path: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[2], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Path: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[2], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Current: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[3], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Current: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[3], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 		}
 		else
 		{
-			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: None", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+			_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: None", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 		}
 		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Press Tab to toggle", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+		_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Press Tab to toggle", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
 		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 		_ZXUztyGtStF4WzGVig7wu43cfnf.End();
 		goto IL_04d3;
 		IL_065c:
-		_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice().SetRenderTarget((RenderTarget2D)null);
-		_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice().Clear(Color.get_Black());
+		_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice.SetRenderTarget(null);
+		_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice.Clear(Color.Black);
 		_ZXUztyGtStF4WzGVig7wu43cfnf.Begin();
-		_ZXUztyGtStF4WzGVig7wu43cfnf.Draw((Texture2D)(object)_j2ynkEUaNLywHdchuAYJWHF3l9DA, _CCbe95wREA1VhjgpntSpzsQ19He, Color.get_White());
+		_ZXUztyGtStF4WzGVig7wu43cfnf.Draw(_j2ynkEUaNLywHdchuAYJWHF3l9DA, _CCbe95wREA1VhjgpntSpzsQ19He, Color.White);
 		if (_LWcoDwIWvf8DT3nQmNe5z8fkUvI)
 		{
 			_ZXUztyGtStF4WzGVig7wu43cfnf.Draw(_0SvmBhkBX8SImQwyvuy5xVObqLn, _RbWJ7YGnYHCSoD44MRW1h5X6E7E._6M9HDt28e1QHBuYsAXgqiY8jVlA, _CCtbrNWS4Gi5hRSEsXYI5VzS7gI._Hnb6mPvrZFgOMCIApIeMW88jSsF._uOkbmfW26QVAvyEMQakki9kTMDbA);
@@ -957,11 +878,11 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
 			using (Stream stream = File.OpenWrite(text))
 			{
-				((Texture2D)_j2ynkEUaNLywHdchuAYJWHF3l9DA).SaveAsPng(stream, ((Texture2D)_j2ynkEUaNLywHdchuAYJWHF3l9DA).get_Width(), ((Texture2D)_j2ynkEUaNLywHdchuAYJWHF3l9DA).get_Height());
+				_j2ynkEUaNLywHdchuAYJWHF3l9DA.SaveAsPng(stream, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Width, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Height);
 			}
 			if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
 			{
-				_p3BLtW5bCDzTS86VFihe1pfwDoP._9K6cA2OPGJaecqk3spsceT9ilNI(text, ((Texture2D)_j2ynkEUaNLywHdchuAYJWHF3l9DA).get_Width(), ((Texture2D)_j2ynkEUaNLywHdchuAYJWHF3l9DA).get_Height());
+				_p3BLtW5bCDzTS86VFihe1pfwDoP._9K6cA2OPGJaecqk3spsceT9ilNI(text, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Width, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Height);
 			}
 			if (_Fs6y8qquj1mRHLz6xw6KoI4SAvH && _sUwMzXXmi9PdDQ0bFQhbGQJUPTe != null)
 			{
@@ -997,7 +918,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public void _qGU55VUfbqFJ4l6ArNW4JRcLekg()
 	{
-		_fSRUnXzLhUs3DfJ1lzl9dGCEmCf(_chds2l0ZCMMghly7dv4eik3iSH5._KOuUew34v1oSMnWlHSFJuRBiu1c, _chds2l0ZCMMghly7dv4eik3iSH5._dh9yjUXG1mhcfgwAWkWfggbGEIc, !_ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_IsFullScreen());
+		_fSRUnXzLhUs3DfJ1lzl9dGCEmCf(_chds2l0ZCMMghly7dv4eik3iSH5._KOuUew34v1oSMnWlHSFJuRBiu1c, _chds2l0ZCMMghly7dv4eik3iSH5._dh9yjUXG1mhcfgwAWkWfggbGEIc, !_ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen);
 	}
 
 	public void _VN2LxjGLZldLNfiJ1OniiaXfYBg()
@@ -1025,20 +946,17 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public void _fSRUnXzLhUs3DfJ1lzl9dGCEmCf(int int_0, int int_1)
 	{
-		_fSRUnXzLhUs3DfJ1lzl9dGCEmCf(int_0, int_1, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_IsFullScreen());
+		_fSRUnXzLhUs3DfJ1lzl9dGCEmCf(int_0, int_1, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen);
 	}
 
 	public void _fSRUnXzLhUs3DfJ1lzl9dGCEmCf(int int_0, int int_1, bool bool_0)
 	{
-		//IL_006f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ce: Unknown result type (might be due to invalid IL or missing references)
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.set_IsFullScreen(bool_0);
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.set_PreferredBackBufferWidth(bool_0 ? GraphicsAdapter.get_DefaultAdapter().get_CurrentDisplayMode().get_Width() : int_0);
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.set_PreferredBackBufferHeight(bool_0 ? GraphicsAdapter.get_DefaultAdapter().get_CurrentDisplayMode().get_Height() : int_1);
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_GraphicsDevice().set_Viewport(new Viewport(0, 0, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferWidth(), _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferHeight()));
-		_chds2l0ZCMMghly7dv4eik3iSH5._2lMgp1KOzK9I6kd7CHrDq2A2CHm(int_0, int_1, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferWidth(), _ARAAkijJ1FF23wI2rNDaw7mTOeJ.get_PreferredBackBufferHeight());
-		_CCbe95wREA1VhjgpntSpzsQ19He = new Rectangle(_chds2l0ZCMMghly7dv4eik3iSH5._jDxCg7GJnIKcLXDcUVSdbEIQL3Yb, _chds2l0ZCMMghly7dv4eik3iSH5._ILCBrSipj1Qk4CsYzkEELxHvkkY, _chds2l0ZCMMghly7dv4eik3iSH5._HZrLDiX4EPtS6jM8Odd9yJAatHq, _chds2l0ZCMMghly7dv4eik3iSH5._ypqaDJqrkQlUKOrdZIXld5qQQ4x);
+		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen = bool_0;
+		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth = (bool_0 ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width : int_0);
+		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight = (bool_0 ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height : int_1);
+		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.GraphicsDevice.Viewport = new Viewport(0, 0, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight);
+		_chds2l0ZCMMghly7dv4eik3iSH5._2lMgp1KOzK9I6kd7CHrDq2A2CHm(int_0, int_1, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight);
+		_CCbe95wREA1VhjgpntSpzsQ19He = new Microsoft.Xna.Framework.Rectangle(_chds2l0ZCMMghly7dv4eik3iSH5._jDxCg7GJnIKcLXDcUVSdbEIQL3Yb, _chds2l0ZCMMghly7dv4eik3iSH5._ILCBrSipj1Qk4CsYzkEELxHvkkY, _chds2l0ZCMMghly7dv4eik3iSH5._HZrLDiX4EPtS6jM8Odd9yJAatHq, _chds2l0ZCMMghly7dv4eik3iSH5._ypqaDJqrkQlUKOrdZIXld5qQQ4x);
 		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.ApplyChanges();
 	}
 
@@ -1150,7 +1068,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == string_0);
 		if (!(type == null))
 		{
-			_ieTMbMiu3eGRdmzTMofKoJopZAf = Activator.CreateInstance(type, _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content()) as _TwlwMC1hhdSzamwGWEBxuUkz1gH;
+			_ieTMbMiu3eGRdmzTMofKoJopZAf = Activator.CreateInstance(type, _4L7hfXrWoDdArQiscG4ukHCV46B.Content) as _TwlwMC1hhdSzamwGWEBxuUkz1gH;
 		}
 		else
 		{
@@ -1182,17 +1100,13 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	private _nR8eroJOHehP0ZGyyTveo6aMTHg _5yVCuTv9lVSCCxs7cUlv79ysuRh(string string_0)
 	{
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0071: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0078: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0089: Expected O, but got Unknown
-		string text = Path.Combine(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_RootDirectory(), $"Content-Mods/Data/Quests/{string_0}.json");
-		string text2 = Path.Combine(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_RootDirectory(), $"Data/Quests/{string_0}.json");
-		string text3;
+		string text = Path.Combine(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.RootDirectory, $"Content-Mods/Data/Quests/{string_0}.json");
+		string text2 = Path.Combine(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.RootDirectory, $"Data/Quests/{string_0}.json");
+		string value;
 		if (File.Exists(text))
 		{
 			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Loaded modded cutscene '{0}'", string_0);
-			text3 = _K2047A8SCJdaw0LZKStEHOiH110._mDCA4AzhICQie5tejcL2uH7mcwf(text);
+			value = _K2047A8SCJdaw0LZKStEHOiH110._mDCA4AzhICQie5tejcL2uH7mcwf(text);
 		}
 		else
 		{
@@ -1201,13 +1115,14 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._0rEYVY1cDKfLPVuLw54UlaIts2m("Failed to load cutscene '{0}'", string_0);
 				return null;
 			}
-			text3 = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(text2);
+			value = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(text2);
 		}
-		JsonSerializerSettings val = new JsonSerializerSettings();
-		val.set_TypeNameHandling((TypeNameHandling)4);
-		val.get_Converters().Add((JsonConverter)(object)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA());
-		JsonSerializerSettings val2 = val;
-		_0SvCRe0EgzR9DhI3QPe1GUqubAt _0SvCRe0EgzR9DhI3QPe1GUqubAt = JsonConvert.DeserializeObject<_0SvCRe0EgzR9DhI3QPe1GUqubAt>(text3, val2);
+		JsonSerializerSettings settings = new JsonSerializerSettings
+		{
+			TypeNameHandling = TypeNameHandling.Auto,
+			Converters = { (JsonConverter)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA() }
+		};
+		_0SvCRe0EgzR9DhI3QPe1GUqubAt _0SvCRe0EgzR9DhI3QPe1GUqubAt = JsonConvert.DeserializeObject<_0SvCRe0EgzR9DhI3QPe1GUqubAt>(value, settings);
 		if (_0SvCRe0EgzR9DhI3QPe1GUqubAt != null)
 		{
 			return new _nR8eroJOHehP0ZGyyTveo6aMTHg(this, _0SvCRe0EgzR9DhI3QPe1GUqubAt, Assembly.Load("Amorous.Game"));
@@ -1217,11 +1132,9 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	private _zkUeZhJDizkmvvRfp4S0G7aap8J _PSROht9Hy1Ik63UUdnKDUGBA0yQ()
 	{
-		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
 		if (_5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
-			_zkUeZhJDizkmvvRfp4S0G7aap8J obj = new _zkUeZhJDizkmvvRfp4S0G7aap8J
+			_zkUeZhJDizkmvvRfp4S0G7aap8J zkUeZhJDizkmvvRfp4S0G7aap8J = new _zkUeZhJDizkmvvRfp4S0G7aap8J
 			{
 				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _5zNdOw7qHmuCAPJFMr3SsZdBlCr._Hnb6mPvrZFgOMCIApIeMW88jSsF._RB8fRXeQvK5vs7JEA0XfVCEpg1i,
 				_8NBsjeWoi7V64KoA9ZtIybPpcom = _5zNdOw7qHmuCAPJFMr3SsZdBlCr._VQZivNSvg2tVi52cTTAQKYhamQK._Hnb6mPvrZFgOMCIApIeMW88jSsF._8NBsjeWoi7V64KoA9ZtIybPpcom,
@@ -1230,11 +1143,9 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				_tTalXU1p5sOHKNCtH0ZDWD55yfD = _XbOXR6AypLIdJ3gBMGseGi3Wi2i._hFeWJ5482CKD4l4529bYY1catC,
 				_KVSwpLj0RvURRswHn7ogRy4BRfd = _KVSwpLj0RvURRswHn7ogRy4BRfd?.GetType().Name,
 				_zGDIuIFdpGkZI7SJBoEsZdKoN9F = (_KVSwpLj0RvURRswHn7ogRy4BRfd?._rNGHguvWdrugQVL2AI6bMMKSORN ?? _TwlwMC1hhdSzamwGWEBxuUkz1gH._qokIrmaaT3Lq6znW10HdrPUO9Fq.Idle),
-				_xEhNfzWWkAGsoMu0XE2Cy84SXcp = (_KVSwpLj0RvURRswHn7ogRy4BRfd?._p3lU5oxIaFTVHUNFxJRnaHkXdsA ?? false)
+				_xEhNfzWWkAGsoMu0XE2Cy84SXcp = (_KVSwpLj0RvURRswHn7ogRy4BRfd?._p3lU5oxIaFTVHUNFxJRnaHkXdsA ?? false),
+				_KR48sJtGCfgf7jYtIsrj2N1iO3n = (_Qj2G6fpAF4mGsATgkV8DPBF3aA1A._SWODlbUkQEqfwrtprjLPOeGF7HO.A > 0)
 			};
-			Color sWODlbUkQEqfwrtprjLPOeGF7HO = _Qj2G6fpAF4mGsATgkV8DPBF3aA1A._SWODlbUkQEqfwrtprjLPOeGF7HO;
-			obj._KR48sJtGCfgf7jYtIsrj2N1iO3n = ((Color)(ref sWODlbUkQEqfwrtprjLPOeGF7HO)).get_A() > 0;
-			_zkUeZhJDizkmvvRfp4S0G7aap8J zkUeZhJDizkmvvRfp4S0G7aap8J = obj;
 			zkUeZhJDizkmvvRfp4S0G7aap8J._gWHVDvr9GDtRXP2zf2Md18MgZ4b(_xfiKuXXh5LQA9CUQiex6tutzFKQ._VvFE2zgy4FbDjvaEvb67tXJ7aRm(NPCLocation.Left));
 			zkUeZhJDizkmvvRfp4S0G7aap8J._gWHVDvr9GDtRXP2zf2Md18MgZ4b(_xfiKuXXh5LQA9CUQiex6tutzFKQ._VvFE2zgy4FbDjvaEvb67tXJ7aRm(NPCLocation.Middle));
 			zkUeZhJDizkmvvRfp4S0G7aap8J._gWHVDvr9GDtRXP2zf2Md18MgZ4b(_xfiKuXXh5LQA9CUQiex6tutzFKQ._VvFE2zgy4FbDjvaEvb67tXJ7aRm(NPCLocation.Right));
@@ -1470,7 +1381,6 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	private void _nvTYmpWmxq2DhO8ubfi3j5rZdLA()
 	{
-		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
 		if (_5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
 			_5zNdOw7qHmuCAPJFMr3SsZdBlCr._haICL4qkfkOLhPhofWQH1GmjZx5();
@@ -1505,22 +1415,22 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static GameWindow smethod_0(Game game_0)
 	{
-		return game_0.get_Window();
+		return game_0.Window;
 	}
 
 	static GraphicsDevice smethod_1(Game game_0)
 	{
-		return game_0.get_GraphicsDevice();
+		return game_0.GraphicsDevice;
 	}
 
 	static ContentManager smethod_2(Game game_0)
 	{
-		return game_0.get_Content();
+		return game_0.Content;
 	}
 
 	static bool smethod_3(GraphicsDeviceManager graphicsDeviceManager_0)
 	{
-		return graphicsDeviceManager_0.get_IsFullScreen();
+		return graphicsDeviceManager_0.IsFullScreen;
 	}
 
 	static void smethod_4()
@@ -1530,29 +1440,27 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static GraphicsDeviceManager smethod_5(Game game_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected O, but got Unknown
 		return new GraphicsDeviceManager(game_0);
 	}
 
 	static void smethod_6(GraphicsDeviceManager graphicsDeviceManager_0, bool bool_0)
 	{
-		graphicsDeviceManager_0.set_IsFullScreen(bool_0);
+		graphicsDeviceManager_0.IsFullScreen = bool_0;
 	}
 
 	static void smethod_7(GraphicsDeviceManager graphicsDeviceManager_0, int int_0)
 	{
-		graphicsDeviceManager_0.set_PreferredBackBufferWidth(int_0);
+		graphicsDeviceManager_0.PreferredBackBufferWidth = int_0;
 	}
 
 	static void smethod_8(GraphicsDeviceManager graphicsDeviceManager_0, int int_0)
 	{
-		graphicsDeviceManager_0.set_PreferredBackBufferHeight(int_0);
+		graphicsDeviceManager_0.PreferredBackBufferHeight = int_0;
 	}
 
 	static void smethod_9(GraphicsDeviceManager graphicsDeviceManager_0, bool bool_0)
 	{
-		graphicsDeviceManager_0.set_SynchronizeWithVerticalRetrace(bool_0);
+		graphicsDeviceManager_0.SynchronizeWithVerticalRetrace = bool_0;
 	}
 
 	static bool smethod_10()
@@ -1582,37 +1490,37 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static GraphicsAdapter smethod_15()
 	{
-		return GraphicsAdapter.get_DefaultAdapter();
+		return GraphicsAdapter.DefaultAdapter;
 	}
 
 	static DisplayMode smethod_16(GraphicsAdapter graphicsAdapter_0)
 	{
-		return graphicsAdapter_0.get_CurrentDisplayMode();
+		return graphicsAdapter_0.CurrentDisplayMode;
 	}
 
 	static int smethod_17(DisplayMode displayMode_0)
 	{
-		return displayMode_0.get_Width();
+		return displayMode_0.Width;
 	}
 
 	static int smethod_18(DisplayMode displayMode_0)
 	{
-		return displayMode_0.get_Height();
+		return displayMode_0.Height;
 	}
 
 	static void smethod_19(ContentManager contentManager_0, string string_0)
 	{
-		contentManager_0.set_RootDirectory(string_0);
+		contentManager_0.RootDirectory = string_0;
 	}
 
 	static IServiceProvider smethod_20(ContentManager contentManager_0)
 	{
-		return contentManager_0.get_ServiceProvider();
+		return contentManager_0.ServiceProvider;
 	}
 
 	static string smethod_21(ContentManager contentManager_0)
 	{
-		return contentManager_0.get_RootDirectory();
+		return contentManager_0.RootDirectory;
 	}
 
 	static _xM5N1Fg3VZCSTaBWtPXoS6nJ82E smethod_22(IServiceProvider iserviceProvider_0, string string_0)
@@ -1622,17 +1530,17 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static void smethod_23(Game game_0, ContentManager contentManager_0)
 	{
-		game_0.set_Content(contentManager_0);
+		game_0.Content = contentManager_0;
 	}
 
 	static void smethod_24(Game game_0, EventHandler<EventArgs> eventHandler_0)
 	{
-		game_0.add_Disposed(eventHandler_0);
+		game_0.Disposed += eventHandler_0;
 	}
 
 	static Func<string> smethod_25()
 	{
-		return Gui.get_GetClipboardCallback();
+		return Gui.GetClipboardCallback;
 	}
 
 	static Delegate smethod_26(Delegate delegate_0, Delegate delegate_1)
@@ -1642,17 +1550,17 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static void smethod_27(Func<string> func_0)
 	{
-		Gui.set_GetClipboardCallback(func_0);
+		Gui.GetClipboardCallback = func_0;
 	}
 
 	static Action<string> smethod_28()
 	{
-		return Gui.get_SetClipboardCallback();
+		return Gui.SetClipboardCallback;
 	}
 
 	static void smethod_29(Action<string> action_0)
 	{
-		Gui.set_SetClipboardCallback(action_0);
+		Gui.SetClipboardCallback = action_0;
 	}
 
 	static AppDomain smethod_30()
@@ -1707,15 +1615,11 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static SpriteBatch smethod_40(GraphicsDevice graphicsDevice_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected O, but got Unknown
 		return new SpriteBatch(graphicsDevice_0);
 	}
 
 	static SkeletonMeshRenderer smethod_41(GraphicsDevice graphicsDevice_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected O, but got Unknown
 		return new SkeletonMeshRenderer(graphicsDevice_0);
 	}
 
@@ -1726,12 +1630,12 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static int smethod_43(GraphicsDeviceManager graphicsDeviceManager_0)
 	{
-		return graphicsDeviceManager_0.get_PreferredBackBufferWidth();
+		return graphicsDeviceManager_0.PreferredBackBufferWidth;
 	}
 
 	static int smethod_44(GraphicsDeviceManager graphicsDeviceManager_0)
 	{
-		return graphicsDeviceManager_0.get_PreferredBackBufferHeight();
+		return graphicsDeviceManager_0.PreferredBackBufferHeight;
 	}
 
 	static void smethod_45(_wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0, int int_0, int int_1, int int_2, int int_3)
@@ -1741,8 +1645,6 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static RenderTarget2D smethod_46(GraphicsDevice graphicsDevice_0, int int_0, int int_1)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Expected O, but got Unknown
 		return new RenderTarget2D(graphicsDevice_0, int_0, int_1);
 	}
 
@@ -1771,15 +1673,13 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 		_3FFZvGWTAe7rsviKkDPTXEVjxWf_0._tiBFUHPEkedkbgvuX3whdeyjhKo();
 	}
 
-	static bool smethod_52(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0, Keys keys_0)
+	static bool smethod_52(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0, Microsoft.Xna.Framework.Input.Keys keys_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _3FFZvGWTAe7rsviKkDPTXEVjxWf_0._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(keys_0);
 	}
 
-	static bool smethod_53(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0, Keys keys_0)
+	static bool smethod_53(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0, Microsoft.Xna.Framework.Input.Keys keys_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _3FFZvGWTAe7rsviKkDPTXEVjxWf_0._fy5ebLnmRsRXv9v7RKTFU5CGMaH(keys_0);
 	}
 
@@ -1843,35 +1743,28 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 		_8lVOgkauaSHbAkAqHzI1K7mIyOI_0._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 	}
 
-	static Point smethod_66(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0)
+	static Microsoft.Xna.Framework.Point smethod_66(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _3FFZvGWTAe7rsviKkDPTXEVjxWf_0._U7CeYBJ1v1SoUxpX8emsQ9mWl5b;
 	}
 
-	static Point smethod_67(_wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0, Point point_0)
+	static Microsoft.Xna.Framework.Point smethod_67(_wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0, Microsoft.Xna.Framework.Point point_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		return _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(point_0);
 	}
 
-	static bool smethod_68(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0, Keys keys_0)
+	static bool smethod_68(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0, Microsoft.Xna.Framework.Input.Keys keys_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _3FFZvGWTAe7rsviKkDPTXEVjxWf_0._KGCwEHf8akeXdkHLKFg1caFxXUJ(keys_0);
 	}
 
-	static Keys smethod_69(Keys keys_0)
+	static Microsoft.Xna.Framework.Input.Keys smethod_69(Microsoft.Xna.Framework.Input.Keys keys_0)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return Keyboard.GetKeyFromScancodeEXT(keys_0);
 	}
 
-	static char? smethod_70(Keys keys_0, bool bool_0)
+	static char? smethod_70(Microsoft.Xna.Framework.Input.Keys keys_0, bool bool_0)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
 		return keys_0._O2N6YVYHWf1FQNPMGlnVDG8GTqe(bool_0);
 	}
 
@@ -1902,12 +1795,12 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static TimeSpan smethod_76(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static TimeSpan smethod_77(GameTime gameTime_0)
 	{
-		return gameTime_0.get_TotalGameTime();
+		return gameTime_0.TotalGameTime;
 	}
 
 	static int smethod_78(_wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
@@ -1927,7 +1820,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static GraphicsDevice smethod_81(GraphicsDeviceManager graphicsDeviceManager_0)
 	{
-		return graphicsDeviceManager_0.get_GraphicsDevice();
+		return graphicsDeviceManager_0.GraphicsDevice;
 	}
 
 	static void smethod_82(Game game_0)
@@ -2022,20 +1915,17 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	static JsonSerializerSettings smethod_100()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
 		return new JsonSerializerSettings();
 	}
 
 	static void smethod_101(JsonSerializerSettings jsonSerializerSettings_0, TypeNameHandling typeNameHandling_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		jsonSerializerSettings_0.set_TypeNameHandling(typeNameHandling_0);
+		jsonSerializerSettings_0.TypeNameHandling = typeNameHandling_0;
 	}
 
 	static IList<JsonConverter> smethod_102(JsonSerializerSettings jsonSerializerSettings_0)
 	{
-		return jsonSerializerSettings_0.get_Converters();
+		return jsonSerializerSettings_0.Converters;
 	}
 
 	static _VSQz6uDf5A6KqE8xqKxxcrkhZkA smethod_103()

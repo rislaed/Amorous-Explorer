@@ -13,7 +13,7 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 	{
 		private readonly _xZgbANe7gi6i2DAhBEkKpR1QFLe _v5mBBzOHST4Ij2jetldrF2beJtbA;
 
-		private Color _JbGNnZhaeWyNm0aWm7TtSamww4C = Color.get_White();
+		private Color _JbGNnZhaeWyNm0aWm7TtSamww4C = Color.White;
 
 		private float _AQwQu1ldCtpbkD5F9oEByJdCnWaA;
 
@@ -37,14 +37,12 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 				{
 					_AQwQu1ldCtpbkD5F9oEByJdCnWaA = 1f;
 				}
-				((Color)(ref _JbGNnZhaeWyNm0aWm7TtSamww4C)).set_A((byte)(255f * _AQwQu1ldCtpbkD5F9oEByJdCnWaA));
+				_JbGNnZhaeWyNm0aWm7TtSamww4C.A = (byte)(255f * _AQwQu1ldCtpbkD5F9oEByJdCnWaA);
 			}
 		}
 
 		public _e6Sul13xByZYV3zUae0HX9fjnS(_xZgbANe7gi6i2DAhBEkKpR1QFLe _xZgbANe7gi6i2DAhBEkKpR1QFLe_0, string string_0, Texture2D texture2D_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_v5mBBzOHST4Ij2jetldrF2beJtbA = _xZgbANe7gi6i2DAhBEkKpR1QFLe_0;
 			_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
 			_OzFEGvZu5tqLcitcWhX3j9pIBZM = texture2D_0;
@@ -53,10 +51,10 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 
 		public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, float float_0, bool bool_0)
 		{
-			if (((Color)(ref _JbGNnZhaeWyNm0aWm7TtSamww4C)).get_A() != 0)
+			if (_JbGNnZhaeWyNm0aWm7TtSamww4C.A != 0)
 			{
-				((Color)(ref _JbGNnZhaeWyNm0aWm7TtSamww4C)).set_G((byte)((!bool_0) ? byte.MaxValue : 0));
-				((Color)(ref _JbGNnZhaeWyNm0aWm7TtSamww4C)).set_B((byte)((!bool_0) ? byte.MaxValue : 0));
+				_JbGNnZhaeWyNm0aWm7TtSamww4C.G = (byte)((!bool_0) ? byte.MaxValue : 0);
+				_JbGNnZhaeWyNm0aWm7TtSamww4C.B = (byte)((!bool_0) ? byte.MaxValue : 0);
 			}
 		}
 	}
@@ -97,7 +95,7 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 
 	private List<_e6Sul13xByZYV3zUae0HX9fjnS> _uCN0rAUpYyEIvrweCRehrSN3Vsm;
 
-	private Vector2 _8unc6IeMzWr21kLsfewGCwXMejbA = Vector2.get_Zero();
+	private Vector2 _8unc6IeMzWr21kLsfewGCwXMejbA = Vector2.Zero;
 
 	public bool _YyDeMNgCbNCOMTBX2QLUb4ruMp9A = true;
 
@@ -134,8 +132,6 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 	protected _xZgbANe7gi6i2DAhBEkKpR1QFLe(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, float float_0 = 1f)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 		_cBXbsynpanoywEAm2hd5ysuf78l = string_0;
 		_uCN0rAUpYyEIvrweCRehrSN3Vsm = new List<_e6Sul13xByZYV3zUae0HX9fjnS>();
 		base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = float_0;
@@ -210,11 +206,10 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 		base._gytsCM4ef57F54AqmuiBr238JE0();
 		if (_YyDeMNgCbNCOMTBX2QLUb4ruMp9A)
 		{
-			_9jklVVcQQYcyqOYrkPiht2VP0IG.get_Parameters().get_Item("Time").SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-			_9jklVVcQQYcyqOYrkPiht2VP0IG.get_Parameters().get_Item("BreathingOffset").SetValue(_jSsdHgef86oxWXEOENwyht1nIvn);
-			_9jklVVcQQYcyqOYrkPiht2VP0IG.get_Parameters().get_Item("BreathingSpeed").SetValue(_ZSm5WiT2IPnq6W1i4QmcxHACwQh);
-			_9jklVVcQQYcyqOYrkPiht2VP0IG.get_CurrentTechnique().get_Passes().get_Item(0)
-				.Apply();
+			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["BreathingOffset"].SetValue(_jSsdHgef86oxWXEOENwyht1nIvn);
+			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["BreathingSpeed"].SetValue(_ZSm5WiT2IPnq6W1i4QmcxHACwQh);
+			_9jklVVcQQYcyqOYrkPiht2VP0IG.CurrentTechnique.Passes[0].Apply();
 		}
 		_DIJ98g9A80rhmS3Wk1l8KTVfV8x(spriteBatch_0);
 	}
@@ -287,12 +282,12 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 
 	static EffectParameterCollection smethod_7(Effect effect_0)
 	{
-		return effect_0.get_Parameters();
+		return effect_0.Parameters;
 	}
 
 	static EffectParameter smethod_8(EffectParameterCollection effectParameterCollection_0, string string_0)
 	{
-		return effectParameterCollection_0.get_Item(string_0);
+		return effectParameterCollection_0[string_0];
 	}
 
 	static void smethod_9(EffectParameter effectParameter_0, float float_0)
@@ -302,17 +297,17 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 
 	static EffectTechnique smethod_10(Effect effect_0)
 	{
-		return effect_0.get_CurrentTechnique();
+		return effect_0.CurrentTechnique;
 	}
 
 	static EffectPassCollection smethod_11(EffectTechnique effectTechnique_0)
 	{
-		return effectTechnique_0.get_Passes();
+		return effectTechnique_0.Passes;
 	}
 
 	static EffectPass smethod_12(EffectPassCollection effectPassCollection_0, int int_0)
 	{
-		return effectPassCollection_0.get_Item(int_0);
+		return effectPassCollection_0[int_0];
 	}
 
 	static void smethod_13(EffectPass effectPass_0)

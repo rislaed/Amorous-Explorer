@@ -28,11 +28,11 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_X();
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.X;
 		}
 		set
 		{
-			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_X(value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.X = value;
 			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.UpdateWorldTransform();
 		}
 	}
@@ -41,11 +41,11 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Y();
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.Y;
 		}
 		set
 		{
-			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_Y(value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.Y = value;
 			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.UpdateWorldTransform();
 		}
 	}
@@ -54,11 +54,11 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_FlipX();
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FlipX;
 		}
 		set
 		{
-			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_FlipX(value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.FlipX = value;
 		}
 	}
 
@@ -66,11 +66,11 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_FlipY();
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FlipY;
 		}
 		set
 		{
-			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_FlipY(value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.FlipY = value;
 		}
 	}
 
@@ -78,29 +78,19 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public _nHdiyIURlAiaNZ8u6MKzxjcwnyL(Skeleton skeleton_0, bool bool_0)
 	{
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Expected O, but got Unknown
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0031: Expected O, but got Unknown
-		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0048: Expected O, but got Unknown
-		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Expected O, but got Unknown
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Expected O, but got Unknown
 		_Q9MbCV832IUbkbrMWYaOkMJU5BhA = skeleton_0;
 		_Ssp18W0I7HLX3YToPSudCzKuDjF = bool_0;
-		AnimationStateData val = new AnimationStateData(_Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Data());
-		_ZVtUyMscIM54gezcLdBBhUCeVAv = new AnimationState(val);
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.add_Complete(new CompleteDelegate(_d8vi3xWGR3jH0bzxGSAJiLYtNKc));
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.add_End(new StartEndDelegate(_KVZ9mWydLEUb3C7nVtUyDaNJ1wc));
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.add_Event((EventDelegate)delegate(AnimationState animationState_0, int int_0, Event event_0)
+		AnimationStateData data = new AnimationStateData(_Q9MbCV832IUbkbrMWYaOkMJU5BhA.Data);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv = new AnimationState(data);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.Complete += _d8vi3xWGR3jH0bzxGSAJiLYtNKc;
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.End += _KVZ9mWydLEUb3C7nVtUyDaNJ1wc;
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.Event += delegate(AnimationState animationState_0, int int_0, Event event_0)
 		{
 			if (_iUyagF1KTeSUlg0raFfzuot3CwC != null)
 			{
-				_iUyagF1KTeSUlg0raFfzuot3CwC(event_0.get_Data().get_Name());
+				_iUyagF1KTeSUlg0raFfzuot3CwC(event_0.Data.Name);
 			}
-		});
+		};
 	}
 
 	private void _d8vi3xWGR3jH0bzxGSAJiLYtNKc(AnimationState animationState_0, int int_0, int int_1)
@@ -121,7 +111,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _C5vPbZ72rpVMDWGuHxZuR5FNpAH(string string_0, Action<int> action_0 = null)
 	{
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.SetAnimation(0, string_0, true);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.SetAnimation(0, string_0, loop: true);
 		_HCBewBkFBdxmny4dffH5y6pT7IWA = action_0;
 		_8l6SZQ1ASWukUrnspv0IFQAjpji = false;
 		_1JfcJXW8yr3gQAFuYaMfgav0PSV = 0;
@@ -131,7 +121,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _SPUoP3ABwpgQinJfKUM5qBbYSvr(string string_0, Action action_0 = null)
 	{
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.SetAnimation(0, string_0, false);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.SetAnimation(0, string_0, loop: false);
 		_HCBewBkFBdxmny4dffH5y6pT7IWA = null;
 		_8l6SZQ1ASWukUrnspv0IFQAjpji = false;
 		_1JfcJXW8yr3gQAFuYaMfgav0PSV = 0;
@@ -146,7 +136,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _zqRttWc6EZHjk1LAoNrCy0Qamk2(string string_0, string string_1, float float_0)
 	{
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.get_Data().SetMix(string_0, string_1, float_0);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.Data.SetMix(string_0, string_1, float_0);
 	}
 
 	public void _a2lgCWeMj1Hr65gQZxslDkqeUdd(string string_0, bool bool_0 = false, float float_0 = 0f, Action<int> action_0 = null, Action action_1 = null)
@@ -163,49 +153,38 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		if (!string.IsNullOrEmpty(string_0))
 		{
-			Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
-			if (val != null)
+			Slot slot = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
+			if (slot != null)
 			{
-				val.set_A(float_0);
+				slot.A = float_0;
 			}
 		}
 	}
 
 	public void _VoeevpFh2kLKfHtpPDXWt0TFbuH(string string_0, Color color_0)
 	{
-		_VoeevpFh2kLKfHtpPDXWt0TFbuH(string_0, (float)(int)((Color)(ref color_0)).get_R() / 255f, (float)(int)((Color)(ref color_0)).get_G() / 255f, (float)(int)((Color)(ref color_0)).get_B() / 255f);
+		_VoeevpFh2kLKfHtpPDXWt0TFbuH(string_0, (float)(int)color_0.R / 255f, (float)(int)color_0.G / 255f, (float)(int)color_0.B / 255f);
 	}
 
 	public void _VoeevpFh2kLKfHtpPDXWt0TFbuH(string string_0, float float_0, float float_1, float float_2)
 	{
 		if (!string.IsNullOrEmpty(string_0))
 		{
-			Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
-			if (val != null)
+			Slot slot = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
+			if (slot != null)
 			{
-				val.set_R(float_0);
-				val.set_G(float_1);
-				val.set_B(float_2);
+				slot.R = float_0;
+				slot.G = float_1;
+				slot.B = float_2;
 			}
 		}
 	}
 
 	public void _c4iC7y9v6xg7LpvjKIeUkOdZ3UF(float float_0)
 	{
-		//IL_000b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
-		Enumerator<Slot> enumerator = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Slots().GetEnumerator();
-		try
+		foreach (Slot slot in _Q9MbCV832IUbkbrMWYaOkMJU5BhA.Slots)
 		{
-			while (enumerator.MoveNext())
-			{
-				Slot current = enumerator.get_Current();
-				current.set_A(float_0);
-			}
-		}
-		finally
-		{
-			((IDisposable)enumerator).Dispose();
+			slot.A = float_0;
 		}
 	}
 
@@ -215,18 +194,17 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 		{
 			return false;
 		}
-		Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
-		if (val != null && val.get_Attachment() is RegionAttachment)
+		Slot slot = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
+		if (slot != null && slot.Attachment is RegionAttachment)
 		{
-			Attachment attachment = val.get_Attachment();
-			RegionAttachment val2 = (RegionAttachment)(object)((attachment is RegionAttachment) ? attachment : null);
-			float num = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_X() + val.get_Bone().get_WorldX();
-			float num2 = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Y() + val.get_Bone().get_WorldY();
-			float m = val.get_Bone().get_M00();
-			float m2 = val.get_Bone().get_M01();
-			float m3 = val.get_Bone().get_M10();
-			float m4 = val.get_Bone().get_M11();
-			float[] offset = val2.get_Offset();
+			RegionAttachment regionAttachment = slot.Attachment as RegionAttachment;
+			float num = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.X + slot.Bone.WorldX;
+			float num2 = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.Y + slot.Bone.WorldY;
+			float m = slot.Bone.M00;
+			float m2 = slot.Bone.M01;
+			float m3 = slot.Bone.M10;
+			float m4 = slot.Bone.M11;
+			float[] offset = regionAttachment.Offset;
 			float num3 = offset[0] * m + offset[1] * m2 + num;
 			float num4 = offset[0] * m3 + offset[1] * m4 + num2;
 			float num5 = offset[2] * m + offset[3] * m2 + num;
@@ -258,7 +236,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0, float float_0 = 1000f)
 	{
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.Update((float)gameTime_0.get_ElapsedGameTime().Milliseconds / float_0);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.Update((float)gameTime_0.ElapsedGameTime.Milliseconds / float_0);
 		_ZVtUyMscIM54gezcLdBBhUCeVAv.Apply(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
 		_Q9MbCV832IUbkbrMWYaOkMJU5BhA.UpdateWorldTransform();
 		if (!_OmIU5xZ6Kmv1g8Y6LBtZlc8vCGG)
@@ -284,7 +262,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SkeletonMeshRenderer skeletonMeshRenderer_0, Texture2D texture2D_0 = null, Func<int, string, bool> func_0 = null, Color? nullable_0 = null, float float_0 = 1f)
 	{
-		skeletonMeshRenderer_0.set_PremultipliedAlpha(_Ssp18W0I7HLX3YToPSudCzKuDjF);
+		skeletonMeshRenderer_0.PremultipliedAlpha = _Ssp18W0I7HLX3YToPSudCzKuDjF;
 		skeletonMeshRenderer_0.Begin(_7Xn1C5tjYnmIif1iZKV8AWsEEbL, _bCjZ3VSXGKyhmykd2zCnQBiSpDf, float_0);
 		skeletonMeshRenderer_0.Draw(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, texture2D_0, func_0, nullable_0);
 		skeletonMeshRenderer_0.End();
@@ -292,20 +270,17 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public Point _0LlFMUVNTAixukJSTpecXFIxdAl(string string_0, out double double_0)
 	{
-		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0111: Unknown result type (might be due to invalid IL or missing references)
-		Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
-		if (val != null && val.get_Attachment() is RegionAttachment)
+		Slot slot = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
+		if (slot != null && slot.Attachment is RegionAttachment)
 		{
-			Attachment attachment = val.get_Attachment();
-			RegionAttachment val2 = (RegionAttachment)(object)((attachment is RegionAttachment) ? attachment : null);
-			float num = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_X() + val.get_Bone().get_WorldX();
-			float num2 = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Y() + val.get_Bone().get_WorldY();
-			float m = val.get_Bone().get_M00();
-			float m2 = val.get_Bone().get_M01();
-			float m3 = val.get_Bone().get_M10();
-			float m4 = val.get_Bone().get_M11();
-			float[] offset = val2.get_Offset();
+			RegionAttachment regionAttachment = slot.Attachment as RegionAttachment;
+			float num = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.X + slot.Bone.WorldX;
+			float num2 = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.Y + slot.Bone.WorldY;
+			float m = slot.Bone.M00;
+			float m2 = slot.Bone.M01;
+			float m3 = slot.Bone.M10;
+			float m4 = slot.Bone.M11;
+			float[] offset = regionAttachment.Offset;
 			float num3 = offset[2] * m + offset[3] * m2 + num;
 			float num4 = offset[2] * m3 + offset[3] * m4 + num2;
 			float num5 = offset[4] * m + offset[5] * m2 + num;
@@ -314,17 +289,17 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 			return new Point((int)num3, (int)num4);
 		}
 		double_0 = 0.0;
-		return Point.get_Zero();
+		return Point.Zero;
 	}
 
 	public void _WPy6ICx3LVoejBaexyOoKGnX9jD(string string_0, float float_0)
 	{
-		Animation val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Data().FindAnimation(string_0);
-		if (val == null)
+		Animation animation = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.Data.FindAnimation(string_0);
+		if (animation == null)
 		{
 			throw new ArgumentException("Animation not found: " + string_0);
 		}
-		val.Apply(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, 0f, float_0, false, (ExposedList<Event>)null);
+		animation.Apply(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, 0f, float_0, loop: false, null);
 	}
 
 	public void _EasyNtsMRc39NOvWai1JUYTqcds(string string_0)
@@ -335,17 +310,16 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _eCEWplYE5FdfYPYTrwfyRlIfd6i(string string_0, string string_1)
 	{
-		Slot val = _4puDGlIwmnebKpz1JXzxe4GDuJ4.FindSlot(string_0);
-		Slot val2 = _4puDGlIwmnebKpz1JXzxe4GDuJ4.FindSlot(string_1);
-		_4puDGlIwmnebKpz1JXzxe4GDuJ4.get_DrawOrder().Remove(val);
-		int num = _4puDGlIwmnebKpz1JXzxe4GDuJ4.get_DrawOrder().IndexOf(val2);
-		_4puDGlIwmnebKpz1JXzxe4GDuJ4.get_DrawOrder().Insert(num + 1, val);
+		Slot item = _4puDGlIwmnebKpz1JXzxe4GDuJ4.FindSlot(string_0);
+		Slot item2 = _4puDGlIwmnebKpz1JXzxe4GDuJ4.FindSlot(string_1);
+		_4puDGlIwmnebKpz1JXzxe4GDuJ4.DrawOrder.Remove(item);
+		int num = _4puDGlIwmnebKpz1JXzxe4GDuJ4.DrawOrder.IndexOf(item2);
+		_4puDGlIwmnebKpz1JXzxe4GDuJ4.DrawOrder.Insert(num + 1, item);
 	}
 
 	public void _49JXjKJqaPZw5nEmhHdAENuBtLJ(string string_0, float float_0)
 	{
-		Animation val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Data().FindAnimation(string_0);
-		val.set_Duration(val.get_Duration() + float_0);
+		_Q9MbCV832IUbkbrMWYaOkMJU5BhA.Data.FindAnimation(string_0).Duration += float_0;
 	}
 
 	[CompilerGenerated]
@@ -353,18 +327,18 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		if (_iUyagF1KTeSUlg0raFfzuot3CwC != null)
 		{
-			_iUyagF1KTeSUlg0raFfzuot3CwC(event_0.get_Data().get_Name());
+			_iUyagF1KTeSUlg0raFfzuot3CwC(event_0.Data.Name);
 		}
 	}
 
 	static float smethod_0(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_X();
+		return skeleton_0.X;
 	}
 
 	static void smethod_1(Skeleton skeleton_0, float float_0)
 	{
-		skeleton_0.set_X(float_0);
+		skeleton_0.X = float_0;
 	}
 
 	static void smethod_2(Skeleton skeleton_0)
@@ -374,66 +348,62 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	static float smethod_3(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_Y();
+		return skeleton_0.Y;
 	}
 
 	static void smethod_4(Skeleton skeleton_0, float float_0)
 	{
-		skeleton_0.set_Y(float_0);
+		skeleton_0.Y = float_0;
 	}
 
 	static bool smethod_5(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_FlipX();
+		return skeleton_0.FlipX;
 	}
 
 	static void smethod_6(Skeleton skeleton_0, bool bool_0)
 	{
-		skeleton_0.set_FlipX(bool_0);
+		skeleton_0.FlipX = bool_0;
 	}
 
 	static bool smethod_7(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_FlipY();
+		return skeleton_0.FlipY;
 	}
 
 	static void smethod_8(Skeleton skeleton_0, bool bool_0)
 	{
-		skeleton_0.set_FlipY(bool_0);
+		skeleton_0.FlipY = bool_0;
 	}
 
 	static SkeletonData smethod_9(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_Data();
+		return skeleton_0.Data;
 	}
 
 	static AnimationStateData smethod_10(SkeletonData skeletonData_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected O, but got Unknown
 		return new AnimationStateData(skeletonData_0);
 	}
 
 	static AnimationState smethod_11(AnimationStateData animationStateData_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected O, but got Unknown
 		return new AnimationState(animationStateData_0);
 	}
 
-	static void smethod_12(AnimationState animationState_0, CompleteDelegate completeDelegate_0)
+	static void smethod_12(AnimationState animationState_0, AnimationState.CompleteDelegate completeDelegate_0)
 	{
-		animationState_0.add_Complete(completeDelegate_0);
+		animationState_0.Complete += completeDelegate_0;
 	}
 
-	static void smethod_13(AnimationState animationState_0, StartEndDelegate startEndDelegate_0)
+	static void smethod_13(AnimationState animationState_0, AnimationState.StartEndDelegate startEndDelegate_0)
 	{
-		animationState_0.add_End(startEndDelegate_0);
+		animationState_0.End += startEndDelegate_0;
 	}
 
-	static void smethod_14(AnimationState animationState_0, EventDelegate eventDelegate_0)
+	static void smethod_14(AnimationState animationState_0, AnimationState.EventDelegate eventDelegate_0)
 	{
-		animationState_0.add_Event(eventDelegate_0);
+		animationState_0.Event += eventDelegate_0;
 	}
 
 	static void smethod_15(Skeleton skeleton_0)
@@ -453,7 +423,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	static AnimationStateData smethod_18(AnimationState animationState_0)
 	{
-		return animationState_0.get_Data();
+		return animationState_0.Data;
 	}
 
 	static void smethod_19(AnimationStateData animationStateData_0, string string_0, string string_1, float float_0)
@@ -478,82 +448,82 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	static void smethod_23(Slot slot_0, float float_0)
 	{
-		slot_0.set_A(float_0);
+		slot_0.A = float_0;
 	}
 
 	static void smethod_24(Slot slot_0, float float_0)
 	{
-		slot_0.set_R(float_0);
+		slot_0.R = float_0;
 	}
 
 	static void smethod_25(Slot slot_0, float float_0)
 	{
-		slot_0.set_G(float_0);
+		slot_0.G = float_0;
 	}
 
 	static void smethod_26(Slot slot_0, float float_0)
 	{
-		slot_0.set_B(float_0);
+		slot_0.B = float_0;
 	}
 
 	static ExposedList<Slot> smethod_27(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_Slots();
+		return skeleton_0.Slots;
 	}
 
 	static Attachment smethod_28(Slot slot_0)
 	{
-		return slot_0.get_Attachment();
+		return slot_0.Attachment;
 	}
 
 	static Bone smethod_29(Slot slot_0)
 	{
-		return slot_0.get_Bone();
+		return slot_0.Bone;
 	}
 
 	static float smethod_30(Bone bone_0)
 	{
-		return bone_0.get_WorldX();
+		return bone_0.WorldX;
 	}
 
 	static float smethod_31(Bone bone_0)
 	{
-		return bone_0.get_WorldY();
+		return bone_0.WorldY;
 	}
 
 	static float smethod_32(Bone bone_0)
 	{
-		return bone_0.get_M00();
+		return bone_0.M00;
 	}
 
 	static float smethod_33(Bone bone_0)
 	{
-		return bone_0.get_M01();
+		return bone_0.M01;
 	}
 
 	static float smethod_34(Bone bone_0)
 	{
-		return bone_0.get_M10();
+		return bone_0.M10;
 	}
 
 	static float smethod_35(Bone bone_0)
 	{
-		return bone_0.get_M11();
+		return bone_0.M11;
 	}
 
 	static float[] smethod_36(RegionAttachment regionAttachment_0)
 	{
-		return regionAttachment_0.get_Offset();
+		return regionAttachment_0.Offset;
 	}
 
 	static TimeSpan smethod_37(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static void smethod_38(SkeletonMeshRenderer skeletonMeshRenderer_0, bool bool_0)
 	{
-		skeletonMeshRenderer_0.set_PremultipliedAlpha(bool_0);
+		skeletonMeshRenderer_0.PremultipliedAlpha = bool_0;
 	}
 
 	static void smethod_39(SkeletonMeshRenderer skeletonMeshRenderer_0, float float_0, float float_1, float float_2)
@@ -608,26 +578,26 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	static ExposedList<Slot> smethod_49(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_DrawOrder();
+		return skeleton_0.DrawOrder;
 	}
 
 	static float smethod_50(Animation animation_0)
 	{
-		return animation_0.get_Duration();
+		return animation_0.Duration;
 	}
 
 	static void smethod_51(Animation animation_0, float float_0)
 	{
-		animation_0.set_Duration(float_0);
+		animation_0.Duration = float_0;
 	}
 
 	static EventData smethod_52(Event event_0)
 	{
-		return event_0.get_Data();
+		return event_0.Data;
 	}
 
 	static string smethod_53(EventData eventData_0)
 	{
-		return eventData_0.get_Name();
+		return eventData_0.Name;
 	}
 }

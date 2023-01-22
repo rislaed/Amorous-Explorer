@@ -18,7 +18,6 @@ public class _xGEYVq41yf0ul2Cmx7FszeTIVuf : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<PlayDia
 
 	public override void _dCiaLpIow7UQ0MLMp2O4J0yeVfF(PlayDialogueEventData playDialogueEventData_0)
 	{
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
 		base._dCiaLpIow7UQ0MLMp2O4J0yeVfF(playDialogueEventData_0);
 		_K87Hdb6ToAR0us3tN3ZmvHdPdeJ = playDialogueEventData_0._K87Hdb6ToAR0us3tN3ZmvHdPdeJ;
 		_D5QiLGGNtfoCEnZIUPvH4OKqUabA = playDialogueEventData_0._D5QiLGGNtfoCEnZIUPvH4OKqUabA;
@@ -28,7 +27,6 @@ public class _xGEYVq41yf0ul2Cmx7FszeTIVuf : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<PlayDia
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
 		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
 		_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ, _D5QiLGGNtfoCEnZIUPvH4OKqUabA, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
 	}

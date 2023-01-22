@@ -9,7 +9,27 @@ namespace Amorous.Game.Sexscenes;
 
 public class ZenithSexscene : CensoredSexscene
 {
-	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
+	private static readonly List<SkeletonJson.SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = new List<SkeletonJson.SpineEvent>
+	{
+		new SkeletonJson.SpineEvent
+		{
+			AnimationName = "animation",
+			EventName = "ThrustStart",
+			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
+		},
+		new SkeletonJson.SpineEvent
+		{
+			AnimationName = "animation",
+			EventName = "ThrustEnd",
+			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
+		},
+		new SkeletonJson.SpineEvent
+		{
+			AnimationName = "animation",
+			EventName = "Moan",
+			FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f }
+		}
+	};
 
 	public ZenithSexscene(ContentManager contentManager_0)
 		: base(contentManager_0, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.3f : 1f, bool_0: true, float_1: 3000f)
@@ -29,33 +49,6 @@ public class ZenithSexscene : CensoredSexscene
 
 	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0640: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0656: Unknown result type (might be due to invalid IL or missing references)
-		//IL_066c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0682: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0698: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06e4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0712: Unknown result type (might be due to invalid IL or missing references)
-		//IL_071a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0730: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0746: Unknown result type (might be due to invalid IL or missing references)
-		//IL_075c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0772: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0788: Unknown result type (might be due to invalid IL or missing references)
-		//IL_079e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_080c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0822: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0838: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0857: Unknown result type (might be due to invalid IL or missing references)
-		//IL_086d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0885: Unknown result type (might be due to invalid IL or missing references)
-		//IL_089b: Unknown result type (might be due to invalid IL or missing references)
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
@@ -160,33 +153,6 @@ public class ZenithSexscene : CensoredSexscene
 		base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum belly");
 	}
 
-	static ZenithSexscene()
-	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Expected O, but got Unknown
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0047: Expected O, but got Unknown
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0081: Expected O, but got Unknown
-		List<SpineEvent> list = new List<SpineEvent>();
-		SpineEvent val = new SpineEvent();
-		val.AnimationName = "animation";
-		val.EventName = "ThrustStart";
-		val.FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f };
-		list.Add(val);
-		val = new SpineEvent();
-		val.AnimationName = "animation";
-		val.EventName = "ThrustEnd";
-		val.FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f };
-		list.Add(val);
-		val = new SpineEvent();
-		val.AnimationName = "animation";
-		val.EventName = "Moan";
-		val.FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f };
-		list.Add(val);
-		_zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = list;
-	}
-
 	static bool smethod_14()
 	{
 		return _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF;
@@ -249,81 +215,67 @@ public class ZenithSexscene : CensoredSexscene
 
 	static Color smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 	}
 
 	static void smethod_27(_nHdiyIURlAiaNZ8u6MKzxjcwnyL _nHdiyIURlAiaNZ8u6MKzxjcwnyL_0, string string_0, Color color_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		_nHdiyIURlAiaNZ8u6MKzxjcwnyL_0._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_0, color_0);
 	}
 
 	static Color smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
 	}
 
 	static Color smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 	}
 
 	static Color smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ;
 	}
 
 	static Color smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8qQ7XVlyRYW4icBFxPQCJqgueYD;
 	}
 
 	static Color smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LZfuQybASevOsCykEWqdvA5GqUF;
 	}
 
 	static Color smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._meyNS02iTIxo212B6c5eoKns2wj;
 	}
 
 	static Color smethod_34(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._cUtgkG5qDvgFmI8c29I9xsLVNON;
 	}
 
 	static Color smethod_35(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LcOPiDaC2j5vzxOEYhvW4vRoaRX;
 	}
 
 	static Color smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
 	}
 
 	static Color smethod_37(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._o6OnmHi5rZIQPHESokp9rTaO1ei;
 	}
 
-	static SpineEvent smethod_38()
+	static SkeletonJson.SpineEvent smethod_38()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
-		return new SpineEvent();
+		return new SkeletonJson.SpineEvent();
 	}
 
 	static void smethod_39(Array array_0, RuntimeFieldHandle runtimeFieldHandle_0)

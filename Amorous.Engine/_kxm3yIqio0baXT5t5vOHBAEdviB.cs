@@ -17,8 +17,8 @@ public class _kxm3yIqio0baXT5t5vOHBAEdviB : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
 	{
 		_I1ZbHemGfJWozEfpDc9aFgiZQhEb = list_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = list_0[0].get_Width();
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = list_0[0].get_Height();
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = list_0[0].Width;
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = list_0[0].Height;
 		_LYcgggYAzSIbIyLQB6fJYp9GPs6 = int_0;
 		_3wk7bXUbhNqSQ9kMD9hieEubOhG = 0;
 		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = _LYcgggYAzSIbIyLQB6fJYp9GPs6;
@@ -26,7 +26,7 @@ public class _kxm3yIqio0baXT5t5vOHBAEdviB : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime_0.get_ElapsedGameTime().Milliseconds;
+		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime_0.ElapsedGameTime.Milliseconds;
 		if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < 0)
 		{
 			_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = _LYcgggYAzSIbIyLQB6fJYp9GPs6;
@@ -40,27 +40,24 @@ public class _kxm3yIqio0baXT5t5vOHBAEdviB : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		if (((Color)(ref _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).get_A() != 0)
+		if (_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A != 0)
 		{
-			spriteBatch_0.Draw(_I1ZbHemGfJWozEfpDc9aFgiZQhEb[_3wk7bXUbhNqSQ9kMD9hieEubOhG], _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, (Rectangle?)null, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA, 0f, Vector2.get_Zero(), _fO7gSlrDDNMoHR4FO5QXAq8fUyA, (SpriteEffects)0, 0f);
+			spriteBatch_0.Draw(_I1ZbHemGfJWozEfpDc9aFgiZQhEb[_3wk7bXUbhNqSQ9kMD9hieEubOhG], _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, null, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA, 0f, Vector2.Zero, _fO7gSlrDDNMoHR4FO5QXAq8fUyA, SpriteEffects.None, 0f);
 		}
 	}
 
 	static int smethod_0(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Width();
+		return texture2D_0.Width;
 	}
 
 	static int smethod_1(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Height();
+		return texture2D_0.Height;
 	}
 
 	static TimeSpan smethod_2(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 }

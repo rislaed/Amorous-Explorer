@@ -43,26 +43,22 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 
 		internal void _K6ChlThGNJzhDniJ1it7PMagA2d(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0225: Unknown result type (might be due to invalid IL or missing references)
-			//IL_022a: Unknown result type (might be due to invalid IL or missing references)
 			RenderTargetBinding[] renderTargets = _wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.GetRenderTargets();
 			_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.SetRenderTarget(_YazjYDLENT6HQ0JTluCcQMsqZaB);
-			_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.get_Transparent());
+			_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.Transparent);
 			_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, null, null, _wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 			_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.SetRenderTargets(renderTargets);
-			spriteBatch_0.Begin((SpriteSortMode)1, BlendState.AlphaBlend);
-			float num = _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF + (float)_0NizriMRCkKJuXStgvnNKe6Lo4y.get_Height();
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("Time").SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("PoolSpeed").SetValue(0.1f);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("PoolOffset").SetValue(0);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("MaskTexture").SetValue((Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("MaskStart").SetValue(_wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("MaskEnd").SetValue(num / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("Inverse").SetValue(_wr6xcvFOgUbaTATC17S6Y9v3y3S._z63evmklawgrVTepZWr3BQhfZCK);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_CurrentTechnique().get_Passes().get_Item(0)
-				.Apply();
-			spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.X, (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Y), Color.get_White());
+			spriteBatch_0.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+			float num = _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF + (float)_0NizriMRCkKJuXStgvnNKe6Lo4y.Height;
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["PoolSpeed"].SetValue(0.1f);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["PoolOffset"].SetValue(0);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["MaskTexture"].SetValue(_0NizriMRCkKJuXStgvnNKe6Lo4y);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["MaskStart"].SetValue(_wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["MaskEnd"].SetValue(num / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["Inverse"].SetValue(_wr6xcvFOgUbaTATC17S6Y9v3y3S._z63evmklawgrVTepZWr3BQhfZCK);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.CurrentTechnique.Passes[0].Apply();
+			spriteBatch_0.Draw(_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2(_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.X, _wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Y), Color.White);
 			spriteBatch_0.End();
 		}
 
@@ -88,7 +84,6 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 
 		static void smethod_4(GraphicsDevice graphicsDevice_0, Color color_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			graphicsDevice_0.Clear(color_0);
 		}
 
@@ -104,23 +99,22 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 
 		static void smethod_7(SpriteBatch spriteBatch_0, SpriteSortMode spriteSortMode_0, BlendState blendState_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			spriteBatch_0.Begin(spriteSortMode_0, blendState_0);
 		}
 
 		static int smethod_8(Texture2D texture2D_0)
 		{
-			return texture2D_0.get_Height();
+			return texture2D_0.Height;
 		}
 
 		static EffectParameterCollection smethod_9(Effect effect_0)
 		{
-			return effect_0.get_Parameters();
+			return effect_0.Parameters;
 		}
 
 		static EffectParameter smethod_10(EffectParameterCollection effectParameterCollection_0, string string_0)
 		{
-			return effectParameterCollection_0.get_Item(string_0);
+			return effectParameterCollection_0[string_0];
 		}
 
 		static void smethod_11(EffectParameter effectParameter_0, float float_0)
@@ -145,17 +139,17 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 
 		static EffectTechnique smethod_15(Effect effect_0)
 		{
-			return effect_0.get_CurrentTechnique();
+			return effect_0.CurrentTechnique;
 		}
 
 		static EffectPassCollection smethod_16(EffectTechnique effectTechnique_0)
 		{
-			return effectTechnique_0.get_Passes();
+			return effectTechnique_0.Passes;
 		}
 
 		static EffectPass smethod_17(EffectPassCollection effectPassCollection_0, int int_0)
 		{
-			return effectPassCollection_0.get_Item(int_0);
+			return effectPassCollection_0[int_0];
 		}
 
 		static void smethod_18(EffectPass effectPass_0)
@@ -193,10 +187,6 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 	public _jOXcj4HBkU5j6LOJprpiXLCcLR0(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, float float_0, Rectangle rectangle_0, bool bool_0)
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "Pool Water")
 	{
-		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0077: Expected O, but got Unknown
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0 _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = this;
 		RenderTarget2D _YazjYDLENT6HQ0JTluCcQMsqZaB = new RenderTarget2D(base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW, rectangle_0.Width, rectangle_0.Height);
 		Effect _2e92rEtSCXO9jXcjI77aTgE9ZBq = base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Effect>("Assets/Shaders/SpinePool");
@@ -207,26 +197,22 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 		};
 		base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0225: Unknown result type (might be due to invalid IL or missing references)
-			//IL_022a: Unknown result type (might be due to invalid IL or missing references)
 			RenderTargetBinding[] renderTargets = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.GetRenderTargets();
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.SetRenderTarget(_YazjYDLENT6HQ0JTluCcQMsqZaB);
-			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.get_Transparent());
+			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.Transparent);
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, null, null, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.SetRenderTargets(renderTargets);
-			spriteBatch_0.Begin((SpriteSortMode)1, BlendState.AlphaBlend);
-			float num = float_0 + (float)_0NizriMRCkKJuXStgvnNKe6Lo4y.get_Height();
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("Time").SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("PoolSpeed").SetValue(0.1f);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("PoolOffset").SetValue(0);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("MaskTexture").SetValue((Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("MaskStart").SetValue(float_0 / (float)rectangle_0.Height);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("MaskEnd").SetValue(num / (float)rectangle_0.Height);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_Parameters().get_Item("Inverse").SetValue(bool_0);
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.get_CurrentTechnique().get_Passes().get_Item(0)
-				.Apply();
-			spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)rectangle_0.X, (float)rectangle_0.Y), Color.get_White());
+			spriteBatch_0.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+			float num = float_0 + (float)_0NizriMRCkKJuXStgvnNKe6Lo4y.Height;
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["PoolSpeed"].SetValue(0.1f);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["PoolOffset"].SetValue(0);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["MaskTexture"].SetValue(_0NizriMRCkKJuXStgvnNKe6Lo4y);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["MaskStart"].SetValue(float_0 / (float)rectangle_0.Height);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["MaskEnd"].SetValue(num / (float)rectangle_0.Height);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["Inverse"].SetValue(bool_0);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.CurrentTechnique.Passes[0].Apply();
+			spriteBatch_0.Draw(_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2(rectangle_0.X, rectangle_0.Y), Color.White);
 			spriteBatch_0.End();
 		};
 		_9kpyWj69TJrEE13VPDWRIsYgsND = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/ClubPool/Club Pool water");
@@ -267,8 +253,6 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 
 	static RenderTarget2D smethod_6(GraphicsDevice graphicsDevice_0, int int_0, int int_1)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Expected O, but got Unknown
 		return new RenderTarget2D(graphicsDevice_0, int_0, int_1);
 	}
 
@@ -287,7 +271,7 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 		_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_0._Wb2e00OWt8kBwGWEXtOGMVScRPm = action_0;
 	}
 
-	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_10(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SpineEvent> list_0)
+	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_10(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SkeletonJson.SpineEvent> list_0)
 	{
 		return contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0, list_0);
 	}

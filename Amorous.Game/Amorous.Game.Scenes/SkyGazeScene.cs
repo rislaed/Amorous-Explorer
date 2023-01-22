@@ -46,7 +46,7 @@ public class SkyGazeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-		float num = (float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f;
+		float num = (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
 		_bjpyoqmBBp7S93le3SbErTR7MMC(_NGOOUGHxCQRJ95YqBGvCZoDVi1K, num * (float)_9E0R2wzMPmvJcqYjxpEg08yWHxM[0]);
 		_bjpyoqmBBp7S93le3SbErTR7MMC(_5ucKPpTFNOSSSAiQwUdMbhUYRPC, num * (float)_9E0R2wzMPmvJcqYjxpEg08yWHxM[1]);
 		_bjpyoqmBBp7S93le3SbErTR7MMC(_6pX8CiiBs3G2EaPqh95VdNHT3tu, num * (float)_9E0R2wzMPmvJcqYjxpEg08yWHxM[2]);
@@ -83,7 +83,7 @@ public class SkyGazeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static TimeSpan smethod_17(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static float smethod_18(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0)

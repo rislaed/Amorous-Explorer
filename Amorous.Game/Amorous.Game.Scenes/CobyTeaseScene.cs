@@ -48,7 +48,6 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0);
 	}
@@ -58,7 +57,7 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8;
 	}
 
-	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_15(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SpineEvent> list_0)
+	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_15(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SkeletonJson.SpineEvent> list_0)
 	{
 		return contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0, list_0);
 	}
@@ -120,7 +119,6 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	void method_2(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
 	}
 

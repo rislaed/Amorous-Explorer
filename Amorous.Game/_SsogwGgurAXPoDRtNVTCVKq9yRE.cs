@@ -11,15 +11,10 @@ public class _SsogwGgurAXPoDRtNVTCVKq9yRE : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 	public _SsogwGgurAXPoDRtNVTCVKq9yRE(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0079: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
-		_QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/MainMenu/Version", "Assets/Scenes/MainMenu/Version hover", "Assets/Gui/Fonts/Bold-14", "Options", Color.get_White(), 1417, 1000, new Rectangle(1417, 1000, 146, 58), _OtbNWfcfKRIxEBenRG9bmom5ssK);
-		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/credits", "Assets/Scenes/MainMenu/Credits hover", 1583, 1000, new Rectangle(1583, 1000, 146, 58), _1UonNHUCNgrMS8Z0CyaGApPKtqM);
-		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/Patreon", null, 1749, 1000, Rectangle.get_Empty(), null);
-		_83EecuYIFalvL6Gd1s9MoTLHdgq("Assets/Gui/Fonts/Bold-14", string.Format("Version {0}", "1.0.4"), (Alignment)5, Color.get_White(), 1885, 830);
+		_QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/MainMenu/Version", "Assets/Scenes/MainMenu/Version hover", "Assets/Gui/Fonts/Bold-14", "Options", Color.White, 1417, 1000, new Microsoft.Xna.Framework.Rectangle(1417, 1000, 146, 58), _OtbNWfcfKRIxEBenRG9bmom5ssK);
+		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/credits", "Assets/Scenes/MainMenu/Credits hover", 1583, 1000, new Microsoft.Xna.Framework.Rectangle(1583, 1000, 146, 58), _1UonNHUCNgrMS8Z0CyaGApPKtqM);
+		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/Patreon", null, 1749, 1000, Microsoft.Xna.Framework.Rectangle.Empty, null);
+		_83EecuYIFalvL6Gd1s9MoTLHdgq("Assets/Gui/Fonts/Bold-14", string.Format("Version {0}", "1.0.4"), Alignment.MiddleRight, Color.White, 1885, 830);
 	}
 
 	private void _1UonNHUCNgrMS8Z0CyaGApPKtqM()

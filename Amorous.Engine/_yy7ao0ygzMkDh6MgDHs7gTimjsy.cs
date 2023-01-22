@@ -27,7 +27,7 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<DelayEv
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)
 	{
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime.get_ElapsedGameTime().Milliseconds;
+		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime.ElapsedGameTime.Milliseconds;
 		if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG <= 0)
 		{
 			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
@@ -36,6 +36,6 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<DelayEv
 
 	static TimeSpan smethod_0(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 }

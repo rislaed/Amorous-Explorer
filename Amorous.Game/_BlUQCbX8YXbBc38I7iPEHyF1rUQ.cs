@@ -12,9 +12,6 @@ public class _BlUQCbX8YXbBc38I7iPEHyF1rUQ : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 	public _BlUQCbX8YXbBc38I7iPEHyF1rUQ(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
 		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/NEW GAME button dim", "Assets/Scenes/MainMenu/NEW GAME button illuminated", -240, -135, new Rectangle(1020, 525, 210, 100), _CD7mbFgvqfL9Cx207U8NnHC7FCi);
 		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/CONTINUE button dim", "Assets/Scenes/MainMenu/CONTINUE button illuminated", -240, -135, new Rectangle(1240, 535, 210, 100), _6529SurdTJ5RkS6BucuzfiMXA7B);
 		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/QUIT button dim", "Assets/Scenes/MainMenu/QUIT button illuminated", -240, -135, new Rectangle(1460, 545, 210, 100), _o4JI0pvuMl1BL0ggf0VEWqm2eXF);

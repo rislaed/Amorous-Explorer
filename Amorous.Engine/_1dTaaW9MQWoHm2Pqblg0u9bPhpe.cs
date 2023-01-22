@@ -41,9 +41,7 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 
 	protected _1dTaaW9MQWoHm2Pqblg0u9bPhpe()
 	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.get_White();
+		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.White;
 		_Fxy2SlgceW90FloFw6a1AEJODYA = true;
 	}
 

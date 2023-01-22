@@ -87,7 +87,6 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	public void _2lMgp1KOzK9I6kd7CHrDq2A2CHm(int int_0, int int_1, int int_2, int int_3)
 	{
-		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
 		_KOuUew34v1oSMnWlHSFJuRBiu1c = int_0;
 		_dh9yjUXG1mhcfgwAWkWfggbGEIc = int_1;
 		_ssaTWDF5CYtQ9fGbLNtaLrgFtvJ = int_2;
@@ -113,9 +112,6 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	public Point _u7uCdK9i8FnWhiaPn2bO2wIgUUuA(Point point_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
 		point_0.X = (int)((float)(point_0.X - _jDxCg7GJnIKcLXDcUVSdbEIQL3Yb) / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 		point_0.Y = (int)((float)(point_0.Y - _ILCBrSipj1Qk4CsYzkEELxHvkkY) / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 		return point_0;
@@ -123,9 +119,6 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	public Point _2j5HjqIBNOwD2br7yBprKdzVhAK(Point point_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
 		point_0.X = (int)((float)point_0.X / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 		point_0.Y = (int)((float)point_0.Y / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 		return point_0;
@@ -133,16 +126,6 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	public Point _e6KgAy4CTN1JFYwA88grvAEmDxX(Point point_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
 		point_0 = _u7uCdK9i8FnWhiaPn2bO2wIgUUuA(point_0);
 		point_0.X = (int)(_HgifDflhwFkpuIZBUcLDU6siHsG + (float)point_0.X);
 		if (point_0.X > _VwbWeBrExX6TY1gcFDVqcZBIo8q + 1920)
@@ -191,13 +174,6 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0031: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0044: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0051: Unknown result type (might be due to invalid IL or missing references)
 		if (_1LQOhiUdxWk8bRA1sYnQMSYcjVm || _4L7hfXrWoDdArQiscG4ukHCV46B._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
 			return;
@@ -207,11 +183,11 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 		{
 			if (_EKoVuulhFH2bvqZKateoyZN7Ink)
 			{
-				_YA8VIEiPdA3mZIXmotOA93bAdR1((float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f, ref point_);
+				_YA8VIEiPdA3mZIXmotOA93bAdR1((float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f, ref point_);
 			}
 			if (_qazbvc9K4STcPjV9jPSO0qIDsOJA)
 			{
-				_FRs0cZ9KolFCNcNbMdmUMMCEVQ7((float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f, ref point_);
+				_FRs0cZ9KolFCNcNbMdmUMMCEVQ7((float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f, ref point_);
 			}
 		}
 	}
@@ -220,19 +196,19 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 	{
 		if (point_0.X < 330)
 		{
-			_HgifDflhwFkpuIZBUcLDU6siHsG = MathHelper.Clamp(_HgifDflhwFkpuIZBUcLDU6siHsG - 1920f * ((330f - (float)point_0.X) / 330f) * float_0, (float)_qbtBeaxeUPacOsYC34SPAzHQWlQ, (float)_VwbWeBrExX6TY1gcFDVqcZBIo8q);
+			_HgifDflhwFkpuIZBUcLDU6siHsG = MathHelper.Clamp(_HgifDflhwFkpuIZBUcLDU6siHsG - 1920f * ((330f - (float)point_0.X) / 330f) * float_0, _qbtBeaxeUPacOsYC34SPAzHQWlQ, _VwbWeBrExX6TY1gcFDVqcZBIo8q);
 		}
 		else if (point_0.X > 1590)
 		{
-			_HgifDflhwFkpuIZBUcLDU6siHsG = MathHelper.Clamp(_HgifDflhwFkpuIZBUcLDU6siHsG + 1920f * (((float)point_0.X - 1590f) / 330f) * float_0, (float)_qbtBeaxeUPacOsYC34SPAzHQWlQ, (float)_VwbWeBrExX6TY1gcFDVqcZBIo8q);
+			_HgifDflhwFkpuIZBUcLDU6siHsG = MathHelper.Clamp(_HgifDflhwFkpuIZBUcLDU6siHsG + 1920f * (((float)point_0.X - 1590f) / 330f) * float_0, _qbtBeaxeUPacOsYC34SPAzHQWlQ, _VwbWeBrExX6TY1gcFDVqcZBIo8q);
 		}
 		if (point_0.Y < 120)
 		{
-			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = MathHelper.Clamp(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB - 1080f * ((120f - (float)point_0.X) / 120f) * float_0, (float)_EcGPmFZBU8SYAqxnKYb0kf1OmsG, (float)_8n0XEYNk1IjynzDc1pnLpA1QLed);
+			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = MathHelper.Clamp(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB - 1080f * ((120f - (float)point_0.X) / 120f) * float_0, _EcGPmFZBU8SYAqxnKYb0kf1OmsG, _8n0XEYNk1IjynzDc1pnLpA1QLed);
 		}
 		else if (point_0.Y > 960)
 		{
-			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = MathHelper.Clamp(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB + 1080f * ((float)(point_0.X - 960) / 120f) * float_0, (float)_EcGPmFZBU8SYAqxnKYb0kf1OmsG, (float)_8n0XEYNk1IjynzDc1pnLpA1QLed);
+			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = MathHelper.Clamp(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB + 1080f * ((float)(point_0.X - 960) / 120f) * float_0, _EcGPmFZBU8SYAqxnKYb0kf1OmsG, _8n0XEYNk1IjynzDc1pnLpA1QLed);
 		}
 	}
 
@@ -264,7 +240,7 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	static TimeSpan smethod_0(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static float smethod_1(float float_0, float float_1, float float_2)

@@ -67,7 +67,7 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-		float num = (float)(1280.0 * gameTime_0.get_ElapsedGameTime().TotalSeconds);
+		float num = (float)(1280.0 * gameTime_0.ElapsedGameTime.TotalSeconds);
 		_rn1x58VMBD9DAD7YIR46LqTEfMP -= num * 0.25f;
 		if (_rn1x58VMBD9DAD7YIR46LqTEfMP < -3840f)
 		{
@@ -100,9 +100,8 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
-		spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)0, BlendState.NonPremultiplied);
+		spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
 		_2WuocFtGsvuqlLRNzg1JvWYdCPu._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
 		_keMqzR2MH8pk2eRBjpmBvvHsKkH._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _rn1x58VMBD9DAD7YIR46LqTEfMP;
 		_keMqzR2MH8pk2eRBjpmBvvHsKkH._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
@@ -164,7 +163,7 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static TimeSpan smethod_19(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static bool smethod_20()
@@ -179,13 +178,11 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	void method_2(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
 	}
 
 	static void smethod_22(SpriteBatch spriteBatch_0, SpriteSortMode spriteSortMode_0, BlendState blendState_0, SamplerState samplerState_0, DepthStencilState depthStencilState_0, RasterizerState rasterizerState_0, Effect effect_0, Matrix? nullable_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH(spriteSortMode_0, blendState_0, samplerState_0, depthStencilState_0, rasterizerState_0, effect_0, nullable_0);
 	}
 

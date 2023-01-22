@@ -19,16 +19,15 @@ public class _AUtA43NfhBNYDqRrVB1t9VQxe1v : TextureLoader
 
 	public void Load(AtlasPage page, string path)
 	{
-		string text = Path.Combine(Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path));
-		Texture2D val = (Texture2D)(page.rendererObject = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Texture2D>(text));
-		page.width = val.get_Width();
-		page.height = val.get_Height();
+		string assetName = Path.Combine(Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path));
+		Texture2D texture2D = (Texture2D)(page.rendererObject = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Texture2D>(assetName));
+		page.width = texture2D.Width;
+		page.height = texture2D.Height;
 	}
 
 	public void Unload(object texture)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		((GraphicsResource)(Texture2D)texture).Dispose();
+		((Texture2D)texture).Dispose();
 	}
 
 	static string smethod_0(string string_0)
@@ -48,12 +47,12 @@ public class _AUtA43NfhBNYDqRrVB1t9VQxe1v : TextureLoader
 
 	static int smethod_3(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Width();
+		return texture2D_0.Width;
 	}
 
 	static int smethod_4(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Height();
+		return texture2D_0.Height;
 	}
 
 	static void smethod_5(GraphicsResource graphicsResource_0)

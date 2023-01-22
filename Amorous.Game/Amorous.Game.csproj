@@ -14,11 +14,21 @@
     <Reference Include="Amorous.Engine">
       <HintPath>../Amorous.Engine.dll</HintPath>
     </Reference>
-    <Reference Include="FNA" />
-    <Reference Include="Spine" />
-    <Reference Include="Squid" />
-    <Reference Include="Newtonsoft.Json" />
-    <Reference Include="Facepunch.Steamworks" />
+    <Reference Include="FNA">
+      <HintPath>../FNA.dll</HintPath>
+    </Reference>
+    <Reference Include="Spine">
+      <HintPath>../Spine.dll</HintPath>
+    </Reference>
+    <Reference Include="Squid">
+      <HintPath>../Squid.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks">
+      <HintPath>../Facepunch.Steamworks.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core">
       <HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Core.dll</HintPath>
     </Reference>

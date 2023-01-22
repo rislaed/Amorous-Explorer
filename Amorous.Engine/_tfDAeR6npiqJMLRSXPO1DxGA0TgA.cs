@@ -71,26 +71,18 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 	{
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0092: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0130: Unknown result type (might be due to invalid IL or missing references)
 		base._gytsCM4ef57F54AqmuiBr238JE0();
 		if (_7sgRQPgr8EJYjFmEXCYagaObJd0)
 		{
 			_4nhWi4RWJVAsAaRiBUYVgLfEiCz(skeletonMeshRenderer_0);
 			spriteBatch_0.Begin();
-			Color val = (_IvIFs0Tl6RHdTn3daJXsNCXCNyO ? Color.get_Red() : Color.get_White());
+			Color color = (_IvIFs0Tl6RHdTn3daJXsNCXCNyO ? Color.Red : Color.White);
 			_eBuDnRXeABWf8uwfsN15PfKEHw[] smM3y5A19la8hNpeOINXXDeitDH = _smM3y5A19la8hNpeOINXXDeitDH;
 			foreach (_eBuDnRXeABWf8uwfsN15PfKEHw eBuDnRXeABWf8uwfsN15PfKEHw in smM3y5A19la8hNpeOINXXDeitDH)
 			{
 				if (eBuDnRXeABWf8uwfsN15PfKEHw != null)
 				{
-					spriteBatch_0._f5ctqAmdNsZ889UjM4LxDm8WGxA((Texture2D)(object)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK, (Vector2?)null, (Rectangle?)new Rectangle((int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL, (int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf, ((Texture2D)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK).get_Width(), ((Texture2D)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK).get_Height()), (Rectangle?)null, (Vector2?)eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk, 0f, (Vector2?)null, (Color?)(val * eBuDnRXeABWf8uwfsN15PfKEHw._WxTaPaOE8qb7d7anVlwwqCzugAo), (SpriteEffects)0, 0f);
+					spriteBatch_0._f5ctqAmdNsZ889UjM4LxDm8WGxA(eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK, null, new Rectangle((int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL, (int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf, eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK.Width, eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK.Height), null, eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk, 0f, null, color * eBuDnRXeABWf8uwfsN15PfKEHw._WxTaPaOE8qb7d7anVlwwqCzugAo);
 				}
 			}
 			spriteBatch_0.End();
@@ -110,15 +102,12 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 
 	private void _4nhWi4RWJVAsAaRiBUYVgLfEiCz(SkeletonMeshRenderer skeletonMeshRenderer_0)
 	{
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0093: Unknown result type (might be due to invalid IL or missing references)
 		if (_xm9p2W8AbxEBdrI3wbC7knvB06R.HasValue && _smM3y5A19la8hNpeOINXXDeitDH[_xm9p2W8AbxEBdrI3wbC7knvB06R.Value] != null)
 		{
 			_eBuDnRXeABWf8uwfsN15PfKEHw eBuDnRXeABWf8uwfsN15PfKEHw = _smM3y5A19la8hNpeOINXXDeitDH[_xm9p2W8AbxEBdrI3wbC7knvB06R.Value];
 			RenderTargetBinding[] renderTargets = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.GetRenderTargets();
 			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.SetRenderTarget(eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK);
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.get_Transparent());
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.Transparent);
 			_1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk.X;
 			_1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk.Y;
 			_1BgOJ3z4ZUXNS2L4JWf24pr41hB._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, float_0: base._fO7gSlrDDNMoHR4FO5QXAq8fUyA, texture2D_0: _1AqpgY4vB6ly5vxOay6j86rcIEo, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A);
@@ -128,13 +117,6 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 
 	protected override bool _BbDRof5yB0Qn864T1KJxUzMy8di(int int_0)
 	{
-		//IL_00a9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0118: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0135: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0146: Expected O, but got Unknown
 		if (int_0 == 0)
 		{
 			_KouBKjmDwRJIjRK4fKJ8PzNn9uV = base._9m9LEAgaqaeXydYhykSBmf9BrDG;
@@ -157,14 +139,13 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 		_1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 0f;
 		_1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
 		_YWKqVMq3bCWDIv73VmJykYuZBKN._tiBFUHPEkedkbgvuX3whdeyjhKo(_1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4);
-		Vector2 val = default(Vector2);
-		((Vector2)(ref val))._002Ector((float)(int)_YWKqVMq3bCWDIv73VmJykYuZBKN._je8rVfyg4zywmqSi4Ozx1z7wJ4b, (float)(int)_YWKqVMq3bCWDIv73VmJykYuZBKN._WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
-		if (!(val.X <= 0f) && val.Y > 0f)
+		Vector2 vector = new Vector2((int)_YWKqVMq3bCWDIv73VmJykYuZBKN._je8rVfyg4zywmqSi4Ozx1z7wJ4b, (int)_YWKqVMq3bCWDIv73VmJykYuZBKN._WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
+		if (!(vector.X <= 0f) && vector.Y > 0f)
 		{
 			_smM3y5A19la8hNpeOINXXDeitDH[int_0] = new _eBuDnRXeABWf8uwfsN15PfKEHw
 			{
-				_Jh6AK28sBy2bS8ZCoKHP3LX45Uk = new Vector2(_1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4.get_RootBone().get_WorldX() - _YWKqVMq3bCWDIv73VmJykYuZBKN._SjhHztt8d5kOtb7Z2BJKnZZxEKh, _1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4.get_RootBone().get_WorldY() - _YWKqVMq3bCWDIv73VmJykYuZBKN._xqxFKfudZYzf8RtrC7EB1Ya6FPT),
-				_Z5JOwYZpe1u3WDYizFmDS7dmAcK = new RenderTarget2D(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW, (int)val.X, (int)val.Y),
+				_Jh6AK28sBy2bS8ZCoKHP3LX45Uk = new Vector2(_1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4.RootBone.WorldX - _YWKqVMq3bCWDIv73VmJykYuZBKN._SjhHztt8d5kOtb7Z2BJKnZZxEKh, _1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4.RootBone.WorldY - _YWKqVMq3bCWDIv73VmJykYuZBKN._xqxFKfudZYzf8RtrC7EB1Ya6FPT),
+				_Z5JOwYZpe1u3WDYizFmDS7dmAcK = new RenderTarget2D(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW, (int)vector.X, (int)vector.Y),
 				_WxTaPaOE8qb7d7anVlwwqCzugAo = ((int_0 == 0) ? 1f : 0f)
 			};
 		}
@@ -194,12 +175,12 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 		_FdDzmVlp0fgTsGUxfkRfLr0dxtF = true;
 		if (_smM3y5A19la8hNpeOINXXDeitDH[0] != null)
 		{
-			((GraphicsResource)_smM3y5A19la8hNpeOINXXDeitDH[0]._Z5JOwYZpe1u3WDYizFmDS7dmAcK).Dispose();
+			_smM3y5A19la8hNpeOINXXDeitDH[0]._Z5JOwYZpe1u3WDYizFmDS7dmAcK.Dispose();
 			_smM3y5A19la8hNpeOINXXDeitDH[0] = null;
 		}
 		if (_smM3y5A19la8hNpeOINXXDeitDH[1] != null)
 		{
-			((GraphicsResource)_smM3y5A19la8hNpeOINXXDeitDH[1]._Z5JOwYZpe1u3WDYizFmDS7dmAcK).Dispose();
+			_smM3y5A19la8hNpeOINXXDeitDH[1]._Z5JOwYZpe1u3WDYizFmDS7dmAcK.Dispose();
 			_smM3y5A19la8hNpeOINXXDeitDH[1] = null;
 		}
 	}
@@ -211,12 +192,12 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 
 	static int smethod_6(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Width();
+		return texture2D_0.Width;
 	}
 
 	static int smethod_7(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Height();
+		return texture2D_0.Height;
 	}
 
 	static RenderTargetBinding[] smethod_8(GraphicsDevice graphicsDevice_0)
@@ -231,7 +212,6 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 
 	static void smethod_10(GraphicsDevice graphicsDevice_0, Color color_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		graphicsDevice_0.Clear(color_0);
 	}
 
@@ -242,17 +222,17 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 
 	static Bone smethod_12(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_RootBone();
+		return skeleton_0.RootBone;
 	}
 
 	static float smethod_13(Bone bone_0)
 	{
-		return bone_0.get_WorldX();
+		return bone_0.WorldX;
 	}
 
 	static float smethod_14(Bone bone_0)
 	{
-		return bone_0.get_WorldY();
+		return bone_0.WorldY;
 	}
 
 	static void smethod_15(GraphicsResource graphicsResource_0)

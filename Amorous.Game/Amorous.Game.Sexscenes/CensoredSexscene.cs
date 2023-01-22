@@ -71,11 +71,7 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 		public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(Texture2D texture2D_0, SpriteBatch spriteBatch_0)
 		{
-			//IL_001a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-			//IL_004d: Unknown result type (might be due to invalid IL or missing references)
-			spriteBatch_0.Draw(texture2D_0, new Rectangle((int)_nD28BmrDaEzCHelTAa14TKyuSyG, (int)_LkckKdvuh9GaAwn7XojfbJBd91r, 128, 128), (Rectangle?)null, Color.get_White() * _AQwQu1ldCtpbkD5F9oEByJdCnWaA, MathHelper.ToRadians(_u8pBof2EYEcHCEDxEtA27OOeLmVb), new Vector2(64f, 64f), (SpriteEffects)0, 0f);
+			spriteBatch_0.Draw(texture2D_0, new Rectangle((int)_nD28BmrDaEzCHelTAa14TKyuSyG, (int)_LkckKdvuh9GaAwn7XojfbJBd91r, 128, 128), null, Color.White * _AQwQu1ldCtpbkD5F9oEByJdCnWaA, MathHelper.ToRadians(_u8pBof2EYEcHCEDxEtA27OOeLmVb), new Vector2(64f, 64f), SpriteEffects.None, 0f);
 		}
 
 		static int smethod_0(int int_0, int int_1)
@@ -102,7 +98,7 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 	private float _Ja1biX4ByqpjkgcLg9SPPz8y4itA;
 
-	public CensoredSexscene(ContentManager contentManager_0, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null, float float_1 = 1000f)
+	public CensoredSexscene(ContentManager contentManager_0, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SkeletonJson.SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null, float float_1 = 1000f)
 		: base(contentManager_0, string_0, string_1, _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? "Assets/SexScenes/Generic/Overlay" : string_2, float_0, bool_0, _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? null : list_0, _sa8EsNgk4VDRaASdXE7VprdlNlg_0)
 	{
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
@@ -169,7 +165,7 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		{
 			return;
 		}
-		float num = (float)(gameTime_0.get_ElapsedGameTime().TotalMilliseconds / 1000.0);
+		float num = (float)(gameTime_0.ElapsedGameTime.TotalMilliseconds / 1000.0);
 		if (_lpzETYXyRHxYihXrkJactMysoTi.Count < 10)
 		{
 			_Ja1biX4ByqpjkgcLg9SPPz8y4itA -= num;
@@ -255,7 +251,7 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 	static TimeSpan smethod_11(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	void method_7(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)

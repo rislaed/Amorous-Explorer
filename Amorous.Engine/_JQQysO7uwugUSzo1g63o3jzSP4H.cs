@@ -13,15 +13,11 @@ public class _JQQysO7uwugUSzo1g63o3jzSP4H
 
 	public _JQQysO7uwugUSzo1g63o3jzSP4H()
 	{
-		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
 		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = new _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>();
 	}
 
 	public void _Tgna64I8tykesI9aD591n5FUrin(string string_0, Rectangle rectangle_0)
 	{
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0023: Unknown result type (might be due to invalid IL or missing references)
 		if (_KyRTfqdr2zZtsEAgkvOlUoQoB5j.ContainsKey(string_0))
 		{
 			_KyRTfqdr2zZtsEAgkvOlUoQoB5j[string_0] = rectangle_0;
@@ -39,8 +35,6 @@ public class _JQQysO7uwugUSzo1g63o3jzSP4H
 
 	public Rectangle _zETvz5wV1cpcKFl6i5KBgWbBmFR(string string_0)
 	{
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
 		if (_KyRTfqdr2zZtsEAgkvOlUoQoB5j.ContainsKey(string_0))
 		{
 			return _KyRTfqdr2zZtsEAgkvOlUoQoB5j[string_0];

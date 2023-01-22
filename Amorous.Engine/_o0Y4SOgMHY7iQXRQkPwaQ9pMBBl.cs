@@ -56,1070 +56,737 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		}
 	}
 
-	public static readonly Dictionary<Keys, Keys?> _HSj1lr89AFIB9adVhSrAeWjS1xC = new Dictionary<Keys, Keys?>
+	public static readonly Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?> _HSj1lr89AFIB9adVhSrAeWjS1xC = new Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?>
 	{
 		{
-			(Keys)0,
+			Microsoft.Xna.Framework.Input.Keys.None,
 			null
 		},
 		{
-			(Keys)8,
-			(Keys)14
+			Microsoft.Xna.Framework.Input.Keys.Back,
+			Squid.Keys.BACKSPACE
 		},
 		{
-			(Keys)9,
-			(Keys)15
+			Microsoft.Xna.Framework.Input.Keys.Tab,
+			Squid.Keys.TAB
 		},
 		{
-			(Keys)13,
-			(Keys)28
+			Microsoft.Xna.Framework.Input.Keys.Enter,
+			Squid.Keys.RETURN
 		},
 		{
-			(Keys)19,
-			(Keys)197
+			Microsoft.Xna.Framework.Input.Keys.Pause,
+			Squid.Keys.PAUSE
 		},
 		{
-			(Keys)20,
-			(Keys)58
+			Microsoft.Xna.Framework.Input.Keys.CapsLock,
+			Squid.Keys.CAPITAL
 		},
 		{
-			(Keys)21,
-			(Keys)112
+			Microsoft.Xna.Framework.Input.Keys.Kana,
+			Squid.Keys.KANA
 		},
 		{
-			(Keys)25,
-			(Keys)148
+			Microsoft.Xna.Framework.Input.Keys.Kanji,
+			Squid.Keys.KANJI
 		},
 		{
-			(Keys)27,
-			(Keys)1
+			Microsoft.Xna.Framework.Input.Keys.Escape,
+			Squid.Keys.ESCAPE
 		},
 		{
-			(Keys)28,
+			Microsoft.Xna.Framework.Input.Keys.ImeConvert,
 			null
 		},
 		{
-			(Keys)29,
+			Microsoft.Xna.Framework.Input.Keys.ImeNoConvert,
 			null
 		},
 		{
-			(Keys)32,
-			(Keys)57
+			Microsoft.Xna.Framework.Input.Keys.Space,
+			Squid.Keys.SPACE
 		},
 		{
-			(Keys)33,
-			(Keys)201
+			Microsoft.Xna.Framework.Input.Keys.PageUp,
+			Squid.Keys.PAGEUP
 		},
 		{
-			(Keys)34,
-			(Keys)209
+			Microsoft.Xna.Framework.Input.Keys.PageDown,
+			Squid.Keys.PAGEDOWN
 		},
 		{
-			(Keys)35,
-			(Keys)207
+			Microsoft.Xna.Framework.Input.Keys.End,
+			Squid.Keys.END
 		},
 		{
-			(Keys)36,
-			(Keys)199
+			Microsoft.Xna.Framework.Input.Keys.Home,
+			Squid.Keys.HOME
 		},
 		{
-			(Keys)37,
-			(Keys)203
+			Microsoft.Xna.Framework.Input.Keys.Left,
+			Squid.Keys.LEFTARROW
 		},
 		{
-			(Keys)38,
-			(Keys)200
+			Microsoft.Xna.Framework.Input.Keys.Up,
+			Squid.Keys.UP
 		},
 		{
-			(Keys)39,
-			(Keys)205
+			Microsoft.Xna.Framework.Input.Keys.Right,
+			Squid.Keys.RIGHT
 		},
 		{
-			(Keys)40,
-			(Keys)208
+			Microsoft.Xna.Framework.Input.Keys.Down,
+			Squid.Keys.DOWN
 		},
 		{
-			(Keys)41,
+			Microsoft.Xna.Framework.Input.Keys.Select,
 			null
 		},
 		{
-			(Keys)42,
+			Microsoft.Xna.Framework.Input.Keys.Print,
 			null
 		},
 		{
-			(Keys)43,
+			Microsoft.Xna.Framework.Input.Keys.Execute,
 			null
 		},
 		{
-			(Keys)44,
+			Microsoft.Xna.Framework.Input.Keys.PrintScreen,
 			null
 		},
 		{
-			(Keys)45,
-			(Keys)210
+			Microsoft.Xna.Framework.Input.Keys.Insert,
+			Squid.Keys.INSERT
 		},
 		{
-			(Keys)46,
-			(Keys)211
+			Microsoft.Xna.Framework.Input.Keys.Delete,
+			Squid.Keys.DELETE
 		},
 		{
-			(Keys)47,
+			Microsoft.Xna.Framework.Input.Keys.Help,
 			null
 		},
 		{
-			(Keys)48,
-			(Keys)11
+			Microsoft.Xna.Framework.Input.Keys.D0,
+			Squid.Keys.D0
 		},
 		{
-			(Keys)49,
-			(Keys)2
+			Microsoft.Xna.Framework.Input.Keys.D1,
+			Squid.Keys.D1
 		},
 		{
-			(Keys)50,
-			(Keys)3
+			Microsoft.Xna.Framework.Input.Keys.D2,
+			Squid.Keys.D2
 		},
 		{
-			(Keys)51,
-			(Keys)4
+			Microsoft.Xna.Framework.Input.Keys.D3,
+			Squid.Keys.D3
 		},
 		{
-			(Keys)52,
-			(Keys)5
+			Microsoft.Xna.Framework.Input.Keys.D4,
+			Squid.Keys.D4
 		},
 		{
-			(Keys)53,
-			(Keys)6
+			Microsoft.Xna.Framework.Input.Keys.D5,
+			Squid.Keys.D5
 		},
 		{
-			(Keys)54,
-			(Keys)7
+			Microsoft.Xna.Framework.Input.Keys.D6,
+			Squid.Keys.D6
 		},
 		{
-			(Keys)55,
-			(Keys)8
+			Microsoft.Xna.Framework.Input.Keys.D7,
+			Squid.Keys.D7
 		},
 		{
-			(Keys)56,
-			(Keys)9
+			Microsoft.Xna.Framework.Input.Keys.D8,
+			Squid.Keys.D8
 		},
 		{
-			(Keys)57,
-			(Keys)10
+			Microsoft.Xna.Framework.Input.Keys.D9,
+			Squid.Keys.D9
 		},
 		{
-			(Keys)65,
-			(Keys)30
+			Microsoft.Xna.Framework.Input.Keys.A,
+			Squid.Keys.A
 		},
 		{
-			(Keys)66,
-			(Keys)48
+			Microsoft.Xna.Framework.Input.Keys.B,
+			Squid.Keys.B
 		},
 		{
-			(Keys)67,
-			(Keys)46
+			Microsoft.Xna.Framework.Input.Keys.C,
+			Squid.Keys.C
 		},
 		{
-			(Keys)68,
-			(Keys)32
+			Microsoft.Xna.Framework.Input.Keys.D,
+			Squid.Keys.D
 		},
 		{
-			(Keys)69,
-			(Keys)18
+			Microsoft.Xna.Framework.Input.Keys.E,
+			Squid.Keys.E
 		},
 		{
-			(Keys)70,
-			(Keys)33
+			Microsoft.Xna.Framework.Input.Keys.F,
+			Squid.Keys.F
 		},
 		{
-			(Keys)71,
-			(Keys)34
+			Microsoft.Xna.Framework.Input.Keys.G,
+			Squid.Keys.G
 		},
 		{
-			(Keys)72,
-			(Keys)35
+			Microsoft.Xna.Framework.Input.Keys.H,
+			Squid.Keys.H
 		},
 		{
-			(Keys)73,
-			(Keys)23
+			Microsoft.Xna.Framework.Input.Keys.I,
+			Squid.Keys.I
 		},
 		{
-			(Keys)74,
-			(Keys)36
+			Microsoft.Xna.Framework.Input.Keys.J,
+			Squid.Keys.J
 		},
 		{
-			(Keys)75,
-			(Keys)37
+			Microsoft.Xna.Framework.Input.Keys.K,
+			Squid.Keys.K
 		},
 		{
-			(Keys)76,
-			(Keys)38
+			Microsoft.Xna.Framework.Input.Keys.L,
+			Squid.Keys.L
 		},
 		{
-			(Keys)77,
-			(Keys)50
+			Microsoft.Xna.Framework.Input.Keys.M,
+			Squid.Keys.M
 		},
 		{
-			(Keys)78,
-			(Keys)49
+			Microsoft.Xna.Framework.Input.Keys.N,
+			Squid.Keys.N
 		},
 		{
-			(Keys)79,
-			(Keys)24
+			Microsoft.Xna.Framework.Input.Keys.O,
+			Squid.Keys.O
 		},
 		{
-			(Keys)80,
-			(Keys)25
+			Microsoft.Xna.Framework.Input.Keys.P,
+			Squid.Keys.P
 		},
 		{
-			(Keys)81,
-			(Keys)16
+			Microsoft.Xna.Framework.Input.Keys.Q,
+			Squid.Keys.Q
 		},
 		{
-			(Keys)82,
-			(Keys)19
+			Microsoft.Xna.Framework.Input.Keys.R,
+			Squid.Keys.R
 		},
 		{
-			(Keys)83,
-			(Keys)31
+			Microsoft.Xna.Framework.Input.Keys.S,
+			Squid.Keys.S
 		},
 		{
-			(Keys)84,
-			(Keys)20
+			Microsoft.Xna.Framework.Input.Keys.T,
+			Squid.Keys.T
 		},
 		{
-			(Keys)85,
-			(Keys)22
+			Microsoft.Xna.Framework.Input.Keys.U,
+			Squid.Keys.U
 		},
 		{
-			(Keys)86,
-			(Keys)47
+			Microsoft.Xna.Framework.Input.Keys.V,
+			Squid.Keys.V
 		},
 		{
-			(Keys)87,
-			(Keys)17
+			Microsoft.Xna.Framework.Input.Keys.W,
+			Squid.Keys.W
 		},
 		{
-			(Keys)88,
-			(Keys)45
+			Microsoft.Xna.Framework.Input.Keys.X,
+			Squid.Keys.X
 		},
 		{
-			(Keys)89,
-			(Keys)21
+			Microsoft.Xna.Framework.Input.Keys.Y,
+			Squid.Keys.Y
 		},
 		{
-			(Keys)90,
-			(Keys)44
+			Microsoft.Xna.Framework.Input.Keys.Z,
+			Squid.Keys.Z
 		},
 		{
-			(Keys)91,
-			(Keys)219
+			Microsoft.Xna.Framework.Input.Keys.LeftWindows,
+			Squid.Keys.LEFTWINDOWS
 		},
 		{
-			(Keys)92,
+			Microsoft.Xna.Framework.Input.Keys.RightWindows,
 			null
 		},
 		{
-			(Keys)93,
-			(Keys)221
+			Microsoft.Xna.Framework.Input.Keys.Apps,
+			Squid.Keys.APPS
 		},
 		{
-			(Keys)95,
-			(Keys)223
+			Microsoft.Xna.Framework.Input.Keys.Sleep,
+			Squid.Keys.SLEEP
 		},
 		{
-			(Keys)96,
-			(Keys)82
+			Microsoft.Xna.Framework.Input.Keys.NumPad0,
+			Squid.Keys.NUMPAD0
 		},
 		{
-			(Keys)97,
-			(Keys)79
+			Microsoft.Xna.Framework.Input.Keys.NumPad1,
+			Squid.Keys.NUMPAD1
 		},
 		{
-			(Keys)98,
-			(Keys)80
+			Microsoft.Xna.Framework.Input.Keys.NumPad2,
+			Squid.Keys.NUMPAD2
 		},
 		{
-			(Keys)99,
-			(Keys)81
+			Microsoft.Xna.Framework.Input.Keys.NumPad3,
+			Squid.Keys.NUMPAD3
 		},
 		{
-			(Keys)100,
-			(Keys)75
+			Microsoft.Xna.Framework.Input.Keys.NumPad4,
+			Squid.Keys.NUMPAD4
 		},
 		{
-			(Keys)101,
-			(Keys)76
+			Microsoft.Xna.Framework.Input.Keys.NumPad5,
+			Squid.Keys.NUMPAD5
 		},
 		{
-			(Keys)102,
-			(Keys)77
+			Microsoft.Xna.Framework.Input.Keys.NumPad6,
+			Squid.Keys.NUMPAD6
 		},
 		{
-			(Keys)103,
-			(Keys)71
+			Microsoft.Xna.Framework.Input.Keys.NumPad7,
+			Squid.Keys.NUMPAD7
 		},
 		{
-			(Keys)104,
-			(Keys)72
+			Microsoft.Xna.Framework.Input.Keys.NumPad8,
+			Squid.Keys.NUMPAD8
 		},
 		{
-			(Keys)105,
-			(Keys)73
+			Microsoft.Xna.Framework.Input.Keys.NumPad9,
+			Squid.Keys.NUMPAD9
 		},
 		{
-			(Keys)106,
-			(Keys)55
+			Microsoft.Xna.Framework.Input.Keys.Multiply,
+			Squid.Keys.NUMPADSTAR
 		},
 		{
-			(Keys)107,
-			(Keys)78
+			Microsoft.Xna.Framework.Input.Keys.Add,
+			Squid.Keys.NUMPADPLUS
 		},
 		{
-			(Keys)108,
+			Microsoft.Xna.Framework.Input.Keys.Separator,
 			null
 		},
 		{
-			(Keys)109,
-			(Keys)74
+			Microsoft.Xna.Framework.Input.Keys.Subtract,
+			Squid.Keys.SUBTRACT
 		},
 		{
-			(Keys)110,
-			(Keys)83
+			Microsoft.Xna.Framework.Input.Keys.Decimal,
+			Squid.Keys.DECIMAL
 		},
 		{
-			(Keys)111,
-			(Keys)181
+			Microsoft.Xna.Framework.Input.Keys.Divide,
+			Squid.Keys.NUMPADSLASH
 		},
 		{
-			(Keys)112,
-			(Keys)59
+			Microsoft.Xna.Framework.Input.Keys.F1,
+			Squid.Keys.F1
 		},
 		{
-			(Keys)113,
-			(Keys)60
+			Microsoft.Xna.Framework.Input.Keys.F2,
+			Squid.Keys.F2
 		},
 		{
-			(Keys)114,
-			(Keys)61
+			Microsoft.Xna.Framework.Input.Keys.F3,
+			Squid.Keys.F3
 		},
 		{
-			(Keys)115,
-			(Keys)62
+			Microsoft.Xna.Framework.Input.Keys.F4,
+			Squid.Keys.F4
 		},
 		{
-			(Keys)116,
-			(Keys)63
+			Microsoft.Xna.Framework.Input.Keys.F5,
+			Squid.Keys.F5
 		},
 		{
-			(Keys)117,
-			(Keys)64
+			Microsoft.Xna.Framework.Input.Keys.F6,
+			Squid.Keys.F6
 		},
 		{
-			(Keys)118,
-			(Keys)65
+			Microsoft.Xna.Framework.Input.Keys.F7,
+			Squid.Keys.F7
 		},
 		{
-			(Keys)119,
-			(Keys)66
+			Microsoft.Xna.Framework.Input.Keys.F8,
+			Squid.Keys.F8
 		},
 		{
-			(Keys)120,
-			(Keys)67
+			Microsoft.Xna.Framework.Input.Keys.F9,
+			Squid.Keys.F9
 		},
 		{
-			(Keys)121,
-			(Keys)68
+			Microsoft.Xna.Framework.Input.Keys.F10,
+			Squid.Keys.F10
 		},
 		{
-			(Keys)122,
-			(Keys)87
+			Microsoft.Xna.Framework.Input.Keys.F11,
+			Squid.Keys.F11
 		},
 		{
-			(Keys)123,
-			(Keys)88
+			Microsoft.Xna.Framework.Input.Keys.F12,
+			Squid.Keys.F12
 		},
 		{
-			(Keys)124,
-			(Keys)100
+			Microsoft.Xna.Framework.Input.Keys.F13,
+			Squid.Keys.F13
 		},
 		{
-			(Keys)125,
-			(Keys)101
+			Microsoft.Xna.Framework.Input.Keys.F14,
+			Squid.Keys.F14
 		},
 		{
-			(Keys)126,
-			(Keys)102
+			Microsoft.Xna.Framework.Input.Keys.F15,
+			Squid.Keys.F15
 		},
 		{
-			(Keys)127,
+			Microsoft.Xna.Framework.Input.Keys.F16,
 			null
 		},
 		{
-			(Keys)128,
+			Microsoft.Xna.Framework.Input.Keys.F17,
 			null
 		},
 		{
-			(Keys)129,
+			Microsoft.Xna.Framework.Input.Keys.F18,
 			null
 		},
 		{
-			(Keys)130,
+			Microsoft.Xna.Framework.Input.Keys.F19,
 			null
 		},
 		{
-			(Keys)131,
+			Microsoft.Xna.Framework.Input.Keys.F20,
 			null
 		},
 		{
-			(Keys)132,
+			Microsoft.Xna.Framework.Input.Keys.F21,
 			null
 		},
 		{
-			(Keys)133,
+			Microsoft.Xna.Framework.Input.Keys.F22,
 			null
 		},
 		{
-			(Keys)134,
+			Microsoft.Xna.Framework.Input.Keys.F23,
 			null
 		},
 		{
-			(Keys)135,
+			Microsoft.Xna.Framework.Input.Keys.F24,
 			null
 		},
 		{
-			(Keys)144,
-			(Keys)69
+			Microsoft.Xna.Framework.Input.Keys.NumLock,
+			Squid.Keys.NUMLOCK
 		},
 		{
-			(Keys)145,
-			(Keys)70
+			Microsoft.Xna.Framework.Input.Keys.Scroll,
+			Squid.Keys.SCROLL
 		},
 		{
-			(Keys)160,
-			(Keys)42
+			Microsoft.Xna.Framework.Input.Keys.LeftShift,
+			Squid.Keys.LEFTSHIFT
 		},
 		{
-			(Keys)161,
-			(Keys)54
+			Microsoft.Xna.Framework.Input.Keys.RightShift,
+			Squid.Keys.RIGHTSHIFT
 		},
 		{
-			(Keys)162,
-			(Keys)29
+			Microsoft.Xna.Framework.Input.Keys.LeftControl,
+			Squid.Keys.LEFTCONTROL
 		},
 		{
-			(Keys)163,
-			(Keys)157
+			Microsoft.Xna.Framework.Input.Keys.RightControl,
+			Squid.Keys.RIGHTCONTROL
 		},
 		{
-			(Keys)164,
-			(Keys)56
+			Microsoft.Xna.Framework.Input.Keys.LeftAlt,
+			Squid.Keys.LEFTMENU
 		},
 		{
-			(Keys)165,
-			(Keys)184
+			Microsoft.Xna.Framework.Input.Keys.RightAlt,
+			Squid.Keys.ALT_RIGHT
 		},
 		{
-			(Keys)166,
-			(Keys)234
+			Microsoft.Xna.Framework.Input.Keys.BrowserBack,
+			Squid.Keys.WEBBACK
 		},
 		{
-			(Keys)167,
-			(Keys)233
+			Microsoft.Xna.Framework.Input.Keys.BrowserForward,
+			Squid.Keys.WEBFORWARD
 		},
 		{
-			(Keys)168,
-			(Keys)231
+			Microsoft.Xna.Framework.Input.Keys.BrowserRefresh,
+			Squid.Keys.WEBREFRESH
 		},
 		{
-			(Keys)169,
-			(Keys)232
+			Microsoft.Xna.Framework.Input.Keys.BrowserStop,
+			Squid.Keys.WEBSTOP
 		},
 		{
-			(Keys)170,
-			(Keys)229
+			Microsoft.Xna.Framework.Input.Keys.BrowserSearch,
+			Squid.Keys.WEBSEARCH
 		},
 		{
-			(Keys)171,
-			(Keys)230
+			Microsoft.Xna.Framework.Input.Keys.BrowserFavorites,
+			Squid.Keys.WEBFAVORITES
 		},
 		{
-			(Keys)172,
-			(Keys)178
+			Microsoft.Xna.Framework.Input.Keys.BrowserHome,
+			Squid.Keys.WEBHOME
 		},
 		{
-			(Keys)173,
-			(Keys)160
+			Microsoft.Xna.Framework.Input.Keys.VolumeMute,
+			Squid.Keys.MUTE
 		},
 		{
-			(Keys)174,
-			(Keys)174
+			Microsoft.Xna.Framework.Input.Keys.VolumeDown,
+			Squid.Keys.VOLUMEDOWN
 		},
 		{
-			(Keys)175,
-			(Keys)176
+			Microsoft.Xna.Framework.Input.Keys.VolumeUp,
+			Squid.Keys.VOLUMEUP
 		},
 		{
-			(Keys)176,
-			(Keys)153
+			Microsoft.Xna.Framework.Input.Keys.MediaNextTrack,
+			Squid.Keys.NEXTTRACK
 		},
 		{
-			(Keys)177,
-			(Keys)144
+			Microsoft.Xna.Framework.Input.Keys.MediaPreviousTrack,
+			Squid.Keys.CIRCUMFLEX
 		},
 		{
-			(Keys)178,
-			(Keys)149
+			Microsoft.Xna.Framework.Input.Keys.MediaStop,
+			Squid.Keys.STOP
 		},
 		{
-			(Keys)179,
-			(Keys)162
+			Microsoft.Xna.Framework.Input.Keys.MediaPlayPause,
+			Squid.Keys.PLAYPAUSE
 		},
 		{
-			(Keys)180,
-			(Keys)236
+			Microsoft.Xna.Framework.Input.Keys.LaunchMail,
+			Squid.Keys.MAIL
 		},
 		{
-			(Keys)181,
-			(Keys)237
+			Microsoft.Xna.Framework.Input.Keys.SelectMedia,
+			Squid.Keys.MEDIASELECT
 		},
 		{
-			(Keys)182,
+			Microsoft.Xna.Framework.Input.Keys.LaunchApplication1,
 			null
 		},
 		{
-			(Keys)183,
+			Microsoft.Xna.Framework.Input.Keys.LaunchApplication2,
 			null
 		},
 		{
-			(Keys)186,
-			(Keys)39
+			Microsoft.Xna.Framework.Input.Keys.OemSemicolon,
+			Squid.Keys.SEMICOLON
 		},
 		{
-			(Keys)187,
-			(Keys)13
+			Microsoft.Xna.Framework.Input.Keys.OemPlus,
+			Squid.Keys.EQUALS
 		},
 		{
-			(Keys)188,
-			(Keys)51
+			Microsoft.Xna.Framework.Input.Keys.OemComma,
+			Squid.Keys.COMMA
 		},
 		{
-			(Keys)189,
-			(Keys)12
+			Microsoft.Xna.Framework.Input.Keys.OemMinus,
+			Squid.Keys.MINUS
 		},
 		{
-			(Keys)190,
-			(Keys)52
+			Microsoft.Xna.Framework.Input.Keys.OemPeriod,
+			Squid.Keys.PERIOD
 		},
 		{
-			(Keys)191,
-			(Keys)53
+			Microsoft.Xna.Framework.Input.Keys.OemQuestion,
+			Squid.Keys.SLASH
 		},
 		{
-			(Keys)192,
-			(Keys)41
+			Microsoft.Xna.Framework.Input.Keys.OemTilde,
+			Squid.Keys.GRAVE
 		},
 		{
-			(Keys)202,
+			Microsoft.Xna.Framework.Input.Keys.ChatPadGreen,
 			null
 		},
 		{
-			(Keys)203,
+			Microsoft.Xna.Framework.Input.Keys.ChatPadOrange,
 			null
 		},
 		{
-			(Keys)219,
-			(Keys)26
+			Microsoft.Xna.Framework.Input.Keys.OemOpenBrackets,
+			Squid.Keys.LEFTBRACKET
 		},
 		{
-			(Keys)220,
-			(Keys)43
+			Microsoft.Xna.Framework.Input.Keys.OemPipe,
+			Squid.Keys.BACKSLASH
 		},
 		{
-			(Keys)221,
-			(Keys)27
+			Microsoft.Xna.Framework.Input.Keys.OemCloseBrackets,
+			Squid.Keys.RIGHTBRACKET
 		},
 		{
-			(Keys)222,
-			(Keys)40
+			Microsoft.Xna.Framework.Input.Keys.OemQuotes,
+			Squid.Keys.APOSTROPHE
 		},
 		{
-			(Keys)223,
-			(Keys)86
+			Microsoft.Xna.Framework.Input.Keys.Oem8,
+			Squid.Keys.OEM_102
 		},
 		{
-			(Keys)226,
-			(Keys)43
+			Microsoft.Xna.Framework.Input.Keys.OemBackslash,
+			Squid.Keys.BACKSLASH
 		},
 		{
-			(Keys)229,
+			Microsoft.Xna.Framework.Input.Keys.ProcessKey,
 			null
 		},
 		{
-			(Keys)242,
+			Microsoft.Xna.Framework.Input.Keys.OemCopy,
 			null
 		},
 		{
-			(Keys)243,
+			Microsoft.Xna.Framework.Input.Keys.OemAuto,
 			null
 		},
 		{
-			(Keys)244,
+			Microsoft.Xna.Framework.Input.Keys.OemEnlW,
 			null
 		},
 		{
-			(Keys)246,
+			Microsoft.Xna.Framework.Input.Keys.Attn,
 			null
 		},
 		{
-			(Keys)247,
+			Microsoft.Xna.Framework.Input.Keys.Crsel,
 			null
 		},
 		{
-			(Keys)248,
+			Microsoft.Xna.Framework.Input.Keys.Exsel,
 			null
 		},
 		{
-			(Keys)249,
+			Microsoft.Xna.Framework.Input.Keys.EraseEof,
 			null
 		},
 		{
-			(Keys)250,
+			Microsoft.Xna.Framework.Input.Keys.Play,
 			null
 		},
 		{
-			(Keys)251,
+			Microsoft.Xna.Framework.Input.Keys.Zoom,
 			null
 		},
 		{
-			(Keys)253,
+			Microsoft.Xna.Framework.Input.Keys.Pa1,
 			null
 		},
 		{
-			(Keys)254,
+			Microsoft.Xna.Framework.Input.Keys.OemClear,
 			null
 		}
 	};
 
-	public static char? _O2N6YVYHWf1FQNPMGlnVDG8GTqe(this Keys keys_0, bool bool_0)
+	public static char? _O2N6YVYHWf1FQNPMGlnVDG8GTqe(this Microsoft.Xna.Framework.Input.Keys keys_0, bool bool_0)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0003: Invalid comparison between Unknown and I4
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0017: Invalid comparison between Unknown and I4
-		//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002b: Invalid comparison between Unknown and I4
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Invalid comparison between Unknown and I4
-		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Invalid comparison between Unknown and I4
-		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0067: Invalid comparison between Unknown and I4
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006f: Invalid comparison between Unknown and I4
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0077: Invalid comparison between Unknown and I4
-		//IL_0088: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008b: Invalid comparison between Unknown and I4
-		//IL_0090: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0093: Invalid comparison between Unknown and I4
-		//IL_0098: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009b: Invalid comparison between Unknown and I4
-		//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00af: Invalid comparison between Unknown and I4
-		//IL_00b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b7: Invalid comparison between Unknown and I4
-		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cb: Invalid comparison between Unknown and I4
-		//IL_00d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d3: Invalid comparison between Unknown and I4
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00db: Invalid comparison between Unknown and I4
-		//IL_00ec: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Invalid comparison between Unknown and I4
-		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0103: Invalid comparison between Unknown and I4
-		//IL_0108: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010b: Invalid comparison between Unknown and I4
-		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011f: Invalid comparison between Unknown and I4
-		//IL_0130: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0133: Invalid comparison between Unknown and I4
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013b: Invalid comparison between Unknown and I4
-		//IL_014c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014f: Invalid comparison between Unknown and I4
-		//IL_0160: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0163: Invalid comparison between Unknown and I4
-		//IL_0174: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0177: Invalid comparison between Unknown and I4
-		//IL_017c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017f: Invalid comparison between Unknown and I4
-		//IL_0184: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0187: Invalid comparison between Unknown and I4
-		//IL_018c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018f: Invalid comparison between Unknown and I4
-		//IL_0194: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0197: Invalid comparison between Unknown and I4
-		//IL_01a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ab: Invalid comparison between Unknown and I4
-		//IL_01bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bf: Invalid comparison between Unknown and I4
-		//IL_01d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d3: Invalid comparison between Unknown and I4
-		//IL_01e4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e7: Invalid comparison between Unknown and I4
-		//IL_01f8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fb: Invalid comparison between Unknown and I4
-		//IL_0200: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0203: Invalid comparison between Unknown and I4
-		//IL_0214: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0217: Invalid comparison between Unknown and I4
-		//IL_021c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0222: Invalid comparison between Unknown and I4
-		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0239: Invalid comparison between Unknown and I4
-		//IL_023e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0244: Invalid comparison between Unknown and I4
-		//IL_0249: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024f: Invalid comparison between Unknown and I4
-		//IL_0260: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0266: Invalid comparison between Unknown and I4
-		//IL_026b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0271: Invalid comparison between Unknown and I4
-		//IL_0276: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027c: Invalid comparison between Unknown and I4
-		//IL_0281: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0287: Invalid comparison between Unknown and I4
-		//IL_0298: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029e: Invalid comparison between Unknown and I4
-		//IL_02af: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02b5: Invalid comparison between Unknown and I4
-		//IL_02c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02cc: Invalid comparison between Unknown and I4
-		//IL_02dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02e3: Invalid comparison between Unknown and I4
-		//IL_02e8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02eb: Invalid comparison between Unknown and I4
-		//IL_02f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f2: Invalid comparison between Unknown and I4
-		//IL_02f7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02fa: Invalid comparison between Unknown and I4
-		//IL_02ff: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0302: Invalid comparison between Unknown and I4
-		//IL_030c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_030f: Invalid comparison between Unknown and I4
-		//IL_0314: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0317: Invalid comparison between Unknown and I4
-		//IL_031c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_031f: Invalid comparison between Unknown and I4
-		//IL_0324: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0327: Invalid comparison between Unknown and I4
-		//IL_0331: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0334: Invalid comparison between Unknown and I4
-		//IL_0339: Unknown result type (might be due to invalid IL or missing references)
-		//IL_033c: Invalid comparison between Unknown and I4
-		//IL_033e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0341: Invalid comparison between Unknown and I4
-		//IL_034b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_034e: Invalid comparison between Unknown and I4
-		//IL_0358: Unknown result type (might be due to invalid IL or missing references)
-		//IL_035b: Invalid comparison between Unknown and I4
-		//IL_035d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0360: Invalid comparison between Unknown and I4
-		//IL_0362: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0365: Invalid comparison between Unknown and I4
-		//IL_036f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0372: Invalid comparison between Unknown and I4
-		//IL_037c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_037f: Invalid comparison between Unknown and I4
-		//IL_0389: Unknown result type (might be due to invalid IL or missing references)
-		//IL_038c: Invalid comparison between Unknown and I4
-		//IL_038e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0391: Invalid comparison between Unknown and I4
-		if ((int)keys_0 == 65)
+		return keys_0 switch
 		{
-			return bool_0 ? 'A' : 'a';
-		}
-		if ((int)keys_0 == 66)
-		{
-			return bool_0 ? 'B' : 'b';
-		}
-		if ((int)keys_0 == 67)
-		{
-			return bool_0 ? 'C' : 'c';
-		}
-		if ((int)keys_0 == 68)
-		{
-			return bool_0 ? 'D' : 'd';
-		}
-		if ((int)keys_0 == 69)
-		{
-			return bool_0 ? 'E' : 'e';
-		}
-		if ((int)keys_0 != 70)
-		{
-			if ((int)keys_0 != 71)
-			{
-				if ((int)keys_0 == 72)
-				{
-					return bool_0 ? 'H' : 'h';
-				}
-				if ((int)keys_0 != 73)
-				{
-					if ((int)keys_0 != 74)
-					{
-						if ((int)keys_0 == 75)
-						{
-							return bool_0 ? 'K' : 'k';
-						}
-						if ((int)keys_0 != 76)
-						{
-							if ((int)keys_0 == 77)
-							{
-								return bool_0 ? 'M' : 'm';
-							}
-							if ((int)keys_0 != 78)
-							{
-								if ((int)keys_0 != 79)
-								{
-									if ((int)keys_0 == 80)
-									{
-										return bool_0 ? 'P' : 'p';
-									}
-									if ((int)keys_0 == 81)
-									{
-										return bool_0 ? 'Q' : 'q';
-									}
-									if ((int)keys_0 != 82)
-									{
-										if ((int)keys_0 == 83)
-										{
-											return bool_0 ? 'S' : 's';
-										}
-										if ((int)keys_0 == 84)
-										{
-											return bool_0 ? 'T' : 't';
-										}
-										if ((int)keys_0 != 85)
-										{
-											if ((int)keys_0 == 86)
-											{
-												return bool_0 ? 'V' : 'v';
-											}
-											if ((int)keys_0 == 87)
-											{
-												return bool_0 ? 'W' : 'w';
-											}
-											if ((int)keys_0 == 88)
-											{
-												return bool_0 ? 'X' : 'x';
-											}
-											if ((int)keys_0 != 89)
-											{
-												if ((int)keys_0 != 90)
-												{
-													if ((int)keys_0 != 49)
-													{
-														if ((int)keys_0 != 50)
-														{
-															if ((int)keys_0 == 51)
-															{
-																return bool_0 ? '#' : '3';
-															}
-															if ((int)keys_0 == 52)
-															{
-																return bool_0 ? '$' : '4';
-															}
-															if ((int)keys_0 == 53)
-															{
-																return bool_0 ? '%' : '5';
-															}
-															if ((int)keys_0 == 54)
-															{
-																return bool_0 ? '^' : '6';
-															}
-															if ((int)keys_0 == 55)
-															{
-																return bool_0 ? '&' : '7';
-															}
-															if ((int)keys_0 != 56)
-															{
-																if ((int)keys_0 == 57)
-																{
-																	return bool_0 ? '(' : '9';
-																}
-																if ((int)keys_0 != 48)
-																{
-																	if ((int)keys_0 == 192)
-																	{
-																		return bool_0 ? '~' : '`';
-																	}
-																	if ((int)keys_0 != 189)
-																	{
-																		if ((int)keys_0 != 187)
-																		{
-																			if ((int)keys_0 == 219)
-																			{
-																				return bool_0 ? '{' : '[';
-																			}
-																			if ((int)keys_0 != 221)
-																			{
-																				if ((int)keys_0 != 220)
-																				{
-																					if ((int)keys_0 != 186)
-																					{
-																						if ((int)keys_0 == 222)
-																						{
-																							return bool_0 ? '"' : '\'';
-																						}
-																						if ((int)keys_0 == 188)
-																						{
-																							return bool_0 ? '<' : ',';
-																						}
-																						if ((int)keys_0 == 190)
-																						{
-																							return bool_0 ? '>' : '.';
-																						}
-																						if ((int)keys_0 == 191)
-																						{
-																							return bool_0 ? '?' : '/';
-																						}
-																						if ((int)keys_0 != 226)
-																						{
-																							if ((int)keys_0 != 9)
-																							{
-																								if ((int)keys_0 != 8)
-																								{
-																									if ((int)keys_0 != 13)
-																									{
-																										if ((int)keys_0 == 32)
-																										{
-																											return ' ';
-																										}
-																										if ((int)keys_0 != 96)
-																										{
-																											if ((int)keys_0 != 97)
-																											{
-																												if ((int)keys_0 != 98)
-																												{
-																													if ((int)keys_0 == 99)
-																													{
-																														return '3';
-																													}
-																													if ((int)keys_0 != 100)
-																													{
-																														if ((int)keys_0 != 101)
-																														{
-																															if ((int)keys_0 == 102)
-																															{
-																																return '6';
-																															}
-																															if ((int)keys_0 == 103)
-																															{
-																																return '7';
-																															}
-																															if ((int)keys_0 != 104)
-																															{
-																																if ((int)keys_0 != 105)
-																																{
-																																	if ((int)keys_0 == 111)
-																																	{
-																																		return '/';
-																																	}
-																																	if ((int)keys_0 == 106)
-																																	{
-																																		return '*';
-																																	}
-																																	if ((int)keys_0 == 109)
-																																	{
-																																		return '-';
-																																	}
-																																	if ((int)keys_0 != 107)
-																																	{
-																																		if ((int)keys_0 != 110)
-																																		{
-																																			return null;
-																																		}
-																																		return '.';
-																																	}
-																																	return '+';
-																																}
-																																return '9';
-																															}
-																															return '8';
-																														}
-																														return '5';
-																													}
-																													return '4';
-																												}
-																												return '2';
-																											}
-																											return '1';
-																										}
-																										return '0';
-																									}
-																									return '\r';
-																								}
-																								return '\b';
-																							}
-																							return '\t';
-																						}
-																						return '\\';
-																					}
-																					return bool_0 ? ':' : ';';
-																				}
-																				return bool_0 ? '|' : '\\';
-																			}
-																			return bool_0 ? '}' : ']';
-																		}
-																		return bool_0 ? '+' : '=';
-																	}
-																	return bool_0 ? '_' : '-';
-																}
-																return bool_0 ? ')' : '0';
-															}
-															return bool_0 ? '*' : '8';
-														}
-														return bool_0 ? '@' : '2';
-													}
-													return bool_0 ? '!' : '1';
-												}
-												return bool_0 ? 'Z' : 'z';
-											}
-											return bool_0 ? 'Y' : 'y';
-										}
-										return bool_0 ? 'U' : 'u';
-									}
-									return bool_0 ? 'R' : 'r';
-								}
-								return bool_0 ? 'O' : 'o';
-							}
-							return bool_0 ? 'N' : 'n';
-						}
-						return bool_0 ? 'L' : 'l';
-					}
-					return bool_0 ? 'J' : 'j';
-				}
-				return bool_0 ? 'I' : 'i';
-			}
-			return bool_0 ? 'G' : 'g';
-		}
-		return bool_0 ? 'F' : 'f';
+			Microsoft.Xna.Framework.Input.Keys.A => bool_0 ? 'A' : 'a', 
+			Microsoft.Xna.Framework.Input.Keys.B => bool_0 ? 'B' : 'b', 
+			Microsoft.Xna.Framework.Input.Keys.C => bool_0 ? 'C' : 'c', 
+			Microsoft.Xna.Framework.Input.Keys.D => bool_0 ? 'D' : 'd', 
+			Microsoft.Xna.Framework.Input.Keys.E => bool_0 ? 'E' : 'e', 
+			Microsoft.Xna.Framework.Input.Keys.H => bool_0 ? 'H' : 'h', 
+			Microsoft.Xna.Framework.Input.Keys.K => bool_0 ? 'K' : 'k', 
+			Microsoft.Xna.Framework.Input.Keys.M => bool_0 ? 'M' : 'm', 
+			Microsoft.Xna.Framework.Input.Keys.P => bool_0 ? 'P' : 'p', 
+			Microsoft.Xna.Framework.Input.Keys.Q => bool_0 ? 'Q' : 'q', 
+			Microsoft.Xna.Framework.Input.Keys.S => bool_0 ? 'S' : 's', 
+			Microsoft.Xna.Framework.Input.Keys.T => bool_0 ? 'T' : 't', 
+			Microsoft.Xna.Framework.Input.Keys.V => bool_0 ? 'V' : 'v', 
+			Microsoft.Xna.Framework.Input.Keys.W => bool_0 ? 'W' : 'w', 
+			Microsoft.Xna.Framework.Input.Keys.X => bool_0 ? 'X' : 'x', 
+			Microsoft.Xna.Framework.Input.Keys.D3 => bool_0 ? '#' : '3', 
+			Microsoft.Xna.Framework.Input.Keys.D4 => bool_0 ? '$' : '4', 
+			Microsoft.Xna.Framework.Input.Keys.D5 => bool_0 ? '%' : '5', 
+			Microsoft.Xna.Framework.Input.Keys.D6 => bool_0 ? '^' : '6', 
+			Microsoft.Xna.Framework.Input.Keys.D7 => bool_0 ? '&' : '7', 
+			Microsoft.Xna.Framework.Input.Keys.D9 => bool_0 ? '(' : '9', 
+			Microsoft.Xna.Framework.Input.Keys.OemTilde => bool_0 ? '~' : '`', 
+			Microsoft.Xna.Framework.Input.Keys.OemOpenBrackets => bool_0 ? '{' : '[', 
+			Microsoft.Xna.Framework.Input.Keys.OemQuotes => bool_0 ? '"' : '\'', 
+			Microsoft.Xna.Framework.Input.Keys.OemComma => bool_0 ? '<' : ',', 
+			Microsoft.Xna.Framework.Input.Keys.OemPeriod => bool_0 ? '>' : '.', 
+			Microsoft.Xna.Framework.Input.Keys.OemQuestion => bool_0 ? '?' : '/', 
+			Microsoft.Xna.Framework.Input.Keys.Space => ' ', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad3 => '3', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad6 => '6', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad7 => '7', 
+			Microsoft.Xna.Framework.Input.Keys.Divide => '/', 
+			Microsoft.Xna.Framework.Input.Keys.Multiply => '*', 
+			Microsoft.Xna.Framework.Input.Keys.Subtract => '-', 
+			Microsoft.Xna.Framework.Input.Keys.Decimal => '.', 
+			Microsoft.Xna.Framework.Input.Keys.Add => '+', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad9 => '9', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad8 => '8', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad5 => '5', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad4 => '4', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad2 => '2', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad1 => '1', 
+			Microsoft.Xna.Framework.Input.Keys.NumPad0 => '0', 
+			Microsoft.Xna.Framework.Input.Keys.Enter => '\r', 
+			Microsoft.Xna.Framework.Input.Keys.Back => '\b', 
+			Microsoft.Xna.Framework.Input.Keys.Tab => '\t', 
+			Microsoft.Xna.Framework.Input.Keys.OemBackslash => '\\', 
+			Microsoft.Xna.Framework.Input.Keys.OemSemicolon => bool_0 ? ':' : ';', 
+			Microsoft.Xna.Framework.Input.Keys.OemPipe => bool_0 ? '|' : '\\', 
+			Microsoft.Xna.Framework.Input.Keys.OemCloseBrackets => bool_0 ? '}' : ']', 
+			Microsoft.Xna.Framework.Input.Keys.OemPlus => bool_0 ? '+' : '=', 
+			Microsoft.Xna.Framework.Input.Keys.OemMinus => bool_0 ? '_' : '-', 
+			Microsoft.Xna.Framework.Input.Keys.D0 => bool_0 ? ')' : '0', 
+			Microsoft.Xna.Framework.Input.Keys.D8 => bool_0 ? '*' : '8', 
+			Microsoft.Xna.Framework.Input.Keys.D2 => bool_0 ? '@' : '2', 
+			Microsoft.Xna.Framework.Input.Keys.D1 => bool_0 ? '!' : '1', 
+			Microsoft.Xna.Framework.Input.Keys.Z => bool_0 ? 'Z' : 'z', 
+			Microsoft.Xna.Framework.Input.Keys.Y => bool_0 ? 'Y' : 'y', 
+			Microsoft.Xna.Framework.Input.Keys.U => bool_0 ? 'U' : 'u', 
+			Microsoft.Xna.Framework.Input.Keys.R => bool_0 ? 'R' : 'r', 
+			Microsoft.Xna.Framework.Input.Keys.O => bool_0 ? 'O' : 'o', 
+			Microsoft.Xna.Framework.Input.Keys.N => bool_0 ? 'N' : 'n', 
+			Microsoft.Xna.Framework.Input.Keys.L => bool_0 ? 'L' : 'l', 
+			Microsoft.Xna.Framework.Input.Keys.J => bool_0 ? 'J' : 'j', 
+			Microsoft.Xna.Framework.Input.Keys.I => bool_0 ? 'I' : 'i', 
+			Microsoft.Xna.Framework.Input.Keys.G => bool_0 ? 'G' : 'g', 
+			Microsoft.Xna.Framework.Input.Keys.F => bool_0 ? 'F' : 'f', 
+			_ => null, 
+		};
 	}
 
 	public static void _EMnZAXxoqoahiGOiNjffRycLtDE(this Desktop desktop_0, string string_0, string string_1 = null)
 	{
-		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
 		_JQQysO7uwugUSzo1g63o3jzSP4H jQQysO7uwugUSzo1g63o3jzSP4H = new _JQQysO7uwugUSzo1g63o3jzSP4H();
 		jQQysO7uwugUSzo1g63o3jzSP4H._Gz8axRA2ks9sOlb2vx60ucqDEM0($"{AppDomain.CurrentDomain.BaseDirectory}/Content-Release/{string_0}.xml");
-		foreach (ControlStyle value in ((Dictionary<string, ControlStyle>)(object)desktop_0.get_Skin()).Values)
+		foreach (ControlStyle value in desktop_0.Skin.Values)
 		{
-			foreach (Style value2 in ((Dictionary<ControlState, Style>)(object)value.get_Styles()).Values)
+			foreach (Style value2 in value.Styles.Values)
 			{
-				if (!string.IsNullOrEmpty(value2.get_Texture()) && jQQysO7uwugUSzo1g63o3jzSP4H._eA4yRWB5CfMJCCzEhBJkRcJhaGT(value2.get_Texture()))
+				if (!string.IsNullOrEmpty(value2.Texture) && jQQysO7uwugUSzo1g63o3jzSP4H._eA4yRWB5CfMJCCzEhBJkRcJhaGT(value2.Texture))
 				{
-					value2.set_TextureRect(jQQysO7uwugUSzo1g63o3jzSP4H._zETvz5wV1cpcKFl6i5KBgWbBmFR(value2.get_Texture()));
-					value2.set_Texture(string_1 ?? string_0);
+					value2.TextureRect = jQQysO7uwugUSzo1g63o3jzSP4H._zETvz5wV1cpcKFl6i5KBgWbBmFR(value2.Texture);
+					value2.Texture = string_1 ?? string_0;
 				}
 			}
 		}
@@ -1127,135 +794,81 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 
 	public static void _0pVU36wp9GYD1jM18raZtVEbA9q(this Desktop desktop_0, string string_0, int int_0, string string_1 = "OK", Action action_0 = null)
 	{
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0048: Expected O, but got Unknown
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0090: Expected O, but got Unknown
-		//IL_0090: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0095: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ca: Expected O, but got Unknown
-		//IL_00d2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dc: Expected O, but got Unknown
-		Window val = new Window();
-		val.set_Modal(true);
-		((Control)val).set_Dock((DockStyle)8);
-		((Control)val).set_Padding(new Margin(15));
-		((Control)val).set_Size(new Point(int_0, 0));
-		((Control)val).set_AutoSize((AutoSize)2);
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = val;
-		ControlCollection controls = _L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls();
-		Label val2 = new Label();
-		((Control)val2).set_Dock((DockStyle)2);
-		val2.set_TextAlign((Alignment)4);
-		val2.set_Text(string_0);
-		val2.set_TextWrap(true);
-		((Control)val2).set_AutoSize((AutoSize)2);
-		((Control)val2).set_Margin(new Margin(0, 0, 0, 10));
-		((ActiveList<Control>)(object)controls).Add((Control)val2);
-		Button val3 = new Button();
-		((Control)val3).set_Dock((DockStyle)2);
-		((Label)val3).set_Text(string_1);
-		((Control)val3).set_Padding(new Margin(5, 0, 5, 0));
-		((Control)val3).set_Margin(new Margin(0, 0, 0, 15));
-		((Control)val3).set_Scissor(true);
-		Button val4 = val3;
-		((Control)val4).add_MouseClick((MouseEvent)delegate
+		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
+		{
+			Modal = true,
+			Dock = DockStyle.Center,
+			Padding = new Margin(15),
+			Size = new Point(int_0, 0),
+			AutoSize = AutoSize.Vertical
+		};
+		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(new Label
+		{
+			Dock = DockStyle.Top,
+			TextAlign = Alignment.MiddleCenter,
+			Text = string_0,
+			TextWrap = true,
+			AutoSize = AutoSize.Vertical,
+			Margin = new Margin(0, 0, 0, 10)
+		});
+		Button button = new Button
+		{
+			Dock = DockStyle.Top,
+			Text = string_1,
+			Padding = new Margin(5, 0, 5, 0),
+			Margin = new Margin(0, 0, 0, 15),
+			Scissor = true
+		};
+		button.MouseClick += delegate
 		{
 			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 			if (action_0 != null)
 			{
 				action_0();
 			}
-		});
-		((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val4);
+		};
+		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(button);
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
 	}
 
 	public static void _GtkWDtXwQHwgWY4aFkacjfUDyzb(this Desktop desktop_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
 	{
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0048: Expected O, but got Unknown
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0090: Expected O, but got Unknown
-		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00db: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Expected O, but got Unknown
-		//IL_00fe: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0108: Expected O, but got Unknown
-		Window val = new Window();
-		val.set_Modal(true);
-		((Control)val).set_Dock((DockStyle)8);
-		((Control)val).set_Padding(new Margin(15));
-		((Control)val).set_Size(new Point(int_0, 0));
-		((Control)val).set_AutoSize((AutoSize)2);
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = val;
-		ControlCollection controls = _L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls();
-		Label val2 = new Label();
-		((Control)val2).set_Dock((DockStyle)2);
-		val2.set_TextAlign((Alignment)4);
-		val2.set_Text(string_0);
-		val2.set_TextWrap(true);
-		((Control)val2).set_AutoSize((AutoSize)2);
-		((Control)val2).set_Margin(new Margin(0, 0, 0, 10));
-		((ActiveList<Control>)(object)controls).Add((Control)val2);
+		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
+		{
+			Modal = true,
+			Dock = DockStyle.Center,
+			Padding = new Margin(15),
+			Size = new Point(int_0, 0),
+			AutoSize = AutoSize.Vertical
+		};
+		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(new Label
+		{
+			Dock = DockStyle.Top,
+			TextAlign = Alignment.MiddleCenter,
+			Text = string_0,
+			TextWrap = true,
+			AutoSize = AutoSize.Vertical,
+			Margin = new Margin(0, 0, 0, 10)
+		});
 		for (int i = 0; i < string_1.Length; i++)
 		{
 			string text = string_1[i];
-			Button val3 = new Button();
-			((Control)val3).set_Dock((DockStyle)2);
-			((Label)val3).set_Text(text);
-			((Control)val3).set_Padding(new Margin(5, 0, 5, 0));
-			((Control)val3).set_Margin(new Margin(0, 0, 0, (i < string_1.Length - 1) ? 5 : 15));
-			((Control)val3).set_Scissor(true);
-			Button val4 = val3;
+			Button button = new Button
+			{
+				Dock = DockStyle.Top,
+				Text = text,
+				Padding = new Margin(5, 0, 5, 0),
+				Margin = new Margin(0, 0, 0, (i < string_1.Length - 1) ? 5 : 15),
+				Scissor = true
+			};
 			int _5ft6kbimSBgLCWvFCD6FPEU8cCO = i;
-			((Control)val4).add_MouseClick((MouseEvent)delegate
+			button.MouseClick += delegate
 			{
 				int obj = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
 				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 				action_0(obj);
-			});
-			((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val4);
+			};
+			_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(button);
 		}
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
 	}
@@ -1277,17 +890,17 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 
 	static Skin smethod_3(Desktop desktop_0)
 	{
-		return desktop_0.get_Skin();
+		return desktop_0.Skin;
 	}
 
 	static StyleCollection smethod_4(ControlStyle controlStyle_0)
 	{
-		return controlStyle_0.get_Styles();
+		return controlStyle_0.Styles;
 	}
 
 	static string smethod_5(Style style_0)
 	{
-		return style_0.get_Texture();
+		return style_0.Texture;
 	}
 
 	static bool smethod_6(string string_0)
@@ -1297,30 +910,26 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 
 	static void smethod_7(Style style_0, Rectangle rectangle_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		style_0.set_TextureRect(rectangle_0);
+		style_0.TextureRect = rectangle_0;
 	}
 
 	static void smethod_8(Style style_0, string string_0)
 	{
-		style_0.set_Texture(string_0);
+		style_0.Texture = string_0;
 	}
 
 	static Window smethod_9()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
 		return new Window();
 	}
 
 	static void smethod_10(Window window_0, bool bool_0)
 	{
-		window_0.set_Modal(bool_0);
+		window_0.Modal = bool_0;
 	}
 
 	static void smethod_11(Control control_0, DockStyle dockStyle_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		control_0.set_Dock(dockStyle_0);
+		control_0.Dock = dockStyle_0;
 	}
 }

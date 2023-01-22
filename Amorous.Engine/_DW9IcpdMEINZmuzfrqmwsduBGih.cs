@@ -22,7 +22,11 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	private static readonly string _QubTtSSHmMID5jdELnIaJMHe4Dz = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
 
-	private static readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO;
+	private static readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO = new JsonSerializerSettings
+	{
+		TypeNameHandling = TypeNameHandling.Auto,
+		Converters = { (JsonConverter)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA() }
+	};
 
 	private static string _AiegX5a7OwPp1LYkClPD8o1ULsK;
 
@@ -30,7 +34,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	public static void _7cuPUL8aamrg9daETH6zQk3RwbF(int int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0, string string_0 = "save")
 	{
-		string contents = JsonConvert.SerializeObject((object)_lRHDfpOTd4PxClZkjMpoakPEA9d_0, (Formatting)1, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+		string contents = JsonConvert.SerializeObject(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, Formatting.Indented, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
 		string path = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
 		File.WriteAllText(path, contents);
 	}
@@ -43,11 +47,11 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 	public static _lRHDfpOTd4PxClZkjMpoakPEA9d _sabDA8yXNR8DIRSbHjOcXx1e1Ax(int int_0, string string_0 = "save")
 	{
 		string path = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
-		string text = File.ReadAllText(path);
+		string value = File.ReadAllText(path);
 		_lRHDfpOTd4PxClZkjMpoakPEA9d lRHDfpOTd4PxClZkjMpoakPEA9d;
 		try
 		{
-			lRHDfpOTd4PxClZkjMpoakPEA9d = JsonConvert.DeserializeObject<_lRHDfpOTd4PxClZkjMpoakPEA9d>(text, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+			lRHDfpOTd4PxClZkjMpoakPEA9d = JsonConvert.DeserializeObject<_lRHDfpOTd4PxClZkjMpoakPEA9d>(value, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
 			if (lRHDfpOTd4PxClZkjMpoakPEA9d == null)
 			{
 				throw new InvalidDataException("data is null");
@@ -197,21 +201,8 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 		};
 	}
 
-	static _DW9IcpdMEINZmuzfrqmwsduBGih()
-	{
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Expected O, but got Unknown
-		JsonSerializerSettings val = new JsonSerializerSettings();
-		val.set_TypeNameHandling((TypeNameHandling)4);
-		val.get_Converters().Add((JsonConverter)(object)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA());
-		_ONuPEFW55mKuOlkBaBx5Jvmw3gO = val;
-	}
-
 	static string smethod_0(object object_0, Formatting formatting_0, JsonSerializerSettings jsonSerializerSettings_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return JsonConvert.SerializeObject(object_0, formatting_0, jsonSerializerSettings_0);
 	}
 
@@ -287,19 +278,16 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	static JsonSerializerSettings smethod_15()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
 		return new JsonSerializerSettings();
 	}
 
 	static void smethod_16(JsonSerializerSettings jsonSerializerSettings_0, TypeNameHandling typeNameHandling_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		jsonSerializerSettings_0.set_TypeNameHandling(typeNameHandling_0);
+		jsonSerializerSettings_0.TypeNameHandling = typeNameHandling_0;
 	}
 
 	static IList<JsonConverter> smethod_17(JsonSerializerSettings jsonSerializerSettings_0)
 	{
-		return jsonSerializerSettings_0.get_Converters();
+		return jsonSerializerSettings_0.Converters;
 	}
 }

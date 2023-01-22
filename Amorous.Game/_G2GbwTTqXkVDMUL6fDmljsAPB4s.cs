@@ -34,10 +34,6 @@ public class _G2GbwTTqXkVDMUL6fDmljsAPB4s
 
 	private void _1TexRAv8TgmLSYZPaXObsZp5CgP()
 	{
-		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0062: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
 		if (_za3KOX0Td9JuYbMVuVrSRekcEdJ != _5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q)
 		{
 			_za3KOX0Td9JuYbMVuVrSRekcEdJ = _5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q;
@@ -76,7 +72,6 @@ public class _G2GbwTTqXkVDMUL6fDmljsAPB4s
 
 	static void smethod_3(_gJR4g7ak0hsZAUWX1vJbMqG2P5I _gJR4g7ak0hsZAUWX1vJbMqG2P5I_0, Color color_0, Action action_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		_gJR4g7ak0hsZAUWX1vJbMqG2P5I_0._7d2DAwjp6FutkJY09U0Mlk43Nmn(color_0, action_0);
 	}
 }

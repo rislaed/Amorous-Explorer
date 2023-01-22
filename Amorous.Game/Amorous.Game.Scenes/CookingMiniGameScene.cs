@@ -25,9 +25,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public GUI(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, Action action_0)
 			: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		{
-			//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-			//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-			_wmL1cFR5CsMqZS9jOXyCnmqveCG = _QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/Gui/Fonts/Bold-26", "Stop cooking!", Color.get_White(), 832, 970, new Rectangle(832, 970, 256, 102), action_0);
+			_wmL1cFR5CsMqZS9jOXyCnmqveCG = _QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/Gui/Fonts/Bold-26", "Stop cooking!", Color.White, 832, 970, new Rectangle(832, 970, 256, 102), action_0);
 			_wmL1cFR5CsMqZS9jOXyCnmqveCG._Fxy2SlgceW90FloFw6a1AEJODYA = false;
 		}
 
@@ -244,23 +242,10 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0151: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0225: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0288: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028f: Unknown result type (might be due to invalid IL or missing references)
 		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 		if (_Iqfa1mamDp2busajsE8iPWnCKbDA)
 		{
-			_eRokloBwt8FsjBWpKBDmNKscCLH += (float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f;
+			_eRokloBwt8FsjBWpKBDmNKscCLH += (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
 			if (_eRokloBwt8FsjBWpKBDmNKscCLH > 3f)
 			{
 				_Iqfa1mamDp2busajsE8iPWnCKbDA = false;
@@ -273,14 +258,14 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		}
 		if (_oadA2EQp5TIkaydfB8B5lpw5Cmu)
 		{
-			_2Kg9JelDMoLPl78Uv5Lb5ygQff += (float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f;
+			_2Kg9JelDMoLPl78Uv5Lb5ygQff += (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
 		}
 		if (_K8aZsmpWRImwc2JedT7KcW3wdYQ || _p28QNaoEJvHENbJjA4icWq92tkI || _h5v8MyOj54KK9SVZpYnagzRPLMP)
 		{
 			return;
 		}
-		Point val = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
-		if (_HXs79I5YAlnCxHxJS0JxD7jccyt || !_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Onions bowl glow", val.X, val.Y))
+		Point point = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		if (_HXs79I5YAlnCxHxJS0JxD7jccyt || !_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Onions bowl glow", point.X, point.Y))
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Onions bowl glow", 0f);
 		}
@@ -292,7 +277,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				_7UQ7J6jOjw0vBiKHgcli5eXatrN();
 			}
 		}
-		if (_HylCIZnie9TY7iCNyKurgxQFFji || !_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Ground beef bowl glow", val.X, val.Y))
+		if (_HylCIZnie9TY7iCNyKurgxQFFji || !_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Ground beef bowl glow", point.X, point.Y))
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Ground beef bowl glow", 0f);
 		}
@@ -304,7 +289,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				_KS0Vtg4XWGmpAsqFy5tYlJXLKLA();
 			}
 		}
-		if (_mOljPVTpQkVD6dwmmr9m28l6fc || !_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Carrot bowl gold", val.X, val.Y))
+		if (_mOljPVTpQkVD6dwmmr9m28l6fc || !_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Carrot bowl gold", point.X, point.Y))
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Carrot bowl gold", 0f);
 		}
@@ -316,7 +301,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				_VcZyHKzhoXLGNA1DIp006kBhiDN();
 			}
 		}
-		if (!_g0GLDf9i20jtYweGI1DAr0f9WON && _bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Tomatoe bowl gold", val.X, val.Y))
+		if (!_g0GLDf9i20jtYweGI1DAr0f9WON && _bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Tomatoe bowl gold", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Tomatoe highlight", EIngrediants.TinnedTomatoes, _gDkX1mAt76eLA8P3gGXs2wM5wTE);
 			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
@@ -328,7 +313,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Tomatoe bowl gold", 0f);
 		}
-		if (!_ylWBqGZTor7PB0HyMRwAuoV4hvH && _bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Bayleaves bowl glow", val.X, val.Y))
+		if (!_ylWBqGZTor7PB0HyMRwAuoV4hvH && _bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Bayleaves bowl glow", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Bay highlight", EIngrediants.Herbs, _7f8HjbO7kyXkAQLb2mIqPJKHcLb);
 			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
@@ -655,7 +640,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8;
 	}
 
-	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_20(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SpineEvent> list_0)
+	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_20(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SkeletonJson.SpineEvent> list_0)
 	{
 		return contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0, list_0);
 	}
@@ -722,7 +707,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static TimeSpan smethod_32(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static void smethod_33(_nHdiyIURlAiaNZ8u6MKzxjcwnyL _nHdiyIURlAiaNZ8u6MKzxjcwnyL_0)

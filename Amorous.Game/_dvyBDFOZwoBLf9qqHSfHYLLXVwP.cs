@@ -34,7 +34,7 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 			{
 				if (_ozrhTFHF7sXDU6ysB7cHxLveAAS && _znKl2SuVqjuhuU4ZYVKzq6zGvfb < 6f)
 				{
-					_znKl2SuVqjuhuU4ZYVKzq6zGvfb += (float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f;
+					_znKl2SuVqjuhuU4ZYVKzq6zGvfb += (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
 				}
 				else if (_ozrhTFHF7sXDU6ysB7cHxLveAAS && _znKl2SuVqjuhuU4ZYVKzq6zGvfb >= 6f)
 				{
@@ -74,6 +74,6 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 
 	static TimeSpan smethod_1(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 }

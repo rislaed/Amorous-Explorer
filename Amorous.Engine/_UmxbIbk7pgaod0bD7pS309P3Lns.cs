@@ -39,10 +39,9 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 		_6T55wit7MiGfAWRkPwjNbJ8N8lG = this;
 		_7FoDc5IeOhkrJIekU2AAQQKZqefA = contentManager_0;
 		_eT7BaYRygkyX4kj8h6aEwrq2uN = new string[0];
-		MediaPlayer.add_ActiveSongChanged((EventHandler<EventArgs>)delegate
+		MediaPlayer.ActiveSongChanged += delegate
 		{
-			//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-			if ((int)MediaPlayer.get_State() == 0 && _eT7BaYRygkyX4kj8h6aEwrq2uN.Length > 1)
+			if (MediaPlayer.State == MediaState.Stopped && _eT7BaYRygkyX4kj8h6aEwrq2uN.Length > 1)
 			{
 				_bTbQqsABbUefrkPeEqkxzxUsr8F++;
 				if (_bTbQqsABbUefrkPeEqkxzxUsr8F >= _eT7BaYRygkyX4kj8h6aEwrq2uN.Length)
@@ -54,10 +53,10 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 					_bTbQqsABbUefrkPeEqkxzxUsr8F = 0;
 				}
 				_wx0H9mDGCmUNsmV59Nj48JPJkEc = _eT7BaYRygkyX4kj8h6aEwrq2uN[_bTbQqsABbUefrkPeEqkxzxUsr8F];
-				Song val = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
-				MediaPlayer.Play(val);
+				Song song = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
+				MediaPlayer.Play(song);
 			}
-		});
+		};
 	}
 
 	protected override float _Gs9QTlqmpM6Jpgrjf53LUcRTbM(float float_0, float float_1, float float_2)
@@ -67,7 +66,7 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 
 	public void _LcX2y4hMIzQST4uGT2Q5Ce7vaGg()
 	{
-		MediaPlayer.set_Volume(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * base._SWODlbUkQEqfwrtprjLPOeGF7HO);
+		MediaPlayer.Volume = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * base._SWODlbUkQEqfwrtprjLPOeGF7HO;
 	}
 
 	public void _nqn4Aw4hEsNL81QdtrDK2OwS6Kr(string string_0, float float_0, bool bool_0)
@@ -78,10 +77,10 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 			_wx0H9mDGCmUNsmV59Nj48JPJkEc = string_0;
 			_bTbQqsABbUefrkPeEqkxzxUsr8F = 0;
 			_avz8WSjNjL0U8mdfRNAb5mHaApV = bool_0;
-			Song val = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
+			Song song = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
 			_98dbKZq4dvkw2wLkjZ77Y5Ih4xP(float_0);
-			MediaPlayer.Play(val);
-			MediaPlayer.set_IsRepeating(bool_0);
+			MediaPlayer.Play(song);
+			MediaPlayer.IsRepeating = bool_0;
 		}
 	}
 
@@ -102,10 +101,10 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 		_wx0H9mDGCmUNsmV59Nj48JPJkEc = string_0[0];
 		_bTbQqsABbUefrkPeEqkxzxUsr8F = 0;
 		_avz8WSjNjL0U8mdfRNAb5mHaApV = bool_0;
-		Song val = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
+		Song song = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
 		_98dbKZq4dvkw2wLkjZ77Y5Ih4xP(float_0);
-		MediaPlayer.Play(val);
-		MediaPlayer.set_IsRepeating(false);
+		MediaPlayer.Play(song);
+		MediaPlayer.IsRepeating = false;
 	}
 
 	public static void _QrgbXEg7MMeD9Ybz12fFVsbmAd9(string string_0, float float_0, bool bool_0)
@@ -153,8 +152,7 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 	[CompilerGenerated]
 	private void _fI217APzl4Tapt53WowQWN9Ipyi(object sender, EventArgs e)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		if ((int)MediaPlayer.get_State() != 0 || _eT7BaYRygkyX4kj8h6aEwrq2uN.Length <= 1)
+		if (MediaPlayer.State != 0 || _eT7BaYRygkyX4kj8h6aEwrq2uN.Length <= 1)
 		{
 			return;
 		}
@@ -168,13 +166,13 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 			_bTbQqsABbUefrkPeEqkxzxUsr8F = 0;
 		}
 		_wx0H9mDGCmUNsmV59Nj48JPJkEc = _eT7BaYRygkyX4kj8h6aEwrq2uN[_bTbQqsABbUefrkPeEqkxzxUsr8F];
-		Song val = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
-		MediaPlayer.Play(val);
+		Song song = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
+		MediaPlayer.Play(song);
 	}
 
 	static void smethod_1(EventHandler<EventArgs> eventHandler_0)
 	{
-		MediaPlayer.add_ActiveSongChanged(eventHandler_0);
+		MediaPlayer.ActiveSongChanged += eventHandler_0;
 	}
 
 	static float smethod_2(float float_0, float float_1, float float_2)
@@ -184,7 +182,7 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 
 	static void smethod_3(float float_0)
 	{
-		MediaPlayer.set_Volume(float_0);
+		MediaPlayer.Volume = float_0;
 	}
 
 	static bool smethod_4(string string_0, string string_1)
@@ -199,7 +197,7 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 
 	static void smethod_6(bool bool_0)
 	{
-		MediaPlayer.set_IsRepeating(bool_0);
+		MediaPlayer.IsRepeating = bool_0;
 	}
 
 	static void smethod_7()
@@ -209,7 +207,6 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 
 	static MediaState smethod_8()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		return MediaPlayer.get_State();
+		return MediaPlayer.State;
 	}
 }

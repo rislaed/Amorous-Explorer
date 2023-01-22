@@ -20,10 +20,6 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 		}
 		set
 		{
-			//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-			//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0032: Unknown result type (might be due to invalid IL or missing references)
 			_eNqfeKhXj4x1FkHQitvzRQ1JLSE = value;
 			if (!string.IsNullOrEmpty(_eNqfeKhXj4x1FkHQitvzRQ1JLSE))
 			{
@@ -31,7 +27,7 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 			}
 			else
 			{
-				_0IQKqP6KjSSBSTlZR0Y2K1CamuH = Vector2.get_Zero();
+				_0IQKqP6KjSSBSTlZR0Y2K1CamuH = Vector2.Zero;
 			}
 		}
 	}
@@ -39,8 +35,6 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 	public _iHJrndJdM1jj9TEnuU3BvgdDuvf(Texture2D texture2D_0, Texture2D texture2D_1, SpriteFont spriteFont_0, string string_0, Color color_0, Action action_0)
 		: base(texture2D_0, texture2D_1, action_0)
 	{
-		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
 		_UlZpHdih1X5ig1k6QjZ497jtA1A = spriteFont_0;
 		_K87Hdb6ToAR0us3tN3ZmvHdPdeJ = string_0;
 		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = color_0;
@@ -48,8 +42,6 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
-		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008b: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
 		if (!string.IsNullOrEmpty(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ))
 		{
@@ -66,7 +58,6 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 
 	static Vector2 smethod_2(SpriteFont spriteFont_0, string string_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		return spriteFont_0.MeasureString(string_0);
 	}
 }

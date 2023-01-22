@@ -478,110 +478,69 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	public void _XDbzWLxDi2VVrJQrjjLsgcfdxju()
 	{
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0042: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0080: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0092: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ea: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0124: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0136: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0148: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0190: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ce: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0217: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0229: Unknown result type (might be due to invalid IL or missing references)
-		//IL_023b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0258: Unknown result type (might be due to invalid IL or missing references)
 		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string.Empty;
 		_8CtoV1bqn0CwCzb1tuoNppBt0Gg = EBodyType.Lean;
-		_6f1rvTENt5XWmHTE22zxBIwbH9G = Color.get_White();
+		_6f1rvTENt5XWmHTE22zxBIwbH9G = Color.White;
 		_VmNLhqrIwSnE6JnCYiBcxnSqnEV = false;
-		_in5HHYmrdLTFpkgc8aimJpXqAXB = Color.get_White();
+		_in5HHYmrdLTFpkgc8aimJpXqAXB = Color.White;
 		_UjtZovBCLAtBZnUfbTvRFsaf5mx = EHeadType.Default;
-		_1qfGl3Oc2JyQEpnQtdOxMeMkqhi = Color.get_White();
-		_VWdlqWB4z2wNtm197Oiv32QGVbE = Color.get_White();
-		_sbSAaAmkhONcFX6f0JtHbVQbEfG = Color.get_White();
+		_1qfGl3Oc2JyQEpnQtdOxMeMkqhi = Color.White;
+		_VWdlqWB4z2wNtm197Oiv32QGVbE = Color.White;
+		_sbSAaAmkhONcFX6f0JtHbVQbEfG = Color.White;
 		_SnnHu3P4lDDxgkL6cuUt7y07yxG = _iDe3W6qb7jKTPuJV79yf2i7UoIq.None;
-		_Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt = Color.get_White();
-		_WvoLJ4MA4gYEsgOmmIQvfK3xFlu = Color.get_White();
-		_lUyqwDvFCoXEZ6VM9PVCQ970jps = Color.get_White();
-		_qKGefHxdjIUD6ObjxrxnLwbBEsh = Color.get_White();
+		_Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt = Color.White;
+		_WvoLJ4MA4gYEsgOmmIQvfK3xFlu = Color.White;
+		_lUyqwDvFCoXEZ6VM9PVCQ970jps = Color.White;
+		_qKGefHxdjIUD6ObjxrxnLwbBEsh = Color.White;
 		_pmr0FnBBvgaggpusBKMWplUa63c = EHeadAccessoriesType.None;
-		_9b2asKZDwVM1TcSfmfeFCuk0TJZb = Color.get_White();
-		_vUhBAXEgvpGKopOUkDJFoc4EYQ3 = Color.get_White();
-		_uaBF7rEib15d42vH8AzoXWFMMkE = Color.get_White();
+		_9b2asKZDwVM1TcSfmfeFCuk0TJZb = Color.White;
+		_vUhBAXEgvpGKopOUkDJFoc4EYQ3 = Color.White;
+		_uaBF7rEib15d42vH8AzoXWFMMkE = Color.White;
 		_c0ThYURHAGN0Wzlzw9Ibh3Z8qyo = EEyesType.Neutral;
-		_GXnDb1oaJlPbAQV2mjAwCQFK0nmb = Color.get_White();
-		_0K4lcN7iwo5q0iP1YlkpY9GdayR = Color.get_White();
+		_GXnDb1oaJlPbAQV2mjAwCQFK0nmb = Color.White;
+		_0K4lcN7iwo5q0iP1YlkpY9GdayR = Color.White;
 		_KBOJ0qhM8C5evPQxibgX74m2WHg = EBrowType.None;
-		_HRPv5rzDY5zNiP4NADDEGhrzGTe = Color.get_White();
+		_HRPv5rzDY5zNiP4NADDEGhrzGTe = Color.White;
 		_4QUr9lDqmNxEuy7B4xgb7Lj1HU0 = EMuzzleType.Short;
-		_VsEYbNSam3IFYYWY4QC2lb4ia61 = Color.get_White();
-		_y1SiMmRVXWDhDtY17knDpitt46F = Color.get_White();
-		_T98drEOtEEZKeB5tXzsuPrhb5Xk = Color.get_White();
+		_VsEYbNSam3IFYYWY4QC2lb4ia61 = Color.White;
+		_y1SiMmRVXWDhDtY17knDpitt46F = Color.White;
+		_T98drEOtEEZKeB5tXzsuPrhb5Xk = Color.White;
 		_hkFDGB5pWIuOVcIyDAFqHrDdSpjA = false;
-		_q2iDxJYfqribHB1bD8aSkSjqrfnA = Color.get_White();
+		_q2iDxJYfqribHB1bD8aSkSjqrfnA = Color.White;
 		_UAZhvJ3a9BGOBM0CLiDkKLwUFC9 = false;
-		_phJrpk3rql5MfNJxPQ9X7nC8aAk = Color.get_White();
+		_phJrpk3rql5MfNJxPQ9X7nC8aAk = Color.White;
 		_03h2I0mTkGTzIA5R48rgwJh7JZA = EHairstyleType.None;
-		_bJmvnPs69aVDXxG48lmruYZFHKt = Color.get_White();
+		_bJmvnPs69aVDXxG48lmruYZFHKt = Color.White;
 		_fzMbZCCd7imnrcrYWkSj5u8UZ2J = EFringeType.None;
-		_EvdUMrkAAdTeMv6fOpGrOLCAMq8A = Color.get_White();
+		_EvdUMrkAAdTeMv6fOpGrOLCAMq8A = Color.White;
 		_LZ8c6hRMRYKjnlLOPhbZHcWqUGG = EFeetType.Beast;
-		_LZfuQybASevOsCykEWqdvA5GqUF = Color.get_White();
+		_LZfuQybASevOsCykEWqdvA5GqUF = Color.White;
 		_NrFEKLWh80bQXi9PujCBTqm01AA = ETailType.None;
-		_qsK1J3jktKH3eJ2i8sL1oaxXtLc = Color.get_White();
+		_qsK1J3jktKH3eJ2i8sL1oaxXtLc = Color.White;
 		_PVQfhwHODkR6bzHmfeCK4L8riIG = false;
-		_62dl1HYYkor3TZL58k5Y33Tj83 = Color.get_White();
+		_62dl1HYYkor3TZL58k5Y33Tj83 = Color.White;
 		_tEXwTuSRSq5JaaFE4W8edEHxS9q = false;
-		_LufmRsAZrlyDgRKYocQXPzANMaF = Color.get_White();
+		_LufmRsAZrlyDgRKYocQXPzANMaF = Color.White;
 		_Mz7LwHZqoGBscApFXmff1kEQnGY = _VzIdKOJ1Gq1YccwwHcwhrVV5V4U.None;
-		_PeK36AvFxEQCvX3fS62hNV7rpuJ = Color.get_White();
-		_zBv1cYqPRU7uDCALpBlBSgObUcbA = Color.get_White();
-		_TxfCqloeyiHpsXka6B46iqCZNsZ = Color.get_White();
-		_1ZKGQXLRAHEJR8v7jhlDsyOVLcz = Color.get_White();
-		_8rDSn6e9Ip9WdOogjhIn8YlL1oM = Color.get_White();
-		_FrsyMDX7TebzFk8nSLTyRDPi1QH = Color.get_White();
-		_cUtgkG5qDvgFmI8c29I9xsLVNON = Color.get_White();
-		_LcOPiDaC2j5vzxOEYhvW4vRoaRX = Color.get_White();
-		_meyNS02iTIxo212B6c5eoKns2wj = Color.get_White();
+		_PeK36AvFxEQCvX3fS62hNV7rpuJ = Color.White;
+		_zBv1cYqPRU7uDCALpBlBSgObUcbA = Color.White;
+		_TxfCqloeyiHpsXka6B46iqCZNsZ = Color.White;
+		_1ZKGQXLRAHEJR8v7jhlDsyOVLcz = Color.White;
+		_8rDSn6e9Ip9WdOogjhIn8YlL1oM = Color.White;
+		_FrsyMDX7TebzFk8nSLTyRDPi1QH = Color.White;
+		_cUtgkG5qDvgFmI8c29I9xsLVNON = Color.White;
+		_LcOPiDaC2j5vzxOEYhvW4vRoaRX = Color.White;
+		_meyNS02iTIxo212B6c5eoKns2wj = Color.White;
 		_rtyJgfViJdXL2Ela5APpDlk99dI = ECockType.None;
-		_XnNREK59QnV1onFFWfSUaS9WK0E = Color.get_White();
-		_o6OnmHi5rZIQPHESokp9rTaO1ei = Color.get_White();
+		_XnNREK59QnV1onFFWfSUaS9WK0E = Color.White;
+		_o6OnmHi5rZIQPHESokp9rTaO1ei = Color.White;
 		_7OCMpsMmozHsAG0GDljMMAlGLJBA = EBallsType.None;
-		_8qQ7XVlyRYW4icBFxPQCJqgueYD = Color.get_White();
+		_8qQ7XVlyRYW4icBFxPQCJqgueYD = Color.White;
 		_BCncLn6BIYiBX6NdFByAquBYGpH = EBreastsType.None;
-		_pigzqi6DgcSToQkL9g7Ns2QrLfp = Color.get_White();
+		_pigzqi6DgcSToQkL9g7Ns2QrLfp = Color.White;
 		_Q2AbpMWcrhtCW9MLTtT5gwoleu7 = false;
-		_2yydfEIrSiLPTti2dT8JXGoIaM3 = Color.get_White();
-		_uOkbmfW26QVAvyEMQakki9kTMDbA = Color.get_White();
+		_2yydfEIrSiLPTti2dT8JXGoIaM3 = Color.White;
+		_uOkbmfW26QVAvyEMQakki9kTMDbA = Color.White;
 	}
 
 	public void _haICL4qkfkOLhPhofWQH1GmjZx5()

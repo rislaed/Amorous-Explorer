@@ -24,17 +24,16 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
-		float num = _rlJEdnItzlU5efWtBjMCaC5Nizb + (float)_za9QLzJUpOFmy4hIqyTdGh34IpD.get_Height();
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("Time").SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("PoolSpeed").SetValue(0.1f);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("PoolOffset").SetValue(_qFVIvzuvIuKKG5vOrovLtn4NplA);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("MaskTexture").SetValue((Texture)(object)_za9QLzJUpOFmy4hIqyTdGh34IpD);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("MaskStart").SetValue(_rlJEdnItzlU5efWtBjMCaC5Nizb / (float)_WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("MaskEnd").SetValue(num / (float)_WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("Inverse").SetValue(_vAix6GBEcVh3peB11tbKy7HJWwb);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("BreathingOffset").SetValue(_jSsdHgef86oxWXEOENwyht1nIvn);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.get_CurrentTechnique().get_Passes().get_Item(0)
-			.Apply();
+		float num = _rlJEdnItzlU5efWtBjMCaC5Nizb + (float)_za9QLzJUpOFmy4hIqyTdGh34IpD.Height;
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["PoolSpeed"].SetValue(0.1f);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["PoolOffset"].SetValue(_qFVIvzuvIuKKG5vOrovLtn4NplA);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["MaskTexture"].SetValue(_za9QLzJUpOFmy4hIqyTdGh34IpD);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["MaskStart"].SetValue(_rlJEdnItzlU5efWtBjMCaC5Nizb / (float)_WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["MaskEnd"].SetValue(num / (float)_WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["Inverse"].SetValue(_vAix6GBEcVh3peB11tbKy7HJWwb);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["BreathingOffset"].SetValue(_jSsdHgef86oxWXEOENwyht1nIvn);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.CurrentTechnique.Passes[0].Apply();
 		_DIJ98g9A80rhmS3Wk1l8KTVfV8x(spriteBatch_0);
 	}
 
@@ -55,17 +54,17 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 
 	static int smethod_22(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Height();
+		return texture2D_0.Height;
 	}
 
 	static EffectParameterCollection smethod_23(Effect effect_0)
 	{
-		return effect_0.get_Parameters();
+		return effect_0.Parameters;
 	}
 
 	static EffectParameter smethod_24(EffectParameterCollection effectParameterCollection_0, string string_0)
 	{
-		return effectParameterCollection_0.get_Item(string_0);
+		return effectParameterCollection_0[string_0];
 	}
 
 	static void smethod_25(EffectParameter effectParameter_0, float float_0)
@@ -90,17 +89,17 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 
 	static EffectTechnique smethod_29(Effect effect_0)
 	{
-		return effect_0.get_CurrentTechnique();
+		return effect_0.CurrentTechnique;
 	}
 
 	static EffectPassCollection smethod_30(EffectTechnique effectTechnique_0)
 	{
-		return effectTechnique_0.get_Passes();
+		return effectTechnique_0.Passes;
 	}
 
 	static EffectPass smethod_31(EffectPassCollection effectPassCollection_0, int int_0)
 	{
-		return effectPassCollection_0.get_Item(int_0);
+		return effectPassCollection_0[int_0];
 	}
 
 	static void smethod_32(EffectPass effectPass_0)

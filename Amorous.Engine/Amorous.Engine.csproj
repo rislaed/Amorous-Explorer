@@ -11,10 +11,18 @@
   <PropertyGroup />
   <ItemGroup />
   <ItemGroup>
-    <Reference Include="FNA" />
-    <Reference Include="Spine" />
-    <Reference Include="Newtonsoft.Json" />
-    <Reference Include="Squid" />
+    <Reference Include="FNA">
+      <HintPath>../FNA.dll</HintPath>
+    </Reference>
+    <Reference Include="Spine">
+      <HintPath>../Spine.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Squid">
+      <HintPath>../Squid.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml">
       <HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Xml.dll</HintPath>
     </Reference>

@@ -14,8 +14,8 @@ public class _z20t8IpBINiJtljSeTIkNoKUOkx : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
 	{
 		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = texture2D_0.get_Width();
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = texture2D_0.get_Height();
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = texture2D_0.Width;
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = texture2D_0.Height;
 		_XvomzD7ydX2gHHhG6ti3fxsB4QF = action_0;
 	}
 
@@ -25,13 +25,9 @@ public class _z20t8IpBINiJtljSeTIkNoKUOkx : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		if (((Color)(ref _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).get_A() != 0)
+		if (_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A != 0)
 		{
-			spriteBatch_0.Draw(_Ko8EyRGBPblyaAEHREGGfcgE0A7, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, (Rectangle?)null, (!_3pSkuXQLrbxfnmDHjLbcxrYNIfk) ? _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA : Color.get_Red(), 0f, Vector2.get_Zero(), _fO7gSlrDDNMoHR4FO5QXAq8fUyA, (SpriteEffects)0, 0f);
+			spriteBatch_0.Draw(_Ko8EyRGBPblyaAEHREGGfcgE0A7, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, null, (!_3pSkuXQLrbxfnmDHjLbcxrYNIfk) ? _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA : Color.Red, 0f, Vector2.Zero, _fO7gSlrDDNMoHR4FO5QXAq8fUyA, SpriteEffects.None, 0f);
 		}
 	}
 
@@ -54,11 +50,11 @@ public class _z20t8IpBINiJtljSeTIkNoKUOkx : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	static int smethod_0(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Width();
+		return texture2D_0.Width;
 	}
 
 	static int smethod_1(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Height();
+		return texture2D_0.Height;
 	}
 }

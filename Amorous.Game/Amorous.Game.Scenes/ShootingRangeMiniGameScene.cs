@@ -44,19 +44,13 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		public FrameAnimation(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
 		{
-			//IL_0058: Unknown result type (might be due to invalid IL or missing references)
-			//IL_005d: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0085: Unknown result type (might be due to invalid IL or missing references)
-			//IL_008a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0096: Unknown result type (might be due to invalid IL or missing references)
-			//IL_009b: Unknown result type (might be due to invalid IL or missing references)
 			_uZYA4qnOfbVDFtZ6Ih3HawZgErP = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 			_q2YaOk0V93J3GMeWTOtcGdh9kEA = float_0 / (float)int_0;
 			_hUTZltYwRfIdEri4M059hyQus5H = int_0;
 			_Lb7cMVSwXw3dYaQEnyADfQZoUedb = 0;
-			_jqsWTJ89RIZpjBr65dNZzmpJJKE = new Rectangle(0, 0, (int)((float)_uZYA4qnOfbVDFtZ6Ih3HawZgErP.get_Width() / 12f), _uZYA4qnOfbVDFtZ6Ih3HawZgErP.get_Height());
+			_jqsWTJ89RIZpjBr65dNZzmpJJKE = new Rectangle(0, 0, (int)((float)_uZYA4qnOfbVDFtZ6Ih3HawZgErP.Width / 12f), _uZYA4qnOfbVDFtZ6Ih3HawZgErP.Height);
 			_NbYrjABARmnikNXQHmmbM8k62UE = new Rectangle(0, 0, (int)((float)_jqsWTJ89RIZpjBr65dNZzmpJJKE.Width * float_1), (int)((float)_jqsWTJ89RIZpjBr65dNZzmpJJKE.Height * float_1));
-			_QBwNjQE21bfJ9yRo7CynjeYaHRg = new Vector2((float)int_1, (float)int_2);
+			_QBwNjQE21bfJ9yRo7CynjeYaHRg = new Vector2(int_1, int_2);
 		}
 
 		public void _QrgbXEg7MMeD9Ybz12fFVsbmAd9(int int_0, int int_1, float float_0)
@@ -89,13 +83,9 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 		{
-			//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-			//IL_002e: Unknown result type (might be due to invalid IL or missing references)
 			if (_Lb7cMVSwXw3dYaQEnyADfQZoUedb >= 0)
 			{
-				spriteBatch_0.Draw(_uZYA4qnOfbVDFtZ6Ih3HawZgErP, _NbYrjABARmnikNXQHmmbM8k62UE, (Rectangle?)_jqsWTJ89RIZpjBr65dNZzmpJJKE, Color.get_White(), _MZBGPP8CHYYeh1lAhvANLxmu8KVA, _QBwNjQE21bfJ9yRo7CynjeYaHRg, (SpriteEffects)0, 0f);
+				spriteBatch_0.Draw(_uZYA4qnOfbVDFtZ6Ih3HawZgErP, _NbYrjABARmnikNXQHmmbM8k62UE, _jqsWTJ89RIZpjBr65dNZzmpJJKE, Color.White, _MZBGPP8CHYYeh1lAhvANLxmu8KVA, _QBwNjQE21bfJ9yRo7CynjeYaHRg, SpriteEffects.None, 0f);
 			}
 		}
 
@@ -117,12 +107,12 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static int smethod_2(Texture2D texture2D_0)
 		{
-			return texture2D_0.get_Width();
+			return texture2D_0.Width;
 		}
 
 		static int smethod_3(Texture2D texture2D_0)
 		{
-			return texture2D_0.get_Height();
+			return texture2D_0.Height;
 		}
 
 		static float smethod_4(float float_0)
@@ -132,10 +122,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static void smethod_5(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Rectangle rectangle_0, Rectangle? nullable_0, Color color_0, float float_0, Vector2 vector2_0, SpriteEffects spriteEffects_0, float float_1)
 		{
-			//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-			//IL_000a: Unknown result type (might be due to invalid IL or missing references)
 			spriteBatch_0.Draw(texture2D_0, rectangle_0, nullable_0, color_0, float_0, vector2_0, spriteEffects_0, float_1);
 		}
 	}
@@ -190,10 +176,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		private void _q83Vj1dGmn3NFhPIkk7tO7tyxb(int int_0, int int_1, float? nullable_0)
 		{
-			//IL_009d: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ce: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00d3: Unknown result type (might be due to invalid IL or missing references)
 			_pO4d7wyWlp6cYLHahUVYplpUWxw._7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0;
 			_pO4d7wyWlp6cYLHahUVYplpUWxw._bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1;
 			_i8C0PwO83NRzGvNoyMhHwLV9HeC = nullable_0 ?? _i8C0PwO83NRzGvNoyMhHwLV9HeC;
@@ -221,13 +203,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		public bool _ZCfNJ0nxXx3YppgLl5SvS2LkQ5B(Point point_0, out CollisionType collisionType_0)
 		{
-			//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-			//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-			//IL_003e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-			//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0095: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
 			collisionType_0 = CollisionType.None;
 			if (!_kf3EbE0B70xGe1szklqAZyCqoLj)
 			{
@@ -284,7 +259,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8;
 		}
 
-		static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_4(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SpineEvent> list_0)
+		static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_4(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SkeletonJson.SpineEvent> list_0)
 		{
 			return contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0, list_0);
 		}
@@ -351,32 +326,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public GunModel(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
 			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "GunModel")
 		{
-			//IL_00d2: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00da: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00e2: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00e7: Unknown result type (might be due to invalid IL or missing references)
-			//IL_011e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_014d: Unknown result type (might be due to invalid IL or missing references)
-			//IL_018c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01d0: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
-			//IL_022a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_026a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0295: Unknown result type (might be due to invalid IL or missing references)
-			//IL_02d9: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0304: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0348: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0373: Unknown result type (might be due to invalid IL or missing references)
-			//IL_03b7: Unknown result type (might be due to invalid IL or missing references)
-			//IL_03e2: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0426: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0451: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0495: Unknown result type (might be due to invalid IL or missing references)
-			//IL_04c8: Unknown result type (might be due to invalid IL or missing references)
-			//IL_04fb: Unknown result type (might be due to invalid IL or missing references)
-			//IL_052e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0561: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0594: Unknown result type (might be due to invalid IL or missing references)
 			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime_0)
 			{
 				_XcQKV7iP9Sk10poAFYuakLJaltL._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
@@ -393,7 +342,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
 			bool flag = opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm);
 			bool flag2;
-			Color color_ = ((flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm)) ? opIJo2jLUqdOL5yAFP4yzXce0DG._8rDSn6e9Ip9WdOogjhIn8YlL1oM : (flag ? opIJo2jLUqdOL5yAFP4yzXce0DG._1ZKGQXLRAHEJR8v7jhlDsyOVLcz : Color.get_White()));
+			Color color_ = ((flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm)) ? opIJo2jLUqdOL5yAFP4yzXce0DG._8rDSn6e9Ip9WdOogjhIn8YlL1oM : (flag ? opIJo2jLUqdOL5yAFP4yzXce0DG._1ZKGQXLRAHEJR8v7jhlDsyOVLcz : Color.White));
 			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Hoody Sleeve", 0f);
 			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Default Forearm", 1f);
 			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Default Forearm", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
@@ -520,7 +469,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8;
 		}
 
-		static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_7(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SpineEvent> list_0)
+		static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_7(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SkeletonJson.SpineEvent> list_0)
 		{
 			return contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0, list_0);
 		}
@@ -552,13 +501,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static Color smethod_13(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._1ZKGQXLRAHEJR8v7jhlDsyOVLcz;
 		}
 
 		static Color smethod_14(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8rDSn6e9Ip9WdOogjhIn8YlL1oM;
 		}
 
@@ -569,25 +516,21 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static Color smethod_16(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 		}
 
 		static void smethod_17(_nHdiyIURlAiaNZ8u6MKzxjcwnyL _nHdiyIURlAiaNZ8u6MKzxjcwnyL_0, string string_0, Color color_0)
 		{
-			//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 			_nHdiyIURlAiaNZ8u6MKzxjcwnyL_0._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_0, color_0);
 		}
 
 		static Color smethod_18(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 		}
 
 		static Color smethod_19(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._FrsyMDX7TebzFk8nSLTyRDPi1QH;
 		}
 
@@ -598,7 +541,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static Color smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._in5HHYmrdLTFpkgc8aimJpXqAXB;
 		}
 
@@ -656,8 +598,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		public FloatingFeedbackDrawable(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, int int_0, int int_1, string string_0, Color color_0)
 		{
-			//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_003c: Unknown result type (might be due to invalid IL or missing references)
 			_xnYepZuegigJCU2jcbZsfVIakzF = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 			_nD28BmrDaEzCHelTAa14TKyuSyG = int_0;
 			_LkckKdvuh9GaAwn7XojfbJBd91r = int_1;
@@ -684,9 +624,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 		{
-			//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-			//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-			//IL_002a: Unknown result type (might be due to invalid IL or missing references)
 			spriteBatch_0.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, _eNqfeKhXj4x1FkHQitvzRQ1JLSE, new Vector2(_nD28BmrDaEzCHelTAa14TKyuSyG, _LkckKdvuh9GaAwn7XojfbJBd91r), _JbGNnZhaeWyNm0aWm7TtSamww4C * _AQwQu1ldCtpbkD5F9oEByJdCnWaA);
 		}
 
@@ -871,12 +808,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	protected ShootingRangeMiniGameScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_027a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0338: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0353: Unknown result type (might be due to invalid IL or missing references)
 		_WD4Plg5m1AwZ5mVyjQCADcW1ZTk = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._LWcoDwIWvf8DT3nQmNe5z8fkUvI;
 		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._LWcoDwIWvf8DT3nQmNe5z8fkUvI = false;
 		_U8eNAZVBW15ZflhG4fel0hK3Juu = _poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj;
@@ -926,11 +857,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		//IL_00b0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
-		float float_ = (float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f;
-		if (_F2ao1gdMb4UciyKC7Zly4by95Mn && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)27))
+		float float_ = (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
+		if (_F2ao1gdMb4UciyKC7Zly4by95Mn && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.Escape))
 		{
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.None;
 			_5Z9jaXDcRYm0wNlEm1aTutL9kSH();
@@ -978,7 +906,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _fFSom2DrN3XLCdgmD5vZaJmWP7G(float float_0)
 	{
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)82) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)32)))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.R) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.Space)))
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
@@ -996,9 +924,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _8GHK7o3vLmG6sThZNN5JsWHoKkE(float float_0)
 	{
-		//IL_00be: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fa: Unknown result type (might be due to invalid IL or missing references)
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq -= float_0;
 		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && !_nHs33RHZMuYhYev0dQ6ic0aHmvO && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 		{
@@ -1025,7 +950,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						_C6cjmtLovCejw2N3OZYswcoYxsd++;
 						_gabFSY9HcJdPu830plKx8W936qG._xDFlaclLtJxSUU63JEJALvRLdfe();
 						_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 30;
-						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "30!", Color.get_Yellow());
+						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "30!", Color.Yellow);
 						_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
 						_OJbyketBmeLlVtChfay03TIx5KM._DcBCpcEfsjl4zP1zbrOrd1bwNReb(delegate
 						{
@@ -1041,7 +966,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						_pL6aoe4HLq4X3yQACLFyUH3xwBp++;
 						_Hsn6Qz2oeKaTkin9XGwBJUJqy1C._xDFlaclLtJxSUU63JEJALvRLdfe();
 						_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 10;
-						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "10!", Color.get_Red());
+						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "10!", Color.Red);
 						_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
 						_OJbyketBmeLlVtChfay03TIx5KM._u1yq8F9lG8oMcA9vZO9c7Qbh8vj(delegate
 						{
@@ -1068,7 +993,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				_RiMZpLLSGIesSXF8vhSlVQ8SrDg._xDFlaclLtJxSUU63JEJALvRLdfe();
 			}
 		}
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)82) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)32)))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.R) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.Space)))
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
@@ -1132,11 +1057,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _g0eYquQ8BcifsIs5UMyAIkXM5paA(float float_0)
 	{
-		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)13))
+		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.Enter))
 		{
 			_haICL4qkfkOLhPhofWQH1GmjZx5();
 		}
-		else if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)27))
+		else if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.Escape))
 		{
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.None;
 			_5Z9jaXDcRYm0wNlEm1aTutL9kSH();
@@ -1166,39 +1091,14 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0071: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00db: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0110: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0115: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0155: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0191: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0196: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0235: Unknown result type (might be due to invalid IL or missing references)
-		//IL_023a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0267: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a0: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
 		spriteBatch_0.Begin();
 		_LSweOA3cIPq1IjLzplF4mDludQf(spriteBatch_0);
-		spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Score: " + _G0GwJ5OWQOA4BjacW3XmFsyMFjz, new Vector2(10f, 10f), Color.get_White());
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Targets missed: " + _JvgphfrWtBncPfgb6ERRVKKtlQG, new Vector2(10f, 60f), Color.get_White());
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Shots missed: " + _dH7hlTzeJboGa5rfpgerBfCmyKO, new Vector2(10f, 80f), Color.get_White());
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Bodyshots: " + _pL6aoe4HLq4X3yQACLFyUH3xwBp, new Vector2(10f, 100f), Color.get_White());
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Headshots: " + _C6cjmtLovCejw2N3OZYswcoYxsd, new Vector2(10f, 120f), Color.get_White());
+		spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Score: " + _G0GwJ5OWQOA4BjacW3XmFsyMFjz, new Vector2(10f, 10f), Color.White);
+		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Targets missed: " + _JvgphfrWtBncPfgb6ERRVKKtlQG, new Vector2(10f, 60f), Color.White);
+		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Shots missed: " + _dH7hlTzeJboGa5rfpgerBfCmyKO, new Vector2(10f, 80f), Color.White);
+		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Bodyshots: " + _pL6aoe4HLq4X3yQACLFyUH3xwBp, new Vector2(10f, 100f), Color.White);
+		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Headshots: " + _C6cjmtLovCejw2N3OZYswcoYxsd, new Vector2(10f, 120f), Color.White);
 		int num = 5;
 		int num2 = 0;
 		while (num >= 0)
@@ -1209,28 +1109,28 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		}
 		if (_YFr89aAV3UzO9kf7kPKQJilRWED == 0)
 		{
-			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Reload!", new Vector2(1750f, 70f), Color.get_Red());
+			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Reload!", new Vector2(1750f, 70f), Color.Red);
 		}
 		switch (_dxhbACq6BB89IAMy6ZOALWJgv7L)
 		{
 		case GameState.NotStarted:
-			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.", new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.get_Red());
+			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.", new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.Red);
 			break;
 		case GameState.Started:
 			if (_0zKXRrSXqoTAuTYQNrJIgtt7Emq >= 0f)
 			{
 				if (_0zKXRrSXqoTAuTYQNrJIgtt7Emq > 10f)
 				{
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F0"), new Vector2(960f, 10f), Color.get_White());
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F0"), new Vector2(960f, 10f), Color.White);
 				}
 				else
 				{
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F1"), new Vector2(960f, 10f), Color.get_Red());
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F1"), new Vector2(960f, 10f), Color.Red);
 				}
 			}
 			break;
 		case GameState.GameOver:
-			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Time up, game over! Press <Enter> to retry or <Escape> to continue.", new Vector2((1920f - _MZh3nVRuDktDpIu8X149SF90ZjO) / 2f, 10f), Color.get_Red());
+			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Time up, game over! Press <Enter> to retry or <Escape> to continue.", new Vector2((1920f - _MZh3nVRuDktDpIu8X149SF90ZjO) / 2f, 10f), Color.Red);
 			break;
 		}
 		spriteBatch_0.End();
@@ -1292,7 +1192,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _xaBDiofMkYNdWQ4me0hnZ4NsCnk(int int_0, int int_1, string string_0, Color color_0)
 	{
-		//IL_0004: Unknown result type (might be due to invalid IL or missing references)
 		FloatingFeedbackDrawable item = new FloatingFeedbackDrawable(this, int_0, int_1, string_0, color_0);
 		_xEG3axnWkco0Erk0PdjakXDULcA.Add(item);
 	}
@@ -1395,13 +1294,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static Color smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._uOkbmfW26QVAvyEMQakki9kTMDbA;
 	}
 
 	static Vector2 smethod_23(SpriteFont spriteFont_0, string string_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		return spriteFont_0.MeasureString(string_0);
 	}
 
@@ -1412,7 +1309,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static TimeSpan smethod_25(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static _3FFZvGWTAe7rsviKkDPTXEVjxWf smethod_26(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
@@ -1427,7 +1324,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static bool smethod_28(_3FFZvGWTAe7rsviKkDPTXEVjxWf _3FFZvGWTAe7rsviKkDPTXEVjxWf_0, Keys keys_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _3FFZvGWTAe7rsviKkDPTXEVjxWf_0._fy5ebLnmRsRXv9v7RKTFU5CGMaH(keys_0);
 	}
 
@@ -1448,7 +1344,6 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	void method_0(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
 	}
 

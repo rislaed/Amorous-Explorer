@@ -53,13 +53,11 @@ public abstract class _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	protected _ujAkjlfN5TywwbLAUDzPvtab6uJ(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)
 	{
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
 		_XbOXR6AypLIdJ3gBMGseGi3Wi2i = _7UlnfykmEmZDFt3BmCKZekI43Ih_0;
 		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
 		_3ZeCDXqcWHY4XJDBGyav3UzxYaHA = true;
 		_Fxy2SlgceW90FloFw6a1AEJODYA = true;
-		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.get_White();
+		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.White;
 		_ac2H6kMdrgPhXXxabsikjji4SiT = 0;
 	}
 

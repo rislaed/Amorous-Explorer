@@ -9,7 +9,27 @@ namespace Amorous.Game.Sexscenes;
 
 public class SethSexscene : CensoredSexscene
 {
-	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
+	private static readonly List<SkeletonJson.SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = new List<SkeletonJson.SpineEvent>
+	{
+		new SkeletonJson.SpineEvent
+		{
+			AnimationName = "animation",
+			EventName = "ThrustStart",
+			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
+		},
+		new SkeletonJson.SpineEvent
+		{
+			AnimationName = "animation",
+			EventName = "ThrustEnd",
+			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
+		},
+		new SkeletonJson.SpineEvent
+		{
+			AnimationName = "animation",
+			EventName = "Moan",
+			FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f }
+		}
+	};
 
 	public SethSexscene(ContentManager contentManager_0)
 		: base(contentManager_0, "Assets/SexScenes/Seth/Seth Sex", "Assets/SexScenes/Seth/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.3f : 1f, bool_0: true, float_1: 5000f)
@@ -30,26 +50,6 @@ public class SethSexscene : CensoredSexscene
 
 	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_04f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_050f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0525: Unknown result type (might be due to invalid IL or missing references)
-		//IL_053b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0551: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0567: Unknown result type (might be due to invalid IL or missing references)
-		//IL_057d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0593: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05a9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05bf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05d5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0601: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0617: Unknown result type (might be due to invalid IL or missing references)
-		//IL_062d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0643: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0659: Unknown result type (might be due to invalid IL or missing references)
-		//IL_066f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0685: Unknown result type (might be due to invalid IL or missing references)
-		//IL_069b: Unknown result type (might be due to invalid IL or missing references)
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
 		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
@@ -138,33 +138,6 @@ public class SethSexscene : CensoredSexscene
 		}
 	}
 
-	static SethSexscene()
-	{
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Expected O, but got Unknown
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0047: Expected O, but got Unknown
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0081: Expected O, but got Unknown
-		List<SpineEvent> list = new List<SpineEvent>();
-		SpineEvent val = new SpineEvent();
-		val.AnimationName = "animation";
-		val.EventName = "ThrustStart";
-		val.FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f };
-		list.Add(val);
-		val = new SpineEvent();
-		val.AnimationName = "animation";
-		val.EventName = "ThrustEnd";
-		val.FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f };
-		list.Add(val);
-		val = new SpineEvent();
-		val.AnimationName = "animation";
-		val.EventName = "Moan";
-		val.FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f };
-		list.Add(val);
-		_zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = list;
-	}
-
 	static bool smethod_14()
 	{
 		return _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF;
@@ -227,63 +200,52 @@ public class SethSexscene : CensoredSexscene
 
 	static Color smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._qsK1J3jktKH3eJ2i8sL1oaxXtLc;
 	}
 
 	static void smethod_27(_nHdiyIURlAiaNZ8u6MKzxjcwnyL _nHdiyIURlAiaNZ8u6MKzxjcwnyL_0, string string_0, Color color_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		_nHdiyIURlAiaNZ8u6MKzxjcwnyL_0._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_0, color_0);
 	}
 
 	static Color smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 	}
 
 	static Color smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 	}
 
 	static Color smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ;
 	}
 
 	static Color smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._cUtgkG5qDvgFmI8c29I9xsLVNON;
 	}
 
 	static Color smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8qQ7XVlyRYW4icBFxPQCJqgueYD;
 	}
 
 	static Color smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
 	}
 
 	static Color smethod_34(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._1ZKGQXLRAHEJR8v7jhlDsyOVLcz;
 	}
 
-	static SpineEvent smethod_35()
+	static SkeletonJson.SpineEvent smethod_35()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
-		return new SpineEvent();
+		return new SkeletonJson.SpineEvent();
 	}
 
 	static void smethod_36(Array array_0, RuntimeFieldHandle runtimeFieldHandle_0)

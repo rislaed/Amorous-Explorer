@@ -24,10 +24,10 @@ public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 			_Hnb6mPvrZFgOMCIApIeMW88jSsF = new _eNOTHZZiu5nx6PrADzfLyng3Igc();
 			return;
 		}
-		string text = File.ReadAllText(_wvD7pijDcO3KNAgJ4go8LykDZAv);
+		string value = File.ReadAllText(_wvD7pijDcO3KNAgJ4go8LykDZAv);
 		try
 		{
-			_Hnb6mPvrZFgOMCIApIeMW88jSsF = JsonConvert.DeserializeObject<_eNOTHZZiu5nx6PrADzfLyng3Igc>(text) ?? new _eNOTHZZiu5nx6PrADzfLyng3Igc();
+			_Hnb6mPvrZFgOMCIApIeMW88jSsF = JsonConvert.DeserializeObject<_eNOTHZZiu5nx6PrADzfLyng3Igc>(value) ?? new _eNOTHZZiu5nx6PrADzfLyng3Igc();
 		}
 		catch (Exception)
 		{
@@ -40,7 +40,7 @@ public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 	{
 		if (_Hnb6mPvrZFgOMCIApIeMW88jSsF != null)
 		{
-			string contents = JsonConvert.SerializeObject((object)_Hnb6mPvrZFgOMCIApIeMW88jSsF);
+			string contents = JsonConvert.SerializeObject(_Hnb6mPvrZFgOMCIApIeMW88jSsF);
 			File.WriteAllText(_wvD7pijDcO3KNAgJ4go8LykDZAv, contents);
 		}
 	}

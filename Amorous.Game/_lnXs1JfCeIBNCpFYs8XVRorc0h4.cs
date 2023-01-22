@@ -103,7 +103,7 @@ public class _lnXs1JfCeIBNCpFYs8XVRorc0h4 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 		return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8;
 	}
 
-	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_8(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SpineEvent> list_0)
+	static _nHdiyIURlAiaNZ8u6MKzxjcwnyL smethod_8(ContentManager contentManager_0, string string_0, float float_0, bool bool_0, List<SkeletonJson.SpineEvent> list_0)
 	{
 		return contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0, list_0);
 	}

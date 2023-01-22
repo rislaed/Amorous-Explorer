@@ -128,15 +128,8 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 				Environment.SetEnvironmentVariable("FNA_OPENGL_FORCE_ES3", "1");
 				Environment.SetEnvironmentVariable("SDL_OPENGL_ES_DRIVER", "1");
 			}
-			_SkYjfUaaNhTySNgoGUeFZ46X4dM skYjfUaaNhTySNgoGUeFZ46X4dM = new _SkYjfUaaNhTySNgoGUeFZ46X4dM(bool_);
-			try
-			{
-				((Game)skYjfUaaNhTySNgoGUeFZ46X4dM).Run();
-			}
-			finally
-			{
-				((IDisposable)skYjfUaaNhTySNgoGUeFZ46X4dM)?.Dispose();
-			}
+			using _SkYjfUaaNhTySNgoGUeFZ46X4dM skYjfUaaNhTySNgoGUeFZ46X4dM = new _SkYjfUaaNhTySNgoGUeFZ46X4dM(bool_);
+			skYjfUaaNhTySNgoGUeFZ46X4dM.Run();
 		}
 		catch (Exception exception_)
 		{

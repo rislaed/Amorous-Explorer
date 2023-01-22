@@ -44,7 +44,7 @@ public class IntroScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG += gameTime_0.get_ElapsedGameTime().Milliseconds;
+		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG += gameTime_0.ElapsedGameTime.Milliseconds;
 		_EZKvqbHbBzrIsmIefNbwSVvgrP5A(_h29gtnqEWLAa5qsliRXuXiPwY2o, 0f, 18000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 0, 0, 0, -540);
 		_EZKvqbHbBzrIsmIefNbwSVvgrP5A(_agB6DEyENfHFg1x2I4KsJqoQUpg, 10000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 8000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 0, 1250, 0, -170);
 		_nuSr558RHFkx9d2QBs2DeGUB1wX(_4BkRUyoqu3iKk7SRvIVoP35EcKA, 14000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 4000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, -800, 1090, 600, 1090);
@@ -55,9 +55,9 @@ public class IntroScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		if (!((float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < float_0) && (float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < float_0 + float_1)
 		{
-			float num = ((float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG - float_0) / float_1;
-			_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._7Xn1C5tjYnmIif1iZKV8AWsEEbL = MathHelper.Lerp((float)int_0, (float)int_2, num);
-			_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._bCjZ3VSXGKyhmykd2zCnQBiSpDf = MathHelper.Lerp((float)int_1, (float)int_3, num);
+			float amount = ((float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG - float_0) / float_1;
+			_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._7Xn1C5tjYnmIif1iZKV8AWsEEbL = MathHelper.Lerp(int_0, int_2, amount);
+			_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._bCjZ3VSXGKyhmykd2zCnQBiSpDf = MathHelper.Lerp(int_1, int_3, amount);
 		}
 	}
 
@@ -65,9 +65,9 @@ public class IntroScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		if (!((float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < float_0) && (float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < float_0 + float_1)
 		{
-			float num = ((float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG - float_0) / float_1;
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA_0._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = MathHelper.Lerp((float)int_0, (float)int_2, num);
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA_0._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = MathHelper.Lerp((float)int_1, (float)int_3, num);
+			float amount = ((float)_Q7Kx7ErHf3u1QIUDKfFCKSXbznG - float_0) / float_1;
+			_tfDAeR6npiqJMLRSXPO1DxGA0TgA_0._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = MathHelper.Lerp(int_0, int_2, amount);
+			_tfDAeR6npiqJMLRSXPO1DxGA0TgA_0._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = MathHelper.Lerp(int_1, int_3, amount);
 		}
 	}
 
@@ -103,7 +103,7 @@ public class IntroScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static TimeSpan smethod_19(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static float smethod_20(float float_0, float float_1, float float_2)

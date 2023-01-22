@@ -27,15 +27,10 @@ public class _Z6EKIW3ycAwV2npYuxbFLcnCTrJ
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, Effect effect_0 = null)
 	{
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
 		if (_mW1Z69pRB1eedGT3FSmdItJre5Y != null)
 		{
-			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)1, null, null, null, null, null, Matrix.CreateRotationZ(MathHelper.ToRadians(0f)));
-			if (effect_0 != null)
-			{
-				effect_0.get_CurrentTechnique().get_Passes().get_Item(0)
-					.Apply();
-			}
+			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Immediate, null, null, null, null, null, Matrix.CreateRotationZ(MathHelper.ToRadians(0f)));
+			effect_0?.CurrentTechnique.Passes[0].Apply();
 			_mW1Z69pRB1eedGT3FSmdItJre5Y._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
 			spriteBatch_0.End();
 		}
@@ -59,17 +54,17 @@ public class _Z6EKIW3ycAwV2npYuxbFLcnCTrJ
 
 	static EffectTechnique smethod_1(Effect effect_0)
 	{
-		return effect_0.get_CurrentTechnique();
+		return effect_0.CurrentTechnique;
 	}
 
 	static EffectPassCollection smethod_2(EffectTechnique effectTechnique_0)
 	{
-		return effectTechnique_0.get_Passes();
+		return effectTechnique_0.Passes;
 	}
 
 	static EffectPass smethod_3(EffectPassCollection effectPassCollection_0, int int_0)
 	{
-		return effectPassCollection_0.get_Item(int_0);
+		return effectPassCollection_0[int_0];
 	}
 
 	static void smethod_4(EffectPass effectPass_0)

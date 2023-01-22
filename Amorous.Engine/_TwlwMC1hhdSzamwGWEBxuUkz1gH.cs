@@ -65,7 +65,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 	public Texture2D _1AqpgY4vB6ly5vxOay6j86rcIEo { get; set; }
 
-	protected _TwlwMC1hhdSzamwGWEBxuUkz1gH(ContentManager contentManager_0, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null)
+	protected _TwlwMC1hhdSzamwGWEBxuUkz1gH(ContentManager contentManager_0, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SkeletonJson.SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null)
 	{
 		_uwNDZuqdFb9tyQtlQMxiz1DQ7x8 = contentManager_0;
 		_DUynKBx2CM4riE68wCCfknspxeg = new List<string>();
@@ -166,15 +166,15 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 	{
 		if (_YDmx0efYtcyg4olWGsr0rBMkyjD < _aElCqTEKQdwgSGVsOO7nt14UEsn)
 		{
-			_YDmx0efYtcyg4olWGsr0rBMkyjD += (float)gameTime_0.get_ElapsedGameTime().TotalMilliseconds;
+			_YDmx0efYtcyg4olWGsr0rBMkyjD += (float)gameTime_0.ElapsedGameTime.TotalMilliseconds;
 		}
 		else if (_YDmx0efYtcyg4olWGsr0rBMkyjD > _aElCqTEKQdwgSGVsOO7nt14UEsn)
 		{
-			_YDmx0efYtcyg4olWGsr0rBMkyjD -= (float)gameTime_0.get_ElapsedGameTime().TotalMilliseconds;
+			_YDmx0efYtcyg4olWGsr0rBMkyjD -= (float)gameTime_0.ElapsedGameTime.TotalMilliseconds;
 		}
 		if (_OnzebJryHIHB0leF5LxtbJwFXjr < _D5nVuTc7M3CvlN5bC8IzrFoWiPh)
 		{
-			_OnzebJryHIHB0leF5LxtbJwFXjr += (float)(gameTime_0.get_ElapsedGameTime().TotalMilliseconds * 0.0010000000474974513);
+			_OnzebJryHIHB0leF5LxtbJwFXjr += (float)(gameTime_0.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
 			foreach (string item in _DUynKBx2CM4riE68wCCfknspxeg)
 			{
 				_1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ(item, _OnzebJryHIHB0leF5LxtbJwFXjr);
@@ -186,7 +186,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		}
 		else if (_OnzebJryHIHB0leF5LxtbJwFXjr > _D5nVuTc7M3CvlN5bC8IzrFoWiPh)
 		{
-			_OnzebJryHIHB0leF5LxtbJwFXjr -= (float)(gameTime_0.get_ElapsedGameTime().TotalMilliseconds * 0.0010000000474974513);
+			_OnzebJryHIHB0leF5LxtbJwFXjr -= (float)(gameTime_0.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
 			foreach (string item2 in _DUynKBx2CM4riE68wCCfknspxeg)
 			{
 				_1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ(item2, _OnzebJryHIHB0leF5LxtbJwFXjr);
@@ -201,21 +201,17 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 	public virtual void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 	{
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
 		if (_h29gtnqEWLAa5qsliRXuXiPwY2o != null)
 		{
 			spriteBatch_0.Begin();
-			spriteBatch_0.Draw(_h29gtnqEWLAa5qsliRXuXiPwY2o, Vector2.get_Zero(), Color.get_White());
+			spriteBatch_0.Draw(_h29gtnqEWLAa5qsliRXuXiPwY2o, Vector2.Zero, Color.White);
 			spriteBatch_0.End();
 		}
 		_1BgOJ3z4ZUXNS2L4JWf24pr41hB._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, _1AqpgY4vB6ly5vxOay6j86rcIEo);
 		if (_XqJSGCmxFB8nW6I8Mf5NEZBQ0gG != null)
 		{
 			spriteBatch_0.Begin();
-			spriteBatch_0.Draw(_XqJSGCmxFB8nW6I8Mf5NEZBQ0gG, Vector2.get_Zero(), Color.get_White());
+			spriteBatch_0.Draw(_XqJSGCmxFB8nW6I8Mf5NEZBQ0gG, Vector2.Zero, Color.White);
 			spriteBatch_0.End();
 		}
 	}
@@ -308,7 +304,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 	static TimeSpan smethod_3(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 
 	static void smethod_4(SpriteBatch spriteBatch_0)
@@ -318,8 +314,6 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 	static void smethod_5(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2 vector2_0, Color color_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		spriteBatch_0.Draw(texture2D_0, vector2_0, color_0);
 	}
 

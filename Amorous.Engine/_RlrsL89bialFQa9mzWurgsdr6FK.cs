@@ -80,6 +80,6 @@ public abstract class _RlrsL89bialFQa9mzWurgsdr6FK<T>
 
 	static TimeSpan smethod_0(GameTime gameTime_0)
 	{
-		return gameTime_0.get_ElapsedGameTime();
+		return gameTime_0.ElapsedGameTime;
 	}
 }

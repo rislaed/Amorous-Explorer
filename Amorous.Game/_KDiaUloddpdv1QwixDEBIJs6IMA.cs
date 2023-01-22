@@ -8,21 +8,17 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 
 	public bool _oD87G7SXjsTukw7IVWxVlVFEgvA(uint uint_0, _JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000c: Expected O, but got Unknown
-		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Expected O, but got Unknown
 		try
 		{
 			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F = new Client(uint_0);
-			if (!((BaseSteamworks)_f9R8NSqY1uzRQ0MIHLS7AsTyi7F).get_IsValid())
+			if (!_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.IsValid)
 			{
 				throw new Exception("Invalid Steam-client");
 			}
 			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.CustomInitialize();
-			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.HookScreenshots(true);
-			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.add_ScreenshotRequest(new ScreenshotRequestDelegate(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._VN2LxjGLZldLNfiJ1OniiaXfYBg));
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._JmIDYFXDf2wcAGArwRlNg4WYoUEA("Successfully loaded Steamworks, welcome {0}!", _f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Username());
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.HookScreenshots(hook: true);
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.ScreenshotRequest += _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._VN2LxjGLZldLNfiJ1OniiaXfYBg;
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._JmIDYFXDf2wcAGArwRlNg4WYoUEA("Successfully loaded Steamworks, welcome {0}!", _f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Username);
 			return true;
 		}
 		catch (Exception)
@@ -34,39 +30,37 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo()
 	{
-		((BaseSteamworks)_f9R8NSqY1uzRQ0MIHLS7AsTyi7F).Update();
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Update();
 	}
 
 	public void _9K6cA2OPGJaecqk3spsceT9ilNI(string string_0, int int_0, int int_1)
 	{
-		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Screenshots().AddScreenshotToLibrary(Path.Combine(Directory.GetCurrentDirectory(), string_0), int_0, int_1);
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Screenshots.AddScreenshotToLibrary(Path.Combine(Directory.GetCurrentDirectory(), string_0), int_0, int_1);
 	}
 
 	public void _vVZVLriSGPExpn1KeobglMabsoi(string string_0)
 	{
-		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Achievements().Trigger(string_0, true);
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Achievements.Trigger(string_0);
 	}
 
 	public void _jUIwOLgbKJ8tJmUAAQs6pm6ZGWb()
 	{
-		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Overlay().OpenAchievements(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_SteamId());
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Overlay.OpenAchievements(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.SteamId);
 	}
 
 	public void _fDSidqggP063WGf2vzkdlA1UDkn(string string_0)
 	{
-		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Overlay().OpenUrl(string_0);
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Overlay.OpenUrl(string_0);
 	}
 
 	static Client smethod_0(uint uint_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected O, but got Unknown
 		return new Client(uint_0);
 	}
 
 	static bool smethod_1(BaseSteamworks baseSteamworks_0)
 	{
-		return baseSteamworks_0.get_IsValid();
+		return baseSteamworks_0.IsValid;
 	}
 
 	static Exception smethod_2(string string_0)
@@ -84,14 +78,14 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 		client_0.HookScreenshots(bool_0);
 	}
 
-	static void smethod_5(Client client_0, ScreenshotRequestDelegate screenshotRequestDelegate_0)
+	static void smethod_5(Client client_0, Client.ScreenshotRequestDelegate screenshotRequestDelegate_0)
 	{
-		client_0.add_ScreenshotRequest(screenshotRequestDelegate_0);
+		client_0.ScreenshotRequest += screenshotRequestDelegate_0;
 	}
 
 	static string smethod_6(Client client_0)
 	{
-		return client_0.get_Username();
+		return client_0.Username;
 	}
 
 	static void smethod_7(string string_0, object[] object_0)
@@ -111,7 +105,7 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 
 	static Screenshots smethod_10(Client client_0)
 	{
-		return client_0.get_Screenshots();
+		return client_0.Screenshots;
 	}
 
 	static string smethod_11()
@@ -131,7 +125,7 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 
 	static Achievements smethod_14(Client client_0)
 	{
-		return client_0.get_Achievements();
+		return client_0.Achievements;
 	}
 
 	static bool smethod_15(Achievements achievements_0, string string_0, bool bool_0)
@@ -141,12 +135,12 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 
 	static Overlay smethod_16(Client client_0)
 	{
-		return client_0.get_Overlay();
+		return client_0.Overlay;
 	}
 
 	static ulong smethod_17(Client client_0)
 	{
-		return client_0.get_SteamId();
+		return client_0.SteamId;
 	}
 
 	static void smethod_18(Overlay overlay_0, ulong ulong_0)

@@ -34,33 +34,23 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public _k8LAl8bPyzLGEpo59dKFGU4sCQ(Game game_0)
 	{
-		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0055: Expected O, but got Unknown
-		//IL_0063: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Expected O, but got Unknown
-		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0094: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b0: Expected O, but got Unknown
 		_4L7hfXrWoDdArQiscG4ukHCV46B = game_0;
-		_OaIpAM8LUMZnUHberg4zeLNyWCd = new SpriteBatch(game_0.get_GraphicsDevice());
-		_5YcBaRKou3OVWCywHF9K49yk2u9 = new Texture2D(_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice(), 1, 1);
-		_5YcBaRKou3OVWCywHF9K49yk2u9.SetData<Color>((Color[])(object)new Color[1]
+		_OaIpAM8LUMZnUHberg4zeLNyWCd = new SpriteBatch(game_0.GraphicsDevice);
+		_5YcBaRKou3OVWCywHF9K49yk2u9 = new Texture2D(_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice, 1, 1);
+		_5YcBaRKou3OVWCywHF9K49yk2u9.SetData(new Color[1]
 		{
 			new Color(255, 255, 255, 255)
 		});
-		RasterizerState val = new RasterizerState();
-		val.set_ScissorTestEnable(true);
-		_T3zdQhKBBD6DNUg8RQ7EupUHIoE = val;
+		_T3zdQhKBBD6DNUg8RQ7EupUHIoE = new RasterizerState
+		{
+			ScissorTestEnable = true
+		};
 		_Al96gNPtV1ulU681NMxd1IeQxQq.Add(string.Empty, 0);
 		_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(0, _5YcBaRKou3OVWCywHF9K49yk2u9);
 	}
 
 	private Color _TmKnNO76rW7a4nj5ivlAGl4rlrd(int int_0)
 	{
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
 		byte[] bytes = BitConverter.GetBytes(int_0);
 		return new Color((float)(int)bytes[2] / 255f, (float)(int)bytes[1] / 255f, (float)(int)bytes[0] / 255f) * ((float)(int)bytes[3] / 255f);
 	}
@@ -71,7 +61,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		{
 			return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
 		}
-		Texture2D value = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>(Path.GetDirectoryName(name) + "/" + Path.GetFileNameWithoutExtension(name));
+		Texture2D value = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<Texture2D>(Path.GetDirectoryName(name) + "/" + Path.GetFileNameWithoutExtension(name));
 		int count = _Al96gNPtV1ulU681NMxd1IeQxQq.Count;
 		_Al96gNPtV1ulU681NMxd1IeQxQq.Add(name, count);
 		_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(count, value);
@@ -80,10 +70,6 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public void SetTexture(string name, object texture)
 	{
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002b: Expected O, but got Unknown
-		//IL_004d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0057: Expected O, but got Unknown
 		if (_Al96gNPtV1ulU681NMxd1IeQxQq.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
 		{
 			_48Ia4uIlwwllIw0MIzPjdWOBDqx[_SfJPevkmlfWx0UJQBD7GNI1bOPA] = (Texture2D)texture;
@@ -102,7 +88,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		}
 		if (!_ludG33HqMIBuda5aoAUm6woMHdh.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
 		{
-			SpriteFont value = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>(name);
+			SpriteFont value = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<SpriteFont>(name);
 			int count = _ludG33HqMIBuda5aoAUm6woMHdh.Count;
 			_ludG33HqMIBuda5aoAUm6woMHdh.Add(name, count);
 			_Ks5fhSCbnJp6pmRDanq4sn9DlRF.Add(count, value);
@@ -111,76 +97,58 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
 	}
 
-	public Point GetTextSize(string text, int font)
+	public Squid.Point GetTextSize(string text, int font)
 	{
-		//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
 		if (string.IsNullOrEmpty(text))
 		{
-			return Point.Zero;
+			return Squid.Point.Zero;
 		}
 		if (_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
 		{
-			Vector2 val = _YWublsgGSMYGc5V0KPieIYbXfdl.MeasureString(text);
-			return new Point((int)val.X, (int)val.Y);
+			Vector2 vector = _YWublsgGSMYGc5V0KPieIYbXfdl.MeasureString(text);
+			return new Squid.Point((int)vector.X, (int)vector.Y);
 		}
-		return Point.Zero;
+		return Squid.Point.Zero;
 	}
 
-	public Point GetTextureSize(int texture)
+	public Squid.Point GetTextureSize(int texture)
 	{
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
 		if (_48Ia4uIlwwllIw0MIzPjdWOBDqx.TryGetValue(texture, out _lruDd2bffYslbTUZZOo7HsfbTFA))
 		{
-			return new Point(_lruDd2bffYslbTUZZOo7HsfbTFA.get_Width(), _lruDd2bffYslbTUZZOo7HsfbTFA.get_Height());
+			return new Squid.Point(_lruDd2bffYslbTUZZOo7HsfbTFA.Width, _lruDd2bffYslbTUZZOo7HsfbTFA.Height);
 		}
-		return Point.Zero;
+		return Squid.Point.Zero;
 	}
 
 	public void DrawBox(int x, int y, int w, int h, int color)
 	{
-		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		_OaIpAM8LUMZnUHberg4zeLNyWCd.Draw(_5YcBaRKou3OVWCywHF9K49yk2u9, new Rectangle(x, y, w, h), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
+		_OaIpAM8LUMZnUHberg4zeLNyWCd.Draw(_5YcBaRKou3OVWCywHF9K49yk2u9, new Microsoft.Xna.Framework.Rectangle(x, y, w, h), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
 	}
 
 	public void DrawText(string text, int x, int y, int font, int color)
 	{
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
 		if (_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
 		{
-			_OaIpAM8LUMZnUHberg4zeLNyWCd._FY70IFLoBond3ORPe0ndCLvIeVcA(_YWublsgGSMYGc5V0KPieIYbXfdl, text, new Vector2((float)x, (float)y), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
+			_OaIpAM8LUMZnUHberg4zeLNyWCd._FY70IFLoBond3ORPe0ndCLvIeVcA(_YWublsgGSMYGc5V0KPieIYbXfdl, text, new Vector2(x, y), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
 		}
 	}
 
-	public void DrawTexture(int texture, int x, int y, int w, int h, Rectangle rect, int color)
+	public void DrawTexture(int texture, int x, int y, int w, int h, Squid.Rectangle rect, int color)
 	{
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0047: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
 		if (_48Ia4uIlwwllIw0MIzPjdWOBDqx.TryGetValue(texture, out _lruDd2bffYslbTUZZOo7HsfbTFA))
 		{
-			_OaIpAM8LUMZnUHberg4zeLNyWCd.Draw(_lruDd2bffYslbTUZZOo7HsfbTFA, new Rectangle(x, y, w, h), (Rectangle?)new Rectangle(((Rectangle)(ref rect)).get_Left(), ((Rectangle)(ref rect)).get_Top(), ((Rectangle)(ref rect)).get_Width(), ((Rectangle)(ref rect)).get_Height()), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color), 0f, Vector2.get_Zero(), (SpriteEffects)0, 0f);
+			_OaIpAM8LUMZnUHberg4zeLNyWCd.Draw(_lruDd2bffYslbTUZZOo7HsfbTFA, new Microsoft.Xna.Framework.Rectangle(x, y, w, h), new Microsoft.Xna.Framework.Rectangle(rect.Left, rect.Top, rect.Width, rect.Height), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color), 0f, Vector2.Zero, SpriteEffects.None, 0f);
 		}
 	}
 
 	public void Scissor(int x, int y, int w, int h)
 	{
-		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
-		_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice().set_ScissorRectangle(new Rectangle(x, y, w, h));
+		_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice.ScissorRectangle = new Microsoft.Xna.Framework.Rectangle(x, y, w, h);
 	}
 
 	public void StartBatch()
 	{
-		_OaIpAM8LUMZnUHberg4zeLNyWCd._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)0, null, null, null, _T3zdQhKBBD6DNUg8RQ7EupUHIoE);
+		_OaIpAM8LUMZnUHberg4zeLNyWCd._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Deferred, null, null, null, _T3zdQhKBBD6DNUg8RQ7EupUHIoE);
 	}
 
 	public void EndBatch(bool final)
@@ -194,20 +162,16 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	static GraphicsDevice smethod_0(Game game_0)
 	{
-		return game_0.get_GraphicsDevice();
+		return game_0.GraphicsDevice;
 	}
 
 	static SpriteBatch smethod_1(GraphicsDevice graphicsDevice_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected O, but got Unknown
 		return new SpriteBatch(graphicsDevice_0);
 	}
 
 	static Texture2D smethod_2(GraphicsDevice graphicsDevice_0, int int_0, int int_1)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0009: Expected O, but got Unknown
 		return new Texture2D(graphicsDevice_0, int_0, int_1);
 	}
 
@@ -218,7 +182,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	static ContentManager smethod_4(Game game_0)
 	{
-		return game_0.get_Content();
+		return game_0.Content;
 	}
 
 	static string smethod_5(string string_0)
@@ -248,18 +212,17 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	static Vector2 smethod_10(SpriteFont spriteFont_0, string string_0)
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		return spriteFont_0.MeasureString(string_0);
 	}
 
 	static int smethod_11(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Width();
+		return texture2D_0.Width;
 	}
 
 	static int smethod_12(Texture2D texture2D_0)
 	{
-		return texture2D_0.get_Height();
+		return texture2D_0.Height;
 	}
 
 	static void smethod_13(SpriteBatch spriteBatch_0)

@@ -90,18 +90,14 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	protected _7UlnfykmEmZDFt3BmCKZekI43Ih(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Expected O, but got Unknown
 		_ZzBuoSDMWwerejOO9Goyv2OCKgE = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
 		_lstlI8qzZ4KErYKnufdOlj1xVZF = new List<_ujAkjlfN5TywwbLAUDzPvtab6uJ>();
 		_XvcwmP1Eb6HFUF5pkiUVgpqNbWE = BlendState.NonPremultiplied;
-		Desktop val = new Desktop();
-		val.set_Skin(Gui.GenerateStandardSkin());
-		((Control)val).set_Size(new Point(1920, 1080));
-		_PnkAlVnMv0SZvRBFexqzE5DF9tp = val;
+		_PnkAlVnMv0SZvRBFexqzE5DF9tp = new Desktop
+		{
+			Skin = Gui.GenerateStandardSkin(),
+			Size = new Squid.Point(1920, 1080)
+		};
 		_PnkAlVnMv0SZvRBFexqzE5DF9tp._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 	}
 
@@ -219,9 +215,9 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 			throw new ArgumentException("Images cannot be empty");
 		}
 		List<Texture2D> list = new List<Texture2D>(string_1.Length);
-		foreach (string text in string_1)
+		foreach (string assetName in string_1)
 		{
-			list.Add(_ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(text));
+			list.Add(_ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(assetName));
 		}
 		return new _kxm3yIqio0baXT5t5vOHBAEdviB(this, string_0, int_2, list)
 		{
@@ -232,9 +228,8 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private _C9DhEciuJHkReX4htI9sP6cbqzF _XT2tGTaFVsx2TLRQk2fgvrCwVmD(string string_0, string string_1, int int_0, int int_1, float float_0, int int_2, int int_3)
 	{
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
 		Texture2D texture2D_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
-		return new _C9DhEciuJHkReX4htI9sP6cbqzF(this, string_0, texture2D_, float_0, new Vector2((float)int_2, (float)int_3))
+		return new _C9DhEciuJHkReX4htI9sP6cbqzF(this, string_0, texture2D_, float_0, new Vector2(int_2, int_3))
 		{
 			_7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0,
 			_bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1
@@ -285,9 +280,9 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 			throw new ArgumentException("Images cannot be empty");
 		}
 		List<Texture2D> list = new List<Texture2D>(string_1.Length);
-		foreach (string text in string_1)
+		foreach (string assetName in string_1)
 		{
-			list.Add(_ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(text));
+			list.Add(_ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(assetName));
 		}
 		return new _rmc1e7Ng50C4uLmgllAoRtxaZiB(this, string_0, action_0, int_2, list)
 		{
@@ -298,10 +293,6 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public virtual void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		//IL_00cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00db: Unknown result type (might be due to invalid IL or missing references)
 		if (_Bj3jScuqBJCFV58AWBDg8HofpqY)
 		{
 			_lstlI8qzZ4KErYKnufdOlj1xVZF = (from _ujAkjlfN5TywwbLAUDzPvtab6uJ_0 in _lstlI8qzZ4KErYKnufdOlj1xVZF
@@ -322,7 +313,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 				_QLfEh7VVWqcVZ2VleBjZBbD78ng._dGJ5R083rg1lKbVYP4W1TUEBqoh();
 				_QLfEh7VVWqcVZ2VleBjZBbD78ng = null;
 			}
-			Point point_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._e6KgAy4CTN1JFYwA88grvAEmDxX(_ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+			Microsoft.Xna.Framework.Point point_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._e6KgAy4CTN1JFYwA88grvAEmDxX(_ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
 			_MVL2E4AzcbNhDrRfPFXBDnmcJ4c(point_, bool_, _lstlI8qzZ4KErYKnufdOlj1xVZF);
 		}
 		_PnkAlVnMv0SZvRBFexqzE5DF9tp.Update();
@@ -339,14 +330,10 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 		}
 	}
 
-	private void _MVL2E4AzcbNhDrRfPFXBDnmcJ4c(Point point_0, bool bool_0, List<_ujAkjlfN5TywwbLAUDzPvtab6uJ> list_0)
+	private void _MVL2E4AzcbNhDrRfPFXBDnmcJ4c(Microsoft.Xna.Framework.Point point_0, bool bool_0, List<_ujAkjlfN5TywwbLAUDzPvtab6uJ> list_0)
 	{
-		//IL_0092: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0125: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014b: Unknown result type (might be due to invalid IL or missing references)
 		_ujAkjlfN5TywwbLAUDzPvtab6uJ ujAkjlfN5TywwbLAUDzPvtab6uJ = null;
-		Rectangle val = default(Rectangle);
+		Microsoft.Xna.Framework.Rectangle rectangle = default(Microsoft.Xna.Framework.Rectangle);
 		for (int num = list_0.Count - 1; num >= 0; num--)
 		{
 			_ujAkjlfN5TywwbLAUDzPvtab6uJ ujAkjlfN5TywwbLAUDzPvtab6uJ2 = list_0[num];
@@ -357,11 +344,11 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 					ujAkjlfN5TywwbLAUDzPvtab6uJ2._oc2Bt2sYu2e2W8gFbd4cz1hv2Fq();
 					if (ujAkjlfN5TywwbLAUDzPvtab6uJ == null)
 					{
-						val.X = (int)ujAkjlfN5TywwbLAUDzPvtab6uJ2._7Xn1C5tjYnmIif1iZKV8AWsEEbL;
-						val.Y = (int)ujAkjlfN5TywwbLAUDzPvtab6uJ2._bCjZ3VSXGKyhmykd2zCnQBiSpDf;
-						val.Width = ujAkjlfN5TywwbLAUDzPvtab6uJ2._je8rVfyg4zywmqSi4Ozx1z7wJ4b;
-						val.Height = ujAkjlfN5TywwbLAUDzPvtab6uJ2._WJfGWBzn4wgdGBnMWRH2pcJ3AqH;
-						if (((Rectangle)(ref val)).Contains(point_0))
+						rectangle.X = (int)ujAkjlfN5TywwbLAUDzPvtab6uJ2._7Xn1C5tjYnmIif1iZKV8AWsEEbL;
+						rectangle.Y = (int)ujAkjlfN5TywwbLAUDzPvtab6uJ2._bCjZ3VSXGKyhmykd2zCnQBiSpDf;
+						rectangle.Width = ujAkjlfN5TywwbLAUDzPvtab6uJ2._je8rVfyg4zywmqSi4Ozx1z7wJ4b;
+						rectangle.Height = ujAkjlfN5TywwbLAUDzPvtab6uJ2._WJfGWBzn4wgdGBnMWRH2pcJ3AqH;
+						if (rectangle.Contains(point_0))
 						{
 							ujAkjlfN5TywwbLAUDzPvtab6uJ2._i3qb0SiBqvdxqp5NXIRGrNGErxh();
 							ujAkjlfN5TywwbLAUDzPvtab6uJ = ujAkjlfN5TywwbLAUDzPvtab6uJ2;
@@ -374,16 +361,16 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 					_4QLHHCk23T1BjK7acKxASbkCefG._IvIFs0Tl6RHdTn3daJXsNCXCNyO = false;
 					if (ujAkjlfN5TywwbLAUDzPvtab6uJ == null)
 					{
-						val.X = (int)_4QLHHCk23T1BjK7acKxASbkCefG._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL;
-						val.Y = (int)_4QLHHCk23T1BjK7acKxASbkCefG._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf;
-						val.Width = (int)((float)_4QLHHCk23T1BjK7acKxASbkCefG._je8rVfyg4zywmqSi4Ozx1z7wJ4b * _4QLHHCk23T1BjK7acKxASbkCefG._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
-						val.Height = (int)((float)_4QLHHCk23T1BjK7acKxASbkCefG._WJfGWBzn4wgdGBnMWRH2pcJ3AqH * _4QLHHCk23T1BjK7acKxASbkCefG._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+						rectangle.X = (int)_4QLHHCk23T1BjK7acKxASbkCefG._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL;
+						rectangle.Y = (int)_4QLHHCk23T1BjK7acKxASbkCefG._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf;
+						rectangle.Width = (int)((float)_4QLHHCk23T1BjK7acKxASbkCefG._je8rVfyg4zywmqSi4Ozx1z7wJ4b * _4QLHHCk23T1BjK7acKxASbkCefG._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+						rectangle.Height = (int)((float)_4QLHHCk23T1BjK7acKxASbkCefG._WJfGWBzn4wgdGBnMWRH2pcJ3AqH * _4QLHHCk23T1BjK7acKxASbkCefG._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 						if (_4QLHHCk23T1BjK7acKxASbkCefG is _tfDAeR6npiqJMLRSXPO1DxGA0TgA)
 						{
-							val.X -= val.Width / 2;
-							val.Y -= val.Height;
+							rectangle.X -= rectangle.Width / 2;
+							rectangle.Y -= rectangle.Height;
 						}
-						if (_4QLHHCk23T1BjK7acKxASbkCefG._ZVpZ5Oing5kbbVhbmbOHyrofGH7 != null && ((Rectangle)(ref val)).Contains(point_0))
+						if (_4QLHHCk23T1BjK7acKxASbkCefG._ZVpZ5Oing5kbbVhbmbOHyrofGH7 != null && rectangle.Contains(point_0))
 						{
 							_4QLHHCk23T1BjK7acKxASbkCefG._IvIFs0Tl6RHdTn3daJXsNCXCNyO = true;
 							ujAkjlfN5TywwbLAUDzPvtab6uJ = ujAkjlfN5TywwbLAUDzPvtab6uJ2;
@@ -414,7 +401,6 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public virtual void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
 		_rNZd4y7Vjg7H4PTzsnTaLEi5v8b(spriteBatch_0, skeletonMeshRenderer_0, matrix_0, _lstlI8qzZ4KErYKnufdOlj1xVZF);
 	}
 
@@ -425,13 +411,6 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _rNZd4y7Vjg7H4PTzsnTaLEi5v8b(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0, IEnumerable<_ujAkjlfN5TywwbLAUDzPvtab6uJ> ienumerable_0)
 	{
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0118: Unknown result type (might be due to invalid IL or missing references)
 		bool flag = false;
 		foreach (_ujAkjlfN5TywwbLAUDzPvtab6uJ item in ienumerable_0)
 		{
@@ -457,7 +436,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 					{
 						if (!flag)
 						{
-							_dXVK1NWaxcsgYg6KpavA0e8oion._g9Sx54kMPiHz5jrqWh4Kb1pTijH(nullable_0: matrix_0, spriteBatch_0: spriteBatch_0, spriteSortMode_0: (SpriteSortMode)0, blendState_0: _XvcwmP1Eb6HFUF5pkiUVgpqNbWE);
+							spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Deferred, nullable_0: matrix_0, blendState_0: _XvcwmP1Eb6HFUF5pkiUVgpqNbWE);
 							flag = true;
 						}
 						item._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
@@ -500,12 +479,6 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _nrDmURIbDeklrMRB6X5y3IwhP1Q(_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve_0, SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00af: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b6: Unknown result type (might be due to invalid IL or missing references)
 		_QGGOTxZ8aNWGh0hc26wcmx8wmwT _4QLHHCk23T1BjK7acKxASbkCefG = _3IHp43rpkJgOBcY9lrIrwMuwWve_0._4QLHHCk23T1BjK7acKxASbkCefG;
 		if (_4QLHHCk23T1BjK7acKxASbkCefG is _tfDAeR6npiqJMLRSXPO1DxGA0TgA)
 		{
@@ -523,7 +496,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 		}
 		else if (_4QLHHCk23T1BjK7acKxASbkCefG is _xZgbANe7gi6i2DAhBEkKpR1QFLe)
 		{
-			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)1, BlendState.NonPremultiplied, null, null, null, null, (!_4QLHHCk23T1BjK7acKxASbkCefG._zkHMlDFkja4TqmjdlHuZRCj8FCB) ? matrix_0 : Matrix.get_Identity());
+			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Immediate, BlendState.NonPremultiplied, null, null, null, null, (!_4QLHHCk23T1BjK7acKxASbkCefG._zkHMlDFkja4TqmjdlHuZRCj8FCB) ? matrix_0 : Matrix.Identity);
 			((_xZgbANe7gi6i2DAhBEkKpR1QFLe)_4QLHHCk23T1BjK7acKxASbkCefG)._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
 			spriteBatch_0.End();
 		}
@@ -576,19 +549,17 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	static Desktop smethod_0()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
 		return new Desktop();
 	}
 
-	static Skin smethod_1()
+	static Squid.Skin smethod_1()
 	{
 		return Gui.GenerateStandardSkin();
 	}
 
-	static void smethod_2(Desktop desktop_0, Skin skin_0)
+	static void smethod_2(Desktop desktop_0, Squid.Skin skin_0)
 	{
-		desktop_0.set_Skin(skin_0);
+		desktop_0.Skin = skin_0;
 	}
 
 	static ArgumentException smethod_3(string string_0)

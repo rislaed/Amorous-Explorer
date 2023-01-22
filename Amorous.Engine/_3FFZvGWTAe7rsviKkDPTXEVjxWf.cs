@@ -14,7 +14,6 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 
 		internal bool _A9CfPN7dQuZ3AAVKZF9ow2bKb7y(Keys keys_0)
 		{
-			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			return _qy4C18YJHEicy4hTkm6j5yaDlSV.Contains(keys_0);
 		}
 	}
@@ -43,7 +42,7 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 
 	public Point _U7CeYBJ1v1SoUxpX8emsQ9mWl5b => _bN58s8paKnVuWr3UMJsZkvbV9WA;
 
-	public int _xFrCcVNAYrShLz07HqDph01nGwX => Math.Max(-1, Math.Min(((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue() - ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue(), 1));
+	public int _xFrCcVNAYrShLz07HqDph01nGwX => Math.Max(-1, Math.Min(_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue - _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue, 1));
 
 	public bool _tZI6Co0uB31aGK7Qk4qvEImgcnO
 	{
@@ -53,7 +52,7 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 		}
 		set
 		{
-			SDL.SDL_SetWindowGrab(_4L7hfXrWoDdArQiscG4ukHCV46B._8k7Do3TGW5NrB22zl8QzInP2j7k.get_Handle(), (SDL_bool)(value ? 1 : 0));
+			SDL.SDL_SetWindowGrab(_4L7hfXrWoDdArQiscG4ukHCV46B._8k7Do3TGW5NrB22zl8QzInP2j7k.Handle, value ? SDL.SDL_bool.SDL_TRUE : SDL.SDL_bool.SDL_FALSE);
 			_TuLPATzfvkT61cGzdP0BdAYgdRg = value;
 		}
 	}
@@ -65,205 +64,143 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo()
 	{
-		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0031: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
 		_JxAOrrJ4bqv0CaScbroMtsBP9vo = _QyGrB1OudfOfivAikLqMIOfHz3L;
 		_QyGrB1OudfOfivAikLqMIOfHz3L = Keyboard.GetState();
 		_RYQYlBTtUaKPqglBPk0fi7hT7pr = _QG4mFT06aDk75H8FavD2erQSaah;
-		_QG4mFT06aDk75H8FavD2erQSaah = GamePad.GetState((PlayerIndex)0);
+		_QG4mFT06aDk75H8FavD2erQSaah = GamePad.GetState(PlayerIndex.One);
 		_nL6AWNBZGcjH4ycaR2xzpUdcYpMA = _N9dtCLxcbyjVo7hRyMVQzD7exaM;
 		_N9dtCLxcbyjVo7hRyMVQzD7exaM = Mouse.GetState();
-		_z4wENYBCooFsUzGd3jpaiN6UNNL.X = Math.Max(0, Math.Min(((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_X(), _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._ssaTWDF5CYtQ9fGbLNtaLrgFtvJ));
-		_z4wENYBCooFsUzGd3jpaiN6UNNL.Y = Math.Max(0, Math.Min(((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_Y(), _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._EM2dYeybqjLlS6bODr1k9TxIRZU));
+		_z4wENYBCooFsUzGd3jpaiN6UNNL.X = Math.Max(0, Math.Min(_N9dtCLxcbyjVo7hRyMVQzD7exaM.X, _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._ssaTWDF5CYtQ9fGbLNtaLrgFtvJ));
+		_z4wENYBCooFsUzGd3jpaiN6UNNL.Y = Math.Max(0, Math.Min(_N9dtCLxcbyjVo7hRyMVQzD7exaM.Y, _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._EM2dYeybqjLlS6bODr1k9TxIRZU));
 		_bN58s8paKnVuWr3UMJsZkvbV9WA.X = (int)_z4wENYBCooFsUzGd3jpaiN6UNNL.X;
 		_bN58s8paKnVuWr3UMJsZkvbV9WA.Y = (int)_z4wENYBCooFsUzGd3jpaiN6UNNL.Y;
 	}
 
 	public bool _WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Keys keys_0)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Invalid comparison between Unknown and I4
-		return (int)((KeyboardState)(ref _QyGrB1OudfOfivAikLqMIOfHz3L)).get_Item(keys_0) == 1;
+		return _QyGrB1OudfOfivAikLqMIOfHz3L[keys_0] == KeyState.Down;
 	}
 
 	public bool _WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Buttons buttons_0)
 	{
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		if (((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).get_IsConnected())
+		if (_QG4mFT06aDk75H8FavD2erQSaah.IsConnected)
 		{
-			return ((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).IsButtonDown(buttons_0);
+			return _QG4mFT06aDk75H8FavD2erQSaah.IsButtonDown(buttons_0);
 		}
 		return false;
 	}
 
 	public bool _WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq _PMeRYZJaBCqgB9uADJFP3c14lxq_0)
 	{
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Invalid comparison between Unknown and I4
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Invalid comparison between Unknown and I4
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Invalid comparison between Unknown and I4
-		//IL_0089: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008f: Invalid comparison between Unknown and I4
-		//IL_0098: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009e: Invalid comparison between Unknown and I4
 		return _PMeRYZJaBCqgB9uADJFP3c14lxq_0 switch
 		{
-			_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton => (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_LeftButton() == 1, 
-			_PMeRYZJaBCqgB9uADJFP3c14lxq.MiddleButton => (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_MiddleButton() == 1, 
-			_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton => (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_RightButton() == 1, 
-			_PMeRYZJaBCqgB9uADJFP3c14lxq.WheelUp => ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue() > ((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue(), 
-			_PMeRYZJaBCqgB9uADJFP3c14lxq.WheelDown => ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue() < ((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue(), 
-			_PMeRYZJaBCqgB9uADJFP3c14lxq.XButton1 => (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton1() == 1, 
-			_PMeRYZJaBCqgB9uADJFP3c14lxq.XButton2 => (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton2() == 1, 
+			_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton => _N9dtCLxcbyjVo7hRyMVQzD7exaM.LeftButton == ButtonState.Pressed, 
+			_PMeRYZJaBCqgB9uADJFP3c14lxq.MiddleButton => _N9dtCLxcbyjVo7hRyMVQzD7exaM.MiddleButton == ButtonState.Pressed, 
+			_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton => _N9dtCLxcbyjVo7hRyMVQzD7exaM.RightButton == ButtonState.Pressed, 
+			_PMeRYZJaBCqgB9uADJFP3c14lxq.WheelUp => _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue > _nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue, 
+			_PMeRYZJaBCqgB9uADJFP3c14lxq.WheelDown => _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue < _nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue, 
+			_PMeRYZJaBCqgB9uADJFP3c14lxq.XButton1 => _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton1 == ButtonState.Pressed, 
+			_PMeRYZJaBCqgB9uADJFP3c14lxq.XButton2 => _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton2 == ButtonState.Pressed, 
 			_ => false, 
 		};
 	}
 
 	public bool _8SJFmJwpIuh21zGxGpCCuX20PBj(Keys keys_0)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Invalid comparison between Unknown and I4
-		return (int)((KeyboardState)(ref _QyGrB1OudfOfivAikLqMIOfHz3L)).get_Item(keys_0) == 0;
+		return _QyGrB1OudfOfivAikLqMIOfHz3L[keys_0] == KeyState.Up;
 	}
 
 	public bool _8SJFmJwpIuh21zGxGpCCuX20PBj(Buttons buttons_0)
 	{
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		if (((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).get_IsConnected())
+		if (_QG4mFT06aDk75H8FavD2erQSaah.IsConnected)
 		{
-			return ((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).IsButtonUp(buttons_0);
+			return _QG4mFT06aDk75H8FavD2erQSaah.IsButtonUp(buttons_0);
 		}
 		return true;
 	}
 
 	public bool _8SJFmJwpIuh21zGxGpCCuX20PBj(_PMeRYZJaBCqgB9uADJFP3c14lxq _PMeRYZJaBCqgB9uADJFP3c14lxq_0)
 	{
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Invalid comparison between Unknown and I4
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Invalid comparison between Unknown and I4
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Invalid comparison between Unknown and I4
-		//IL_0072: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0078: Invalid comparison between Unknown and I4
-		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0087: Invalid comparison between Unknown and I4
 		switch (_PMeRYZJaBCqgB9uADJFP3c14lxq_0)
 		{
 		default:
 			return true;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton:
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_LeftButton() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.LeftButton == ButtonState.Released;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.MiddleButton:
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_MiddleButton() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.MiddleButton == ButtonState.Released;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton:
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_RightButton() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.RightButton == ButtonState.Released;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.WheelUp:
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.WheelDown:
-			return ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue() - ((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue - _nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue == 0;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.XButton1:
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton1() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton1 == ButtonState.Released;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.XButton2:
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton2() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton2 == ButtonState.Released;
 		}
 	}
 
 	public bool _fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys keys_0)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001b: Invalid comparison between Unknown and I4
-		if ((int)((KeyboardState)(ref _JxAOrrJ4bqv0CaScbroMtsBP9vo)).get_Item(keys_0) == 0)
+		if (_JxAOrrJ4bqv0CaScbroMtsBP9vo[keys_0] == KeyState.Up)
 		{
-			return (int)((KeyboardState)(ref _QyGrB1OudfOfivAikLqMIOfHz3L)).get_Item(keys_0) == 1;
+			return _QyGrB1OudfOfivAikLqMIOfHz3L[keys_0] == KeyState.Down;
 		}
 		return false;
 	}
 
 	public bool _fy5ebLnmRsRXv9v7RKTFU5CGMaH(Buttons buttons_0)
 	{
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		if (((GamePadState)(ref _RYQYlBTtUaKPqglBPk0fi7hT7pr)).get_IsConnected() && ((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).get_IsConnected())
+		if (_RYQYlBTtUaKPqglBPk0fi7hT7pr.IsConnected && _QG4mFT06aDk75H8FavD2erQSaah.IsConnected)
 		{
-			if (!((GamePadState)(ref _RYQYlBTtUaKPqglBPk0fi7hT7pr)).IsButtonUp(buttons_0))
+			if (!_RYQYlBTtUaKPqglBPk0fi7hT7pr.IsButtonUp(buttons_0))
 			{
 				return false;
 			}
-			return ((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).IsButtonDown(buttons_0);
+			return _QG4mFT06aDk75H8FavD2erQSaah.IsButtonDown(buttons_0);
 		}
 		return false;
 	}
 
 	public bool _fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq _PMeRYZJaBCqgB9uADJFP3c14lxq_0)
 	{
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Invalid comparison between Unknown and I4
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005b: Invalid comparison between Unknown and I4
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Invalid comparison between Unknown and I4
-		//IL_00b6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cb: Invalid comparison between Unknown and I4
-		//IL_00d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e7: Invalid comparison between Unknown and I4
 		switch (_PMeRYZJaBCqgB9uADJFP3c14lxq_0)
 		{
 		default:
 			return false;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_LeftButton() != 0)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.LeftButton != 0)
 			{
 				return false;
 			}
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_LeftButton() == 1;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.LeftButton == ButtonState.Pressed;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.MiddleButton:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_MiddleButton() == 0)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.MiddleButton == ButtonState.Released)
 			{
-				return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_MiddleButton() == 1;
+				return _N9dtCLxcbyjVo7hRyMVQzD7exaM.MiddleButton == ButtonState.Pressed;
 			}
 			return false;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_RightButton() != 0)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.RightButton != 0)
 			{
 				return false;
 			}
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_RightButton() == 1;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.RightButton == ButtonState.Pressed;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.WheelUp:
-			return ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue() > ((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue();
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue > _nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.WheelDown:
-			return ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue() < ((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue();
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue < _nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.XButton1:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_XButton1() != 0)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.XButton1 != 0)
 			{
 				return false;
 			}
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton1() == 1;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton1 == ButtonState.Pressed;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.XButton2:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_XButton2() == 0)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.XButton2 == ButtonState.Released)
 			{
-				return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton2() == 1;
+				return _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton2 == ButtonState.Pressed;
 			}
 			return false;
 		}
@@ -271,110 +208,79 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 
 	public bool _KGCwEHf8akeXdkHLKFg1caFxXUJ(Keys keys_0)
 	{
-		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000d: Invalid comparison between Unknown and I4
-		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Invalid comparison between Unknown and I4
-		if ((int)((KeyboardState)(ref _JxAOrrJ4bqv0CaScbroMtsBP9vo)).get_Item(keys_0) == 1)
+		if (_JxAOrrJ4bqv0CaScbroMtsBP9vo[keys_0] == KeyState.Down)
 		{
-			return (int)((KeyboardState)(ref _QyGrB1OudfOfivAikLqMIOfHz3L)).get_Item(keys_0) == 0;
+			return _QyGrB1OudfOfivAikLqMIOfHz3L[keys_0] == KeyState.Up;
 		}
 		return false;
 	}
 
 	public bool _KGCwEHf8akeXdkHLKFg1caFxXUJ(Buttons buttons_0)
 	{
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		if (((GamePadState)(ref _RYQYlBTtUaKPqglBPk0fi7hT7pr)).get_IsConnected() && ((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).get_IsConnected())
+		if (_RYQYlBTtUaKPqglBPk0fi7hT7pr.IsConnected && _QG4mFT06aDk75H8FavD2erQSaah.IsConnected)
 		{
-			if (!((GamePadState)(ref _RYQYlBTtUaKPqglBPk0fi7hT7pr)).IsButtonDown(buttons_0))
+			if (!_RYQYlBTtUaKPqglBPk0fi7hT7pr.IsButtonDown(buttons_0))
 			{
 				return false;
 			}
-			return ((GamePadState)(ref _QG4mFT06aDk75H8FavD2erQSaah)).IsButtonUp(buttons_0);
+			return _QG4mFT06aDk75H8FavD2erQSaah.IsButtonUp(buttons_0);
 		}
 		return false;
 	}
 
 	public bool _KGCwEHf8akeXdkHLKFg1caFxXUJ(_PMeRYZJaBCqgB9uADJFP3c14lxq _PMeRYZJaBCqgB9uADJFP3c14lxq_0)
 	{
-		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Invalid comparison between Unknown and I4
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003e: Invalid comparison between Unknown and I4
-		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004f: Invalid comparison between Unknown and I4
-		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005f: Invalid comparison between Unknown and I4
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006e: Invalid comparison between Unknown and I4
-		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007c: Invalid comparison between Unknown and I4
-		//IL_00b9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bf: Invalid comparison between Unknown and I4
-		//IL_00c7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Invalid comparison between Unknown and I4
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00de: Invalid comparison between Unknown and I4
-		//IL_00e8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Invalid comparison between Unknown and I4
 		switch (_PMeRYZJaBCqgB9uADJFP3c14lxq_0)
 		{
 		default:
 			return false;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_LeftButton() == 1)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.LeftButton == ButtonState.Pressed)
 			{
-				return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_LeftButton() == 0;
+				return _N9dtCLxcbyjVo7hRyMVQzD7exaM.LeftButton == ButtonState.Released;
 			}
 			return false;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.MiddleButton:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_MiddleButton() != 1)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.MiddleButton != ButtonState.Pressed)
 			{
 				return false;
 			}
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_MiddleButton() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.MiddleButton == ButtonState.Released;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_RightButton() == 1)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.RightButton == ButtonState.Pressed)
 			{
-				return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_RightButton() == 0;
+				return _N9dtCLxcbyjVo7hRyMVQzD7exaM.RightButton == ButtonState.Released;
 			}
 			return false;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.WheelUp:
-			return ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue() > ((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue();
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue > _nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.WheelDown:
-			return ((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_ScrollWheelValue() < ((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_ScrollWheelValue();
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.ScrollWheelValue < _nL6AWNBZGcjH4ycaR2xzpUdcYpMA.ScrollWheelValue;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.XButton1:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_XButton1() == 1)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.XButton1 == ButtonState.Pressed)
 			{
-				return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton1() == 0;
+				return _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton1 == ButtonState.Released;
 			}
 			return false;
 		case _PMeRYZJaBCqgB9uADJFP3c14lxq.XButton2:
-			if ((int)((MouseState)(ref _nL6AWNBZGcjH4ycaR2xzpUdcYpMA)).get_XButton2() != 1)
+			if (_nL6AWNBZGcjH4ycaR2xzpUdcYpMA.XButton2 != ButtonState.Pressed)
 			{
 				return false;
 			}
-			return (int)((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_XButton2() == 0;
+			return _N9dtCLxcbyjVo7hRyMVQzD7exaM.XButton2 == ButtonState.Released;
 		}
 	}
 
 	public bool _tiRsbEQbFPPjJoih0Y5DKxbGe52()
 	{
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
-		if (((KeyboardState)(ref _QyGrB1OudfOfivAikLqMIOfHz3L)).GetPressedKeys().Length != 0)
+		if (_QyGrB1OudfOfivAikLqMIOfHz3L.GetPressedKeys().Length != 0)
 		{
 			return true;
 		}
 		Array values = Enum.GetValues(typeof(Buttons));
 		foreach (Buttons item in values)
 		{
-			if (this._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(item))
+			if (_WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(item))
 			{
 				return true;
 			}
@@ -392,38 +298,33 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 
 	public Keys[] _fy5ebLnmRsRXv9v7RKTFU5CGMaH()
 	{
-		Keys[] _qy4C18YJHEicy4hTkm6j5yaDlSV = ((KeyboardState)(ref _JxAOrrJ4bqv0CaScbroMtsBP9vo)).GetPressedKeys();
-		Keys[] pressedKeys = ((KeyboardState)(ref _QyGrB1OudfOfivAikLqMIOfHz3L)).GetPressedKeys();
+		Keys[] _qy4C18YJHEicy4hTkm6j5yaDlSV = _JxAOrrJ4bqv0CaScbroMtsBP9vo.GetPressedKeys();
+		Keys[] pressedKeys = _QyGrB1OudfOfivAikLqMIOfHz3L.GetPressedKeys();
 		return pressedKeys.Where((Keys keys_0) => _qy4C18YJHEicy4hTkm6j5yaDlSV.Contains(keys_0)).ToArray();
 	}
 
 	static IntPtr smethod_0(GameWindow gameWindow_0)
 	{
-		return gameWindow_0.get_Handle();
+		return gameWindow_0.Handle;
 	}
 
-	static void smethod_1(IntPtr intptr_0, SDL_bool sdl_bool_0)
+	static void smethod_1(IntPtr intptr_0, SDL.SDL_bool sdl_bool_0)
 	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		SDL.SDL_SetWindowGrab(intptr_0, sdl_bool_0);
 	}
 
 	static KeyboardState smethod_2()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
 		return Keyboard.GetState();
 	}
 
 	static GamePadState smethod_3(PlayerIndex playerIndex_0)
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 		return GamePad.GetState(playerIndex_0);
 	}
 
 	static MouseState smethod_4()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
 		return Mouse.GetState();
 	}
 }

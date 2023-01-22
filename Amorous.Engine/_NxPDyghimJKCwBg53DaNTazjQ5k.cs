@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Spine;
 
 public class _NxPDyghimJKCwBg53DaNTazjQ5k
@@ -28,46 +27,43 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(Skeleton skeleton_0)
 	{
-		_sc6AWQNc7BlGAmNMydEy7sD8v1j.AddRange((IEnumerable<Polygon>)_A9kKAOOHImeN1Bymg7Y86T6pyXf);
-		_A9kKAOOHImeN1Bymg7Y86T6pyXf.Clear(true);
-		ExposedList<Slot> slots = skeleton_0.get_Slots();
+		_sc6AWQNc7BlGAmNMydEy7sD8v1j.AddRange(_A9kKAOOHImeN1Bymg7Y86T6pyXf);
+		_A9kKAOOHImeN1Bymg7Y86T6pyXf.Clear();
+		ExposedList<Slot> slots = skeleton_0.Slots;
 		int count = slots.Count;
 		for (int i = 0; i < count; i++)
 		{
-			Slot val = slots.Items[i];
-			if (val.get_A() <= 0f)
+			Slot slot = slots.Items[i];
+			if (slot.A <= 0f)
 			{
 				continue;
 			}
-			if (!(val.get_Attachment() is RegionAttachment))
+			if (!(slot.Attachment is RegionAttachment))
 			{
-				if (val.get_Attachment() is MeshAttachment)
+				if (slot.Attachment is MeshAttachment)
 				{
-					Attachment attachment = val.get_Attachment();
-					MeshAttachment val2 = (MeshAttachment)(object)((attachment is MeshAttachment) ? attachment : null);
-					Polygon val3 = _JFnByzmaHsFolNK380WoVrfnqoo();
-					_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val3);
-					val3.set_Vertices(new float[val2.get_Vertices().Length]);
-					val2.ComputeWorldVertices(val, val3.get_Vertices());
+					MeshAttachment meshAttachment = slot.Attachment as MeshAttachment;
+					Polygon polygon = _JFnByzmaHsFolNK380WoVrfnqoo();
+					_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(polygon);
+					polygon.Vertices = new float[meshAttachment.Vertices.Length];
+					meshAttachment.ComputeWorldVertices(slot, polygon.Vertices);
 				}
-				else if (val.get_Attachment() is SkinnedMeshAttachment)
+				else if (slot.Attachment is SkinnedMeshAttachment)
 				{
-					Attachment attachment2 = val.get_Attachment();
-					SkinnedMeshAttachment val4 = (SkinnedMeshAttachment)(object)((attachment2 is SkinnedMeshAttachment) ? attachment2 : null);
-					Polygon val5 = _JFnByzmaHsFolNK380WoVrfnqoo();
-					_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val5);
-					val5.set_Vertices(new float[val4.get_UVs().Length]);
-					val4.ComputeWorldVertices(val, val5.get_Vertices());
+					SkinnedMeshAttachment skinnedMeshAttachment = slot.Attachment as SkinnedMeshAttachment;
+					Polygon polygon2 = _JFnByzmaHsFolNK380WoVrfnqoo();
+					_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(polygon2);
+					polygon2.Vertices = new float[skinnedMeshAttachment.UVs.Length];
+					skinnedMeshAttachment.ComputeWorldVertices(slot, polygon2.Vertices);
 				}
 			}
 			else
 			{
-				Attachment attachment3 = val.get_Attachment();
-				RegionAttachment val6 = (RegionAttachment)(object)((attachment3 is RegionAttachment) ? attachment3 : null);
-				Polygon val7 = _JFnByzmaHsFolNK380WoVrfnqoo();
-				_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val7);
-				val7.set_Vertices(new float[8]);
-				val6.ComputeWorldVertices(val.get_Bone(), val7.get_Vertices());
+				RegionAttachment regionAttachment = slot.Attachment as RegionAttachment;
+				Polygon polygon3 = _JFnByzmaHsFolNK380WoVrfnqoo();
+				_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(polygon3);
+				polygon3.Vertices = new float[8];
+				regionAttachment.ComputeWorldVertices(slot.Bone, polygon3.Vertices);
 			}
 		}
 		if (_A9kKAOOHImeN1Bymg7Y86T6pyXf.Count == 0)
@@ -85,8 +81,6 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	private Polygon _JFnByzmaHsFolNK380WoVrfnqoo()
 	{
-		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0036: Expected O, but got Unknown
 		int count = _sc6AWQNc7BlGAmNMydEy7sD8v1j.Count;
 		Polygon result;
 		if (count > 0)
@@ -110,17 +104,17 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 		int i = 0;
 		for (int count = _A9kKAOOHImeN1Bymg7Y86T6pyXf.Count; i < count; i++)
 		{
-			Polygon val = _A9kKAOOHImeN1Bymg7Y86T6pyXf.Items[i];
-			float[] vertices = val.get_Vertices();
+			Polygon polygon = _A9kKAOOHImeN1Bymg7Y86T6pyXf.Items[i];
+			float[] vertices = polygon.Vertices;
 			int j = 0;
 			for (int num5 = vertices.Length; j < num5; j += 2)
 			{
-				float val2 = vertices[j];
-				float val3 = vertices[j + 1];
-				num = Math.Min(num, val2);
-				num2 = Math.Min(num2, val3);
-				num3 = Math.Max(num3, val2);
-				num4 = Math.Max(num4, val3);
+				float val = vertices[j];
+				float val2 = vertices[j + 1];
+				num = Math.Min(num, val);
+				num2 = Math.Min(num2, val2);
+				num3 = Math.Max(num3, val);
+				num4 = Math.Max(num4, val2);
 			}
 		}
 		_SjhHztt8d5kOtb7Z2BJKnZZxEKh = num;
@@ -131,32 +125,32 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	static ExposedList<Slot> smethod_0(Skeleton skeleton_0)
 	{
-		return skeleton_0.get_Slots();
+		return skeleton_0.Slots;
 	}
 
 	static float smethod_1(Slot slot_0)
 	{
-		return slot_0.get_A();
+		return slot_0.A;
 	}
 
 	static Attachment smethod_2(Slot slot_0)
 	{
-		return slot_0.get_Attachment();
+		return slot_0.Attachment;
 	}
 
 	static void smethod_3(Polygon polygon_0, float[] float_0)
 	{
-		polygon_0.set_Vertices(float_0);
+		polygon_0.Vertices = float_0;
 	}
 
 	static Bone smethod_4(Slot slot_0)
 	{
-		return slot_0.get_Bone();
+		return slot_0.Bone;
 	}
 
 	static float[] smethod_5(Polygon polygon_0)
 	{
-		return polygon_0.get_Vertices();
+		return polygon_0.Vertices;
 	}
 
 	static void smethod_6(RegionAttachment regionAttachment_0, Bone bone_0, float[] float_0)
@@ -166,7 +160,7 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	static float[] smethod_7(MeshAttachment meshAttachment_0)
 	{
-		return meshAttachment_0.get_Vertices();
+		return meshAttachment_0.Vertices;
 	}
 
 	static void smethod_8(MeshAttachment meshAttachment_0, Slot slot_0, float[] float_0)
@@ -176,7 +170,7 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	static float[] smethod_9(SkinnedMeshAttachment skinnedMeshAttachment_0)
 	{
-		return skinnedMeshAttachment_0.get_UVs();
+		return skinnedMeshAttachment_0.UVs;
 	}
 
 	static void smethod_10(SkinnedMeshAttachment skinnedMeshAttachment_0, Slot slot_0, float[] float_0)
@@ -186,8 +180,6 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	static Polygon smethod_11()
 	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected O, but got Unknown
 		return new Polygon();
 	}
 

@@ -33,22 +33,16 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public FrameAnimationLayer(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
 			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "FrameAnimationLayer")
 		{
-			//IL_005c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0061: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0089: Unknown result type (might be due to invalid IL or missing references)
-			//IL_008e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_009a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_009f: Unknown result type (might be due to invalid IL or missing references)
 			_animationTexture = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 			_timePerFrame = float_0 / (float)int_0;
 			_numberOfFrames = int_0;
 			_currentFrame = 0;
-			_sourceRectangle = new Rectangle(0, 0, (int)((float)_animationTexture.get_Width() / (float)int_0), _animationTexture.get_Height());
+			_sourceRectangle = new Rectangle(0, 0, (int)((float)_animationTexture.Width / (float)int_0), _animationTexture.Height);
 			_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * float_1), (int)((float)_sourceRectangle.Height * float_1));
-			_origin = new Vector2((float)int_1, (float)int_2);
+			_origin = new Vector2(int_1, int_2);
 			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime time)
 			{
-				MyUpdate((float)time.get_ElapsedGameTime().Milliseconds / 1000f);
+				MyUpdate((float)time.ElapsedGameTime.Milliseconds / 1000f);
 			};
 			base._B6VrMlmWofCGqEzjzgFJiAliCge = MyDraw;
 		}
@@ -84,15 +78,10 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		private void MyDraw(SpriteBatch spriteBatch)
 		{
-			//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-			//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0039: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0045: Unknown result type (might be due to invalid IL or missing references)
 			if (_currentFrame >= 0)
 			{
-				spriteBatch._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)0, null, null, null, null, null, base._3TrGrUra7cqeIXkbZOrfaoQaD5F);
-				spriteBatch.Draw(_animationTexture, _destinationRectangle, (Rectangle?)_sourceRectangle, Color.get_White(), _angle, _origin, (SpriteEffects)0, 0f);
+				spriteBatch._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Deferred, null, null, null, null, null, base._3TrGrUra7cqeIXkbZOrfaoQaD5F);
+				spriteBatch.Draw(_animationTexture, _destinationRectangle, _sourceRectangle, Color.White, _angle, _origin, SpriteEffects.None, 0f);
 				spriteBatch.End();
 			}
 		}
@@ -109,12 +98,12 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static int smethod_2(Texture2D texture2D_0)
 		{
-			return texture2D_0.get_Width();
+			return texture2D_0.Width;
 		}
 
 		static int smethod_3(Texture2D texture2D_0)
 		{
-			return texture2D_0.get_Height();
+			return texture2D_0.Height;
 		}
 
 		static float smethod_4(float float_0)
@@ -124,22 +113,16 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static Matrix smethod_5(_fAUddQEKfZyemRb327NhM3GGlmzA _fAUddQEKfZyemRb327NhM3GGlmzA_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			return _fAUddQEKfZyemRb327NhM3GGlmzA_0._3TrGrUra7cqeIXkbZOrfaoQaD5F;
 		}
 
 		static void smethod_6(SpriteBatch spriteBatch_0, SpriteSortMode spriteSortMode_0, BlendState blendState_0, SamplerState samplerState_0, DepthStencilState depthStencilState_0, RasterizerState rasterizerState_0, Effect effect_0, Matrix? nullable_0)
 		{
-			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
 			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH(spriteSortMode_0, blendState_0, samplerState_0, depthStencilState_0, rasterizerState_0, effect_0, nullable_0);
 		}
 
 		static void smethod_7(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Rectangle rectangle_0, Rectangle? nullable_0, Color color_0, float float_0, Vector2 vector2_0, SpriteEffects spriteEffects_0, float float_1)
 		{
-			//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0004: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0008: Unknown result type (might be due to invalid IL or missing references)
-			//IL_000a: Unknown result type (might be due to invalid IL or missing references)
 			spriteBatch_0.Draw(texture2D_0, rectangle_0, nullable_0, color_0, float_0, vector2_0, spriteEffects_0, float_1);
 		}
 
@@ -150,7 +133,7 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		static TimeSpan smethod_9(GameTime gameTime_0)
 		{
-			return gameTime_0.get_ElapsedGameTime();
+			return gameTime_0.ElapsedGameTime;
 		}
 	}
 
