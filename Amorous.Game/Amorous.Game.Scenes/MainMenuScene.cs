@@ -27,98 +27,99 @@ public class MainMenuScene : TimeOfDayScene
 	public MainMenuScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
-		_fAUddQEKfZyemRb327NhM3GGlmzA fAUddQEKfZyemRb327NhM3GGlmzA = MainMenuScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Custom");
-		MainMenuScene.smethod_20(fAUddQEKfZyemRb327NhM3GGlmzA, (Action<SpriteBatch>)_KkwafXXLVg1QfQgqqCAojg2ySyZ);
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(fAUddQEKfZyemRb327NhM3GGlmzA, 0);
-		MainMenuScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
+		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "Custom")
+		{
+			_B6VrMlmWofCGqEzjzgFJiAliCge = _KkwafXXLVg1QfQgqqCAojg2ySyZ
+		}, 0);
+		_NC5VT77x8y2iH2pW56TBN1eyomA("Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
 		_CD732c1llp0dkEnK6CI9WZR70Ap = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
 		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 1", "Assets/Scenes/MainMenu/{0}", 1090, 330);
 		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 2", "Assets/Scenes/MainMenu/{0}", 1215, 330);
 		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 3", "Assets/Scenes/MainMenu/{0}", 1395, 330);
 		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 4", "Assets/Scenes/MainMenu/{0}", 1520, 330);
 		_BR9uYwHtclf8uWEyxJ20ADY6mpg = 750;
-		_dNKOpSAr033bMQm76I1LEv39GTm = MainMenuScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "LCD Separator");
-		MainMenuScene.smethod_23((_21uBmerICJi18moE2gpxlEipBgz)new _hiwkgwXJpRLUFatcgZFfH6ECNfm(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		MainMenuScene.smethod_24("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
+		_dNKOpSAr033bMQm76I1LEv39GTm = _0c5TjZklJbu1wzYG2FIcvf3SIdh("LCD Separator");
+		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._Wrz1IORok7yBtsQA3czQUmnP6Yl(new _hiwkgwXJpRLUFatcgZFfH6ECNfm(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
 		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._lXEQJcXKxsjtZp00Y9aPe0ymGue(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		{
 			_uIOOxdCbSvCxXvjNgoXh2qYj0hr = delegate
 			{
-				MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-				MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, (Action<int>)delegate(int int_0)
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int int_0)
 				{
-					_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = MainMenuScene.smethod_50();
+					_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
 					switch (int_0)
 					{
 					default:
-						MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 						break;
 					case 0:
-						MainMenuScene.smethod_51((Action)null);
-						MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+						opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-						MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-						MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
 						break;
 					case 1:
-						MainMenuScene.smethod_51((Action)null);
-						MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+						opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-						MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-						MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
 						break;
 					case 2:
-						MainMenuScene.smethod_51((Action)null);
-						MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+						opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-						MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-						MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
 						break;
 					}
 				});
 			},
 			_HmpXEsA3mxR8eI4MZmgIPCtSGQb = delegate
 			{
-				MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-				List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = MainMenuScene.smethod_59(bool_0: false);
-				List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _003C_003Ec.smethod_0(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_0)).ToList();
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = _DW9IcpdMEINZmuzfrqmwsduBGih._25D1ZH2er0EbpKmvFksAbFjP2OX(bool_0: false);
+				List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToList();
 				_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
-				MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, (Action<int>)delegate(int int_0)
+				base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
 				{
 					if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 					{
-						_003C_003Ec__DisplayClass6_0.smethod_2(_003C_003Ec__DisplayClass6_0.smethod_1(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 					}
 					else
 					{
-						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_ = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
-						if (!_003C_003Ec__DisplayClass6_0.smethod_3(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_))
+						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
+						if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 						{
-							if (!((!_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_)) ? _003C_003Ec__DisplayClass6_0.smethod_10(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_8(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_)) : _003C_003Ec__DisplayClass6_0.smethod_9(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_8(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_))))
+							if (!((!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE) ? base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Ut0dhlh4JTZBMNJPNxxI9f9VqTp(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : base._ZzBuoSDMWwerejOO9Goyv2OCKgE._1yDW5GeZ2MCcssz8ohrF9CK913i(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO)))
 							{
-								_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Failed to load save, it's most likely corrupted.", 250, "OK", (Action)delegate
+								base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
 								{
-									MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+									base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 								});
 							}
 							else
 							{
-								_003C_003Ec__DisplayClass6_0.smethod_2(_003C_003Ec__DisplayClass6_0.smethod_1(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+								base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 							}
 						}
 						else
 						{
-							_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_6("There is no save in {0}slot #{1}!", (object)(_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_) ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", (Action)delegate
+							base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
 							{
-								MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+								base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 							});
 						}
 					}
@@ -126,17 +127,17 @@ public class MainMenuScene : TimeOfDayScene
 			},
 			_vE5Pvwth7cQFh82bMTB5u59Ju4o = delegate
 			{
-				MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-				MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, (Action<int>)delegate(int int_0)
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int int_0)
 				{
 					if (int_0 == 1)
 					{
-						MainMenuScene.smethod_61(MainMenuScene.smethod_60(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Action)delegate
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
 						{
-							MainMenuScene.smethod_62(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this));
+							base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
 						});
 					}
-					MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+					base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 				});
 			}
 		});
@@ -156,22 +157,23 @@ public class MainMenuScene : TimeOfDayScene
 		Texture2D[] array = (Texture2D[])(object)new Texture2D[10];
 		for (int i = 0; i < array.Length; i++)
 		{
-			array[i] = MainMenuScene.smethod_26(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)).Load<Texture2D>(MainMenuScene.smethod_27(string_1, (object)i));
+			array[i] = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string.Format(string_1, i));
 		}
-		_Yu3OngEjZbsgelWEySu6GE7aoYg yu3OngEjZbsgelWEySu6GE7aoYg = new _Yu3OngEjZbsgelWEySu6GE7aoYg(this, string_0, array);
-		MainMenuScene.smethod_28((_ujAkjlfN5TywwbLAUDzPvtab6uJ)yu3OngEjZbsgelWEySu6GE7aoYg, bool_0: true);
-		MainMenuScene.smethod_29((_ujAkjlfN5TywwbLAUDzPvtab6uJ)yu3OngEjZbsgelWEySu6GE7aoYg, (float)int_0);
-		MainMenuScene.smethod_30((_ujAkjlfN5TywwbLAUDzPvtab6uJ)yu3OngEjZbsgelWEySu6GE7aoYg, (float)int_1);
-		_Yu3OngEjZbsgelWEySu6GE7aoYg yu3OngEjZbsgelWEySu6GE7aoYg2 = yu3OngEjZbsgelWEySu6GE7aoYg;
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(yu3OngEjZbsgelWEySu6GE7aoYg2, 2);
-		_3QdafDZxM3h1i8B990AwwFqleds.Add(yu3OngEjZbsgelWEySu6GE7aoYg2);
-		return yu3OngEjZbsgelWEySu6GE7aoYg2;
+		_Yu3OngEjZbsgelWEySu6GE7aoYg yu3OngEjZbsgelWEySu6GE7aoYg = new _Yu3OngEjZbsgelWEySu6GE7aoYg(this, string_0, array)
+		{
+			_C6GAq9XPMC9PQPnaaRqYWpv4V6S = true,
+			_7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0,
+			_bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1
+		};
+		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(yu3OngEjZbsgelWEySu6GE7aoYg, 2);
+		_3QdafDZxM3h1i8B990AwwFqleds.Add(yu3OngEjZbsgelWEySu6GE7aoYg);
+		return yu3OngEjZbsgelWEySu6GE7aoYg;
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-		_BR9uYwHtclf8uWEyxJ20ADY6mpg -= MainMenuScene.smethod_31(gameTime_0).Milliseconds;
+		_BR9uYwHtclf8uWEyxJ20ADY6mpg -= gameTime_0.get_ElapsedGameTime().Milliseconds;
 		if (_BR9uYwHtclf8uWEyxJ20ADY6mpg < 0)
 		{
 			_dNKOpSAr033bMQm76I1LEv39GTm._Fxy2SlgceW90FloFw6a1AEJODYA = !_dNKOpSAr033bMQm76I1LEv39GTm._Fxy2SlgceW90FloFw6a1AEJODYA;
@@ -195,28 +197,34 @@ public class MainMenuScene : TimeOfDayScene
 		//IL_0047: Unknown result type (might be due to invalid IL or missing references)
 		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		if (MainMenuScene.smethod_33(MainMenuScene.smethod_32()) != null)
+		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._mW1Z69pRB1eedGT3FSmdItJre5Y != null)
 		{
-			MainMenuScene.smethod_36(spriteBatch_0, (SpriteSortMode)0, BlendState.NonPremultiplied, (SamplerState)null, (DepthStencilState)null, (RasterizerState)null, (Effect)null, (Matrix?)(Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)MainMenuScene.smethod_34((double)_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv) * MainMenuScene.smethod_35(5f)) * Matrix.CreateTranslation(90f, 390f, 0f)));
-			MainMenuScene.smethod_37(MainMenuScene.smethod_33(MainMenuScene.smethod_32()), spriteBatch_0);
-			MainMenuScene.smethod_38(spriteBatch_0);
+			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)0, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
+			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._mW1Z69pRB1eedGT3FSmdItJre5Y._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+			spriteBatch_0.End();
 		}
 	}
 
 	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
 	{
 		base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
-		MainMenuScene.smethod_39(spriteBatch_0);
-		MainMenuScene.smethod_40((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_CD732c1llp0dkEnK6CI9WZR70Ap, spriteBatch_0);
-		MainMenuScene.smethod_38(spriteBatch_0);
-		MainMenuScene.smethod_41((_8lVOgkauaSHbAkAqHzI1K7mIyOI)_zBw0aG4VRggByEYsHPjIPCYfoQJ, spriteBatch_0);
+		spriteBatch_0.Begin();
+		_CD732c1llp0dkEnK6CI9WZR70Ap._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		spriteBatch_0.End();
+		_zBw0aG4VRggByEYsHPjIPCYfoQJ._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
 	}
 
 	private void _MRzbkwglCADk2fFjoxcsdCSJfKu()
 	{
+		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0045: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0052: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
 		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0079: Expected O, but got Unknown
 		//IL_0079: Unknown result type (might be due to invalid IL or missing references)
 		//IL_007e: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
@@ -353,268 +361,268 @@ public class MainMenuScene : TimeOfDayScene
 		//IL_07ab: Expected O, but got Unknown
 		//IL_07b4: Unknown result type (might be due to invalid IL or missing references)
 		//IL_07be: Expected O, but got Unknown
-		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
 		int num = 0;
-		if (MainMenuScene.smethod_44())
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._X41qA9hgcgXH0Q1aFKWFWpg8UuM)
 		{
 			num += 60;
 		}
-		if (!MainMenuScene.smethod_45())
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
 			num += 60;
 		}
-		Window obj = MainMenuScene.smethod_46();
-		MainMenuScene.smethod_47((Control)(object)obj, (DockStyle)8);
-		((Control)obj).set_Size(new Point(512, 540 + num));
-		((Control)obj).set_Margin(new Margin(8));
-		((Control)obj).set_Padding(new Margin(8));
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = obj;
-		Panel val = new Panel();
-		((Control)val).set_Dock((DockStyle)5);
+		Window val = new Window();
+		((Control)val).set_Dock((DockStyle)8);
+		((Control)val).set_Size(new Point(512, 540 + num));
 		((Control)val).set_Margin(new Margin(8));
-		Panel val2 = val;
-		((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val2);
-		Label val3 = new Label();
-		((Control)val3).set_Dock((DockStyle)2);
-		val3.set_TextAlign((Alignment)4);
-		val3.set_Text("Display");
-		Label val4 = val3;
-		Label val5 = new Label();
-		((Control)val5).set_Dock((DockStyle)2);
-		val5.set_Text("Resolutions");
-		Label val6 = val5;
-		DropDownList val7 = new DropDownList();
-		((Control)val7).set_Dock((DockStyle)2);
-		((Control)val7).set_Style("button");
-		((Control)val7.get_Label()).set_Margin(new Margin(10, 0, 0, 0));
-		val7.get_Dropdown().set_Resizable(false);
-		((Control)val7).set_Margin(new Margin(0, 0, 0, 5));
-		DropDownList val8 = val7;
-		((Control)val8.get_Listbox().get_Scrollbar().get_ButtonUp()).set_Visible(false);
-		((Control)val8.get_Listbox().get_Scrollbar().get_ButtonDown()).set_Visible(false);
+		((Control)val).set_Padding(new Margin(8));
+		Window _L7VColD35B3sDgJdUnjTeXGa7pv = val;
+		Panel val2 = new Panel();
+		((Control)val2).set_Dock((DockStyle)5);
+		((Control)val2).set_Margin(new Margin(8));
+		Panel val3 = val2;
+		((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val3);
+		Label val4 = new Label();
+		((Control)val4).set_Dock((DockStyle)2);
+		val4.set_TextAlign((Alignment)4);
+		val4.set_Text("Display");
+		Label val5 = val4;
+		Label val6 = new Label();
+		((Control)val6).set_Dock((DockStyle)2);
+		val6.set_Text("Resolutions");
+		Label val7 = val6;
+		DropDownList val8 = new DropDownList();
+		((Control)val8).set_Dock((DockStyle)2);
+		((Control)val8).set_Style("button");
+		((Control)val8.get_Label()).set_Margin(new Margin(10, 0, 0, 0));
+		val8.get_Dropdown().set_Resizable(false);
+		((Control)val8).set_Margin(new Margin(0, 0, 0, 5));
+		DropDownList val9 = val8;
+		((Control)val9.get_Listbox().get_Scrollbar().get_ButtonUp()).set_Visible(false);
+		((Control)val9.get_Listbox().get_Scrollbar().get_ButtonDown()).set_Visible(false);
 		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._KOuUew34v1oSMnWlHSFJuRBiu1c;
 		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._dh9yjUXG1mhcfgwAWkWfggbGEIc;
 		foreach (DisplayMode supportedDisplayMode in base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.get_Adapter().get_SupportedDisplayModes())
 		{
-			ActiveList<ListBoxItem> items = val8.get_Items();
-			ListBoxItem val9 = new ListBoxItem();
-			((Label)val9).set_Text(supportedDisplayMode.get_Width() + "x" + supportedDisplayMode.get_Height());
-			val9.set_Value((object)supportedDisplayMode);
-			((Control)val9).set_Size(new Point(0, 30));
-			val9.set_Selected(_ExpbREeE97oXaFMwg5UwE6MpAAQ == supportedDisplayMode.get_Width() && _P2eFcUFiRYQgRf4ICqeX3kVcA2m == supportedDisplayMode.get_Height());
-			items.Add(val9);
+			ActiveList<ListBoxItem> items = val9.get_Items();
+			ListBoxItem val10 = new ListBoxItem();
+			((Label)val10).set_Text(supportedDisplayMode.get_Width() + "x" + supportedDisplayMode.get_Height());
+			val10.set_Value((object)supportedDisplayMode);
+			((Control)val10).set_Size(new Point(0, 30));
+			val10.set_Selected(_ExpbREeE97oXaFMwg5UwE6MpAAQ == supportedDisplayMode.get_Width() && _P2eFcUFiRYQgRf4ICqeX3kVcA2m == supportedDisplayMode.get_Height());
+			items.Add(val10);
 		}
-		val8.add_SelectedItemChanged((SelectedItemChangedEventHandler)delegate(Control control_0, ListBoxItem listBoxItem_0)
+		val9.add_SelectedItemChanged((SelectedItemChangedEventHandler)delegate(Control control_0, ListBoxItem listBoxItem_0)
 		{
-			if (_003C_003Ec__DisplayClass12_0.smethod_0(listBoxItem_0) is DisplayMode)
+			if (listBoxItem_0.get_Value() is DisplayMode)
 			{
-				object obj2 = _003C_003Ec__DisplayClass12_0.smethod_0(listBoxItem_0);
-				DisplayMode displayMode_ = (DisplayMode)((obj2 is DisplayMode) ? obj2 : null);
-				_003C_003Ec__DisplayClass12_0.smethod_4(_003C_003Ec__DisplayClass12_0.smethod_1((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass12_0.smethod_2(displayMode_), _003C_003Ec__DisplayClass12_0.smethod_3(displayMode_));
-				_003C_003Ec__DisplayClass12_0.smethod_6(_003C_003Ec__DisplayClass12_0.smethod_5(), _003C_003Ec__DisplayClass12_0.smethod_2(displayMode_));
-				_003C_003Ec__DisplayClass12_0.smethod_7(_003C_003Ec__DisplayClass12_0.smethod_5(), _003C_003Ec__DisplayClass12_0.smethod_3(displayMode_));
-				_ExpbREeE97oXaFMwg5UwE6MpAAQ = _003C_003Ec__DisplayClass12_0.smethod_2(displayMode_);
-				_P2eFcUFiRYQgRf4ICqeX3kVcA2m = _003C_003Ec__DisplayClass12_0.smethod_3(displayMode_);
+				object value = listBoxItem_0.get_Value();
+				DisplayMode val34 = (DisplayMode)((value is DisplayMode) ? value : null);
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(val34.get_Width(), val34.get_Height());
+				_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Iv7AHXGOFR9WoLBFx6PjEgEHmYI = val34.get_Width();
+				_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._84wHcdDxJz5ElyDPXXlgRgsiW8g = val34.get_Height();
+				_ExpbREeE97oXaFMwg5UwE6MpAAQ = val34.get_Width();
+				_P2eFcUFiRYQgRf4ICqeX3kVcA2m = val34.get_Height();
 			}
 		});
-		CheckBox val10 = new CheckBox();
-		((Control)val10).set_Dock((DockStyle)2);
-		val10.set_Text("Fullscreen");
-		val10.set_Checked(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe);
-		CheckBox val11 = val10;
-		val11.add_CheckedChanged((VoidEvent)delegate
+		CheckBox val11 = new CheckBox();
+		((Control)val11).set_Dock((DockStyle)2);
+		val11.set_Text("Fullscreen");
+		val11.set_Checked(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe);
+		CheckBox val12 = val11;
+		val12.add_CheckedChanged((VoidEvent)delegate
 		{
-			_003C_003Ec__DisplayClass12_0.smethod_9(_003C_003Ec__DisplayClass12_0.smethod_1((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _ExpbREeE97oXaFMwg5UwE6MpAAQ, _P2eFcUFiRYQgRf4ICqeX3kVcA2m, !_003C_003Ec__DisplayClass12_0.smethod_8(_003C_003Ec__DisplayClass12_0.smethod_1((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)));
-			_003C_003Ec__DisplayClass12_0.smethod_10(_003C_003Ec__DisplayClass12_0.smethod_5(), _003C_003Ec__DisplayClass12_0.smethod_8(_003C_003Ec__DisplayClass12_0.smethod_1((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)));
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(_ExpbREeE97oXaFMwg5UwE6MpAAQ, _P2eFcUFiRYQgRf4ICqeX3kVcA2m, !base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe);
+			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Bbx3oCtJkeUN6asRLqH0DJ3kkFg = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe;
 		});
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val4);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val6);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val8);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val11);
-		Label val12 = new Label();
-		((Control)val12).set_Dock((DockStyle)2);
-		val12.set_TextAlign((Alignment)4);
-		val12.set_Text("Sound");
-		Label val13 = val12;
-		Label val14 = new Label();
-		((Control)val14).set_Dock((DockStyle)2);
-		val14.set_Text("Master Volume");
-		Label val15 = val14;
-		Slider val16 = new Slider();
-		((Control)val16).set_Dock((DockStyle)2);
-		val16.set_Orientation((Orientation)0);
-		val16.set_Steps(100f);
-		val16.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * 100f);
-		((Control)val16).set_Style("scrollSlider");
-		((Control)val16).set_Size(new Point(0, 30));
-		((Control)val16.get_Button()).set_Style("scrollSliderButton");
-		Slider _XEgAfmv7sJWJSaC2diC3eaD4Fgl = val16;
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val5);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val7);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val9);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val12);
+		Label val13 = new Label();
+		((Control)val13).set_Dock((DockStyle)2);
+		val13.set_TextAlign((Alignment)4);
+		val13.set_Text("Sound");
+		Label val14 = val13;
+		Label val15 = new Label();
+		((Control)val15).set_Dock((DockStyle)2);
+		val15.set_Text("Master Volume");
+		Label val16 = val15;
+		Slider val17 = new Slider();
+		((Control)val17).set_Dock((DockStyle)2);
+		val17.set_Orientation((Orientation)0);
+		val17.set_Steps(100f);
+		val17.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * 100f);
+		((Control)val17).set_Style("scrollSlider");
+		((Control)val17).set_Size(new Point(0, 30));
+		((Control)val17.get_Button()).set_Style("scrollSliderButton");
+		Slider _XEgAfmv7sJWJSaC2diC3eaD4Fgl = val17;
 		_XEgAfmv7sJWJSaC2diC3eaD4Fgl.add_ValueChanged((VoidEvent)delegate
 		{
-			_003C_003Ec__DisplayClass12_0.smethod_12(_003C_003Ec__DisplayClass12_0.smethod_5(), _003C_003Ec__DisplayClass12_0.smethod_11(_XEgAfmv7sJWJSaC2diC3eaD4Fgl) / 100f);
+			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF = _XEgAfmv7sJWJSaC2diC3eaD4Fgl.get_Value() / 100f;
 		});
-		Label val17 = new Label();
-		((Control)val17).set_Dock((DockStyle)2);
-		val17.set_Text("Music Volume");
-		Label val18 = val17;
-		Slider val19 = new Slider();
-		((Control)val19).set_Dock((DockStyle)2);
-		val19.set_Orientation((Orientation)0);
-		val19.set_Steps(100f);
-		val19.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * 100f);
-		((Control)val19).set_Style("scrollSlider");
-		((Control)val19).set_Size(new Point(0, 30));
-		((Control)val19.get_Button()).set_Style("scrollSliderButton");
-		Slider _gjeIIVx9bHyd0aMj0WD483nrLWK = val19;
+		Label val18 = new Label();
+		((Control)val18).set_Dock((DockStyle)2);
+		val18.set_Text("Music Volume");
+		Label val19 = val18;
+		Slider val20 = new Slider();
+		((Control)val20).set_Dock((DockStyle)2);
+		val20.set_Orientation((Orientation)0);
+		val20.set_Steps(100f);
+		val20.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * 100f);
+		((Control)val20).set_Style("scrollSlider");
+		((Control)val20).set_Size(new Point(0, 30));
+		((Control)val20.get_Button()).set_Style("scrollSliderButton");
+		Slider _gjeIIVx9bHyd0aMj0WD483nrLWK = val20;
 		_gjeIIVx9bHyd0aMj0WD483nrLWK.add_ValueChanged((VoidEvent)delegate
 		{
-			_003C_003Ec__DisplayClass12_0.smethod_13(_003C_003Ec__DisplayClass12_0.smethod_5(), _003C_003Ec__DisplayClass12_0.smethod_11(_gjeIIVx9bHyd0aMj0WD483nrLWK) / 100f);
+			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC = _gjeIIVx9bHyd0aMj0WD483nrLWK.get_Value() / 100f;
 		});
-		Label val20 = new Label();
-		((Control)val20).set_Dock((DockStyle)2);
-		val20.set_Text("SFX Volume");
-		Label val21 = val20;
-		Slider val22 = new Slider();
-		((Control)val22).set_Dock((DockStyle)2);
-		val22.set_Orientation((Orientation)0);
-		val22.set_Steps(100f);
-		val22.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH * 100f);
-		((Control)val22).set_Style("scrollSlider");
-		((Control)val22).set_Size(new Point(0, 30));
-		((Control)val22.get_Button()).set_Style("scrollSliderButton");
-		Slider _5mK9ExiyKm0md8q4J1C6xc4TzdF = val22;
+		Label val21 = new Label();
+		((Control)val21).set_Dock((DockStyle)2);
+		val21.set_Text("SFX Volume");
+		Label val22 = val21;
+		Slider val23 = new Slider();
+		((Control)val23).set_Dock((DockStyle)2);
+		val23.set_Orientation((Orientation)0);
+		val23.set_Steps(100f);
+		val23.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH * 100f);
+		((Control)val23).set_Style("scrollSlider");
+		((Control)val23).set_Size(new Point(0, 30));
+		((Control)val23.get_Button()).set_Style("scrollSliderButton");
+		Slider _5mK9ExiyKm0md8q4J1C6xc4TzdF = val23;
 		_5mK9ExiyKm0md8q4J1C6xc4TzdF.add_ValueChanged((VoidEvent)delegate
 		{
-			_003C_003Ec__DisplayClass12_0.smethod_14(_003C_003Ec__DisplayClass12_0.smethod_5(), _003C_003Ec__DisplayClass12_0.smethod_11(_5mK9ExiyKm0md8q4J1C6xc4TzdF) / 100f);
+			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH = _5mK9ExiyKm0md8q4J1C6xc4TzdF.get_Value() / 100f;
 		});
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val13);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val15);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)_XEgAfmv7sJWJSaC2diC3eaD4Fgl);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val18);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)_gjeIIVx9bHyd0aMj0WD483nrLWK);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val21);
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)_5mK9ExiyKm0md8q4J1C6xc4TzdF);
-		Label val23 = new Label();
-		((Control)val23).set_Dock((DockStyle)2);
-		val23.set_TextAlign((Alignment)4);
-		val23.set_Text("Dialogue");
-		Label val24 = val23;
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val24);
-		_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(val2.get_Content().get_Controls(), "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO, delegate(int int_0)
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val14);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val16);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)_XEgAfmv7sJWJSaC2diC3eaD4Fgl);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val19);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)_gjeIIVx9bHyd0aMj0WD483nrLWK);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val22);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)_5mK9ExiyKm0md8q4J1C6xc4TzdF);
+		Label val24 = new Label();
+		((Control)val24).set_Dock((DockStyle)2);
+		val24.set_TextAlign((Alignment)4);
+		val24.set_Text("Dialogue");
+		Label val25 = val24;
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val25);
+		_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(val3.get_Content().get_Controls(), "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO, delegate(int int_0)
 		{
-			_003C_003Ec.smethod_2(_003C_003Ec.smethod_1(), (DialogueSpeed)int_0);
-			_003C_003Ec.smethod_3((DialogueSpeed)int_0);
+			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO = (DialogueSpeed)int_0;
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = (DialogueSpeed)int_0;
 		});
-		CheckBox val25 = new CheckBox();
-		((Control)val25).set_Dock((DockStyle)2);
-		val25.set_Text("Auto-skip");
-		val25.set_Checked(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3);
-		CheckBox _feL3soNn6ZWaJqYfjYJUyH118tF = val25;
+		CheckBox val26 = new CheckBox();
+		((Control)val26).set_Dock((DockStyle)2);
+		val26.set_Text("Auto-skip");
+		val26.set_Checked(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3);
+		CheckBox _feL3soNn6ZWaJqYfjYJUyH118tF = val26;
 		_feL3soNn6ZWaJqYfjYJUyH118tF.add_CheckedChanged((VoidEvent)delegate
 		{
-			_003C_003Ec__DisplayClass12_0.smethod_16(_003C_003Ec__DisplayClass12_0.smethod_5(), _003C_003Ec__DisplayClass12_0.smethod_15(_feL3soNn6ZWaJqYfjYJUyH118tF));
-			_003C_003Ec__DisplayClass12_0.smethod_17(_003C_003Ec__DisplayClass12_0.smethod_15(_feL3soNn6ZWaJqYfjYJUyH118tF));
+			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3 = _feL3soNn6ZWaJqYfjYJUyH118tF.get_Checked();
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _feL3soNn6ZWaJqYfjYJUyH118tF.get_Checked();
 		});
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)_feL3soNn6ZWaJqYfjYJUyH118tF);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)_feL3soNn6ZWaJqYfjYJUyH118tF);
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._X41qA9hgcgXH0Q1aFKWFWpg8UuM)
 		{
-			Label val26 = new Label();
-			((Control)val26).set_Dock((DockStyle)2);
-			val26.set_TextAlign((Alignment)4);
-			val26.set_Text("Cheats");
-			Label val27 = val26;
-			CheckBox val28 = new CheckBox();
-			((Control)val28).set_Dock((DockStyle)2);
-			val28.set_Text("Enable SFW-mode");
-			val28.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF);
-			CheckBox _LFRG0GY4VuOaiC2XHbpUmFoVDAj = val28;
+			Label val27 = new Label();
+			((Control)val27).set_Dock((DockStyle)2);
+			val27.set_TextAlign((Alignment)4);
+			val27.set_Text("Cheats");
+			Label val28 = val27;
+			CheckBox val29 = new CheckBox();
+			((Control)val29).set_Dock((DockStyle)2);
+			val29.set_Text("Enable SFW-mode");
+			val29.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF);
+			CheckBox _LFRG0GY4VuOaiC2XHbpUmFoVDAj = val29;
 			_LFRG0GY4VuOaiC2XHbpUmFoVDAj.add_CheckedChanged((VoidEvent)delegate
 			{
-				_003C_003Ec__DisplayClass12_1.smethod_1(_003C_003Ec__DisplayClass12_1.smethod_0(_LFRG0GY4VuOaiC2XHbpUmFoVDAj));
-				_003C_003Ec__DisplayClass12_1.smethod_2(_L7VColD35B3sDgJdUnjTeXGa7pv);
+				_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF = _LFRG0GY4VuOaiC2XHbpUmFoVDAj.get_Checked();
+				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 				_MRzbkwglCADk2fFjoxcsdCSJfKu();
 			});
-			((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val27);
-			((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)_LFRG0GY4VuOaiC2XHbpUmFoVDAj);
+			((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val28);
+			((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)_LFRG0GY4VuOaiC2XHbpUmFoVDAj);
 		}
 		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			CheckBox val29 = new CheckBox();
-			((Control)val29).set_Dock((DockStyle)2);
-			val29.set_Text("Enable Topless");
-			val29.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._b52DDz3MN1kD8sgdQhCNO1tJRNn);
-			CheckBox _PBgLcZr7dRzS97rFn3FU6lDw8ZE = val29;
-			_PBgLcZr7dRzS97rFn3FU6lDw8ZE.add_CheckedChanged((VoidEvent)delegate
-			{
-				_003C_003Ec__DisplayClass12_2.smethod_1(_003C_003Ec__DisplayClass12_2.smethod_0(_PBgLcZr7dRzS97rFn3FU6lDw8ZE));
-			});
 			CheckBox val30 = new CheckBox();
 			((Control)val30).set_Dock((DockStyle)2);
-			val30.set_Text("Enable Bottomless");
-			val30.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj);
-			CheckBox _qWiPLfzctHo3AqPevD7VV4qTuDy = val30;
+			val30.set_Text("Enable Topless");
+			val30.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._b52DDz3MN1kD8sgdQhCNO1tJRNn);
+			CheckBox _PBgLcZr7dRzS97rFn3FU6lDw8ZE = val30;
+			_PBgLcZr7dRzS97rFn3FU6lDw8ZE.add_CheckedChanged((VoidEvent)delegate
+			{
+				_iExD93IWLlzVfXsU9wyrEvWgJsg._b52DDz3MN1kD8sgdQhCNO1tJRNn = _PBgLcZr7dRzS97rFn3FU6lDw8ZE.get_Checked();
+			});
+			CheckBox val31 = new CheckBox();
+			((Control)val31).set_Dock((DockStyle)2);
+			val31.set_Text("Enable Bottomless");
+			val31.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj);
+			CheckBox _qWiPLfzctHo3AqPevD7VV4qTuDy = val31;
 			_qWiPLfzctHo3AqPevD7VV4qTuDy.add_CheckedChanged((VoidEvent)delegate
 			{
-				_003C_003Ec__DisplayClass12_2.smethod_2(_003C_003Ec__DisplayClass12_2.smethod_0(_qWiPLfzctHo3AqPevD7VV4qTuDy));
+				_iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj = _qWiPLfzctHo3AqPevD7VV4qTuDy.get_Checked();
 			});
-			((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)_PBgLcZr7dRzS97rFn3FU6lDw8ZE);
-			((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)_qWiPLfzctHo3AqPevD7VV4qTuDy);
+			((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)_PBgLcZr7dRzS97rFn3FU6lDw8ZE);
+			((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)_qWiPLfzctHo3AqPevD7VV4qTuDy);
 		}
-		Button val31 = new Button();
-		((Control)val31).set_Dock((DockStyle)4);
-		((Label)val31).set_Text("Close");
-		Button val32 = val31;
-		((Control)val32).add_MouseClick((MouseEvent)delegate
+		Button val32 = new Button();
+		((Control)val32).set_Dock((DockStyle)4);
+		((Label)val32).set_Text("Close");
+		Button val33 = val32;
+		((Control)val33).add_MouseClick((MouseEvent)delegate
 		{
-			_003C_003Ec__DisplayClass12_0.smethod_19(_003C_003Ec__DisplayClass12_0.smethod_18(_003C_003Ec__DisplayClass12_0.smethod_1((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
-			_003C_003Ec__DisplayClass12_0.smethod_20();
-			_003C_003Ec__DisplayClass12_0.smethod_21(_L7VColD35B3sDgJdUnjTeXGa7pv);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+			_eJWqL2MhFZHNHP960nsWLJJmyPD._7cuPUL8aamrg9daETH6zQk3RwbF();
+			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 		});
-		((ActiveList<Control>)(object)val2.get_Content().get_Controls()).Add((Control)(object)val32);
+		((ActiveList<Control>)(object)val3.get_Content().get_Controls()).Add((Control)(object)val33);
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(base._PnkAlVnMv0SZvRBFexqzE5DF9tp);
 	}
 
 	public override void _tO46aYSBLFIuhFNlhbrAeWbFDSf()
 	{
-		this.method_3();
+		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
 		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
 	}
 
 	[CompilerGenerated]
 	private void _fI217APzl4Tapt53WowQWN9Ipyi()
 	{
-		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-		MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, (Action<int>)delegate(int int_0)
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int int_0)
 		{
-			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = MainMenuScene.smethod_50();
+			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
 			switch (int_0)
 			{
 			default:
-				MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 				break;
 			case 0:
-				MainMenuScene.smethod_51((Action)null);
-				MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+				_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+				opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 				_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-				MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-				MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-				MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
+				_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+				_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
 				break;
 			case 1:
-				MainMenuScene.smethod_51((Action)null);
-				MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+				_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+				opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 				_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-				MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-				MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-				MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
+				_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+				_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
 				break;
 			case 2:
-				MainMenuScene.smethod_51((Action)null);
-				MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+				_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+				opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 				_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-				MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-				MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-				MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
+				_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+				_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
 				break;
 			}
 		});
@@ -623,35 +631,35 @@ public class MainMenuScene : TimeOfDayScene
 	[CompilerGenerated]
 	private void _SD73Tf7ANXaiMyg34yTgfWsn74y(int int_0)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = MainMenuScene.smethod_50();
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
 		switch (int_0)
 		{
 		default:
-			MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 			break;
 		case 0:
-			MainMenuScene.smethod_51((Action)null);
-			MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+			_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-			MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-			MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-			MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
 			break;
 		case 1:
-			MainMenuScene.smethod_51((Action)null);
-			MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+			_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-			MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-			MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-			MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
 			break;
 		case 2:
-			MainMenuScene.smethod_51((Action)null);
-			MainMenuScene.smethod_52(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+			_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
 			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-			MainMenuScene.smethod_55(MainMenuScene.smethod_54(MainMenuScene.smethod_53()));
-			MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-			MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
+			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
 			break;
 		}
 	}
@@ -659,38 +667,38 @@ public class MainMenuScene : TimeOfDayScene
 	[CompilerGenerated]
 	private void _3a8aQcA02aVpTZtKGWFgMtrJHSz()
 	{
-		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-		List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = MainMenuScene.smethod_59(bool_0: false);
-		List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _003C_003Ec.smethod_0(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_0)).ToList();
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+		List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = _DW9IcpdMEINZmuzfrqmwsduBGih._25D1ZH2er0EbpKmvFksAbFjP2OX(bool_0: false);
+		List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToList();
 		_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
-		MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, (Action<int>)delegate(int int_0)
+		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
 		{
 			if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 			{
-				_003C_003Ec__DisplayClass6_0.smethod_2(_003C_003Ec__DisplayClass6_0.smethod_1(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 			}
 			else
 			{
-				_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_ = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
-				if (!_003C_003Ec__DisplayClass6_0.smethod_3(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_))
+				_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
+				if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 				{
-					if (!((!_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_)) ? _003C_003Ec__DisplayClass6_0.smethod_10(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_8(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_)) : _003C_003Ec__DisplayClass6_0.smethod_9(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_8(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_))))
+					if (!((!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE) ? base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Ut0dhlh4JTZBMNJPNxxI9f9VqTp(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : base._ZzBuoSDMWwerejOO9Goyv2OCKgE._1yDW5GeZ2MCcssz8ohrF9CK913i(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO)))
 					{
-						_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Failed to load save, it's most likely corrupted.", 250, "OK", (Action)delegate
+						base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
 						{
-							MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+							base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 						});
 					}
 					else
 					{
-						_003C_003Ec__DisplayClass6_0.smethod_2(_003C_003Ec__DisplayClass6_0.smethod_1(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 					}
 				}
 				else
 				{
-					_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_6("There is no save in {0}slot #{1}!", (object)(_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_) ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", (Action)delegate
+					base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
 					{
-						MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 					});
 				}
 			}
@@ -700,29 +708,29 @@ public class MainMenuScene : TimeOfDayScene
 	[CompilerGenerated]
 	private void _2L0GcJVz3zT3U7tBW5tgN1ccYgp()
 	{
-		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 	}
 
 	[CompilerGenerated]
 	private void _plxCcrCl4DCKu5G7qBtjRepOyaM()
 	{
-		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 	}
 
 	[CompilerGenerated]
 	private void _W4PFYhu2NAZbDYPFpvdFr789eG0()
 	{
-		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-		MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, (Action<int>)delegate(int int_0)
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
-				MainMenuScene.smethod_61(MainMenuScene.smethod_60(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Action)delegate
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
 				{
-					MainMenuScene.smethod_62(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this));
+					base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
 				});
 			}
-			MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 		});
 	}
 
@@ -731,18 +739,18 @@ public class MainMenuScene : TimeOfDayScene
 	{
 		if (int_0 == 1)
 		{
-			MainMenuScene.smethod_61(MainMenuScene.smethod_60(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Action)delegate
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
 			{
-				MainMenuScene.smethod_62(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this));
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
 			});
 		}
-		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 	}
 
 	[CompilerGenerated]
 	private void _BK4Ag37J0xySDkNNVq7rfpQgFa4()
 	{
-		MainMenuScene.smethod_62(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this));
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_18(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

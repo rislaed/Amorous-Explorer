@@ -209,19 +209,19 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	public void _NtDfAf24kD2Korbc5hoME725A7d(string string_0, int int_0)
 	{
-		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "Clothes"))
+		if (string_0 == "Clothes")
 		{
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric6");
 		}
-		else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "Prologue") && int_0 == 30)
+		else if (string_0 == "Prologue" && int_0 == 30)
 		{
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric4");
 		}
-		else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "CobyDate"))
+		else if (string_0 == "CobyDate")
 		{
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Coby");
 		}
-		else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DJ") && int_0 == 10)
+		else if (string_0 == "DJ" && int_0 == 10)
 		{
 			_8DePzSVoGzWFpzrB1bmfWEjf0uy("Club Amorous DJ", "MessageIconDJ");
 		}
@@ -229,89 +229,89 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	public void _fPyIv5zbbSj5sjZlbAwQTFXnJ5G(string string_0, int int_0)
 	{
-		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "JaxDate") && int_0 == 20)
+		if (string_0 == "JaxDate" && int_0 == 20)
 		{
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Jax");
 		}
-		else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "JaxDate") && int_0 == 30)
+		else if (string_0 == "JaxDate" && int_0 == 30)
 		{
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Jax");
 		}
-		else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "JaxDate") && int_0 == 40)
+		else if (string_0 == "JaxDate" && int_0 == 40)
 		{
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Jax");
 		}
-		else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SethDate") && int_0 == 20)
+		else if (string_0 == "SethDate" && int_0 == 20)
 		{
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Seth");
 		}
-		else if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SethDate") || int_0 != 30)
+		else if (!(string_0 == "SethDate") || int_0 != 30)
 		{
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SethDate") && int_0 == 40)
+			if (string_0 == "SethDate" && int_0 == 40)
 			{
 				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Seth");
 			}
-			else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SkyeDate") && int_0 == 40)
+			else if (string_0 == "SkyeDate" && int_0 == 40)
 			{
 				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Skye");
 			}
-			else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SkyeDate") && int_0 == 50)
+			else if (string_0 == "SkyeDate" && int_0 == 50)
 			{
 				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Skye");
 			}
-			else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SkyeDate") && int_0 == 60)
+			else if (string_0 == "SkyeDate" && int_0 == 60)
 			{
 				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Skye");
 			}
-			else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DustinDate") && int_0 == 50)
+			else if (string_0 == "DustinDate" && int_0 == 50)
 			{
 				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Dustin");
 			}
-			else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DustinDate") && int_0 == 60)
+			else if (string_0 == "DustinDate" && int_0 == 60)
 			{
 				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Dustin");
 			}
-			else if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DustinDate") || int_0 != 70)
+			else if (!(string_0 == "DustinDate") || int_0 != 70)
 			{
-				if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "ZenithDate") || int_0 != 30)
+				if (!(string_0 == "ZenithDate") || int_0 != 30)
 				{
-					if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "ZenithDate") || int_0 != 40)
+					if (!(string_0 == "ZenithDate") || int_0 != 40)
 					{
-						if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "ZenithDate") && int_0 == 60)
+						if (string_0 == "ZenithDate" && int_0 == 60)
 						{
 							_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Zenith");
 						}
-						else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MercyDate") && int_0 == 30)
+						else if (string_0 == "MercyDate" && int_0 == 30)
 						{
 							_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Mercy");
 						}
-						else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MercyDate") && int_0 == 40)
+						else if (string_0 == "MercyDate" && int_0 == 40)
 						{
 							_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Mercy");
 						}
-						else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MercyDate") && int_0 == 60)
+						else if (string_0 == "MercyDate" && int_0 == 60)
 						{
 							_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Mercy");
 						}
-						else if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "RemyDate") || int_0 != 20)
+						else if (!(string_0 == "RemyDate") || int_0 != 20)
 						{
-							if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "RemyDate") && int_0 == 30)
+							if (string_0 == "RemyDate" && int_0 == 30)
 							{
 								_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Remy");
 							}
-							else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "RemyDate") && int_0 == 40)
+							else if (string_0 == "RemyDate" && int_0 == 40)
 							{
 								_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Remy");
 							}
-							else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "LexDate") && int_0 == 20)
+							else if (string_0 == "LexDate" && int_0 == 20)
 							{
 								_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Lex");
 							}
-							else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "LexDate") && int_0 == 30)
+							else if (string_0 == "LexDate" && int_0 == 30)
 							{
 								_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Lex");
 							}
-							else if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "LexDate") && int_0 == 50)
+							else if (string_0 == "LexDate" && int_0 == 50)
 							{
 								_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Lex");
 							}
@@ -382,12 +382,12 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	public void _vVZVLriSGPExpn1KeobglMabsoi(string string_0)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_1();
-		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_2(opIJo2jLUqdOL5yAFP4yzXce0DG_, string_0))
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf(string_0))
 		{
 			return;
 		}
-		_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_3(opIJo2jLUqdOL5yAFP4yzXce0DG_, string_0, bool_0: true);
+		opIJo2jLUqdOL5yAFP4yzXce0DG._4Fscz8ryB3hm0NmL5xw39HHiPd1(string_0, bool_0: true);
 		if (_f6JnaqJEhaBQyPQ8hoUgwIj9WcQ.TryGetValue(string_0, out var value))
 		{
 			if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
@@ -407,23 +407,23 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	private void _A3aw0JDUC0JuHjJDLBjCNpAj01Q(string string_0, string string_1)
 	{
-		_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, string_1, "Achievement", _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_4("Congratulations, you've unlocked the '", string_0, "'-achievement!"));
+		_4L7hfXrWoDdArQiscG4ukHCV46B._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_1, "Achievement", "Congratulations, you've unlocked the '" + string_0 + "'-achievement!");
 	}
 
 	private void _8DePzSVoGzWFpzrB1bmfWEjf0uy(string string_0, string string_1)
 	{
-		_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, string_1, "Contact", _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_4("The phonenumber of ", string_0, " has been added to your contacts!"));
+		_4L7hfXrWoDdArQiscG4ukHCV46B._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_1, "Contact", "The phonenumber of " + string_0 + " has been added to your contacts!");
 	}
 
 	public void _0Y1BTbSbP9IopfJXfeA4x02PifL(string string_0)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_1();
-		if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_2(opIJo2jLUqdOL5yAFP4yzXce0DG_, string_0))
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (!opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf(string_0))
 		{
-			_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_3(opIJo2jLUqdOL5yAFP4yzXce0DG_, string_0, bool_0: true);
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MessageTutorial1"))
+			opIJo2jLUqdOL5yAFP4yzXce0DG._4Fscz8ryB3hm0NmL5xw39HHiPd1(string_0, bool_0: true);
+			if (string_0 == "MessageTutorial1")
 			{
-				_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, "MessageIconGeneric", "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
+				_4L7hfXrWoDdArQiscG4ukHCV46B._EXfoFnp1OKxeZbd4GcVZMCO2urH("MessageIconGeneric", "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
 			}
 		}
 	}

@@ -31,31 +31,31 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CinemaClerk", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Cinema Clerk Expressions");
-		CinemaClerkNPC.smethod_17(CinemaClerkNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Cinema Clerk Expressions - Pants")));
-		CinemaClerkNPC.smethod_19(CinemaClerkNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Vest, "Cinema Clerk Expressions - Vest")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Cinema Clerk Expressions - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Vest, "Cinema Clerk Expressions - Vest")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			CinemaClerkNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			CinemaClerkNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 413f);
-			CinemaClerkNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 22f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 413f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 22f;
 			break;
 		case NPCLocation.Left:
-			CinemaClerkNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			CinemaClerkNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -190f);
-			CinemaClerkNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 22f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -190f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 22f;
 			break;
 		case NPCLocation.Right:
-			CinemaClerkNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			CinemaClerkNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1016f);
-			CinemaClerkNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 22f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1016f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 22f;
 			break;
 		}
 	}

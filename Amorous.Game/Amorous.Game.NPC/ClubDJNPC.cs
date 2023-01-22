@@ -34,11 +34,11 @@ public class ClubDJNPC : SpineNPC<ClubDJNPC.EHeads, ClubDJNPC.EPoses, ClubDJNPC.
 	{
 		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 400;
 		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 600;
-		ClubDJNPC.smethod_19(ClubDJNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dance A", (Action<int>)null);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Dance A");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Ears", "Head");
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arm right", "Body");
-		ClubDJNPC.smethod_21(ClubDJNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")));
-		ClubDJNPC.smethod_23(ClubDJNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Pants, "Pants")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Pants, "Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

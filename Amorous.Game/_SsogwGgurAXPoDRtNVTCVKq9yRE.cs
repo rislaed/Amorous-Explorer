@@ -24,7 +24,7 @@ public class _SsogwGgurAXPoDRtNVTCVKq9yRE : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	private void _1UonNHUCNgrMS8Z0CyaGApPKtqM()
 	{
-		_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_3((_8lVOgkauaSHbAkAqHzI1K7mIyOI)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<CreditsMenuScene>();
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<CreditsMenuScene>();
 	}
 
 	private void _OtbNWfcfKRIxEBenRG9bmom5ssK()
@@ -37,17 +37,17 @@ public class _SsogwGgurAXPoDRtNVTCVKq9yRE : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	private void _pfVo68LERbhujSvmznaAfmL4Jf(string string_0)
 	{
-		_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_5(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_4(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_3((_8lVOgkauaSHbAkAqHzI1K7mIyOI)this)), bool_0: false);
-		_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_9(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_7(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_6(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_3((_8lVOgkauaSHbAkAqHzI1K7mIyOI)this))), _SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_8("Failed to open the following URL:\r\n", string_0, "\r\n\r\nPlease use your favorite browser!"), 500, "OK", (Action)delegate
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._XbOXR6AypLIdJ3gBMGseGi3Wi2i._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q("Failed to open the following URL:\r\n" + string_0 + "\r\n\r\nPlease use your favorite browser!", 500, "OK", delegate
 		{
-			_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_5(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_4(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_3((_8lVOgkauaSHbAkAqHzI1K7mIyOI)this)), bool_0: true);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 		});
 	}
 
 	[CompilerGenerated]
 	private void _l1KF667IOdcgI45tEvUXgR0o5SD()
 	{
-		_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_5(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_4(_SsogwGgurAXPoDRtNVTCVKq9yRE.smethod_3((_8lVOgkauaSHbAkAqHzI1K7mIyOI)this)), bool_0: true);
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 	}
 
 	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_3(_8lVOgkauaSHbAkAqHzI1K7mIyOI _8lVOgkauaSHbAkAqHzI1K7mIyOI_0)

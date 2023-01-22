@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 {
-	private static readonly string _wvD7pijDcO3KNAgJ4go8LykDZAv = _eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_6(_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_5(_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_4()), "options.json");
+	private static readonly string _wvD7pijDcO3KNAgJ4go8LykDZAv = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "options.json");
 
 	public static _eNOTHZZiu5nx6PrADzfLyng3Igc _Hnb6mPvrZFgOMCIApIeMW88jSsF { get; private set; }
 
@@ -19,12 +19,12 @@ public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 
 	public static void _sabDA8yXNR8DIRSbHjOcXx1e1Ax()
 	{
-		if (!_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_0(_wvD7pijDcO3KNAgJ4go8LykDZAv))
+		if (!File.Exists(_wvD7pijDcO3KNAgJ4go8LykDZAv))
 		{
 			_Hnb6mPvrZFgOMCIApIeMW88jSsF = new _eNOTHZZiu5nx6PrADzfLyng3Igc();
 			return;
 		}
-		string text = _eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_1(_wvD7pijDcO3KNAgJ4go8LykDZAv);
+		string text = File.ReadAllText(_wvD7pijDcO3KNAgJ4go8LykDZAv);
 		try
 		{
 			_Hnb6mPvrZFgOMCIApIeMW88jSsF = JsonConvert.DeserializeObject<_eNOTHZZiu5nx6PrADzfLyng3Igc>(text) ?? new _eNOTHZZiu5nx6PrADzfLyng3Igc();
@@ -40,8 +40,8 @@ public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 	{
 		if (_Hnb6mPvrZFgOMCIApIeMW88jSsF != null)
 		{
-			string string_ = _eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_2((object)_Hnb6mPvrZFgOMCIApIeMW88jSsF);
-			_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_3(_wvD7pijDcO3KNAgJ4go8LykDZAv, string_);
+			string contents = JsonConvert.SerializeObject((object)_Hnb6mPvrZFgOMCIApIeMW88jSsF);
+			File.WriteAllText(_wvD7pijDcO3KNAgJ4go8LykDZAv, contents);
 		}
 	}
 

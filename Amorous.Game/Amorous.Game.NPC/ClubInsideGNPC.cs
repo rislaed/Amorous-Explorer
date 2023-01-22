@@ -5,7 +5,7 @@ public class ClubInsideGNPC : ClubStaticNPC
 	public ClubInsideGNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubInsideStatic", "G", bool_0: true, bool_1: true)
 	{
-		ClubInsideGNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0.37f);
+		base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 0.37f;
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

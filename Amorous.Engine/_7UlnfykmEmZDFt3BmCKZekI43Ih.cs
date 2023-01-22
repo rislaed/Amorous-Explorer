@@ -19,7 +19,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		internal bool _malqtq9ExY4IyWRnXYHeVFkym0c(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0)
 		{
-			return _tG4UmqFtIzo0HrVclFcuXu2ibnh.smethod_0(_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i, _hzqOBkJhJBhsTRNARxHLctcvhN0);
+			return _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _hzqOBkJhJBhsTRNARxHLctcvhN0;
 		}
 
 		static bool smethod_0(string string_0, string string_1)
@@ -90,14 +90,18 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	protected _7UlnfykmEmZDFt3BmCKZekI43Ih(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
+		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
 		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004e: Expected O, but got Unknown
 		_ZzBuoSDMWwerejOO9Goyv2OCKgE = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
 		_lstlI8qzZ4KErYKnufdOlj1xVZF = new List<_ujAkjlfN5TywwbLAUDzPvtab6uJ>();
 		_XvcwmP1Eb6HFUF5pkiUVgpqNbWE = BlendState.NonPremultiplied;
-		Desktop obj = _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_0();
-		_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_2(obj, _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_1());
-		((Control)obj).set_Size(new Point(1920, 1080));
-		_PnkAlVnMv0SZvRBFexqzE5DF9tp = obj;
+		Desktop val = new Desktop();
+		val.set_Skin(Gui.GenerateStandardSkin());
+		((Control)val).set_Size(new Point(1920, 1080));
+		_PnkAlVnMv0SZvRBFexqzE5DF9tp = val;
 		_PnkAlVnMv0SZvRBFexqzE5DF9tp._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 	}
 
@@ -111,7 +115,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public _ujAkjlfN5TywwbLAUDzPvtab6uJ _0c5TjZklJbu1wzYG2FIcvf3SIdh(string string_0)
 	{
-		return _lstlI8qzZ4KErYKnufdOlj1xVZF.FirstOrDefault((_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0) => _tG4UmqFtIzo0HrVclFcuXu2ibnh.smethod_0(_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i, string_0));
+		return _lstlI8qzZ4KErYKnufdOlj1xVZF.FirstOrDefault((_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0) => _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == string_0);
 	}
 
 	public _uqydQVaCmCvK7zzWs5W4gZFpKBu _0O8D0mBgmrh0sLOGcLVvGNOHKLCA(string string_0, string string_1, int int_0, int int_1)
@@ -212,7 +216,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		if (string_1.Length == 0)
 		{
-			throw _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_3("Images cannot be empty");
+			throw new ArgumentException("Images cannot be empty");
 		}
 		List<Texture2D> list = new List<Texture2D>(string_1.Length);
 		foreach (string text in string_1)
@@ -251,7 +255,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		Texture2D texture2D_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
 		Texture2D texture2D_2 = null;
-		if (!_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_4(string_2))
+		if (!string.IsNullOrEmpty(string_2))
 		{
 			texture2D_2 = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_2);
 		}
@@ -278,7 +282,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		if (string_1.Length == 0)
 		{
-			throw _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_3("Images cannot be empty");
+			throw new ArgumentException("Images cannot be empty");
 		}
 		List<Texture2D> list = new List<Texture2D>(string_1.Length);
 		foreach (string text in string_1)
@@ -321,28 +325,16 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 			Point point_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._e6KgAy4CTN1JFYwA88grvAEmDxX(_ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
 			_MVL2E4AzcbNhDrRfPFXBDnmcJ4c(point_, bool_, _lstlI8qzZ4KErYKnufdOlj1xVZF);
 		}
-		_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_5(_PnkAlVnMv0SZvRBFexqzE5DF9tp);
+		_PnkAlVnMv0SZvRBFexqzE5DF9tp.Update();
 	}
 
 	private void _kmVTSqclXrApKmHKAamak6kRUjl(GameTime gameTime_0, IEnumerable<_ujAkjlfN5TywwbLAUDzPvtab6uJ> ienumerable_0)
 	{
-		IEnumerator<_ujAkjlfN5TywwbLAUDzPvtab6uJ> enumerator = ienumerable_0.GetEnumerator();
-		try
+		foreach (_ujAkjlfN5TywwbLAUDzPvtab6uJ item in ienumerable_0)
 		{
-			while (_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_6((IEnumerator)enumerator))
+			if (item._3ZeCDXqcWHY4XJDBGyav3UzxYaHA)
 			{
-				_ujAkjlfN5TywwbLAUDzPvtab6uJ current = enumerator.Current;
-				if (current._3ZeCDXqcWHY4XJDBGyav3UzxYaHA)
-				{
-					current._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-				}
-			}
-		}
-		finally
-		{
-			if (enumerator != null)
-			{
-				_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_7((IDisposable)enumerator);
+				item._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 			}
 		}
 	}
@@ -428,7 +420,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public virtual void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
 	{
-		_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_8(_PnkAlVnMv0SZvRBFexqzE5DF9tp);
+		_PnkAlVnMv0SZvRBFexqzE5DF9tp.Draw();
 	}
 
 	private void _rNZd4y7Vjg7H4PTzsnTaLEi5v8b(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0, IEnumerable<_ujAkjlfN5TywwbLAUDzPvtab6uJ> ienumerable_0)
@@ -441,80 +433,68 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_00f6: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0118: Unknown result type (might be due to invalid IL or missing references)
 		bool flag = false;
-		IEnumerator<_ujAkjlfN5TywwbLAUDzPvtab6uJ> enumerator = ienumerable_0.GetEnumerator();
-		try
+		foreach (_ujAkjlfN5TywwbLAUDzPvtab6uJ item in ienumerable_0)
 		{
-			while (_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_6((IEnumerator)enumerator))
+			if (!item._Fxy2SlgceW90FloFw6a1AEJODYA)
 			{
-				_ujAkjlfN5TywwbLAUDzPvtab6uJ current = enumerator.Current;
-				if (!current._Fxy2SlgceW90FloFw6a1AEJODYA)
+				continue;
+			}
+			if (!(item is _3IHp43rpkJgOBcY9lrIrwMuwWve))
+			{
+				if (!(item is _WBXNT6eIVGk6ZKExRBJ6JxXE6zb))
 				{
+					if (item is _fAUddQEKfZyemRb327NhM3GGlmzA)
+					{
+						if (flag)
+						{
+							spriteBatch_0.End();
+							flag = false;
+						}
+						((_fAUddQEKfZyemRb327NhM3GGlmzA)item)._3TrGrUra7cqeIXkbZOrfaoQaD5F = matrix_0;
+						item._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+					}
+					else
+					{
+						if (!flag)
+						{
+							_dXVK1NWaxcsgYg6KpavA0e8oion._g9Sx54kMPiHz5jrqWh4Kb1pTijH(nullable_0: matrix_0, spriteBatch_0: spriteBatch_0, spriteSortMode_0: (SpriteSortMode)0, blendState_0: _XvcwmP1Eb6HFUF5pkiUVgpqNbWE);
+							flag = true;
+						}
+						item._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+					}
 					continue;
 				}
-				if (!(current is _3IHp43rpkJgOBcY9lrIrwMuwWve))
+				if (flag)
 				{
-					if (!(current is _WBXNT6eIVGk6ZKExRBJ6JxXE6zb))
-					{
-						if (current is _fAUddQEKfZyemRb327NhM3GGlmzA)
-						{
-							if (flag)
-							{
-								_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_9(spriteBatch_0);
-								flag = false;
-							}
-							((_fAUddQEKfZyemRb327NhM3GGlmzA)current)._3TrGrUra7cqeIXkbZOrfaoQaD5F = matrix_0;
-							current._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
-						}
-						else
-						{
-							if (!flag)
-							{
-								_dXVK1NWaxcsgYg6KpavA0e8oion._g9Sx54kMPiHz5jrqWh4Kb1pTijH(nullable_0: matrix_0, spriteBatch_0: spriteBatch_0, spriteSortMode_0: (SpriteSortMode)0, blendState_0: _XvcwmP1Eb6HFUF5pkiUVgpqNbWE);
-								flag = true;
-							}
-							current._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
-						}
-						continue;
-					}
-					if (flag)
-					{
-						_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_9(spriteBatch_0);
-						flag = false;
-					}
-					_WBXNT6eIVGk6ZKExRBJ6JxXE6zb wBXNT6eIVGk6ZKExRBJ6JxXE6zb = (_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)current;
-					if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb._zkHMlDFkja4TqmjdlHuZRCj8FCB)
-					{
-						wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc += matrix_0.M41;
-						wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY += matrix_0.M42;
-					}
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0);
-					if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb._zkHMlDFkja4TqmjdlHuZRCj8FCB)
-					{
-						wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc -= matrix_0.M41;
-						wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY -= matrix_0.M42;
-					}
+					spriteBatch_0.End();
+					flag = false;
 				}
-				else
+				_WBXNT6eIVGk6ZKExRBJ6JxXE6zb wBXNT6eIVGk6ZKExRBJ6JxXE6zb = (_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)item;
+				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb._zkHMlDFkja4TqmjdlHuZRCj8FCB)
 				{
-					if (flag)
-					{
-						_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_9(spriteBatch_0);
-						flag = false;
-					}
-					_nrDmURIbDeklrMRB6X5y3IwhP1Q(current as _3IHp43rpkJgOBcY9lrIrwMuwWve, spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc += matrix_0.M41;
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY += matrix_0.M42;
+				}
+				wBXNT6eIVGk6ZKExRBJ6JxXE6zb._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0);
+				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb._zkHMlDFkja4TqmjdlHuZRCj8FCB)
+				{
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc -= matrix_0.M41;
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY -= matrix_0.M42;
 				}
 			}
-		}
-		finally
-		{
-			if (enumerator != null)
+			else
 			{
-				_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_7((IDisposable)enumerator);
+				if (flag)
+				{
+					spriteBatch_0.End();
+					flag = false;
+				}
+				_nrDmURIbDeklrMRB6X5y3IwhP1Q(item as _3IHp43rpkJgOBcY9lrIrwMuwWve, spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
 			}
 		}
 		if (flag)
 		{
-			_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_9(spriteBatch_0);
+			spriteBatch_0.End();
 		}
 	}
 
@@ -545,7 +525,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)1, BlendState.NonPremultiplied, null, null, null, null, (!_4QLHHCk23T1BjK7acKxASbkCefG._zkHMlDFkja4TqmjdlHuZRCj8FCB) ? matrix_0 : Matrix.get_Identity());
 			((_xZgbANe7gi6i2DAhBEkKpR1QFLe)_4QLHHCk23T1BjK7acKxASbkCefG)._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
-			_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_9(spriteBatch_0);
+			spriteBatch_0.End();
 		}
 	}
 
@@ -556,7 +536,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _VvFE2zgy4FbDjvaEvb67tXJ7aRm(string string_0)
 	{
-		return _0c5TjZklJbu1wzYG2FIcvf3SIdh(_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_10("NPCLayer_", string_0)) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
+		return _0c5TjZklJbu1wzYG2FIcvf3SIdh("NPCLayer_" + string_0) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
 	}
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _VvFE2zgy4FbDjvaEvb67tXJ7aRm(NPCLocation npclocation_0)
@@ -566,12 +546,12 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _VvFE2zgy4FbDjvaEvb67tXJ7aRm<T>()
 	{
-		return _0c5TjZklJbu1wzYG2FIcvf3SIdh(_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_10("NPCLayer_", _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_12((MemberInfo)_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_11(typeof(T).TypeHandle)))) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
+		return _0c5TjZklJbu1wzYG2FIcvf3SIdh("NPCLayer_" + typeof(T).Name) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
 	}
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _gWHVDvr9GDtRXP2zf2Md18MgZ4b(_QGGOTxZ8aNWGh0hc26wcmx8wmwT _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0, _a2qVgWDIm3fBp49WubttSTPsx8K _a2qVgWDIm3fBp49WubttSTPsx8K_0)
 	{
-		_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve2 = _VvFE2zgy4FbDjvaEvb67tXJ7aRm(_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_12((MemberInfo)_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_13((object)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_0))) ?? new _3IHp43rpkJgOBcY9lrIrwMuwWve(this, _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0, _a2qVgWDIm3fBp49WubttSTPsx8K_0);
+		_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve2 = _VvFE2zgy4FbDjvaEvb67tXJ7aRm(_QGGOTxZ8aNWGh0hc26wcmx8wmwT_0.GetType().Name) ?? new _3IHp43rpkJgOBcY9lrIrwMuwWve(this, _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0, _a2qVgWDIm3fBp49WubttSTPsx8K_0);
 		_3IHp43rpkJgOBcY9lrIrwMuwWve2._dPmC8tBC0iph2YBAFmztEsmwUdSA = _a2qVgWDIm3fBp49WubttSTPsx8K_0;
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_3IHp43rpkJgOBcY9lrIrwMuwWve2, (_a2qVgWDIm3fBp49WubttSTPsx8K_0 == _a2qVgWDIm3fBp49WubttSTPsx8K.Background) ? 1 : 3);
 		return _3IHp43rpkJgOBcY9lrIrwMuwWve2;

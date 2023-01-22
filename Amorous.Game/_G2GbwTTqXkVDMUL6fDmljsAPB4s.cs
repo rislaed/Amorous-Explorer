@@ -18,7 +18,7 @@ public class _G2GbwTTqXkVDMUL6fDmljsAPB4s
 
 	public _G2GbwTTqXkVDMUL6fDmljsAPB4s(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA = _G2GbwTTqXkVDMUL6fDmljsAPB4s.smethod_1(_G2GbwTTqXkVDMUL6fDmljsAPB4s.smethod_0(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
+		_RA1aFlOff0jGfI2cKUGhYI1MRLBA = new _gJR4g7ak0hsZAUWX1vJbMqG2P5I(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._2yepMkVENnecIsduggABaU2qhXW);
 	}
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
@@ -29,7 +29,7 @@ public class _G2GbwTTqXkVDMUL6fDmljsAPB4s
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
 	{
-		_G2GbwTTqXkVDMUL6fDmljsAPB4s.smethod_2(_RA1aFlOff0jGfI2cKUGhYI1MRLBA, spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0);
+		_RA1aFlOff0jGfI2cKUGhYI1MRLBA._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0);
 	}
 
 	private void _1TexRAv8TgmLSYZPaXObsZp5CgP()
@@ -44,16 +44,16 @@ public class _G2GbwTTqXkVDMUL6fDmljsAPB4s
 			switch (_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q)
 			{
 			default:
-				_G2GbwTTqXkVDMUL6fDmljsAPB4s.smethod_3(_RA1aFlOff0jGfI2cKUGhYI1MRLBA, _MMqeUiXOyJf7vpX8piOiMK4x0bH, (Action)null);
+				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_MMqeUiXOyJf7vpX8piOiMK4x0bH);
 				break;
 			case _RRECH42isVc35MkZPyLEGkp0hjs.Morning:
-				_G2GbwTTqXkVDMUL6fDmljsAPB4s.smethod_3(_RA1aFlOff0jGfI2cKUGhYI1MRLBA, _Ib9VarTDKmfjV0rrVECzoNEzrSL, (Action)null);
+				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_Ib9VarTDKmfjV0rrVECzoNEzrSL);
 				break;
 			case _RRECH42isVc35MkZPyLEGkp0hjs.Day:
-				_G2GbwTTqXkVDMUL6fDmljsAPB4s.smethod_3(_RA1aFlOff0jGfI2cKUGhYI1MRLBA, _FfaSCX3DjztPrRuzUxZ0SEncuSR, (Action)null);
+				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_FfaSCX3DjztPrRuzUxZ0SEncuSR);
 				break;
 			case _RRECH42isVc35MkZPyLEGkp0hjs.Sunset:
-				_G2GbwTTqXkVDMUL6fDmljsAPB4s.smethod_3(_RA1aFlOff0jGfI2cKUGhYI1MRLBA, _or20jsQIs921jMzfkOHr9vXb9Cd, (Action)null);
+				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_or20jsQIs921jMzfkOHr9vXb9Cd);
 				break;
 			}
 		}

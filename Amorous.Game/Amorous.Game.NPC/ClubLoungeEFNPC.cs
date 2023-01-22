@@ -25,9 +25,9 @@ public class ClubLoungeEFNPC : LayerNPC<ClubLoungeEFNPC.EHeads, ClubLoungeEFNPC.
 	public ClubLoungeEFNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubLoungeStatic", 1f)
 	{
-		ClubLoungeEFNPC.smethod_16(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Sitting, "E F club nude"), new string[1] { "E F club nude cock" });
-		ClubLoungeEFNPC.smethod_18(ClubLoungeEFNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Shirt, "E F club shirt")));
-		ClubLoungeEFNPC.smethod_20(ClubLoungeEFNPC.smethod_19(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Pants, "E F club pants")));
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Sitting, "E F club nude")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("E F club nude cock");
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Shirt, "E F club shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Pants, "E F club pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

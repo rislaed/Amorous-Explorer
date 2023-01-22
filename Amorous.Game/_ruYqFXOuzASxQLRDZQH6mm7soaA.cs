@@ -24,8 +24,8 @@ public class _ruYqFXOuzASxQLRDZQH6mm7soaA : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<JaxCont
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = _ruYqFXOuzASxQLRDZQH6mm7soaA.smethod_0();
-		int num = _ruYqFXOuzASxQLRDZQH6mm7soaA.smethod_1(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		int num = opIJo2jLUqdOL5yAFP4yzXce0DG._X1b0dyIzsSyKwqWd3usrbDfKJAk();
 		if (num > 1)
 		{
 			if (num >= 1 && num <= 2)

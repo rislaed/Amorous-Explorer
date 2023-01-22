@@ -25,13 +25,13 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 			//IL_002d: Unknown result type (might be due to invalid IL or missing references)
 			//IL_0032: Unknown result type (might be due to invalid IL or missing references)
 			_eNqfeKhXj4x1FkHQitvzRQ1JLSE = value;
-			if (_abqs0UynzjUEhuA3VpR4t6Uuk0E.smethod_0(_eNqfeKhXj4x1FkHQitvzRQ1JLSE))
+			if (string.IsNullOrEmpty(_eNqfeKhXj4x1FkHQitvzRQ1JLSE))
 			{
 				_0IQKqP6KjSSBSTlZR0Y2K1CamuH = Vector2.get_Zero();
 			}
 			else
 			{
-				_0IQKqP6KjSSBSTlZR0Y2K1CamuH = _abqs0UynzjUEhuA3VpR4t6Uuk0E.smethod_1(_UlZpHdih1X5ig1k6QjZ497jtA1A, _eNqfeKhXj4x1FkHQitvzRQ1JLSE);
+				_0IQKqP6KjSSBSTlZR0Y2K1CamuH = _UlZpHdih1X5ig1k6QjZ497jtA1A.MeasureString(_eNqfeKhXj4x1FkHQitvzRQ1JLSE);
 			}
 		}
 	}
@@ -61,7 +61,7 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		//IL_001e: Invalid comparison between Unknown and I4
 		//IL_0129: Unknown result type (might be due to invalid IL or missing references)
 		//IL_012f: Unknown result type (might be due to invalid IL or missing references)
-		if (_abqs0UynzjUEhuA3VpR4t6Uuk0E.smethod_0(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ))
+		if (string.IsNullOrEmpty(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ))
 		{
 			return;
 		}

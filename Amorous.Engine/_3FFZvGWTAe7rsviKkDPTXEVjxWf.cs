@@ -53,7 +53,7 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 		}
 		set
 		{
-			_3FFZvGWTAe7rsviKkDPTXEVjxWf.smethod_1(_3FFZvGWTAe7rsviKkDPTXEVjxWf.smethod_0(_4L7hfXrWoDdArQiscG4ukHCV46B._8k7Do3TGW5NrB22zl8QzInP2j7k), (SDL_bool)(value ? 1 : 0));
+			SDL.SDL_SetWindowGrab(_4L7hfXrWoDdArQiscG4ukHCV46B._8k7Do3TGW5NrB22zl8QzInP2j7k.get_Handle(), (SDL_bool)(value ? 1 : 0));
 			_TuLPATzfvkT61cGzdP0BdAYgdRg = value;
 		}
 	}
@@ -78,11 +78,11 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
 		_JxAOrrJ4bqv0CaScbroMtsBP9vo = _QyGrB1OudfOfivAikLqMIOfHz3L;
-		_QyGrB1OudfOfivAikLqMIOfHz3L = _3FFZvGWTAe7rsviKkDPTXEVjxWf.smethod_2();
+		_QyGrB1OudfOfivAikLqMIOfHz3L = Keyboard.GetState();
 		_RYQYlBTtUaKPqglBPk0fi7hT7pr = _QG4mFT06aDk75H8FavD2erQSaah;
-		_QG4mFT06aDk75H8FavD2erQSaah = _3FFZvGWTAe7rsviKkDPTXEVjxWf.smethod_3((PlayerIndex)0);
+		_QG4mFT06aDk75H8FavD2erQSaah = GamePad.GetState((PlayerIndex)0);
 		_nL6AWNBZGcjH4ycaR2xzpUdcYpMA = _N9dtCLxcbyjVo7hRyMVQzD7exaM;
-		_N9dtCLxcbyjVo7hRyMVQzD7exaM = _3FFZvGWTAe7rsviKkDPTXEVjxWf.smethod_4();
+		_N9dtCLxcbyjVo7hRyMVQzD7exaM = Mouse.GetState();
 		_z4wENYBCooFsUzGd3jpaiN6UNNL.X = Math.Max(0, Math.Min(((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_X(), _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._ssaTWDF5CYtQ9fGbLNtaLrgFtvJ));
 		_z4wENYBCooFsUzGd3jpaiN6UNNL.Y = Math.Max(0, Math.Min(((MouseState)(ref _N9dtCLxcbyjVo7hRyMVQzD7exaM)).get_Y(), _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._EM2dYeybqjLlS6bODr1k9TxIRZU));
 		_bN58s8paKnVuWr3UMJsZkvbV9WA.X = (int)_z4wENYBCooFsUzGd3jpaiN6UNNL.X;

@@ -8,44 +8,44 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 
 	public static void _NG0eIZcXsX6Fp38GhuED0LKeWHf(_lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0)
 	{
-		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 0)
+		if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK == 0)
 		{
-			if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Prologue") >= 20)
+			if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._M29jWtsDcmPvHjIYYSiTa8TbWri._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") >= 20)
 			{
-				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_3(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, bool_0: true);
+				_lRHDfpOTd4PxClZkjMpoakPEA9d_0._QIaTN8Xtv0fmtjjEBsdflb1NoFl = true;
 			}
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_4(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, 1);
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK = 1;
 		}
-		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 1)
+		if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK == 1)
 		{
-			if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_5(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "PrologueDone"))
+			if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._M29jWtsDcmPvHjIYYSiTa8TbWri._Oms9lumBodLGrGZ09YJaEuzmlAf("PrologueDone"))
 			{
-				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_6(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Prologue", 40);
+				_lRHDfpOTd4PxClZkjMpoakPEA9d_0._M29jWtsDcmPvHjIYYSiTa8TbWri._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("Prologue", 40);
 			}
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_4(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, 2);
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK = 2;
 		}
-		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 2)
+		if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK == 2)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_7(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Player.Gender", bool_0: true);
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_6(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Gender", 10);
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_4(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, 3);
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._M29jWtsDcmPvHjIYYSiTa8TbWri._aedbmRW9PZZduyLA3PVVHtafNAGA("Player.Gender");
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._M29jWtsDcmPvHjIYYSiTa8TbWri._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("Gender", 10);
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK = 3;
 		}
-		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 3)
+		if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK == 3)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_4(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, 4);
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK = 4;
 		}
-		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 4)
+		if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK == 4)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_8(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, (_zkUeZhJDizkmvvRfp4S0G7aap8J)null);
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_4(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, 5);
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._q2NAvlMPupnT4cpCZEWLpac6jMe = null;
+			_lRHDfpOTd4PxClZkjMpoakPEA9d_0._OgCTYsivFfJrd6rCMMRTgWbJ8UK = 5;
 		}
 	}
 
 	public static bool _RUw8RieezXPoVSmbk3eROtfKXVi(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0)
 	{
-		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Prologue") == 30 && _9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Gender") == 10)
+		if (_lRHDfpOTd4PxClZkjMpoakPEA9d_0._M29jWtsDcmPvHjIYYSiTa8TbWri._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") == 30 && _lRHDfpOTd4PxClZkjMpoakPEA9d_0._M29jWtsDcmPvHjIYYSiTa8TbWri._fvTKDuNATrUxfXZVvltePz3vYkK("Gender") == 10)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_10(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, (_7UlnfykmEmZDFt3BmCKZekI43Ih)new SaveMigrationScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Gender", _9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_9(_lRHDfpOTd4PxClZkjMpoakPEA9d_0)));
+			_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._k9wUPeU1Ga7cygiuGP8TT6aPLWF(new SaveMigrationScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Gender", _lRHDfpOTd4PxClZkjMpoakPEA9d_0._hZ0bFFCDXp4CkpoVdtAUZT5cpIK));
 			return true;
 		}
 		return false;

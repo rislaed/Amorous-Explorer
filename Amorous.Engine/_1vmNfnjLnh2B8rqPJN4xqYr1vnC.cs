@@ -52,9 +52,9 @@ public class _1vmNfnjLnh2B8rqPJN4xqYr1vnC : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<SpawnNP
 		if (_v5mBBzOHST4Ij2jetldrF2beJtbA._rAt6TRbgK04lvrs5QPjcd0n26pk != null)
 		{
 			Type[] rAt6TRbgK04lvrs5QPjcd0n26pk = _v5mBBzOHST4Ij2jetldrF2beJtbA._rAt6TRbgK04lvrs5QPjcd0n26pk;
-			foreach (Type memberInfo_ in rAt6TRbgK04lvrs5QPjcd0n26pk)
+			foreach (Type type in rAt6TRbgK04lvrs5QPjcd0n26pk)
 			{
-				_QGGOTxZ8aNWGh0hc26wcmx8wmwT qGGOTxZ8aNWGh0hc26wcmx8wmwT = base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._VvFE2zgy4FbDjvaEvb67tXJ7aRm(_1vmNfnjLnh2B8rqPJN4xqYr1vnC.smethod_0((MemberInfo)memberInfo_));
+				_QGGOTxZ8aNWGh0hc26wcmx8wmwT qGGOTxZ8aNWGh0hc26wcmx8wmwT = base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._VvFE2zgy4FbDjvaEvb67tXJ7aRm(type.Name);
 				if (qGGOTxZ8aNWGh0hc26wcmx8wmwT != null && qGGOTxZ8aNWGh0hc26wcmx8wmwT._9m9LEAgaqaeXydYhykSBmf9BrDG != 0)
 				{
 					if (_qZXN2SXhpGdh4T5ZXzgMA9gjYZE == null)

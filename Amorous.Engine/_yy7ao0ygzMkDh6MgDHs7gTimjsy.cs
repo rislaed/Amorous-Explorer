@@ -27,7 +27,7 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<DelayEv
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)
 	{
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= _yy7ao0ygzMkDh6MgDHs7gTimjsy.smethod_0(gameTime).Milliseconds;
+		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime.get_ElapsedGameTime().Milliseconds;
 		if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG <= 0)
 		{
 			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;

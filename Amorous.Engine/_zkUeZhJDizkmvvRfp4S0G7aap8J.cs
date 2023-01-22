@@ -72,7 +72,7 @@ public class _zkUeZhJDizkmvvRfp4S0G7aap8J
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT _4QLHHCk23T1BjK7acKxASbkCefG = _3IHp43rpkJgOBcY9lrIrwMuwWve_0._4QLHHCk23T1BjK7acKxASbkCefG;
 			_SE8JVSojXz0WQ6EAeInGo3JGvSr.Add(new _CIFXVF6lKl3nSrVOhqjcFXDVlXc
 			{
-				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _zkUeZhJDizkmvvRfp4S0G7aap8J.smethod_1((MemberInfo)_zkUeZhJDizkmvvRfp4S0G7aap8J.smethod_0((object)_4QLHHCk23T1BjK7acKxASbkCefG)),
+				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _4QLHHCk23T1BjK7acKxASbkCefG.GetType().Name,
 				_qZXN2SXhpGdh4T5ZXzgMA9gjYZE = _4QLHHCk23T1BjK7acKxASbkCefG._9m9LEAgaqaeXydYhykSBmf9BrDG,
 				_kni1uFw1BPElsVA74myj9H1jAKh = _4QLHHCk23T1BjK7acKxASbkCefG._mdS7Bu4eiPPwoFWUcGEOTzh73TJ,
 				_UjXB7oNK1WnbtEn6d4PkoGLaYEE = _4QLHHCk23T1BjK7acKxASbkCefG._vzNADWxcLucI3DyP1CebcfYXRut,

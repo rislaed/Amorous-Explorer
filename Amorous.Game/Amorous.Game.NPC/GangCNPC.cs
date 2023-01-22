@@ -33,8 +33,8 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 610;
 		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1002;
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Jade Nude");
-		GangCNPC.smethod_17(GangCNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Jade Shirt")));
-		GangCNPC.smethod_19(GangCNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Jade Pants")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Jade Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Jade Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
@@ -46,26 +46,26 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			GangCNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			GangCNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 655f);
-			GangCNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 78f);
-			GangCNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 655f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 78f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		case NPCLocation.Left:
-			GangCNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			GangCNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
-			GangCNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 78f);
-			GangCNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 78f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		case NPCLocation.Right:
-			GangCNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			GangCNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1210f);
-			GangCNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 78f);
-			GangCNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1210f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 78f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		}
 	}

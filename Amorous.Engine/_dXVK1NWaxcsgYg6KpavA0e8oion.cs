@@ -68,16 +68,16 @@ public static class _dXVK1NWaxcsgYg6KpavA0e8oion
 		//IL_0114: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0121: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0122: Unknown result type (might be due to invalid IL or missing references)
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _CQmoNe3HuxMlvH6ncatJIgleXtO * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _PONAYdpKcBnY3WYfbJb8CsCnULz * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _YAqNe0kFOrjh7LzXxLjdQh6EJDL * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _wEnSmK5KupzlCKc39D5VVJ95kHc * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _oHXG2zLcZQh5Kr0rmoQF4mRwFJb * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _uuxIgLNZfbTGY9x4ooLT87m96Af * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _bjsdlsFeEOX4MW8FjwWgpqNVDB9 * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0 + _T4uXnm9GBQwqdGXwNMjF6znSKbD * 1f, Color.get_Black());
-		_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_0(spriteBatch_0, spriteFont_0, string_0, vector2_0, color_0);
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _CQmoNe3HuxMlvH6ncatJIgleXtO * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _PONAYdpKcBnY3WYfbJb8CsCnULz * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _YAqNe0kFOrjh7LzXxLjdQh6EJDL * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _wEnSmK5KupzlCKc39D5VVJ95kHc * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _oHXG2zLcZQh5Kr0rmoQF4mRwFJb * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _uuxIgLNZfbTGY9x4ooLT87m96Af * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _bjsdlsFeEOX4MW8FjwWgpqNVDB9 * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0 + _T4uXnm9GBQwqdGXwNMjF6znSKbD * 1f, Color.get_Black());
+		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0, color_0);
 	}
 
 	public static void _f5ctqAmdNsZ889UjM4LxDm8WGxA(this SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2? nullable_0 = null, Rectangle? nullable_1 = null, Rectangle? nullable_2 = null, Vector2? nullable_3 = null, float float_0 = 0f, Vector2? nullable_4 = null, Color? nullable_5 = null, SpriteEffects spriteEffects_0 = 0, float float_1 = 0f)
@@ -110,15 +110,15 @@ public static class _dXVK1NWaxcsgYg6KpavA0e8oion
 		{
 			if (nullable_0.HasValue)
 			{
-				_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_2(spriteBatch_0, texture2D_0, nullable_0.Value, nullable_2, nullable_5.Value, float_0, nullable_3.Value, nullable_4.Value, spriteEffects_0, float_1);
+				spriteBatch_0.Draw(texture2D_0, nullable_0.Value, nullable_2, nullable_5.Value, float_0, nullable_3.Value, nullable_4.Value, spriteEffects_0, float_1);
 			}
 			else
 			{
-				_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_3(spriteBatch_0, texture2D_0, nullable_1.Value, nullable_2, nullable_5.Value, float_0, nullable_3.Value, spriteEffects_0, float_1);
+				spriteBatch_0.Draw(texture2D_0, nullable_1.Value, nullable_2, nullable_5.Value, float_0, nullable_3.Value, spriteEffects_0, float_1);
 			}
 			return;
 		}
-		throw _dXVK1NWaxcsgYg6KpavA0e8oion.smethod_1("Expected drawRectangle or position, but received neither or both.");
+		throw new InvalidOperationException("Expected drawRectangle or position, but received neither or both.");
 	}
 
 	public static void _g9Sx54kMPiHz5jrqWh4Kb1pTijH(this SpriteBatch spriteBatch_0, SpriteSortMode spriteSortMode_0 = 0, BlendState blendState_0 = null, SamplerState samplerState_0 = null, DepthStencilState depthStencilState_0 = null, RasterizerState rasterizerState_0 = null, Effect effect_0 = null, Matrix? nullable_0 = null)

@@ -33,31 +33,31 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 	{
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Stern, "Coby's Dad eye", "Coby's Dad Head");
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Coby's Dad Body");
-		CobysDadNPC.smethod_17(CobysDadNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Coby's Dad Pants")));
-		CobysDadNPC.smethod_19(CobysDadNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Coby's Dad Shirt")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Coby's Dad Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Coby's Dad Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			CobysDadNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			CobysDadNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 612f);
-			CobysDadNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 24f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 612f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 24f;
 			break;
 		case NPCLocation.Left:
-			CobysDadNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			CobysDadNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -160f);
-			CobysDadNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 24f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -160f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 24f;
 			break;
 		case NPCLocation.Right:
-			CobysDadNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			CobysDadNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1185f);
-			CobysDadNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 24f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1185f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 24f;
 			break;
 		}
 	}

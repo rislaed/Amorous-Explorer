@@ -5,24 +5,24 @@ public static class _z8oOEvKr598r7HgA3VFwVCn2j0q
 {
 	public static void _IVxmfAaagekk8d3cdgAtQRhbUY9(this _opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0, _xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
 	{
-		_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_0(_opIJo2jLUqdOL5yAFP4yzXce0DG_0);
-		if (_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_1())
+		_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XDbzWLxDi2VVrJQrjjLsgcfdxju();
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
 			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0._rtyJgfViJdXL2Ela5APpDlk99dI = _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.None;
 			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0._7OCMpsMmozHsAG0GDljMMAlGLJBA = _opIJo2jLUqdOL5yAFP4yzXce0DG.EBallsType.None;
 			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0._BCncLn6BIYiBX6NdFByAquBYGpH = _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.None;
 		}
-		PropertyInfo[] array = _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_3(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_2((object)_xJL9E6vKdg1LYZtKQU5RQKikpvE_0));
-		PropertyInfo[] array2 = array;
-		foreach (PropertyInfo propertyInfo in array2)
+		PropertyInfo[] properties = _xJL9E6vKdg1LYZtKQU5RQKikpvE_0.GetType().GetProperties();
+		PropertyInfo[] array = properties;
+		foreach (PropertyInfo propertyInfo in array)
 		{
-			if (!_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_5(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo), "Name"))
+			if (!(propertyInfo.Name == "Name"))
 			{
-				PropertyInfo propertyInfo_ = _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_6(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_2((object)_opIJo2jLUqdOL5yAFP4yzXce0DG_0), _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo));
-				if (!_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_7(propertyInfo_, (PropertyInfo)null))
+				PropertyInfo property = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GetType().GetProperty(propertyInfo.Name);
+				if (!(property == null))
 				{
-					object object_ = _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_8(propertyInfo, (object)_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, (object[])null);
-					_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_9(propertyInfo_, (object)_opIJo2jLUqdOL5yAFP4yzXce0DG_0, object_, (object[])null);
+					object value = propertyInfo.GetValue(_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, null);
+					property.SetValue(_opIJo2jLUqdOL5yAFP4yzXce0DG_0, value, null);
 				}
 			}
 		}
@@ -34,17 +34,17 @@ public static class _z8oOEvKr598r7HgA3VFwVCn2j0q
 		{
 			_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0
 		};
-		PropertyInfo[] array = _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_3(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_2((object)xJL9E6vKdg1LYZtKQU5RQKikpvE));
-		PropertyInfo[] array2 = array;
-		foreach (PropertyInfo propertyInfo in array2)
+		PropertyInfo[] properties = xJL9E6vKdg1LYZtKQU5RQKikpvE.GetType().GetProperties();
+		PropertyInfo[] array = properties;
+		foreach (PropertyInfo propertyInfo in array)
 		{
-			if (!_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_5(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo), "Name"))
+			if (!(propertyInfo.Name == "Name"))
 			{
-				PropertyInfo propertyInfo_ = _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_6(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_2((object)_opIJo2jLUqdOL5yAFP4yzXce0DG_0), _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo));
-				if (!_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_7(propertyInfo_, (PropertyInfo)null))
+				PropertyInfo property = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GetType().GetProperty(propertyInfo.Name);
+				if (!(property == null))
 				{
-					object object_ = _z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_8(propertyInfo_, (object)_opIJo2jLUqdOL5yAFP4yzXce0DG_0, (object[])null);
-					_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_9(propertyInfo, (object)xJL9E6vKdg1LYZtKQU5RQKikpvE, object_, (object[])null);
+					object value = property.GetValue(_opIJo2jLUqdOL5yAFP4yzXce0DG_0, null);
+					propertyInfo.SetValue(xJL9E6vKdg1LYZtKQU5RQKikpvE, value, null);
 				}
 			}
 		}

@@ -9,8 +9,8 @@ public class LivingRoomScene : TimeOfDayScene
 	public LivingRoomScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		LivingRoomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/LivingRoom/Foyer", 0, 0);
-		LivingRoomScene.smethod_19("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/LivingRoom/Foyer", 0, 0);
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
 	}
 
@@ -22,7 +22,7 @@ public class LivingRoomScene : TimeOfDayScene
 
 	public override void End()
 	{
-		this.method_3();
+		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
 		_phoneNag._tO46aYSBLFIuhFNlhbrAeWbFDSf();
 	}
 

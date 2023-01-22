@@ -40,7 +40,11 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 
 	public _XJasjdoOf6PYbfaC5MsbXSjDWV3()
 	{
+		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0031: Expected O, but got Unknown
 		//IL_0046: Unknown result type (might be due to invalid IL or missing references)
 		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0057: Expected O, but got Unknown
@@ -51,21 +55,21 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00d7: Expected O, but got Unknown
-		Desktop obj = _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_0();
-		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_2(obj, _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_1());
-		((Control)obj).set_Size(new Point(1920, 1080));
-		_9GQBAH2pi8Sm6ph1s6InjyQGe6R = obj;
+		Desktop val = new Desktop();
+		val.set_Skin(Gui.GenerateStandardSkin());
+		((Control)val).set_Size(new Point(1920, 1080));
+		_9GQBAH2pi8Sm6ph1s6InjyQGe6R = val;
 		_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
-		ControlStyle val = new ControlStyle();
-		val.set_Font("Assets/Gui/Fonts/Bold-16");
-		ControlStyle value = val;
+		ControlStyle val2 = new ControlStyle();
+		val2.set_Font("Assets/Gui/Fonts/Bold-16");
+		ControlStyle value = val2;
 		((Dictionary<string, ControlStyle>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Skin())["window"].set_Tint(ColorInt.ARGB(0.75f, 1f, 1f, 1f));
 		((Dictionary<string, ControlStyle>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Skin()).Add("header", value);
-		Frame val2 = new Frame();
-		((Control)val2).set_Dock((DockStyle)3);
-		((Control)val2).set_Size(new Point(600, 1080));
-		((Control)val2).set_Margin(new Margin(0, 0, 10, 0));
-		_g1jCwh8QFyZkbnduUiAjCzKbLWF = val2;
+		Frame val3 = new Frame();
+		((Control)val3).set_Dock((DockStyle)3);
+		((Control)val3).set_Size(new Point(600, 1080));
+		((Control)val3).set_Margin(new Margin(0, 0, 10, 0));
+		_g1jCwh8QFyZkbnduUiAjCzKbLWF = val3;
 		((ActiveList<Control>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Controls()).Add((Control)(object)_g1jCwh8QFyZkbnduUiAjCzKbLWF);
 		_IRRZMMioeCJC8zGoIaJiRaRSSiM = new List<_RQQdLVHyZm4GNvRCeQfcIx1OlwJ>();
 		_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = false;
@@ -73,9 +77,16 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 
 	public void _EXfoFnp1OKxeZbd4GcVZMCO2urH(string string_0, string string_1, string string_2)
 	{
+		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
 		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0043: Expected O, but got Unknown
 		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
 		//IL_004f: Unknown result type (might be due to invalid IL or missing references)
@@ -98,48 +109,48 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		//IL_00c4: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00cb: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00d4: Expected O, but got Unknown
-		Frame obj = _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_3();
-		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_4((Control)(object)obj, (DockStyle)4);
-		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_5((Control)(object)obj, "window");
-		((Control)obj).set_Padding(new Margin(10));
-		((Control)obj).set_Margin(new Margin(0, 0, 0, 10));
-		((Control)obj).set_Size(new Point(0, 120));
-		Frame val = obj;
-		ImageControl val2 = new ImageControl();
-		((Control)val2).set_Dock((DockStyle)1);
-		((Control)val2).set_Margin(new Margin(0, 0, 10, 0));
-		((Control)val2).set_Size(new Point(100, 100));
-		val2.set_Texture(string_0);
-		ImageControl val3 = val2;
-		Frame val4 = new Frame();
-		((Control)val4).set_Dock((DockStyle)5);
-		((Control)val4).set_Scissor(true);
-		Frame val5 = val4;
-		Label val6 = new Label();
-		((Control)val6).set_Dock((DockStyle)2);
-		((Control)val6).set_Style("header");
-		val6.set_Text("New message: " + string_1 + "!");
-		Label val7 = val6;
-		Label val8 = new Label();
-		((Control)val8).set_Dock((DockStyle)5);
-		val8.set_Text(string_2);
-		val8.set_TextWrap(true);
-		Label val9 = val8;
-		((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val3);
-		((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val5);
-		((ActiveList<Control>)(object)val5.get_Controls()).Add((Control)(object)val7);
-		((ActiveList<Control>)(object)val5.get_Controls()).Add((Control)(object)val9);
-		((ActiveList<Control>)(object)_g1jCwh8QFyZkbnduUiAjCzKbLWF.get_Controls()).Add((Control)(object)val);
+		Frame val = new Frame();
+		((Control)val).set_Dock((DockStyle)4);
+		((Control)val).set_Style("window");
+		((Control)val).set_Padding(new Margin(10));
+		((Control)val).set_Margin(new Margin(0, 0, 0, 10));
+		((Control)val).set_Size(new Point(0, 120));
+		Frame val2 = val;
+		ImageControl val3 = new ImageControl();
+		((Control)val3).set_Dock((DockStyle)1);
+		((Control)val3).set_Margin(new Margin(0, 0, 10, 0));
+		((Control)val3).set_Size(new Point(100, 100));
+		val3.set_Texture(string_0);
+		ImageControl val4 = val3;
+		Frame val5 = new Frame();
+		((Control)val5).set_Dock((DockStyle)5);
+		((Control)val5).set_Scissor(true);
+		Frame val6 = val5;
+		Label val7 = new Label();
+		((Control)val7).set_Dock((DockStyle)2);
+		((Control)val7).set_Style("header");
+		val7.set_Text("New message: " + string_1 + "!");
+		Label val8 = val7;
+		Label val9 = new Label();
+		((Control)val9).set_Dock((DockStyle)5);
+		val9.set_Text(string_2);
+		val9.set_TextWrap(true);
+		Label val10 = val9;
+		((ActiveList<Control>)(object)val2.get_Controls()).Add((Control)(object)val4);
+		((ActiveList<Control>)(object)val2.get_Controls()).Add((Control)(object)val6);
+		((ActiveList<Control>)(object)val6.get_Controls()).Add((Control)(object)val8);
+		((ActiveList<Control>)(object)val6.get_Controls()).Add((Control)(object)val10);
+		((ActiveList<Control>)(object)_g1jCwh8QFyZkbnduUiAjCzKbLWF.get_Controls()).Add((Control)(object)val2);
 		_IRRZMMioeCJC8zGoIaJiRaRSSiM.Add(new _RQQdLVHyZm4GNvRCeQfcIx1OlwJ
 		{
-			_kvuzph4c9LD4fDAaURHVjkfJKwk = val
+			_kvuzph4c9LD4fDAaURHVjkfJKwk = val2
 		});
 	}
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_6(_9GQBAH2pi8Sm6ph1s6InjyQGe6R);
-		float num = (float)(_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_7(gameTime_0).TotalMilliseconds / 1000.0);
+		_9GQBAH2pi8Sm6ph1s6InjyQGe6R.Update();
+		float num = (float)(gameTime_0.get_ElapsedGameTime().TotalMilliseconds / 1000.0);
 		foreach (_RQQdLVHyZm4GNvRCeQfcIx1OlwJ item in _IRRZMMioeCJC8zGoIaJiRaRSSiM)
 		{
 			item._AmIUCcrmrrQiiirja7DoiZSjXuv += num;
@@ -160,7 +171,7 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 	{
 		try
 		{
-			_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_8(_9GQBAH2pi8Sm6ph1s6InjyQGe6R);
+			_9GQBAH2pi8Sm6ph1s6InjyQGe6R.Draw();
 		}
 		catch (Exception)
 		{

@@ -33,8 +33,8 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 452;
 		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 945;
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Alexis Nude", "Alexis Tufts");
-		SecurityGuardNPC.smethod_17(SecurityGuardNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Alexis Shirt")));
-		SecurityGuardNPC.smethod_19(SecurityGuardNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Alexis Pants")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Alexis Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Alexis Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
@@ -46,26 +46,26 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			SecurityGuardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			SecurityGuardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 734f);
-			SecurityGuardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 135f);
-			SecurityGuardNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 734f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 135f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		case NPCLocation.Left:
-			SecurityGuardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			SecurityGuardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
-			SecurityGuardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 135f);
-			SecurityGuardNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 135f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		case NPCLocation.Right:
-			SecurityGuardNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			SecurityGuardNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1368f);
-			SecurityGuardNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 135f);
-			SecurityGuardNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1368f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 135f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		}
 	}

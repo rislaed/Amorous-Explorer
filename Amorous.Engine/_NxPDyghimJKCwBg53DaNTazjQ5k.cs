@@ -30,44 +30,44 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 	{
 		_sc6AWQNc7BlGAmNMydEy7sD8v1j.AddRange((IEnumerable<Polygon>)_A9kKAOOHImeN1Bymg7Y86T6pyXf);
 		_A9kKAOOHImeN1Bymg7Y86T6pyXf.Clear(true);
-		ExposedList<Slot> val = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_0(skeleton_0);
-		int count = val.Count;
+		ExposedList<Slot> slots = skeleton_0.get_Slots();
+		int count = slots.Count;
 		for (int i = 0; i < count; i++)
 		{
-			Slot slot_ = val.Items[i];
-			if (_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_1(slot_) <= 0f)
+			Slot val = slots.Items[i];
+			if (val.get_A() <= 0f)
 			{
 				continue;
 			}
-			if (!(_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_2(slot_) is RegionAttachment))
+			if (!(val.get_Attachment() is RegionAttachment))
 			{
-				if (_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_2(slot_) is MeshAttachment)
+				if (val.get_Attachment() is MeshAttachment)
 				{
-					Attachment obj = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_2(slot_);
-					MeshAttachment meshAttachment_ = (MeshAttachment)(object)((obj is MeshAttachment) ? obj : null);
-					Polygon val2 = _JFnByzmaHsFolNK380WoVrfnqoo();
-					_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val2);
-					_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_3(val2, new float[_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_7(meshAttachment_).Length]);
-					_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_8(meshAttachment_, slot_, _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_5(val2));
-				}
-				else if (_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_2(slot_) is SkinnedMeshAttachment)
-				{
-					Attachment obj2 = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_2(slot_);
-					SkinnedMeshAttachment skinnedMeshAttachment_ = (SkinnedMeshAttachment)(object)((obj2 is SkinnedMeshAttachment) ? obj2 : null);
+					Attachment attachment = val.get_Attachment();
+					MeshAttachment val2 = (MeshAttachment)(object)((attachment is MeshAttachment) ? attachment : null);
 					Polygon val3 = _JFnByzmaHsFolNK380WoVrfnqoo();
 					_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val3);
-					_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_3(val3, new float[_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_9(skinnedMeshAttachment_).Length]);
-					_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_10(skinnedMeshAttachment_, slot_, _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_5(val3));
+					val3.set_Vertices(new float[val2.get_Vertices().Length]);
+					val2.ComputeWorldVertices(val, val3.get_Vertices());
+				}
+				else if (val.get_Attachment() is SkinnedMeshAttachment)
+				{
+					Attachment attachment2 = val.get_Attachment();
+					SkinnedMeshAttachment val4 = (SkinnedMeshAttachment)(object)((attachment2 is SkinnedMeshAttachment) ? attachment2 : null);
+					Polygon val5 = _JFnByzmaHsFolNK380WoVrfnqoo();
+					_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val5);
+					val5.set_Vertices(new float[val4.get_UVs().Length]);
+					val4.ComputeWorldVertices(val, val5.get_Vertices());
 				}
 			}
 			else
 			{
-				Attachment obj3 = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_2(slot_);
-				RegionAttachment regionAttachment_ = (RegionAttachment)(object)((obj3 is RegionAttachment) ? obj3 : null);
-				Polygon val4 = _JFnByzmaHsFolNK380WoVrfnqoo();
-				_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val4);
-				_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_3(val4, new float[8]);
-				_NxPDyghimJKCwBg53DaNTazjQ5k.smethod_6(regionAttachment_, _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_4(slot_), _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_5(val4));
+				Attachment attachment3 = val.get_Attachment();
+				RegionAttachment val6 = (RegionAttachment)(object)((attachment3 is RegionAttachment) ? attachment3 : null);
+				Polygon val7 = _JFnByzmaHsFolNK380WoVrfnqoo();
+				_A9kKAOOHImeN1Bymg7Y86T6pyXf.Add(val7);
+				val7.set_Vertices(new float[8]);
+				val6.ComputeWorldVertices(val.get_Bone(), val7.get_Vertices());
 			}
 		}
 		if (_A9kKAOOHImeN1Bymg7Y86T6pyXf.Count == 0)
@@ -85,6 +85,8 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	private Polygon _JFnByzmaHsFolNK380WoVrfnqoo()
 	{
+		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0036: Expected O, but got Unknown
 		int count = _sc6AWQNc7BlGAmNMydEy7sD8v1j.Count;
 		Polygon result;
 		if (count > 0)
@@ -94,7 +96,7 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 		}
 		else
 		{
-			result = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_11();
+			result = new Polygon();
 		}
 		return result;
 	}
@@ -108,17 +110,17 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 		int i = 0;
 		for (int count = _A9kKAOOHImeN1Bymg7Y86T6pyXf.Count; i < count; i++)
 		{
-			Polygon polygon_ = _A9kKAOOHImeN1Bymg7Y86T6pyXf.Items[i];
-			float[] array = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_5(polygon_);
+			Polygon val = _A9kKAOOHImeN1Bymg7Y86T6pyXf.Items[i];
+			float[] vertices = val.get_Vertices();
 			int j = 0;
-			for (int num5 = array.Length; j < num5; j += 2)
+			for (int num5 = vertices.Length; j < num5; j += 2)
 			{
-				float float_ = array[j];
-				float float_2 = array[j + 1];
-				num = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_12(num, float_);
-				num2 = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_12(num2, float_2);
-				num3 = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_13(num3, float_);
-				num4 = _NxPDyghimJKCwBg53DaNTazjQ5k.smethod_13(num4, float_2);
+				float val2 = vertices[j];
+				float val3 = vertices[j + 1];
+				num = Math.Min(num, val2);
+				num2 = Math.Min(num2, val3);
+				num3 = Math.Max(num3, val2);
+				num4 = Math.Max(num4, val3);
 			}
 		}
 		_SjhHztt8d5kOtb7Z2BJKnZZxEKh = num;

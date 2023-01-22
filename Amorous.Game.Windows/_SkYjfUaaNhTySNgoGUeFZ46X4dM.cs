@@ -6,40 +6,40 @@ public class _SkYjfUaaNhTySNgoGUeFZ46X4dM : Game
 
 	public _SkYjfUaaNhTySNgoGUeFZ46X4dM(bool bool_0)
 	{
-		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_2(_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_0((Game)(object)this), _SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_1("Amorous v{0} (Windows)", (object)"1.0.4"));
-		_4L7hfXrWoDdArQiscG4ukHCV46B = _SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_3((Game)(object)this, bool_0);
+		((Game)this).get_Window().set_Title(string.Format("Amorous v{0} (Windows)", "1.0.4"));
+		_4L7hfXrWoDdArQiscG4ukHCV46B = new _bj8iyyk84DtxcxcHgAHHFGgq8oN((Game)(object)this, bool_0);
 	}
 
 	protected override void _oD87G7SXjsTukw7IVWxVlVFEgvA()
 	{
-		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B);
+		_4L7hfXrWoDdArQiscG4ukHCV46B._oD87G7SXjsTukw7IVWxVlVFEgvA();
 		((Game)this).Initialize();
 	}
 
 	protected override void _eW1Nkl8VqFHVExM8l3IqxgSbMBg()
 	{
-		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B);
+		_4L7hfXrWoDdArQiscG4ukHCV46B._eW1Nkl8VqFHVExM8l3IqxgSbMBg();
 		((Game)this).LoadContent();
 	}
 
 	protected override void _wm1aB8mBRRffPWUAA0o5Xar2w5p()
 	{
-		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_6(_4L7hfXrWoDdArQiscG4ukHCV46B);
+		_4L7hfXrWoDdArQiscG4ukHCV46B._wm1aB8mBRRffPWUAA0o5Xar2w5p();
 		((Game)this).UnloadContent();
 	}
 
 	protected override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)
 	{
-		if (_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_7((Game)(object)this))
+		if (((Game)this).get_IsActive())
 		{
-			_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_8(_4L7hfXrWoDdArQiscG4ukHCV46B, gameTime);
+			_4L7hfXrWoDdArQiscG4ukHCV46B._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
 		}
 		((Game)this).Update(gameTime);
 	}
 
 	protected override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(GameTime gameTime)
 	{
-		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_9(_4L7hfXrWoDdArQiscG4ukHCV46B, gameTime);
+		_4L7hfXrWoDdArQiscG4ukHCV46B._f5ctqAmdNsZ889UjM4LxDm8WGxA(gameTime);
 		((Game)this).Draw(gameTime);
 	}
 

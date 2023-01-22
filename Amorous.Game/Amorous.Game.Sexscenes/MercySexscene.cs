@@ -12,18 +12,18 @@ public class MercySexscene : CensoredSexscene
 	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
 
 	public MercySexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Mercy/Mercy Sex", "Assets/SexScenes/Mercy/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: MercySexscene.smethod_14() ? 2.2f : 1f, bool_0: true, float_1: 3000f)
+		: base(contentManager_0, "Assets/SexScenes/Mercy/Mercy Sex", "Assets/SexScenes/Mercy/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 2.2f : 1f, bool_0: true, float_1: 3000f)
 	{
-		MercySexscene.smethod_16(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", (Action<int>)null);
-		if (MercySexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			MercySexscene.smethod_17(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 450f);
-			MercySexscene.smethod_18(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 900f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 450f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 900f;
 		}
 		else
 		{
-			MercySexscene.smethod_17(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 960f);
-			MercySexscene.smethod_18(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1090f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 960f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1090f;
 		}
 	}
 
@@ -54,131 +54,128 @@ public class MercySexscene : CensoredSexscene
 		//IL_0700: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0716: Unknown result type (might be due to invalid IL or missing references)
 		//IL_072c: Unknown result type (might be due to invalid IL or missing references)
-		MercySexscene.smethod_19(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 0f);
-		if (!MercySexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy leg left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy arm left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy body", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy arm right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy horn left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy ear left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy fringe left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy eye", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy pupil", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy eyelid", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy head", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy eyelash", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy fringe right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy horn right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy ear right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy hairlock right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy boob left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy boob right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy stomach", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy cock", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy tail", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy leg right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy taint back", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy taint", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body underbelly", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left markings short", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left markings long", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock uncut", (MercySexscene.smethod_23(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left markings inner thigh", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left stripes", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock knot", (MercySexscene.smethod_23(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Underbelly", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin right markings short", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin right markings long", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right markings inner thigh", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right stripes", MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			bool flag = MercySexscene.smethod_22((Enum)MercySexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianShin);
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body", MercySexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body underbelly", MercySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint", MercySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left", MercySexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left markings short", flag ? MercySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) : MercySexscene.smethod_27(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left markings long", flag ? MercySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) : MercySexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			if (MercySexscene.smethod_23(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) != _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut)
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy leg left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy arm left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy arm right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy horn left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy ear left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy fringe left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy eye", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy pupil", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy eyelid", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy eyelash", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy fringe right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy horn right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy ear right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy hairlock right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy boob left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy boob right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy stomach", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy cock", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy tail", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy leg right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy taint back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy taint", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player taint", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left markings short", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left markings long", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock uncut", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock knot", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player balls", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin right markings short", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin right markings long", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			bool flag = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianShin);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player taint", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left markings short", flag ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0._meyNS02iTIxo212B6c5eoKns2wj : _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LcOPiDaC2j5vzxOEYhvW4vRoaRX);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left markings long", flag ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0._meyNS02iTIxo212B6c5eoKns2wj : _opIJo2jLUqdOL5yAFP4yzXce0DG_0._cUtgkG5qDvgFmI8c29I9xsLVNON);
+			if (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI != _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut)
 			{
-				MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", MercySexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+				base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
 			}
 			else
 			{
-				MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", MercySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-				MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock uncut", MercySexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+				base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._o6OnmHi5rZIQPHESokp9rTaO1ei);
+				base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock uncut", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
 			}
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left", MercySexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left markings inner thigh", MercySexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left stripes", MercySexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock knot", MercySexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls", MercySexscene.smethod_34(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Underbelly", MercySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin right", MercySexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin right markings short", flag ? MercySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) : MercySexscene.smethod_27(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin right markings long", flag ? MercySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) : MercySexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right", MercySexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right markings inner thigh", MercySexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			MercySexscene.smethod_25(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right stripes", MercySexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock knot", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player balls", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8qQ7XVlyRYW4icBFxPQCJqgueYD);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin right markings short", flag ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0._meyNS02iTIxo212B6c5eoKns2wj : _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LcOPiDaC2j5vzxOEYhvW4vRoaRX);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin right markings long", flag ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0._meyNS02iTIxo212B6c5eoKns2wj : _opIJo2jLUqdOL5yAFP4yzXce0DG_0._cUtgkG5qDvgFmI8c29I9xsLVNON);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
 			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum");
 		}
 		else
 		{
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy arm left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy body", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy arm right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy horn left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy ear left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy fringe left", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy eye", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy pupil", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy eyelid", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy head", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy eyelash", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy fringe right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy horn right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy ear right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy hairlock right", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy tail", 1f);
-			MercySexscene.smethod_20(MercySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Mercy leg right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy arm left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy arm right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy horn left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy ear left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy fringe left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy eye", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy pupil", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy eyelid", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy eyelash", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy fringe right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy horn right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy ear right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy hairlock right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy tail", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Mercy leg right", 1f);
 		}
 	}
 
 	static MercySexscene()
 	{
+		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000d: Expected O, but got Unknown
+		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0047: Expected O, but got Unknown
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0081: Expected O, but got Unknown
 		List<SpineEvent> list = new List<SpineEvent>();
-		SpineEvent val = MercySexscene.smethod_35();
+		SpineEvent val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustStart";
-		SpineEvent obj = val;
-		float[] array = new float[6];
-		MercySexscene.smethod_36((Array)array, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj.FrameTimes = array;
+		val.FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f };
 		list.Add(val);
-		val = MercySexscene.smethod_35();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustEnd";
-		SpineEvent obj2 = val;
-		float[] array2 = new float[6];
-		MercySexscene.smethod_36((Array)array2, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj2.FrameTimes = array2;
+		val.FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f };
 		list.Add(val);
-		val = MercySexscene.smethod_35();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "Moan";
-		SpineEvent obj3 = val;
-		float[] array3 = new float[6];
-		MercySexscene.smethod_36((Array)array3, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj3.FrameTimes = array3;
+		val.FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f };
 		list.Add(val);
 		_zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = list;
 	}

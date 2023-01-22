@@ -25,20 +25,20 @@ public abstract class ClubStaticNPC : LayerNPC<ClubStaticNPC.EHeads, ClubStaticN
 	protected ClubStaticNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, string string_1, bool bool_0, bool bool_1)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string_0, 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Nude, ClubStaticNPC.smethod_16("{0} club nude", (object)string_1));
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Nude, $"{string_1} club nude");
 		if (bool_0)
 		{
-			ClubStaticNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Shirt, ClubStaticNPC.smethod_16("{0} club shirt", (object)string_1)));
+			_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Shirt, $"{string_1} club shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
 		}
 		if (bool_1)
 		{
-			ClubStaticNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Pants, ClubStaticNPC.smethod_16("{0} club pants", (object)string_1)));
+			_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Pants, $"{string_1} club pants")._dUWotuFGWMaIlD1IFkXcXUhjchR();
 		}
 	}
 
 	public override void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
 	{
-		this.method_0();
+		base._g9Sx54kMPiHz5jrqWh4Kb1pTijH();
 		_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
 		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
 		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);

@@ -12,19 +12,19 @@ public class DustinSexscene : CensoredSexscene
 	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
 
 	public DustinSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _ecVLwNBaQAiybVyX9cgWCvnbkWe._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: DustinSexscene.smethod_14() ? 1.5f : 1f, bool_0: true, float_1: 3000f)
+		: base(contentManager_0, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.5f : 1f, bool_0: true, float_1: 3000f)
 	{
-		DustinSexscene.smethod_16(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", (Action<int>)null);
-		if (DustinSexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			DustinSexscene.smethod_17(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1000f);
-			DustinSexscene.smethod_18(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1700f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1000f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1700f;
 		}
 		else
 		{
-			DustinSexscene.smethod_17(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 900f);
-			DustinSexscene.smethod_18(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1050f);
-			DustinSexscene.smethod_19(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", -0.3f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 900f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1050f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._49JXjKJqaPZw5nEmhHdAENuBtLJ("animation", -0.3f);
 		}
 	}
 
@@ -42,95 +42,92 @@ public class DustinSexscene : CensoredSexscene
 		//IL_041c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0432: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0448: Unknown result type (might be due to invalid IL or missing references)
-		DustinSexscene.smethod_20(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 0f);
-		if (!DustinSexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Back", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin Eyes", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin pupil", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin head", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin Hair", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin ear", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin eyelid", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin muzzle", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin fringe", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin Upper Body", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin shoulder top", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin forearm top", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin tail", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin tail tip", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin thigh back", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin Cock", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh bot", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh bot stripes", DustinSexscene.smethod_23((Enum)DustinSexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh bot underbelly", DustinSexscene.smethod_23((Enum)DustinSexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint underbelly", DustinSexscene.smethod_23((Enum)DustinSexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Balls", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls underbelly", DustinSexscene.smethod_23((Enum)DustinSexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh top", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh top stripes", DustinSexscene.smethod_23((Enum)DustinSexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh top underbelly", DustinSexscene.smethod_23((Enum)DustinSexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin top", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin balls", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin thigh right", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin shin right", 1f);
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Back", DustinSexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh bot", DustinSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh bot stripes", DustinSexscene.smethod_27(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh bot underbelly", DustinSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint", DustinSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint underbelly", DustinSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Balls", DustinSexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls underbelly", DustinSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh top", DustinSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh top stripes", DustinSexscene.smethod_27(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh top underbelly", DustinSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			DustinSexscene.smethod_25(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin top", DustinSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Eyes", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin pupil", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Hair", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin ear", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin eyelid", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin muzzle", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin fringe", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Upper Body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin shoulder top", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin forearm top", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin tail", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin tail tip", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin thigh back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Cock", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh bot", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh bot stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh bot underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player taint", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player taint underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Balls", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player balls underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh top", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh top stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin top", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin balls", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin thigh right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin shin right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Back", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh bot", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh bot stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh bot underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player taint", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player taint underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Balls", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8qQ7XVlyRYW4icBFxPQCJqgueYD);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player balls underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh top", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh top stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin top", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
 			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum");
 		}
 		else
 		{
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin Eyes", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin pupil", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin head", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin Hair", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin ear", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin eyelid", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin muzzle", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin fringe", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin Upper Body", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin shoulder top", 1f);
-			DustinSexscene.smethod_21(DustinSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Dustin forearm top", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Eyes", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin pupil", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Hair", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin ear", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin eyelid", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin muzzle", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin fringe", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Upper Body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin shoulder top", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin forearm top", 1f);
 		}
 	}
 
 	static DustinSexscene()
 	{
+		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000d: Expected O, but got Unknown
+		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0047: Expected O, but got Unknown
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0081: Expected O, but got Unknown
 		List<SpineEvent> list = new List<SpineEvent>();
-		SpineEvent val = DustinSexscene.smethod_30();
+		SpineEvent val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustStart";
-		SpineEvent obj = val;
-		float[] array = new float[6];
-		DustinSexscene.smethod_31((Array)array, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj.FrameTimes = array;
+		val.FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f };
 		list.Add(val);
-		val = DustinSexscene.smethod_30();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustEnd";
-		SpineEvent obj2 = val;
-		float[] array2 = new float[6];
-		DustinSexscene.smethod_31((Array)array2, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj2.FrameTimes = array2;
+		val.FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f };
 		list.Add(val);
-		val = DustinSexscene.smethod_30();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "Moan";
-		SpineEvent obj3 = val;
-		float[] array3 = new float[6];
-		DustinSexscene.smethod_31((Array)array3, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj3.FrameTimes = array3;
+		val.FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f };
 		list.Add(val);
 		_zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = list;
 	}

@@ -10,38 +10,38 @@ public class BedroomScene : TimeOfDayScene
 	public BedroomScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		BedroomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
-		BedroomScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Door", 1008, 186, (Action)OnDoorClick);
-		if (BedroomScene.smethod_21(BedroomScene.smethod_20(), "Prologue") >= 40)
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
+		_2CHUZ5vSi5NbJYJ4gGtr3C2VVEo("Background", "Assets/Scenes/Bedroom/Door", 1008, 186, OnDoorClick);
+		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") >= 40)
 		{
-			BedroomScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, (Action)OnClosetClick);
+			_2CHUZ5vSi5NbJYJ4gGtr3C2VVEo("Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, OnClosetClick);
 		}
 		else
 		{
-			BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, "Assets/Scenes/Bedroom/Closet active", 1517, 102, "Most of his clothes have been taken to his boyfriend's house. I can still see his ass hugging swim trunks that I'm pretty sure were designed for girls, and a dress for, well... he liked to wear a dress at one point. I don't judge.");
+			_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, "Assets/Scenes/Bedroom/Closet active", 1517, 102, "Most of his clothes have been taken to his boyfriend's house. I can still see his ass hugging swim trunks that I'm pretty sure were designed for girls, and a dress for, well... he liked to wear a dress at one point. I don't judge.");
 		}
-		BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Matress", -446, 447, (string)null, 0, 0, "My brother's bed. The springs are a little worn out but otherwise still leagues better than mine. If you're wondering why I'm sleeping here, it's for a fresher perspective. Everytime I look over at his corner of the bedroom from mine, I just think of them going at it.");
-		BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Photo frame", 496, 156, (string)null, 0, 0, "Thats Coby's Australian boyfriend Marty. Apparently he is making plans to visit sometime. I guess he understands my brother can't keep his pants on for that long.");
-		BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Poster", 96, 217, (string)null, 0, 0, "Coby's still got the hots for Marsupials after meeting his penpal. Apparently he was the thunder down under and then some.");
-		BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Con badges", 410, 310, (string)null, 0, 0, "Badges Coby has collected from going to cons.");
-		BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Alarm clock", 672, 493, "Assets/Scenes/Bedroom/Alarm clock active", 672, 493, "Never something I used often myself, but it's been at least getting me up before noon.");
-		if (!BedroomScene.smethod_23())
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Matress", -446, 447, null, 0, 0, "My brother's bed. The springs are a little worn out but otherwise still leagues better than mine. If you're wondering why I'm sleeping here, it's for a fresher perspective. Everytime I look over at his corner of the bedroom from mine, I just think of them going at it.");
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Photo frame", 496, 156, null, 0, 0, "Thats Coby's Australian boyfriend Marty. Apparently he is making plans to visit sometime. I guess he understands my brother can't keep his pants on for that long.");
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Poster", 96, 217, null, 0, 0, "Coby's still got the hots for Marsupials after meeting his penpal. Apparently he was the thunder down under and then some.");
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Con badges", 410, 310, null, 0, 0, "Badges Coby has collected from going to cons.");
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Alarm clock", 672, 493, "Assets/Scenes/Bedroom/Alarm clock active", 672, 493, "Never something I used often myself, but it's been at least getting me up before noon.");
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Drawer", 531, 568, "Assets/Scenes/Bedroom/Drawer active", 454, 538, "It's a struggle just to get this thing open. Always keeping the emergency supply at arms' reach I guess.");
+			_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Drawer", 531, 568, "Assets/Scenes/Bedroom/Drawer active", 454, 538, "It's a struggle just to get this thing open. Always keeping the emergency supply at arms' reach I guess.");
 		}
-		BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Kangaroo Plush", 359, 159, (string)null, 0, 0, "A little something my brother bought as a reminder of his long-distance boyfriend. It must be a pretty open relationship.");
-		BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Laptop", 1153, 662, (string)null, 0, 0, "My entertainment centre for the last few weeks.");
-		BedroomScene.smethod_25(BedroomScene.smethod_24(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -458, 458, 0, 0);
-		BedroomScene.smethod_26("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Kangaroo Plush", 359, 159, null, 0, 0, "A little something my brother bought as a reminder of his long-distance boyfriend. It must be a pretty open relationship.");
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Laptop", 1153, 662, null, 0, 0, "My entertainment centre for the last few weeks.");
+		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-458, 458, 0, 0);
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
 		Reset();
 	}
 
 	private void Reset()
 	{
-		if (BedroomScene.smethod_21(BedroomScene.smethod_20(), "Prologue") == 40)
+		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") == 40)
 		{
-			BedroomScene.smethod_29(BedroomScene.smethod_28(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "MessageTutorial1");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._0Y1BTbSbP9IopfJXfeA4x02PifL("MessageTutorial1");
 		}
 		ResetFailedDates();
 		ResetDeletedContacts();
@@ -54,101 +54,101 @@ public class BedroomScene : TimeOfDayScene
 
 	public void ResetFailedDates()
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = BedroomScene.smethod_20();
-		if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue") == 30 && BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexDate") == 40)
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") == 30 && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("LexDate") == 40)
 		{
-			BedroomScene.smethod_30(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue", 40);
-			BedroomScene.smethod_32(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyLeftClub", bool_0: true);
-			BedroomScene.smethod_33(BedroomScene.smethod_28(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
-			BedroomScene.smethod_34(BedroomScene.smethod_28(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric4");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._modEEaw3I1w8Mt0usyRNoa4Ri0H(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("Prologue", 40);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._4Fscz8ryB3hm0NmL5xw39HHiPd1("CobyLeftClub", bool_0: true);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._rGMDL1kMYXSwaZiIoINCo5AqZuM(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric4");
 		}
-		if (BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexLeftClub") && (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexPreDate") == 20 || BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexDate") == 40))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("LexLeftClub") && (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("LexPreDate") == 20 || opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("LexDate") == 40))
 		{
-			BedroomScene.smethod_36(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex);
 		}
-		if (BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyLeftClub") && BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyPreDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("RemyLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("RemyPreDate") == 10)
 		{
-			BedroomScene.smethod_36(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy);
 		}
-		if (BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethLeftClub") && BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethPreDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SethLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("SethPreDate") == 10)
 		{
-			BedroomScene.smethod_36(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth);
 		}
-		if (BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeLeftClub") && BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyePreDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SkyeLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("SkyePreDate") == 10)
 		{
-			BedroomScene.smethod_36(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye);
 		}
-		if (BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithLeftClub") && BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("ZenithLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("ZenithDate") == 10)
 		{
-			BedroomScene.smethod_36(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith);
 		}
 	}
 
 	private void ResetDeletedContacts()
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = BedroomScene.smethod_20();
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby))
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Coby", bool_0: true);
-			BedroomScene.smethod_30(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("CobyDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Coby");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._modEEaw3I1w8Mt0usyRNoa4Ri0H(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Dustin))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Dustin))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "DustinDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Dustin", bool_0: true);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Club_Dustin_", bool_0: true);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "First_Dustin_", bool_0: true);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("DustinDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Dustin");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Club_Dustin_");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("First_Dustin_");
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "JaxPreDate", 10);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "JaxDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Jax", bool_0: true);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SimpleOrder", bool_0: false);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("JaxPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("JaxDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Jax");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("SimpleOrder", bool_0: false);
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexPreDate", 10);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Lex", bool_0: true);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Player.Dork", bool_0: false);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("LexPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("LexDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Lex");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Player.Dork", bool_0: false);
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Mercy))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Mercy))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "MercyPreDate", 10);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "MercyDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Mercy", bool_0: true);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("MercyPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("MercyDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Mercy");
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyPreDate", 10);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Remy", bool_0: true);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Rip.", bool_0: true);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Chef.", bool_0: true);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Strip.", bool_0: true);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("RemyPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("RemyDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Remy");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Rip.");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Chef.");
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Strip.");
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethPreDate", 10);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Seth", bool_0: true);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SethPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SethDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Seth");
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyePreDate", 10);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Skye", bool_0: true);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SkyePreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SkyeDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Skye");
 		}
-		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith))
 		{
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithPreDate", 10);
-			BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithDate", 10);
-			BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Zenith", bool_0: true);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("ZenithPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("ZenithDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Zenith");
 		}
-		BedroomScene.smethod_40(opIJo2jLUqdOL5yAFP4yzXce0DG_);
+		opIJo2jLUqdOL5yAFP4yzXce0DG._Xwcp3PcmrSeqc3MSVH0tfLbcwXA();
 	}
 
 	public override void Update(GameTime gameTime)
@@ -159,24 +159,24 @@ public class BedroomScene : TimeOfDayScene
 
 	public override void End()
 	{
-		this.method_3();
+		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
 		_phoneNag._tO46aYSBLFIuhFNlhbrAeWbFDSf();
 	}
 
 	private void OnClosetClick()
 	{
-		BedroomScene.smethod_41(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Clothes");
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Clothes");
 	}
 
 	private void OnDoorClick()
 	{
-		if (BedroomScene.smethod_21(BedroomScene.smethod_20(), "Prologue") >= 40)
+		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") >= 40)
 		{
-			BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<LivingRoomScene>();
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<LivingRoomScene>();
 		}
 		else
 		{
-			BedroomScene.smethod_41(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
 		}
 	}
 

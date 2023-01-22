@@ -10,7 +10,7 @@ public class PhoneShootingRangeMiniGameScene : ShootingRangeMiniGameScene
 
 	protected override void _5Z9jaXDcRYm0wNlEm1aTutL9kSH()
 	{
-		PhoneShootingRangeMiniGameScene.smethod_36((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<BedroomScene>();
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<BedroomScene>();
 	}
 
 	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_36(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)

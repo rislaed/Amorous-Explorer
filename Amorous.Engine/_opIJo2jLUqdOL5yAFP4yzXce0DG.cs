@@ -215,7 +215,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 		internal bool _sKQKx71rfMlEGGCBet4oVSSys1A(string string_0)
 		{
-			return _0sDtzIDsyA0r9WSGUGpY2WTEdUj.smethod_0(string_0, "Player.Outfit.");
+			return string_0.StartsWith("Player.Outfit.");
 		}
 
 		static bool smethod_0(string string_0, string string_1)
@@ -237,9 +237,9 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			if (!_1DzAfBEb14L1dIDs9OVbFZ8lYJD)
 			{
-				return _fU7pDGlGNq6EDvpigVdMzOpE2pkb.smethod_0(string_0, _6ASPaeAeh8vdl643GgyWe0mG0a0);
+				return string_0 == _6ASPaeAeh8vdl643GgyWe0mG0a0;
 			}
-			return _fU7pDGlGNq6EDvpigVdMzOpE2pkb.smethod_1(string_0, _6ASPaeAeh8vdl643GgyWe0mG0a0);
+			return string_0.StartsWith(_6ASPaeAeh8vdl643GgyWe0mG0a0);
 		}
 
 		internal void _3uTshCsyDhL2cJyhUUEzrD5HdTb(string string_0)
@@ -467,7 +467,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 		_mPwD8DvxbNkq8fBcmlHJ80kVkB2 = new Dictionary<string, int>();
 		_Cs2b43EFDtJdhoWWSmCcssGUmHZA = new Dictionary<string, bool>();
 		_7u6aevGWBE7ABqrBXoaPTkywcVo = new List<_iDN1IKOu3e1uADYzeMEUon5D9fg>();
-		_Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
+		_haICL4qkfkOLhPhofWQH1GmjZx5();
 	}
 
 	public void _Rj5BZHY1n3a8XV7jJAk9U8jZZ6m()
@@ -612,7 +612,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	public void _modEEaw3I1w8Mt0usyRNoa4Ri0H(EPhoneContacts ephoneContacts_0)
 	{
-		if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_0((Enum)_4pE8Q2fYoSeltAUx7pxshukqsEb, (Enum)ephoneContacts_0))
+		if (!_4pE8Q2fYoSeltAUx7pxshukqsEb.HasFlag(ephoneContacts_0))
 		{
 			_4pE8Q2fYoSeltAUx7pxshukqsEb |= ephoneContacts_0;
 		}
@@ -620,11 +620,11 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	public void _Qd7anWdHpZ5AgaUbbEv07BnnI6Q(EPhoneContacts ephoneContacts_0)
 	{
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_0((Enum)_4pE8Q2fYoSeltAUx7pxshukqsEb, (Enum)ephoneContacts_0))
+		if (_4pE8Q2fYoSeltAUx7pxshukqsEb.HasFlag(ephoneContacts_0))
 		{
 			_4pE8Q2fYoSeltAUx7pxshukqsEb &= ~ephoneContacts_0;
 		}
-		if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_0((Enum)_uVBbxOT5AbKoffINIsfdTnEGd3xA, (Enum)ephoneContacts_0))
+		if (!_uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(ephoneContacts_0))
 		{
 			_uVBbxOT5AbKoffINIsfdTnEGd3xA |= ephoneContacts_0;
 		}
@@ -638,26 +638,14 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 	public int _X1b0dyIzsSyKwqWd3usrbDfKJAk()
 	{
 		int num = 0;
-		IEnumerator enumerator = _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_3(_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_2(_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_1(typeof(EPhoneContacts).TypeHandle)));
-		try
+		foreach (object value in Enum.GetValues(typeof(EPhoneContacts)))
 		{
-			while (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_6(enumerator))
+			if (!value.Equals(EPhoneContacts.None) && _4pE8Q2fYoSeltAUx7pxshukqsEb.HasFlag((EPhoneContacts)value))
 			{
-				object obj = _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_4(enumerator);
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_5(obj, (object)EPhoneContacts.None) && _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_0((Enum)_4pE8Q2fYoSeltAUx7pxshukqsEb, (Enum)(EPhoneContacts)obj))
-				{
-					num++;
-				}
-			}
-			return num;
-		}
-		finally
-		{
-			if (enumerator is IDisposable idisposable_)
-			{
-				_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_7(idisposable_);
+				num++;
 			}
 		}
+		return num;
 	}
 
 	public bool _Oms9lumBodLGrGZ09YJaEuzmlAf(string string_0)
@@ -671,30 +659,30 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	private bool _3FWn0wjLhjL8yL0d2zLD5hMVHSV(string string_0)
 	{
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, "Player."))
+		if (string_0.StartsWith("Player."))
 		{
-			string[] array = _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_9(string_0, new char[1] { '.' });
+			string[] array = string_0.Split(new char[1] { '.' });
 			if (array.Length > 2)
 			{
 				EBodyType result4;
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Body"))
+				if (!(array[1] == "Body"))
 				{
 					EBreastsType result3;
-					if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Breasts"))
+					if (!(array[1] == "Breasts"))
 					{
 						ECockType result2;
-						if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Cock"))
+						if (!(array[1] == "Cock"))
 						{
-							if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Balls"))
+							if (array[1] == "Balls")
 							{
 								if (Enum.TryParse<EBallsType>(array[2], out var result))
 								{
 									return _7OCMpsMmozHsAG0GDljMMAlGLJBA == result;
 								}
 							}
-							else if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Outfit"))
+							else if (array[1] == "Outfit")
 							{
-								return _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[2], "Simple");
+								return array[2] == "Simple";
 							}
 						}
 						else if (Enum.TryParse<ECockType>(array[2], out result2))
@@ -713,51 +701,39 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				}
 			}
 		}
-		else if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, "Quests."))
+		else if (string_0.StartsWith("Quests."))
 		{
-			string[] array2 = _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_9(string_0, new char[1] { '.' });
+			string[] array2 = string_0.Split(new char[1] { '.' });
 			if (array2.Length > 2 && int.TryParse(array2[2], out var result5))
 			{
 				return _fvTKDuNATrUxfXZVvltePz3vYkK(array2[1]) == result5;
 			}
 		}
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerChubby"))
+		return string_0 switch
 		{
-			return _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Chubby;
-		}
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerLean"))
-		{
-			return _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Lean;
-		}
-		if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerTwinky"))
-		{
-			if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerMuscular"))
-			{
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "HasBreasts"))
-				{
-					return false;
-				}
-				return _BCncLn6BIYiBX6NdFByAquBYGpH != EBreastsType.None;
-			}
-			return _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Muscular;
-		}
-		return _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Twinky;
+			"PlayerChubby" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Chubby, 
+			"PlayerLean" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Lean, 
+			"HasBreasts" => _BCncLn6BIYiBX6NdFByAquBYGpH != EBreastsType.None, 
+			"PlayerMuscular" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Muscular, 
+			"PlayerTwinky" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Twinky, 
+			_ => false, 
+		};
 	}
 
 	public void _4Fscz8ryB3hm0NmL5xw39HHiPd1(string string_0, bool bool_0)
 	{
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, "Player."))
+		if (string_0.StartsWith("Player."))
 		{
-			string[] array = _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_9(string_0, new char[1] { '.' });
+			string[] array = string_0.Split(new char[1] { '.' });
 			if (array.Length > 2)
 			{
-				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Body") || _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Breasts") || _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Cock") || _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Balls"))
+				if (array[1] == "Body" || array[1] == "Breasts" || array[1] == "Cock" || array[1] == "Balls")
 				{
-					throw _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_11("Reserved flag set!");
+					throw new Exception("Reserved flag set!");
 				}
-				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Outfit"))
+				if (array[1] == "Outfit")
 				{
-					_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => _0sDtzIDsyA0r9WSGUGpY2WTEdUj.smethod_0(string_0, "Player.Outfit.")).ToList().ForEach(delegate(string string_0)
+					_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => string_0.StartsWith("Player.Outfit.")).ToList().ForEach(delegate(string string_0)
 					{
 						_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
 					});
@@ -769,7 +745,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	public void _aedbmRW9PZZduyLA3PVVHtafNAGA(string string_0, bool bool_0 = true)
 	{
-		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => (!bool_0) ? _fU7pDGlGNq6EDvpigVdMzOpE2pkb.smethod_0(string_0, string_0) : _fU7pDGlGNq6EDvpigVdMzOpE2pkb.smethod_1(string_0, string_0)).ToList().ForEach(delegate(string string_0)
+		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => (!bool_0) ? (string_0 == string_0) : string_0.StartsWith(string_0)).ToList().ForEach(delegate(string string_0)
 		{
 			_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
 		});

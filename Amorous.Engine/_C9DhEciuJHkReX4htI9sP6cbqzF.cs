@@ -19,15 +19,15 @@ public class _C9DhEciuJHkReX4htI9sP6cbqzF : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
 		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
 		_NhL238TaCbkDiY6HXlWXZzzUYkm = float_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _C9DhEciuJHkReX4htI9sP6cbqzF.smethod_0(texture2D_0);
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = _C9DhEciuJHkReX4htI9sP6cbqzF.smethod_1(texture2D_0);
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = texture2D_0.get_Width();
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = texture2D_0.get_Height();
 		_u8pBof2EYEcHCEDxEtA27OOeLmVb = 0f;
 		_QBwNjQE21bfJ9yRo7CynjeYaHRg = vector2_0;
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		_u8pBof2EYEcHCEDxEtA27OOeLmVb += (float)_C9DhEciuJHkReX4htI9sP6cbqzF.smethod_2(gameTime_0).Milliseconds / 1000f * _NhL238TaCbkDiY6HXlWXZzzUYkm;
+		_u8pBof2EYEcHCEDxEtA27OOeLmVb += (float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f * _NhL238TaCbkDiY6HXlWXZzzUYkm;
 		if (_u8pBof2EYEcHCEDxEtA27OOeLmVb <= 360f)
 		{
 			if (_u8pBof2EYEcHCEDxEtA27OOeLmVb < -360f)

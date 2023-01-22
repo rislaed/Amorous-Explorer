@@ -9,7 +9,7 @@ public class ZenithDate1MiniGameScene : ShootingRangeMiniGameScene
 
 	protected override void _5Z9jaXDcRYm0wNlEm1aTutL9kSH()
 	{
-		ZenithDate1MiniGameScene.smethod_36((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._OxLRmpxixplTKChiTPUKAx4uTLG<ZenithDate1PostMiniGameScene>();
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._OxLRmpxixplTKChiTPUKAx4uTLG<ZenithDate1PostMiniGameScene>();
 	}
 
 	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_36(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)

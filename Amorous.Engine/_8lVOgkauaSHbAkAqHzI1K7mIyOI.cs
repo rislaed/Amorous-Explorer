@@ -24,7 +24,7 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
 		Texture2D texture2D_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 		Texture2D texture2D_2 = null;
-		if (!_8lVOgkauaSHbAkAqHzI1K7mIyOI.smethod_0(string_1))
+		if (!string.IsNullOrEmpty(string_1))
 		{
 			texture2D_2 = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
 		}
@@ -51,7 +51,7 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 		//IL_004c: Unknown result type (might be due to invalid IL or missing references)
 		Texture2D texture2D_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 		Texture2D texture2D_2 = null;
-		if (!_8lVOgkauaSHbAkAqHzI1K7mIyOI.smethod_0(string_1))
+		if (!string.IsNullOrEmpty(string_1))
 		{
 			texture2D_2 = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
 		}
@@ -131,7 +131,7 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
-		_8lVOgkauaSHbAkAqHzI1K7mIyOI.smethod_1(spriteBatch_0);
+		spriteBatch_0.Begin();
 		foreach (_1dTaaW9MQWoHm2Pqblg0u9bPhpe item in _6qfro4buoEQEXNMVAj08xANyjWf)
 		{
 			if (item._Fxy2SlgceW90FloFw6a1AEJODYA)
@@ -139,7 +139,7 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 				item._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
 			}
 		}
-		_8lVOgkauaSHbAkAqHzI1K7mIyOI.smethod_2(spriteBatch_0);
+		spriteBatch_0.End();
 	}
 
 	static bool smethod_0(string string_0)

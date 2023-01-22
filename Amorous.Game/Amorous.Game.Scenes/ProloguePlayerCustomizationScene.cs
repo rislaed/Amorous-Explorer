@@ -16,13 +16,13 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 
 	protected override void _n3b8BstkorCsu4TW0U2YVdFbdGp()
 	{
-		ProloguePlayerCustomizationScene.smethod_55(ProloguePlayerCustomizationScene.smethod_54((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure this how you want to look in the game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, (Action<int>)delegate(int int_0)
+		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Are you sure this how you want to look in the game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
 				_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-				ProloguePlayerCustomizationScene.smethod_58(ProloguePlayerCustomizationScene.smethod_57(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-				ProloguePlayerCustomizationScene.smethod_59(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric1");
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
 			}
 		});
 	}
@@ -33,8 +33,8 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 		if (int_0 == 1)
 		{
 			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-			ProloguePlayerCustomizationScene.smethod_58(ProloguePlayerCustomizationScene.smethod_57(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-			ProloguePlayerCustomizationScene.smethod_59(ProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric1");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
 		}
 	}
 

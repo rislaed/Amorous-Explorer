@@ -8,9 +8,11 @@ public class _gJR4g7ak0hsZAUWX1vJbMqG2P5I : _RlrsL89bialFQa9mzWurgsdr6FK<Color>
 
 	public _gJR4g7ak0hsZAUWX1vJbMqG2P5I(GraphicsDevice graphicsDevice_0)
 	{
+		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0016: Expected O, but got Unknown
 		//IL_0024: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-		_OzFEGvZu5tqLcitcWhX3j9pIBZM = _gJR4g7ak0hsZAUWX1vJbMqG2P5I.smethod_1(graphicsDevice_0, 1, 1, bool_0: false, (SurfaceFormat)0);
+		_OzFEGvZu5tqLcitcWhX3j9pIBZM = new Texture2D(graphicsDevice_0, 1, 1, false, (SurfaceFormat)0);
 		_OzFEGvZu5tqLcitcWhX3j9pIBZM.SetData<Color>((Color[])(object)new Color[1] { Color.get_White() });
 	}
 
@@ -26,7 +28,7 @@ public class _gJR4g7ak0hsZAUWX1vJbMqG2P5I : _RlrsL89bialFQa9mzWurgsdr6FK<Color>
 	{
 		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
-		_gJR4g7ak0hsZAUWX1vJbMqG2P5I.smethod_2(spriteBatch_0);
+		spriteBatch_0.Begin();
 		spriteBatch_0.Draw(_OzFEGvZu5tqLcitcWhX3j9pIBZM, new Rectangle(0, 0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._L7Fbjq2u4uL5uJIyoRAHpKNXmDI, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._omy3Cp1IbOKtE3eoz7lAP5DqhT9), base._SWODlbUkQEqfwrtprjLPOeGF7HO);
 		spriteBatch_0.End();
 	}

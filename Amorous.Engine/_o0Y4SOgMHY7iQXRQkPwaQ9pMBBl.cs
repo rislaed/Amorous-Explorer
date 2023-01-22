@@ -15,7 +15,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 
 		internal void _MQQUBuq2vTJWQYqeAIMhSi0xRWM(Control control_0, MouseEventArgs mouseEventArgs_0)
 		{
-			_egzIUSwqhQu2Msk17sGs8ZpSyUe.smethod_0(_L7VColD35B3sDgJdUnjTeXGa7pv);
+			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 			if (_qhAM4Wrvf8c5jzKBQqLfosAE9D != null)
 			{
 				_qhAM4Wrvf8c5jzKBQqLfosAE9D();
@@ -46,7 +46,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		internal void _tFTAzUh4cNfoxvBvOhPdwJ4x9h4(Control control_0, MouseEventArgs mouseEventArgs_0)
 		{
 			int obj = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
-			_1MgLxPAMx27aiB8gt4uUvPhdQGp.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._L7VColD35B3sDgJdUnjTeXGa7pv);
+			_wr6xcvFOgUbaTATC17S6Y9v3y3S._L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 			_wr6xcvFOgUbaTATC17S6Y9v3y3S._qhAM4Wrvf8c5jzKBQqLfosAE9D(obj);
 		}
 
@@ -1111,15 +1111,15 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 	{
 		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
 		_JQQysO7uwugUSzo1g63o3jzSP4H jQQysO7uwugUSzo1g63o3jzSP4H = new _JQQysO7uwugUSzo1g63o3jzSP4H();
-		jQQysO7uwugUSzo1g63o3jzSP4H._Gz8axRA2ks9sOlb2vx60ucqDEM0(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_2("{0}/Content-Release/{1}.xml", (object)_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_1(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_0()), (object)string_0));
-		foreach (ControlStyle value in ((Dictionary<string, ControlStyle>)(object)_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_3(desktop_0)).Values)
+		jQQysO7uwugUSzo1g63o3jzSP4H._Gz8axRA2ks9sOlb2vx60ucqDEM0($"{AppDomain.CurrentDomain.BaseDirectory}/Content-Release/{string_0}.xml");
+		foreach (ControlStyle value in ((Dictionary<string, ControlStyle>)(object)desktop_0.get_Skin()).Values)
 		{
-			foreach (Style value2 in ((Dictionary<ControlState, Style>)(object)_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_4(value)).Values)
+			foreach (Style value2 in ((Dictionary<ControlState, Style>)(object)value.get_Styles()).Values)
 			{
-				if (!_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_6(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_5(value2)) && jQQysO7uwugUSzo1g63o3jzSP4H._eA4yRWB5CfMJCCzEhBJkRcJhaGT(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_5(value2)))
+				if (!string.IsNullOrEmpty(value2.get_Texture()) && jQQysO7uwugUSzo1g63o3jzSP4H._eA4yRWB5CfMJCCzEhBJkRcJhaGT(value2.get_Texture()))
 				{
-					_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_7(value2, jQQysO7uwugUSzo1g63o3jzSP4H._zETvz5wV1cpcKFl6i5KBgWbBmFR(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_5(value2)));
-					_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_8(value2, string_1 ?? string_0);
+					value2.set_TextureRect(jQQysO7uwugUSzo1g63o3jzSP4H._zETvz5wV1cpcKFl6i5KBgWbBmFR(value2.get_Texture()));
+					value2.set_Texture(string_1 ?? string_0);
 				}
 			}
 		}
@@ -1127,8 +1127,15 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 
 	public static void _0pVU36wp9GYD1jM18raZtVEbA9q(this Desktop desktop_0, string string_0, int int_0, string string_1 = "OK", Action action_0 = null)
 	{
+		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0048: Expected O, but got Unknown
 		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
 		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
@@ -1149,45 +1156,52 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		//IL_00ca: Expected O, but got Unknown
 		//IL_00d2: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00dc: Expected O, but got Unknown
-		Window obj = _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_9();
-		_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_10(obj, bool_0: true);
-		_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_11((Control)(object)obj, (DockStyle)8);
-		((Control)obj).set_Padding(new Margin(15));
-		((Control)obj).set_Size(new Point(int_0, 0));
-		((Control)obj).set_AutoSize((AutoSize)2);
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = obj;
-		ControlCollection controls = _L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls();
-		Label val = new Label();
-		((Control)val).set_Dock((DockStyle)2);
-		val.set_TextAlign((Alignment)4);
-		val.set_Text(string_0);
-		val.set_TextWrap(true);
+		Window val = new Window();
+		val.set_Modal(true);
+		((Control)val).set_Dock((DockStyle)8);
+		((Control)val).set_Padding(new Margin(15));
+		((Control)val).set_Size(new Point(int_0, 0));
 		((Control)val).set_AutoSize((AutoSize)2);
-		((Control)val).set_Margin(new Margin(0, 0, 0, 10));
-		((ActiveList<Control>)(object)controls).Add((Control)val);
-		Button val2 = new Button();
+		Window _L7VColD35B3sDgJdUnjTeXGa7pv = val;
+		ControlCollection controls = _L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls();
+		Label val2 = new Label();
 		((Control)val2).set_Dock((DockStyle)2);
-		((Label)val2).set_Text(string_1);
-		((Control)val2).set_Padding(new Margin(5, 0, 5, 0));
-		((Control)val2).set_Margin(new Margin(0, 0, 0, 15));
-		((Control)val2).set_Scissor(true);
-		Button val3 = val2;
-		((Control)val3).add_MouseClick((MouseEvent)delegate
+		val2.set_TextAlign((Alignment)4);
+		val2.set_Text(string_0);
+		val2.set_TextWrap(true);
+		((Control)val2).set_AutoSize((AutoSize)2);
+		((Control)val2).set_Margin(new Margin(0, 0, 0, 10));
+		((ActiveList<Control>)(object)controls).Add((Control)val2);
+		Button val3 = new Button();
+		((Control)val3).set_Dock((DockStyle)2);
+		((Label)val3).set_Text(string_1);
+		((Control)val3).set_Padding(new Margin(5, 0, 5, 0));
+		((Control)val3).set_Margin(new Margin(0, 0, 0, 15));
+		((Control)val3).set_Scissor(true);
+		Button val4 = val3;
+		((Control)val4).add_MouseClick((MouseEvent)delegate
 		{
-			_egzIUSwqhQu2Msk17sGs8ZpSyUe.smethod_0(_L7VColD35B3sDgJdUnjTeXGa7pv);
+			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 			if (action_0 != null)
 			{
 				action_0();
 			}
 		});
-		((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val3);
+		((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val4);
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
 	}
 
 	public static void _GtkWDtXwQHwgWY4aFkacjfUDyzb(this Desktop desktop_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
 	{
+		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0048: Expected O, but got Unknown
 		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
 		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
@@ -1208,40 +1222,40 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		//IL_00ee: Expected O, but got Unknown
 		//IL_00fe: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0108: Expected O, but got Unknown
-		Window obj = _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_9();
-		_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_10(obj, bool_0: true);
-		_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_11((Control)(object)obj, (DockStyle)8);
-		((Control)obj).set_Padding(new Margin(15));
-		((Control)obj).set_Size(new Point(int_0, 0));
-		((Control)obj).set_AutoSize((AutoSize)2);
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = obj;
-		ControlCollection controls = _L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls();
-		Label val = new Label();
-		((Control)val).set_Dock((DockStyle)2);
-		val.set_TextAlign((Alignment)4);
-		val.set_Text(string_0);
-		val.set_TextWrap(true);
+		Window val = new Window();
+		val.set_Modal(true);
+		((Control)val).set_Dock((DockStyle)8);
+		((Control)val).set_Padding(new Margin(15));
+		((Control)val).set_Size(new Point(int_0, 0));
 		((Control)val).set_AutoSize((AutoSize)2);
-		((Control)val).set_Margin(new Margin(0, 0, 0, 10));
-		((ActiveList<Control>)(object)controls).Add((Control)val);
+		Window _L7VColD35B3sDgJdUnjTeXGa7pv = val;
+		ControlCollection controls = _L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls();
+		Label val2 = new Label();
+		((Control)val2).set_Dock((DockStyle)2);
+		val2.set_TextAlign((Alignment)4);
+		val2.set_Text(string_0);
+		val2.set_TextWrap(true);
+		((Control)val2).set_AutoSize((AutoSize)2);
+		((Control)val2).set_Margin(new Margin(0, 0, 0, 10));
+		((ActiveList<Control>)(object)controls).Add((Control)val2);
 		for (int i = 0; i < string_1.Length; i++)
 		{
 			string text = string_1[i];
-			Button val2 = new Button();
-			((Control)val2).set_Dock((DockStyle)2);
-			((Label)val2).set_Text(text);
-			((Control)val2).set_Padding(new Margin(5, 0, 5, 0));
-			((Control)val2).set_Margin(new Margin(0, 0, 0, (i < string_1.Length - 1) ? 5 : 15));
-			((Control)val2).set_Scissor(true);
-			Button val3 = val2;
+			Button val3 = new Button();
+			((Control)val3).set_Dock((DockStyle)2);
+			((Label)val3).set_Text(text);
+			((Control)val3).set_Padding(new Margin(5, 0, 5, 0));
+			((Control)val3).set_Margin(new Margin(0, 0, 0, (i < string_1.Length - 1) ? 5 : 15));
+			((Control)val3).set_Scissor(true);
+			Button val4 = val3;
 			int _5ft6kbimSBgLCWvFCD6FPEU8cCO = i;
-			((Control)val3).add_MouseClick((MouseEvent)delegate
+			((Control)val4).add_MouseClick((MouseEvent)delegate
 			{
-				int obj2 = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
-				_1MgLxPAMx27aiB8gt4uUvPhdQGp.smethod_0(_L7VColD35B3sDgJdUnjTeXGa7pv);
-				action_0(obj2);
+				int obj = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
+				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
+				action_0(obj);
 			});
-			((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val3);
+			((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)val4);
 		}
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
 	}

@@ -37,11 +37,11 @@ public class _hxdR2gDHAgUMo1HqEU81OpKiFNA : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	{
 		if (int_0 == 0)
 		{
-			throw _hxdR2gDHAgUMo1HqEU81OpKiFNA.smethod_0("timePerFade == 0");
+			throw new ArgumentException("timePerFade == 0");
 		}
 		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _hxdR2gDHAgUMo1HqEU81OpKiFNA.smethod_1(texture2D_0);
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = _hxdR2gDHAgUMo1HqEU81OpKiFNA.smethod_2(texture2D_0);
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = texture2D_0.get_Width();
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = texture2D_0.get_Height();
 		_MTruZRkpqc4kHflWg7twpjpk2hf = int_0;
 		_RFfbJpFrHeugXRRlKIQ5tDxMeTg = int_1;
 		_F5UOCZEYoZ6vR0bYiGdjxZQ8tA = int_2;
@@ -51,7 +51,7 @@ public class _hxdR2gDHAgUMo1HqEU81OpKiFNA : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= _hxdR2gDHAgUMo1HqEU81OpKiFNA.smethod_3(gameTime_0).Milliseconds;
+		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime_0.get_ElapsedGameTime().Milliseconds;
 		if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG <= 0)
 		{
 			_wFKqij4skEKboWZNcGSEePbkSNo();

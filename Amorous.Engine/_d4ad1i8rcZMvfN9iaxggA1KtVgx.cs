@@ -37,9 +37,9 @@ public class _d4ad1i8rcZMvfN9iaxggA1KtVgx : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
 		if (base._NUP8Fs8I7oMuI6vfg25DFKFlQqE)
 		{
-			_d4ad1i8rcZMvfN9iaxggA1KtVgx.smethod_0(spriteBatch_0, _NsW6nQWUMy3K32z4OlInvOro6nF ?? _eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _cE3kSvrhsTV9gIQPkCoBhOFAs2c);
+			spriteBatch_0.Draw(_NsW6nQWUMy3K32z4OlInvOro6nF ?? _eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _cE3kSvrhsTV9gIQPkCoBhOFAs2c);
 		}
-		_d4ad1i8rcZMvfN9iaxggA1KtVgx.smethod_0(spriteBatch_0, _eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
+		spriteBatch_0.Draw(_eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
 	}
 
 	static void smethod_0(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2 vector2_0, Color color_0)

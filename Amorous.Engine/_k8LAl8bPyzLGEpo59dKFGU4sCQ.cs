@@ -34,14 +34,18 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public _k8LAl8bPyzLGEpo59dKFGU4sCQ(Game game_0)
 	{
+		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0055: Expected O, but got Unknown
+		//IL_0063: Unknown result type (might be due to invalid IL or missing references)
+		//IL_006d: Expected O, but got Unknown
 		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0094: Unknown result type (might be due to invalid IL or missing references)
 		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00a4: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00b0: Expected O, but got Unknown
 		_4L7hfXrWoDdArQiscG4ukHCV46B = game_0;
-		_OaIpAM8LUMZnUHberg4zeLNyWCd = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_1(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_0(game_0));
-		_5YcBaRKou3OVWCywHF9K49yk2u9 = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_2(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_0(_4L7hfXrWoDdArQiscG4ukHCV46B), 1, 1);
+		_OaIpAM8LUMZnUHberg4zeLNyWCd = new SpriteBatch(game_0.get_GraphicsDevice());
+		_5YcBaRKou3OVWCywHF9K49yk2u9 = new Texture2D(_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice(), 1, 1);
 		_5YcBaRKou3OVWCywHF9K49yk2u9.SetData<Color>((Color[])(object)new Color[1]
 		{
 			new Color(255, 255, 255, 255)
@@ -57,8 +61,8 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 	{
 		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
-		byte[] array = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_3(int_0);
-		return new Color((float)(int)array[2] / 255f, (float)(int)array[1] / 255f, (float)(int)array[0] / 255f) * ((float)(int)array[3] / 255f);
+		byte[] bytes = BitConverter.GetBytes(int_0);
+		return new Color((float)(int)bytes[2] / 255f, (float)(int)bytes[1] / 255f, (float)(int)bytes[0] / 255f) * ((float)(int)bytes[3] / 255f);
 	}
 
 	public int GetTexture(string name)
@@ -67,7 +71,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		{
 			return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
 		}
-		Texture2D value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_7(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_5(name), "/", _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_6(name)));
+		Texture2D value = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>(Path.GetDirectoryName(name) + "/" + Path.GetFileNameWithoutExtension(name));
 		int count = _Al96gNPtV1ulU681NMxd1IeQxQq.Count;
 		_Al96gNPtV1ulU681NMxd1IeQxQq.Add(name, count);
 		_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(count, value);
@@ -92,13 +96,13 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public int GetFont(string name)
 	{
-		if (_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_8(name, "default"))
+		if (name == "default")
 		{
 			name = _3qOVW0rru0fnFsK9qtJ6Gk1F0bE;
 		}
 		if (!_ludG33HqMIBuda5aoAUm6woMHdh.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
 		{
-			SpriteFont value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<SpriteFont>(name);
+			SpriteFont value = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>(name);
 			int count = _ludG33HqMIBuda5aoAUm6woMHdh.Count;
 			_ludG33HqMIBuda5aoAUm6woMHdh.Add(name, count);
 			_Ks5fhSCbnJp6pmRDanq4sn9DlRF.Add(count, value);
@@ -116,13 +120,13 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
 		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
-		if (_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_9(text))
+		if (string.IsNullOrEmpty(text))
 		{
 			return Point.Zero;
 		}
 		if (_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
 		{
-			Vector2 val = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_10(_YWublsgGSMYGc5V0KPieIYbXfdl, text);
+			Vector2 val = _YWublsgGSMYGc5V0KPieIYbXfdl.MeasureString(text);
 			return new Point((int)val.X, (int)val.Y);
 		}
 		return Point.Zero;
@@ -134,7 +138,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
 		if (_48Ia4uIlwwllIw0MIzPjdWOBDqx.TryGetValue(texture, out _lruDd2bffYslbTUZZOo7HsfbTFA))
 		{
-			return new Point(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_11(_lruDd2bffYslbTUZZOo7HsfbTFA), _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_12(_lruDd2bffYslbTUZZOo7HsfbTFA));
+			return new Point(_lruDd2bffYslbTUZZOo7HsfbTFA.get_Width(), _lruDd2bffYslbTUZZOo7HsfbTFA.get_Height());
 		}
 		return Point.Zero;
 	}
@@ -171,7 +175,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 	public void Scissor(int x, int y, int w, int h)
 	{
 		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
-		_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_0(_4L7hfXrWoDdArQiscG4ukHCV46B).set_ScissorRectangle(new Rectangle(x, y, w, h));
+		_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice().set_ScissorRectangle(new Rectangle(x, y, w, h));
 	}
 
 	public void StartBatch()
@@ -181,7 +185,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public void EndBatch(bool final)
 	{
-		_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_13(_OaIpAM8LUMZnUHberg4zeLNyWCd);
+		_OaIpAM8LUMZnUHberg4zeLNyWCd.End();
 	}
 
 	public void Dispose()

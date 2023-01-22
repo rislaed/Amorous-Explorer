@@ -17,34 +17,34 @@ public class CoffeeShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public CoffeeShopScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		CoffeeShopScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Background", 0, 0);
-		_f2oPpgipLb2rTkpm5SVN7YrkJvd = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
-		_pewCVYjuuHIu8ihhqBs4FHREuPB = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
-		_Fcr13ys9cm66KFhUCRnmKKCOHQA = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
-		CoffeeShopScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Default");
-		CoffeeShopScene.smethod_17("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/CoffeeShop/Background", 0, 0);
+		_f2oPpgipLb2rTkpm5SVN7YrkJvd = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
+		_pewCVYjuuHIu8ihhqBs4FHREuPB = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
+		_Fcr13ys9cm66KFhUCRnmKKCOHQA = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
+		_6hE3geqxrB1vCirtSWHxIJjlTQB("Default");
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 	}
 
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
 	{
-		this.method_0(string_0);
-		CoffeeShopScene.smethod_18((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_f2oPpgipLb2rTkpm5SVN7YrkJvd, bool_0: false);
-		CoffeeShopScene.smethod_18((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_pewCVYjuuHIu8ihhqBs4FHREuPB, bool_0: false);
-		CoffeeShopScene.smethod_18((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_Fcr13ys9cm66KFhUCRnmKKCOHQA, bool_0: false);
-		if (!CoffeeShopScene.smethod_19(string_0, "Jax"))
+		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
+		_f2oPpgipLb2rTkpm5SVN7YrkJvd._Fxy2SlgceW90FloFw6a1AEJODYA = false;
+		_pewCVYjuuHIu8ihhqBs4FHREuPB._Fxy2SlgceW90FloFw6a1AEJODYA = false;
+		_Fcr13ys9cm66KFhUCRnmKKCOHQA._Fxy2SlgceW90FloFw6a1AEJODYA = false;
+		if (!(string_0 == "Jax"))
 		{
-			if (!CoffeeShopScene.smethod_19(string_0, "Seth"))
+			if (!(string_0 == "Seth"))
 			{
-				CoffeeShopScene.smethod_18((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_Fcr13ys9cm66KFhUCRnmKKCOHQA, bool_0: true);
+				_Fcr13ys9cm66KFhUCRnmKKCOHQA._Fxy2SlgceW90FloFw6a1AEJODYA = true;
 			}
 			else
 			{
-				CoffeeShopScene.smethod_18((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_pewCVYjuuHIu8ihhqBs4FHREuPB, bool_0: true);
+				_pewCVYjuuHIu8ihhqBs4FHREuPB._Fxy2SlgceW90FloFw6a1AEJODYA = true;
 			}
 		}
 		else
 		{
-			CoffeeShopScene.smethod_18((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_f2oPpgipLb2rTkpm5SVN7YrkJvd, bool_0: true);
+			_f2oPpgipLb2rTkpm5SVN7YrkJvd._Fxy2SlgceW90FloFw6a1AEJODYA = true;
 		}
 	}
 

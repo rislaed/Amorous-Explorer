@@ -17,8 +17,8 @@ public class _kxm3yIqio0baXT5t5vOHBAEdviB : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
 	{
 		_I1ZbHemGfJWozEfpDc9aFgiZQhEb = list_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _kxm3yIqio0baXT5t5vOHBAEdviB.smethod_0(list_0[0]);
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = _kxm3yIqio0baXT5t5vOHBAEdviB.smethod_1(list_0[0]);
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = list_0[0].get_Width();
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = list_0[0].get_Height();
 		_LYcgggYAzSIbIyLQB6fJYp9GPs6 = int_0;
 		_3wk7bXUbhNqSQ9kMD9hieEubOhG = 0;
 		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = _LYcgggYAzSIbIyLQB6fJYp9GPs6;
@@ -26,7 +26,7 @@ public class _kxm3yIqio0baXT5t5vOHBAEdviB : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= _kxm3yIqio0baXT5t5vOHBAEdviB.smethod_2(gameTime_0).Milliseconds;
+		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime_0.get_ElapsedGameTime().Milliseconds;
 		if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG < 0)
 		{
 			_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = _LYcgggYAzSIbIyLQB6fJYp9GPs6;

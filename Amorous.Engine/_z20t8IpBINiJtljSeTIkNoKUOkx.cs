@@ -14,8 +14,8 @@ public class _z20t8IpBINiJtljSeTIkNoKUOkx : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
 	{
 		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _z20t8IpBINiJtljSeTIkNoKUOkx.smethod_0(texture2D_0);
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = _z20t8IpBINiJtljSeTIkNoKUOkx.smethod_1(texture2D_0);
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = texture2D_0.get_Width();
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = texture2D_0.get_Height();
 		_XvomzD7ydX2gHHhG6ti3fxsB4QF = action_0;
 	}
 

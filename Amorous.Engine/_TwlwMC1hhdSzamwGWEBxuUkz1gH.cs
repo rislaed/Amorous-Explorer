@@ -74,13 +74,13 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		if (list_0 != null)
 		{
 			_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL = _1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-			nHdiyIURlAiaNZ8u6MKzxjcwnyL._iUyagF1KTeSUlg0raFfzuot3CwC = (Action<string>)_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_0((Delegate)nHdiyIURlAiaNZ8u6MKzxjcwnyL._iUyagF1KTeSUlg0raFfzuot3CwC, (Delegate)new Action<string>(_11Hsh7iMhdhIoawBk6ueRsmCarI));
+			nHdiyIURlAiaNZ8u6MKzxjcwnyL._iUyagF1KTeSUlg0raFfzuot3CwC = (Action<string>)Delegate.Combine(nHdiyIURlAiaNZ8u6MKzxjcwnyL._iUyagF1KTeSUlg0raFfzuot3CwC, new Action<string>(_11Hsh7iMhdhIoawBk6ueRsmCarI));
 		}
 		_1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
 		_WhR14B3jaJk70xEEeAkh2VLlhbA();
 		_0cFb48aKbcbREkHm9Jwptl6r6Vi();
 		_h29gtnqEWLAa5qsliRXuXiPwY2o = contentManager_0.Load<Texture2D>(string_1);
-		if (!_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_1(string_2))
+		if (!string.IsNullOrEmpty(string_2))
 		{
 			_XqJSGCmxFB8nW6I8Mf5NEZBQ0gG = contentManager_0.Load<Texture2D>(string_2);
 		}
@@ -98,12 +98,12 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		{
 			return;
 		}
-		if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, "ThrustStart"))
+		switch (string_0)
 		{
+		case "ThrustStart":
 			_wQSC6rD8bbXFvRxba0kr1RqxlOV._VIy3F8sVuq5i8ygZ1laOvKez7fh._xDFlaclLtJxSUU63JEJALvRLdfe();
-		}
-		else if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, "ThrustEnd"))
-		{
+			break;
+		case "ThrustEnd":
 			switch (_rNGHguvWdrugQVL2AI6bMMKSORN)
 			{
 			case _qokIrmaaT3Lq6znW10HdrPUO9Fq.Slow:
@@ -114,13 +114,9 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 				_wQSC6rD8bbXFvRxba0kr1RqxlOV._3pW8Mrovx9zKhcGTeZrWzvXeJ4h._xDFlaclLtJxSUU63JEJALvRLdfe();
 				break;
 			}
-		}
-		else
+			break;
+		case "Moan":
 		{
-			if (!_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, "Moan"))
-			{
-				return;
-			}
 			_qokIrmaaT3Lq6znW10HdrPUO9Fq qokIrmaaT3Lq6znW10HdrPUO9Fq = _rNGHguvWdrugQVL2AI6bMMKSORN;
 			if (_DPxTb3eioTU27n7cqNVeQibO5FDb)
 			{
@@ -147,6 +143,8 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 					break;
 				}
 			}
+			break;
+		}
 		}
 	}
 
@@ -168,7 +166,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 	{
 		if (_YDmx0efYtcyg4olWGsr0rBMkyjD < _aElCqTEKQdwgSGVsOO7nt14UEsn)
 		{
-			_YDmx0efYtcyg4olWGsr0rBMkyjD += (float)_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_3(gameTime_0).TotalMilliseconds;
+			_YDmx0efYtcyg4olWGsr0rBMkyjD += (float)gameTime_0.get_ElapsedGameTime().TotalMilliseconds;
 		}
 		else if (_YDmx0efYtcyg4olWGsr0rBMkyjD > _aElCqTEKQdwgSGVsOO7nt14UEsn)
 		{
@@ -209,16 +207,16 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
 		if (_h29gtnqEWLAa5qsliRXuXiPwY2o != null)
 		{
-			_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_4(spriteBatch_0);
-			_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_5(spriteBatch_0, _h29gtnqEWLAa5qsliRXuXiPwY2o, Vector2.get_Zero(), Color.get_White());
-			_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_6(spriteBatch_0);
+			spriteBatch_0.Begin();
+			spriteBatch_0.Draw(_h29gtnqEWLAa5qsliRXuXiPwY2o, Vector2.get_Zero(), Color.get_White());
+			spriteBatch_0.End();
 		}
 		_1BgOJ3z4ZUXNS2L4JWf24pr41hB._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, _1AqpgY4vB6ly5vxOay6j86rcIEo);
 		if (_XqJSGCmxFB8nW6I8Mf5NEZBQ0gG != null)
 		{
-			_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_4(spriteBatch_0);
-			_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_5(spriteBatch_0, _XqJSGCmxFB8nW6I8Mf5NEZBQ0gG, Vector2.get_Zero(), Color.get_White());
-			_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_6(spriteBatch_0);
+			spriteBatch_0.Begin();
+			spriteBatch_0.Draw(_XqJSGCmxFB8nW6I8Mf5NEZBQ0gG, Vector2.get_Zero(), Color.get_White());
+			spriteBatch_0.End();
 		}
 	}
 
@@ -242,7 +240,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 	public virtual void _4XV5xPzQUH5ABIwpxH3yf5EIAyL(int int_0, bool bool_0 = false)
 	{
-		_rNGHguvWdrugQVL2AI6bMMKSORN = (_qokIrmaaT3Lq6znW10HdrPUO9Fq)(bool_0 ? int_0 : _TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_8(0, _TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_7((int)(_rNGHguvWdrugQVL2AI6bMMKSORN + int_0), 3)));
+		_rNGHguvWdrugQVL2AI6bMMKSORN = (_qokIrmaaT3Lq6znW10HdrPUO9Fq)(bool_0 ? int_0 : Math.Max(0, Math.Min((int)(_rNGHguvWdrugQVL2AI6bMMKSORN + int_0), 3)));
 		switch (_rNGHguvWdrugQVL2AI6bMMKSORN)
 		{
 		case _qokIrmaaT3Lq6znW10HdrPUO9Fq.Idle:

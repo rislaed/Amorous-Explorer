@@ -50,11 +50,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			//IL_008a: Unknown result type (might be due to invalid IL or missing references)
 			//IL_0096: Unknown result type (might be due to invalid IL or missing references)
 			//IL_009b: Unknown result type (might be due to invalid IL or missing references)
-			_uZYA4qnOfbVDFtZ6Ih3HawZgErP = FrameAnimation.smethod_1(FrameAnimation.smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)).Load<Texture2D>(string_0);
+			_uZYA4qnOfbVDFtZ6Ih3HawZgErP = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 			_q2YaOk0V93J3GMeWTOtcGdh9kEA = float_0 / (float)int_0;
 			_hUTZltYwRfIdEri4M059hyQus5H = int_0;
 			_Lb7cMVSwXw3dYaQEnyADfQZoUedb = 0;
-			_jqsWTJ89RIZpjBr65dNZzmpJJKE = new Rectangle(0, 0, (int)((float)FrameAnimation.smethod_2(_uZYA4qnOfbVDFtZ6Ih3HawZgErP) / 12f), FrameAnimation.smethod_3(_uZYA4qnOfbVDFtZ6Ih3HawZgErP));
+			_jqsWTJ89RIZpjBr65dNZzmpJJKE = new Rectangle(0, 0, (int)((float)_uZYA4qnOfbVDFtZ6Ih3HawZgErP.get_Width() / 12f), _uZYA4qnOfbVDFtZ6Ih3HawZgErP.get_Height());
 			_NbYrjABARmnikNXQHmmbM8k62UE = new Rectangle(0, 0, (int)((float)_jqsWTJ89RIZpjBr65dNZzmpJJKE.Width * float_1), (int)((float)_jqsWTJ89RIZpjBr65dNZzmpJJKE.Height * float_1));
 			_QBwNjQE21bfJ9yRo7CynjeYaHRg = new Vector2((float)int_1, (float)int_2);
 		}
@@ -63,7 +63,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			_NbYrjABARmnikNXQHmmbM8k62UE.X = int_0;
 			_NbYrjABARmnikNXQHmmbM8k62UE.Y = int_1;
-			_MZBGPP8CHYYeh1lAhvANLxmu8KVA = FrameAnimation.smethod_4(float_0);
+			_MZBGPP8CHYYeh1lAhvANLxmu8KVA = MathHelper.ToRadians(float_0);
 		}
 
 		public void _tiBFUHPEkedkbgvuX3whdeyjhKo(float float_0)
@@ -95,7 +95,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			//IL_002e: Unknown result type (might be due to invalid IL or missing references)
 			if (_Lb7cMVSwXw3dYaQEnyADfQZoUedb >= 0)
 			{
-				FrameAnimation.smethod_5(spriteBatch_0, _uZYA4qnOfbVDFtZ6Ih3HawZgErP, _NbYrjABARmnikNXQHmmbM8k62UE, (Rectangle?)_jqsWTJ89RIZpjBr65dNZzmpJJKE, Color.get_White(), _MZBGPP8CHYYeh1lAhvANLxmu8KVA, _QBwNjQE21bfJ9yRo7CynjeYaHRg, (SpriteEffects)0, 0f);
+				spriteBatch_0.Draw(_uZYA4qnOfbVDFtZ6Ih3HawZgErP, _NbYrjABARmnikNXQHmmbM8k62UE, (Rectangle?)_jqsWTJ89RIZpjBr65dNZzmpJJKE, Color.get_White(), _MZBGPP8CHYYeh1lAhvANLxmu8KVA, _QBwNjQE21bfJ9yRo7CynjeYaHRg, (SpriteEffects)0, 0f);
 			}
 		}
 
@@ -176,15 +176,15 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public TargetModel(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, int int_0, int int_1, float float_0 = 1f)
 			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "Target")
 		{
-			TargetModel.smethod_0((_fAUddQEKfZyemRb327NhM3GGlmzA)this, (Action<GameTime>)delegate(GameTime gameTime_0)
+			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime_0)
 			{
-				TargetModel.smethod_9(_pO4d7wyWlp6cYLHahUVYplpUWxw, gameTime_0, 1000f);
-			});
-			TargetModel.smethod_1((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)this, (Action<SpriteBatch, SkeletonMeshRenderer>)delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
+				_pO4d7wyWlp6cYLHahUVYplpUWxw._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+			};
+			base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 			{
-				TargetModel.smethod_10(_pO4d7wyWlp6cYLHahUVYplpUWxw, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
-			});
-			_pO4d7wyWlp6cYLHahUVYplpUWxw = TargetModel.smethod_4(TargetModel.smethod_3(TargetModel.smethod_2(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/ShootingRange/Target", 1f, bool_0: true, (List<SpineEvent>)null);
+				_pO4d7wyWlp6cYLHahUVYplpUWxw._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, null, null, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
+			};
+			_pO4d7wyWlp6cYLHahUVYplpUWxw = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/ShootingRange/Target");
 			_q83Vj1dGmn3NFhPIkk7tO7tyxb(int_0, int_1, float_0);
 		}
 
@@ -194,8 +194,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
 			//IL_00ce: Unknown result type (might be due to invalid IL or missing references)
 			//IL_00d3: Unknown result type (might be due to invalid IL or missing references)
-			TargetModel.smethod_5(_pO4d7wyWlp6cYLHahUVYplpUWxw, (float)int_0);
-			TargetModel.smethod_6(_pO4d7wyWlp6cYLHahUVYplpUWxw, (float)int_1);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw._7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0;
+			_pO4d7wyWlp6cYLHahUVYplpUWxw._bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1;
 			_i8C0PwO83NRzGvNoyMhHwLV9HeC = nullable_0 ?? _i8C0PwO83NRzGvNoyMhHwLV9HeC;
 			_JZPZVzDxWQJJNyrQBsinax9LDSh = (float)int_0 - (float)_4mLyheZBE5398noM999P10uPXyj.X / 2f * _i8C0PwO83NRzGvNoyMhHwLV9HeC;
 			_gQiTjWdk9KSBoYLFXR1ELHlQDTk = (float)int_1 - (float)_4mLyheZBE5398noM999P10uPXyj.Y * _i8C0PwO83NRzGvNoyMhHwLV9HeC;
@@ -206,17 +206,17 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		public void _edcakvTOp2fd2J9ZHAu9GKjDaN7(Action action_0 = null)
 		{
-			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, "Rise", action_0);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw._SPUoP3ABwpgQinJfKUM5qBbYSvr("Rise", action_0);
 		}
 
 		public void _DcBCpcEfsjl4zP1zbrOrd1bwNReb(Action action_0 = null)
 		{
-			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, "Headshot", action_0);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw._SPUoP3ABwpgQinJfKUM5qBbYSvr("Headshot", action_0);
 		}
 
 		public void _u1yq8F9lG8oMcA9vZO9c7Qbh8vj(Action action_0 = null)
 		{
-			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, "Bodyshot", action_0);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw._SPUoP3ABwpgQinJfKUM5qBbYSvr("Bodyshot", action_0);
 		}
 
 		public bool _ZCfNJ0nxXx3YppgLl5SvS2LkQ5B(Point point_0, out CollisionType collisionType_0)
@@ -242,7 +242,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				float num = (float)point_0.X - (_JZPZVzDxWQJJNyrQBsinax9LDSh + (float)_OVCuLPSRFKMV6JuYrGeZ5uMUJTC.X);
 				float num2 = (float)point_0.Y - (_gQiTjWdk9KSBoYLFXR1ELHlQDTk + (float)_OVCuLPSRFKMV6JuYrGeZ5uMUJTC.Y);
-				double num3 = TargetModel.smethod_8((double)(num * num + num2 * num2));
+				double num3 = Math.Sqrt(num * num + num2 * num2);
 				if (num3 <= (double)_XD9uURBVAJTsK2DKyuCockNh07A)
 				{
 					collisionType_0 = CollisionType.Headshot;
@@ -255,13 +255,13 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		[CompilerGenerated]
 		private void _ADJjrAI33HndiXqXJrA3qKsIyrF(GameTime gameTime_0)
 		{
-			TargetModel.smethod_9(_pO4d7wyWlp6cYLHahUVYplpUWxw, gameTime_0, 1000f);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 		}
 
 		[CompilerGenerated]
 		private void _AmJLsnuDUqeR9shOixvB2LU01QD(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			TargetModel.smethod_10(_pO4d7wyWlp6cYLHahUVYplpUWxw, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, null, null, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
 		}
 
 		static void smethod_0(_fAUddQEKfZyemRb327NhM3GGlmzA _fAUddQEKfZyemRb327NhM3GGlmzA_0, Action<GameTime> action_0)
@@ -328,7 +328,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			set
 			{
-				GunModel.smethod_0(_XcQKV7iP9Sk10poAFYuakLJaltL, value);
+				_XcQKV7iP9Sk10poAFYuakLJaltL._7Xn1C5tjYnmIif1iZKV8AWsEEbL = value;
 			}
 		}
 
@@ -336,7 +336,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			set
 			{
-				GunModel.smethod_1(_XcQKV7iP9Sk10poAFYuakLJaltL, value);
+				_XcQKV7iP9Sk10poAFYuakLJaltL._bCjZ3VSXGKyhmykd2zCnQBiSpDf = value;
 			}
 		}
 
@@ -344,7 +344,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			set
 			{
-				GunModel.smethod_2(_XcQKV7iP9Sk10poAFYuakLJaltL, value);
+				_XcQKV7iP9Sk10poAFYuakLJaltL._Hwt6L2NJfXmAfG6UOH8NVlNfGCR = value;
 			}
 		}
 
@@ -377,77 +377,77 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			//IL_052e: Unknown result type (might be due to invalid IL or missing references)
 			//IL_0561: Unknown result type (might be due to invalid IL or missing references)
 			//IL_0594: Unknown result type (might be due to invalid IL or missing references)
-			GunModel.smethod_3((_fAUddQEKfZyemRb327NhM3GGlmzA)this, (Action<GameTime>)delegate(GameTime gameTime_0)
+			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime_0)
 			{
-				GunModel.smethod_24(_XcQKV7iP9Sk10poAFYuakLJaltL, gameTime_0, 1000f);
-			});
-			GunModel.smethod_4((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)this, (Action<SpriteBatch, SkeletonMeshRenderer>)delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
+				_XcQKV7iP9Sk10poAFYuakLJaltL._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+			};
+			base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 			{
-				GunModel.smethod_25(_XcQKV7iP9Sk10poAFYuakLJaltL, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
-			});
-			_XcQKV7iP9Sk10poAFYuakLJaltL = GunModel.smethod_7(GunModel.smethod_6(GunModel.smethod_5(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/GUI/Phone/Phone", 1f, bool_0: true, (List<SpineEvent>)null);
-			GunModel.smethod_8(_XcQKV7iP9Sk10poAFYuakLJaltL, "Arm rise", 0f);
-			GunModel.smethod_9(_XcQKV7iP9Sk10poAFYuakLJaltL, 0f);
-			GunModel.smethod_0(_XcQKV7iP9Sk10poAFYuakLJaltL, 0f);
-			GunModel.smethod_1(_XcQKV7iP9Sk10poAFYuakLJaltL, 1080f);
-			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = GunModel.smethod_10();
-			bool flag = GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm);
+				_XcQKV7iP9Sk10poAFYuakLJaltL._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, null, null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+			};
+			_XcQKV7iP9Sk10poAFYuakLJaltL = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/GUI/Phone/Phone");
+			_XcQKV7iP9Sk10poAFYuakLJaltL._WPy6ICx3LVoejBaexyOoKGnX9jD("Arm rise", 0f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 0f;
+			_XcQKV7iP9Sk10poAFYuakLJaltL._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1080f;
+			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+			bool flag = opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm);
 			bool flag2;
-			Color color_ = ((flag2 = GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm)) ? GunModel.smethod_14(opIJo2jLUqdOL5yAFP4yzXce0DG_) : (flag ? GunModel.smethod_13(opIJo2jLUqdOL5yAFP4yzXce0DG_) : Color.get_White()));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Hoody Sleeve", 0f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Default Forearm", 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Default Forearm", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Forearm", (float)((flag2 || flag) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Forearm", color_);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Striped forearm", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Striped forearm", GunModel.smethod_18(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Forearm", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Forearm", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Hand", 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Hand", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Hand", (float)((flag2 || flag) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Hand", color_);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Hand", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Hand", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index", 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian index", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian index", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky", 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Pinky", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Pinky", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring", 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian ring", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian ring", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude", 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Rude", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Rude", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb", 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Thumb", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Thumb", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Muzzle flash", 1f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun casing", 1f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun", 1f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun Slide", 1f);
+			Color color_ = ((flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm)) ? opIJo2jLUqdOL5yAFP4yzXce0DG._8rDSn6e9Ip9WdOogjhIn8YlL1oM : (flag ? opIJo2jLUqdOL5yAFP4yzXce0DG._1ZKGQXLRAHEJR8v7jhlDsyOVLcz : Color.get_White()));
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Hoody Sleeve", 0f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Default Forearm", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Default Forearm", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Marking Forearm", (flag2 || flag) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Marking Forearm", color_);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Striped forearm", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Striped forearm", opIJo2jLUqdOL5yAFP4yzXce0DG._TxfCqloeyiHpsXka6B46iqCZNsZ);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Forearm", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Forearm", opIJo2jLUqdOL5yAFP4yzXce0DG._FrsyMDX7TebzFk8nSLTyRDPi1QH);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Hand", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Hand", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Marking Hand", (flag2 || flag) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Marking Hand", color_);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Hand", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Hand", opIJo2jLUqdOL5yAFP4yzXce0DG._FrsyMDX7TebzFk8nSLTyRDPi1QH);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Index", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Index", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian index", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian index", opIJo2jLUqdOL5yAFP4yzXce0DG._FrsyMDX7TebzFk8nSLTyRDPi1QH);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Pinky", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Pinky", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Pinky", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Pinky", opIJo2jLUqdOL5yAFP4yzXce0DG._FrsyMDX7TebzFk8nSLTyRDPi1QH);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Ring", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Ring", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian ring", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian ring", opIJo2jLUqdOL5yAFP4yzXce0DG._FrsyMDX7TebzFk8nSLTyRDPi1QH);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Rude", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Rude", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Rude", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Rude", opIJo2jLUqdOL5yAFP4yzXce0DG._FrsyMDX7TebzFk8nSLTyRDPi1QH);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Thumb", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Thumb", opIJo2jLUqdOL5yAFP4yzXce0DG._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Thumb", opIJo2jLUqdOL5yAFP4yzXce0DG._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Thumb", opIJo2jLUqdOL5yAFP4yzXce0DG._FrsyMDX7TebzFk8nSLTyRDPi1QH);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Pinky Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._VmNLhqrIwSnE6JnCYiBcxnSqnEV ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Pinky Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._in5HHYmrdLTFpkgc8aimJpXqAXB);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Ring Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._VmNLhqrIwSnE6JnCYiBcxnSqnEV ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Ring Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._in5HHYmrdLTFpkgc8aimJpXqAXB);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Rude Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._VmNLhqrIwSnE6JnCYiBcxnSqnEV ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Rude Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._in5HHYmrdLTFpkgc8aimJpXqAXB);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Index Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._VmNLhqrIwSnE6JnCYiBcxnSqnEV ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Index Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._in5HHYmrdLTFpkgc8aimJpXqAXB);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Thumb Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._VmNLhqrIwSnE6JnCYiBcxnSqnEV ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Thumb Nail", opIJo2jLUqdOL5yAFP4yzXce0DG._in5HHYmrdLTFpkgc8aimJpXqAXB);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Muzzle flash", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Gun casing", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Gun", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Gun Slide", 1f);
 		}
 
 		public void _edcakvTOp2fd2J9ZHAu9GKjDaN7(Action action_0 = null)
 		{
-			GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun rise", (Action)delegate
+			_XcQKV7iP9Sk10poAFYuakLJaltL._SPUoP3ABwpgQinJfKUM5qBbYSvr("Gun rise", delegate
 			{
 				_3AjdlsblH9b6FNnDEW7N5sQ8iHs();
 				action_0?.Invoke();
@@ -456,17 +456,17 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		private void _3AjdlsblH9b6FNnDEW7N5sQ8iHs()
 		{
-			GunModel.smethod_23(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun Idle", (Action<int>)null);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Gun Idle");
 		}
 
 		public void _e2DHCcfpFNWn5NTzMOw3FBUkwzA()
 		{
-			GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun Shoot", (Action)_3AjdlsblH9b6FNnDEW7N5sQ8iHs);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._SPUoP3ABwpgQinJfKUM5qBbYSvr("Gun Shoot", _3AjdlsblH9b6FNnDEW7N5sQ8iHs);
 		}
 
 		public void _hAt3H7isKECkVrQjY4L0hESiqLF(Action action_0 = null)
 		{
-			GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun reload", (Action)delegate
+			_XcQKV7iP9Sk10poAFYuakLJaltL._SPUoP3ABwpgQinJfKUM5qBbYSvr("Gun reload", delegate
 			{
 				_3AjdlsblH9b6FNnDEW7N5sQ8iHs();
 				action_0?.Invoke();
@@ -476,13 +476,13 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		[CompilerGenerated]
 		private void _YuaJOFbc3gfp6WZmpnuifHMF9Dh(GameTime gameTime_0)
 		{
-			GunModel.smethod_24(_XcQKV7iP9Sk10poAFYuakLJaltL, gameTime_0, 1000f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 		}
 
 		[CompilerGenerated]
 		private void _0nszBRri8HVNLjGllZgWohYuaOP(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			GunModel.smethod_25(_XcQKV7iP9Sk10poAFYuakLJaltL, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+			_XcQKV7iP9Sk10poAFYuakLJaltL._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, null, null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 		}
 
 		static void smethod_0(_nHdiyIURlAiaNZ8u6MKzxjcwnyL _nHdiyIURlAiaNZ8u6MKzxjcwnyL_0, float float_0)
@@ -658,7 +658,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			//IL_003a: Unknown result type (might be due to invalid IL or missing references)
 			//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-			_xnYepZuegigJCU2jcbZsfVIakzF = FloatingFeedbackDrawable.smethod_1(FloatingFeedbackDrawable.smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)).Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+			_xnYepZuegigJCU2jcbZsfVIakzF = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 			_nD28BmrDaEzCHelTAa14TKyuSyG = int_0;
 			_LkckKdvuh9GaAwn7XojfbJBd91r = int_1;
 			_eNqfeKhXj4x1FkHQitvzRQ1JLSE = string_0;
@@ -877,30 +877,30 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_02a8: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0338: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0353: Unknown result type (might be due to invalid IL or missing references)
-		_WD4Plg5m1AwZ5mVyjQCADcW1ZTk = ShootingRangeMiniGameScene.smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
-		ShootingRangeMiniGameScene.smethod_15(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, bool_0: false);
+		_WD4Plg5m1AwZ5mVyjQCADcW1ZTk = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._LWcoDwIWvf8DT3nQmNe5z8fkUvI;
+		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._LWcoDwIWvf8DT3nQmNe5z8fkUvI = false;
 		_U8eNAZVBW15ZflhG4fel0hK3Juu = _poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj;
 		_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-		ShootingRangeMiniGameScene.smethod_16();
-		_vCjkdRWXT5mvEu0c22Hgh93luLg = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		ShootingRangeMiniGameScene.smethod_19(_vCjkdRWXT5mvEu0c22Hgh93luLg, new string[1] { "Assets/Sounds/MiniGames/ShootingRange/Fire" });
-		_RiMZpLLSGIesSXF8vhSlVQ8SrDg = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		ShootingRangeMiniGameScene.smethod_19(_RiMZpLLSGIesSXF8vhSlVQ8SrDg, new string[1] { "Assets/Sounds/MiniGames/ShootingRange/Dry" });
-		_ykeARom1bl7r01BeRXMOSqoJU6o = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		ShootingRangeMiniGameScene.smethod_19(_ykeARom1bl7r01BeRXMOSqoJU6o, new string[1] { "Assets/Sounds/MiniGames/ShootingRange/Reload" });
-		_gabFSY9HcJdPu830plKx8W936qG = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		ShootingRangeMiniGameScene.smethod_19(_gabFSY9HcJdPu830plKx8W936qG, new string[2] { "Assets/Sounds/MiniGames/ShootingRange/Headshot 1", "Assets/Sounds/MiniGames/ShootingRange/Headshot 2" });
-		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		ShootingRangeMiniGameScene.smethod_19(_Hsn6Qz2oeKaTkin9XGwBJUJqy1C, new string[3] { "Assets/Sounds/MiniGames/ShootingRange/Impact 1", "Assets/Sounds/MiniGames/ShootingRange/Impact 2", "Assets/Sounds/MiniGames/ShootingRange/Impact 3" });
-		_Oeqego17TDqmByfLbOEB1isMXzJ = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		ShootingRangeMiniGameScene.smethod_19(_Oeqego17TDqmByfLbOEB1isMXzJ, new string[3] { "Assets/Sounds/MiniGames/ShootingRange/Ricochete 1", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 2", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 3" });
-		_m1dNhD2jwJ6iTVUgUzMJUvnQFS = ShootingRangeMiniGameScene.smethod_17(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)).Load<Texture2D>("Assets/Scenes/ShootingRange/Bullet");
+		_UmxbIbk7pgaod0bD7pS309P3Lns._h0KfaNiikKlJV2KkRPIdVDKVJnC();
+		_vCjkdRWXT5mvEu0c22Hgh93luLg = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_vCjkdRWXT5mvEu0c22Hgh93luLg._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Fire");
+		_RiMZpLLSGIesSXF8vhSlVQ8SrDg = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_RiMZpLLSGIesSXF8vhSlVQ8SrDg._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Dry");
+		_ykeARom1bl7r01BeRXMOSqoJU6o = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_ykeARom1bl7r01BeRXMOSqoJU6o._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Reload");
+		_gabFSY9HcJdPu830plKx8W936qG = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_gabFSY9HcJdPu830plKx8W936qG._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Headshot 1", "Assets/Sounds/MiniGames/ShootingRange/Headshot 2");
+		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Impact 1", "Assets/Sounds/MiniGames/ShootingRange/Impact 2", "Assets/Sounds/MiniGames/ShootingRange/Impact 3");
+		_Oeqego17TDqmByfLbOEB1isMXzJ = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_Oeqego17TDqmByfLbOEB1isMXzJ._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Ricochete 1", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 2", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 3");
+		_m1dNhD2jwJ6iTVUgUzMJUvnQFS = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/Scenes/ShootingRange/Bullet");
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180), 0);
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Background", "Assets/Scenes/ShootingRange/Background", 0, 0), 2);
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Countertop", "Assets/Scenes/ShootingRange/Countertop", 0, 0), 6);
-		_6YCQhlMaqcDds8uGX1g8fjBKqV4A = ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
-		_MnMUFBDfrGZBHvrJ30IAQilqivI = ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		_AWLddj1Rm2sqiBwYcJDngG0QaQI = ShootingRangeMiniGameScene.smethod_22(ShootingRangeMiniGameScene.smethod_21());
+		_6YCQhlMaqcDds8uGX1g8fjBKqV4A = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
+		_MnMUFBDfrGZBHvrJ30IAQilqivI = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		_AWLddj1Rm2sqiBwYcJDngG0QaQI = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._uOkbmfW26QVAvyEMQakki9kTMDbA;
 		_tvM0bxD4ITME03hjc6seyYclzxf = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Crosshair", "Assets/Scenes/ShootingRange/Crosshair", 0, 0);
 		_tvM0bxD4ITME03hjc6seyYclzxf._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _AWLddj1Rm2sqiBwYcJDngG0QaQI;
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_tvM0bxD4ITME03hjc6seyYclzxf, 7);
@@ -916,11 +916,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA = new List<TargetModel>();
 		_xEG3axnWkco0Erk0PdjakXDULcA = new List<IDrawable>();
 		_d9mstkVrU6KGDJyOtHGgrr2ZciA = new List<IDrawable>();
-		_YhybMVqCJnFekEXVbF1huXupDmh = ShootingRangeMiniGameScene.smethod_23(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.").X;
-		_MZh3nVRuDktDpIu8X149SF90ZjO = ShootingRangeMiniGameScene.smethod_23(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Time up, game over! Press <Enter> to retry or <Escape> to continue.").X;
+		_YhybMVqCJnFekEXVbF1huXupDmh = _MnMUFBDfrGZBHvrJ30IAQilqivI.MeasureString("Press <Space/R/Mouse-R> to Reload and begin.").X;
+		_MZh3nVRuDktDpIu8X149SF90ZjO = _MnMUFBDfrGZBHvrJ30IAQilqivI.MeasureString("Time up, game over! Press <Enter> to retry or <Escape> to continue.").X;
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq = 90f;
 		_M8VVMN3GHWWmFmORCACqNTXVh6b = 1;
-		ShootingRangeMiniGameScene.smethod_24("Assets/Music/Mittsies - Mech", 0.4f);
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Mittsies - Mech", 0.4f);
 		_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.NotStarted;
 	}
 
@@ -929,7 +929,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_00b0: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00b5: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
-		float float_ = (float)ShootingRangeMiniGameScene.smethod_25(gameTime_0).Milliseconds / 1000f;
+		float float_ = (float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f;
 		if (_F2ao1gdMb4UciyKC7Zly4by95Mn && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)27))
 		{
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.None;
@@ -978,11 +978,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _fFSom2DrN3XLCdgmD5vZaJmWP7G(float float_0)
 	{
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (ShootingRangeMiniGameScene.smethod_27(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || ShootingRangeMiniGameScene.smethod_28(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)82) || ShootingRangeMiniGameScene.smethod_28(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)32)))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)82) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)32)))
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
-			ShootingRangeMiniGameScene.smethod_29(_ykeARom1bl7r01BeRXMOSqoJU6o, 1f);
+			_ykeARom1bl7r01BeRXMOSqoJU6o._xDFlaclLtJxSUU63JEJALvRLdfe();
 			_85WqOX8OcxbI6g74CaBZtHiHK2m._hAt3H7isKECkVrQjY4L0hESiqLF(delegate
 			{
 				_YFr89aAV3UzO9kf7kPKQJilRWED = 6;
@@ -1000,7 +1000,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01fa: Unknown result type (might be due to invalid IL or missing references)
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq -= float_0;
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && !_nHs33RHZMuYhYev0dQ6ic0aHmvO && ShootingRangeMiniGameScene.smethod_27(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && !_nHs33RHZMuYhYev0dQ6ic0aHmvO && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 		{
 			if (_YFr89aAV3UzO9kf7kPKQJilRWED != 0)
 			{
@@ -1011,7 +1011,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					_nHs33RHZMuYhYev0dQ6ic0aHmvO = false;
 				});
 				_85WqOX8OcxbI6g74CaBZtHiHK2m._e2DHCcfpFNWn5NTzMOw3FBUkwzA();
-				ShootingRangeMiniGameScene.smethod_29(_vCjkdRWXT5mvEu0c22Hgh93luLg, 1f);
+				_vCjkdRWXT5mvEu0c22Hgh93luLg._xDFlaclLtJxSUU63JEJALvRLdfe();
 				bool flag = false;
 				foreach (TargetModel _OJbyketBmeLlVtChfay03TIx5KM in _u8GaIYUzQ65BoFU3NzXBzyvujjbA)
 				{
@@ -1023,7 +1023,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					if (_0U2R42Dbf2ddmyfQBv0z7zBWwJm == TargetModel.CollisionType.Headshot)
 					{
 						_C6cjmtLovCejw2N3OZYswcoYxsd++;
-						ShootingRangeMiniGameScene.smethod_29(_gabFSY9HcJdPu830plKx8W936qG, 1f);
+						_gabFSY9HcJdPu830plKx8W936qG._xDFlaclLtJxSUU63JEJALvRLdfe();
 						_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 30;
 						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "30!", Color.get_Yellow());
 						_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
@@ -1039,7 +1039,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					else if (_0U2R42Dbf2ddmyfQBv0z7zBWwJm == TargetModel.CollisionType.Bodyshot)
 					{
 						_pL6aoe4HLq4X3yQACLFyUH3xwBp++;
-						ShootingRangeMiniGameScene.smethod_29(_Hsn6Qz2oeKaTkin9XGwBJUJqy1C, 1f);
+						_Hsn6Qz2oeKaTkin9XGwBJUJqy1C._xDFlaclLtJxSUU63JEJALvRLdfe();
 						_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 10;
 						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "10!", Color.get_Red());
 						_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
@@ -1060,19 +1060,19 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					RailInfo railInfo = _HYME5rEMzi5Cag9e7DCXk5lrXwX.FirstOrDefault((RailInfo railInfo_0) => _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y < railInfo_0._bCjZ3VSXGKyhmykd2zCnQBiSpDf);
 					_Kp1esj4V82aePkZwvlresNSkHsC(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, railInfo?._fO7gSlrDDNMoHR4FO5QXAq8fUyA ?? 1f);
 					_dH7hlTzeJboGa5rfpgerBfCmyKO++;
-					ShootingRangeMiniGameScene.smethod_29(_Oeqego17TDqmByfLbOEB1isMXzJ, 1f);
+					_Oeqego17TDqmByfLbOEB1isMXzJ._xDFlaclLtJxSUU63JEJALvRLdfe();
 				}
 			}
 			else
 			{
-				ShootingRangeMiniGameScene.smethod_29(_RiMZpLLSGIesSXF8vhSlVQ8SrDg, 1f);
+				_RiMZpLLSGIesSXF8vhSlVQ8SrDg._xDFlaclLtJxSUU63JEJALvRLdfe();
 			}
 		}
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (ShootingRangeMiniGameScene.smethod_27(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || ShootingRangeMiniGameScene.smethod_28(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)82) || ShootingRangeMiniGameScene.smethod_28(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)32)))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)82) || base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)32)))
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
-			ShootingRangeMiniGameScene.smethod_29(_ykeARom1bl7r01BeRXMOSqoJU6o, 1f);
+			_ykeARom1bl7r01BeRXMOSqoJU6o._xDFlaclLtJxSUU63JEJALvRLdfe();
 			_85WqOX8OcxbI6g74CaBZtHiHK2m._hAt3H7isKECkVrQjY4L0hESiqLF(delegate
 			{
 				_YFr89aAV3UzO9kf7kPKQJilRWED = 6;
@@ -1096,8 +1096,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _OLpKeyCIa9e3g4oTFOGxKKmVbHJ()
 	{
-		RailInfo railInfo = _HYME5rEMzi5Cag9e7DCXk5lrXwX[ShootingRangeMiniGameScene.smethod_30(0, _HYME5rEMzi5Cag9e7DCXk5lrXwX.Length)];
-		int int_ = ShootingRangeMiniGameScene.smethod_30(railInfo._SjhHztt8d5kOtb7Z2BJKnZZxEKh, railInfo._nVnyJkkce6HsdRrKSpRrzUDElg0);
+		RailInfo railInfo = _HYME5rEMzi5Cag9e7DCXk5lrXwX[_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, _HYME5rEMzi5Cag9e7DCXk5lrXwX.Length)];
+		int int_ = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(railInfo._SjhHztt8d5kOtb7Z2BJKnZZxEKh, railInfo._nVnyJkkce6HsdRrKSpRrzUDElg0);
 		TargetModel _OJbyketBmeLlVtChfay03TIx5KM = new TargetModel(this, int_, railInfo._bCjZ3VSXGKyhmykd2zCnQBiSpDf, railInfo._fO7gSlrDDNMoHR4FO5QXAq8fUyA)
 		{
 			_kf3EbE0B70xGe1szklqAZyCqoLj = true
@@ -1127,16 +1127,16 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	private void _PFrgvj2zYkmkbPmVfpiUnTvLsoC(TargetModel targetModel_0)
 	{
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA.Remove(targetModel_0);
-		ShootingRangeMiniGameScene.smethod_31((_7UlnfykmEmZDFt3BmCKZekI43Ih)this).Remove(targetModel_0);
+		base._lstlI8qzZ4KErYKnufdOlj1xVZF.Remove(targetModel_0);
 	}
 
 	private void _g0eYquQ8BcifsIs5UMyAIkXM5paA(float float_0)
 	{
-		if (ShootingRangeMiniGameScene.smethod_28(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)13))
+		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)13))
 		{
 			_haICL4qkfkOLhPhofWQH1GmjZx5();
 		}
-		else if (ShootingRangeMiniGameScene.smethod_28(ShootingRangeMiniGameScene.smethod_26(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)27))
+		else if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)27))
 		{
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.None;
 			_5Z9jaXDcRYm0wNlEm1aTutL9kSH();
@@ -1158,7 +1158,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		_d9mstkVrU6KGDJyOtHGgrr2ZciA.Clear();
 		foreach (TargetModel item in _u8GaIYUzQ65BoFU3NzXBzyvujjbA)
 		{
-			ShootingRangeMiniGameScene.smethod_31((_7UlnfykmEmZDFt3BmCKZekI43Ih)this).Remove(item);
+			base._lstlI8qzZ4KErYKnufdOlj1xVZF.Remove(item);
 		}
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA.Clear();
 		_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.NotStarted;
@@ -1191,8 +1191,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_026c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_029b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02a0: Unknown result type (might be due to invalid IL or missing references)
-		this.method_0(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
-		ShootingRangeMiniGameScene.smethod_32(spriteBatch_0);
+		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
+		spriteBatch_0.Begin();
 		_LSweOA3cIPq1IjLzplF4mDludQf(spriteBatch_0);
 		spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Score: " + _G0GwJ5OWQOA4BjacW3XmFsyMFjz, new Vector2(10f, 10f), Color.get_White());
 		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Targets missed: " + _JvgphfrWtBncPfgb6ERRVKKtlQG, new Vector2(10f, 60f), Color.get_White());
@@ -1238,8 +1238,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _tO46aYSBLFIuhFNlhbrAeWbFDSf()
 	{
-		this.method_1();
-		ShootingRangeMiniGameScene.smethod_15(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _WD4Plg5m1AwZ5mVyjQCADcW1ZTk);
+		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._LWcoDwIWvf8DT3nQmNe5z8fkUvI = _WD4Plg5m1AwZ5mVyjQCADcW1ZTk;
 		_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = _U8eNAZVBW15ZflhG4fel0hK3Juu;
 	}
 
@@ -1279,7 +1279,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	private void _Vu9iV57zUVa3p8WMfOsDaoqv7wL(int int_0, int int_1, float float_0)
 	{
 		FrameAnimation frameAnimation = new FrameAnimation(this, "Assets/Scenes/ShootingRange/Explosion_12x1", 0.5f, 12, 125, 111, float_0);
-		frameAnimation._QrgbXEg7MMeD9Ybz12fFVsbmAd9(int_0, int_1, ShootingRangeMiniGameScene.smethod_33(0f, 360f));
+		frameAnimation._QrgbXEg7MMeD9Ybz12fFVsbmAd9(int_0, int_1, _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(0f, 360f));
 		_xEG3axnWkco0Erk0PdjakXDULcA.Add(frameAnimation);
 	}
 
@@ -1307,19 +1307,19 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		if (_G0GwJ5OWQOA4BjacW3XmFsyMFjz > 2500)
 		{
-			ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric7");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric7");
 		}
 		if (_C6cjmtLovCejw2N3OZYswcoYxsd > 60)
 		{
-			ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric8");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric8");
 		}
 		if (_dH7hlTzeJboGa5rfpgerBfCmyKO == 0)
 		{
-			ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric9");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric9");
 		}
 		if (_JvgphfrWtBncPfgb6ERRVKKtlQG < 30)
 		{
-			ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric10");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric10");
 		}
 	}
 

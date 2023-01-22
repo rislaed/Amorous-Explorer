@@ -29,21 +29,21 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Nude, string_1);
 		if (string_2 != null)
 		{
-			ClubStaticSpineNPC.smethod_19(ClubStaticSpineNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Shirt, string_2)));
+			_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Shirt, string_2)._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		}
 		if (string_3 != null)
 		{
-			ClubStaticSpineNPC.smethod_21(ClubStaticSpineNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Pants, string_3)));
+			_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Pants, string_3)._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		}
 	}
 
 	public override void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
 	{
-		this.method_0();
+		base._g9Sx54kMPiHz5jrqWh4Kb1pTijH();
 		_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
 		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
 		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);
-		ClubStaticSpineNPC.smethod_23(ClubStaticSpineNPC.smethod_22((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
 	}
 
 	static _EZ0kOLXoEoEfWGQDdTbNqaPzDUh smethod_18(_EZ0kOLXoEoEfWGQDdTbNqaPzDUh _EZ0kOLXoEoEfWGQDdTbNqaPzDUh_0)

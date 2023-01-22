@@ -16,52 +16,52 @@ public class LexSexscene : CensoredSexscene
 	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
 
 	public LexSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Lex/Lex Sex", "Assets/SexScenes/Lex/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, float_0: LexSexscene.smethod_14() ? 1.5f : 1f, bool_0: true, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: null, float_1: 5000f)
+		: base(contentManager_0, "Assets/SexScenes/Lex/Lex Sex", "Assets/SexScenes/Lex/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.5f : 1f, bool_0: true, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: null, float_1: 5000f)
 	{
-		LexSexscene.smethod_16(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", (Action<int>)null);
-		if (LexSexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			LexSexscene.smethod_17(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1000f);
-			LexSexscene.smethod_18(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1600f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1000f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1600f;
 		}
 		else
 		{
-			LexSexscene.smethod_17(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 900f);
-			LexSexscene.smethod_18(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1100f);
-			LexSexscene.smethod_19(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", -0.2f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 900f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._49JXjKJqaPZw5nEmhHdAENuBtLJ("animation", -0.2f);
 		}
 	}
 
 	public override string[] _tCw3HO9jqoEm2Ad1hqdKsA8vS7b()
 	{
-		if (LexSexscene.smethod_14())
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			return this.method_9();
+			return base._tCw3HO9jqoEm2Ad1hqdKsA8vS7b();
 		}
 		return new string[2] { "Male", "Female" };
 	}
 
 	public override void _GGyEXu1JJKcG2X3txvtCwyZAylK(string string_0)
 	{
-		this.method_10(string_0);
-		if (LexSexscene.smethod_20(string_0, "Male"))
+		base._GGyEXu1JJKcG2X3txvtCwyZAylK(string_0);
+		if (string_0 == "Male")
 		{
-			base._wQSC6rD8bbXFvRxba0kr1RqxlOV = _ecVLwNBaQAiybVyX9cgWCvnbkWe._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(base._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex balls", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex knot", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex dick tip", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex vag", 0f);
+			base._wQSC6rD8bbXFvRxba0kr1RqxlOV = new _ecVLwNBaQAiybVyX9cgWCvnbkWe(base._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex balls", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex knot", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex dick tip", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex vag", 0f);
 			base._DUynKBx2CM4riE68wCCfknspxeg.Clear();
 			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum");
 			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Alex dick cum");
 		}
-		else if (LexSexscene.smethod_20(string_0, "Female"))
+		else if (string_0 == "Female")
 		{
 			base._wQSC6rD8bbXFvRxba0kr1RqxlOV = _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(base._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex balls", 0f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex knot", 0f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex dick tip", 0f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex vag", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex balls", 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex knot", 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex dick tip", 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex vag", 1f);
 			base._DUynKBx2CM4riE68wCCfknspxeg.Clear();
 			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum");
 		}
@@ -77,100 +77,97 @@ public class LexSexscene : CensoredSexscene
 		//IL_017c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0192: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01a8: Unknown result type (might be due to invalid IL or missing references)
-		bool flag = LexSexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0, "Lex.Is.Male");
-		LexSexscene.smethod_23(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 0f);
-		if (!LexSexscene.smethod_14())
+		bool flag = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Oms9lumBodLGrGZ09YJaEuzmlAf("Lex.Is.Male");
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Knot back", (LexSexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock shaft", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock tip", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Knot top", (LexSexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Underbelly", (LexSexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType.Chubby) ? 1f : 0f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Stripes", LexSexscene.smethod_27((Enum)LexSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Playerbody", 1f);
-			LexSexscene.smethod_29(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Knot back", LexSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			LexSexscene.smethod_29(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock shaft", LexSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			LexSexscene.smethod_29(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock tip", (LexSexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Uncut) ? LexSexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) : LexSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			LexSexscene.smethod_29(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Knot top", LexSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			LexSexscene.smethod_29(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Underbelly", LexSexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			LexSexscene.smethod_29(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Stripes", LexSexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			LexSexscene.smethod_29(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Playerbody", LexSexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex tail back", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex thigh right", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex body", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex thigh left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex neck floof", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex forearm right", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex shoulder right", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex chest", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex shoulder left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex forearm left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex chest poof", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex eyes back", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex pupils", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex ear left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex ear right", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex jaw", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex tongue", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex head", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex eyelids", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex eyelash", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex muzzle", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex fringe", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex hand left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex hand right", 1f);
-			LexSexscene.smethod_34((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, flag ? "Male" : "Female");
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Knot back", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock shaft", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock tip", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Knot top", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Underbelly", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._8CtoV1bqn0CwCzb1tuoNppBt0Gg == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType.Chubby) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Playerbody", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Knot back", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock shaft", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock tip", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Uncut) ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0._o6OnmHi5rZIQPHESokp9rTaO1ei : _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Knot top", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Playerbody", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex tail back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex thigh right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex thigh left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex neck floof", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex forearm right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex shoulder right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex chest", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex shoulder left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex forearm left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex chest poof", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex eyes back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex pupils", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex ear left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex ear right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex jaw", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex tongue", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex eyelids", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex eyelash", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex muzzle", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex fringe", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex hand left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex hand right", 1f);
+			_GGyEXu1JJKcG2X3txvtCwyZAylK(flag ? "Male" : "Female");
 		}
 		else
 		{
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex body", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex neck floof", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex forearm right", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex shoulder right", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex chest", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex shoulder left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex forearm left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex chest poof", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex eyes back", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex pupils", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex ear left", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex ear right", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex jaw", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex tongue", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex head", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex eyelids", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex eyelash", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex muzzle", 1f);
-			LexSexscene.smethod_21(LexSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Alex fringe", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex neck floof", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex forearm right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex shoulder right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex chest", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex shoulder left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex forearm left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex chest poof", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex eyes back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex pupils", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex ear left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex ear right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex jaw", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex tongue", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex eyelids", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex eyelash", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex muzzle", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Alex fringe", 1f);
 		}
 	}
 
 	static LexSexscene()
 	{
+		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000d: Expected O, but got Unknown
+		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0047: Expected O, but got Unknown
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0081: Expected O, but got Unknown
 		List<SpineEvent> list = new List<SpineEvent>();
-		SpineEvent val = LexSexscene.smethod_35();
+		SpineEvent val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustStart";
-		SpineEvent obj = val;
-		float[] array = new float[6];
-		LexSexscene.smethod_36((Array)array, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj.FrameTimes = array;
+		val.FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f };
 		list.Add(val);
-		val = LexSexscene.smethod_35();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustEnd";
-		SpineEvent obj2 = val;
-		float[] array2 = new float[6];
-		LexSexscene.smethod_36((Array)array2, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj2.FrameTimes = array2;
+		val.FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f };
 		list.Add(val);
-		val = LexSexscene.smethod_35();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "Moan";
-		SpineEvent obj3 = val;
-		float[] array3 = new float[6];
-		LexSexscene.smethod_36((Array)array3, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj3.FrameTimes = array3;
+		val.FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f };
 		list.Add(val);
 		_zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = list;
 	}

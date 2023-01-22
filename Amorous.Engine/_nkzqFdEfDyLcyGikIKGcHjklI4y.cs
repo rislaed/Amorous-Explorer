@@ -46,8 +46,8 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		{
 			//IL_004d: Unknown result type (might be due to invalid IL or missing references)
 			//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-			_KD80MJMEbQska5mSqJiPthulqeB = _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_1(_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_0(string_0, "%playername%", _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._RB8fRXeQvK5vs7JEA0XfVCEpg1i));
-			if (!_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_2(string_1, "%playername%"))
+			_KD80MJMEbQska5mSqJiPthulqeB = string_0.Replace("%playername%", _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._RB8fRXeQvK5vs7JEA0XfVCEpg1i).Trim();
+			if (!(string_1 == "%playername%"))
 			{
 				_fHbF0r78UBMiyDseUhbwAvEaqmp = string_1;
 			}
@@ -64,7 +64,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 			//IL_00f2: Unknown result type (might be due to invalid IL or missing references)
 			_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Clear();
 			_3wk7bXUbhNqSQ9kMD9hieEubOhG = 0;
-			if (_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_3(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ))
+			if (string.IsNullOrEmpty(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ))
 			{
 				return;
 			}
@@ -77,12 +77,12 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 			bool bool_ = false;
 			char char_ = ' ';
 			bool bool_2 = false;
-			while (int_ < _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_4(string_))
+			while (int_ < string_.Length)
 			{
-				char char_2 = _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_5(string_, int_++);
+				char char_2 = string_[int_++];
 				if (char_2 == '<' && _NAyejbnxgyLeIcptsV2gubUyOZq(ref string_, ref int_, ref char_, ref bool_2))
 				{
-					if (_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_4(text) > 0)
+					if (text.Length > 0)
 					{
 						_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Add(new _W4jOxbRDzppFv0IAFpA5Blo7CjUA(text, bool_0: false, flag, bool_, int_2));
 						text = string.Empty;
@@ -155,21 +155,21 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		private bool _NAyejbnxgyLeIcptsV2gubUyOZq(ref string string_0, ref int int_0, ref char char_0, ref bool bool_0)
 		{
 			int num = int_0;
-			if (num >= _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_4(string_0))
+			if (num >= string_0.Length)
 			{
 				return false;
 			}
-			char_0 = _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_5(string_0, num++);
+			char_0 = string_0[num++];
 			bool_0 = char_0 == '/';
-			if (num < _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_4(string_0))
+			if (num < string_0.Length)
 			{
 				if (bool_0)
 				{
-					char_0 = _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_5(string_0, num++);
+					char_0 = string_0[num++];
 				}
-				if (num < _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_4(string_0))
+				if (num < string_0.Length)
 				{
-					char c = _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_5(string_0, num++);
+					char c = string_0[num++];
 					if (c == '>' && _hFQYJfPSNmwOMj06bgwOluYktME(ref char_0))
 					{
 						int_0 = num;
@@ -285,7 +285,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 
 		private readonly Vector2 _BK3BSdlEv4xSjAlS93TtxbrrjjA;
 
-		public bool _xJZUPxDatEzfPQc0nRHR2D1Vwke => _3wk7bXUbhNqSQ9kMD9hieEubOhG >= _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_0(_Si5dw38ImuGLFJvc8DC1FoIc0PG);
+		public bool _xJZUPxDatEzfPQc0nRHR2D1Vwke => _3wk7bXUbhNqSQ9kMD9hieEubOhG >= _Si5dw38ImuGLFJvc8DC1FoIc0PG.Length;
 
 		public string _Si5dw38ImuGLFJvc8DC1FoIc0PG { get; }
 
@@ -299,7 +299,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		{
 			//IL_0038: Unknown result type (might be due to invalid IL or missing references)
 			//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-			_jKleQiKbVdoC6cAZMyVb5qJD13Q = ((int_0 == 0) ? _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_1(string_0) : string_0);
+			_jKleQiKbVdoC6cAZMyVb5qJD13Q = ((int_0 == 0) ? string_0.Trim() : string_0);
 			_YqQMYa7eF6BsHAixrYycR8apI6F = bool_0;
 			_Ca56HTa6e3zxZSlfkrIB2telVdG = bool_1;
 			_on9cwi6oxCjZzbho9Maz5KlOLPp = bool_2;
@@ -308,7 +308,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 
 		public void _pYBSD3QOMXtGMbCUDyvyluUZnx()
 		{
-			_3wk7bXUbhNqSQ9kMD9hieEubOhG = _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_0(_Si5dw38ImuGLFJvc8DC1FoIc0PG);
+			_3wk7bXUbhNqSQ9kMD9hieEubOhG = _Si5dw38ImuGLFJvc8DC1FoIc0PG.Length;
 		}
 
 		public char _ZKadRFahgnwn10dM34638KGsLNu()
@@ -317,7 +317,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 			{
 				return ' ';
 			}
-			return _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_2(_Si5dw38ImuGLFJvc8DC1FoIc0PG, _3wk7bXUbhNqSQ9kMD9hieEubOhG++);
+			return _Si5dw38ImuGLFJvc8DC1FoIc0PG[_3wk7bXUbhNqSQ9kMD9hieEubOhG++];
 		}
 
 		public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SpriteFont spriteFont_0, SpriteFont spriteFont_1, Vector2 vector2_0, Color color_0)
@@ -330,16 +330,16 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 			//IL_0035: Unknown result type (might be due to invalid IL or missing references)
 			//IL_003a: Unknown result type (might be due to invalid IL or missing references)
 			//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-			string string_ = _Jnjh8hNzVbH0Eov4seqBq1UNOCq();
-			if (!_W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_3(string_))
+			string text = _Jnjh8hNzVbH0Eov4seqBq1UNOCq();
+			if (!string.IsNullOrEmpty(text))
 			{
 				if (_m2fqFdYkda0gaCnRfu9lTOJ9CAi)
 				{
-					spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(spriteFont_1, string_, vector2_0 + _BK3BSdlEv4xSjAlS93TtxbrrjjA, color_0);
+					spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(spriteFont_1, text, vector2_0 + _BK3BSdlEv4xSjAlS93TtxbrrjjA, color_0);
 				}
 				else
 				{
-					spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(spriteFont_0, string_, vector2_0 + _BK3BSdlEv4xSjAlS93TtxbrrjjA, color_0);
+					spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(spriteFont_0, text, vector2_0 + _BK3BSdlEv4xSjAlS93TtxbrrjjA, color_0);
 				}
 			}
 		}
@@ -350,19 +350,19 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 			{
 				return string.Empty;
 			}
-			string string_ = ((_3wk7bXUbhNqSQ9kMD9hieEubOhG >= _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_0(_Si5dw38ImuGLFJvc8DC1FoIc0PG)) ? _Si5dw38ImuGLFJvc8DC1FoIc0PG : _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_4(_Si5dw38ImuGLFJvc8DC1FoIc0PG, 0, _3wk7bXUbhNqSQ9kMD9hieEubOhG));
-			string text = string.Empty;
+			string text = ((_3wk7bXUbhNqSQ9kMD9hieEubOhG >= _Si5dw38ImuGLFJvc8DC1FoIc0PG.Length) ? _Si5dw38ImuGLFJvc8DC1FoIc0PG : _Si5dw38ImuGLFJvc8DC1FoIc0PG.Substring(0, _3wk7bXUbhNqSQ9kMD9hieEubOhG));
+			string text2 = string.Empty;
 			int num = 0;
-			for (int num2 = _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_5(string_, '░'); num2 >= 0; num2 = _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_7(string_, '░', num))
+			for (int num2 = text.IndexOf('░'); num2 >= 0; num2 = text.IndexOf('░', num))
 			{
-				text = _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_6(text, _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_4(string_, num, num2 - num));
+				text2 += text.Substring(num, num2 - num);
 				num = num2 + 1;
 			}
-			if (num < _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_0(string_))
+			if (num < text.Length)
 			{
-				text = _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_6(text, _W4jOxbRDzppFv0IAFpA5Blo7CjUA.smethod_8(string_, num));
+				text2 += text.Substring(num);
 			}
-			return text;
+			return text2;
 		}
 
 		static int smethod_0(string string_0)
@@ -643,7 +643,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		_P62DygY6CKZG8s5wqDu0uAFksjs = texture2D_0;
 		_xnYepZuegigJCU2jcbZsfVIakzF = spriteFont_0;
 		_23jI7jMreLgRTSs5rhEGCUkow2b = spriteFont_1;
-		_rv7JIIMY4Ta1tpSvflng4Lose4H = new Vector2((float)(_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_0(texture2D_0) - 1920) / 2f, (float)(1080 - _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_1(texture2D_0)));
+		_rv7JIIMY4Ta1tpSvflng4Lose4H = new Vector2((float)(texture2D_0.get_Width() - 1920) / 2f, (float)(1080 - texture2D_0.get_Height()));
 		_4djSc5RiRJZMGzvYwwEprIYf6ZM = new Vector2(75f, 625f);
 		_gWIuAj6CuJjxiHOmaYwYLvu8g0r = (Vector2[])(object)new Vector2[6]
 		{
@@ -661,7 +661,11 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 
 	private void _dRHb7tDcI5IkrHNRAFSme9H1Rh4()
 	{
+		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0011: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002b: Expected O, but got Unknown
 		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
@@ -722,102 +726,102 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		//IL_02a3: Expected O, but got Unknown
 		//IL_02b0: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02ba: Expected O, but got Unknown
-		Desktop obj = _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_2();
-		_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_4(obj, _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_3());
-		((Control)obj).set_Size(new Point(1920, 1080));
-		_9GQBAH2pi8Sm6ph1s6InjyQGe6R = obj;
+		Desktop val = new Desktop();
+		val.set_Skin(Gui.GenerateStandardSkin());
+		((Control)val).set_Size(new Point(1920, 1080));
+		_9GQBAH2pi8Sm6ph1s6InjyQGe6R = val;
 		_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin");
-		FlowLayoutFrame val = new FlowLayoutFrame();
-		((Control)val).set_Position(new Point(1220, (int)_4djSc5RiRJZMGzvYwwEprIYf6ZM.Y + 10));
-		val.set_FlowDirection((FlowDirection)1);
-		((Control)val).set_Margin(new Margin(0, 0, 100, 0));
-		val.set_HSpacing(10);
-		((Control)val).set_Size(new Point(650, 30));
-		FlowLayoutFrame val2 = val;
-		Button val3 = new Button();
-		((Control)val3).set_Size(new Point(100, 30));
-		((Label)val3).set_TextAlign((Alignment)4);
-		((Label)val3).set_Text("Save");
-		Button val4 = val3;
-		((Control)val4).add_MouseClick((MouseEvent)delegate
+		FlowLayoutFrame val2 = new FlowLayoutFrame();
+		((Control)val2).set_Position(new Point(1220, (int)_4djSc5RiRJZMGzvYwwEprIYf6ZM.Y + 10));
+		val2.set_FlowDirection((FlowDirection)1);
+		((Control)val2).set_Margin(new Margin(0, 0, 100, 0));
+		val2.set_HSpacing(10);
+		((Control)val2).set_Size(new Point(650, 30));
+		FlowLayoutFrame val3 = val2;
+		Button val4 = new Button();
+		((Control)val4).set_Size(new Point(100, 30));
+		((Label)val4).set_TextAlign((Alignment)4);
+		((Label)val4).set_Text("Save");
+		Button val5 = val4;
+		((Control)val5).add_MouseClick((MouseEvent)delegate
 		{
 			_4L7hfXrWoDdArQiscG4ukHCV46B._8c7SHmhI0bvgm2S0W4WafcEBOzV(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, delegate(bool bool_0)
 			{
 				_fp8jsuSnELXqf2yy2JQDaXDCBVQ._nJKYvZJ57vjjlQwmoeBmKihtS0b = bool_0;
 			});
 		});
-		Button val5 = new Button();
-		((Control)val5).set_Size(new Point(100, 30));
-		((Label)val5).set_TextAlign((Alignment)4);
-		((Label)val5).set_Text("Load");
-		Button val6 = val5;
-		((Control)val6).add_MouseClick((MouseEvent)delegate
+		Button val6 = new Button();
+		((Control)val6).set_Size(new Point(100, 30));
+		((Label)val6).set_TextAlign((Alignment)4);
+		((Label)val6).set_Text("Load");
+		Button val7 = val6;
+		((Control)val7).add_MouseClick((MouseEvent)delegate
 		{
 			_4L7hfXrWoDdArQiscG4ukHCV46B._xM8d2LuC070Xft2N9A0ulzGVshq(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, delegate(bool bool_0)
 			{
 				_fp8jsuSnELXqf2yy2JQDaXDCBVQ._nJKYvZJ57vjjlQwmoeBmKihtS0b = bool_0;
 			});
 		});
-		Button val7 = new Button();
-		((Control)val7).set_Size(new Point(100, 30));
-		((Label)val7).set_TextAlign((Alignment)4);
-		((Label)val7).set_Text("Exit");
-		Button val8 = val7;
-		((Control)val8).add_MouseClick((MouseEvent)delegate
+		Button val8 = new Button();
+		((Control)val8).set_Size(new Point(100, 30));
+		((Label)val8).set_TextAlign((Alignment)4);
+		((Label)val8).set_Text("Exit");
+		Button val9 = val8;
+		((Control)val9).add_MouseClick((MouseEvent)delegate
 		{
 			_4L7hfXrWoDdArQiscG4ukHCV46B._MES3SBLNIcxOd5F8ZqVEWmsIcmA(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, delegate(bool bool_0)
 			{
 				_fp8jsuSnELXqf2yy2JQDaXDCBVQ._nJKYvZJ57vjjlQwmoeBmKihtS0b = bool_0;
 			});
 		});
-		DropDownList val9 = new DropDownList();
-		((Control)val9).set_Style("button");
-		((Control)val9).set_Size(new Point(120, 30));
-		val9.set_DropdownAbove(true);
-		val9.get_Label().set_TextAlign((Alignment)4);
-		val9.get_Label().set_AutoEllipsis(false);
-		val9.get_Dropdown().set_Resizable(false);
-		((Control)val9.get_Button()).set_Visible(false);
-		_xU7PBNQL0I3LiOcbd02e8KK5uYi = val9;
+		DropDownList val10 = new DropDownList();
+		((Control)val10).set_Style("button");
+		((Control)val10).set_Size(new Point(120, 30));
+		val10.set_DropdownAbove(true);
+		val10.get_Label().set_TextAlign((Alignment)4);
+		val10.get_Label().set_AutoEllipsis(false);
+		val10.get_Dropdown().set_Resizable(false);
+		((Control)val10.get_Button()).set_Visible(false);
+		_xU7PBNQL0I3LiOcbd02e8KK5uYi = val10;
 		((Control)_xU7PBNQL0I3LiOcbd02e8KK5uYi.get_Listbox().get_Scrollbar().get_ButtonUp()).set_Visible(false);
 		((Control)_xU7PBNQL0I3LiOcbd02e8KK5uYi.get_Listbox().get_Scrollbar().get_ButtonDown()).set_Visible(false);
 		foreach (DialogueSpeed value in Enum.GetValues(typeof(DialogueSpeed)))
 		{
 			ActiveList<ListBoxItem> items = _xU7PBNQL0I3LiOcbd02e8KK5uYi.get_Items();
-			ListBoxItem val10 = new ListBoxItem();
-			((Label)val10).set_Text(value.ToString());
-			((Control)val10).set_Size(new Point(0, 30));
-			val10.set_Value((object)value);
-			items.Add(val10);
+			ListBoxItem val11 = new ListBoxItem();
+			((Label)val11).set_Text(value.ToString());
+			((Control)val11).set_Size(new Point(0, 30));
+			val11.set_Value((object)value);
+			items.Add(val11);
 		}
 		_xU7PBNQL0I3LiOcbd02e8KK5uYi.add_SelectedItemChanged((SelectedItemChangedEventHandler)delegate(Control control_0, ListBoxItem listBoxItem_0)
 		{
-			_NhL238TaCbkDiY6HXlWXZzzUYkm = (DialogueSpeed)_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_15(listBoxItem_0);
+			_NhL238TaCbkDiY6HXlWXZzzUYkm = (DialogueSpeed)listBoxItem_0.get_Value();
 			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO = _tAC7ojbHHd15LKk7rGbelW2nGWN;
 		});
-		CheckBox val11 = new CheckBox();
-		val11.set_Text("Auto-skip");
-		((Control)val11).set_Size(new Point(140, 30));
-		val11.set_Checked(_fUgDiz7KX8TZUVzFlTeXMOhmfUT);
-		_2pNQedwLe7YapSxneCqi4SreGdH = val11;
+		CheckBox val12 = new CheckBox();
+		val12.set_Text("Auto-skip");
+		((Control)val12).set_Size(new Point(140, 30));
+		val12.set_Checked(_fUgDiz7KX8TZUVzFlTeXMOhmfUT);
+		_2pNQedwLe7YapSxneCqi4SreGdH = val12;
 		_2pNQedwLe7YapSxneCqi4SreGdH.add_CheckedChanged((VoidEvent)delegate
 		{
-			_fUgDiz7KX8TZUVzFlTeXMOhmfUT = _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_16(_2pNQedwLe7YapSxneCqi4SreGdH);
+			_fUgDiz7KX8TZUVzFlTeXMOhmfUT = _2pNQedwLe7YapSxneCqi4SreGdH.get_Checked();
 			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3 = _O7kX3MfMCx3M2dVro1UbOCbajyo;
 		});
-		((ActiveList<Control>)(object)((Frame)val2).get_Controls()).Add((Control)(object)val4);
-		((ActiveList<Control>)(object)((Frame)val2).get_Controls()).Add((Control)(object)val6);
-		((ActiveList<Control>)(object)((Frame)val2).get_Controls()).Add((Control)(object)val8);
-		((ActiveList<Control>)(object)((Frame)val2).get_Controls()).Add((Control)(object)_2pNQedwLe7YapSxneCqi4SreGdH);
-		((ActiveList<Control>)(object)((Frame)val2).get_Controls()).Add((Control)(object)_xU7PBNQL0I3LiOcbd02e8KK5uYi);
-		((ActiveList<Control>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Controls()).Add((Control)(object)val2);
+		((ActiveList<Control>)(object)((Frame)val3).get_Controls()).Add((Control)(object)val5);
+		((ActiveList<Control>)(object)((Frame)val3).get_Controls()).Add((Control)(object)val7);
+		((ActiveList<Control>)(object)((Frame)val3).get_Controls()).Add((Control)(object)val9);
+		((ActiveList<Control>)(object)((Frame)val3).get_Controls()).Add((Control)(object)_2pNQedwLe7YapSxneCqi4SreGdH);
+		((ActiveList<Control>)(object)((Frame)val3).get_Controls()).Add((Control)(object)_xU7PBNQL0I3LiOcbd02e8KK5uYi);
+		((ActiveList<Control>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Controls()).Add((Control)(object)val3);
 	}
 
 	private void _R3gvtOBYRg2VLQrb2zkAwC846nt()
 	{
 		if (_6T55wit7MiGfAWRkPwjNbJ8N8lG._xU7PBNQL0I3LiOcbd02e8KK5uYi != null)
 		{
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_6(_6T55wit7MiGfAWRkPwjNbJ8N8lG._xU7PBNQL0I3LiOcbd02e8KK5uYi, ((IEnumerable<ListBoxItem>)_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_5(_6T55wit7MiGfAWRkPwjNbJ8N8lG._xU7PBNQL0I3LiOcbd02e8KK5uYi)).First((ListBoxItem listBoxItem_0) => (DialogueSpeed)_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_15(listBoxItem_0) == _tAC7ojbHHd15LKk7rGbelW2nGWN));
+			_6T55wit7MiGfAWRkPwjNbJ8N8lG._xU7PBNQL0I3LiOcbd02e8KK5uYi.set_SelectedItem(((IEnumerable<ListBoxItem>)_6T55wit7MiGfAWRkPwjNbJ8N8lG._xU7PBNQL0I3LiOcbd02e8KK5uYi.get_Items()).First((ListBoxItem listBoxItem_0) => (DialogueSpeed)listBoxItem_0.get_Value() == _tAC7ojbHHd15LKk7rGbelW2nGWN));
 		}
 	}
 
@@ -825,7 +829,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 	{
 		if (_6T55wit7MiGfAWRkPwjNbJ8N8lG._2pNQedwLe7YapSxneCqi4SreGdH != null)
 		{
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_7(_6T55wit7MiGfAWRkPwjNbJ8N8lG._2pNQedwLe7YapSxneCqi4SreGdH, _O7kX3MfMCx3M2dVro1UbOCbajyo);
+			_6T55wit7MiGfAWRkPwjNbJ8N8lG._2pNQedwLe7YapSxneCqi4SreGdH.set_Checked(_O7kX3MfMCx3M2dVro1UbOCbajyo);
 		}
 	}
 
@@ -842,7 +846,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		_fp8jsuSnELXqf2yy2JQDaXDCBVQ._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 		if (_4L7hfXrWoDdArQiscG4ukHCV46B._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_8(_9GQBAH2pi8Sm6ph1s6InjyQGe6R);
+			_9GQBAH2pi8Sm6ph1s6InjyQGe6R.Update();
 		}
 		if (_fp8jsuSnELXqf2yy2JQDaXDCBVQ._nJKYvZJ57vjjlQwmoeBmKihtS0b)
 		{
@@ -927,7 +931,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 			break;
 		}
 		case _IIGQSKohQsLi09FILC8oKHG5UXG.Waiting:
-			_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_9(gameTime_0).Milliseconds;
+			_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime_0.get_ElapsedGameTime().Milliseconds;
 			if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG <= 0)
 			{
 				_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = 0;
@@ -1000,17 +1004,17 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		_oDZZ0F7Qg08utTIjAaoyIbeDuFG oDZZ0F7Qg08utTIjAaoyIbeDuFG = _3wk7bXUbhNqSQ9kMD9hieEubOhG;
 		if (oDZZ0F7Qg08utTIjAaoyIbeDuFG != null)
 		{
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_10(spriteBatch_0);
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_11(spriteBatch_0, _P62DygY6CKZG8s5wqDu0uAFksjs, _rv7JIIMY4Ta1tpSvflng4Lose4H, oDZZ0F7Qg08utTIjAaoyIbeDuFG._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
-			if (!_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_12(oDZZ0F7Qg08utTIjAaoyIbeDuFG._D5QiLGGNtfoCEnZIUPvH4OKqUabA))
+			spriteBatch_0.Begin();
+			spriteBatch_0.Draw(_P62DygY6CKZG8s5wqDu0uAFksjs, _rv7JIIMY4Ta1tpSvflng4Lose4H, oDZZ0F7Qg08utTIjAaoyIbeDuFG._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
+			if (!string.IsNullOrEmpty(oDZZ0F7Qg08utTIjAaoyIbeDuFG._D5QiLGGNtfoCEnZIUPvH4OKqUabA))
 			{
 				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, oDZZ0F7Qg08utTIjAaoyIbeDuFG._D5QiLGGNtfoCEnZIUPvH4OKqUabA, _4djSc5RiRJZMGzvYwwEprIYf6ZM, oDZZ0F7Qg08utTIjAaoyIbeDuFG._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
 			}
 			oDZZ0F7Qg08utTIjAaoyIbeDuFG._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, _xnYepZuegigJCU2jcbZsfVIakzF, _23jI7jMreLgRTSs5rhEGCUkow2b, _gWIuAj6CuJjxiHOmaYwYLvu8g0r);
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_13(spriteBatch_0);
+			spriteBatch_0.End();
 			if (_4L7hfXrWoDdArQiscG4ukHCV46B._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 			{
-				_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_14(_9GQBAH2pi8Sm6ph1s6InjyQGe6R);
+				_9GQBAH2pi8Sm6ph1s6InjyQGe6R.Draw();
 			}
 		}
 	}
@@ -1107,21 +1111,21 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 	[CompilerGenerated]
 	private void _kBq2EhiBAaNCahkPSjjNwZ9xGGZ(Control control_0, ListBoxItem listBoxItem_0)
 	{
-		_NhL238TaCbkDiY6HXlWXZzzUYkm = (DialogueSpeed)_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_15(listBoxItem_0);
+		_NhL238TaCbkDiY6HXlWXZzzUYkm = (DialogueSpeed)listBoxItem_0.get_Value();
 		_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO = _tAC7ojbHHd15LKk7rGbelW2nGWN;
 	}
 
 	[CompilerGenerated]
 	private void _bNPTy2WSo9nGb2A5oTtKAgmaCKi(Control control_0)
 	{
-		_fUgDiz7KX8TZUVzFlTeXMOhmfUT = _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_16(_2pNQedwLe7YapSxneCqi4SreGdH);
+		_fUgDiz7KX8TZUVzFlTeXMOhmfUT = _2pNQedwLe7YapSxneCqi4SreGdH.get_Checked();
 		_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3 = _O7kX3MfMCx3M2dVro1UbOCbajyo;
 	}
 
 	[CompilerGenerated]
 	private bool _ykZEKzGNfZ5hHHun0hWpJGQDzBp(ListBoxItem listBoxItem_0)
 	{
-		return (DialogueSpeed)_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_15(listBoxItem_0) == _tAC7ojbHHd15LKk7rGbelW2nGWN;
+		return (DialogueSpeed)listBoxItem_0.get_Value() == _tAC7ojbHHd15LKk7rGbelW2nGWN;
 	}
 
 	static int smethod_0(Texture2D texture2D_0)

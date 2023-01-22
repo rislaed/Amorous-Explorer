@@ -1,7 +1,6 @@
 #define TRACE
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -28,46 +27,34 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 
 	public static void _oD87G7SXjsTukw7IVWxVlVFEgvA()
 	{
-		_fW0XUSoDEDzTuYfvYXFC3oVcKvN = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_0();
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_1(_fW0XUSoDEDzTuYfvYXFC3oVcKvN);
-		string text = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_5(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_4(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_3(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_2())));
-		string object_ = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_8(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_7(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_6()), text);
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_10(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9());
-		if (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_12(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)))
+		_fW0XUSoDEDzTuYfvYXFC3oVcKvN = new Stopwatch();
+		_fW0XUSoDEDzTuYfvYXFC3oVcKvN.Start();
+		string text = Assembly.GetEntryAssembly()!.GetName().Name!.ToLower();
+		string arg = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, text);
+		Trace.Listeners.Clear();
+		if (File.Exists($"{arg}-log.txt"))
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_14(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_13("{0}-log-backup-{1:yyyy.MM.dd-HH.mm.ss}.txt", (object)object_, (object)DateTime.Now));
+			File.Move($"{arg}-log.txt", $"{arg}-log-backup-{DateTime.Now:yyyy.MM.dd-HH.mm.ss}.txt");
 		}
-		string[] source = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_15(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_7(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_6()), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log-backup-*.txt", (object)text));
-		IEnumerator<string> enumerator = source.OrderByDescending((string string_0) => string_0).Skip(10).GetEnumerator();
-		try
+		string[] files = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, $"{text}-log-backup-*.txt");
+		foreach (string item in files.OrderByDescending((string string_0) => string_0).Skip(10))
 		{
-			while (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_17((IEnumerator)enumerator))
-			{
-				string current = enumerator.Current;
-				_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_16(current);
-			}
+			File.Delete(item);
 		}
-		finally
-		{
-			if (enumerator != null)
-			{
-				_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_18((IDisposable)enumerator);
-			}
-		}
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_19(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)));
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_21(bool_0: false));
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_22(bool_0: true);
+		Trace.Listeners.Add(new TextWriterTraceListener($"{arg}-log.txt"));
+		Trace.Listeners.Add(new ConsoleTraceListener(useErrorStream: false));
+		Trace.AutoFlush = true;
 	}
 
 	public static void _8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor consoleColor_0, string string_0, string string_1, params object[] object_0)
 	{
 		if (object_0.Length != 0)
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_24(string_1, object_0)));
+			Trace.WriteLine($"[{(float)_fW0XUSoDEDzTuYfvYXFC3oVcKvN.ElapsedMilliseconds / 1000f:0000.00}] {string_0}: {string.Format(string_1, object_0)}");
 		}
 		else
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)string_1));
+			Trace.WriteLine($"[{(float)_fW0XUSoDEDzTuYfvYXFC3oVcKvN.ElapsedMilliseconds / 1000f:0000.00}] {string_0}: {string_1}");
 		}
 	}
 

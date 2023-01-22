@@ -16,61 +16,61 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
 		_jOJQdqVUTXcPDmuOqViqC8pczW = true;
-		_xnYepZuegigJCU2jcbZsfVIakzF = PlayerSexScene.smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		PlayerSexScene.smethod_15();
+		_xnYepZuegigJCU2jcbZsfVIakzF = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		_UmxbIbk7pgaod0bD7pS309P3Lns._h0KfaNiikKlJV2KkRPIdVDKVJnC();
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		this.method_0(gameTime_0);
-		if (PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) == null)
+		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd == null)
 		{
 			return;
 		}
-		if (PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)27))
+		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)27))
 		{
 			_poenyHBGUusBcnNcTFB9MQBV72R._Oewx0FJJ8VX41Prmv0htvGQZhUf();
 		}
-		if (PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)83))
+		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)83))
 		{
-			string[] array = PlayerSexScene.smethod_20(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)));
+			string[] array = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._tCw3HO9jqoEm2Ad1hqdKsA8vS7b();
 			if (array.Length == 0)
 			{
 				return;
 			}
-			int num = Array.IndexOf(array, PlayerSexScene.smethod_21(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this))));
+			int num = Array.IndexOf(array, base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._jztzokSobPJKyleCHypP9HS4OhbA);
 			num++;
 			if (num >= array.Length)
 			{
 				num = 0;
 			}
-			PlayerSexScene.smethod_22(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), array[num]);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._GGyEXu1JJKcG2X3txvtCwyZAylK(array[num]);
 		}
-		if (PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)90))
+		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)90))
 		{
 			_jOJQdqVUTXcPDmuOqViqC8pczW = !_jOJQdqVUTXcPDmuOqViqC8pczW;
 		}
-		if (!PlayerSexScene.smethod_23())
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			if (PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)32))
+			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)32))
 			{
-				PlayerSexScene.smethod_24(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), 1, bool_0: false);
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._4XV5xPzQUH5ABIwpxH3yf5EIAyL(1);
 			}
-			if (PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)162))
+			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)162))
 			{
-				PlayerSexScene.smethod_24(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), -1, bool_0: false);
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._4XV5xPzQUH5ABIwpxH3yf5EIAyL(-1);
 			}
-			if (PlayerSexScene.smethod_25(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this))) && PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)88))
+			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._p3lU5oxIaFTVHUNFxJRnaHkXdsA && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)88))
 			{
-				PlayerSexScene.smethod_26(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)));
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._paoLItUYkFWaGSDnCAvBagJ1F5T();
 			}
-			else if (!PlayerSexScene.smethod_25(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this))) && PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)67))
+			else if (!base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._p3lU5oxIaFTVHUNFxJRnaHkXdsA && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)67))
 			{
-				PlayerSexScene.smethod_27(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)));
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._JHfBnmyItvKJDQtdUPp2yLsm4yR();
 			}
-			else if (!PlayerSexScene.smethod_25(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this))) && PlayerSexScene.smethod_19(PlayerSexScene.smethod_18(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), (Keys)86))
+			else if (!base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._p3lU5oxIaFTVHUNFxJRnaHkXdsA && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH((Keys)86))
 			{
-				PlayerSexScene.smethod_28(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)));
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._oHE0dGUBNplXQia6K85vMaNc8jp();
 			}
 		}
 	}
@@ -99,16 +99,16 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_01de: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01fe: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0203: Unknown result type (might be due to invalid IL or missing references)
-		this.method_1(spriteBatch_0);
-		if (!PlayerSexScene.smethod_29(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)))
+		base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
+		if (!base._ZzBuoSDMWwerejOO9Goyv2OCKgE._ezjxb7tsh6Db1xblB74OYX4vVK)
 		{
 			return;
 		}
-		PlayerSexScene.smethod_30(spriteBatch_0);
-		if (PlayerSexScene.smethod_23())
+		spriteBatch_0.Begin();
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
 			int num = 10;
-			if (PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) != null && PlayerSexScene.smethod_20(PlayerSexScene.smethod_17(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this))).Length != 0)
+			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd != null && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._KVSwpLj0RvURRswHn7ogRy4BRfd._tCw3HO9jqoEm2Ad1hqdKsA8vS7b().Length != 0)
 			{
 				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cycle skin (S)", new Vector2(10f, (float)num), Color.get_White());
 				num += 40;

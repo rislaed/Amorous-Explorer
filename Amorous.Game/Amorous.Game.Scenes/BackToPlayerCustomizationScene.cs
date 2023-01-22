@@ -24,15 +24,15 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 
 	protected override void _n3b8BstkorCsu4TW0U2YVdFbdGp()
 	{
-		BackToPlayerCustomizationScene.smethod_55(BackToPlayerCustomizationScene.smethod_54((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure this how you want to look in the game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, (Action<int>)delegate(int int_0)
+		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Are you sure this how you want to look in the game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
-				BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-				BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
-				BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
-				BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
-				BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric1");
+				_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("Gender", 10);
+				_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._aedbmRW9PZZduyLA3PVVHtafNAGA("Player.Gender");
+				_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._aedbmRW9PZZduyLA3PVVHtafNAGA("Player.No");
+				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Gender");
 				_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 			}
 		});
@@ -40,13 +40,13 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		this.method_0(gameTime_0);
-		if (_e1Kru66UIN1SkWkBreRDCF5RsWA && !BackToPlayerCustomizationScene.smethod_57(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) && BackToPlayerCustomizationScene.smethod_58(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) == null)
+		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		if (_e1Kru66UIN1SkWkBreRDCF5RsWA && !base._ZzBuoSDMWwerejOO9Goyv2OCKgE._NdzU0m9x8QDKpVv3DrQmzY5KduB && base._ZzBuoSDMWwerejOO9Goyv2OCKgE._5zNdOw7qHmuCAPJFMr3SsZdBlCr == null)
 		{
 			_e1Kru66UIN1SkWkBreRDCF5RsWA = false;
 			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
 			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-			BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubEntranceScene>();
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubEntranceScene>();
 		}
 	}
 
@@ -55,11 +55,11 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 	{
 		if (int_0 == 1)
 		{
-			BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
-			BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
-			BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
-			BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
-			BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric1");
+			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("Gender", 10);
+			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._aedbmRW9PZZduyLA3PVVHtafNAGA("Player.Gender");
+			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._aedbmRW9PZZduyLA3PVVHtafNAGA("Player.No");
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Gender");
 			_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 		}
 	}

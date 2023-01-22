@@ -9,7 +9,7 @@ public class ZenithDate1PostMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		ZenithDate1PostMiniGameScene.smethod_15(ZenithDate1PostMiniGameScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "ZenithDate");
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("ZenithDate");
 	}
 
 	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)

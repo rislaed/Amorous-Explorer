@@ -19,17 +19,16 @@ public class _AUtA43NfhBNYDqRrVB1t9VQxe1v : TextureLoader
 
 	public void Load(AtlasPage page, string path)
 	{
-		string text = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_2(_AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_0(path), _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_1(path));
-		Texture2D texture2D_ = (Texture2D)(page.rendererObject = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Texture2D>(text));
-		page.width = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_3(texture2D_);
-		page.height = _AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_4(texture2D_);
+		string text = Path.Combine(Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path));
+		Texture2D val = (Texture2D)(page.rendererObject = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Texture2D>(text));
+		page.width = val.get_Width();
+		page.height = val.get_Height();
 	}
 
 	public void Unload(object texture)
 	{
 		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000b: Expected O, but got Unknown
-		_AUtA43NfhBNYDqRrVB1t9VQxe1v.smethod_5((GraphicsResource)(Texture2D)texture);
+		((GraphicsResource)(Texture2D)texture).Dispose();
 	}
 
 	static string smethod_0(string string_0)

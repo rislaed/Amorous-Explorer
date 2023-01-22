@@ -33,31 +33,31 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 904;
 		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1008;
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Bovine Naked");
-		BartenderNPC.smethod_17(BartenderNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Bovine pants")));
-		BartenderNPC.smethod_19(BartenderNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Bovine Top")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Bovine pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Bovine Top")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			BartenderNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			BartenderNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 608f);
-			BartenderNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 72f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 608f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 72f;
 			break;
 		case NPCLocation.Left:
-			BartenderNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			BartenderNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -160f);
-			BartenderNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 72f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -160f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 72f;
 			break;
 		case NPCLocation.Right:
-			BartenderNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			BartenderNPC.smethod_21((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1176f);
-			BartenderNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 72f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1176f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 72f;
 			break;
 		}
 	}

@@ -33,23 +33,23 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			PlaceholderNPC.smethod_16((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			PlaceholderNPC.smethod_17((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 685f);
-			PlaceholderNPC.smethod_18((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 685f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 100f;
 			break;
 		case NPCLocation.Left:
-			PlaceholderNPC.smethod_16((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			PlaceholderNPC.smethod_17((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
-			PlaceholderNPC.smethod_18((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 100f;
 			break;
 		case NPCLocation.Right:
-			PlaceholderNPC.smethod_16((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			PlaceholderNPC.smethod_17((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1270f);
-			PlaceholderNPC.smethod_18((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 100f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1270f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 100f;
 			break;
 		}
 	}

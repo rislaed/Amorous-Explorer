@@ -55,15 +55,15 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 	{
 		//IL_0179: Unknown result type (might be due to invalid IL or missing references)
 		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		if (!_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_2(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_1((MemberInfo)_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_0(typeof(Commands.CookingSelectIngredient).TypeHandle))))
+		if (!(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f == typeof(Commands.CookingSelectIngredient).Name))
 		{
-			if (_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_2(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_1((MemberInfo)_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_0(typeof(Commands.CookingShowResult).TypeHandle))))
+			if (_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f == typeof(Commands.CookingShowResult).Name)
 			{
-				if (!(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_4(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_3(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr)) is CookingMiniGameScene))
+				if (!(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._XbOXR6AypLIdJ3gBMGseGi3Wi2i is CookingMiniGameScene))
 				{
-					throw _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_5("Current scene is not CookingScene!");
+					throw new Exception("Current scene is not CookingScene!");
 				}
-				CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF = _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_4(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_3(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr)) as CookingMiniGameScene;
+				CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF = base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._XbOXR6AypLIdJ3gBMGseGi3Wi2i as CookingMiniGameScene;
 				_RJTGWz7KqClGKVJa614391g5XSF._NvWWx67tvkIBmEn9fgXJ9ZzWJMS();
 				_7TpbhhncTYU8N40kUaAahODEjQT = null;
 				_YY04FeZbOVc47HHNN5R0M1nZYpc = delegate
@@ -71,21 +71,21 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _RJTGWz7KqClGKVJa614391g5XSF._T81AMuUIGw7sZkYmJkIpiDPosrD;
 				};
 			}
-			else if (!_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_2(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_1((MemberInfo)_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_0(typeof(Commands.RemyShowNudes).TypeHandle))))
+			else if (!(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f == typeof(Commands.RemyShowNudes).Name))
 			{
-				if (_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_2(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_1((MemberInfo)_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_0(typeof(Commands.RemyHideNudes).TypeHandle))))
+				if (_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f == typeof(Commands.RemyHideNudes).Name)
 				{
 					_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._zFlBtKgcAb6cv77WHC6dI3lO8EwA();
 					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 				}
-				else if (_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_2(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_1((MemberInfo)_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_0(typeof(Commands.PlayCutscene).TypeHandle))))
+				else if (_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f == typeof(Commands.PlayCutscene).Name)
 				{
-					_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_6(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_3(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr), _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._09WFE7OooC0GyCzyLlqQ9Su7myB["Cutscene"]);
+					base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._09WFE7OooC0GyCzyLlqQ9Su7myB["Cutscene"]);
 					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 				}
 				else
 				{
-					_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_8(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_7("A unknown command is triggered: ", _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f), "[Command]", Color.get_Green());
+					_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq("A unknown command is triggered: " + _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f, "[Command]", Color.get_Green());
 					_7TpbhhncTYU8N40kUaAahODEjQT = _NjQNLofcM2wbpSVJX5f9ltGMCNg;
 					_YY04FeZbOVc47HHNN5R0M1nZYpc = _T09IZIRhbGpjZWBAffDLYRnGVST;
 				}
@@ -99,11 +99,11 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 		}
 		else
 		{
-			if (!(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_4(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_3(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr)) is CookingMiniGameScene))
+			if (!(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._XbOXR6AypLIdJ3gBMGseGi3Wi2i is CookingMiniGameScene))
 			{
-				throw _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_5("Current scene is not CookingScene!");
+				throw new Exception("Current scene is not CookingScene!");
 			}
-			CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF2 = _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_4(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_3(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr)) as CookingMiniGameScene;
+			CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF2 = base._5zNdOw7qHmuCAPJFMr3SsZdBlCr._ZzBuoSDMWwerejOO9Goyv2OCKgE._XbOXR6AypLIdJ3gBMGseGi3Wi2i as CookingMiniGameScene;
 			_RJTGWz7KqClGKVJa614391g5XSF2._c9i4Rbj8ENw5b6aqNq271voBctc = true;
 			_RJTGWz7KqClGKVJa614391g5XSF2._xJZUPxDatEzfPQc0nRHR2D1Vwke = false;
 			_7TpbhhncTYU8N40kUaAahODEjQT = null;
@@ -138,7 +138,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 
 	private void _T09IZIRhbGpjZWBAffDLYRnGVST()
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_9();
+		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _nkzqFdEfDyLcyGikIKGcHjklI4y._xJZUPxDatEzfPQc0nRHR2D1Vwke;
 	}
 
 	static Type smethod_0(RuntimeTypeHandle runtimeTypeHandle_0)

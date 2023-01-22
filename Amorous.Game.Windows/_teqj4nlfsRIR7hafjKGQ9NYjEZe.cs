@@ -25,23 +25,23 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 
 		internal void _eFwbCsKAq0jbRW4acFJl7FvMQ4m(object sender, UnhandledExceptionEventArgs e)
 		{
-			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_0(e) as Exception);
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_1(0);
+			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(e.ExceptionObject as Exception);
+			Environment.Exit(0);
 		}
 
 		internal void _gqYR9xa7V4e781jQlVlzfzKa8fF(string string_0)
 		{
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_2(string_0, new object[0]);
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._8GJSgyb6FWRvKxxAcjyaU02i18E(string_0);
 		}
 
 		internal void _9BmGPkOa9v7c4Lr9VwjSw8OgAYe(string string_0)
 		{
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_3(string_0, new object[0]);
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh(string_0);
 		}
 
 		internal void _gswlJMFbjPEv8F4fulNOdPkvvum(string string_0)
 		{
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_4(string_0, new object[0]);
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._0rEYVY1cDKfLPVuLw54UlaIts2m(string_0);
 		}
 
 		static object smethod_0(UnhandledExceptionEventArgs unhandledExceptionEventArgs_0)
@@ -86,59 +86,56 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 	[STAThread]
 	public static void _PijxDMohBfV8yAM5NbVyQM599kM(string[] args)
 	{
-		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_1(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0(), (UnhandledExceptionEventHandler)delegate(object sender, UnhandledExceptionEventArgs e)
+		AppDomain.CurrentDomain.UnhandledException += delegate(object sender, UnhandledExceptionEventArgs e)
 		{
-			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_0(e) as Exception);
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_1(0);
-		});
-		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_4(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_2(), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_3("en-US"));
-		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_5(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_2(), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_3("en-US"));
-		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_6();
+			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(e.ExceptionObject as Exception);
+			Environment.Exit(0);
+		};
+		Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+		Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._oD87G7SXjsTukw7IVWxVlVFEgvA();
 		try
 		{
 			SetDefaultDllDirectories(4096);
-			AddDllDirectory(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_9(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_7(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0()), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_8() ? "x64" : "x86"));
+			AddDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
 		}
 		catch
 		{
-			SetDllDirectory(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_9(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_7(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0()), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_8() ? "x64" : "x86"));
+			SetDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
 		}
 		FNALoggerEXT.LogInfo = delegate(string string_0)
 		{
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_2(string_0, new object[0]);
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._8GJSgyb6FWRvKxxAcjyaU02i18E(string_0);
 		};
 		FNALoggerEXT.LogWarn = delegate(string string_0)
 		{
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_3(string_0, new object[0]);
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh(string_0);
 		};
 		FNALoggerEXT.LogError = delegate(string string_0)
 		{
-			_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_4(string_0, new object[0]);
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._0rEYVY1cDKfLPVuLw54UlaIts2m(string_0);
 		};
-		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("FNA_OPENGL_DISABLE_LATESWAPTEAR", "1");
+		Environment.SetEnvironmentVariable("FNA_OPENGL_DISABLE_LATESWAPTEAR", "1");
 		try
 		{
 			bool bool_ = args.Contains("-safemode");
 			if (args.Contains("-disablesound"))
 			{
-				_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("FNA_AUDIO_DISABLE_SOUND", "1");
+				Environment.SetEnvironmentVariable("FNA_AUDIO_DISABLE_SOUND", "1");
 			}
 			if (args.Contains("-d3d11"))
 			{
-				_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("FNA_OPENGL_FORCE_ES3", "1");
-				_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("SDL_OPENGL_ES_DRIVER", "1");
+				Environment.SetEnvironmentVariable("FNA_OPENGL_FORCE_ES3", "1");
+				Environment.SetEnvironmentVariable("SDL_OPENGL_ES_DRIVER", "1");
 			}
 			_SkYjfUaaNhTySNgoGUeFZ46X4dM skYjfUaaNhTySNgoGUeFZ46X4dM = new _SkYjfUaaNhTySNgoGUeFZ46X4dM(bool_);
 			try
 			{
-				_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_11((Game)(object)skYjfUaaNhTySNgoGUeFZ46X4dM);
+				((Game)skYjfUaaNhTySNgoGUeFZ46X4dM).Run();
 			}
 			finally
 			{
-				if (skYjfUaaNhTySNgoGUeFZ46X4dM != null)
-				{
-					_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_12((IDisposable)skYjfUaaNhTySNgoGUeFZ46X4dM);
-				}
+				((IDisposable)skYjfUaaNhTySNgoGUeFZ46X4dM)?.Dispose();
 			}
 		}
 		catch (Exception exception_)
@@ -149,7 +146,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 
 	private static void _mxSbmCQQPRHc7t2A2pm8HsbyvqfA(Exception exception_0)
 	{
-		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_13("Unhandled exception: {0}", new object[1] { exception_0 });
+		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._0rEYVY1cDKfLPVuLw54UlaIts2m("Unhandled exception: {0}", exception_0);
 	}
 
 	static AppDomain smethod_0()

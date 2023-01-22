@@ -12,15 +12,15 @@ public class MakeoutPointScene : TimeOfDayScene
 	public MakeoutPointScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
-		_bYgAJ7foDqpxOElDOYhOkQFMzrz = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
-		MakeoutPointScene.smethod_19("Assets/Music/DJ-ZEK - Simulate", 0.4f);
+		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
+		_bYgAJ7foDqpxOElDOYhOkQFMzrz = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 	}
 
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
 	{
 		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
-		if (MakeoutPointScene.smethod_20(string_0, "Night"))
+		if (string_0 == "Night")
 		{
 			((Color)(ref _bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A(byte.MaxValue);
 			((Color)(ref _4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A((byte)0);

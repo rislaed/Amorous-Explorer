@@ -25,43 +25,43 @@ public class SkyeSexscene : CensoredSexscene
 	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
 
 	public SkyeSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Skye/Skye Sex", "Assets/SexScenes/Skye/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: SkyeSexscene.smethod_14() ? 2f : 1f, bool_0: true, float_1: 3000f)
+		: base(contentManager_0, "Assets/SexScenes/Skye/Skye Sex", "Assets/SexScenes/Skye/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 2f : 1f, bool_0: true, float_1: 3000f)
 	{
-		SkyeSexscene.smethod_16(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Sex", (Action<int>)null);
-		if (SkyeSexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Sex");
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			SkyeSexscene.smethod_17(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1500f);
-			SkyeSexscene.smethod_18(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 2000f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1500f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 2000f;
 		}
 		else
 		{
-			SkyeSexscene.smethod_17(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 950f);
-			SkyeSexscene.smethod_18(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1100f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 950f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
 		}
 		_p65Ex7slWkEu44TWzMfnrHkavQb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex");
 		_a2vuTNBvRtI0ysFdoyLqbnVKmKb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
 		_8Wpyx8UxfA2ieouQH6qdonhcCok = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = SkyeSexscene.smethod_19();
-		bool flag = SkyeSexscene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeSkinYellow");
-		bool flag2 = SkyeSexscene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeSkinBlue");
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		bool flag = opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SkyeSkinYellow");
+		bool flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SkyeSkinBlue");
 		if (!(flag && flag2))
 		{
 			if (flag)
 			{
-				SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Yellow");
+				_GGyEXu1JJKcG2X3txvtCwyZAylK("Yellow");
 			}
 			else if (flag2)
 			{
-				SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Blue");
+				_GGyEXu1JJKcG2X3txvtCwyZAylK("Blue");
 			}
 			else
 			{
-				SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Gray");
+				_GGyEXu1JJKcG2X3txvtCwyZAylK("Gray");
 			}
 		}
 		else
 		{
-			SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Gray");
+			_GGyEXu1JJKcG2X3txvtCwyZAylK("Gray");
 		}
 	}
 
@@ -72,18 +72,18 @@ public class SkyeSexscene : CensoredSexscene
 
 	public override void _GGyEXu1JJKcG2X3txvtCwyZAylK(string string_0)
 	{
-		this.method_9(string_0);
-		if (SkyeSexscene.smethod_22(string_0, "Gray"))
+		base._GGyEXu1JJKcG2X3txvtCwyZAylK(string_0);
+		switch (string_0)
 		{
-			SkyeSexscene.smethod_23((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, _p65Ex7slWkEu44TWzMfnrHkavQb);
-		}
-		else if (SkyeSexscene.smethod_22(string_0, "Yellow"))
-		{
-			SkyeSexscene.smethod_23((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, _a2vuTNBvRtI0ysFdoyLqbnVKmKb);
-		}
-		else if (SkyeSexscene.smethod_22(string_0, "Blue"))
-		{
-			SkyeSexscene.smethod_23((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, _8Wpyx8UxfA2ieouQH6qdonhcCok);
+		case "Gray":
+			base._1AqpgY4vB6ly5vxOay6j86rcIEo = _p65Ex7slWkEu44TWzMfnrHkavQb;
+			break;
+		case "Yellow":
+			base._1AqpgY4vB6ly5vxOay6j86rcIEo = _a2vuTNBvRtI0ysFdoyLqbnVKmKb;
+			break;
+		case "Blue":
+			base._1AqpgY4vB6ly5vxOay6j86rcIEo = _8Wpyx8UxfA2ieouQH6qdonhcCok;
+			break;
 		}
 	}
 
@@ -155,42 +155,42 @@ public class SkyeSexscene : CensoredSexscene
 		//IL_06ab: Unknown result type (might be due to invalid IL or missing references)
 		//IL_06bb: Unknown result type (might be due to invalid IL or missing references)
 		//IL_06c0: Unknown result type (might be due to invalid IL or missing references)
-		SkyeSexscene.smethod_24(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 0f);
-		if (!SkyeSexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye shin back", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player stripe right", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player underthigh right", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player stripe left", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player underthigh left", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player belly stripes", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player underbelly", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player knot", (SkyeSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye tail", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye thigh left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye body", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye foot right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye shin right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye thigh right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye boob left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye chest", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyes", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye pupil", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye jaw", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head back", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelids", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelash", 1f);
-			_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL = SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this);
-			Color val = SkyeSexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye shin back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player belly stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player knot", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye tail", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye thigh left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye foot right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye shin right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye thigh right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye boob left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye chest", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyes", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye pupil", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye jaw", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelids", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelash", 1f);
+			_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
+			Color val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 			float float_ = (float)(int)((Color)(ref val)).get_R() / 255f;
 			val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 			float float_2 = (float)(int)((Color)(ref val)).get_G() / 255f;
@@ -270,49 +270,46 @@ public class SkyeSexscene : CensoredSexscene
 		}
 		else
 		{
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye tail", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye boob left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye chest", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyes", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye pupil", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye jaw", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear left", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head back", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear right", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelids", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head", 1f);
-			SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelash", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye tail", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye boob left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye chest", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyes", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye pupil", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye jaw", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelids", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelash", 1f);
 		}
 	}
 
 	static SkyeSexscene()
 	{
+		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000d: Expected O, but got Unknown
+		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0047: Expected O, but got Unknown
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0081: Expected O, but got Unknown
 		List<SpineEvent> list = new List<SpineEvent>();
-		SpineEvent val = SkyeSexscene.smethod_30();
+		SpineEvent val = new SpineEvent();
 		val.AnimationName = "Sex";
 		val.EventName = "ThrustStart";
-		SpineEvent obj = val;
-		float[] array = new float[6];
-		SkyeSexscene.smethod_31((Array)array, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj.FrameTimes = array;
+		val.FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f };
 		list.Add(val);
-		val = SkyeSexscene.smethod_30();
+		val = new SpineEvent();
 		val.AnimationName = "Sex";
 		val.EventName = "ThrustEnd";
-		SpineEvent obj2 = val;
-		float[] array2 = new float[6];
-		SkyeSexscene.smethod_31((Array)array2, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj2.FrameTimes = array2;
+		val.FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f };
 		list.Add(val);
-		val = SkyeSexscene.smethod_30();
+		val = new SpineEvent();
 		val.AnimationName = "Sex";
 		val.EventName = "Moan";
-		SpineEvent obj3 = val;
-		float[] array3 = new float[6];
-		SkyeSexscene.smethod_31((Array)array3, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj3.FrameTimes = array3;
+		val.FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f };
 		list.Add(val);
 		_zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = list;
 	}

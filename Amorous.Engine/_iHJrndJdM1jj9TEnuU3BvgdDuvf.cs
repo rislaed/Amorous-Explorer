@@ -25,9 +25,9 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 			//IL_002d: Unknown result type (might be due to invalid IL or missing references)
 			//IL_0032: Unknown result type (might be due to invalid IL or missing references)
 			_eNqfeKhXj4x1FkHQitvzRQ1JLSE = value;
-			if (!_iHJrndJdM1jj9TEnuU3BvgdDuvf.smethod_1(_eNqfeKhXj4x1FkHQitvzRQ1JLSE))
+			if (!string.IsNullOrEmpty(_eNqfeKhXj4x1FkHQitvzRQ1JLSE))
 			{
-				_0IQKqP6KjSSBSTlZR0Y2K1CamuH = _iHJrndJdM1jj9TEnuU3BvgdDuvf.smethod_2(_UlZpHdih1X5ig1k6QjZ497jtA1A, _eNqfeKhXj4x1FkHQitvzRQ1JLSE);
+				_0IQKqP6KjSSBSTlZR0Y2K1CamuH = _UlZpHdih1X5ig1k6QjZ497jtA1A.MeasureString(_eNqfeKhXj4x1FkHQitvzRQ1JLSE);
 			}
 			else
 			{
@@ -51,7 +51,7 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
 		//IL_008b: Unknown result type (might be due to invalid IL or missing references)
 		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
-		if (!_iHJrndJdM1jj9TEnuU3BvgdDuvf.smethod_1(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ))
+		if (!string.IsNullOrEmpty(_K87Hdb6ToAR0us3tN3ZmvHdPdeJ))
 		{
 			_zqzgCa0m3Wy0XOFPjEWDVqp6Ybb.X = (float)base._7Xn1C5tjYnmIif1iZKV8AWsEEbL + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width - _0IQKqP6KjSSBSTlZR0Y2K1CamuH.X) / 2f;
 			_zqzgCa0m3Wy0XOFPjEWDVqp6Ybb.Y = (float)base._bCjZ3VSXGKyhmykd2zCnQBiSpDf + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - _0IQKqP6KjSSBSTlZR0Y2K1CamuH.Y) / 2f;

@@ -1,6 +1,4 @@
 using System;
-using System.Runtime.CompilerServices;
-using System.Threading;
 using Microsoft.Xna.Framework;
 
 namespace Amorous.Game.Scenes;
@@ -13,11 +11,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_0(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._RB8fRXeQvK5vs7JEA0XfVCEpg1i;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_1(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._RB8fRXeQvK5vs7JEA0XfVCEpg1i = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -26,11 +24,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_2(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._8CtoV1bqn0CwCzb1tuoNppBt0Gg;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_3(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._8CtoV1bqn0CwCzb1tuoNppBt0Gg = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -40,12 +38,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_4(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._6f1rvTENt5XWmHTE22zxBIwbH9G;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_5(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._6f1rvTENt5XWmHTE22zxBIwbH9G = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -54,11 +52,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_6(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._VmNLhqrIwSnE6JnCYiBcxnSqnEV;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_7(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._VmNLhqrIwSnE6JnCYiBcxnSqnEV = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -68,12 +66,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_8(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._in5HHYmrdLTFpkgc8aimJpXqAXB;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_9(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._in5HHYmrdLTFpkgc8aimJpXqAXB = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -82,11 +80,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_10(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._UjtZovBCLAtBZnUfbTvRFsaf5mx;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_11(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._UjtZovBCLAtBZnUfbTvRFsaf5mx = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -96,12 +94,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_12(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._1qfGl3Oc2JyQEpnQtdOxMeMkqhi;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_13(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._1qfGl3Oc2JyQEpnQtdOxMeMkqhi = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -111,12 +109,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_14(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._VWdlqWB4z2wNtm197Oiv32QGVbE;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_15(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._VWdlqWB4z2wNtm197Oiv32QGVbE = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -126,12 +124,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_16(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._sbSAaAmkhONcFX6f0JtHbVQbEfG;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_17(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._sbSAaAmkhONcFX6f0JtHbVQbEfG = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -140,11 +138,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_18(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._SnnHu3P4lDDxgkL6cuUt7y07yxG;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_19(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._SnnHu3P4lDDxgkL6cuUt7y07yxG = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -154,12 +152,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_20(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_21(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -169,12 +167,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_22(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._WvoLJ4MA4gYEsgOmmIQvfK3xFlu;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_23(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._WvoLJ4MA4gYEsgOmmIQvfK3xFlu = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -184,12 +182,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_24(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._lUyqwDvFCoXEZ6VM9PVCQ970jps;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_25(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._lUyqwDvFCoXEZ6VM9PVCQ970jps = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -199,12 +197,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_26(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._qKGefHxdjIUD6ObjxrxnLwbBEsh;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_27(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._qKGefHxdjIUD6ObjxrxnLwbBEsh = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -213,11 +211,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_28(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._pmr0FnBBvgaggpusBKMWplUa63c;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_29(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._pmr0FnBBvgaggpusBKMWplUa63c = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -227,12 +225,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_30(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._9b2asKZDwVM1TcSfmfeFCuk0TJZb;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_31(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._9b2asKZDwVM1TcSfmfeFCuk0TJZb = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -242,12 +240,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_32(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._vUhBAXEgvpGKopOUkDJFoc4EYQ3;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_33(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._vUhBAXEgvpGKopOUkDJFoc4EYQ3 = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -257,12 +255,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_34(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._uaBF7rEib15d42vH8AzoXWFMMkE;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_35(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._uaBF7rEib15d42vH8AzoXWFMMkE = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -271,11 +269,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_36(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._c0ThYURHAGN0Wzlzw9Ibh3Z8qyo;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_37(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._c0ThYURHAGN0Wzlzw9Ibh3Z8qyo = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -285,12 +283,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_38(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._GXnDb1oaJlPbAQV2mjAwCQFK0nmb;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_39(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._GXnDb1oaJlPbAQV2mjAwCQFK0nmb = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -300,12 +298,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_40(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._0K4lcN7iwo5q0iP1YlkpY9GdayR;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_41(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._0K4lcN7iwo5q0iP1YlkpY9GdayR = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -314,11 +312,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_42(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._KBOJ0qhM8C5evPQxibgX74m2WHg;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_43(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._KBOJ0qhM8C5evPQxibgX74m2WHg = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -328,12 +326,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_44(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._HRPv5rzDY5zNiP4NADDEGhrzGTe;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_45(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._HRPv5rzDY5zNiP4NADDEGhrzGTe = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -342,11 +340,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_46(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._4QUr9lDqmNxEuy7B4xgb7Lj1HU0;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_47(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._4QUr9lDqmNxEuy7B4xgb7Lj1HU0 = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -356,12 +354,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_48(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._VsEYbNSam3IFYYWY4QC2lb4ia61;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_49(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._VsEYbNSam3IFYYWY4QC2lb4ia61 = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -371,12 +369,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_50(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._y1SiMmRVXWDhDtY17knDpitt46F;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_51(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._y1SiMmRVXWDhDtY17knDpitt46F = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -386,12 +384,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_52(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._T98drEOtEEZKeB5tXzsuPrhb5Xk;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_53(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._T98drEOtEEZKeB5tXzsuPrhb5Xk = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -400,11 +398,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_54(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._hkFDGB5pWIuOVcIyDAFqHrDdSpjA;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_55(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._hkFDGB5pWIuOVcIyDAFqHrDdSpjA = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -414,12 +412,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_56(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._q2iDxJYfqribHB1bD8aSkSjqrfnA;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_57(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._q2iDxJYfqribHB1bD8aSkSjqrfnA = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -428,11 +426,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_58(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._UAZhvJ3a9BGOBM0CLiDkKLwUFC9;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_59(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._UAZhvJ3a9BGOBM0CLiDkKLwUFC9 = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -442,12 +440,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_60(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._phJrpk3rql5MfNJxPQ9X7nC8aAk;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_61(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._phJrpk3rql5MfNJxPQ9X7nC8aAk = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -456,11 +454,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_62(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._03h2I0mTkGTzIA5R48rgwJh7JZA;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_63(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._03h2I0mTkGTzIA5R48rgwJh7JZA = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -470,12 +468,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_64(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._bJmvnPs69aVDXxG48lmruYZFHKt;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_65(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._bJmvnPs69aVDXxG48lmruYZFHKt = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -484,11 +482,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_66(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._fzMbZCCd7imnrcrYWkSj5u8UZ2J;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_67(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._fzMbZCCd7imnrcrYWkSj5u8UZ2J = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -498,12 +496,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_68(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._EvdUMrkAAdTeMv6fOpGrOLCAMq8A;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_69(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._EvdUMrkAAdTeMv6fOpGrOLCAMq8A = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -512,11 +510,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_70(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._LZ8c6hRMRYKjnlLOPhbZHcWqUGG;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_71(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._LZ8c6hRMRYKjnlLOPhbZHcWqUGG = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -526,12 +524,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_72(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._LZfuQybASevOsCykEWqdvA5GqUF;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_73(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._LZfuQybASevOsCykEWqdvA5GqUF = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -540,11 +538,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_74(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._NrFEKLWh80bQXi9PujCBTqm01AA;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_75(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._NrFEKLWh80bQXi9PujCBTqm01AA = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -554,12 +552,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_76(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._qsK1J3jktKH3eJ2i8sL1oaxXtLc;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_77(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._qsK1J3jktKH3eJ2i8sL1oaxXtLc = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -568,11 +566,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_78(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._PVQfhwHODkR6bzHmfeCK4L8riIG;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_79(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._PVQfhwHODkR6bzHmfeCK4L8riIG = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -582,12 +580,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_80(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._62dl1HYYkor3TZL58k5Y33Tj83;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_81(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._62dl1HYYkor3TZL58k5Y33Tj83 = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -596,11 +594,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_82(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._tEXwTuSRSq5JaaFE4W8edEHxS9q;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_83(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._tEXwTuSRSq5JaaFE4W8edEHxS9q = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -610,12 +608,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_84(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._LufmRsAZrlyDgRKYocQXPzANMaF;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_85(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._LufmRsAZrlyDgRKYocQXPzANMaF = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -624,11 +622,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_86(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._Mz7LwHZqoGBscApFXmff1kEQnGY;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_87(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._Mz7LwHZqoGBscApFXmff1kEQnGY = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -638,12 +636,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_88(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._PeK36AvFxEQCvX3fS62hNV7rpuJ;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_89(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._PeK36AvFxEQCvX3fS62hNV7rpuJ = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -653,12 +651,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_90(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._zBv1cYqPRU7uDCALpBlBSgObUcbA;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_91(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._zBv1cYqPRU7uDCALpBlBSgObUcbA = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -668,12 +666,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_92(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._TxfCqloeyiHpsXka6B46iqCZNsZ;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_93(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._TxfCqloeyiHpsXka6B46iqCZNsZ = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -683,12 +681,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_94(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._1ZKGQXLRAHEJR8v7jhlDsyOVLcz;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_95(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._1ZKGQXLRAHEJR8v7jhlDsyOVLcz = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -698,12 +696,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_96(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._8rDSn6e9Ip9WdOogjhIn8YlL1oM;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_97(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._8rDSn6e9Ip9WdOogjhIn8YlL1oM = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -713,12 +711,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_98(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._FrsyMDX7TebzFk8nSLTyRDPi1QH;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_99(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._FrsyMDX7TebzFk8nSLTyRDPi1QH = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -728,12 +726,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_100(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._cUtgkG5qDvgFmI8c29I9xsLVNON;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_101(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._cUtgkG5qDvgFmI8c29I9xsLVNON = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -743,12 +741,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_102(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._LcOPiDaC2j5vzxOEYhvW4vRoaRX;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_103(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._LcOPiDaC2j5vzxOEYhvW4vRoaRX = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -758,12 +756,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_104(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._meyNS02iTIxo212B6c5eoKns2wj;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_105(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._meyNS02iTIxo212B6c5eoKns2wj = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -772,11 +770,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_106(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._rtyJgfViJdXL2Ela5APpDlk99dI;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_107(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._rtyJgfViJdXL2Ela5APpDlk99dI = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -786,12 +784,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_108(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._XnNREK59QnV1onFFWfSUaS9WK0E;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_109(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._XnNREK59QnV1onFFWfSUaS9WK0E = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -801,12 +799,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_110(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._o6OnmHi5rZIQPHESokp9rTaO1ei;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_111(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._o6OnmHi5rZIQPHESokp9rTaO1ei = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -815,11 +813,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_112(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._7OCMpsMmozHsAG0GDljMMAlGLJBA;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_113(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._7OCMpsMmozHsAG0GDljMMAlGLJBA = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -829,12 +827,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_114(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._8qQ7XVlyRYW4icBFxPQCJqgueYD;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_115(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._8qQ7XVlyRYW4icBFxPQCJqgueYD = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -843,11 +841,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_116(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._BCncLn6BIYiBX6NdFByAquBYGpH;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_117(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._BCncLn6BIYiBX6NdFByAquBYGpH = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -857,12 +855,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_118(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._pigzqi6DgcSToQkL9g7Ns2QrLfp;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_119(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._pigzqi6DgcSToQkL9g7Ns2QrLfp = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -871,11 +869,11 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 	{
 		get
 		{
-			return PlayerDataProxy.smethod_120(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._Q2AbpMWcrhtCW9MLTtT5gwoleu7;
 		}
 		set
 		{
-			PlayerDataProxy.smethod_121(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._Q2AbpMWcrhtCW9MLTtT5gwoleu7 = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -885,12 +883,12 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_122(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._2yydfEIrSiLPTti2dT8JXGoIaM3;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_123(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._2yydfEIrSiLPTti2dT8JXGoIaM3 = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
@@ -900,45 +898,17 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 		get
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			return PlayerDataProxy.smethod_124(_3t4w2BwPGr8GQDmJlQU929IFD8f);
+			return _3t4w2BwPGr8GQDmJlQU929IFD8f._uOkbmfW26QVAvyEMQakki9kTMDbA;
 		}
 		set
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-			PlayerDataProxy.smethod_125(_3t4w2BwPGr8GQDmJlQU929IFD8f, value);
+			_3t4w2BwPGr8GQDmJlQU929IFD8f._uOkbmfW26QVAvyEMQakki9kTMDbA = value;
 			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
 		}
 	}
 
-	public event Action _jCsrJ38OEkr542qwd48oa3BLDIB
-	{
-		[CompilerGenerated]
-		add
-		{
-			Action action = this._jCsrJ38OEkr542qwd48oa3BLDIB;
-			Action action2;
-			do
-			{
-				action2 = action;
-				Action value2 = (Action)PlayerDataProxy.smethod_126((Delegate)action2, (Delegate)value);
-				action = Interlocked.CompareExchange(ref this._jCsrJ38OEkr542qwd48oa3BLDIB, value2, action2);
-			}
-			while ((object)action != action2);
-		}
-		[CompilerGenerated]
-		remove
-		{
-			Action action = this._jCsrJ38OEkr542qwd48oa3BLDIB;
-			Action action2;
-			do
-			{
-				action2 = action;
-				Action value2 = (Action)PlayerDataProxy.smethod_127((Delegate)action2, (Delegate)value);
-				action = Interlocked.CompareExchange(ref this._jCsrJ38OEkr542qwd48oa3BLDIB, value2, action2);
-			}
-			while ((object)action != action2);
-		}
-	}
+	public event Action _jCsrJ38OEkr542qwd48oa3BLDIB;
 
 	public PlayerDataProxy(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
@@ -947,7 +917,7 @@ internal class PlayerDataProxy : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	public bool _Oms9lumBodLGrGZ09YJaEuzmlAf(string string_0)
 	{
-		return PlayerDataProxy.smethod_128(_3t4w2BwPGr8GQDmJlQU929IFD8f, string_0);
+		return _3t4w2BwPGr8GQDmJlQU929IFD8f._Oms9lumBodLGrGZ09YJaEuzmlAf(string_0);
 	}
 
 	public _opIJo2jLUqdOL5yAFP4yzXce0DG _dxo6sBOpjEUiw2JBMikbutXK44t()

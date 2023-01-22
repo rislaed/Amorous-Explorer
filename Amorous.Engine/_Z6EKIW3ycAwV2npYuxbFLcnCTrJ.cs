@@ -30,13 +30,14 @@ public class _Z6EKIW3ycAwV2npYuxbFLcnCTrJ
 		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
 		if (_mW1Z69pRB1eedGT3FSmdItJre5Y != null)
 		{
-			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)1, null, null, null, null, null, Matrix.CreateRotationZ(_Z6EKIW3ycAwV2npYuxbFLcnCTrJ.smethod_0(0f)));
+			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)1, null, null, null, null, null, Matrix.CreateRotationZ(MathHelper.ToRadians(0f)));
 			if (effect_0 != null)
 			{
-				_Z6EKIW3ycAwV2npYuxbFLcnCTrJ.smethod_4(_Z6EKIW3ycAwV2npYuxbFLcnCTrJ.smethod_3(_Z6EKIW3ycAwV2npYuxbFLcnCTrJ.smethod_2(_Z6EKIW3ycAwV2npYuxbFLcnCTrJ.smethod_1(effect_0)), 0));
+				effect_0.get_CurrentTechnique().get_Passes().get_Item(0)
+					.Apply();
 			}
 			_mW1Z69pRB1eedGT3FSmdItJre5Y._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
-			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ.smethod_5(spriteBatch_0);
+			spriteBatch_0.End();
 		}
 	}
 

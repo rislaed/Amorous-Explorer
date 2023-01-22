@@ -26,10 +26,10 @@ public static class _b3D8sFDNBNbyBUDmxg2f9XSWJKd
 
 	private static void _oD87G7SXjsTukw7IVWxVlVFEgvA(ContentManager contentManager_0)
 	{
-		FieldInfo fieldInfo_ = _b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_1(_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_0(typeof(ContentManager).TypeHandle), "loadedAssets", BindingFlags.Instance | BindingFlags.NonPublic);
-		_vFlf6NbDv32TsNiHZpYwZhv1lRo = (Dictionary<string, object>)_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_2(fieldInfo_, (object)contentManager_0);
-		FieldInfo fieldInfo_2 = _b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_1(_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_0(typeof(ContentManager).TypeHandle), "disposableAssets", BindingFlags.Instance | BindingFlags.NonPublic);
-		_gtSa6GVF63EHA9kPi3x0tr1inFL = (List<IDisposable>)_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_2(fieldInfo_2, (object)contentManager_0);
+		FieldInfo field = typeof(ContentManager).GetField("loadedAssets", BindingFlags.Instance | BindingFlags.NonPublic);
+		_vFlf6NbDv32TsNiHZpYwZhv1lRo = (Dictionary<string, object>)field.GetValue(contentManager_0);
+		FieldInfo field2 = typeof(ContentManager).GetField("disposableAssets", BindingFlags.Instance | BindingFlags.NonPublic);
+		_gtSa6GVF63EHA9kPi3x0tr1inFL = (List<IDisposable>)field2.GetValue(contentManager_0);
 	}
 
 	public static void _HXLRmt9GqcmA9GTG5xzRKNu3QpF(this ContentManager contentManager_0, object object_0)
@@ -50,7 +50,7 @@ public static class _b3D8sFDNBNbyBUDmxg2f9XSWJKd
 			{
 				_gtSa6GVF63EHA9kPi3x0tr1inFL.Remove(disposable);
 			}
-			_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_3(disposable);
+			disposable.Dispose();
 		}
 	}
 

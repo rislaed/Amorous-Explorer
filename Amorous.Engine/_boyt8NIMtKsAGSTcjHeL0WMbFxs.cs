@@ -6,34 +6,34 @@ public static class _boyt8NIMtKsAGSTcjHeL0WMbFxs
 {
 	public static float _AmIUCcrmrrQiiirja7DoiZSjXuv;
 
-	private static readonly Random _2tTGp4eVZLS8tf0Qr1cmyzXMVef = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_8();
+	private static readonly Random _2tTGp4eVZLS8tf0Qr1cmyzXMVef = new Random();
 
 	public static float _S7DdtNZASTkc9riB27h5Ktq5VjDA(float float_0, float float_1)
 	{
-		return (float)_boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_0(_2tTGp4eVZLS8tf0Qr1cmyzXMVef) * (float_1 - float_0) + float_0;
+		return (float)_2tTGp4eVZLS8tf0Qr1cmyzXMVef.NextDouble() * (float_1 - float_0) + float_0;
 	}
 
 	public static int _07xTWbIEgzxJYsYwFKDbbKNvu4G()
 	{
-		return _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_1(_2tTGp4eVZLS8tf0Qr1cmyzXMVef);
+		return _2tTGp4eVZLS8tf0Qr1cmyzXMVef.Next();
 	}
 
 	public static int _07xTWbIEgzxJYsYwFKDbbKNvu4G(int int_0, int int_1)
 	{
-		return _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_2(_2tTGp4eVZLS8tf0Qr1cmyzXMVef, int_0, int_1);
+		return _2tTGp4eVZLS8tf0Qr1cmyzXMVef.Next(int_0, int_1);
 	}
 
 	public static bool _gbHIDTfALwKhXkamYJbKsAUKL2E()
 	{
-		return _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_2(_2tTGp4eVZLS8tf0Qr1cmyzXMVef, 0, 100) <= 50;
+		return _2tTGp4eVZLS8tf0Qr1cmyzXMVef.Next(0, 100) <= 50;
 	}
 
 	public static string _mCgIgZp06WD70u8PXcTcCcl6zfe(string string_0)
 	{
-		MD5 hashAlgorithm_ = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_3();
-		byte[] byte_ = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_5(_boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_4(), string_0);
-		byte[] array = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_6((HashAlgorithm)hashAlgorithm_, byte_);
-		StringBuilder stringBuilder = _boyt8NIMtKsAGSTcjHeL0WMbFxs.smethod_7();
+		MD5 mD = MD5.Create();
+		byte[] bytes = Encoding.ASCII.GetBytes(string_0);
+		byte[] array = mD.ComputeHash(bytes);
+		StringBuilder stringBuilder = new StringBuilder();
 		byte[] array2 = array;
 		foreach (byte b in array2)
 		{

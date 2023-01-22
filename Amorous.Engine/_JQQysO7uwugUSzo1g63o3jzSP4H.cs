@@ -50,45 +50,46 @@ public class _JQQysO7uwugUSzo1g63o3jzSP4H
 
 	public void _COrEacAao4LWYM95RxkOjaaEp9x(byte[] byte_0)
 	{
-		Type type_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_0(typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>).TypeHandle);
-		XmlSerializer xmlSerializer_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_1(type_);
-		StringReader textReader_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_4(_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_3(_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_2(), byte_0));
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_5(xmlSerializer_, (TextReader)textReader_) as _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>;
+		Type typeFromHandle = typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>);
+		XmlSerializer xmlSerializer = new XmlSerializer(typeFromHandle);
+		StringReader textReader = new StringReader(Encoding.UTF8.GetString(byte_0));
+		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = xmlSerializer.Deserialize(textReader) as _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>;
 	}
 
 	public void _Gz8axRA2ks9sOlb2vx60ucqDEM0(string string_0)
 	{
-		Type type_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_0(typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>).TypeHandle);
-		XmlSerializer xmlSerializer_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_1(type_);
-		StringReader textReader_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_4(_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_6(string_0));
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_5(xmlSerializer_, (TextReader)textReader_) as _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>;
+		Type typeFromHandle = typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>);
+		XmlSerializer xmlSerializer = new XmlSerializer(typeFromHandle);
+		StringReader textReader = new StringReader(File.ReadAllText(string_0));
+		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = xmlSerializer.Deserialize(textReader) as _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>;
 	}
 
 	public void _Qt9ALtD0p5mWCH7rkv1mIKv7Ghc(string string_0)
 	{
-		Type type_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_0(typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>).TypeHandle);
-		XmlSerializer xmlSerializer_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_1(type_);
-		StringReader textReader_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_4(string_0);
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_5(xmlSerializer_, (TextReader)textReader_) as _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>;
+		Type typeFromHandle = typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>);
+		XmlSerializer xmlSerializer = new XmlSerializer(typeFromHandle);
+		StringReader textReader = new StringReader(string_0);
+		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = xmlSerializer.Deserialize(textReader) as _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>;
 	}
 
 	public void _7cuPUL8aamrg9daETH6zQk3RwbF(string string_0)
 	{
-		Type type_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_0(typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>).TypeHandle);
-		XmlSerializer xmlSerializer_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_1(type_);
-		StringWriter stringWriter = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_7();
-		XmlTextWriter xmlTextWriter = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_8((TextWriter)stringWriter);
-		_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_9(xmlTextWriter, Formatting.Indented);
-		XmlTextWriter xmlWriter_ = xmlTextWriter;
-		_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_10((XmlWriter)xmlWriter_, "");
-		XmlSerializerNamespaces xmlSerializerNamespaces_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_11();
-		_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_12(xmlSerializerNamespaces_, "", "");
-		_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_13(xmlSerializer_, (XmlWriter)xmlWriter_, (object)_KyRTfqdr2zZtsEAgkvOlUoQoB5j, xmlSerializerNamespaces_);
-		string string_ = _JQQysO7uwugUSzo1g63o3jzSP4H.smethod_14((object)stringWriter);
-		_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_15(string_0, string_);
-		_JQQysO7uwugUSzo1g63o3jzSP4H.smethod_16((TextWriter)stringWriter);
-		xmlSerializer_ = null;
-		xmlWriter_ = null;
+		Type typeFromHandle = typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>);
+		XmlSerializer xmlSerializer = new XmlSerializer(typeFromHandle);
+		StringWriter stringWriter = new StringWriter();
+		XmlTextWriter xmlTextWriter = new XmlTextWriter(stringWriter)
+		{
+			Formatting = Formatting.Indented
+		};
+		xmlTextWriter.WriteRaw("");
+		XmlSerializerNamespaces xmlSerializerNamespaces = new XmlSerializerNamespaces();
+		xmlSerializerNamespaces.Add("", "");
+		xmlSerializer.Serialize(xmlTextWriter, _KyRTfqdr2zZtsEAgkvOlUoQoB5j, xmlSerializerNamespaces);
+		string contents = stringWriter.ToString();
+		File.WriteAllText(string_0, contents);
+		stringWriter.Close();
+		xmlSerializer = null;
+		xmlTextWriter = null;
 	}
 
 	static Type smethod_0(RuntimeTypeHandle runtimeTypeHandle_0)

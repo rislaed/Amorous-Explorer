@@ -39,16 +39,16 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			//IL_008e: Unknown result type (might be due to invalid IL or missing references)
 			//IL_009a: Unknown result type (might be due to invalid IL or missing references)
 			//IL_009f: Unknown result type (might be due to invalid IL or missing references)
-			_animationTexture = FrameAnimationLayer.smethod_1(FrameAnimationLayer.smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)).Load<Texture2D>(string_0);
+			_animationTexture = _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 			_timePerFrame = float_0 / (float)int_0;
 			_numberOfFrames = int_0;
 			_currentFrame = 0;
-			_sourceRectangle = new Rectangle(0, 0, (int)((float)FrameAnimationLayer.smethod_2(_animationTexture) / (float)int_0), FrameAnimationLayer.smethod_3(_animationTexture));
+			_sourceRectangle = new Rectangle(0, 0, (int)((float)_animationTexture.get_Width() / (float)int_0), _animationTexture.get_Height());
 			_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * float_1), (int)((float)_sourceRectangle.Height * float_1));
 			_origin = new Vector2((float)int_1, (float)int_2);
 			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime time)
 			{
-				MyUpdate((float)FrameAnimationLayer.smethod_9(time).Milliseconds / 1000f);
+				MyUpdate((float)time.get_ElapsedGameTime().Milliseconds / 1000f);
 			};
 			base._B6VrMlmWofCGqEzjzgFJiAliCge = MyDraw;
 		}
@@ -58,7 +58,7 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			_destinationRectangle.X = x;
 			_destinationRectangle.Y = y;
 			_currentFrame = startFrame;
-			_angle = FrameAnimationLayer.smethod_4(angle);
+			_angle = MathHelper.ToRadians(angle);
 		}
 
 		private void MyUpdate(float deltaTime)
@@ -91,9 +91,9 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			//IL_0045: Unknown result type (might be due to invalid IL or missing references)
 			if (_currentFrame >= 0)
 			{
-				FrameAnimationLayer.smethod_6(spriteBatch, (SpriteSortMode)0, (BlendState)null, (SamplerState)null, (DepthStencilState)null, (RasterizerState)null, (Effect)null, (Matrix?)FrameAnimationLayer.smethod_5((_fAUddQEKfZyemRb327NhM3GGlmzA)this));
-				FrameAnimationLayer.smethod_7(spriteBatch, _animationTexture, _destinationRectangle, (Rectangle?)_sourceRectangle, Color.get_White(), _angle, _origin, (SpriteEffects)0, 0f);
-				FrameAnimationLayer.smethod_8(spriteBatch);
+				spriteBatch._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)0, null, null, null, null, null, base._3TrGrUra7cqeIXkbZOrfaoQaD5F);
+				spriteBatch.Draw(_animationTexture, _destinationRectangle, (Rectangle?)_sourceRectangle, Color.get_White(), _angle, _origin, (SpriteEffects)0, 0f);
+				spriteBatch.End();
 			}
 		}
 
@@ -161,12 +161,13 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ClubPoolScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		ClubPoolScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
-		ClubPoolScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, (Action)OnDoorClick);
-		_lnXs1JfCeIBNCpFYs8XVRorc0h4 lnXs1JfCeIBNCpFYs8XVRorc0h = new _lnXs1JfCeIBNCpFYs8XVRorc0h4(this);
-		ClubPoolScene.smethod_16((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)lnXs1JfCeIBNCpFYs8XVRorc0h, 1525f);
-		ClubPoolScene.smethod_17((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)lnXs1JfCeIBNCpFYs8XVRorc0h, 890f);
-		_lnXs1JfCeIBNCpFYs8XVRorc0h4 gparam_ = lnXs1JfCeIBNCpFYs8XVRorc0h;
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
+		_2CHUZ5vSi5NbJYJ4gGtr3C2VVEo("Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, OnDoorClick);
+		_lnXs1JfCeIBNCpFYs8XVRorc0h4 gparam_ = new _lnXs1JfCeIBNCpFYs8XVRorc0h4(this)
+		{
+			_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc = 1525f,
+			_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY = 890f
+		};
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(gparam_, 2);
 		FrameAnimationLayer frameAnimationLayer = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
 		frameAnimationLayer.Play(-1420, 200, 0, 10f);
@@ -174,112 +175,110 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		frameAnimationLayer2.Play(-1170, 200, 2, 10f);
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(frameAnimationLayer, 2);
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(frameAnimationLayer2, 2);
-		ClubPoolScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
-		ClubPoolScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
-		ClubPoolScene.smethod_20(ClubPoolScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -1677, 1677, 0, 0);
-		ClubPoolScene.smethod_21(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = ClubPoolScene.smethod_22();
-		_showRemy = !ClubPoolScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyLeftClub");
+		_NC5VT77x8y2iH2pW56TBN1eyomA("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
+		_NC5VT77x8y2iH2pW56TBN1eyomA("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
+		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-1677, 1677, 0, 0);
+		_UmxbIbk7pgaod0bD7pS309P3Lns._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
+		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		_showRemy = !opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("RemyLeftClub");
 		if (_showRemy)
 		{
-			ClubPoolScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
+			_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
 		}
 	}
 
 	public override void Start()
 	{
-		this.method_0();
-		ClubPoolStaticANPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_ = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_, -1400f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_, 910f);
-		ClubPoolStaticBNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_2, -1401f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_2, 230f);
-		ClubPoolStaticENPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_3 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticENPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_3, 106f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_3, 397f);
-		ClubPoolStaticCNPC clubPoolStaticCNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC, -180f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC, 450f);
-		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		ClubPoolStaticANPC clubPoolStaticANPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -1400f;
+		clubPoolStaticANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 910f;
+		ClubPoolStaticBNPC clubPoolStaticBNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -1401f;
+		clubPoolStaticBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 230f;
+		ClubPoolStaticENPC clubPoolStaticENPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticENPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticENPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 106f;
+		clubPoolStaticENPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 397f;
+		ClubPoolStaticCNPC clubPoolStaticCNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -180f;
+		clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 450f;
+		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
 		clubPoolStaticCNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticCNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC));
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticCNPC));
-		ClubPoolStaticFNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_4 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticFNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_4, 500f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_4, 180f);
-		ClubPoolStaticGHINPC clubPoolStaticGHINPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC, 370f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC, 450f);
-		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticCNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL;
+		clubPoolStaticCNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf;
+		ClubPoolStaticFNPC clubPoolStaticFNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticFNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubPoolStaticFNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 500f;
+		clubPoolStaticFNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 180f;
+		ClubPoolStaticGHINPC clubPoolStaticGHINPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 370f;
+		clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 450f;
+		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC2 = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
 		clubPoolStaticGHINPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticGHINPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC));
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticGHINPC));
-		ClubPoolStaticDNPC clubPoolStaticDNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC, 50f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC, 690f);
-		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticGHINPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL;
+		clubPoolStaticGHINPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf;
+		ClubPoolStaticDNPC clubPoolStaticDNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 50f;
+		clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 690f;
+		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
 		clubPoolStaticDNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticDNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC));
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticDNPC));
+		clubPoolStaticDNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL;
+		clubPoolStaticDNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf;
 		if (_showRemy)
 		{
-			_remy = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticRemyNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-			ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, 1010f);
-			ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, 150f);
-			ClubPoolScene.smethod_29((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)_remy, (Action)OnRemyClick);
+			_remy = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticRemyNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+			_remy._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1010f;
+			_remy._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 150f;
+			_remy._ZVpZ5Oing5kbbVhbmbOHyrofGH7 = OnRemyClick;
 		}
-		ClubPoolStaticJKNPC clubPoolStaticJKNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC, 1269f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC, 383f);
-		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		ClubPoolStaticJKNPC clubPoolStaticJKNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1269f;
+		clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 383f;
+		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC2 = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
 		clubPoolStaticJKNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticJKNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC));
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticJKNPC));
-		ClubPoolStaticLNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_5 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticLNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_5, 1630f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_5, 106f);
-		ClubPoolStaticMNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_6 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticMNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_6, 1879f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_6, 106f);
-		ClubPoolStaticNNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_7 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticNNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_7, 2039f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_7, 106f);
-		ClubPoolStaticOPNPC clubPoolStaticOPNPC = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC, 2223f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC, 442f);
-		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC2 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticJKNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL;
+		clubPoolStaticJKNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf;
+		ClubPoolStaticLNPC clubPoolStaticLNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticLNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticLNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1630f;
+		clubPoolStaticLNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 106f;
+		ClubPoolStaticMNPC clubPoolStaticMNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticMNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticMNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1879f;
+		clubPoolStaticMNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 106f;
+		ClubPoolStaticNNPC clubPoolStaticNNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticNNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
+		clubPoolStaticNNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 2039f;
+		clubPoolStaticNNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 106f;
+		ClubPoolStaticOPNPC clubPoolStaticOPNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 2223f;
+		clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 442f;
+		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC2 = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC2>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
 		clubPoolStaticOPNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticOPNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2, ClubPoolScene.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC));
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC2, ClubPoolScene.smethod_28((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)clubPoolStaticOPNPC));
-		ClubPoolStaticQRNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT_8 = ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticQRNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
-		ClubPoolScene.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_8, 2694f);
-		ClubPoolScene.smethod_26((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)qGGOTxZ8aNWGh0hc26wcmx8wmwT_8, 97f);
+		clubPoolStaticOPNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL;
+		clubPoolStaticOPNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf;
+		ClubPoolStaticQRNPC clubPoolStaticQRNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticQRNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Foreground);
+		clubPoolStaticQRNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 2694f;
+		clubPoolStaticQRNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 97f;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		if (_Bj3jScuqBJCFV58AWBDg8HofpqY)
 		{
-			List<_ujAkjlfN5TywwbLAUDzPvtab6uJ> list = (from x in ClubPoolScene.smethod_30((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)
-				where x is _3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve && (!(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticNPC) || !(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticSpineNPC))
-				select x).ToList();
+			List<_ujAkjlfN5TywwbLAUDzPvtab6uJ> list = base._lstlI8qzZ4KErYKnufdOlj1xVZF.Where((_ujAkjlfN5TywwbLAUDzPvtab6uJ x) => x is _3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve && (!(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticNPC) || !(_3IHp43rpkJgOBcY9lrIrwMuwWve._4QLHHCk23T1BjK7acKxASbkCefG is ClubStaticSpineNPC))).ToList();
 			list.ForEach(delegate(_ujAkjlfN5TywwbLAUDzPvtab6uJ x)
 			{
 				x._ac2H6kMdrgPhXXxabsikjji4SiT = 3;
 			});
 		}
-		this.method_1(gameTime);
+		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
 	}
 
 	private void OnDoorClick()
 	{
-		ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubUpstairsScene>();
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubUpstairsScene>();
 	}
 
 	private void OnRemyClick()
 	{
-		ClubPoolScene.smethod_31(ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "RemyPreDate");
+		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("RemyPreDate");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

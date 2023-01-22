@@ -9,7 +9,7 @@ public class ClubPoolWaterScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
 		//IL_006f: Unknown result type (might be due to invalid IL or missing references)
-		ClubPoolWaterScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubPoolWater/Background", 0, 0);
+		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/ClubPoolWater/Background", 0, 0);
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0 gparam_ = new _jOXcj4HBkU5j6LOJprpiXLCcLR0(this, 700f, new Rectangle(0, -190, 1920, 1080), bool_0: true)
 		{
 			_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc = 600f,

@@ -30,7 +30,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 				if (!CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 				{
-					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_X5XjwV4HPrzF4fETYQUVvDpCp1p.smethod_0("Are you sure you wish to overwrite slot #{0}?", (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
+					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb($"Are you sure you wish to overwrite slot #{CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1}?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 					{
 						if (int_0 == 1)
 						{
@@ -124,7 +124,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 			CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 			if (!CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 			{
-				_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_1("Are you sure you wish to load slot #{0}?", (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
+				_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb($"Are you sure you wish to load slot #{CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1}?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 				{
 					if (int_0 == 1)
 					{
@@ -135,7 +135,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 			}
 			else
 			{
-				_ZR8JurNMoLTtI80Ip1cUndIgVYF._0pVU36wp9GYD1jM18raZtVEbA9q(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_0("There is no save in {0}slot #{1}!", (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", delegate
+				_ZR8JurNMoLTtI80Ip1cUndIgVYF._0pVU36wp9GYD1jM18raZtVEbA9q(string.Format("There is no save in {0}slot #{1}!", CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
 				{
 					_EtoN5lDbDEKHh3WWgnYIT2zV8s(obj: true);
 				});
@@ -218,7 +218,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _yhDD7spe4cjr78VqajGqVzwbiVN = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 				if (!_yhDD7spe4cjr78VqajGqVzwbiVN._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 				{
-					desktop_0._GtkWDtXwQHwgWY4aFkacjfUDyzb(_X5XjwV4HPrzF4fETYQUVvDpCp1p.smethod_0("Are you sure you wish to overwrite slot #{0}?", (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
+					desktop_0._GtkWDtXwQHwgWY4aFkacjfUDyzb($"Are you sure you wish to overwrite slot #{_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1}?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 					{
 						if (int_0 == 1)
 						{
@@ -257,7 +257,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _yhDD7spe4cjr78VqajGqVzwbiVN = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 				if (!_yhDD7spe4cjr78VqajGqVzwbiVN._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 				{
-					desktop_0._GtkWDtXwQHwgWY4aFkacjfUDyzb(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_1("Are you sure you wish to load slot #{0}?", (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
+					desktop_0._GtkWDtXwQHwgWY4aFkacjfUDyzb($"Are you sure you wish to load slot #{_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1}?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 					{
 						if (int_0 == 1)
 						{
@@ -268,7 +268,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				}
 				else
 				{
-					desktop_0._0pVU36wp9GYD1jM18raZtVEbA9q(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_0("There is no save in {0}slot #{1}!", (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", delegate
+					desktop_0._0pVU36wp9GYD1jM18raZtVEbA9q(string.Format("There is no save in {0}slot #{1}!", _yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
 					{
 						action_0(obj: true);
 					});

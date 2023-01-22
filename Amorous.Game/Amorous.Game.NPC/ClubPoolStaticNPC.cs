@@ -5,7 +5,7 @@ namespace Amorous.Game.NPC;
 
 public abstract class ClubPoolStaticNPC : ClubStaticNPC
 {
-	public float _qFVIvzuvIuKKG5vOrovLtn4NplA = ClubPoolStaticNPC.smethod_19(-1f, 1f);
+	public float _qFVIvzuvIuKKG5vOrovLtn4NplA = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(-1f, 1f);
 
 	public float _rlJEdnItzlU5efWtBjMCaC5Nizb;
 
@@ -18,22 +18,23 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 	protected ClubPoolStaticNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, string string_1, bool bool_0, bool bool_1)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string_0, string_1, bool_0, bool_1)
 	{
-		_2dDfDHYjKMlOJWKHdOpvafF417M = ClubPoolStaticNPC.smethod_21(ClubPoolStaticNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this)).Load<Effect>("Assets/Shaders/Pool");
-		_za9QLzJUpOFmy4hIqyTdGh34IpD = ClubPoolStaticNPC.smethod_21(ClubPoolStaticNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this)).Load<Texture2D>("Assets/Scenes/ClubPool/Wave Mask");
+		_2dDfDHYjKMlOJWKHdOpvafF417M = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Effect>("Assets/Shaders/Pool");
+		_za9QLzJUpOFmy4hIqyTdGh34IpD = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/Scenes/ClubPool/Wave Mask");
 	}
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
-		float num = _rlJEdnItzlU5efWtBjMCaC5Nizb + (float)ClubPoolStaticNPC.smethod_22(_za9QLzJUpOFmy4hIqyTdGh34IpD);
-		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "PoolSpeed"), 0.1f);
-		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "PoolOffset"), _qFVIvzuvIuKKG5vOrovLtn4NplA);
-		ClubPoolStaticNPC.smethod_26(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskTexture"), (Texture)(object)_za9QLzJUpOFmy4hIqyTdGh34IpD);
-		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskStart"), _rlJEdnItzlU5efWtBjMCaC5Nizb / (float)ClubPoolStaticNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this));
-		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "MaskEnd"), num / (float)ClubPoolStaticNPC.smethod_27((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this));
-		ClubPoolStaticNPC.smethod_28(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "Inverse"), _vAix6GBEcVh3peB11tbKy7HJWwb);
-		ClubPoolStaticNPC.smethod_25(ClubPoolStaticNPC.smethod_24(ClubPoolStaticNPC.smethod_23(_2dDfDHYjKMlOJWKHdOpvafF417M), "BreathingOffset"), _jSsdHgef86oxWXEOENwyht1nIvn);
-		ClubPoolStaticNPC.smethod_32(ClubPoolStaticNPC.smethod_31(ClubPoolStaticNPC.smethod_30(ClubPoolStaticNPC.smethod_29(_2dDfDHYjKMlOJWKHdOpvafF417M)), 0));
+		float num = _rlJEdnItzlU5efWtBjMCaC5Nizb + (float)_za9QLzJUpOFmy4hIqyTdGh34IpD.get_Height();
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("Time").SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("PoolSpeed").SetValue(0.1f);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("PoolOffset").SetValue(_qFVIvzuvIuKKG5vOrovLtn4NplA);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("MaskTexture").SetValue((Texture)(object)_za9QLzJUpOFmy4hIqyTdGh34IpD);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("MaskStart").SetValue(_rlJEdnItzlU5efWtBjMCaC5Nizb / (float)_WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("MaskEnd").SetValue(num / (float)_WJfGWBzn4wgdGBnMWRH2pcJ3AqH);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("Inverse").SetValue(_vAix6GBEcVh3peB11tbKy7HJWwb);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_Parameters().get_Item("BreathingOffset").SetValue(_jSsdHgef86oxWXEOENwyht1nIvn);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.get_CurrentTechnique().get_Passes().get_Item(0)
+			.Apply();
 		_DIJ98g9A80rhmS3Wk1l8KTVfV8x(spriteBatch_0);
 	}
 

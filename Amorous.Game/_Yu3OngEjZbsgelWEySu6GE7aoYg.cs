@@ -45,7 +45,7 @@ public class _Yu3OngEjZbsgelWEySu6GE7aoYg : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	{
 		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		_Yu3OngEjZbsgelWEySu6GE7aoYg.smethod_0(spriteBatch_0, _I1ZbHemGfJWozEfpDc9aFgiZQhEb[_SWODlbUkQEqfwrtprjLPOeGF7HO], _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
+		spriteBatch_0.Draw(_I1ZbHemGfJWozEfpDc9aFgiZQhEb[_SWODlbUkQEqfwrtprjLPOeGF7HO], _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
 	}
 
 	public override void _ymyneWF6dfrtfUI08wyb3KExq0D()
@@ -53,7 +53,7 @@ public class _Yu3OngEjZbsgelWEySu6GE7aoYg : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		Texture2D[] i1ZbHemGfJWozEfpDc9aFgiZQhEb = _I1ZbHemGfJWozEfpDc9aFgiZQhEb;
 		foreach (Texture2D object_ in i1ZbHemGfJWozEfpDc9aFgiZQhEb)
 		{
-			_Yu3OngEjZbsgelWEySu6GE7aoYg.smethod_3(_Yu3OngEjZbsgelWEySu6GE7aoYg.smethod_2(_Yu3OngEjZbsgelWEySu6GE7aoYg.smethod_1(base._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), (object)object_);
+			base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._HXLRmt9GqcmA9GTG5xzRKNu3QpF(object_);
 		}
 	}
 

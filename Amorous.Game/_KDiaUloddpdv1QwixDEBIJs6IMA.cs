@@ -8,51 +8,53 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 
 	public bool _oD87G7SXjsTukw7IVWxVlVFEgvA(uint uint_0, _JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
+		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000c: Expected O, but got Unknown
 		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0053: Expected O, but got Unknown
 		try
 		{
-			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F = _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_0(uint_0);
-			if (!_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_1((BaseSteamworks)(object)_f9R8NSqY1uzRQ0MIHLS7AsTyi7F))
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F = new Client(uint_0);
+			if (!((BaseSteamworks)_f9R8NSqY1uzRQ0MIHLS7AsTyi7F).get_IsValid())
 			{
-				throw _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_2("Invalid Steam-client");
+				throw new Exception("Invalid Steam-client");
 			}
-			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_3(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F);
-			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_4(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F, bool_0: true);
-			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_5(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F, new ScreenshotRequestDelegate(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._VN2LxjGLZldLNfiJ1OniiaXfYBg));
-			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_7("Successfully loaded Steamworks, welcome {0}!", new object[1] { _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_6(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F) });
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.CustomInitialize();
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.HookScreenshots(true);
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.add_ScreenshotRequest(new ScreenshotRequestDelegate(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._VN2LxjGLZldLNfiJ1OniiaXfYBg));
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._JmIDYFXDf2wcAGArwRlNg4WYoUEA("Successfully loaded Steamworks, welcome {0}!", _f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Username());
 			return true;
 		}
 		catch (Exception)
 		{
-			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_8("Failed to load Steamworks, falling back to non-Steam version.", new object[0]);
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Failed to load Steamworks, falling back to non-Steam version.");
 		}
 		return false;
 	}
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo()
 	{
-		_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_9((BaseSteamworks)(object)_f9R8NSqY1uzRQ0MIHLS7AsTyi7F);
+		((BaseSteamworks)_f9R8NSqY1uzRQ0MIHLS7AsTyi7F).Update();
 	}
 
 	public void _9K6cA2OPGJaecqk3spsceT9ilNI(string string_0, int int_0, int int_1)
 	{
-		_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_13(_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_10(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F), _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_12(_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_11(), string_0), int_0, int_1);
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Screenshots().AddScreenshotToLibrary(Path.Combine(Directory.GetCurrentDirectory(), string_0), int_0, int_1);
 	}
 
 	public void _vVZVLriSGPExpn1KeobglMabsoi(string string_0)
 	{
-		_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_15(_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_14(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F), string_0, bool_0: true);
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Achievements().Trigger(string_0, true);
 	}
 
 	public void _jUIwOLgbKJ8tJmUAAQs6pm6ZGWb()
 	{
-		_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_18(_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_16(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F), _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_17(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F));
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Overlay().OpenAchievements(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_SteamId());
 	}
 
 	public void _fDSidqggP063WGf2vzkdlA1UDkn(string string_0)
 	{
-		_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_19(_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_16(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F), string_0);
+		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.get_Overlay().OpenUrl(string_0);
 	}
 
 	static Client smethod_0(uint uint_0)

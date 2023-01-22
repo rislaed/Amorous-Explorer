@@ -20,7 +20,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	private const int _GXcZ5HOlWGrwQ57GNAEgXtVJV3G = 1;
 
-	private static readonly string _QubTtSSHmMID5jdELnIaJMHe4Dz = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_9(_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_14(_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_13()), "Saves");
+	private static readonly string _QubTtSSHmMID5jdELnIaJMHe4Dz = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
 
 	private static readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO;
 
@@ -30,9 +30,9 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	public static void _7cuPUL8aamrg9daETH6zQk3RwbF(int int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0, string string_0 = "save")
 	{
-		string string_ = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_0((object)_lRHDfpOTd4PxClZkjMpoakPEA9d_0, (Formatting)1, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
-		string string_2 = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
-		_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_1(string_2, string_);
+		string contents = JsonConvert.SerializeObject((object)_lRHDfpOTd4PxClZkjMpoakPEA9d_0, (Formatting)1, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+		string path = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
+		File.WriteAllText(path, contents);
 	}
 
 	public static void _3y7m8OGVjMe7WGIhZ66YOw3ITUE(int int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0)
@@ -42,24 +42,24 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	public static _lRHDfpOTd4PxClZkjMpoakPEA9d _sabDA8yXNR8DIRSbHjOcXx1e1Ax(int int_0, string string_0 = "save")
 	{
-		string string_ = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
-		string text = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_2(string_);
+		string path = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
+		string text = File.ReadAllText(path);
 		_lRHDfpOTd4PxClZkjMpoakPEA9d lRHDfpOTd4PxClZkjMpoakPEA9d;
 		try
 		{
 			lRHDfpOTd4PxClZkjMpoakPEA9d = JsonConvert.DeserializeObject<_lRHDfpOTd4PxClZkjMpoakPEA9d>(text, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
 			if (lRHDfpOTd4PxClZkjMpoakPEA9d == null)
 			{
-				throw _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_3("data is null");
+				throw new InvalidDataException("data is null");
 			}
 			if (lRHDfpOTd4PxClZkjMpoakPEA9d._M29jWtsDcmPvHjIYYSiTa8TbWri == null)
 			{
-				throw _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_3("PlayerData is null");
+				throw new InvalidDataException("PlayerData is null");
 			}
 		}
-		catch (Exception object_)
+		catch (Exception ex)
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Failed to load save: {0}", _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_4((object)object_));
+			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Failed to load save: {0}", ex.ToString());
 			lRHDfpOTd4PxClZkjMpoakPEA9d = null;
 		}
 		_AiegX5a7OwPp1LYkClPD8o1ULsK = string_0;
@@ -74,33 +74,36 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	public static bool _IWX6rV0RuGLrk1esoZktU0seJBF(int int_0, string string_0 = "save")
 	{
-		return _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_5(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0));
+		return File.Exists(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0));
 	}
 
 	public static string _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int int_0, string string_0 = "save")
 	{
-		if (!_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_6(_QubTtSSHmMID5jdELnIaJMHe4Dz))
+		if (!Directory.Exists(_QubTtSSHmMID5jdELnIaJMHe4Dz))
 		{
-			_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_7(_QubTtSSHmMID5jdELnIaJMHe4Dz);
+			Directory.CreateDirectory(_QubTtSSHmMID5jdELnIaJMHe4Dz);
 		}
-		return _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_9(_QubTtSSHmMID5jdELnIaJMHe4Dz, _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_8("{0}_{1}.sav", (object)string_0, (object)int_0));
+		return Path.Combine(_QubTtSSHmMID5jdELnIaJMHe4Dz, $"{string_0}_{int_0}.sav");
 	}
 
 	public static List<_3CCr8Bt1rkuzt0M6gYLbceJGV0p> _25D1ZH2er0EbpKmvFksAbFjP2OX(bool bool_0)
 	{
+		//IL_00ac: Incompatible stack heights: 0 vs 1
+		//IL_0156: Incompatible stack heights: 0 vs 1
 		List<_3CCr8Bt1rkuzt0M6gYLbceJGV0p> list = new List<_3CCr8Bt1rkuzt0M6gYLbceJGV0p>();
 		if (!bool_0)
 		{
 			for (int i = 0; i < 1; i++)
 			{
-				if (_IWX6rV0RuGLrk1esoZktU0seJBF(0, "autosave"))
+				_ = 0;
+				if (_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_5("autosave"))
 				{
-					DateTime dateTime = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_10(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(0, "autosave"));
+					DateTime lastWriteTime = File.GetLastWriteTime(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(0, "autosave"));
 					list.Add(new _3CCr8Bt1rkuzt0M6gYLbceJGV0p
 					{
 						_r4LqoJiAr5K9UiLsUzUDbcJDQqo = false,
 						_3y7m8OGVjMe7WGIhZ66YOw3ITUE = true,
-						_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_8("Autosave #{0} - {1:g}", (object)(i + 1), (object)dateTime),
+						_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Autosave #{i + 1} - {lastWriteTime:g}",
 						_B3FsRMcQWBXzFf3nLOBKzncessO = i
 					});
 				}
@@ -110,7 +113,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 					{
 						_r4LqoJiAr5K9UiLsUzUDbcJDQqo = true,
 						_3y7m8OGVjMe7WGIhZ66YOw3ITUE = true,
-						_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_11("Autosave #{0} - Empty", (object)(i + 1)),
+						_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Autosave #{i + 1} - Empty",
 						_B3FsRMcQWBXzFf3nLOBKzncessO = i
 					});
 				}
@@ -118,14 +121,14 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 		}
 		for (int j = 0; j < 10; j++)
 		{
-			if (_IWX6rV0RuGLrk1esoZktU0seJBF(j))
+			if (_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_5("save"))
 			{
-				DateTime dateTime2 = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_10(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(j));
+				DateTime lastWriteTime2 = File.GetLastWriteTime(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(j));
 				list.Add(new _3CCr8Bt1rkuzt0M6gYLbceJGV0p
 				{
 					_r4LqoJiAr5K9UiLsUzUDbcJDQqo = false,
 					_3y7m8OGVjMe7WGIhZ66YOw3ITUE = false,
-					_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_8("Slot #{0} - {1:g}", (object)(j + 1), (object)dateTime2),
+					_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Slot #{j + 1} - {lastWriteTime2:g}",
 					_B3FsRMcQWBXzFf3nLOBKzncessO = j
 				});
 			}
@@ -135,7 +138,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 				{
 					_r4LqoJiAr5K9UiLsUzUDbcJDQqo = true,
 					_3y7m8OGVjMe7WGIhZ66YOw3ITUE = false,
-					_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_11("Slot #{0} - Empty", (object)(j + 1)),
+					_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Slot #{j + 1} - Empty",
 					_B3FsRMcQWBXzFf3nLOBKzncessO = j
 				});
 			}
@@ -150,7 +153,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 			return new _3CCr8Bt1rkuzt0M6gYLbceJGV0p
 			{
 				_r4LqoJiAr5K9UiLsUzUDbcJDQqo = false,
-				_3y7m8OGVjMe7WGIhZ66YOw3ITUE = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_12(_AiegX5a7OwPp1LYkClPD8o1ULsK, "autosave"),
+				_3y7m8OGVjMe7WGIhZ66YOw3ITUE = (_AiegX5a7OwPp1LYkClPD8o1ULsK == "autosave"),
 				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string.Empty,
 				_B3FsRMcQWBXzFf3nLOBKzncessO = _siS1qYJcEWci7Kqwn9xPyVqEDUe.Value
 			};
@@ -160,27 +163,27 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 		int num = -1;
 		for (int i = 0; i < 10; i++)
 		{
-			string string_ = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(i);
-			if (_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_5(string_))
+			string path = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(i);
+			if (File.Exists(path))
 			{
-				DateTime dateTime2 = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_10(string_);
-				if (!dateTime.HasValue || dateTime.Value < dateTime2)
+				DateTime lastWriteTime = File.GetLastWriteTime(path);
+				if (!dateTime.HasValue || dateTime.Value < lastWriteTime)
 				{
-					dateTime = dateTime2;
+					dateTime = lastWriteTime;
 					num = i;
 				}
 			}
 		}
 		for (int j = 0; j < 1; j++)
 		{
-			string string_2 = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(j, "autosave");
-			if (_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_5(string_2))
+			string path2 = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(j, "autosave");
+			if (File.Exists(path2))
 			{
-				DateTime dateTime3 = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_10(string_2);
-				if (!dateTime.HasValue || dateTime.Value < dateTime3)
+				DateTime lastWriteTime2 = File.GetLastWriteTime(path2);
+				if (!dateTime.HasValue || dateTime.Value < lastWriteTime2)
 				{
 					flag = true;
-					dateTime = dateTime3;
+					dateTime = lastWriteTime2;
 					num = j;
 				}
 			}
@@ -196,10 +199,14 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	static _DW9IcpdMEINZmuzfrqmwsduBGih()
 	{
-		JsonSerializerSettings obj = _DW9IcpdMEINZmuzfrqmwsduBGih.smethod_15();
-		_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_16(obj, (TypeNameHandling)4);
-		_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_17(obj).Add((JsonConverter)(object)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA());
-		_ONuPEFW55mKuOlkBaBx5Jvmw3gO = obj;
+		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003a: Expected O, but got Unknown
+		JsonSerializerSettings val = new JsonSerializerSettings();
+		val.set_TypeNameHandling((TypeNameHandling)4);
+		val.get_Converters().Add((JsonConverter)(object)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA());
+		_ONuPEFW55mKuOlkBaBx5Jvmw3gO = val;
 	}
 
 	static string smethod_0(object object_0, Formatting formatting_0, JsonSerializerSettings jsonSerializerSettings_0)

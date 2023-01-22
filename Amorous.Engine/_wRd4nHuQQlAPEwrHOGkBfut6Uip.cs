@@ -207,7 +207,7 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 		{
 			if (_EKoVuulhFH2bvqZKateoyZN7Ink)
 			{
-				_YA8VIEiPdA3mZIXmotOA93bAdR1((float)_wRd4nHuQQlAPEwrHOGkBfut6Uip.smethod_0(gameTime_0).Milliseconds / 1000f, ref point_);
+				_YA8VIEiPdA3mZIXmotOA93bAdR1((float)gameTime_0.get_ElapsedGameTime().Milliseconds / 1000f, ref point_);
 			}
 			if (_qazbvc9K4STcPjV9jPSO0qIDsOJA)
 			{
@@ -220,19 +220,19 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 	{
 		if (point_0.X < 330)
 		{
-			_HgifDflhwFkpuIZBUcLDU6siHsG = _wRd4nHuQQlAPEwrHOGkBfut6Uip.smethod_1(_HgifDflhwFkpuIZBUcLDU6siHsG - 1920f * ((330f - (float)point_0.X) / 330f) * float_0, (float)_qbtBeaxeUPacOsYC34SPAzHQWlQ, (float)_VwbWeBrExX6TY1gcFDVqcZBIo8q);
+			_HgifDflhwFkpuIZBUcLDU6siHsG = MathHelper.Clamp(_HgifDflhwFkpuIZBUcLDU6siHsG - 1920f * ((330f - (float)point_0.X) / 330f) * float_0, (float)_qbtBeaxeUPacOsYC34SPAzHQWlQ, (float)_VwbWeBrExX6TY1gcFDVqcZBIo8q);
 		}
 		else if (point_0.X > 1590)
 		{
-			_HgifDflhwFkpuIZBUcLDU6siHsG = _wRd4nHuQQlAPEwrHOGkBfut6Uip.smethod_1(_HgifDflhwFkpuIZBUcLDU6siHsG + 1920f * (((float)point_0.X - 1590f) / 330f) * float_0, (float)_qbtBeaxeUPacOsYC34SPAzHQWlQ, (float)_VwbWeBrExX6TY1gcFDVqcZBIo8q);
+			_HgifDflhwFkpuIZBUcLDU6siHsG = MathHelper.Clamp(_HgifDflhwFkpuIZBUcLDU6siHsG + 1920f * (((float)point_0.X - 1590f) / 330f) * float_0, (float)_qbtBeaxeUPacOsYC34SPAzHQWlQ, (float)_VwbWeBrExX6TY1gcFDVqcZBIo8q);
 		}
 		if (point_0.Y < 120)
 		{
-			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = _wRd4nHuQQlAPEwrHOGkBfut6Uip.smethod_1(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB - 1080f * ((120f - (float)point_0.X) / 120f) * float_0, (float)_EcGPmFZBU8SYAqxnKYb0kf1OmsG, (float)_8n0XEYNk1IjynzDc1pnLpA1QLed);
+			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = MathHelper.Clamp(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB - 1080f * ((120f - (float)point_0.X) / 120f) * float_0, (float)_EcGPmFZBU8SYAqxnKYb0kf1OmsG, (float)_8n0XEYNk1IjynzDc1pnLpA1QLed);
 		}
 		else if (point_0.Y > 960)
 		{
-			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = _wRd4nHuQQlAPEwrHOGkBfut6Uip.smethod_1(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB + 1080f * ((float)(point_0.X - 960) / 120f) * float_0, (float)_EcGPmFZBU8SYAqxnKYb0kf1OmsG, (float)_8n0XEYNk1IjynzDc1pnLpA1QLed);
+			_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = MathHelper.Clamp(_Pxvux7dVnNcKQc1YbJ5ItGoHgfB + 1080f * ((float)(point_0.X - 960) / 120f) * float_0, (float)_EcGPmFZBU8SYAqxnKYb0kf1OmsG, (float)_8n0XEYNk1IjynzDc1pnLpA1QLed);
 		}
 	}
 

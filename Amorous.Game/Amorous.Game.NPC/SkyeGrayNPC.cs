@@ -9,12 +9,12 @@ public class SkyeGrayNPC : SkyeNPC
 	public SkyeGrayNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		SkyeGrayNPC.smethod_34((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this, SkyeGrayNPC.smethod_33(SkyeGrayNPC.smethod_32((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this)).Load<Texture2D>("Assets/NPC/Skye/skye expressions (Gray)"));
-		SkyeGrayNPC.smethod_36((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, new Type[2]
+		base._1AqpgY4vB6ly5vxOay6j86rcIEo = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/NPC/Skye/skye expressions (Gray)");
+		base._rAt6TRbgK04lvrs5QPjcd0n26pk = new Type[2]
 		{
-			SkyeGrayNPC.smethod_35(typeof(SkyeNPC).TypeHandle),
-			SkyeGrayNPC.smethod_35(typeof(SkyeBlueNPC).TypeHandle)
-		});
+			typeof(SkyeNPC),
+			typeof(SkyeBlueNPC)
+		};
 	}
 
 	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_32(_QGGOTxZ8aNWGh0hc26wcmx8wmwT _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0)

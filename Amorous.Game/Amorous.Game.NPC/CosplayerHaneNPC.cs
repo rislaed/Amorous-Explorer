@@ -30,30 +30,30 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CosplayerHane", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Hane Maxwell Cosplayer (nude)");
-		CosplayerHaneNPC.smethod_17(CosplayerHaneNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			CosplayerHaneNPC.smethod_18((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			CosplayerHaneNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 413f);
-			CosplayerHaneNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 413f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
 			break;
 		case NPCLocation.Left:
-			CosplayerHaneNPC.smethod_18((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			CosplayerHaneNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -190f);
-			CosplayerHaneNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -190f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
 			break;
 		case NPCLocation.Right:
-			CosplayerHaneNPC.smethod_18((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			CosplayerHaneNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1016f);
-			CosplayerHaneNPC.smethod_20((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1016f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
 			break;
 		}
 	}

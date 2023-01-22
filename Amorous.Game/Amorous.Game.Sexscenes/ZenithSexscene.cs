@@ -12,18 +12,18 @@ public class ZenithSexscene : CensoredSexscene
 	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
 
 	public ZenithSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _ecVLwNBaQAiybVyX9cgWCvnbkWe._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: ZenithSexscene.smethod_14() ? 1.3f : 1f, bool_0: true, float_1: 3000f)
+		: base(contentManager_0, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.3f : 1f, bool_0: true, float_1: 3000f)
 	{
-		ZenithSexscene.smethod_16(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", (Action<int>)null);
-		if (!ZenithSexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
+		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			ZenithSexscene.smethod_17(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 960f);
-			ZenithSexscene.smethod_18(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1090f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 960f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1090f;
 		}
 		else
 		{
-			ZenithSexscene.smethod_17(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 300f);
-			ZenithSexscene.smethod_18(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1350f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 300f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1350f;
 		}
 	}
 
@@ -56,99 +56,99 @@ public class ZenithSexscene : CensoredSexscene
 		//IL_086d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0885: Unknown result type (might be due to invalid IL or missing references)
 		//IL_089b: Unknown result type (might be due to invalid IL or missing references)
-		ZenithSexscene.smethod_19(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 0f);
-		if (ZenithSexscene.smethod_14())
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith body", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith shoulder left", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith wing right", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith jaw", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith eye", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith pupil", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith eyelid back", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith eyelid front", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith head", 1f);
-			ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith wing left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith body", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith shoulder left", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing right", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith jaw", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eye", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith pupil", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid back", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid front", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith head", 1f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing left", 1f);
 			return;
 		}
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith thigh right", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith forearm right", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right marking inner thigh", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right stripes", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith hand right", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith body", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith cock", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith shin left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith thigh left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body underbelly", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body stripes", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player fit belly", (ZenithSexscene.smethod_23(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType.Muscular) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player chubby belly", (ZenithSexscene.smethod_23(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType.Chubby) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Balls", (ZenithSexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) != 0) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot left avian", 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot short markings", 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot long markings", 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left", 1f);
-		bool flag = ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianShin);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left avian", flag ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin long markings", (flag || !ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin)) ? 0f : 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left short markings", (flag || !ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin)) ? 0f : 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left markings inner thigh", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left stripes", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith hand left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith forearm left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith shoulder left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith elbow left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith wing right", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith jaw", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith eye", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith pupil", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith eyelid back", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith eyelid front", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith head", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock horse", (ZenithSexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Thor) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", (ZenithSexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) != _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Thor) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock uncut", (ZenithSexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock knot lines", (ZenithSexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Foot cover", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Zenith wing left", 1f);
-		ZenithSexscene.smethod_20(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Pillows", 1f);
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right", ZenithSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right marking inner thigh", ZenithSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right stripes", ZenithSexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body", ZenithSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body underbelly", ZenithSexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body stripes", ZenithSexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player fit belly", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? ZenithSexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) : ZenithSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player chubby belly", ZenithSexscene.smethod_22((Enum)ZenithSexscene.smethod_21(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? ZenithSexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) : ZenithSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player Balls", ZenithSexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot left", ZenithSexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot left avian", ZenithSexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot short markings", ZenithSexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player foot long markings", ZenithSexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left", ZenithSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left avian", ZenithSexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin long markings", ZenithSexscene.smethod_34(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player shin left short markings", ZenithSexscene.smethod_35(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left", ZenithSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left markings inner thigh", ZenithSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left stripes", ZenithSexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock horse", ZenithSexscene.smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		if (ZenithSexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut)
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith thigh right", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith forearm right", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right marking inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith hand right", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith body", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith cock", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith shin left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith thigh left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player fit belly", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._8CtoV1bqn0CwCzb1tuoNppBt0Gg == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType.Muscular) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player chubby belly", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._8CtoV1bqn0CwCzb1tuoNppBt0Gg == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType.Chubby) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Balls", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._7OCMpsMmozHsAG0GDljMMAlGLJBA != 0) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot left avian", 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot short markings", 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot long markings", 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left", 1f);
+		bool flag = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianShin);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left avian", flag ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin long markings", (flag || !_opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin)) ? 0f : 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left short markings", (flag || !_opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin)) ? 0f : 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith hand left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith forearm left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith shoulder left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith elbow left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing right", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith jaw", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eye", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith pupil", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid back", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid front", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith head", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock horse", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Thor) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI != _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Thor) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock uncut", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock knot lines", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Foot cover", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing left", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Pillows", 1f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right marking inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player fit belly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ : _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player chubby belly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ : _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Balls", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8qQ7XVlyRYW4icBFxPQCJqgueYD);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LZfuQybASevOsCykEWqdvA5GqUF);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot left avian", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LZfuQybASevOsCykEWqdvA5GqUF);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot short markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LZfuQybASevOsCykEWqdvA5GqUF);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot long markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LZfuQybASevOsCykEWqdvA5GqUF);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left avian", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._meyNS02iTIxo212B6c5eoKns2wj);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin long markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._cUtgkG5qDvgFmI8c29I9xsLVNON);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left short markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._LcOPiDaC2j5vzxOEYhvW4vRoaRX);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock horse", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+		if (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Cut)
 		{
-			ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", ZenithSexscene.smethod_37(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-			ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock uncut", ZenithSexscene.smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._o6OnmHi5rZIQPHESokp9rTaO1ei);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock uncut", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
 		}
 		else
 		{
-			ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", ZenithSexscene.smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
 		}
-		ZenithSexscene.smethod_27(ZenithSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock knot lines", ZenithSexscene.smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-		if (ZenithSexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) != _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Thor)
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock knot lines", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
+		if (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI != _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Thor)
 		{
 			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Player cock cum");
 		}
@@ -162,30 +162,27 @@ public class ZenithSexscene : CensoredSexscene
 
 	static ZenithSexscene()
 	{
+		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000d: Expected O, but got Unknown
+		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0047: Expected O, but got Unknown
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0081: Expected O, but got Unknown
 		List<SpineEvent> list = new List<SpineEvent>();
-		SpineEvent val = ZenithSexscene.smethod_38();
+		SpineEvent val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustStart";
-		SpineEvent obj = val;
-		float[] array = new float[6];
-		ZenithSexscene.smethod_39((Array)array, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj.FrameTimes = array;
+		val.FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f };
 		list.Add(val);
-		val = ZenithSexscene.smethod_38();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "ThrustEnd";
-		SpineEvent obj2 = val;
-		float[] array2 = new float[6];
-		ZenithSexscene.smethod_39((Array)array2, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj2.FrameTimes = array2;
+		val.FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f };
 		list.Add(val);
-		val = ZenithSexscene.smethod_38();
+		val = new SpineEvent();
 		val.AnimationName = "animation";
 		val.EventName = "Moan";
-		SpineEvent obj3 = val;
-		float[] array3 = new float[6];
-		ZenithSexscene.smethod_39((Array)array3, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
-		obj3.FrameTimes = array3;
+		val.FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f };
 		list.Add(val);
 		_zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = list;
 	}

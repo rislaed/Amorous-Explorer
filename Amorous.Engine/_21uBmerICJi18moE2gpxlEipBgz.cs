@@ -15,7 +15,7 @@ public abstract class _21uBmerICJi18moE2gpxlEipBgz
 
 		internal bool _malqtq9ExY4IyWRnXYHeVFkym0c(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0)
 		{
-			return _sKL0TabfL7iT6k2DLwn0curdfKx.smethod_0(_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i, _hzqOBkJhJBhsTRNARxHLctcvhN0);
+			return _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _hzqOBkJhJBhsTRNARxHLctcvhN0;
 		}
 
 		static bool smethod_0(string string_0, string string_1)
@@ -73,7 +73,7 @@ public abstract class _21uBmerICJi18moE2gpxlEipBgz
 
 	public _ujAkjlfN5TywwbLAUDzPvtab6uJ _0c5TjZklJbu1wzYG2FIcvf3SIdh(string string_0)
 	{
-		return _lstlI8qzZ4KErYKnufdOlj1xVZF.FirstOrDefault((_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0) => _sKL0TabfL7iT6k2DLwn0curdfKx.smethod_0(_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i, string_0));
+		return _lstlI8qzZ4KErYKnufdOlj1xVZF.FirstOrDefault((_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0) => _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == string_0);
 	}
 
 	public _uqydQVaCmCvK7zzWs5W4gZFpKBu _Iz47swAAB7d2iX6PQ1xTIJIv8MJ(string string_0, string string_1, int int_0, int int_1, int int_2 = 0, float float_0 = 1f)
@@ -95,21 +95,9 @@ public abstract class _21uBmerICJi18moE2gpxlEipBgz
 
 	public virtual void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		IEnumerator<_ujAkjlfN5TywwbLAUDzPvtab6uJ> enumerator = _lstlI8qzZ4KErYKnufdOlj1xVZF.Where((_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0) => _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._3ZeCDXqcWHY4XJDBGyav3UzxYaHA).GetEnumerator();
-		try
+		foreach (_ujAkjlfN5TywwbLAUDzPvtab6uJ item in _lstlI8qzZ4KErYKnufdOlj1xVZF.Where((_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0) => _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._3ZeCDXqcWHY4XJDBGyav3UzxYaHA))
 		{
-			while (_21uBmerICJi18moE2gpxlEipBgz.smethod_0((IEnumerator)enumerator))
-			{
-				_ujAkjlfN5TywwbLAUDzPvtab6uJ current = enumerator.Current;
-				current._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-			}
-		}
-		finally
-		{
-			if (enumerator != null)
-			{
-				_21uBmerICJi18moE2gpxlEipBgz.smethod_1((IDisposable)enumerator);
-			}
+			item._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 		}
 	}
 
@@ -119,21 +107,9 @@ public abstract class _21uBmerICJi18moE2gpxlEipBgz
 			where _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._Fxy2SlgceW90FloFw6a1AEJODYA
 			orderby _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._ac2H6kMdrgPhXXxabsikjji4SiT, _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._VNgmwYSLsJyyiR6cPQ35UHJBR4d
 			select _ujAkjlfN5TywwbLAUDzPvtab6uJ_0;
-		IEnumerator<_ujAkjlfN5TywwbLAUDzPvtab6uJ> enumerator = orderedEnumerable.GetEnumerator();
-		try
+		foreach (_ujAkjlfN5TywwbLAUDzPvtab6uJ item in orderedEnumerable)
 		{
-			while (_21uBmerICJi18moE2gpxlEipBgz.smethod_0((IEnumerator)enumerator))
-			{
-				_ujAkjlfN5TywwbLAUDzPvtab6uJ current = enumerator.Current;
-				current._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
-			}
-		}
-		finally
-		{
-			if (enumerator != null)
-			{
-				_21uBmerICJi18moE2gpxlEipBgz.smethod_1((IDisposable)enumerator);
-			}
+			item._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
 		}
 	}
 

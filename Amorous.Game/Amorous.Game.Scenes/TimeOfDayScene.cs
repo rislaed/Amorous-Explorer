@@ -23,53 +23,43 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		TimeOfDayScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Day");
+		_6hE3geqxrB1vCirtSWHxIJjlTQB("Day");
 	}
 
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
 	{
-		this.method_0(string_0);
-		if (!TimeOfDayScene.smethod_15(string_0, "Night"))
+		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
+		switch (string_0)
 		{
-			if (!TimeOfDayScene.smethod_15(string_0, "Morning"))
-			{
-				if (!TimeOfDayScene.smethod_15(string_0, "Day"))
-				{
-					if (TimeOfDayScene.smethod_15(string_0, "Sunset"))
-					{
-						_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-						_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Sunset;
-					}
-				}
-				else
-				{
-					_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-					_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Day;
-				}
-			}
-			else
-			{
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Morning;
-			}
-		}
-		else
-		{
+		case "Sunset":
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Sunset;
+			break;
+		case "Day":
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Day;
+			break;
+		case "Morning":
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Morning;
+			break;
+		case "Night":
 			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
 			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Night;
+			break;
 		}
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
 		_TyX29AlEBF2URt0abU6bc2VBQvm._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-		this.method_1(gameTime_0);
+		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
 	}
 
 	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, TimeOfDayScene.smethod_17(TimeOfDayScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)));
-		this.method_2(spriteBatch_0);
+		_TyX29AlEBF2URt0abU6bc2VBQvm._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq);
+		base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
 	}
 
 	static void smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)

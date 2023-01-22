@@ -33,10 +33,10 @@ public class KaneNPC : LayerNPC<KaneNPC.EHeads, KaneNPC.EPoses, KaneNPC.EClothes
 	{
 		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 1110;
 		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1965;
-		KaneNPC.smethod_16(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Plate", "Eyeback", "Pupil", "Head"), "Blink");
-		KaneNPC.smethod_17(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Stern, "Stern"), new string[1] { "Dick" });
-		KaneNPC.smethod_19(KaneNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shirt, "Stern Shirt")));
-		KaneNPC.smethod_21(KaneNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shorts, "Stern Shorts")));
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Plate", "Eyeback", "Pupil", "Head")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Stern, "Stern")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Dick");
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shirt, "Stern Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shorts, "Stern Shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
@@ -48,26 +48,26 @@ public class KaneNPC : LayerNPC<KaneNPC.EHeads, KaneNPC.EPoses, KaneNPC.EClothes
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
 	{
-		this.method_0(npclocation_0);
+		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 305f);
-			KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-			KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 305f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		case NPCLocation.Left:
-			KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: false);
-			KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, -260f);
-			KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-			KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -260f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		case NPCLocation.Right:
-			KaneNPC.smethod_22((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, bool_0: true);
-			KaneNPC.smethod_23((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1070f);
-			KaneNPC.smethod_24((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0f);
-			KaneNPC.smethod_25((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 1f);
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1070f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 			break;
 		}
 	}

@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 public static class _XlQgilk5wbs9pucgf8gEovko2zf
 {
-	private static readonly PropertyInfo _2m1r1A4nAJ2cK1CdX6V7NfWkAWv = ((_XlQgilk5wbs9pucgf8gEovko2zf)(object)_XlQgilk5wbs9pucgf8gEovko2zf.smethod_1(typeof(RenderTarget2D).TypeHandle)).method_0("RenderTargetUsage", BindingFlags.Instance | BindingFlags.Public);
+	private static readonly PropertyInfo _2m1r1A4nAJ2cK1CdX6V7NfWkAWv = typeof(RenderTarget2D).GetProperty("RenderTargetUsage", BindingFlags.Instance | BindingFlags.Public);
 
 	public static void _w2YD42TXOY22EP4Mpp7wzDUO4xv(this RenderTarget2D renderTarget2D_0, RenderTargetUsage renderTargetUsage_0)
 	{
 		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
-		_XlQgilk5wbs9pucgf8gEovko2zf.smethod_0(_2m1r1A4nAJ2cK1CdX6V7NfWkAWv, (object)renderTarget2D_0, (object)renderTargetUsage_0, (object[])null);
+		_2m1r1A4nAJ2cK1CdX6V7NfWkAWv.SetValue(renderTarget2D_0, renderTargetUsage_0, null);
 	}
 
 	static void smethod_0(PropertyInfo propertyInfo_0, object object_0, object object_1, object[] object_2)

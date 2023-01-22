@@ -79,18 +79,18 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0130: Unknown result type (might be due to invalid IL or missing references)
-		base._f5ctqAmdNsZ889UjM4LxDm8WGxA();
+		base._gytsCM4ef57F54AqmuiBr238JE0();
 		if (_7sgRQPgr8EJYjFmEXCYagaObJd0)
 		{
 			_4nhWi4RWJVAsAaRiBUYVgLfEiCz(skeletonMeshRenderer_0);
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_5(spriteBatch_0);
+			spriteBatch_0.Begin();
 			Color val = (_IvIFs0Tl6RHdTn3daJXsNCXCNyO ? Color.get_Red() : Color.get_White());
 			_eBuDnRXeABWf8uwfsN15PfKEHw[] smM3y5A19la8hNpeOINXXDeitDH = _smM3y5A19la8hNpeOINXXDeitDH;
 			foreach (_eBuDnRXeABWf8uwfsN15PfKEHw eBuDnRXeABWf8uwfsN15PfKEHw in smM3y5A19la8hNpeOINXXDeitDH)
 			{
 				if (eBuDnRXeABWf8uwfsN15PfKEHw != null)
 				{
-					spriteBatch_0._f5ctqAmdNsZ889UjM4LxDm8WGxA((Texture2D)(object)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK, (Vector2?)null, (Rectangle?)new Rectangle((int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL, (int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf, _tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_6((Texture2D)(object)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK), _tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_7((Texture2D)(object)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK)), (Rectangle?)null, (Vector2?)eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk, 0f, (Vector2?)null, (Color?)(val * eBuDnRXeABWf8uwfsN15PfKEHw._WxTaPaOE8qb7d7anVlwwqCzugAo), (SpriteEffects)0, 0f);
+					spriteBatch_0._f5ctqAmdNsZ889UjM4LxDm8WGxA((Texture2D)(object)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK, (Vector2?)null, (Rectangle?)new Rectangle((int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL, (int)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf, ((Texture2D)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK).get_Width(), ((Texture2D)eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK).get_Height()), (Rectangle?)null, (Vector2?)eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk, 0f, (Vector2?)null, (Color?)(val * eBuDnRXeABWf8uwfsN15PfKEHw._WxTaPaOE8qb7d7anVlwwqCzugAo), (SpriteEffects)0, 0f);
 				}
 			}
 			spriteBatch_0.End();
@@ -116,13 +116,13 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 		if (_xm9p2W8AbxEBdrI3wbC7knvB06R.HasValue && _smM3y5A19la8hNpeOINXXDeitDH[_xm9p2W8AbxEBdrI3wbC7knvB06R.Value] != null)
 		{
 			_eBuDnRXeABWf8uwfsN15PfKEHw eBuDnRXeABWf8uwfsN15PfKEHw = _smM3y5A19la8hNpeOINXXDeitDH[_xm9p2W8AbxEBdrI3wbC7knvB06R.Value];
-			RenderTargetBinding[] renderTargetBinding_ = _tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_8(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW);
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_9(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW, eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK);
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_10(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW, Color.get_Transparent());
+			RenderTargetBinding[] renderTargets = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.GetRenderTargets();
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.SetRenderTarget(eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.get_Transparent());
 			_1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk.X;
 			_1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = eBuDnRXeABWf8uwfsN15PfKEHw._Jh6AK28sBy2bS8ZCoKHP3LX45Uk.Y;
 			_1BgOJ3z4ZUXNS2L4JWf24pr41hB._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, float_0: base._fO7gSlrDDNMoHR4FO5QXAq8fUyA, texture2D_0: _1AqpgY4vB6ly5vxOay6j86rcIEo, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A);
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_11(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW, renderTargetBinding_);
+			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.SetRenderTargets(renderTargets);
 		}
 	}
 
@@ -163,7 +163,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 		{
 			_smM3y5A19la8hNpeOINXXDeitDH[int_0] = new _eBuDnRXeABWf8uwfsN15PfKEHw
 			{
-				_Jh6AK28sBy2bS8ZCoKHP3LX45Uk = new Vector2(_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_13(_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_12(_1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4)) - _YWKqVMq3bCWDIv73VmJykYuZBKN._SjhHztt8d5kOtb7Z2BJKnZZxEKh, _tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_14(_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_12(_1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4)) - _YWKqVMq3bCWDIv73VmJykYuZBKN._xqxFKfudZYzf8RtrC7EB1Ya6FPT),
+				_Jh6AK28sBy2bS8ZCoKHP3LX45Uk = new Vector2(_1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4.get_RootBone().get_WorldX() - _YWKqVMq3bCWDIv73VmJykYuZBKN._SjhHztt8d5kOtb7Z2BJKnZZxEKh, _1BgOJ3z4ZUXNS2L4JWf24pr41hB._4puDGlIwmnebKpz1JXzxe4GDuJ4.get_RootBone().get_WorldY() - _YWKqVMq3bCWDIv73VmJykYuZBKN._xqxFKfudZYzf8RtrC7EB1Ya6FPT),
 				_Z5JOwYZpe1u3WDYizFmDS7dmAcK = new RenderTarget2D(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW, (int)val.X, (int)val.Y),
 				_WxTaPaOE8qb7d7anVlwwqCzugAo = ((int_0 == 0) ? 1f : 0f)
 			};
@@ -194,12 +194,12 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : _QGGOTxZ8aNWGh0hc26wcmx8wm
 		_FdDzmVlp0fgTsGUxfkRfLr0dxtF = true;
 		if (_smM3y5A19la8hNpeOINXXDeitDH[0] != null)
 		{
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_15((GraphicsResource)(object)_smM3y5A19la8hNpeOINXXDeitDH[0]._Z5JOwYZpe1u3WDYizFmDS7dmAcK);
+			((GraphicsResource)_smM3y5A19la8hNpeOINXXDeitDH[0]._Z5JOwYZpe1u3WDYizFmDS7dmAcK).Dispose();
 			_smM3y5A19la8hNpeOINXXDeitDH[0] = null;
 		}
 		if (_smM3y5A19la8hNpeOINXXDeitDH[1] != null)
 		{
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA.smethod_15((GraphicsResource)(object)_smM3y5A19la8hNpeOINXXDeitDH[1]._Z5JOwYZpe1u3WDYizFmDS7dmAcK);
+			((GraphicsResource)_smM3y5A19la8hNpeOINXXDeitDH[1]._Z5JOwYZpe1u3WDYizFmDS7dmAcK).Dispose();
 			_smM3y5A19la8hNpeOINXXDeitDH[1] = null;
 		}
 	}

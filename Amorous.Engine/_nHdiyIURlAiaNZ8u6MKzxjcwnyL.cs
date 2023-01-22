@@ -28,12 +28,12 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_0(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_X();
 		}
 		set
 		{
-			_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_1(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, value);
-			_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_2(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_X(value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.UpdateWorldTransform();
 		}
 	}
 
@@ -41,12 +41,12 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_3(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Y();
 		}
 		set
 		{
-			_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_4(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, value);
-			_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_2(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_Y(value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.UpdateWorldTransform();
 		}
 	}
 
@@ -54,11 +54,11 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_5(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_FlipX();
 		}
 		set
 		{
-			_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_6(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_FlipX(value);
 		}
 	}
 
@@ -66,11 +66,11 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		get
 		{
-			return _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_7(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+			return _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_FlipY();
 		}
 		set
 		{
-			_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_8(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, value);
+			_Q9MbCV832IUbkbrMWYaOkMJU5BhA.set_FlipY(value);
 		}
 	}
 
@@ -78,6 +78,10 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public _nHdiyIURlAiaNZ8u6MKzxjcwnyL(Skeleton skeleton_0, bool bool_0)
 	{
+		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0025: Expected O, but got Unknown
+		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0031: Expected O, but got Unknown
 		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0048: Expected O, but got Unknown
 		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
@@ -86,15 +90,15 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 		//IL_0076: Expected O, but got Unknown
 		_Q9MbCV832IUbkbrMWYaOkMJU5BhA = skeleton_0;
 		_Ssp18W0I7HLX3YToPSudCzKuDjF = bool_0;
-		AnimationStateData animationStateData_ = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_10(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_9(_Q9MbCV832IUbkbrMWYaOkMJU5BhA));
-		_ZVtUyMscIM54gezcLdBBhUCeVAv = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_11(animationStateData_);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_12(_ZVtUyMscIM54gezcLdBBhUCeVAv, new CompleteDelegate(_d8vi3xWGR3jH0bzxGSAJiLYtNKc));
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_13(_ZVtUyMscIM54gezcLdBBhUCeVAv, new StartEndDelegate(_KVZ9mWydLEUb3C7nVtUyDaNJ1wc));
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_14(_ZVtUyMscIM54gezcLdBBhUCeVAv, (EventDelegate)delegate(AnimationState animationState_0, int int_0, Event event_0)
+		AnimationStateData val = new AnimationStateData(_Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Data());
+		_ZVtUyMscIM54gezcLdBBhUCeVAv = new AnimationState(val);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.add_Complete(new CompleteDelegate(_d8vi3xWGR3jH0bzxGSAJiLYtNKc));
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.add_End(new StartEndDelegate(_KVZ9mWydLEUb3C7nVtUyDaNJ1wc));
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.add_Event((EventDelegate)delegate(AnimationState animationState_0, int int_0, Event event_0)
 		{
 			if (_iUyagF1KTeSUlg0raFfzuot3CwC != null)
 			{
-				_iUyagF1KTeSUlg0raFfzuot3CwC(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_53(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_52(event_0)));
+				_iUyagF1KTeSUlg0raFfzuot3CwC(event_0.get_Data().get_Name());
 			}
 		});
 	}
@@ -112,12 +116,12 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _lkaN4ygxDlKvzKEBuD7dRjrU20F()
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_15(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+		_Q9MbCV832IUbkbrMWYaOkMJU5BhA.SetBonesToSetupPose();
 	}
 
 	public void _C5vPbZ72rpVMDWGuHxZuR5FNpAH(string string_0, Action<int> action_0 = null)
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_16(_ZVtUyMscIM54gezcLdBBhUCeVAv, 0, string_0, bool_0: true);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.SetAnimation(0, string_0, true);
 		_HCBewBkFBdxmny4dffH5y6pT7IWA = action_0;
 		_8l6SZQ1ASWukUrnspv0IFQAjpji = false;
 		_1JfcJXW8yr3gQAFuYaMfgav0PSV = 0;
@@ -127,7 +131,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _SPUoP3ABwpgQinJfKUM5qBbYSvr(string string_0, Action action_0 = null)
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_16(_ZVtUyMscIM54gezcLdBBhUCeVAv, 0, string_0, bool_0: false);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.SetAnimation(0, string_0, false);
 		_HCBewBkFBdxmny4dffH5y6pT7IWA = null;
 		_8l6SZQ1ASWukUrnspv0IFQAjpji = false;
 		_1JfcJXW8yr3gQAFuYaMfgav0PSV = 0;
@@ -137,17 +141,17 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _d6HoyBFhu6xkBRCX00ZzeFUnWwF()
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_17(_ZVtUyMscIM54gezcLdBBhUCeVAv);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.ClearTracks();
 	}
 
 	public void _zqRttWc6EZHjk1LAoNrCy0Qamk2(string string_0, string string_1, float float_0)
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_19(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_18(_ZVtUyMscIM54gezcLdBBhUCeVAv), string_0, string_1, float_0);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.get_Data().SetMix(string_0, string_1, float_0);
 	}
 
 	public void _a2lgCWeMj1Hr65gQZxslDkqeUdd(string string_0, bool bool_0 = false, float float_0 = 0f, Action<int> action_0 = null, Action action_1 = null)
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_20(_ZVtUyMscIM54gezcLdBBhUCeVAv, 0, string_0, bool_0, float_0);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.AddAnimation(0, string_0, bool_0, float_0);
 		_HCBewBkFBdxmny4dffH5y6pT7IWA = action_0;
 		_8l6SZQ1ASWukUrnspv0IFQAjpji = false;
 		_1JfcJXW8yr3gQAFuYaMfgav0PSV = 0;
@@ -157,12 +161,12 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _aAoZaDNczeScsMfLlGSfAzey9SQ(string string_0, float float_0)
 	{
-		if (!_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_21(string_0))
+		if (!string.IsNullOrEmpty(string_0))
 		{
-			Slot val = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_22(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, string_0);
+			Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
 			if (val != null)
 			{
-				_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_23(val, float_0);
+				val.set_A(float_0);
 			}
 		}
 	}
@@ -174,14 +178,14 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _VoeevpFh2kLKfHtpPDXWt0TFbuH(string string_0, float float_0, float float_1, float float_2)
 	{
-		if (!_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_21(string_0))
+		if (!string.IsNullOrEmpty(string_0))
 		{
-			Slot val = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_22(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, string_0);
+			Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
 			if (val != null)
 			{
-				_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_24(val, float_0);
-				_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_25(val, float_1);
-				_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_26(val, float_2);
+				val.set_R(float_0);
+				val.set_G(float_1);
+				val.set_B(float_2);
 			}
 		}
 	}
@@ -190,13 +194,13 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
-		Enumerator<Slot> enumerator = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_27(_Q9MbCV832IUbkbrMWYaOkMJU5BhA).GetEnumerator();
+		Enumerator<Slot> enumerator = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Slots().GetEnumerator();
 		try
 		{
 			while (enumerator.MoveNext())
 			{
 				Slot current = enumerator.get_Current();
-				_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_23(current, float_0);
+				current.set_A(float_0);
 			}
 		}
 		finally
@@ -207,43 +211,43 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public bool _3nKd9Dk3YeX87QB5dROwYUzczsN(string string_0, float float_0, float float_1)
 	{
-		if (_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_21(string_0))
+		if (string.IsNullOrEmpty(string_0))
 		{
 			return false;
 		}
-		Slot val = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_22(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, string_0);
-		if (val != null && _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_28(val) is RegionAttachment)
+		Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
+		if (val != null && val.get_Attachment() is RegionAttachment)
 		{
-			Attachment obj = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_28(val);
-			RegionAttachment regionAttachment_ = (RegionAttachment)(object)((obj is RegionAttachment) ? obj : null);
-			float num = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_0(_Q9MbCV832IUbkbrMWYaOkMJU5BhA) + _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_30(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num2 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_3(_Q9MbCV832IUbkbrMWYaOkMJU5BhA) + _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_31(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num3 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_32(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num4 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_33(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num5 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_34(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num6 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_35(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float[] array = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_36(regionAttachment_);
-			float num7 = array[0] * num3 + array[1] * num4 + num;
-			float num8 = array[0] * num5 + array[1] * num6 + num2;
-			float num9 = array[2] * num3 + array[3] * num4 + num;
-			float num10 = array[2] * num5 + array[3] * num6 + num2;
-			float num11 = array[4] * num3 + array[5] * num4 + num;
-			float num12 = array[4] * num5 + array[5] * num6 + num2;
-			float num13 = num7 - num9;
-			float num14 = num8 - num10;
-			float num15 = num11 - num9;
-			float num16 = num12 - num10;
-			float num17 = num13 * num13 + num14 * num14;
-			float num18 = num15 * num15 + num16 * num16;
-			float num19 = float_0 - num9;
-			float num20 = float_1 - num10;
-			float num21 = num19 * num13 + num20 * num14;
-			float num22 = num19 * num15 + num20 * num16;
-			if (0f <= num21 && num21 <= num17)
+			Attachment attachment = val.get_Attachment();
+			RegionAttachment val2 = (RegionAttachment)(object)((attachment is RegionAttachment) ? attachment : null);
+			float num = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_X() + val.get_Bone().get_WorldX();
+			float num2 = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Y() + val.get_Bone().get_WorldY();
+			float m = val.get_Bone().get_M00();
+			float m2 = val.get_Bone().get_M01();
+			float m3 = val.get_Bone().get_M10();
+			float m4 = val.get_Bone().get_M11();
+			float[] offset = val2.get_Offset();
+			float num3 = offset[0] * m + offset[1] * m2 + num;
+			float num4 = offset[0] * m3 + offset[1] * m4 + num2;
+			float num5 = offset[2] * m + offset[3] * m2 + num;
+			float num6 = offset[2] * m3 + offset[3] * m4 + num2;
+			float num7 = offset[4] * m + offset[5] * m2 + num;
+			float num8 = offset[4] * m3 + offset[5] * m4 + num2;
+			float num9 = num3 - num5;
+			float num10 = num4 - num6;
+			float num11 = num7 - num5;
+			float num12 = num8 - num6;
+			float num13 = num9 * num9 + num10 * num10;
+			float num14 = num11 * num11 + num12 * num12;
+			float num15 = float_0 - num5;
+			float num16 = float_1 - num6;
+			float num17 = num15 * num9 + num16 * num10;
+			float num18 = num15 * num11 + num16 * num12;
+			if (0f <= num17 && num17 <= num13)
 			{
-				if (0f <= num22)
+				if (0f <= num18)
 				{
-					return num22 <= num18;
+					return num18 <= num14;
 				}
 				return false;
 			}
@@ -254,7 +258,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0, float float_0 = 1000f)
 	{
-		_ZVtUyMscIM54gezcLdBBhUCeVAv.Update((float)_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_37(gameTime_0).Milliseconds / float_0);
+		_ZVtUyMscIM54gezcLdBBhUCeVAv.Update((float)gameTime_0.get_ElapsedGameTime().Milliseconds / float_0);
 		_ZVtUyMscIM54gezcLdBBhUCeVAv.Apply(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
 		_Q9MbCV832IUbkbrMWYaOkMJU5BhA.UpdateWorldTransform();
 		if (!_OmIU5xZ6Kmv1g8Y6LBtZlc8vCGG)
@@ -280,34 +284,34 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SkeletonMeshRenderer skeletonMeshRenderer_0, Texture2D texture2D_0 = null, Func<int, string, bool> func_0 = null, Color? nullable_0 = null, float float_0 = 1f)
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_38(skeletonMeshRenderer_0, _Ssp18W0I7HLX3YToPSudCzKuDjF);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_39(skeletonMeshRenderer_0, _7Xn1C5tjYnmIif1iZKV8AWsEEbL, _bCjZ3VSXGKyhmykd2zCnQBiSpDf, float_0);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_40(skeletonMeshRenderer_0, _Q9MbCV832IUbkbrMWYaOkMJU5BhA, texture2D_0, func_0, nullable_0);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_41(skeletonMeshRenderer_0);
+		skeletonMeshRenderer_0.set_PremultipliedAlpha(_Ssp18W0I7HLX3YToPSudCzKuDjF);
+		skeletonMeshRenderer_0.Begin(_7Xn1C5tjYnmIif1iZKV8AWsEEbL, _bCjZ3VSXGKyhmykd2zCnQBiSpDf, float_0);
+		skeletonMeshRenderer_0.Draw(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, texture2D_0, func_0, nullable_0);
+		skeletonMeshRenderer_0.End();
 	}
 
 	public Point _0LlFMUVNTAixukJSTpecXFIxdAl(string string_0, out double double_0)
 	{
 		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0111: Unknown result type (might be due to invalid IL or missing references)
-		Slot val = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_22(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, string_0);
-		if (val != null && _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_28(val) is RegionAttachment)
+		Slot val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.FindSlot(string_0);
+		if (val != null && val.get_Attachment() is RegionAttachment)
 		{
-			Attachment obj = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_28(val);
-			RegionAttachment regionAttachment_ = (RegionAttachment)(object)((obj is RegionAttachment) ? obj : null);
-			float num = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_0(_Q9MbCV832IUbkbrMWYaOkMJU5BhA) + _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_30(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num2 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_3(_Q9MbCV832IUbkbrMWYaOkMJU5BhA) + _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_31(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num3 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_32(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num4 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_33(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num5 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_34(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float num6 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_35(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_29(val));
-			float[] array = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_36(regionAttachment_);
-			float num7 = array[2] * num3 + array[3] * num4 + num;
-			float num8 = array[2] * num5 + array[3] * num6 + num2;
-			float num9 = array[4] * num3 + array[5] * num4 + num;
-			float num10 = array[4] * num5 + array[5] * num6 + num2;
-			double_0 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_42((double)((num10 - num8) / (num9 - num7)));
-			return new Point((int)num7, (int)num8);
+			Attachment attachment = val.get_Attachment();
+			RegionAttachment val2 = (RegionAttachment)(object)((attachment is RegionAttachment) ? attachment : null);
+			float num = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_X() + val.get_Bone().get_WorldX();
+			float num2 = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Y() + val.get_Bone().get_WorldY();
+			float m = val.get_Bone().get_M00();
+			float m2 = val.get_Bone().get_M01();
+			float m3 = val.get_Bone().get_M10();
+			float m4 = val.get_Bone().get_M11();
+			float[] offset = val2.get_Offset();
+			float num3 = offset[2] * m + offset[3] * m2 + num;
+			float num4 = offset[2] * m3 + offset[3] * m4 + num2;
+			float num5 = offset[4] * m + offset[5] * m2 + num;
+			float num6 = offset[4] * m3 + offset[5] * m4 + num2;
+			double_0 = Math.Atan((num6 - num4) / (num5 - num3));
+			return new Point((int)num3, (int)num4);
 		}
 		double_0 = 0.0;
 		return Point.get_Zero();
@@ -315,33 +319,33 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public void _WPy6ICx3LVoejBaexyOoKGnX9jD(string string_0, float float_0)
 	{
-		Animation val = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_43(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_9(_Q9MbCV832IUbkbrMWYaOkMJU5BhA), string_0);
+		Animation val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Data().FindAnimation(string_0);
 		if (val == null)
 		{
-			throw _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_45(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_44("Animation not found: ", string_0));
+			throw new ArgumentException("Animation not found: " + string_0);
 		}
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_46(val, _Q9MbCV832IUbkbrMWYaOkMJU5BhA, 0f, float_0, bool_0: false, (ExposedList<Event>)null);
+		val.Apply(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, 0f, float_0, false, (ExposedList<Event>)null);
 	}
 
 	public void _EasyNtsMRc39NOvWai1JUYTqcds(string string_0)
 	{
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_47(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, string_0);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_48(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
+		_Q9MbCV832IUbkbrMWYaOkMJU5BhA.SetSkin(string_0);
+		_Q9MbCV832IUbkbrMWYaOkMJU5BhA.SetSlotsToSetupPose();
 	}
 
 	public void _eCEWplYE5FdfYPYTrwfyRlIfd6i(string string_0, string string_1)
 	{
-		Slot val = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_22(_4puDGlIwmnebKpz1JXzxe4GDuJ4, string_0);
-		Slot val2 = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_22(_4puDGlIwmnebKpz1JXzxe4GDuJ4, string_1);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_49(_4puDGlIwmnebKpz1JXzxe4GDuJ4).Remove(val);
-		int num = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_49(_4puDGlIwmnebKpz1JXzxe4GDuJ4).IndexOf(val2);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_49(_4puDGlIwmnebKpz1JXzxe4GDuJ4).Insert(num + 1, val);
+		Slot val = _4puDGlIwmnebKpz1JXzxe4GDuJ4.FindSlot(string_0);
+		Slot val2 = _4puDGlIwmnebKpz1JXzxe4GDuJ4.FindSlot(string_1);
+		_4puDGlIwmnebKpz1JXzxe4GDuJ4.get_DrawOrder().Remove(val);
+		int num = _4puDGlIwmnebKpz1JXzxe4GDuJ4.get_DrawOrder().IndexOf(val2);
+		_4puDGlIwmnebKpz1JXzxe4GDuJ4.get_DrawOrder().Insert(num + 1, val);
 	}
 
 	public void _49JXjKJqaPZw5nEmhHdAENuBtLJ(string string_0, float float_0)
 	{
-		Animation animation_ = _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_43(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_9(_Q9MbCV832IUbkbrMWYaOkMJU5BhA), string_0);
-		_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_51(animation_, _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_50(animation_) + float_0);
+		Animation val = _Q9MbCV832IUbkbrMWYaOkMJU5BhA.get_Data().FindAnimation(string_0);
+		val.set_Duration(val.get_Duration() + float_0);
 	}
 
 	[CompilerGenerated]
@@ -349,7 +353,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	{
 		if (_iUyagF1KTeSUlg0raFfzuot3CwC != null)
 		{
-			_iUyagF1KTeSUlg0raFfzuot3CwC(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_53(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_52(event_0)));
+			_iUyagF1KTeSUlg0raFfzuot3CwC(event_0.get_Data().get_Name());
 		}
 	}
 

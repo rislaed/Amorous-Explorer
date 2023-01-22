@@ -11,8 +11,8 @@ public class _uqydQVaCmCvK7zzWs5W4gZFpKBu : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
 	{
 		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _uqydQVaCmCvK7zzWs5W4gZFpKBu.smethod_0(texture2D_0);
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = _uqydQVaCmCvK7zzWs5W4gZFpKBu.smethod_1(texture2D_0);
+		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = texture2D_0.get_Width();
+		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = texture2D_0.get_Height();
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)

@@ -5,15 +5,15 @@ public class ArtGalleryScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ArtGalleryScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		if (ArtGalleryScene.smethod_14())
+		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			ArtGalleryScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ArtGallery/Background-SFW", 0, 0);
+			_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/ArtGallery/Background-SFW", 0, 0);
 		}
 		else
 		{
-			ArtGalleryScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ArtGallery/Background", 0, 0);
+			_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/ArtGallery/Background", 0, 0);
 		}
-		ArtGalleryScene.smethod_16("Assets/Music/RyeGuyHead - Outdated", 0.4f);
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/RyeGuyHead - Outdated", 0.4f);
 	}
 
 	static bool smethod_14()

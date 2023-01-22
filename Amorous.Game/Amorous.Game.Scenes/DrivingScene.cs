@@ -44,30 +44,30 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public DrivingScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		DrivingScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Day");
-		DrivingScene.smethod_15("Assets/Music/AudioDriver - Detective's Scoop", 0.4f);
+		_6hE3geqxrB1vCirtSWHxIJjlTQB("Day");
+		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/AudioDriver - Detective's Scoop", 0.4f);
 	}
 
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
 	{
-		this.method_0(string_0);
-		_2WuocFtGsvuqlLRNzg1JvWYdCPu = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Background"), 0, 0);
-		_keMqzR2MH8pk2eRBjpmBvvHsKkH = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Background 2"), 0, 680);
-		_NtI6JcCZUIU6eqmZEqieFBtS51g = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Foreground"), 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Tree A"), 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Tree B"), 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Tree C"), 0, 0);
-		_HuRva9O1Dird7HCHNvEYAhbEXEx = DrivingScene.smethod_18(0, _cmNp2s95voDHTlRfEo0WKjoNC5D.Length - 1);
+		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
+		_2WuocFtGsvuqlLRNzg1JvWYdCPu = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Driving/" + string_0 + " Background", 0, 0);
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Driving/" + string_0 + " Background 2", 0, 680);
+		_NtI6JcCZUIU6eqmZEqieFBtS51g = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Driving/" + string_0 + " Foreground", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Driving/" + string_0 + " Tree A", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Driving/" + string_0 + " Tree B", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Driving/" + string_0 + " Tree C", 0, 0);
+		_HuRva9O1Dird7HCHNvEYAhbEXEx = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, _cmNp2s95voDHTlRfEo0WKjoNC5D.Length - 1);
 		_jLqsVc7ZjWokEg8zjm4aue7Vfwr();
-		_rn1x58VMBD9DAD7YIR46LqTEfMP = DrivingScene.smethod_18(-1920, 0);
-		_DEdZRCjltS13jKpC2YJkZY838ZK = DrivingScene.smethod_18(-1920, 0);
-		_5F3aFNnUdPR4Jd8EFDxoRL2ITlV = DrivingScene.smethod_18(-1920, 0);
+		_rn1x58VMBD9DAD7YIR46LqTEfMP = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(-1920, 0);
+		_DEdZRCjltS13jKpC2YJkZY838ZK = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(-1920, 0);
+		_5F3aFNnUdPR4Jd8EFDxoRL2ITlV = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(-1920, 0);
 	}
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		this.method_1(gameTime_0);
-		float num = (float)(1280.0 * DrivingScene.smethod_19(gameTime_0).TotalSeconds);
+		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		float num = (float)(1280.0 * gameTime_0.get_ElapsedGameTime().TotalSeconds);
 		_rn1x58VMBD9DAD7YIR46LqTEfMP -= num * 0.25f;
 		if (_rn1x58VMBD9DAD7YIR46LqTEfMP < -3840f)
 		{
@@ -95,36 +95,36 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			_HuRva9O1Dird7HCHNvEYAhbEXEx = 0;
 		}
 		_ywjql7DttUMPriZ95ycoakuivHF = _cmNp2s95voDHTlRfEo0WKjoNC5D[_HuRva9O1Dird7HCHNvEYAhbEXEx];
-		DrivingScene.smethod_21(_ywjql7DttUMPriZ95ycoakuivHF, DrivingScene.smethod_20());
+		_ywjql7DttUMPriZ95ycoakuivHF._PXBbI2AED2MyzkuXicgwalICf26 = _boyt8NIMtKsAGSTcjHeL0WMbFxs._gbHIDTfALwKhXkamYJbKsAUKL2E();
 	}
 
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
 		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
-		this.method_2(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
-		DrivingScene.smethod_22(spriteBatch_0, (SpriteSortMode)0, BlendState.NonPremultiplied, (SamplerState)null, (DepthStencilState)null, (RasterizerState)null, (Effect)null, (Matrix?)null);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_2WuocFtGsvuqlLRNzg1JvWYdCPu, spriteBatch_0);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_keMqzR2MH8pk2eRBjpmBvvHsKkH, _rn1x58VMBD9DAD7YIR46LqTEfMP);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_keMqzR2MH8pk2eRBjpmBvvHsKkH, spriteBatch_0);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_keMqzR2MH8pk2eRBjpmBvvHsKkH, _rn1x58VMBD9DAD7YIR46LqTEfMP + 1920f);
-		DrivingScene.smethod_21(_keMqzR2MH8pk2eRBjpmBvvHsKkH, bool_0: true);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_keMqzR2MH8pk2eRBjpmBvvHsKkH, spriteBatch_0);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_keMqzR2MH8pk2eRBjpmBvvHsKkH, _rn1x58VMBD9DAD7YIR46LqTEfMP + 3840f);
-		DrivingScene.smethod_21(_keMqzR2MH8pk2eRBjpmBvvHsKkH, bool_0: false);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_keMqzR2MH8pk2eRBjpmBvvHsKkH, spriteBatch_0);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_SwpBYcoXXTll45NBeycIpflE8r, _5F3aFNnUdPR4Jd8EFDxoRL2ITlV);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_ywjql7DttUMPriZ95ycoakuivHF, _5F3aFNnUdPR4Jd8EFDxoRL2ITlV + 1920f);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_SwpBYcoXXTll45NBeycIpflE8r, spriteBatch_0);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_ywjql7DttUMPriZ95ycoakuivHF, spriteBatch_0);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_NtI6JcCZUIU6eqmZEqieFBtS51g, _DEdZRCjltS13jKpC2YJkZY838ZK);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_NtI6JcCZUIU6eqmZEqieFBtS51g, spriteBatch_0);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_NtI6JcCZUIU6eqmZEqieFBtS51g, _DEdZRCjltS13jKpC2YJkZY838ZK + 1920f);
-		DrivingScene.smethod_21(_NtI6JcCZUIU6eqmZEqieFBtS51g, bool_0: true);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_NtI6JcCZUIU6eqmZEqieFBtS51g, spriteBatch_0);
-		DrivingScene.smethod_24((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_NtI6JcCZUIU6eqmZEqieFBtS51g, _DEdZRCjltS13jKpC2YJkZY838ZK + 3840f);
-		DrivingScene.smethod_21(_NtI6JcCZUIU6eqmZEqieFBtS51g, bool_0: false);
-		DrivingScene.smethod_23((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_NtI6JcCZUIU6eqmZEqieFBtS51g, spriteBatch_0);
-		DrivingScene.smethod_25(spriteBatch_0);
+		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
+		spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH((SpriteSortMode)0, BlendState.NonPremultiplied);
+		_2WuocFtGsvuqlLRNzg1JvWYdCPu._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _rn1x58VMBD9DAD7YIR46LqTEfMP;
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _rn1x58VMBD9DAD7YIR46LqTEfMP + 1920f;
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._PXBbI2AED2MyzkuXicgwalICf26 = true;
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _rn1x58VMBD9DAD7YIR46LqTEfMP + 3840f;
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._PXBbI2AED2MyzkuXicgwalICf26 = false;
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_SwpBYcoXXTll45NBeycIpflE8r._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _5F3aFNnUdPR4Jd8EFDxoRL2ITlV;
+		_ywjql7DttUMPriZ95ycoakuivHF._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _5F3aFNnUdPR4Jd8EFDxoRL2ITlV + 1920f;
+		_SwpBYcoXXTll45NBeycIpflE8r._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_ywjql7DttUMPriZ95ycoakuivHF._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _DEdZRCjltS13jKpC2YJkZY838ZK;
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _DEdZRCjltS13jKpC2YJkZY838ZK + 1920f;
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._PXBbI2AED2MyzkuXicgwalICf26 = true;
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._7Xn1C5tjYnmIif1iZKV8AWsEEbL = _DEdZRCjltS13jKpC2YJkZY838ZK + 3840f;
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._PXBbI2AED2MyzkuXicgwalICf26 = false;
+		_NtI6JcCZUIU6eqmZEqieFBtS51g._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		spriteBatch_0.End();
 	}
 
 	static void smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)
