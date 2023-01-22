@@ -50,11 +50,6 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				_EtoN5lDbDEKHh3WWgnYIT2zV8s(obj: true);
 			}
 		}
-
-		static string smethod_0(string string_0, object object_0)
-		{
-			return string.Format(string_0, object_0);
-		}
 	}
 
 	[CompilerGenerated]
@@ -145,16 +140,6 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 		internal void _4Xr38jW5e17508uGSVjYbO0jqFo()
 		{
 			_EtoN5lDbDEKHh3WWgnYIT2zV8s(obj: true);
-		}
-
-		static string smethod_0(string string_0, object object_0, object object_1)
-		{
-			return string.Format(string_0, object_0, object_1);
-		}
-
-		static string smethod_1(string string_0, object object_0)
-		{
-			return string.Format(string_0, object_0);
 		}
 	}
 

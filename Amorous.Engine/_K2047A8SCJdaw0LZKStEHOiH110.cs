@@ -25,29 +25,4 @@ public static class _K2047A8SCJdaw0LZKStEHOiH110
 		using StreamReader streamReader = new StreamReader(File.OpenRead(string_0));
 		return streamReader.ReadToEnd();
 	}
-
-	static FileStream smethod_0(string string_0)
-	{
-		return File.OpenRead(string_0);
-	}
-
-	static GZipStream smethod_1(Stream stream_0, CompressionMode compressionMode_0)
-	{
-		return new GZipStream(stream_0, compressionMode_0);
-	}
-
-	static StreamReader smethod_2(Stream stream_0)
-	{
-		return new StreamReader(stream_0);
-	}
-
-	static string smethod_3(TextReader textReader_0)
-	{
-		return textReader_0.ReadToEnd();
-	}
-
-	static void smethod_4(IDisposable idisposable_0)
-	{
-		idisposable_0.Dispose();
-	}
 }

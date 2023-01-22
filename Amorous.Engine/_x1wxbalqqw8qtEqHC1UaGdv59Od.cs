@@ -99,14 +99,4 @@ public class _x1wxbalqqw8qtEqHC1UaGdv59Od : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	{
 		_3pSkuXQLrbxfnmDHjLbcxrYNIfk = false;
 	}
-
-	static int smethod_0(Texture2D texture2D_0)
-	{
-		return texture2D_0.Width;
-	}
-
-	static int smethod_1(Texture2D texture2D_0)
-	{
-		return texture2D_0.Height;
-	}
 }

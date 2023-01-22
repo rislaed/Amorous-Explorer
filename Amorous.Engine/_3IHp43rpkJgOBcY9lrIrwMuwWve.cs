@@ -47,19 +47,4 @@ public class _3IHp43rpkJgOBcY9lrIrwMuwWve : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
 	{
 	}
-
-	static Type smethod_0(object object_0)
-	{
-		return object_0.GetType();
-	}
-
-	static string smethod_1(MemberInfo memberInfo_0)
-	{
-		return memberInfo_0.Name;
-	}
-
-	static string smethod_2(string string_0, string string_1)
-	{
-		return string_0 + string_1;
-	}
 }

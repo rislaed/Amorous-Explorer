@@ -138,49 +138,4 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		{
 		}
 	}
-
-	static Desktop smethod_0()
-	{
-		return new Desktop();
-	}
-
-	static Skin smethod_1()
-	{
-		return Gui.GenerateStandardSkin();
-	}
-
-	static void smethod_2(Desktop desktop_0, Skin skin_0)
-	{
-		desktop_0.Skin = skin_0;
-	}
-
-	static Frame smethod_3()
-	{
-		return new Frame();
-	}
-
-	static void smethod_4(Control control_0, DockStyle dockStyle_0)
-	{
-		control_0.Dock = dockStyle_0;
-	}
-
-	static void smethod_5(Control control_0, string string_0)
-	{
-		control_0.Style = string_0;
-	}
-
-	static void smethod_6(Desktop desktop_0)
-	{
-		desktop_0.Update();
-	}
-
-	static TimeSpan smethod_7(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
-
-	static void smethod_8(Desktop desktop_0)
-	{
-		desktop_0.Draw();
-	}
 }

@@ -11,14 +11,4 @@ public class ZenithDate1PostMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("ZenithDate");
 	}
-
-	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE;
-	}
-
-	static void smethod_15(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0)
-	{
-		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._xyl3Tv5KdR5eezDgagxbBcS3cwt(string_0);
-	}
 }

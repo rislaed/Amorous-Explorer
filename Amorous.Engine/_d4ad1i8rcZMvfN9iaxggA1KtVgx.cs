@@ -36,9 +36,4 @@ public class _d4ad1i8rcZMvfN9iaxggA1KtVgx : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		}
 		spriteBatch_0.Draw(_eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
 	}
-
-	static void smethod_0(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2 vector2_0, Color color_0)
-	{
-		spriteBatch_0.Draw(texture2D_0, vector2_0, color_0);
-	}
 }

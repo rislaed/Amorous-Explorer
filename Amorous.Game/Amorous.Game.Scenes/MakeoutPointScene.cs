@@ -38,19 +38,4 @@ public class MakeoutPointScene : TimeOfDayScene
 			base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
 		}
 	}
-
-	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_18(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._0O8D0mBgmrh0sLOGcLVvGNOHKLCA(string_0, string_1, int_0, int_1);
-	}
-
-	static void smethod_19(string string_0, float float_0)
-	{
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc(string_0, float_0);
-	}
-
-	static bool smethod_20(string string_0, string string_1)
-	{
-		return string_0 == string_1;
-	}
 }

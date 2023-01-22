@@ -242,36 +242,6 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 				break;
 			}
 		}
-
-		static string smethod_0(string string_0, string string_1, string string_2)
-		{
-			return string_0.Replace(string_1, string_2);
-		}
-
-		static string smethod_1(string string_0)
-		{
-			return string_0.Trim();
-		}
-
-		static bool smethod_2(string string_0, string string_1)
-		{
-			return string_0 == string_1;
-		}
-
-		static bool smethod_3(string string_0)
-		{
-			return string.IsNullOrEmpty(string_0);
-		}
-
-		static int smethod_4(string string_0)
-		{
-			return string_0.Length;
-		}
-
-		static char smethod_5(string string_0, int int_0)
-		{
-			return string_0[int_0];
-		}
 	}
 
 	private class _W4jOxbRDzppFv0IAFpA5Blo7CjUA
@@ -348,51 +318,6 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 				text2 += text.Substring(num);
 			}
 			return text2;
-		}
-
-		static int smethod_0(string string_0)
-		{
-			return string_0.Length;
-		}
-
-		static string smethod_1(string string_0)
-		{
-			return string_0.Trim();
-		}
-
-		static char smethod_2(string string_0, int int_0)
-		{
-			return string_0[int_0];
-		}
-
-		static bool smethod_3(string string_0)
-		{
-			return string.IsNullOrEmpty(string_0);
-		}
-
-		static string smethod_4(string string_0, int int_0, int int_1)
-		{
-			return string_0.Substring(int_0, int_1);
-		}
-
-		static int smethod_5(string string_0, char char_0)
-		{
-			return string_0.IndexOf(char_0);
-		}
-
-		static string smethod_6(string string_0, string string_1)
-		{
-			return string_0 + string_1;
-		}
-
-		static int smethod_7(string string_0, char char_0, int int_0)
-		{
-			return string_0.IndexOf(char_0, int_0);
-		}
-
-		static string smethod_8(string string_0, int int_0)
-		{
-			return string_0.Substring(int_0);
 		}
 	}
 
@@ -1015,90 +940,5 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 	private bool _ykZEKzGNfZ5hHHun0hWpJGQDzBp(ListBoxItem listBoxItem_0)
 	{
 		return (DialogueSpeed)listBoxItem_0.Value == _tAC7ojbHHd15LKk7rGbelW2nGWN;
-	}
-
-	static int smethod_0(Texture2D texture2D_0)
-	{
-		return texture2D_0.Width;
-	}
-
-	static int smethod_1(Texture2D texture2D_0)
-	{
-		return texture2D_0.Height;
-	}
-
-	static Desktop smethod_2()
-	{
-		return new Desktop();
-	}
-
-	static Skin smethod_3()
-	{
-		return Gui.GenerateStandardSkin();
-	}
-
-	static void smethod_4(Desktop desktop_0, Skin skin_0)
-	{
-		desktop_0.Skin = skin_0;
-	}
-
-	static ActiveList<ListBoxItem> smethod_5(DropDownList dropDownList_0)
-	{
-		return dropDownList_0.Items;
-	}
-
-	static void smethod_6(DropDownList dropDownList_0, ListBoxItem listBoxItem_0)
-	{
-		dropDownList_0.SelectedItem = listBoxItem_0;
-	}
-
-	static void smethod_7(CheckBox checkBox_0, bool bool_0)
-	{
-		checkBox_0.Checked = bool_0;
-	}
-
-	static void smethod_8(Desktop desktop_0)
-	{
-		desktop_0.Update();
-	}
-
-	static TimeSpan smethod_9(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
-
-	static void smethod_10(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.Begin();
-	}
-
-	static void smethod_11(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2 vector2_0, Color color_0)
-	{
-		spriteBatch_0.Draw(texture2D_0, vector2_0, color_0);
-	}
-
-	static bool smethod_12(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static void smethod_13(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.End();
-	}
-
-	static void smethod_14(Desktop desktop_0)
-	{
-		desktop_0.Draw();
-	}
-
-	static object smethod_15(ListBoxItem listBoxItem_0)
-	{
-		return listBoxItem_0.Value;
-	}
-
-	static bool smethod_16(CheckBox checkBox_0)
-	{
-		return checkBox_0.Checked;
 	}
 }

@@ -33,9 +33,4 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<DelayEv
 			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 		}
 	}
-
-	static TimeSpan smethod_0(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
 }

@@ -11,9 +11,4 @@ public class ZenithDate1MiniGameScene : ShootingRangeMiniGameScene
 	{
 		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._OxLRmpxixplTKChiTPUKAx4uTLG<ZenithDate1PostMiniGameScene>();
 	}
-
-	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_36(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE;
-	}
 }

@@ -31,14 +31,4 @@ public class _uqydQVaCmCvK7zzWs5W4gZFpKBu : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	{
 		base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._HXLRmt9GqcmA9GTG5xzRKNu3QpF(_Ko8EyRGBPblyaAEHREGGfcgE0A7);
 	}
-
-	static int smethod_0(Texture2D texture2D_0)
-	{
-		return texture2D_0.Width;
-	}
-
-	static int smethod_1(Texture2D texture2D_0)
-	{
-		return texture2D_0.Height;
-	}
 }

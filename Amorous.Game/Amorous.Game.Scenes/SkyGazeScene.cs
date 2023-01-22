@@ -60,44 +60,4 @@ public class SkyGazeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1920f;
 		}
 	}
-
-	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._0O8D0mBgmrh0sLOGcLVvGNOHKLCA(string_0, string_1, int_0, int_1);
-	}
-
-	static int smethod_15(int int_0, int int_1)
-	{
-		return _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(int_0, int_1);
-	}
-
-	static void smethod_16(string string_0, float float_0)
-	{
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc(string_0, float_0);
-	}
-
-	void method_0(GameTime gameTime_0)
-	{
-		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-	}
-
-	static TimeSpan smethod_17(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
-
-	static float smethod_18(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0)
-	{
-		return _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._7Xn1C5tjYnmIif1iZKV8AWsEEbL;
-	}
-
-	static void smethod_19(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0, float float_0)
-	{
-		_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._7Xn1C5tjYnmIif1iZKV8AWsEEbL = float_0;
-	}
-
-	static int smethod_20(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0)
-	{
-		return _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._je8rVfyg4zywmqSi4Ozx1z7wJ4b;
-	}
 }

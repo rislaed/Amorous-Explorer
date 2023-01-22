@@ -30,7 +30,7 @@ public abstract class _RlrsL89bialFQa9mzWurgsdr6FK<T>
 		{
 			return;
 		}
-		_XTvGE1JB69E9GLYnSRCwUVGb5PR -= _RlrsL89bialFQa9mzWurgsdr6FK<T>.smethod_0(gameTime_0).Milliseconds;
+		_XTvGE1JB69E9GLYnSRCwUVGb5PR -= gameTime_0.ElapsedGameTime.Milliseconds;
 		if (_XTvGE1JB69E9GLYnSRCwUVGb5PR <= 0)
 		{
 			_XTvGE1JB69E9GLYnSRCwUVGb5PR = 0;
@@ -76,10 +76,5 @@ public abstract class _RlrsL89bialFQa9mzWurgsdr6FK<T>
 		_3wk7bXUbhNqSQ9kMD9hieEubOhG = gparam_0;
 		_XTvGE1JB69E9GLYnSRCwUVGb5PR = 0;
 		_O8DUpKIpqikHVGPGwFwT9XO5gPb = null;
-	}
-
-	static TimeSpan smethod_0(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
 	}
 }

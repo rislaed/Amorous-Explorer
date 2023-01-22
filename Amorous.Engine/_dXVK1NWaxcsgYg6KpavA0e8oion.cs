@@ -70,29 +70,4 @@ public static class _dXVK1NWaxcsgYg6KpavA0e8oion
 		blendState_0 = blendState_0 ?? BlendState.AlphaBlend;
 		samplerState_0 = samplerState_0 ?? SamplerState.LinearClamp;
 	}
-
-	static void smethod_0(SpriteBatch spriteBatch_0, SpriteFont spriteFont_0, string string_0, Vector2 vector2_0, Color color_0)
-	{
-		spriteBatch_0.DrawString(spriteFont_0, string_0, vector2_0, color_0);
-	}
-
-	static InvalidOperationException smethod_1(string string_0)
-	{
-		return new InvalidOperationException(string_0);
-	}
-
-	static void smethod_2(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2 vector2_0, Rectangle? nullable_0, Color color_0, float float_0, Vector2 vector2_1, Vector2 vector2_2, SpriteEffects spriteEffects_0, float float_1)
-	{
-		spriteBatch_0.Draw(texture2D_0, vector2_0, nullable_0, color_0, float_0, vector2_1, vector2_2, spriteEffects_0, float_1);
-	}
-
-	static void smethod_3(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Rectangle rectangle_0, Rectangle? nullable_0, Color color_0, float float_0, Vector2 vector2_0, SpriteEffects spriteEffects_0, float float_1)
-	{
-		spriteBatch_0.Draw(texture2D_0, rectangle_0, nullable_0, color_0, float_0, vector2_0, spriteEffects_0, float_1);
-	}
-
-	static void smethod_4(SpriteBatch spriteBatch_0, SpriteSortMode spriteSortMode_0, BlendState blendState_0, SamplerState samplerState_0, DepthStencilState depthStencilState_0, RasterizerState rasterizerState_0, Effect effect_0, Matrix matrix_0)
-	{
-		spriteBatch_0.Begin(spriteSortMode_0, blendState_0, samplerState_0, depthStencilState_0, rasterizerState_0, effect_0, matrix_0);
-	}
 }

@@ -66,19 +66,4 @@ public class _rmc1e7Ng50C4uLmgllAoRtxaZiB : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	{
 		_3pSkuXQLrbxfnmDHjLbcxrYNIfk = false;
 	}
-
-	static int smethod_0(Texture2D texture2D_0)
-	{
-		return texture2D_0.Width;
-	}
-
-	static int smethod_1(Texture2D texture2D_0)
-	{
-		return texture2D_0.Height;
-	}
-
-	static TimeSpan smethod_2(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
 }

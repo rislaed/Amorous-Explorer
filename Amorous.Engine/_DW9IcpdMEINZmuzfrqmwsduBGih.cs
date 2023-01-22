@@ -100,7 +100,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 			for (int i = 0; i < 1; i++)
 			{
 				_ = 0;
-				if (_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_5("autosave"))
+				if (File.Exists("autosave"))
 				{
 					DateTime lastWriteTime = File.GetLastWriteTime(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(0, "autosave"));
 					list.Add(new _3CCr8Bt1rkuzt0M6gYLbceJGV0p
@@ -125,7 +125,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 		}
 		for (int j = 0; j < 10; j++)
 		{
-			if (_DW9IcpdMEINZmuzfrqmwsduBGih.smethod_5("save"))
+			if (File.Exists("save"))
 			{
 				DateTime lastWriteTime2 = File.GetLastWriteTime(_8tmmqFhFpUnpTGEL7HpnRhEGP7h(j));
 				list.Add(new _3CCr8Bt1rkuzt0M6gYLbceJGV0p
@@ -199,95 +199,5 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 			_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string.Empty,
 			_B3FsRMcQWBXzFf3nLOBKzncessO = num
 		};
-	}
-
-	static string smethod_0(object object_0, Formatting formatting_0, JsonSerializerSettings jsonSerializerSettings_0)
-	{
-		return JsonConvert.SerializeObject(object_0, formatting_0, jsonSerializerSettings_0);
-	}
-
-	static void smethod_1(string string_0, string string_1)
-	{
-		File.WriteAllText(string_0, string_1);
-	}
-
-	static string smethod_2(string string_0)
-	{
-		return File.ReadAllText(string_0);
-	}
-
-	static InvalidDataException smethod_3(string string_0)
-	{
-		return new InvalidDataException(string_0);
-	}
-
-	static string smethod_4(object object_0)
-	{
-		return object_0.ToString();
-	}
-
-	static bool smethod_5(string string_0)
-	{
-		return File.Exists(string_0);
-	}
-
-	static bool smethod_6(string string_0)
-	{
-		return Directory.Exists(string_0);
-	}
-
-	static DirectoryInfo smethod_7(string string_0)
-	{
-		return Directory.CreateDirectory(string_0);
-	}
-
-	static string smethod_8(string string_0, object object_0, object object_1)
-	{
-		return string.Format(string_0, object_0, object_1);
-	}
-
-	static string smethod_9(string string_0, string string_1)
-	{
-		return Path.Combine(string_0, string_1);
-	}
-
-	static DateTime smethod_10(string string_0)
-	{
-		return File.GetLastWriteTime(string_0);
-	}
-
-	static string smethod_11(string string_0, object object_0)
-	{
-		return string.Format(string_0, object_0);
-	}
-
-	static bool smethod_12(string string_0, string string_1)
-	{
-		return string_0 == string_1;
-	}
-
-	static AppDomain smethod_13()
-	{
-		return AppDomain.CurrentDomain;
-	}
-
-	static string smethod_14(AppDomain appDomain_0)
-	{
-		return appDomain_0.BaseDirectory;
-	}
-
-	static JsonSerializerSettings smethod_15()
-	{
-		return new JsonSerializerSettings();
-	}
-
-	static void smethod_16(JsonSerializerSettings jsonSerializerSettings_0, TypeNameHandling typeNameHandling_0)
-	{
-		jsonSerializerSettings_0.TypeNameHandling = typeNameHandling_0;
-	}
-
-	static IList<JsonConverter> smethod_17(JsonSerializerSettings jsonSerializerSettings_0)
-	{
-		return jsonSerializerSettings_0.Converters;
 	}
 }

@@ -35,9 +35,4 @@ public class _hqmu3NsKXqziXGfVh3dt79G0fye
 			_G6ytq2szip28Pty4dJdow3N4n7H[text].Play(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH * float_0, 0f, 0f);
 		}
 	}
-
-	static bool smethod_0(SoundEffect soundEffect_0, float float_0, float float_1, float float_2)
-	{
-		return soundEffect_0.Play(float_0, float_1, float_2);
-	}
 }

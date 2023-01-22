@@ -43,24 +43,4 @@ public abstract class ClubStaticNPC : LayerNPC<ClubStaticNPC.EHeads, ClubStaticN
 		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
 		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);
 	}
-
-	static string smethod_16(string string_0, object object_0)
-	{
-		return string.Format(string_0, object_0);
-	}
-
-	static _EZ0kOLXoEoEfWGQDdTbNqaPzDUh smethod_17(_EZ0kOLXoEoEfWGQDdTbNqaPzDUh _EZ0kOLXoEoEfWGQDdTbNqaPzDUh_0)
-	{
-		return _EZ0kOLXoEoEfWGQDdTbNqaPzDUh_0._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-	}
-
-	static _EZ0kOLXoEoEfWGQDdTbNqaPzDUh smethod_18(_EZ0kOLXoEoEfWGQDdTbNqaPzDUh _EZ0kOLXoEoEfWGQDdTbNqaPzDUh_0)
-	{
-		return _EZ0kOLXoEoEfWGQDdTbNqaPzDUh_0._dUWotuFGWMaIlD1IFkXcXUhjchR();
-	}
-
-	void method_0()
-	{
-		base._g9Sx54kMPiHz5jrqWh4Kb1pTijH();
-	}
 }

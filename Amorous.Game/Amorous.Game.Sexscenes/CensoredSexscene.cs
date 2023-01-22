@@ -73,21 +73,6 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		{
 			spriteBatch_0.Draw(texture2D_0, new Rectangle((int)_nD28BmrDaEzCHelTAa14TKyuSyG, (int)_LkckKdvuh9GaAwn7XojfbJBd91r, 128, 128), null, Color.White * _AQwQu1ldCtpbkD5F9oEByJdCnWaA, MathHelper.ToRadians(_u8pBof2EYEcHCEDxEtA27OOeLmVb), new Vector2(64f, 64f), SpriteEffects.None, 0f);
 		}
-
-		static int smethod_0(int int_0, int int_1)
-		{
-			return _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(int_0, int_1);
-		}
-
-		static float smethod_1(float float_0, float float_1)
-		{
-			return _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(float_0, float_1);
-		}
-
-		static double smethod_2(double double_0)
-		{
-			return Math.Sin(double_0);
-		}
 	}
 
 	private const int _nqUCZ5ck6SfD47CNEeTDsDMAThLA = 10;
@@ -202,75 +187,5 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		{
 			base._eXH4tq2J0DADXDLofA8G8Yw8fau(_qokIrmaaT3Lq6znW10HdrPUO9Fq_0, bool_0);
 		}
-	}
-
-	static bool smethod_9()
-	{
-		return _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF;
-	}
-
-	static void smethod_10(string string_0, float float_0)
-	{
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc(string_0, float_0);
-	}
-
-	void method_0()
-	{
-		base._WhR14B3jaJk70xEEeAkh2VLlhbA();
-	}
-
-	void method_1()
-	{
-		base._VandJrNHr65bKmzzmFYTOwD1icL();
-	}
-
-	void method_2(int int_0, bool bool_0)
-	{
-		base._4XV5xPzQUH5ABIwpxH3yf5EIAyL(int_0, bool_0);
-	}
-
-	void method_3()
-	{
-		base._JHfBnmyItvKJDQtdUPp2yLsm4yR();
-	}
-
-	void method_4()
-	{
-		base._oHE0dGUBNplXQia6K85vMaNc8jp();
-	}
-
-	void method_5()
-	{
-		base._paoLItUYkFWaGSDnCAvBagJ1F5T();
-	}
-
-	void method_6(GameTime gameTime_0)
-	{
-		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-	}
-
-	static TimeSpan smethod_11(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
-
-	void method_7(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
-	{
-		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0);
-	}
-
-	static void smethod_12(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.Begin();
-	}
-
-	static void smethod_13(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.End();
-	}
-
-	void method_8(_qokIrmaaT3Lq6znW10HdrPUO9Fq _qokIrmaaT3Lq6znW10HdrPUO9Fq_0, bool bool_0)
-	{
-		base._eXH4tq2J0DADXDLofA8G8Yw8fau(_qokIrmaaT3Lq6znW10HdrPUO9Fq_0, bool_0);
 	}
 }

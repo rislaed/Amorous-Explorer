@@ -169,44 +169,4 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 		Song song = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
 		MediaPlayer.Play(song);
 	}
-
-	static void smethod_1(EventHandler<EventArgs> eventHandler_0)
-	{
-		MediaPlayer.ActiveSongChanged += eventHandler_0;
-	}
-
-	static float smethod_2(float float_0, float float_1, float float_2)
-	{
-		return MathHelper.Lerp(float_0, float_1, float_2);
-	}
-
-	static void smethod_3(float float_0)
-	{
-		MediaPlayer.Volume = float_0;
-	}
-
-	static bool smethod_4(string string_0, string string_1)
-	{
-		return string_0.Equals(string_1);
-	}
-
-	static void smethod_5(Song song_0)
-	{
-		MediaPlayer.Play(song_0);
-	}
-
-	static void smethod_6(bool bool_0)
-	{
-		MediaPlayer.IsRepeating = bool_0;
-	}
-
-	static void smethod_7()
-	{
-		MediaPlayer.Stop();
-	}
-
-	static MediaState smethod_8()
-	{
-		return MediaPlayer.State;
-	}
 }

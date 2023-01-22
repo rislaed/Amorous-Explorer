@@ -54,24 +54,4 @@ public class _G2GbwTTqXkVDMUL6fDmljsAPB4s
 			}
 		}
 	}
-
-	static GraphicsDevice smethod_0(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-	{
-		return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._2yepMkVENnecIsduggABaU2qhXW;
-	}
-
-	static _gJR4g7ak0hsZAUWX1vJbMqG2P5I smethod_1(GraphicsDevice graphicsDevice_0)
-	{
-		return new _gJR4g7ak0hsZAUWX1vJbMqG2P5I(graphicsDevice_0);
-	}
-
-	static void smethod_2(_gJR4g7ak0hsZAUWX1vJbMqG2P5I _gJR4g7ak0hsZAUWX1vJbMqG2P5I_0, SpriteBatch spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
-	{
-		_gJR4g7ak0hsZAUWX1vJbMqG2P5I_0._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0);
-	}
-
-	static void smethod_3(_gJR4g7ak0hsZAUWX1vJbMqG2P5I _gJR4g7ak0hsZAUWX1vJbMqG2P5I_0, Color color_0, Action action_0)
-	{
-		_gJR4g7ak0hsZAUWX1vJbMqG2P5I_0._7d2DAwjp6FutkJY09U0Mlk43Nmn(color_0, action_0);
-	}
 }

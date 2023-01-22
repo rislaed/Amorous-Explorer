@@ -33,29 +33,4 @@ public class _VSQz6uDf5A6KqE8xqKxxcrkhZkA : JsonConverter
 	{
 		return objectType == typeof(Color);
 	}
-
-	static JObject smethod_0()
-	{
-		return new JObject();
-	}
-
-	static JToken smethod_1(JsonReader jsonReader_0)
-	{
-		return JToken.ReadFrom(jsonReader_0);
-	}
-
-	static JToken smethod_2(JToken jtoken_0, object object_0)
-	{
-		return jtoken_0[object_0];
-	}
-
-	static Type smethod_3(RuntimeTypeHandle runtimeTypeHandle_0)
-	{
-		return Type.GetTypeFromHandle(runtimeTypeHandle_0);
-	}
-
-	static bool smethod_4(Type type_0, Type type_1)
-	{
-		return type_0 == type_1;
-	}
 }

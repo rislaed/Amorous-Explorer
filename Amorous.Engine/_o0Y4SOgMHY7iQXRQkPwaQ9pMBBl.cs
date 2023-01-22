@@ -21,11 +21,6 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 				_qhAM4Wrvf8c5jzKBQqLfosAE9D();
 			}
 		}
-
-		static void smethod_0(Window window_0)
-		{
-			window_0.Close();
-		}
 	}
 
 	[CompilerGenerated]
@@ -48,11 +43,6 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 			int obj = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
 			_wr6xcvFOgUbaTATC17S6Y9v3y3S._L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 			_wr6xcvFOgUbaTATC17S6Y9v3y3S._qhAM4Wrvf8c5jzKBQqLfosAE9D(obj);
-		}
-
-		static void smethod_0(Window window_0)
-		{
-			window_0.Close();
 		}
 	}
 
@@ -871,65 +861,5 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 			_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(button);
 		}
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
-	}
-
-	static AppDomain smethod_0()
-	{
-		return AppDomain.CurrentDomain;
-	}
-
-	static string smethod_1(AppDomain appDomain_0)
-	{
-		return appDomain_0.BaseDirectory;
-	}
-
-	static string smethod_2(string string_0, object object_0, object object_1)
-	{
-		return string.Format(string_0, object_0, object_1);
-	}
-
-	static Skin smethod_3(Desktop desktop_0)
-	{
-		return desktop_0.Skin;
-	}
-
-	static StyleCollection smethod_4(ControlStyle controlStyle_0)
-	{
-		return controlStyle_0.Styles;
-	}
-
-	static string smethod_5(Style style_0)
-	{
-		return style_0.Texture;
-	}
-
-	static bool smethod_6(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static void smethod_7(Style style_0, Rectangle rectangle_0)
-	{
-		style_0.TextureRect = rectangle_0;
-	}
-
-	static void smethod_8(Style style_0, string string_0)
-	{
-		style_0.Texture = string_0;
-	}
-
-	static Window smethod_9()
-	{
-		return new Window();
-	}
-
-	static void smethod_10(Window window_0, bool bool_0)
-	{
-		window_0.Modal = bool_0;
-	}
-
-	static void smethod_11(Control control_0, DockStyle dockStyle_0)
-	{
-		control_0.Dock = dockStyle_0;
 	}
 }

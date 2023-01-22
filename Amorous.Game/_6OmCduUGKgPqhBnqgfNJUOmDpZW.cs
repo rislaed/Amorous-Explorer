@@ -47,11 +47,6 @@ internal sealed class _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U>
 		array[0] = ((fStemwWB2D6lHHxMgfgDO4E5w2G != null) ? fStemwWB2D6lHHxMgfgDO4E5w2G.ToString() : null);
 		U qHXlCugFudIXDTksrDHhh1eusHD = _qHXlCugFudIXDTksrDHhh1eusHD;
 		array[1] = ((qHXlCugFudIXDTksrDHhh1eusHD != null) ? qHXlCugFudIXDTksrDHhh1eusHD.ToString() : null);
-		return _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U>.smethod_0((IFormatProvider)null, "{{ Name = {0}, Value = {1} }}", array);
-	}
-
-	static string smethod_0(IFormatProvider iformatProvider_0, string string_0, object[] object_0)
-	{
-		return string.Format(iformatProvider_0, string_0, object_0);
+		return string.Format((IFormatProvider)null, "{{ Name = {0}, Value = {1} }}", array);
 	}
 }

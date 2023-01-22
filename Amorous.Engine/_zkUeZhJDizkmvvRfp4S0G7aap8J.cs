@@ -82,14 +82,4 @@ public class _zkUeZhJDizkmvvRfp4S0G7aap8J
 			});
 		}
 	}
-
-	static Type smethod_0(object object_0)
-	{
-		return object_0.GetType();
-	}
-
-	static string smethod_1(MemberInfo memberInfo_0)
-	{
-		return memberInfo_0.Name;
-	}
 }

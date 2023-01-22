@@ -47,39 +47,4 @@ public class CoffeeShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			_f2oPpgipLb2rTkpm5SVN7YrkJvd._Fxy2SlgceW90FloFw6a1AEJODYA = true;
 		}
 	}
-
-	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._0O8D0mBgmrh0sLOGcLVvGNOHKLCA(string_0, string_1, int_0, int_1);
-	}
-
-	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_15(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._NC5VT77x8y2iH2pW56TBN1eyomA(string_0, string_1, int_0, int_1);
-	}
-
-	static void smethod_16(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)
-	{
-		_7UlnfykmEmZDFt3BmCKZekI43Ih_0._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
-	}
-
-	static void smethod_17(string string_0, float float_0)
-	{
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc(string_0, float_0);
-	}
-
-	void method_0(string string_0)
-	{
-		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
-	}
-
-	static void smethod_18(_ujAkjlfN5TywwbLAUDzPvtab6uJ _ujAkjlfN5TywwbLAUDzPvtab6uJ_0, bool bool_0)
-	{
-		_ujAkjlfN5TywwbLAUDzPvtab6uJ_0._Fxy2SlgceW90FloFw6a1AEJODYA = bool_0;
-	}
-
-	static bool smethod_19(string string_0, string string_1)
-	{
-		return string_0 == string_1;
-	}
 }

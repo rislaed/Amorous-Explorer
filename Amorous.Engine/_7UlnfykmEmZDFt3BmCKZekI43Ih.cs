@@ -21,11 +21,6 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			return _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _hzqOBkJhJBhsTRNARxHLctcvhN0;
 		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
-		}
 	}
 
 	[Serializable]
@@ -545,75 +540,5 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public virtual void _bHdVKtqP3Eb3DSJmuVTbkY8RtHP()
 	{
-	}
-
-	static Desktop smethod_0()
-	{
-		return new Desktop();
-	}
-
-	static Squid.Skin smethod_1()
-	{
-		return Gui.GenerateStandardSkin();
-	}
-
-	static void smethod_2(Desktop desktop_0, Squid.Skin skin_0)
-	{
-		desktop_0.Skin = skin_0;
-	}
-
-	static ArgumentException smethod_3(string string_0)
-	{
-		return new ArgumentException(string_0);
-	}
-
-	static bool smethod_4(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static void smethod_5(Desktop desktop_0)
-	{
-		desktop_0.Update();
-	}
-
-	static bool smethod_6(IEnumerator ienumerator_0)
-	{
-		return ienumerator_0.MoveNext();
-	}
-
-	static void smethod_7(IDisposable idisposable_0)
-	{
-		idisposable_0.Dispose();
-	}
-
-	static void smethod_8(Desktop desktop_0)
-	{
-		desktop_0.Draw();
-	}
-
-	static void smethod_9(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.End();
-	}
-
-	static string smethod_10(string string_0, string string_1)
-	{
-		return string_0 + string_1;
-	}
-
-	static Type smethod_11(RuntimeTypeHandle runtimeTypeHandle_0)
-	{
-		return Type.GetTypeFromHandle(runtimeTypeHandle_0);
-	}
-
-	static string smethod_12(MemberInfo memberInfo_0)
-	{
-		return memberInfo_0.Name;
-	}
-
-	static Type smethod_13(object object_0)
-	{
-		return object_0.GetType();
 	}
 }

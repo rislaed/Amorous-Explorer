@@ -67,14 +67,4 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 			spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_UlZpHdih1X5ig1k6QjZ497jtA1A, _eNqfeKhXj4x1FkHQitvzRQ1JLSE, _zqzgCa0m3Wy0XOFPjEWDVqp6Ybb, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
 		}
 	}
-
-	static bool smethod_0(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static Vector2 smethod_1(SpriteFont spriteFont_0, string string_0)
-	{
-		return spriteFont_0.MeasureString(string_0);
-	}
 }

@@ -66,14 +66,4 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 			_poenyHBGUusBcnNcTFB9MQBV72R._f2smFxmYyFJyj81xWGaGLB2G7ef = _poenyHBGUusBcnNcTFB9MQBV72R._wlQdV74JhqkBVxNonpbfqZEmjIbA.NoMessage;
 		}
 	}
-
-	static _nR8eroJOHehP0ZGyyTveo6aMTHg smethod_0(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-	{
-		return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._5zNdOw7qHmuCAPJFMr3SsZdBlCr;
-	}
-
-	static TimeSpan smethod_1(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
 }

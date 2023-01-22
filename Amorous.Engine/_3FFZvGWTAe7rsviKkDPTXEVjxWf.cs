@@ -302,29 +302,4 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 		Keys[] pressedKeys = _QyGrB1OudfOfivAikLqMIOfHz3L.GetPressedKeys();
 		return pressedKeys.Where((Keys keys_0) => _qy4C18YJHEicy4hTkm6j5yaDlSV.Contains(keys_0)).ToArray();
 	}
-
-	static IntPtr smethod_0(GameWindow gameWindow_0)
-	{
-		return gameWindow_0.Handle;
-	}
-
-	static void smethod_1(IntPtr intptr_0, SDL.SDL_bool sdl_bool_0)
-	{
-		SDL.SDL_SetWindowGrab(intptr_0, sdl_bool_0);
-	}
-
-	static KeyboardState smethod_2()
-	{
-		return Keyboard.GetState();
-	}
-
-	static GamePadState smethod_3(PlayerIndex playerIndex_0)
-	{
-		return GamePad.GetState(playerIndex_0);
-	}
-
-	static MouseState smethod_4()
-	{
-		return Mouse.GetState();
-	}
 }

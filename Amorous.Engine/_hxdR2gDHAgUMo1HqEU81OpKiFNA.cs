@@ -105,24 +105,4 @@ public class _hxdR2gDHAgUMo1HqEU81OpKiFNA : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 			spriteBatch_0.Draw(_Ko8EyRGBPblyaAEHREGGfcgE0A7, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, null, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA, 0f, Vector2.Zero, _fO7gSlrDDNMoHR4FO5QXAq8fUyA, SpriteEffects.None, 0f);
 		}
 	}
-
-	static ArgumentException smethod_0(string string_0)
-	{
-		return new ArgumentException(string_0);
-	}
-
-	static int smethod_1(Texture2D texture2D_0)
-	{
-		return texture2D_0.Width;
-	}
-
-	static int smethod_2(Texture2D texture2D_0)
-	{
-		return texture2D_0.Height;
-	}
-
-	static TimeSpan smethod_3(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
 }

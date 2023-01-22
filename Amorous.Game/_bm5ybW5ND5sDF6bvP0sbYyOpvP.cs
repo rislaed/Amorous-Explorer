@@ -435,34 +435,4 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			_p3BLtW5bCDzTS86VFihe1pfwDoP._jUIwOLgbKJ8tJmUAAQs6pm6ZGWb();
 		}
 	}
-
-	static bool smethod_0(string string_0, string string_1)
-	{
-		return string_0 == string_1;
-	}
-
-	static _opIJo2jLUqdOL5yAFP4yzXce0DG smethod_1()
-	{
-		return _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-	}
-
-	static bool smethod_2(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0, string string_0)
-	{
-		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Oms9lumBodLGrGZ09YJaEuzmlAf(string_0);
-	}
-
-	static void smethod_3(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0, string string_0, bool bool_0)
-	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG_0._4Fscz8ryB3hm0NmL5xw39HHiPd1(string_0, bool_0);
-	}
-
-	static string smethod_4(string string_0, string string_1, string string_2)
-	{
-		return string_0 + string_1 + string_2;
-	}
-
-	static void smethod_5(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, string string_1, string string_2)
-	{
-		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_0, string_1, string_2);
-	}
 }

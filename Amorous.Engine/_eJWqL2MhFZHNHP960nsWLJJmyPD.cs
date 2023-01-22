@@ -44,39 +44,4 @@ public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 			File.WriteAllText(_wvD7pijDcO3KNAgJ4go8LykDZAv, contents);
 		}
 	}
-
-	static bool smethod_0(string string_0)
-	{
-		return File.Exists(string_0);
-	}
-
-	static string smethod_1(string string_0)
-	{
-		return File.ReadAllText(string_0);
-	}
-
-	static string smethod_2(object object_0)
-	{
-		return JsonConvert.SerializeObject(object_0);
-	}
-
-	static void smethod_3(string string_0, string string_1)
-	{
-		File.WriteAllText(string_0, string_1);
-	}
-
-	static AppDomain smethod_4()
-	{
-		return AppDomain.CurrentDomain;
-	}
-
-	static string smethod_5(AppDomain appDomain_0)
-	{
-		return appDomain_0.BaseDirectory;
-	}
-
-	static string smethod_6(string string_0, string string_1)
-	{
-		return Path.Combine(string_0, string_1);
-	}
 }

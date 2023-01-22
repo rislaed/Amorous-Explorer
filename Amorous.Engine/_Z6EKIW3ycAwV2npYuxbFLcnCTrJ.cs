@@ -46,34 +46,4 @@ public class _Z6EKIW3ycAwV2npYuxbFLcnCTrJ
 	{
 		return _6T55wit7MiGfAWRkPwjNbJ8N8lG._Hnb6mPvrZFgOMCIApIeMW88jSsF;
 	}
-
-	static float smethod_0(float float_0)
-	{
-		return MathHelper.ToRadians(float_0);
-	}
-
-	static EffectTechnique smethod_1(Effect effect_0)
-	{
-		return effect_0.CurrentTechnique;
-	}
-
-	static EffectPassCollection smethod_2(EffectTechnique effectTechnique_0)
-	{
-		return effectTechnique_0.Passes;
-	}
-
-	static EffectPass smethod_3(EffectPassCollection effectPassCollection_0, int int_0)
-	{
-		return effectPassCollection_0[int_0];
-	}
-
-	static void smethod_4(EffectPass effectPass_0)
-	{
-		effectPass_0.Apply();
-	}
-
-	static void smethod_5(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.End();
-	}
 }

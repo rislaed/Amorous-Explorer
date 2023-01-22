@@ -118,9 +118,4 @@ public class _1vmNfnjLnh2B8rqPJN4xqYr1vnC : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<SpawnNP
 	{
 		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _v5mBBzOHST4Ij2jetldrF2beJtbA == null || !_v5mBBzOHST4Ij2jetldrF2beJtbA._fsCqU0Uh34vrMEsAqlf2BqbTz5B;
 	}
-
-	static string smethod_0(MemberInfo memberInfo_0)
-	{
-		return memberInfo_0.Name;
-	}
 }

@@ -237,14 +237,4 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 			}
 		}
 	}
-
-	static TimeSpan smethod_0(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
-
-	static float smethod_1(float float_0, float float_1, float float_2)
-	{
-		return MathHelper.Clamp(float_0, float_1, float_2);
-	}
 }

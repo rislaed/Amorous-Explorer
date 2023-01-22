@@ -43,14 +43,4 @@ public class _gJR4g7ak0hsZAUWX1vJbMqG2P5I : _RlrsL89bialFQa9mzWurgsdr6FK<Color>
 	{
 		_98dbKZq4dvkw2wLkjZ77Y5Ih4xP(color_0);
 	}
-
-	static Texture2D smethod_1(GraphicsDevice graphicsDevice_0, int int_0, int int_1, bool bool_0, SurfaceFormat surfaceFormat_0)
-	{
-		return new Texture2D(graphicsDevice_0, int_0, int_1, bool_0, surfaceFormat_0);
-	}
-
-	static void smethod_2(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.Begin();
-	}
 }

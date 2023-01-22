@@ -23,49 +23,4 @@ public static class _VqMsnKIrKxoILv49l85B6Rm0fuQ
 		stream2.Dispose();
 		return new _nHdiyIURlAiaNZ8u6MKzxjcwnyL(skeleton_, bool_0);
 	}
-
-	static string smethod_0(ContentManager contentManager_0)
-	{
-		return contentManager_0.RootDirectory;
-	}
-
-	static string smethod_1(string string_0, string string_1)
-	{
-		return Path.Combine(string_0, string_1);
-	}
-
-	static string smethod_2(string string_0, string string_1)
-	{
-		return string_0 + string_1;
-	}
-
-	static Atlas smethod_3(Stream stream_0, string string_0, TextureLoader textureLoader_0)
-	{
-		return new Atlas(stream_0, string_0, textureLoader_0);
-	}
-
-	static SkeletonJson smethod_4(Atlas[] atlas_0)
-	{
-		return new SkeletonJson(atlas_0);
-	}
-
-	static void smethod_5(SkeletonJson skeletonJson_0, float float_0)
-	{
-		skeletonJson_0.Scale = float_0;
-	}
-
-	static SkeletonData smethod_6(SkeletonJson skeletonJson_0, Stream stream_0, string string_0, List<SkeletonJson.SpineEvent> list_0)
-	{
-		return skeletonJson_0.ReadSkeletonData(stream_0, string_0, list_0);
-	}
-
-	static Skeleton smethod_7(SkeletonData skeletonData_0)
-	{
-		return new Skeleton(skeletonData_0);
-	}
-
-	static void smethod_8(Stream stream_0)
-	{
-		stream_0.Dispose();
-	}
 }

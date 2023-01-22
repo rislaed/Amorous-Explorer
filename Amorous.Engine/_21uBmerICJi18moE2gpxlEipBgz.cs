@@ -17,11 +17,6 @@ public abstract class _21uBmerICJi18moE2gpxlEipBgz
 		{
 			return _ujAkjlfN5TywwbLAUDzPvtab6uJ_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _hzqOBkJhJBhsTRNARxHLctcvhN0;
 		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
-		}
 	}
 
 	[Serializable]
@@ -122,15 +117,5 @@ public abstract class _21uBmerICJi18moE2gpxlEipBgz
 				item._ymyneWF6dfrtfUI08wyb3KExq0D();
 			}
 		}
-	}
-
-	static bool smethod_0(IEnumerator ienumerator_0)
-	{
-		return ienumerator_0.MoveNext();
-	}
-
-	static void smethod_1(IDisposable idisposable_0)
-	{
-		idisposable_0.Dispose();
 	}
 }

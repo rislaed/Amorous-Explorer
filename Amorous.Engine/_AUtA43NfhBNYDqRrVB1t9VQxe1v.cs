@@ -29,34 +29,4 @@ public class _AUtA43NfhBNYDqRrVB1t9VQxe1v : TextureLoader
 	{
 		((Texture2D)texture).Dispose();
 	}
-
-	static string smethod_0(string string_0)
-	{
-		return Path.GetDirectoryName(string_0);
-	}
-
-	static string smethod_1(string string_0)
-	{
-		return Path.GetFileNameWithoutExtension(string_0);
-	}
-
-	static string smethod_2(string string_0, string string_1)
-	{
-		return Path.Combine(string_0, string_1);
-	}
-
-	static int smethod_3(Texture2D texture2D_0)
-	{
-		return texture2D_0.Width;
-	}
-
-	static int smethod_4(Texture2D texture2D_0)
-	{
-		return texture2D_0.Height;
-	}
-
-	static void smethod_5(GraphicsResource graphicsResource_0)
-	{
-		graphicsResource_0.Dispose();
-	}
 }

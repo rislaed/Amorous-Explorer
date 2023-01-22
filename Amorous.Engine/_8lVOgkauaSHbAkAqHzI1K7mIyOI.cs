@@ -126,19 +126,4 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 		}
 		spriteBatch_0.End();
 	}
-
-	static bool smethod_0(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static void smethod_1(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.Begin();
-	}
-
-	static void smethod_2(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.End();
-	}
 }

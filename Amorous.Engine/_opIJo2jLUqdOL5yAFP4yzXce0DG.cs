@@ -217,11 +217,6 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 		{
 			return string_0.StartsWith("Player.Outfit.");
 		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0.StartsWith(string_1);
-		}
 	}
 
 	[CompilerGenerated]
@@ -245,16 +240,6 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 		internal void _3uTshCsyDhL2cJyhUUEzrD5HdTb(string string_0)
 		{
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
-		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
-		}
-
-		static bool smethod_1(string string_0, string string_1)
-		{
-			return string_0.StartsWith(string_1);
 		}
 	}
 
@@ -704,7 +689,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	public void _aedbmRW9PZZduyLA3PVVHtafNAGA(string string_0, bool bool_0 = true)
 	{
-		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => (!bool_0) ? (string_0 == string_0) : string_0.StartsWith(string_0)).ToList().ForEach(delegate(string string_0)
+		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_1) => (!bool_0) ? (string_0 == string_1) : string_1.StartsWith(string_0)).ToList().ForEach(delegate(string string_0)
 		{
 			_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
 		});
@@ -714,65 +699,5 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 	private void _9LTSGBRKjRMGmdraxA6vqm3u3Uc(string string_0)
 	{
 		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
-	}
-
-	static bool smethod_0(Enum enum_0, Enum enum_1)
-	{
-		return enum_0.HasFlag(enum_1);
-	}
-
-	static Type smethod_1(RuntimeTypeHandle runtimeTypeHandle_0)
-	{
-		return Type.GetTypeFromHandle(runtimeTypeHandle_0);
-	}
-
-	static Array smethod_2(Type type_0)
-	{
-		return Enum.GetValues(type_0);
-	}
-
-	static IEnumerator smethod_3(Array array_0)
-	{
-		return array_0.GetEnumerator();
-	}
-
-	static object smethod_4(IEnumerator ienumerator_0)
-	{
-		return ienumerator_0.Current;
-	}
-
-	static bool smethod_5(object object_0, object object_1)
-	{
-		return object_0.Equals(object_1);
-	}
-
-	static bool smethod_6(IEnumerator ienumerator_0)
-	{
-		return ienumerator_0.MoveNext();
-	}
-
-	static void smethod_7(IDisposable idisposable_0)
-	{
-		idisposable_0.Dispose();
-	}
-
-	static bool smethod_8(string string_0, string string_1)
-	{
-		return string_0.StartsWith(string_1);
-	}
-
-	static string[] smethod_9(string string_0, char[] char_0)
-	{
-		return string_0.Split(char_0);
-	}
-
-	static bool smethod_10(string string_0, string string_1)
-	{
-		return string_0 == string_1;
-	}
-
-	static Exception smethod_11(string string_0)
-	{
-		return new Exception(string_0);
 	}
 }

@@ -43,14 +43,4 @@ public class _ruYqFXOuzASxQLRDZQH6mm7soaA : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<JaxCont
 		}
 		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 	}
-
-	static _opIJo2jLUqdOL5yAFP4yzXce0DG smethod_0()
-	{
-		return _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-	}
-
-	static int smethod_1(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
-	{
-		return _opIJo2jLUqdOL5yAFP4yzXce0DG_0._X1b0dyIzsSyKwqWd3usrbDfKJAk();
-	}
 }

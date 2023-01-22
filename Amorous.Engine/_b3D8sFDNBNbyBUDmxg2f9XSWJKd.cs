@@ -53,24 +53,4 @@ public static class _b3D8sFDNBNbyBUDmxg2f9XSWJKd
 			disposable.Dispose();
 		}
 	}
-
-	static Type smethod_0(RuntimeTypeHandle runtimeTypeHandle_0)
-	{
-		return Type.GetTypeFromHandle(runtimeTypeHandle_0);
-	}
-
-	static FieldInfo smethod_1(Type type_0, string string_0, BindingFlags bindingFlags_0)
-	{
-		return type_0.GetField(string_0, bindingFlags_0);
-	}
-
-	static object smethod_2(FieldInfo fieldInfo_0, object object_0)
-	{
-		return fieldInfo_0.GetValue(object_0);
-	}
-
-	static void smethod_3(IDisposable idisposable_0)
-	{
-		idisposable_0.Dispose();
-	}
 }

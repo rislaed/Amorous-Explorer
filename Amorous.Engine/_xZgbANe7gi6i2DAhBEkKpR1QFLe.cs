@@ -68,11 +68,6 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 		{
 			return _e6Sul13xByZYV3zUae0HX9fjnS_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _WPGpU4kAXTreTeMwHuTyjW07HnD;
 		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
-		}
 	}
 
 	[CompilerGenerated]
@@ -83,11 +78,6 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 		internal bool _mJcAkmkbkc0eaOjcvWrLMcXSUL4(_e6Sul13xByZYV3zUae0HX9fjnS _e6Sul13xByZYV3zUae0HX9fjnS_0)
 		{
 			return _e6Sul13xByZYV3zUae0HX9fjnS_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _DUP53cO7xCh4uBaA7x81m76Z48P;
-		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
 		}
 	}
 
@@ -268,50 +258,5 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 	private void _XceAquDnwSS6qOjhLGyFMJRmrlC(string string_0)
 	{
 		_wKyvqIzFCeVgn62yYXdOxlqw4In(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8, string_0);
-	}
-
-	static bool smethod_5(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static string smethod_6(string string_0, string string_1)
-	{
-		return Path.Combine(string_0, string_1);
-	}
-
-	static EffectParameterCollection smethod_7(Effect effect_0)
-	{
-		return effect_0.Parameters;
-	}
-
-	static EffectParameter smethod_8(EffectParameterCollection effectParameterCollection_0, string string_0)
-	{
-		return effectParameterCollection_0[string_0];
-	}
-
-	static void smethod_9(EffectParameter effectParameter_0, float float_0)
-	{
-		effectParameter_0.SetValue(float_0);
-	}
-
-	static EffectTechnique smethod_10(Effect effect_0)
-	{
-		return effect_0.CurrentTechnique;
-	}
-
-	static EffectPassCollection smethod_11(EffectTechnique effectTechnique_0)
-	{
-		return effectTechnique_0.Passes;
-	}
-
-	static EffectPass smethod_12(EffectPassCollection effectPassCollection_0, int int_0)
-	{
-		return effectPassCollection_0[int_0];
-	}
-
-	static void smethod_13(EffectPass effectPass_0)
-	{
-		effectPass_0.Apply();
 	}
 }

@@ -286,49 +286,4 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 			_JHfBnmyItvKJDQtdUPp2yLsm4yR();
 		}
 	}
-
-	static Delegate smethod_0(Delegate delegate_0, Delegate delegate_1)
-	{
-		return Delegate.Combine(delegate_0, delegate_1);
-	}
-
-	static bool smethod_1(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static bool smethod_2(string string_0, string string_1)
-	{
-		return string_0 == string_1;
-	}
-
-	static TimeSpan smethod_3(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
-
-	static void smethod_4(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.Begin();
-	}
-
-	static void smethod_5(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2 vector2_0, Color color_0)
-	{
-		spriteBatch_0.Draw(texture2D_0, vector2_0, color_0);
-	}
-
-	static void smethod_6(SpriteBatch spriteBatch_0)
-	{
-		spriteBatch_0.End();
-	}
-
-	static int smethod_7(int int_0, int int_1)
-	{
-		return Math.Min(int_0, int_1);
-	}
-
-	static int smethod_8(int int_0, int int_1)
-	{
-		return Math.Max(int_0, int_1);
-	}
 }

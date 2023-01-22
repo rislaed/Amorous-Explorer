@@ -51,11 +51,6 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 			{
 				return $"{(int_0 >> 24) & 0xFF}:{int_0 & 0xFFFFFF}";
 			}
-
-			static string smethod_0(string string_0, object object_0, object object_1)
-			{
-				return string.Format(string_0, object_0, object_1);
-			}
 		}
 
 		private _UuyKVad9AT7C3U33zYrtkLcKlQI _3ITTZcgkF3r3Sr09GXF6V8n6iDH;
@@ -135,16 +130,6 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 		{
 			return _Eb7oabg29v057DnasBnAMWRlzGB.Select((int int_0) => $"{(int_0 >> 24) & 0xFF}:{int_0 & 0xFFFFFF}").LastOrDefault();
 		}
-
-		static Type smethod_0(object object_0)
-		{
-			return object_0.GetType();
-		}
-
-		static string smethod_1(string string_0, IEnumerable<string> ienumerable_0)
-		{
-			return string.Join(string_0, ienumerable_0);
-		}
 	}
 
 	[Serializable]
@@ -162,26 +147,6 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 				return !type_0.IsAbstract;
 			}
 			return false;
-		}
-
-		static Type smethod_0(RuntimeTypeHandle runtimeTypeHandle_0)
-		{
-			return Type.GetTypeFromHandle(runtimeTypeHandle_0);
-		}
-
-		static bool smethod_1(Type type_0, Type type_1)
-		{
-			return type_0.IsAssignableFrom(type_1);
-		}
-
-		static bool smethod_2(Type type_0)
-		{
-			return type_0.IsInterface;
-		}
-
-		static bool smethod_3(Type type_0)
-		{
-			return type_0.IsAbstract;
 		}
 	}
 
@@ -309,50 +274,5 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 			_2MhByyFij8YJN7lWVuu8gpYhGCy._IOKHSVtx0w8zZNPe8UqYKwU0gFB(int_0),
 			_2MhByyFij8YJN7lWVuu8gpYhGCy._g81KxY9Byh1XXf9fABWHnONlji2()
 		};
-	}
-
-	static Type smethod_0(object object_0)
-	{
-		return object_0.GetType();
-	}
-
-	static Assembly smethod_1(Type type_0)
-	{
-		return type_0.Assembly;
-	}
-
-	static Type[] smethod_2(Assembly assembly_0)
-	{
-		return assembly_0.GetTypes();
-	}
-
-	static Type smethod_3(Type type_0)
-	{
-		return type_0.BaseType;
-	}
-
-	static bool smethod_4(Type type_0, Type type_1)
-	{
-		return type_0 == type_1;
-	}
-
-	static Type[] smethod_5(Type type_0)
-	{
-		return type_0.GetGenericArguments();
-	}
-
-	static object smethod_6(Type type_0, object[] object_0)
-	{
-		return Activator.CreateInstance(type_0, object_0);
-	}
-
-	static bool smethod_7(IEnumerator ienumerator_0)
-	{
-		return ienumerator_0.MoveNext();
-	}
-
-	static void smethod_8(IDisposable idisposable_0)
-	{
-		idisposable_0.Dispose();
 	}
 }

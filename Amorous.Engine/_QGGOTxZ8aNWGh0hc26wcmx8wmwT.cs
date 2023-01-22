@@ -17,11 +17,6 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 		{
 			return _NaKchYC4I4GjWR34SfBLAktysCE_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _ZNUdqNo74S31HBaKSz8EJK8vYyA;
 		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
-		}
 	}
 
 	[CompilerGenerated]
@@ -33,11 +28,6 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 		{
 			return _xmfdPa5IagU3cXbLL61gyoXAV7gA_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _6sKrfJncoxQCxO2jS4b1k6aftYab;
 		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
-		}
 	}
 
 	[CompilerGenerated]
@@ -48,11 +38,6 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 		internal bool _isS2VBvFbVXcapeW5pKzWxpgdfl(_NaKchYC4I4GjWR34SfBLAktysCE _NaKchYC4I4GjWR34SfBLAktysCE_0)
 		{
 			return _NaKchYC4I4GjWR34SfBLAktysCE_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i == _ZNUdqNo74S31HBaKSz8EJK8vYyA;
-		}
-
-		static bool smethod_0(string string_0, string string_1)
-		{
-			return string_0 == string_1;
 		}
 	}
 
@@ -568,30 +553,5 @@ public abstract class _QGGOTxZ8aNWGh0hc26wcmx8wmwT
 	{
 		_t4JsGFBOTJyNXqWLeAvYMj8Tnlf = null;
 		_Ya7aXbokIO6bHC3fvJdnvweslhH(NPCLocation.None, null, null, null);
-	}
-
-	static Random smethod_0()
-	{
-		return new Random();
-	}
-
-	static bool smethod_1(string string_0)
-	{
-		return string.IsNullOrEmpty(string_0);
-	}
-
-	static TimeSpan smethod_2(GameTime gameTime_0)
-	{
-		return gameTime_0.ElapsedGameTime;
-	}
-
-	static bool smethod_3(IEnumerator ienumerator_0)
-	{
-		return ienumerator_0.MoveNext();
-	}
-
-	static void smethod_4(IDisposable idisposable_0)
-	{
-		idisposable_0.Dispose();
 	}
 }

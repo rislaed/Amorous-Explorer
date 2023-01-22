@@ -17,9 +17,4 @@ public class _sg4TvSTYoH0YwumBfYnvr7IeDaT : _Sx3k5xXMK0bV8Wvr1xdM6HgVnYG
 	{
 		return _U1Zf2C23VFJCtPepNgC1001Q83e ?? (_U1Zf2C23VFJCtPepNgC1001Q83e = new _sg4TvSTYoH0YwumBfYnvr7IeDaT(contentManager_0));
 	}
-
-	static void smethod_1(_hqmu3NsKXqziXGfVh3dt79G0fye _hqmu3NsKXqziXGfVh3dt79G0fye_0, string[] string_0)
-	{
-		_hqmu3NsKXqziXGfVh3dt79G0fye_0._cHRhcv3PTfJmYNZAZdcHvbfbkpj(string_0);
-	}
 }

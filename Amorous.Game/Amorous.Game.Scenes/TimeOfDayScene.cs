@@ -61,39 +61,4 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		_TyX29AlEBF2URt0abU6bc2VBQvm._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq);
 		base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
 	}
-
-	static void smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)
-	{
-		_7UlnfykmEmZDFt3BmCKZekI43Ih_0._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
-	}
-
-	void method_0(string string_0)
-	{
-		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
-	}
-
-	static bool smethod_15(string string_0, string string_1)
-	{
-		return string_0 == string_1;
-	}
-
-	void method_1(GameTime gameTime_0)
-	{
-		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-	}
-
-	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_16(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE;
-	}
-
-	static _wRd4nHuQQlAPEwrHOGkBfut6Uip smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-	{
-		return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._vsceSzSIjBy2nZrCxAzKZbUiwLq;
-	}
-
-	void method_2(SpriteBatch spriteBatch_0)
-	{
-		base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
-	}
 }

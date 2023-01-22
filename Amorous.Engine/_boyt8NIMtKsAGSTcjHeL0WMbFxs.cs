@@ -41,49 +41,4 @@ public static class _boyt8NIMtKsAGSTcjHeL0WMbFxs
 		}
 		return stringBuilder.ToString().ToLower();
 	}
-
-	static double smethod_0(Random random_0)
-	{
-		return random_0.NextDouble();
-	}
-
-	static int smethod_1(Random random_0)
-	{
-		return random_0.Next();
-	}
-
-	static int smethod_2(Random random_0, int int_0, int int_1)
-	{
-		return random_0.Next(int_0, int_1);
-	}
-
-	static MD5 smethod_3()
-	{
-		return MD5.Create();
-	}
-
-	static Encoding smethod_4()
-	{
-		return Encoding.ASCII;
-	}
-
-	static byte[] smethod_5(Encoding encoding_0, string string_0)
-	{
-		return encoding_0.GetBytes(string_0);
-	}
-
-	static byte[] smethod_6(HashAlgorithm hashAlgorithm_0, byte[] byte_0)
-	{
-		return hashAlgorithm_0.ComputeHash(byte_0);
-	}
-
-	static StringBuilder smethod_7()
-	{
-		return new StringBuilder();
-	}
-
-	static Random smethod_8()
-	{
-		return new Random();
-	}
 }

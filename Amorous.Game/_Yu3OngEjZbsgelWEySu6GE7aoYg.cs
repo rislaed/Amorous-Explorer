@@ -54,24 +54,4 @@ public class _Yu3OngEjZbsgelWEySu6GE7aoYg : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 			base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._HXLRmt9GqcmA9GTG5xzRKNu3QpF(object_);
 		}
 	}
-
-	static void smethod_0(SpriteBatch spriteBatch_0, Texture2D texture2D_0, Vector2 vector2_0, Color color_0)
-	{
-		spriteBatch_0.Draw(texture2D_0, vector2_0, color_0);
-	}
-
-	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_1(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
-	{
-		return _7UlnfykmEmZDFt3BmCKZekI43Ih_0._ZzBuoSDMWwerejOO9Goyv2OCKgE;
-	}
-
-	static ContentManager smethod_2(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-	{
-		return _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8;
-	}
-
-	static void smethod_3(ContentManager contentManager_0, object object_0)
-	{
-		contentManager_0._HXLRmt9GqcmA9GTG5xzRKNu3QpF(object_0);
-	}
 }

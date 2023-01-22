@@ -17,14 +17,4 @@ public class DateCreditsMenuScene : CreditsMenuScene
 		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
 		_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
 	}
-
-	static Type smethod_32(RuntimeTypeHandle runtimeTypeHandle_0)
-	{
-		return Type.GetTypeFromHandle(runtimeTypeHandle_0);
-	}
-
-	void method_1()
-	{
-		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
-	}
 }
