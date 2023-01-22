@@ -26,21 +26,21 @@ public class CoffeeShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xB194F58Bu) % 6u)
 				{
 				case 5u:
-					_f2oPpgipLb2rTkpm5SVN7YrkJvd = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), _003CModule_003E.smethod_24<string>(256636715u), 0, 0);
-					_pewCVYjuuHIu8ihhqBs4FHREuPB = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(3934161565u), 0, 0);
+					_f2oPpgipLb2rTkpm5SVN7YrkJvd = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
+					_pewCVYjuuHIu8ihhqBs4FHREuPB = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
 					num = ((int)num2 * -799159557) ^ 0x3EED23D0;
 					continue;
 				case 4u:
-					CoffeeShopScene.smethod_17(_003CModule_003E.smethod_27<string>(1874396605u), 0.4f);
+					CoffeeShopScene.smethod_17("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 					num = (int)(num2 * 1245822215) ^ -905307378;
 					continue;
 				case 2u:
-					CoffeeShopScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_25<string>(4033998176u), 0, 0);
+					CoffeeShopScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Background", 0, 0);
 					num = (int)(num2 * 1217756209) ^ -1118219824;
 					continue;
 				case 0u:
-					_Fcr13ys9cm66KFhUCRnmKKCOHQA = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_25<string>(1482330362u), 0, 0);
-					CoffeeShopScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(3807566121u));
+					_Fcr13ys9cm66KFhUCRnmKKCOHQA = CoffeeShopScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
+					CoffeeShopScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Default");
 					num = (int)((num2 * 198831689) ^ 0x6821D417);
 					continue;
 				default:
@@ -70,7 +70,7 @@ public class CoffeeShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num5;
 					int num6;
-					if (!CoffeeShopScene.smethod_19(string_0, _003CModule_003E.smethod_26<string>(2414278314u)))
+					if (!CoffeeShopScene.smethod_19(string_0, "Seth"))
 					{
 						num5 = -834512956;
 						num6 = -834512956;
@@ -100,7 +100,7 @@ public class CoffeeShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					CoffeeShopScene.smethod_18((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_Fcr13ys9cm66KFhUCRnmKKCOHQA, bool_0: false);
 					int num3;
 					int num4;
-					if (!CoffeeShopScene.smethod_19(string_0, _003CModule_003E.smethod_26<string>(1655904249u)))
+					if (!CoffeeShopScene.smethod_19(string_0, "Jax"))
 					{
 						num3 = 582861834;
 						num4 = 582861834;

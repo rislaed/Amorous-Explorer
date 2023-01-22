@@ -3,7 +3,7 @@ namespace Amorous.Game.NPC;
 public class ClubInsideBNPC : ClubStaticNPC
 {
 	public ClubInsideBNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(2140821155u), _003CModule_003E.smethod_27<string>(1455554502u), bool_0: true, bool_1: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubInsideStatic", "B", bool_0: true, bool_1: true)
 	{
 		while (true)
 		{

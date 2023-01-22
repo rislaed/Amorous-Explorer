@@ -36,12 +36,12 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 		CasualPants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_26<string>(1655904249u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Jax";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(113, 227, 255);
 
 	public JaxNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: this(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(3664884735u))
+		: this(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Jax/Jax")
 	{
 	}
 
@@ -55,34 +55,34 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 			JaxNPC.smethod_18(typeof(JaxPurpleNPC).TypeHandle),
 			JaxNPC.smethod_18(typeof(JaxRedNPC).TypeHandle)
 		});
-		JaxNPC.smethod_21(JaxNPC.smethod_20((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_25<string>(3692662391u), (Action<int>)null);
-		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Grumpy, _003CModule_003E.smethod_26<string>(1955879911u), _003CModule_003E.smethod_25<string>(3977271264u), _003CModule_003E.smethod_24<string>(2620136946u)), _003CModule_003E.smethod_25<string>(82620390u));
-		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, _003CModule_003E.smethod_25<string>(351217002u), _003CModule_003E.smethod_28<string>(1856806147u), _003CModule_003E.smethod_26<string>(34665613u)), _003CModule_003E.smethod_28<string>(2367475036u));
-		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, _003CModule_003E.smethod_27<string>(3789326731u), _003CModule_003E.smethod_27<string>(3074101724u), _003CModule_003E.smethod_25<string>(1960218178u), _003CModule_003E.smethod_26<string>(2105068985u)), _003CModule_003E.smethod_25<string>(3083704307u));
-		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Frustrated, _003CModule_003E.smethod_28<string>(2763968039u), _003CModule_003E.smethod_24<string>(767809608u), _003CModule_003E.smethod_24<string>(2048160849u)), _003CModule_003E.smethod_24<string>(2665603295u));
-		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Cheeky, _003CModule_003E.smethod_26<string>(3369025760u), _003CModule_003E.smethod_24<string>(1294319356u), _003CModule_003E.smethod_27<string>(3560564406u)), _003CModule_003E.smethod_24<string>(3382771742u));
-		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Unamused, _003CModule_003E.smethod_26<string>(1101360782u), _003CModule_003E.smethod_27<string>(3088570740u), _003CModule_003E.smethod_28<string>(1016099992u)), _003CModule_003E.smethod_28<string>(1809085998u));
-		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, _003CModule_003E.smethod_28<string>(2091403115u), _003CModule_003E.smethod_28<string>(3899481703u), _003CModule_003E.smethod_26<string>(3626788593u), _003CModule_003E.smethod_26<string>(3879579948u)), _003CModule_003E.smethod_25<string>(3233473589u));
-		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Chill, _003CModule_003E.smethod_26<string>(1166878221u), _003CModule_003E.smethod_26<string>(4284046116u), _003CModule_003E.smethod_26<string>(1402224669u), _003CModule_003E.smethod_25<string>(10314245u)), new string[1] { _003CModule_003E.smethod_28<string>(3539176579u) });
-		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, _003CModule_003E.smethod_24<string>(693169383u), _003CModule_003E.smethod_27<string>(2376962987u), _003CModule_003E.smethod_24<string>(3101180345u)), new string[1] { _003CModule_003E.smethod_27<string>(3025558700u) });
-		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Defensive, _003CModule_003E.smethod_27<string>(1649367496u), _003CModule_003E.smethod_24<string>(86564290u), _003CModule_003E.smethod_26<string>(2463948360u)), new string[1] { _003CModule_003E.smethod_26<string>(906629649u) });
-		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, _003CModule_003E.smethod_25<string>(1357696498u), _003CModule_003E.smethod_24<string>(2910521646u), _003CModule_003E.smethod_26<string>(4079327293u)), new string[1] { _003CModule_003E.smethod_28<string>(3539176579u) });
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.TuxChest, _003CModule_003E.smethod_24<string>(1366915531u), _003CModule_003E.smethod_24<string>(1248853007u), _003CModule_003E.smethod_24<string>(1484978055u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.TuxUnderwear, _003CModule_003E.smethod_24<string>(2102420501u))));
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.CasualJacket, _003CModule_003E.smethod_27<string>(1436592909u), _003CModule_003E.smethod_27<string>(2769377065u), _003CModule_003E.smethod_26<string>(2807913301u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.CasualPants, _003CModule_003E.smethod_24<string>(1630920322u)))));
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.TuxChest, _003CModule_003E.smethod_24<string>(1366915531u), _003CModule_003E.smethod_26<string>(188826165u), _003CModule_003E.smethod_26<string>(3414612553u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.TuxUnderwear, _003CModule_003E.smethod_26<string>(896641959u))));
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.CasualJacket, _003CModule_003E.smethod_24<string>(1793699278u), _003CModule_003E.smethod_25<string>(4168404739u), _003CModule_003E.smethod_27<string>(1578541138u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.CasualPants, _003CModule_003E.smethod_27<string>(1818155225u)))));
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.TuxChest, _003CModule_003E.smethod_26<string>(4281560377u), _003CModule_003E.smethod_27<string>(2776611573u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.TuxUnderwear, _003CModule_003E.smethod_28<string>(854203957u))));
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.CasualJacket, _003CModule_003E.smethod_24<string>(1793699278u), _003CModule_003E.smethod_25<string>(2892570832u), _003CModule_003E.smethod_27<string>(3495453834u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.CasualPants, _003CModule_003E.smethod_27<string>(1818155225u)))));
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.TuxChest, _003CModule_003E.smethod_24<string>(1366915531u), _003CModule_003E.smethod_25<string>(3966957280u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.TuxUnderwear, _003CModule_003E.smethod_28<string>(854203957u))));
-		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.CasualJacket, _003CModule_003E.smethod_28<string>(1136521074u), _003CModule_003E.smethod_25<string>(4098677090u), _003CModule_003E.smethod_28<string>(3347337861u))));
-		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.CasualPants, _003CModule_003E.smethod_28<string>(2722493086u)))));
+		JaxNPC.smethod_21(JaxNPC.smethod_20((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
+		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Grumpy, "Grumpy Head", "Grumpy pupils", "Grumpy eyes back"), "Grumpy Blink");
+		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Smirk head", "Smirk pupils", "Smirk eyes back"), "Smirk Blink");
+		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad Head", "Sad pupil", "Sad eye back", "Flirty Jaw"), "Sad blink");
+		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Frustrated, "Frustrated Head", "Frustrated pupil", "Frustrated eye back"), "Frustrated blink");
+		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Cheeky, "Cheeky Head", "Cheeky pupils", "Cheeky eye back"), "Cheeky Blink");
+		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Unamused, "Unamused Head", "Unamused Pupils", "Unamused eye back"), "Unamused Blink");
+		JaxNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Happy head", "Happy pupil", "Happy eye back", "Happy jaw"), "Happy Blink");
+		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Chill, "Body", "Right arm GestureChill", "Left arm chill", "Left thumb Chill"), new string[1] { "Cock" });
+		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, "Body", "Right arm GestureChill", "Left arm Gesture"), new string[1] { "Cock" });
+		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Defensive, "Body", "Right arm defensive", "Left Arm defensive"), new string[1] { "Cock" });
+		JaxNPC.smethod_23(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, "Body", "Right arm shy", "Left arm shy"), new string[1] { "Cock" });
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.TuxChest, "Tux chest", "Tux Right arm GestureChill", "Tux Left arm chill")));
+		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.TuxUnderwear, "Tux underwear")));
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.CasualJacket, "Casual body", "Casual right arm GestureChill", "Casual left arm chill")));
+		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.CasualPants, "Casual shorts"))));
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.TuxChest, "Tux chest", "Tux Right arm GestureChill", "Tux left arm gesture")));
+		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.TuxUnderwear, "Tux underwear")));
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.CasualJacket, "Casual body", "Casual right arm GestureChill", "Casual left arm Gesture copy 2")));
+		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.CasualPants, "Casual shorts"))));
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.TuxChest, "Tux chest", "Tux Right arm defensive")));
+		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.TuxUnderwear, "Tux underwear")));
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.CasualJacket, "Casual body", "Casual right arm defensive", "Casual left arm defensive")));
+		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Defensive, EClothes.CasualPants, "Casual shorts"))));
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.TuxChest, "Tux chest", "Tux right arm shy")));
+		JaxNPC.smethod_27(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.TuxUnderwear, "Tux underwear")));
+		JaxNPC.smethod_25(JaxNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.CasualJacket, "Casual body", "Casual right arm shy", "Casual left arm shy")));
+		JaxNPC.smethod_27(JaxNPC.smethod_28(JaxNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.CasualPants, "Casual shorts"))));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

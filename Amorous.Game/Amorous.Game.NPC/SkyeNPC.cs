@@ -31,12 +31,12 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 		Shorts
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(656273929u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Skye";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(248, 255, 167);
 
 	public SkyeNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(2065003820u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Skye/Skye", 1f, bool_0: true)
 	{
 		while (true)
 		{
@@ -47,30 +47,30 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 				switch ((num2 = (uint)num ^ 0xD7F08170u) % 12u)
 				{
 				case 11u:
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, _003CModule_003E.smethod_24<string>(3374728356u), _003CModule_003E.smethod_27<string>(158942886u), _003CModule_003E.smethod_27<string>(573060488u));
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, _003CModule_003E.smethod_24<string>(2002694500u), _003CModule_003E.smethod_24<string>(958468307u), _003CModule_003E.smethod_25<string>(1960218178u));
+					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Blush head", "Blush pupils", "Blush eye back");
+					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad Head", "Sad pupil", "Sad eye back");
 					num = (int)((num2 * 1102439912) ^ 0x120B863);
 					continue;
 				case 10u:
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, _003CModule_003E.smethod_25<string>(1280991160u), _003CModule_003E.smethod_25<string>(4090941602u), _003CModule_003E.smethod_25<string>(4015840447u));
+					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Angry Head", "Angry pupil", "Angry eyeback");
 					num = ((int)num2 * -1711602647) ^ -370060667;
 					continue;
 				case 9u:
-					SkyeNPC.smethod_25(SkyeNPC.smethod_24(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Hoodie, _003CModule_003E.smethod_27<string>(169794648u)))));
+					SkyeNPC.smethod_25(SkyeNPC.smethod_24(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Hoodie, "Suggestive hoodie"))));
 					num = ((int)num2 * -235415308) ^ 0x4774B26;
 					continue;
 				case 7u:
-					SkyeNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Neutral, _003CModule_003E.smethod_28<string>(3110020413u), _003CModule_003E.smethod_27<string>(4040667903u), _003CModule_003E.smethod_25<string>(2068515010u), _003CModule_003E.smethod_25<string>(3008603152u)), _003CModule_003E.smethod_24<string>(3254416081u));
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Suggestive, _003CModule_003E.smethod_26<string>(1743703871u), _003CModule_003E.smethod_28<string>(2728738282u), _003CModule_003E.smethod_26<string>(2249286581u));
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Guarded, _003CModule_003E.smethod_28<string>(3293372516u), _003CModule_003E.smethod_27<string>(3745919683u), _003CModule_003E.smethod_24<string>(1585453973u), _003CModule_003E.smethod_24<string>(3791968883u));
+					SkyeNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Neutral, "Neutral head", "Neutral pupil", "Neutral eye back", "Neutral jaw"), "Neutral blink");
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Suggestive, "Suggestive Body", "Suggestive boobs", "Suggestive Tail");
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Guarded, "Guarded body", "Guarded boobs", "Guarded boob cover", "Guarded tail");
 					num = ((int)num2 * -223700293) ^ 0x7C66D52C;
 					continue;
 				case 6u:
-					SkyeNPC.smethod_25(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Shirt, _003CModule_003E.smethod_28<string>(187884229u))));
+					SkyeNPC.smethod_25(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Shirt, "Suggestive shirt")));
 					num = ((int)num2 * -726403166) ^ -1889279611;
 					continue;
 				case 5u:
-					SkyeNPC.smethod_21(SkyeNPC.smethod_20((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_26<string>(2890786179u), (Action<int>)null);
+					SkyeNPC.smethod_21(SkyeNPC.smethod_20((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Idle", (Action<int>)null);
 					num = (int)(num2 * 2113926561) ^ -1628804205;
 					continue;
 				case 4u:
@@ -82,14 +82,14 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 					num = (int)(num2 * 1316201438) ^ -1256456283;
 					continue;
 				case 3u:
-					SkyeNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, _003CModule_003E.smethod_28<string>(2091403115u), _003CModule_003E.smethod_25<string>(2494832906u), _003CModule_003E.smethod_24<string>(486218211u), _003CModule_003E.smethod_27<string>(1901352067u)), _003CModule_003E.smethod_24<string>(4173286281u));
+					SkyeNPC.smethod_22(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Happy head", "Happy pupil", "Happy eye back", "Happy jaw"), "Happy blink");
 					num = ((int)num2 * -72897308) ^ -476637449;
 					continue;
 				case 1u:
-					SkyeNPC.smethod_28(SkyeNPC.smethod_27(SkyeNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Shorts, _003CModule_003E.smethod_28<string>(470201346u)))));
-					SkyeNPC.smethod_25(SkyeNPC.smethod_24(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Hoodie, _003CModule_003E.smethod_28<string>(1941997472u)))));
-					SkyeNPC.smethod_25(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Shirt, _003CModule_003E.smethod_27<string>(649022822u))));
-					SkyeNPC.smethod_28(SkyeNPC.smethod_27(SkyeNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Shorts, _003CModule_003E.smethod_27<string>(888636909u)))));
+					SkyeNPC.smethod_28(SkyeNPC.smethod_27(SkyeNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Shorts, "Suggestive shorts"))));
+					SkyeNPC.smethod_25(SkyeNPC.smethod_24(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Hoodie, "Guarded hoodie"))));
+					SkyeNPC.smethod_25(SkyeNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Shirt, "Guarded shirt")));
+					SkyeNPC.smethod_28(SkyeNPC.smethod_27(SkyeNPC.smethod_26(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Shorts, "Guarded shorts"))));
 					num = (int)(num2 * 140616429) ^ -191135971;
 					continue;
 				case 0u:

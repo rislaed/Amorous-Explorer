@@ -45,8 +45,8 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 
 		public _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string string_0, string string_1, Color color_0)
 		{
-			//IL_008c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_008d: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0088: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0089: Unknown result type (might be due to invalid IL or missing references)
 			while (true)
 			{
 				int num = -2098233081;
@@ -67,7 +67,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 					{
 						int num3;
 						int num4;
-						if (!_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_2(string_1, _003CModule_003E.smethod_27<string>(1477833256u)))
+						if (!_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_2(string_1, "%playername%"))
 						{
 							num3 = -325735761;
 							num4 = -325735761;
@@ -89,7 +89,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 						num = -1106946344;
 						continue;
 					case 1u:
-						_KD80MJMEbQska5mSqJiPthulqeB = _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_1(_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_0(string_0, _003CModule_003E.smethod_26<string>(3196866508u), _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._RB8fRXeQvK5vs7JEA0XfVCEpg1i));
+						_KD80MJMEbQska5mSqJiPthulqeB = _oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_1(_oDZZ0F7Qg08utTIjAaoyIbeDuFG.smethod_0(string_0, "%playername%", _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._RB8fRXeQvK5vs7JEA0XfVCEpg1i));
 						num = (int)((num2 * 2081039121) ^ 0x39F821F2);
 						continue;
 					default:
@@ -1211,24 +1211,24 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 		public _3Kf8FQeGRyCD8FhytGMMBQFkhFl(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, Texture2D texture2D_0, Texture2D texture2D_1, SpriteFont spriteFont_0)
 			: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		{
-			//IL_0046: Unknown result type (might be due to invalid IL or missing references)
-			//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0097: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00e8: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00fd: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0139: Unknown result type (might be due to invalid IL or missing references)
-			//IL_014e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_018a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_019f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0042: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+			//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00a4: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00f1: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0129: Unknown result type (might be due to invalid IL or missing references)
+			//IL_013e: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0176: Unknown result type (might be due to invalid IL or missing references)
+			//IL_018b: Unknown result type (might be due to invalid IL or missing references)
 			_92GwVFulItjaDs6osQZyIk9xgMH = new _iHJrndJdM1jj9TEnuU3BvgdDuvf[5];
 			_mc4p6vpMBZ0hOHPqLBE5H6OxT7f = -1;
 			_VZ02JDgQaX5qJVSBot6TM2rtZ3O = 0;
-			_92GwVFulItjaDs6osQZyIk9xgMH[0] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, _003CModule_003E.smethod_28<string>(568072060u), new Color(250, 251, 162), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _ICiyaoVDO6XvJb0FsHkwv7e4YrS);
-			_92GwVFulItjaDs6osQZyIk9xgMH[1] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, _003CModule_003E.smethod_25<string>(3277024785u), new Color(165, 250, 171), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _hXUKutqtuyapSBUWT1AVUzerGjc);
-			_92GwVFulItjaDs6osQZyIk9xgMH[2] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, _003CModule_003E.smethod_24<string>(1676543368u), new Color(171, 199, 255), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _IniwNTOJAFQzPUg40NMaN8sku9k);
-			_92GwVFulItjaDs6osQZyIk9xgMH[3] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, _003CModule_003E.smethod_26<string>(1871034971u), new Color(228, 187, 253), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _5TLz87dh7yxXEP5B2Lceq9uOAp1);
-			_92GwVFulItjaDs6osQZyIk9xgMH[4] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, _003CModule_003E.smethod_27<string>(355493624u), new Color(255, 171, 179), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _0wd4x937or88gFFP0wpuEK3BkyM);
+			_92GwVFulItjaDs6osQZyIk9xgMH[0] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 1", new Color(250, 251, 162), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _ICiyaoVDO6XvJb0FsHkwv7e4YrS);
+			_92GwVFulItjaDs6osQZyIk9xgMH[1] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 2", new Color(165, 250, 171), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _hXUKutqtuyapSBUWT1AVUzerGjc);
+			_92GwVFulItjaDs6osQZyIk9xgMH[2] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 3", new Color(171, 199, 255), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _IniwNTOJAFQzPUg40NMaN8sku9k);
+			_92GwVFulItjaDs6osQZyIk9xgMH[3] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 4", new Color(228, 187, 253), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _5TLz87dh7yxXEP5B2Lceq9uOAp1);
+			_92GwVFulItjaDs6osQZyIk9xgMH[4] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 5", new Color(255, 171, 179), 0, 0, new Rectangle(0, 0, texture2D_0.get_Width(), texture2D_0.get_Height()), _0wd4x937or88gFFP0wpuEK3BkyM);
 			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(-1);
 		}
 
@@ -1746,66 +1746,66 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 	private void _dRHb7tDcI5IkrHNRAFSme9H1Rh4()
 	{
 		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0074: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0079: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0098: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00af: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ca: Expected O, but got Unknown
-		//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0109: Expected O, but got Unknown
-		//IL_0111: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011b: Expected O, but got Unknown
-		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0121: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0131: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0136: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0140: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0094: Unknown result type (might be due to invalid IL or missing references)
+		//IL_009b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c6: Expected O, but got Unknown
+		//IL_00d9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00de: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ed: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0101: Expected O, but got Unknown
+		//IL_0109: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0113: Expected O, but got Unknown
+		//IL_0114: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0119: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0125: Unknown result type (might be due to invalid IL or missing references)
+		//IL_012a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0134: Unknown result type (might be due to invalid IL or missing references)
+		//IL_013b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0147: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0153: Unknown result type (might be due to invalid IL or missing references)
 		//IL_015f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017c: Expected O, but got Unknown
-		//IL_018f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0194: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0199: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01aa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bb: Expected O, but got Unknown
-		//IL_01d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01dd: Expected O, but got Unknown
-		//IL_01dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0209: Expected O, but got Unknown
-		//IL_0211: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021b: Expected O, but got Unknown
-		//IL_02bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02c0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f3: Expected O, but got Unknown
-		//IL_03bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03c7: Expected O, but got Unknown
-		//IL_041c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0170: Expected O, but got Unknown
+		//IL_0183: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0188: Unknown result type (might be due to invalid IL or missing references)
+		//IL_018d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0197: Unknown result type (might be due to invalid IL or missing references)
+		//IL_019e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ab: Expected O, but got Unknown
+		//IL_01c3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01cd: Expected O, but got Unknown
+		//IL_01cd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f5: Expected O, but got Unknown
+		//IL_01fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0207: Expected O, but got Unknown
+		//IL_02a7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02ac: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02bf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02c3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02cd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02df: Expected O, but got Unknown
+		//IL_03a9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03b3: Expected O, but got Unknown
+		//IL_0408: Unknown result type (might be due to invalid IL or missing references)
+		//IL_040d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0419: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0421: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0431: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0439: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0443: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0453: Expected O, but got Unknown
-		//IL_049d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04a7: Expected O, but got Unknown
+		//IL_042b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_043b: Expected O, but got Unknown
+		//IL_0485: Unknown result type (might be due to invalid IL or missing references)
+		//IL_048f: Expected O, but got Unknown
 		Desktop obj = _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_2();
 		_nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_4(obj, _nkzqFdEfDyLcyGikIKGcHjklI4y.smethod_3());
 		((Control)obj).set_Size(new Point(1920, 1080));
@@ -1828,7 +1828,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 					continue;
 				case 5u:
 				{
-					_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE(_003CModule_003E.smethod_27<string>(3452929552u));
+					_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin");
 					FlowLayoutFrame val7 = new FlowLayoutFrame();
 					((Control)val7).set_Position(new Point(1220, (int)_4djSc5RiRJZMGzvYwwEprIYf6ZM.Y + 10));
 					val7.set_FlowDirection((FlowDirection)1);
@@ -1844,7 +1844,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 					Button val10 = new Button();
 					((Control)val10).set_Size(new Point(100, 30));
 					((Label)val10).set_TextAlign((Alignment)4);
-					((Label)val10).set_Text(_003CModule_003E.smethod_25<string>(3678823393u));
+					((Label)val10).set_Text("Exit");
 					val3 = val10;
 					((Control)val3).add_MouseClick((MouseEvent)delegate
 					{
@@ -1854,7 +1854,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 						});
 					});
 					DropDownList val11 = new DropDownList();
-					((Control)val11).set_Style(_003CModule_003E.smethod_28<string>(1249878865u));
+					((Control)val11).set_Style("button");
 					((Control)val11).set_Size(new Point(120, 30));
 					val11.set_DropdownAbove(true);
 					val11.get_Label().set_TextAlign((Alignment)4);
@@ -1870,7 +1870,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 					Button val9 = new Button();
 					((Control)val9).set_Size(new Point(100, 30));
 					((Label)val9).set_TextAlign((Alignment)4);
-					((Label)val9).set_Text(_003CModule_003E.smethod_24<string>(2779564791u));
+					((Label)val9).set_Text("Save");
 					val5 = val9;
 					num = (int)(num2 * 821978558) ^ -785537944;
 					continue;
@@ -1887,7 +1887,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 					Button val8 = new Button();
 					((Control)val8).set_Size(new Point(100, 30));
 					((Label)val8).set_TextAlign((Alignment)4);
-					((Label)val8).set_Text(_003CModule_003E.smethod_24<string>(84384229u));
+					((Label)val8).set_Text("Load");
 					val6 = val8;
 					((Control)val6).add_MouseClick((MouseEvent)delegate
 					{
@@ -1909,7 +1909,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 					{
 						while (true)
 						{
-							IL_0330:
+							IL_031c:
 							int num3;
 							int num4;
 							if (!enumerator.MoveNext())
@@ -1942,15 +1942,15 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 									num3 = -159563942;
 									continue;
 								default:
-									goto end_IL_02ff;
+									goto end_IL_02eb;
 								case 3u:
 									break;
 								case 2u:
-									goto end_IL_02ff;
+									goto end_IL_02eb;
 								}
-								goto IL_0330;
+								goto IL_031c;
 								continue;
-								end_IL_02ff:
+								end_IL_02eb:
 								break;
 							}
 							break;
@@ -1961,7 +1961,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 						IDisposable disposable = enumerator as IDisposable;
 						while (true)
 						{
-							IL_03a8:
+							IL_0394:
 							int num5 = -694836990;
 							while (true)
 							{
@@ -1989,15 +1989,15 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 									continue;
 								}
 								default:
-									goto end_IL_0386;
+									goto end_IL_0372;
 								case 0u:
 									break;
 								case 3u:
-									goto end_IL_0386;
+									goto end_IL_0372;
 								}
-								goto IL_03a8;
+								goto IL_0394;
 								continue;
-								end_IL_0386:
+								end_IL_0372:
 								break;
 							}
 							break;
@@ -2027,7 +2027,7 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 							case 3u:
 							{
 								CheckBox val4 = new CheckBox();
-								val4.set_Text(_003CModule_003E.smethod_26<string>(1434126952u));
+								val4.set_Text("Auto-skip");
 								((Control)val4).set_Size(new Point(140, 30));
 								val4.set_Checked(_fUgDiz7KX8TZUVzFlTeXMOhmfUT);
 								_2pNQedwLe7YapSxneCqi4SreGdH = val4;

@@ -20,7 +20,7 @@ public class GangBNPC : LayerNPC<GangBNPC.EHeads, GangBNPC.EPoses, GangBNPC.EClo
 		None
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_27<string>(3184369990u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Taylor";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(103, 23, 183);
 

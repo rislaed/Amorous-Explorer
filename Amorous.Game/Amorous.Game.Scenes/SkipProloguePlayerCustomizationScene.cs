@@ -9,7 +9,7 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 {
 	private bool _e1Kru66UIN1SkWkBreRDCF5RsWA;
 
-	string PlayerCustomizationScene._l3SUNsFudHnZpYO0ErWgbTaz1DF => _003CModule_003E.smethod_24<string>(3335055642u);
+	string PlayerCustomizationScene._l3SUNsFudHnZpYO0ErWgbTaz1DF => "Back to Club";
 
 	public SkipProloguePlayerCustomizationScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
@@ -19,11 +19,7 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 
 	protected override void _n3b8BstkorCsu4TW0U2YVdFbdGp()
 	{
-		SkipProloguePlayerCustomizationScene.smethod_55(SkipProloguePlayerCustomizationScene.smethod_54((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_26<string>(2321417746u), new string[2]
-		{
-			_003CModule_003E.smethod_27<string>(3653969611u),
-			_003CModule_003E.smethod_24<string>(1208636077u)
-		}, 250, (Action<int>)delegate(int int_0)
+		SkipProloguePlayerCustomizationScene.smethod_55(SkipProloguePlayerCustomizationScene.smethod_54((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure this how you want to look in the game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -36,12 +32,12 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 						switch ((num2 = (uint)num ^ 0xCCF28FC9u) % 4u)
 						{
 						case 2u:
-							SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(2783182688u));
+							SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
 							_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 							num = ((int)num2 * -1115515197) ^ 0x6E73241B;
 							continue;
 						case 1u:
-							SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_26<string>(2636397310u));
+							SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
 							num = ((int)num2 * -578363603) ^ -1169211634;
 							continue;
 						default:
@@ -109,11 +105,11 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 					continue;
 				}
 				case 7u:
-					SkipProloguePlayerCustomizationScene.smethod_61(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(2287578913u), 40);
+					SkipProloguePlayerCustomizationScene.smethod_61(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue", 40);
 					num = ((int)num2 * -1926507596) ^ 0x751CA2DF;
 					continue;
 				case 6u:
-					SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_27<string>(1334550436u));
+					SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric4");
 					SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)._k9wUPeU1Ga7cygiuGP8TT6aPLWF<ClubEntranceScene>();
 					num = (int)((num2 * 37688924) ^ 0x488EE5B);
 					continue;
@@ -128,7 +124,7 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 					num = (int)(num2 * 1514281406) ^ -1403623560;
 					continue;
 				case 2u:
-					SkipProloguePlayerCustomizationScene.smethod_62(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(4172742065u), bool_0: true);
+					SkipProloguePlayerCustomizationScene.smethod_62(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyLeftClub", bool_0: true);
 					_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
 					num = ((int)num2 * -931895477) ^ -1516820463;
 					continue;
@@ -177,12 +173,12 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 				switch ((num2 = (uint)num ^ 0xCCF28FC9u) % 4u)
 				{
 				case 2u:
-					SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(2783182688u));
+					SkipProloguePlayerCustomizationScene.smethod_66(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
 					_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 					num = ((int)num2 * -1115515197) ^ 0x6E73241B;
 					continue;
 				case 1u:
-					SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_26<string>(2636397310u));
+					SkipProloguePlayerCustomizationScene.smethod_65(SkipProloguePlayerCustomizationScene.smethod_63(SkipProloguePlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
 					num = ((int)num2 * -578363603) ^ -1169211634;
 					continue;
 				default:

@@ -106,7 +106,7 @@ public static class _z8oOEvKr598r7HgA3VFwVCn2j0q
 				{
 					int num4;
 					int num5;
-					if (_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_5(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo), _003CModule_003E.smethod_26<string>(3301910807u)))
+					if (_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_5(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo), "Name"))
 					{
 						num4 = -772229020;
 						num5 = -772229020;
@@ -206,7 +206,7 @@ public static class _z8oOEvKr598r7HgA3VFwVCn2j0q
 				{
 					int num7;
 					int num8;
-					if (!_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_5(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo), _003CModule_003E.smethod_27<string>(2213543158u)))
+					if (!_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_5(_z8oOEvKr598r7HgA3VFwVCn2j0q.smethod_4((MemberInfo)propertyInfo), "Name"))
 					{
 						num7 = -994945753;
 						num8 = -994945753;

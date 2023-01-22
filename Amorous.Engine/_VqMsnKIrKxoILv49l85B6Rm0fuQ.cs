@@ -28,7 +28,7 @@ public static class _VqMsnKIrKxoILv49l85B6Rm0fuQ
 					continue;
 				case 5u:
 				{
-					string string_3 = _VqMsnKIrKxoILv49l85B6Rm0fuQ.smethod_2(string_, _003CModule_003E.smethod_25<string>(897437485u));
+					string string_3 = _VqMsnKIrKxoILv49l85B6Rm0fuQ.smethod_2(string_, ".json");
 					stream_ = _K2047A8SCJdaw0LZKStEHOiH110._E0f25tLwwg9zgWpaN9mFdnGg2My(string_3);
 					skeletonData_ = _VqMsnKIrKxoILv49l85B6Rm0fuQ.smethod_6(skeletonJson_, stream_, string_3, list_0);
 					num = (int)(num2 * 1938579983) ^ -281124833;
@@ -44,7 +44,7 @@ public static class _VqMsnKIrKxoILv49l85B6Rm0fuQ
 					continue;
 				}
 				case 3u:
-					string_2 = _VqMsnKIrKxoILv49l85B6Rm0fuQ.smethod_2(string_, _003CModule_003E.smethod_27<string>(1857216753u));
+					string_2 = _VqMsnKIrKxoILv49l85B6Rm0fuQ.smethod_2(string_, ".atlas.txt");
 					num = (int)((num2 * 101400791) ^ 0x66E79C03);
 					continue;
 				case 1u:

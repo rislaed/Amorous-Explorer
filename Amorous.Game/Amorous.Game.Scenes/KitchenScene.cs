@@ -24,8 +24,8 @@ public class KitchenScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				break;
 				IL_0009:
-				KitchenScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_28<string>(1865292762u), 0, 0);
-				KitchenScene.smethod_15(_003CModule_003E.smethod_28<string>(3518678633u), 0.4f);
+				KitchenScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Kitchen/Background", 0, 0);
+				KitchenScene.smethod_15("Assets/Music/Warhector - Free Floating", 0.4f);
 				num = (int)(num2 * 486198742) ^ -405418565;
 			}
 		}

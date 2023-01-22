@@ -16,18 +16,18 @@ public class ClubUpstairsScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ClubUpstairsScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		ClubUpstairsScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_27<string>(1888106260u), -1295, 0);
-		ClubUpstairsScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1447760793u), _003CModule_003E.smethod_26<string>(3470187036u), -919, 103, (Action)OnDownstairsClick);
-		ClubUpstairsScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(146324991u), _003CModule_003E.smethod_25<string>(1478994067u), -245, 20, (Action)OnDownstairsClick);
-		ClubUpstairsScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(522766818u), _003CModule_003E.smethod_28<string>(3267108435u), 2533, 0, (Action)OnDoorClick);
+		ClubUpstairsScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubUpstairs/Upstairs Hall main", -1295, 0);
+		ClubUpstairsScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Elevator", "Assets/Scenes/ClubUpstairs/Elevator Door Selectable", -919, 103, (Action)OnDownstairsClick);
+		ClubUpstairsScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Stairs", "Assets/Scenes/ClubUpstairs/Staircase Selectable", -245, 20, (Action)OnDownstairsClick);
+		ClubUpstairsScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Door", "Assets/Scenes/ClubUpstairs/Pool Door Selectable", 2533, 0, (Action)OnDoorClick);
 		ClubUpstairsScene.smethod_17(ClubUpstairsScene.smethod_16(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -1295, 1295, 0, 0);
 		ClubUpstairsScene.smethod_18(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = ClubUpstairsScene.smethod_19();
-		_showZenith = !ClubUpstairsScene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(4221795356u));
+		_showZenith = !ClubUpstairsScene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithLeftClub");
 		if (_showZenith)
 		{
-			ClubUpstairsScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(1282703600u), _003CModule_003E.smethod_27<string>(225276667u), 540, 712);
-			ClubUpstairsScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(2047616633u), _003CModule_003E.smethod_25<string>(3826635926u), 930, 700);
+			ClubUpstairsScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Shadow", "Assets/Scenes/ClubUpstairs/ShadowZenith", 540, 712);
+			ClubUpstairsScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Shadow", "Assets/Scenes/ClubUpstairs/ShadowRose", 930, 700);
 		}
 	}
 
@@ -106,7 +106,7 @@ public class ClubUpstairsScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void OnZenithClick()
 	{
-		ClubUpstairsScene.smethod_28(ClubUpstairsScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_25<string>(2207320766u));
+		ClubUpstairsScene.smethod_28(ClubUpstairsScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "ZenithPreDate");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

@@ -24,7 +24,7 @@ public class RemyLivingRoomScene : TimeOfDayScene
 				}
 				break;
 				IL_0009:
-				RemyLivingRoomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_26<string>(4066099841u), 0, 0);
+				RemyLivingRoomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/RemyLivingRoom/Background", 0, 0);
 				num = ((int)num2 * -588050888) ^ 0x738CB683;
 			}
 		}

@@ -27,7 +27,7 @@ public class _s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U> : Dictionary<T, U>, IXmlSerializ
 				switch ((num2 = (uint)num ^ 0x253EC228u) % 10u)
 				{
 				case 9u:
-					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_4(reader, _003CModule_003E.smethod_24<string>(1551797377u));
+					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_4(reader, "key");
 					key = (T)_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_5(xmlSerializer_, reader);
 					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_6(reader);
 					num = ((int)num2 * -713258633) ^ -2075769469;
@@ -62,7 +62,7 @@ public class _s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U> : Dictionary<T, U>, IXmlSerializ
 					num = (int)((num2 * 1215985935) ^ 0x20ADD98C);
 					continue;
 				case 4u:
-					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_4(reader, _003CModule_003E.smethod_27<string>(690869361u));
+					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_4(reader, "item");
 					num = 1923006145;
 					continue;
 				case 1u:
@@ -81,7 +81,7 @@ public class _s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U> : Dictionary<T, U>, IXmlSerializ
 					continue;
 				}
 				case 0u:
-					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_4(reader, _003CModule_003E.smethod_24<string>(1047404471u));
+					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_4(reader, "value");
 					value = (U)_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_5(xmlSerializer_2, reader);
 					_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_6(reader);
 					num = (int)((num2 * 638041016) ^ 0x6167A39);
@@ -151,11 +151,11 @@ public class _s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U> : Dictionary<T, U>, IXmlSerializ
 								continue;
 							case 6u:
 								current = enumerator.Current;
-								_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_11(writer, _003CModule_003E.smethod_24<string>(4246977939u));
+								_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_11(writer, "item");
 								num3 = -1757438793;
 								continue;
 							case 5u:
-								_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_11(writer, _003CModule_003E.smethod_24<string>(1047404471u));
+								_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_11(writer, "value");
 								num3 = ((int)num2 * -326004824) ^ -1229749753;
 								continue;
 							case 4u:
@@ -166,7 +166,7 @@ public class _s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U> : Dictionary<T, U>, IXmlSerializ
 								num3 = ((int)num2 * -1675848843) ^ -1658203707;
 								continue;
 							case 2u:
-								_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_11(writer, _003CModule_003E.smethod_24<string>(1551797377u));
+								_s8LmEXaxHFzAKzGEfeuncG6iAkc<T, U>.smethod_11(writer, "key");
 								num3 = (int)(num2 * 1408768398) ^ -733777753;
 								continue;
 							case 1u:

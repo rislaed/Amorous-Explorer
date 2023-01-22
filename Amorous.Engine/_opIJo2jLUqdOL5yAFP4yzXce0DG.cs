@@ -215,7 +215,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 		internal bool _sKQKx71rfMlEGGCBet4oVSSys1A(string string_0)
 		{
-			return _0sDtzIDsyA0r9WSGUGpY2WTEdUj.smethod_0(string_0, _003CModule_003E.smethod_26<string>(3760763601u));
+			return _0sDtzIDsyA0r9WSGUGpY2WTEdUj.smethod_0(string_0, "Player.Outfit.");
 		}
 
 		static bool smethod_0(string string_0, string string_1)
@@ -1071,15 +1071,15 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 
 	private bool _3FWn0wjLhjL8yL0d2zLD5hMVHSV(string string_0)
 	{
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, _003CModule_003E.smethod_27<string>(3045349154u)))
+		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, "Player."))
 		{
-			goto IL_0162;
+			goto IL_0152;
 		}
-		goto IL_046a;
-		IL_046a:
+		goto IL_043e;
+		IL_043e:
 		int num;
 		int num2;
-		if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, _003CModule_003E.smethod_27<string>(3731911487u)))
+		if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, "Quests."))
 		{
 			num = 1754695320;
 			num2 = 1754695320;
@@ -1089,8 +1089,8 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			num = 1406356614;
 			num2 = 1406356614;
 		}
-		goto IL_03c4;
-		IL_03c4:
+		goto IL_0398;
+		IL_0398:
 		string[] array2 = default(string[]);
 		EBodyType result5 = default(EBodyType);
 		string[] array = default(string[]);
@@ -1107,7 +1107,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			{
 				int num6;
 				int num7;
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, _003CModule_003E.smethod_28<string>(4124629049u)))
+				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "HasBreasts"))
 				{
 					num6 = 1554678989;
 					num7 = 1554678989;
@@ -1178,7 +1178,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			{
 				int num18;
 				int num19;
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, _003CModule_003E.smethod_25<string>(1731917556u)))
+				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerTwinky"))
 				{
 					num18 = -1317701029;
 					num19 = -1317701029;
@@ -1192,7 +1192,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				continue;
 			}
 			case 22u:
-				goto end_IL_03c4;
+				goto end_IL_0398;
 			case 21u:
 			{
 				int num22;
@@ -1214,7 +1214,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			{
 				int num24;
 				int num25;
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], _003CModule_003E.smethod_24<string>(1755523789u)))
+				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], "Body"))
 				{
 					num24 = 83214485;
 					num25 = 83214485;
@@ -1262,14 +1262,14 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				continue;
 			}
 			case 16u:
-				goto IL_0238;
+				goto IL_0224;
 			case 15u:
-				goto IL_0266;
+				goto IL_024e;
 			case 14u:
 			{
 				int num20;
 				int num21;
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, _003CModule_003E.smethod_26<string>(1926975768u)))
+				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerMuscular"))
 				{
 					num20 = -1757166841;
 					num21 = -1757166841;
@@ -1290,12 +1290,12 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				num = (int)((num3 * 1825618926) ^ 0x1960F6D6);
 				continue;
 			case 7u:
-				goto IL_0306;
+				goto IL_02e6;
 			case 6u:
 			{
 				int num12;
 				int num13;
-				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, _003CModule_003E.smethod_28<string>(2667531196u)))
+				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerLean"))
 				{
 					num12 = 1654856729;
 					num13 = 1654856729;
@@ -1326,9 +1326,9 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				continue;
 			}
 			case 2u:
-				goto IL_0399;
+				goto IL_0371;
 			case 28u:
-				goto IL_046a;
+				goto IL_043e;
 			case 0u:
 				return _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Muscular;
 			case 1u:
@@ -1344,7 +1344,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			case 12u:
 				return _7OCMpsMmozHsAG0GDljMMAlGLJBA == result3;
 			case 13u:
-				return _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[2], _003CModule_003E.smethod_24<string>(1589935352u));
+				return _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[2], "Simple");
 			case 18u:
 				return _fvTKDuNATrUxfXZVvltePz3vYkK(array[1]) == result2;
 			case 23u:
@@ -1355,7 +1355,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				return _BCncLn6BIYiBX6NdFByAquBYGpH != EBreastsType.None;
 			}
 			int num28;
-			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], _003CModule_003E.smethod_25<string>(959524688u)))
+			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], "Balls"))
 			{
 				num = 1120243691;
 				num28 = 1120243691;
@@ -1366,9 +1366,9 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				num28 = 652986964;
 			}
 			continue;
-			IL_0399:
+			IL_0371:
 			int num29;
-			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], _003CModule_003E.smethod_26<string>(227730749u)))
+			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], "Outfit"))
 			{
 				num = 433635688;
 				num29 = 433635688;
@@ -1379,9 +1379,9 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				num29 = 1754695320;
 			}
 			continue;
-			IL_0266:
+			IL_024e:
 			int num30;
-			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], _003CModule_003E.smethod_24<string>(1337738899u)))
+			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], "Breasts"))
 			{
 				num = 303941436;
 				num30 = 303941436;
@@ -1392,9 +1392,9 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				num30 = 141916704;
 			}
 			continue;
-			IL_0238:
+			IL_0224:
 			int num31;
-			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, _003CModule_003E.smethod_25<string>(2380779004u)))
+			if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(string_0, "PlayerChubby"))
 			{
 				num = 93169823;
 				num31 = 93169823;
@@ -1405,9 +1405,9 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				num31 = 2059172268;
 			}
 			continue;
-			IL_0306:
+			IL_02e6:
 			int num32;
-			if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], _003CModule_003E.smethod_24<string>(3780723008u)))
+			if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array2[1], "Cock"))
 			{
 				num = 951911323;
 				num32 = 951911323;
@@ -1418,27 +1418,27 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				num32 = 349603661;
 			}
 			continue;
-			end_IL_03c4:
+			end_IL_0398:
 			break;
 		}
-		goto IL_0162;
-		IL_0162:
+		goto IL_0152;
+		IL_0152:
 		num = 1860839505;
-		goto IL_03c4;
+		goto IL_0398;
 	}
 
 	public void _4Fscz8ryB3hm0NmL5xw39HHiPd1(string string_0, bool bool_0)
 	{
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, _003CModule_003E.smethod_24<string>(1503327336u)))
+		if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_8(string_0, "Player."))
 		{
-			goto IL_0172;
+			goto IL_015a;
 		}
-		goto IL_0205;
-		IL_0205:
+		goto IL_01ed;
+		IL_01ed:
 		_Cs2b43EFDtJdhoWWSmCcssGUmHZA[string_0] = bool_0;
 		int num = 1397207529;
-		goto IL_01c3;
-		IL_01c3:
+		goto IL_01ab;
+		IL_01ab:
 		string[] array = default(string[]);
 		while (true)
 		{
@@ -1451,7 +1451,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			{
 				int num7;
 				int num8;
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], _003CModule_003E.smethod_26<string>(1490067749u)))
+				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Breasts"))
 				{
 					num7 = 1855074418;
 					num8 = 1855074418;
@@ -1468,7 +1468,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			{
 				int num11;
 				int num12;
-				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], _003CModule_003E.smethod_24<string>(1755523789u)))
+				if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Body"))
 				{
 					num11 = 664799456;
 					num12 = 664799456;
@@ -1485,7 +1485,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			{
 				int num9;
 				int num10;
-				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], _003CModule_003E.smethod_24<string>(1085542446u)))
+				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Balls"))
 				{
 					num9 = 286661239;
 					num10 = 286661239;
@@ -1502,7 +1502,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			{
 				int num3;
 				int num4;
-				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], _003CModule_003E.smethod_27<string>(336695690u)))
+				if (_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Cock"))
 				{
 					num3 = 859606441;
 					num4 = 859606441;
@@ -1537,9 +1537,9 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				continue;
 			}
 			case 2u:
-				goto end_IL_01c3;
+				goto end_IL_01ab;
 			case 0u:
-				_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => _0sDtzIDsyA0r9WSGUGpY2WTEdUj.smethod_0(string_0, _003CModule_003E.smethod_26<string>(3760763601u))).ToList().ForEach(delegate(string string_0)
+				_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => _0sDtzIDsyA0r9WSGUGpY2WTEdUj.smethod_0(string_0, "Player.Outfit.")).ToList().ForEach(delegate(string string_0)
 				{
 					_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
 				});
@@ -1548,14 +1548,14 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			default:
 				return;
 			case 5u:
-				goto IL_0205;
+				goto IL_01ed;
 			case 7u:
-				throw _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_11(_003CModule_003E.smethod_26<string>(2117459379u));
+				throw _opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_11("Reserved flag set!");
 			case 1u:
 				return;
 			}
 			int num13;
-			if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], _003CModule_003E.smethod_27<string>(3054748121u)))
+			if (!_opIJo2jLUqdOL5yAFP4yzXce0DG.smethod_10(array[1], "Outfit"))
 			{
 				num = 1331214693;
 				num13 = 1331214693;
@@ -1566,13 +1566,13 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				num13 = 438937880;
 			}
 			continue;
-			end_IL_01c3:
+			end_IL_01ab:
 			break;
 		}
-		goto IL_0172;
-		IL_0172:
+		goto IL_015a;
+		IL_015a:
 		num = 2026520420;
-		goto IL_01c3;
+		goto IL_01ab;
 	}
 
 	public void _aedbmRW9PZZduyLA3PVVHtafNAGA(string string_0, bool bool_0 = true)

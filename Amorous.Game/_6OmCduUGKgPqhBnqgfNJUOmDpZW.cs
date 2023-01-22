@@ -99,13 +99,12 @@ internal sealed class _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U>
 	[DebuggerHidden]
 	public override string _VipZca1dSzb4czdJRX4BeBMx8nbA()
 	{
-		string string_ = _003CModule_003E.smethod_28<string>(3616360350u);
 		object[] array = new object[2];
 		T fStemwWB2D6lHHxMgfgDO4E5w2G = _fStemwWB2D6lHHxMgfgDO4E5w2G;
 		array[0] = ((fStemwWB2D6lHHxMgfgDO4E5w2G != null) ? fStemwWB2D6lHHxMgfgDO4E5w2G.ToString() : null);
 		U qHXlCugFudIXDTksrDHhh1eusHD = _qHXlCugFudIXDTksrDHhh1eusHD;
 		array[1] = ((qHXlCugFudIXDTksrDHhh1eusHD != null) ? qHXlCugFudIXDTksrDHhh1eusHD.ToString() : null);
-		return _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U>.smethod_0((IFormatProvider)null, string_, array);
+		return _6OmCduUGKgPqhBnqgfNJUOmDpZW<T, U>.smethod_0((IFormatProvider)null, "{{ Name = {0}, Value = {1} }}", array);
 	}
 
 	static string smethod_0(IFormatProvider iformatProvider_0, string string_0, object[] object_0)

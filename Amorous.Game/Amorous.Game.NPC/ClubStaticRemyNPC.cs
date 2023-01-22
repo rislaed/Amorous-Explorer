@@ -3,7 +3,7 @@ namespace Amorous.Game.NPC;
 public class ClubStaticRemyNPC : ClubStaticNPC
 {
 	public ClubStaticRemyNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(699855247u), _003CModule_003E.smethod_25<string>(900653164u), bool_0: true, bool_1: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubStatic", "Remy", bool_0: true, bool_1: true)
 	{
 		while (true)
 		{

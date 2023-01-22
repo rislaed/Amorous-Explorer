@@ -16,7 +16,7 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
 		_jOJQdqVUTXcPDmuOqViqC8pczW = true;
-		_xnYepZuegigJCU2jcbZsfVIakzF = PlayerSexScene.smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>(_003CModule_003E.smethod_27<string>(470142692u));
+		_xnYepZuegigJCU2jcbZsfVIakzF = PlayerSexScene.smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 		PlayerSexScene.smethod_15();
 	}
 
@@ -339,35 +339,35 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
 	{
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0128: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_019f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0211: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0284: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0307: Unknown result type (might be due to invalid IL or missing references)
-		//IL_030c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_033b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0340: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0365: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0121: Unknown result type (might be due to invalid IL or missing references)
+		//IL_018f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0194: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0263: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0268: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02e7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02ec: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0317: Unknown result type (might be due to invalid IL or missing references)
+		//IL_031c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_033d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0342: Unknown result type (might be due to invalid IL or missing references)
 		//IL_036a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0396: Unknown result type (might be due to invalid IL or missing references)
-		//IL_039b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_036f: Unknown result type (might be due to invalid IL or missing references)
 		this.method_1(spriteBatch_0);
 		if (!PlayerSexScene.smethod_29(PlayerSexScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)))
 		{
-			goto IL_0149;
+			goto IL_013d;
 		}
-		goto IL_0427;
-		IL_0427:
+		goto IL_03fb;
+		IL_03fb:
 		PlayerSexScene.smethod_30(spriteBatch_0);
 		int num;
 		int num2;
@@ -381,8 +381,8 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			num = 636362123;
 			num2 = 636362123;
 		}
-		goto IL_03b2;
-		IL_03b2:
+		goto IL_0386;
+		IL_0386:
 		int num6 = default(int);
 		while (true)
 		{
@@ -392,12 +392,12 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			case 20u:
 				break;
 			case 19u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_24<string>(57184713u), new Vector2(10f, (float)num6), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cycle skin (S)", new Vector2(10f, (float)num6), Color.get_White());
 				num6 += 40;
 				num = (int)(num3 * 1781450043) ^ -93400351;
 				continue;
 			case 18u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_25<string>(2561873802u), new Vector2(10f, 10f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Speed up (Space)", new Vector2(10f, 10f), Color.get_White());
 				num = (int)(num3 * 104529466) ^ -1293755235;
 				continue;
 			case 17u:
@@ -421,11 +421,11 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num = (int)((num3 * 1470318196) ^ 0x66A82F1);
 				continue;
 			case 15u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_28<string>(2659562065u), new Vector2(10f, 250f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cycle skin (S)", new Vector2(10f, 250f), Color.get_White());
 				num = (int)((num3 * 1005202226) ^ 0x570C158A);
 				continue;
 			case 14u:
-				goto end_IL_03b2;
+				goto end_IL_0386;
 			case 13u:
 			{
 				int num7;
@@ -444,15 +444,15 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 11u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_25<string>(10205988u), new Vector2(10f, 170f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Finish it! (V)", new Vector2(10f, 170f), Color.get_White());
 				num = ((int)num3 * -269018047) ^ -1256017448;
 				continue;
 			case 10u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_25<string>(2091829731u), new Vector2(10f, (float)num6), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Toggle phone (Escape or Shift)", new Vector2(10f, (float)num6), Color.get_White());
 				num = 1731638365;
 				continue;
 			case 9u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_24<string>(2617887195u), new Vector2(10f, 90f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Clean mess (X)", new Vector2(10f, 90f), Color.get_White());
 				num = ((int)num3 * -746965212) ^ -1698621788;
 				continue;
 			case 8u:
@@ -473,7 +473,7 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 7u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_27<string>(3268442155u), new Vector2(10f, 130f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Insta-mess (C)", new Vector2(10f, 130f), Color.get_White());
 				num = (int)(num3 * 995289692) ^ -1175551968;
 				continue;
 			case 6u:
@@ -498,20 +498,20 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 4u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_27<string>(3987284416u), new Vector2(10f, 10f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Show help (Z)", new Vector2(10f, 10f), Color.get_White());
 				num = 1731638365;
 				continue;
 			case 3u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_27<string>(403924873u), new Vector2(10f, 290f), Color.get_White());
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_28<string>(1590504138u), new Vector2(10f, 330f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Toggle phone (Escape or Shift)", new Vector2(10f, 290f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Hide help (Z)", new Vector2(10f, 330f), Color.get_White());
 				num = 962614602;
 				continue;
 			case 0u:
-				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_28<string>(3734865188u), new Vector2(10f, 50f), Color.get_White());
+				spriteBatch_0._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Slow down (Left Ctrl)", new Vector2(10f, 50f), Color.get_White());
 				num = ((int)num3 * -1841367806) ^ -597590710;
 				continue;
 			case 1u:
-				goto IL_0427;
+				goto IL_03fb;
 			case 2u:
 				return;
 			default:
@@ -530,13 +530,13 @@ public class PlayerSexScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num13 = 1863616310;
 			}
 			continue;
-			end_IL_03b2:
+			end_IL_0386:
 			break;
 		}
-		goto IL_0149;
-		IL_0149:
+		goto IL_013d;
+		IL_013d:
 		num = 1533583273;
-		goto IL_03b2;
+		goto IL_0386;
 	}
 
 	static ContentManager smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)

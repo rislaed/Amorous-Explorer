@@ -65,16 +65,16 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private readonly List<SexsceneData> _7VjfLBpTQsFudLfKhPWefSex1UC = new List<SexsceneData>
 	{
-		new SexsceneData(_003CModule_003E.smethod_28<string>(886388059u), null),
-		new SexsceneData(_003CModule_003E.smethod_25<string>(1468896597u), _003CModule_003E.smethod_26<string>(107640269u)),
-		new SexsceneData(_003CModule_003E.smethod_27<string>(2750531434u), _003CModule_003E.smethod_24<string>(4225501883u)),
-		new SexsceneData(_003CModule_003E.smethod_24<string>(2712775179u), _003CModule_003E.smethod_28<string>(180355736u)),
-		new SexsceneData(_003CModule_003E.smethod_26<string>(2130814600u), _003CModule_003E.smethod_25<string>(2098915677u)),
-		new SexsceneData(_003CModule_003E.smethod_26<string>(3625191079u), _003CModule_003E.smethod_25<string>(2364933793u)),
-		new SexsceneData(_003CModule_003E.smethod_28<string>(3599866181u), _003CModule_003E.smethod_26<string>(2279160183u)),
-		new SexsceneData(_003CModule_003E.smethod_28<string>(2067859514u), _003CModule_003E.smethod_25<string>(3372171088u)),
-		new SexsceneData(_003CModule_003E.smethod_25<string>(593379112u), _003CModule_003E.smethod_26<string>(2683626351u)),
-		new SexsceneData(_003CModule_003E.smethod_25<string>(2605275206u), _003CModule_003E.smethod_24<string>(2373174545u))
+		new SexsceneData("None", null),
+		new SexsceneData("Coby", "CobySexscene"),
+		new SexsceneData("Dustin", "DustinSexscene"),
+		new SexsceneData("Jax", "JaxSexscene"),
+		new SexsceneData("Lex", "LexSexscene"),
+		new SexsceneData("Mercy", "MercySexscene"),
+		new SexsceneData("Remy", "RemySexscene"),
+		new SexsceneData("Seth", "SethSexscene"),
+		new SexsceneData("Skye", "SkyeSexscene"),
+		new SexsceneData("Zenith", "ZenithSexscene")
 	};
 
 	private readonly string[] _LTwaEzSn23m9dquR3WwhTVRbJiG;
@@ -85,7 +85,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private int _QjFuG8JMGq8rGnavgUdgnBEKBfD;
 
-	protected virtual string Amorous_002EGame_002EScenes_002EPlayerCustomizationScene_002E_l3SUNsFudHnZpYO0ErWgbTaz1DF => _003CModule_003E.smethod_24<string>(2018986973u);
+	protected virtual string Amorous_002EGame_002EScenes_002EPlayerCustomizationScene_002E_l3SUNsFudHnZpYO0ErWgbTaz1DF => "Exit";
 
 	public PlayerCustomizationScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
@@ -129,23 +129,23 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							}
 						}
 					};
-					PlayerCustomizationScene.smethod_18(_003CModule_003E.smethod_28<string>(1355581995u), 0.4f);
+					PlayerCustomizationScene.smethod_18("Assets/Music/Blazing Dragon - Midnight Sizzle", 0.4f);
 					num = ((int)num2 * -1128340300) ^ -973436775;
 					continue;
 				case 3u:
-					_9jklVVcQQYcyqOYrkPiht2VP0IG = PlayerCustomizationScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<Effect>(_003CModule_003E.smethod_26<string>(509620698u));
+					_9jklVVcQQYcyqOYrkPiht2VP0IG = PlayerCustomizationScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<Effect>("Assets/Shaders/Breathing");
 					num = (int)((num2 * 906925602) ^ 0x454F9DF2);
 					continue;
 				case 2u:
 				{
-					_fAUddQEKfZyemRb327NhM3GGlmzA fAUddQEKfZyemRb327NhM3GGlmzA = PlayerCustomizationScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(357945885u));
+					_fAUddQEKfZyemRb327NhM3GGlmzA fAUddQEKfZyemRb327NhM3GGlmzA = PlayerCustomizationScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Custom");
 					PlayerCustomizationScene.smethod_16(fAUddQEKfZyemRb327NhM3GGlmzA, (Action<SpriteBatch>)_KkwafXXLVg1QfQgqqCAojg2ySyZ);
 					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(fAUddQEKfZyemRb327NhM3GGlmzA, 0);
 					num = ((int)num2 * -505070451) ^ 0x80C611C;
 					continue;
 				}
 				case 1u:
-					PlayerCustomizationScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_27<string>(3312197089u), -458, 0);
+					PlayerCustomizationScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
 					num = (int)(num2 * 795753875) ^ -669383527;
 					continue;
 				case 0u:
@@ -232,7 +232,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			}
 		}
 		_q9fwz0K4rjUrAm9v3Dn6azqJaIN._BwV21jdCpo4YpIp6x74bJ0H7hut(0);
-		_3t4w2BwPGr8GQDmJlQU929IFD8f._RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_24<string>(1192549305u);
+		_3t4w2BwPGr8GQDmJlQU929IFD8f._RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Player";
 		_QjFuG8JMGq8rGnavgUdgnBEKBfD = -1;
 	}
 
@@ -244,11 +244,11 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
 		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0048: Expected O, but got Unknown
-		//IL_0087: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0093: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a9: Expected O, but got Unknown
+		//IL_0083: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0088: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0096: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a5: Expected O, but got Unknown
 		Window obj = PlayerCustomizationScene.smethod_22();
 		PlayerCustomizationScene.smethod_23((Control)(object)obj, (DockStyle)3);
 		((Control)obj).set_Size(new Point(512, 0));
@@ -267,7 +267,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xE5DA9A9u) % 10u)
 				{
 				case 9u:
-					_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_24<string>(3050670278u), delegate
+					_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES("Feet", delegate
 					{
 						_PBEdYyzYEWcXAodjVf58ocOQ3Jf(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 					}));
@@ -287,7 +287,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 286066467) ^ 0x71BBCF0);
 					continue;
 				case 6u:
-					_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_27<string>(2371827011u), delegate
+					_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES("Tail", delegate
 					{
 						_7JR6eL4D0qdIJNOwfInnlg2HEgZ(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 					}));
@@ -296,39 +296,39 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 5u:
 					_kG9DrP49ggNdZOvVMMUPjfqdzZ4 = new List<Button>
 					{
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_28<string>(1766327748u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Fursona", delegate
 						{
 							_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_28<string>(3520440991u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Body", delegate
 						{
 							_jiNxMIzuA8Rrc2ULsrob5A7UNDe(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_28<string>(4085075225u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Arms", delegate
 						{
 							_1qIQUjhrbk5WA7C7mYs93gXLOIe(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_28<string>(1033552283u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Legs", delegate
 						{
 							_VCrdQDifkN8NHlzPICTmtbgWFwp(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_27<string>(3079817510u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Head", delegate
 						{
 							_vXrWU56trsuFNc9CNcHuctfkI2S(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_27<string>(2124978416u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Muzzle", delegate
 						{
 							_vg6ASaP7xNqc0jerF3mcrXv4dn7(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_24<string>(1001890606u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Ears and Horns", delegate
 						{
 							_Xhurp3mVVoR5kNlnxgLoDDkeQxM(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_26<string>(3035048509u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Hair and Fringes", delegate
 						{
 							_gHA9C0CRN2NaRMtfTrvlotJOd0T(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						}),
-						_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_28<string>(865411052u), delegate
+						_cvldkRXLM8Toadgv6nPx5QH1EES("Eyes and Brows", delegate
 						{
 							_hNo7o9fG9jvwcKyMq1nYl4q7cXc(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 						})
@@ -358,7 +358,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1205499566) ^ -1677354404;
 					continue;
 				case 0u:
-					_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES(_003CModule_003E.smethod_26<string>(3540631219u), delegate
+					_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES("Breasts, Cock and Balls", delegate
 					{
 						_mWS8UuA4xcT1bSdjDObiubOE0wH(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TbkP67ntBpYJu1M27pBfsYAHmgJ)));
 					}));
@@ -380,55 +380,55 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001d: Expected O, but got Unknown
-		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00fa: Expected O, but got Unknown
-		//IL_0116: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0120: Expected O, but got Unknown
-		//IL_016b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0170: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0177: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0188: Expected O, but got Unknown
-		//IL_01c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ce: Expected O, but got Unknown
-		//IL_01f8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0214: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0223: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0229: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
-		//IL_023a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024b: Expected O, but got Unknown
-		//IL_0348: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0352: Expected O, but got Unknown
-		//IL_037f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0384: Unknown result type (might be due to invalid IL or missing references)
-		//IL_038b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_039d: Expected O, but got Unknown
-		//IL_0410: Unknown result type (might be due to invalid IL or missing references)
-		//IL_041a: Expected O, but got Unknown
-		//IL_0447: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0452: Unknown result type (might be due to invalid IL or missing references)
-		//IL_045c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ee: Expected O, but got Unknown
+		//IL_010a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0114: Expected O, but got Unknown
+		//IL_015b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0160: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0167: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0174: Expected O, but got Unknown
+		//IL_01b0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ba: Expected O, but got Unknown
+		//IL_01e0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01fc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0206: Unknown result type (might be due to invalid IL or missing references)
+		//IL_020b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0211: Unknown result type (might be due to invalid IL or missing references)
+		//IL_021b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0222: Unknown result type (might be due to invalid IL or missing references)
+		//IL_022f: Expected O, but got Unknown
+		//IL_0320: Unknown result type (might be due to invalid IL or missing references)
+		//IL_032a: Expected O, but got Unknown
+		//IL_0357: Unknown result type (might be due to invalid IL or missing references)
+		//IL_035c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0363: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0371: Expected O, but got Unknown
+		//IL_03e4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03ee: Expected O, but got Unknown
+		//IL_041b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0420: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0426: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0430: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0437: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0445: Expected O, but got Unknown
+		//IL_0458: Unknown result type (might be due to invalid IL or missing references)
+		//IL_045d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0463: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0475: Expected O, but got Unknown
-		//IL_0488: Unknown result type (might be due to invalid IL or missing references)
-		//IL_048d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0493: Unknown result type (might be due to invalid IL or missing references)
-		//IL_049d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04a4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04b0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04c2: Expected O, but got Unknown
-		//IL_0509: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0525: Unknown result type (might be due to invalid IL or missing references)
-		//IL_052f: Expected O, but got Unknown
-		//IL_0550: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0555: Unknown result type (might be due to invalid IL or missing references)
-		//IL_055c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_056e: Expected O, but got Unknown
-		//IL_0577: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0581: Expected O, but got Unknown
+		//IL_046d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0474: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0480: Unknown result type (might be due to invalid IL or missing references)
+		//IL_048e: Expected O, but got Unknown
+		//IL_04d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04fb: Expected O, but got Unknown
+		//IL_051c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0521: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0528: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0536: Expected O, but got Unknown
+		//IL_053f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0549: Expected O, but got Unknown
 		Button val8 = default(Button);
 		TextBox _Z0ib1EsNAOHar3w2AfvKgeb8s2BA = default(TextBox);
 		PlayerCustomizationScene _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = default(PlayerCustomizationScene);
@@ -451,10 +451,10 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					{
 						if (_003C_003Ec__DisplayClass20_0.smethod_6(_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA)))
 						{
-							goto IL_00d3;
+							goto IL_00cb;
 						}
-						goto IL_0151;
-						IL_0151:
+						goto IL_0141;
+						IL_0141:
 						int num20;
 						int num21;
 						if (_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD < 0)
@@ -467,15 +467,15 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							num20 = 1335512211;
 							num21 = 1335512211;
 						}
-						goto IL_0111;
-						IL_0111:
+						goto IL_0101;
+						IL_0101:
 						while (true)
 						{
 							uint num22;
 							switch ((num22 = (uint)num20 ^ 0x5431D787u) % 8u)
 							{
 							case 7u:
-								_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9(_003CModule_003E.smethod_28<string>(836426491u), (object)_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA)), delegate
+								_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9("No template has been selected yet, do you wish to create a new template with the name '{0}', based on the current character?", (object)_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA)), delegate
 								{
 									_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._0S3oMrwxDtOTcbzkglSllPfRq53(_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA), _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._dxo6sBOpjEUiw2JBMikbutXK44t());
 									_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Count() - 1;
@@ -511,7 +511,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 								num20 = 1986733588;
 								continue;
 							case 4u:
-								_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9(_003CModule_003E.smethod_24<string>(2681145851u), (object)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD)), delegate
+								_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9("Are you sure you wish to save the currect character to the selected template '{0}'?", (object)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD)), delegate
 								{
 									_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._WfRAwdaNcmrDEhMe1AHPq7egPcw(_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA), _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._dxo6sBOpjEUiw2JBMikbutXK44t());
 									((ActiveList<Control>)(object)_003C_003Ec__DisplayClass20_0.smethod_2(_003C_003Ec__DisplayClass20_0.smethod_1(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._TbkP67ntBpYJu1M27pBfsYAHmgJ))).Clear();
@@ -522,13 +522,13 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							case 2u:
 								break;
 							case 1u:
-								_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), _003CModule_003E.smethod_25<string>(1386059954u), 500, _003CModule_003E.smethod_28<string>(4224231895u), (Action)null);
+								_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), "You did not enter a name!", 500, "OK", (Action)null);
 								num20 = ((int)num22 * -1527022989) ^ -805579967;
 								continue;
 							default:
 								return;
 							case 0u:
-								goto IL_0151;
+								goto IL_0141;
 							case 3u:
 								return;
 							case 5u:
@@ -538,16 +538,16 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							}
 							break;
 						}
-						goto IL_00d3;
-						IL_00d3:
+						goto IL_00cb;
+						IL_00cb:
 						num20 = 73510174;
-						goto IL_0111;
+						goto IL_0101;
 					});
 					((ActiveList<Control>)(object)_7y2pwnzdnnIdP3bK7MDiAAyPF9BA).Add((Control)(object)val8);
 					num = (int)(num2 * 1677517880) ^ -1402549990;
 					continue;
 				case 23u:
-					_YemBTJprwfbd3mpg5Gy9uyEJWwI(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, _003CModule_003E.smethod_24<string>(929294431u), _q9fwz0K4rjUrAm9v3Dn6azqJaIN._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((_xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0) => _xJL9E6vKdg1LYZtKQU5RQKikpvE_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToArray(), _QjFuG8JMGq8rGnavgUdgnBEKBfD, delegate(int int_0)
+					_YemBTJprwfbd3mpg5Gy9uyEJWwI(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, "Your Templates", _q9fwz0K4rjUrAm9v3Dn6azqJaIN._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((_xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0) => _xJL9E6vKdg1LYZtKQU5RQKikpvE_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToArray(), _QjFuG8JMGq8rGnavgUdgnBEKBfD, delegate(int int_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD = int_0;
 						while (true)
@@ -608,10 +608,9 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 22u:
 				{
 					Skin skin = base._PnkAlVnMv0SZvRBFexqzE5DF9tp.get_Skin();
-					string key = _003CModule_003E.smethod_27<string>(1319322059u);
-					ControlStyle val11 = new ControlStyle(((Dictionary<string, ControlStyle>)(object)base._PnkAlVnMv0SZvRBFexqzE5DF9tp.get_Skin())[_003CModule_003E.smethod_26<string>(2774799937u)]);
+					ControlStyle val11 = new ControlStyle(((Dictionary<string, ControlStyle>)(object)base._PnkAlVnMv0SZvRBFexqzE5DF9tp.get_Skin())["button"]);
 					val11.set_Tint(ColorInt.ARGB(1f, 0f, 1f, 0f));
-					((Dictionary<string, ControlStyle>)(object)skin).Add(key, val11);
+					((Dictionary<string, ControlStyle>)(object)skin).Add("button2", val11);
 					num = (int)(num2 * 2074726580) ^ -776181958;
 					continue;
 				}
@@ -625,7 +624,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 19u:
 				{
 					int num5;
-					if (((Dictionary<string, ControlStyle>)(object)base._PnkAlVnMv0SZvRBFexqzE5DF9tp.get_Skin()).ContainsKey(_003CModule_003E.smethod_28<string>(2451383064u)))
+					if (((Dictionary<string, ControlStyle>)(object)base._PnkAlVnMv0SZvRBFexqzE5DF9tp.get_Skin()).ContainsKey("button2"))
 					{
 						num = 178852998;
 						num5 = 178852998;
@@ -641,7 +640,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					Button val14 = new Button();
 					((Control)val14).set_Dock((DockStyle)2);
-					((Label)val14).set_Text(_003CModule_003E.smethod_28<string>(1772572944u));
+					((Label)val14).set_Text("Save Template");
 					val8 = val14;
 					num = (int)((num2 * 815166298) ^ 0x25D64490);
 					continue;
@@ -683,7 +682,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 									case 0u:
 										break;
 									case 2u:
-										_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), _003CModule_003E.smethod_24<string>(3271458471u), 500, _003CModule_003E.smethod_26<string>(2746613317u), (Action)null);
+										_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), "You did not enter a name!", 500, "OK", (Action)null);
 										return;
 									default:
 										goto end_IL_0064;
@@ -701,7 +700,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				case 15u:
 				{
-					Control val12 = _z5npzs7mj5H3zJ1PF64BFNsXBmm(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, _003CModule_003E.smethod_24<string>(3522920374u), _3t4w2BwPGr8GQDmJlQU929IFD8f._uOkbmfW26QVAvyEMQakki9kTMDbA, delegate(Color color_0)
+					Control val12 = _z5npzs7mj5H3zJ1PF64BFNsXBmm(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, "Phone", _3t4w2BwPGr8GQDmJlQU929IFD8f._uOkbmfW26QVAvyEMQakki9kTMDbA, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._uOkbmfW26QVAvyEMQakki9kTMDbA = color_0;
@@ -710,13 +709,13 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					Button val13 = new Button();
 					((Control)val13).set_Margin(new Margin(0, 10, 0, 0));
 					((Control)val13).set_Dock((DockStyle)2);
-					((Label)val13).set_Text(_003CModule_003E.smethod_25<string>(4242531581u));
+					((Label)val13).set_Text("New Template");
 					val7 = val13;
 					num = ((int)num2 * -2016457519) ^ -734953302;
 					continue;
 				}
 				case 13u:
-					_YemBTJprwfbd3mpg5Gy9uyEJWwI(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, _003CModule_003E.smethod_25<string>(3839636663u), _q9fwz0K4rjUrAm9v3Dn6azqJaIN._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((_xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0) => _xJL9E6vKdg1LYZtKQU5RQKikpvE_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToArray(), _3yqpoxOljKnrj7mGlnrA0eOUMAk, delegate(int int_0)
+					_YemBTJprwfbd3mpg5Gy9uyEJWwI(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, "Stock Templates", _q9fwz0K4rjUrAm9v3Dn6azqJaIN._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((_xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0) => _xJL9E6vKdg1LYZtKQU5RQKikpvE_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToArray(), _3yqpoxOljKnrj7mGlnrA0eOUMAk, delegate(int int_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3yqpoxOljKnrj7mGlnrA0eOUMAk = int_0;
 						while (true)
@@ -768,7 +767,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = 1669582376;
 					continue;
 				case 12u:
-					_YemBTJprwfbd3mpg5Gy9uyEJWwI(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, _003CModule_003E.smethod_26<string>(2370333769u), _LTwaEzSn23m9dquR3WwhTVRbJiG, _IyCJr9wgsrQgOUaXQco1I00YF7B, delegate(int int_0)
+					_YemBTJprwfbd3mpg5Gy9uyEJWwI(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA, "Preview Sexscene", _LTwaEzSn23m9dquR3WwhTVRbJiG, _IyCJr9wgsrQgOUaXQco1I00YF7B, delegate(int int_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._IyCJr9wgsrQgOUaXQco1I00YF7B = int_0;
 						if (int_0 == 0)
@@ -819,7 +818,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					ControlCollection obj2 = _7y2pwnzdnnIdP3bK7MDiAAyPF9BA;
 					Label obj3 = PlayerCustomizationScene.smethod_24();
 					PlayerCustomizationScene.smethod_23((Control)(object)obj3, (DockStyle)2);
-					PlayerCustomizationScene.smethod_25(obj3, _003CModule_003E.smethod_27<string>(2213543158u));
+					PlayerCustomizationScene.smethod_25(obj3, "Name");
 					((ActiveList<Control>)(object)obj2).Add((Control)(object)obj3);
 					num = (int)((num2 * 489150529) ^ 0x256F9CA5);
 					continue;
@@ -831,11 +830,11 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						{
 							goto IL_000e;
 						}
-						goto IL_008c;
-						IL_008c:
+						goto IL_0080;
+						IL_0080:
 						int num16 = -177029547;
-						goto IL_0091;
-						IL_0091:
+						goto IL_0085;
+						IL_0085:
 						while (true)
 						{
 							uint num17;
@@ -844,11 +843,11 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							case 4u:
 								break;
 							case 1u:
-								_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), _003CModule_003E.smethod_26<string>(1480170803u), 500, _003CModule_003E.smethod_27<string>(280410800u), (Action)null);
+								_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), "You did not select a template!", 500, "OK", (Action)null);
 								num16 = ((int)num17 * -1260685864) ^ -2036454597;
 								continue;
 							case 0u:
-								goto IL_008c;
+								goto IL_0080;
 							default:
 								return;
 							case 2u:
@@ -860,7 +859,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						}
 						goto IL_000e;
 						IL_000e:
-						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9(_003CModule_003E.smethod_24<string>(3443780647u), (object)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD)), delegate
+						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9("Are you sure you wish to delete the selected template '{0}'?", (object)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD)), delegate
 						{
 							_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._FzyCgzYhOXEADaijk8VbcLulpcBA(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD);
 							_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD = -1;
@@ -890,7 +889,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							}
 						});
 						num16 = -261246755;
-						goto IL_0091;
+						goto IL_0085;
 					});
 					((ActiveList<Control>)(object)_7y2pwnzdnnIdP3bK7MDiAAyPF9BA).Add((Control)(object)val10);
 					num = (int)(num2 * 306684514) ^ -80996753;
@@ -900,7 +899,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					((ActiveList<Control>)(object)_7y2pwnzdnnIdP3bK7MDiAAyPF9BA).Add((Control)(object)val2);
 					Button val9 = new Button();
 					((Control)val9).set_Dock((DockStyle)2);
-					((Label)val9).set_Text(_003CModule_003E.smethod_25<string>(1153670543u));
+					((Label)val9).set_Text("Delete Template");
 					val10 = val9;
 					num = (int)((num2 * 133272619) ^ 0x166F5D23);
 					continue;
@@ -941,7 +940,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 									switch ((num30 = (uint)num29 ^ 0x3A936FF6u) % 4u)
 									{
 									case 2u:
-										_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), _003CModule_003E.smethod_24<string>(3271458471u), 500, _003CModule_003E.smethod_25<string>(1923253178u), (Action)null);
+										_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), "You did not enter a name!", 500, "OK", (Action)null);
 										num29 = ((int)num30 * -1556883230) ^ 0x11424F29;
 										continue;
 									case 0u:
@@ -949,16 +948,16 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 									case 3u:
 										return;
 									default:
-										goto end_IL_006c;
+										goto end_IL_0064;
 									}
 									break;
 								}
 								continue;
-								end_IL_006c:
+								end_IL_0064:
 								break;
 							}
 						}
-						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9(_003CModule_003E.smethod_26<string>(2847729859u), (object)_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA)), delegate
+						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9("Are you sure you wish to create a new template with the name '{0}', based on the current character?", (object)_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA)), delegate
 						{
 							_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._0S3oMrwxDtOTcbzkglSllPfRq53(_003C_003Ec__DisplayClass20_0.smethod_0(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA), _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._dxo6sBOpjEUiw2JBMikbutXK44t());
 							while (true)
@@ -1009,7 +1008,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					Button val5 = new Button();
 					((Control)val5).set_Margin(new Margin(0, 10, 0, 0));
 					((Control)val5).set_Dock((DockStyle)2);
-					((Label)val5).set_Text(_003CModule_003E.smethod_27<string>(2513775240u));
+					((Label)val5).set_Text("Toggle zoom");
 					val6 = val5;
 					num = ((int)num2 * -421587204) ^ 0x7396994D;
 					continue;
@@ -1020,7 +1019,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					((Control)val3).set_Margin(new Margin(0, 10, 0, 0));
 					((Control)val3).set_Dock((DockStyle)2);
 					((Label)val3).set_Text(Amorous_002EGame_002EScenes_002EPlayerCustomizationScene_002E_l3SUNsFudHnZpYO0ErWgbTaz1DF);
-					((Control)val3).set_Style(_003CModule_003E.smethod_27<string>(1319322059u));
+					((Control)val3).set_Style("button2");
 					val4 = val3;
 					num = 51341724;
 					continue;
@@ -1048,7 +1047,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					Button val = new Button();
 					((Control)val).set_Dock((DockStyle)2);
-					((Label)val).set_Text(_003CModule_003E.smethod_25<string>(952223084u));
+					((Label)val).set_Text("Reset Template");
 					val2 = val;
 					((Control)val2).add_MouseClick((MouseEvent)delegate
 					{
@@ -1056,11 +1055,11 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						{
 							goto IL_000e;
 						}
-						goto IL_008c;
-						IL_008c:
+						goto IL_0080;
+						IL_0080:
 						int num33 = 1404571358;
-						goto IL_0091;
-						IL_0091:
+						goto IL_0085;
+						IL_0085:
 						while (true)
 						{
 							uint num34;
@@ -1069,11 +1068,11 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							case 3u:
 								break;
 							case 4u:
-								_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), _003CModule_003E.smethod_24<string>(592693465u), 500, _003CModule_003E.smethod_25<string>(1923253178u), (Action)null);
+								_003C_003Ec__DisplayClass20_0.smethod_8(_003C_003Ec__DisplayClass20_0.smethod_7((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA), "You did not select a template!", 500, "OK", (Action)null);
 								num33 = ((int)num34 * -724998382) ^ -382658402;
 								continue;
 							case 2u:
-								goto IL_008c;
+								goto IL_0080;
 							default:
 								return;
 							case 0u:
@@ -1085,7 +1084,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						}
 						goto IL_000e;
 						IL_000e:
-						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9(_003CModule_003E.smethod_24<string>(3344054646u), (object)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD)), delegate
+						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._yA2ISabBQiVKBxMt5AXSybmkG5o(_003C_003Ec__DisplayClass20_0.smethod_9("Are you sure you wish to reset the current character back to selected template '{0}'? All changes will be lost!", (object)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD)), delegate
 						{
 							_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._JC60lfB4LT6VifObN1Ynm6iARlc(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD);
 							_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._RB8fRXeQvK5vs7JEA0XfVCEpg1i = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._q9fwz0K4rjUrAm9v3Dn6azqJaIN._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._QjFuG8JMGq8rGnavgUdgnBEKBfD);
@@ -1093,7 +1092,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._OBIbaNO8X49ahEZ5n3Ta8HUK7mO(_7y2pwnzdnnIdP3bK7MDiAAyPF9BA);
 						});
 						num33 = 514981595;
-						goto IL_0091;
+						goto IL_0085;
 					});
 					num = ((int)num2 * -1658693159) ^ -663796946;
 					continue;
@@ -1112,11 +1111,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _yA2ISabBQiVKBxMt5AXSybmkG5o(string string_0, Action action_0)
 	{
-		PlayerCustomizationScene.smethod_29(PlayerCustomizationScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), string_0, new string[2]
-		{
-			_003CModule_003E.smethod_25<string>(2494075107u),
-			_003CModule_003E.smethod_25<string>(2715934020u)
-		}, 500, (Action<int>)delegate(int int_0)
+		PlayerCustomizationScene.smethod_29(PlayerCustomizationScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), string_0, new string[2] { "No way!", "Yes please!" }, 500, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -1149,11 +1144,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	protected virtual void _n3b8BstkorCsu4TW0U2YVdFbdGp()
 	{
-		PlayerCustomizationScene.smethod_29(PlayerCustomizationScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(267135553u), new string[2]
-		{
-			_003CModule_003E.smethod_28<string>(4028389400u),
-			_003CModule_003E.smethod_24<string>(1208636077u)
-		}, 500, (Action<int>)delegate(int int_0)
+		PlayerCustomizationScene.smethod_29(PlayerCustomizationScene.smethod_28((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure you wish to exit? All unsaved changes will be lost!", new string[2] { "Oops, my bad!", "Yes please!" }, 500, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -1186,16 +1177,16 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _jiNxMIzuA8Rrc2ULsrob5A7UNDe(ControlCollection controlCollection_0)
 	{
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012a: Unknown result type (might be due to invalid IL or missing references)
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_27<string>(1649367496u), _3t4w2BwPGr8GQDmJlQU929IFD8f._8CtoV1bqn0CwCzb1tuoNppBt0Gg, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType ebodyType_0)
+		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00de: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Body", _3t4w2BwPGr8GQDmJlQU929IFD8f._8CtoV1bqn0CwCzb1tuoNppBt0Gg, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBodyType ebodyType_0)
 		{
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._8CtoV1bqn0CwCzb1tuoNppBt0Gg = ebodyType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_27<string>(1805784741u), _3t4w2BwPGr8GQDmJlQU929IFD8f._6f1rvTENt5XWmHTE22zxBIwbH9G, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Body Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._6f1rvTENt5XWmHTE22zxBIwbH9G, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._6f1rvTENt5XWmHTE22zxBIwbH9G = color_0;
@@ -1209,7 +1200,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xD4772671u) % 6u)
 				{
 				case 4u:
-					_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_24<string>(2164929240u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh, _3t4w2BwPGr8GQDmJlQU929IFD8f._zBv1cYqPRU7uDCALpBlBSgObUcbA, delegate(Color color_0)
+					_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Underthigh Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh, _3t4w2BwPGr8GQDmJlQU929IFD8f._zBv1cYqPRU7uDCALpBlBSgObUcbA, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._zBv1cYqPRU7uDCALpBlBSgObUcbA = color_0;
@@ -1217,7 +1208,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -330293909) ^ 0x1EE7F59B;
 					continue;
 				case 3u:
-					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, _003CModule_003E.smethod_26<string>(106796778u), _3t4w2BwPGr8GQDmJlQU929IFD8f._VmNLhqrIwSnE6JnCYiBcxnSqnEV, _3t4w2BwPGr8GQDmJlQU929IFD8f._in5HHYmrdLTFpkgc8aimJpXqAXB, delegate(bool bool_0)
+					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Nails", _3t4w2BwPGr8GQDmJlQU929IFD8f._VmNLhqrIwSnE6JnCYiBcxnSqnEV, _3t4w2BwPGr8GQDmJlQU929IFD8f._in5HHYmrdLTFpkgc8aimJpXqAXB, delegate(bool bool_0)
 					{
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._VmNLhqrIwSnE6JnCYiBcxnSqnEV = bool_0;
 					}, delegate(Color color_0)
@@ -1228,7 +1219,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1327976391) ^ 0x5E8D94C1;
 					continue;
 				case 2u:
-					_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_24<string>(1837871494u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes, _3t4w2BwPGr8GQDmJlQU929IFD8f._TxfCqloeyiHpsXka6B46iqCZNsZ, delegate(Color color_0)
+					_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Stripes Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes, _3t4w2BwPGr8GQDmJlQU929IFD8f._TxfCqloeyiHpsXka6B46iqCZNsZ, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._TxfCqloeyiHpsXka6B46iqCZNsZ = color_0;
@@ -1236,7 +1227,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1573795245) ^ 0x50C44824;
 					continue;
 				case 1u:
-					_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_26<string>(904143910u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly, _3t4w2BwPGr8GQDmJlQU929IFD8f._PeK36AvFxEQCvX3fS62hNV7rpuJ, delegate(Color color_0)
+					_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Underbelly Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly, _3t4w2BwPGr8GQDmJlQU929IFD8f._PeK36AvFxEQCvX3fS62hNV7rpuJ, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._PeK36AvFxEQCvX3fS62hNV7rpuJ = color_0;
@@ -1257,20 +1248,20 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _1qIQUjhrbk5WA7C7mYs93gXLOIe(ControlCollection controlCollection_0)
 	{
-		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0067: Unknown result type (might be due to invalid IL or missing references)
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_25<string>(815346282u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm, _3t4w2BwPGr8GQDmJlQU929IFD8f._1ZKGQXLRAHEJR8v7jhlDsyOVLcz, delegate(Color color_0)
+		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Long Forearm Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm, _3t4w2BwPGr8GQDmJlQU929IFD8f._1ZKGQXLRAHEJR8v7jhlDsyOVLcz, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._1ZKGQXLRAHEJR8v7jhlDsyOVLcz = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_26<string>(3126222095u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm, _3t4w2BwPGr8GQDmJlQU929IFD8f._8rDSn6e9Ip9WdOogjhIn8YlL1oM, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Short Forearm Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm, _3t4w2BwPGr8GQDmJlQU929IFD8f._8rDSn6e9Ip9WdOogjhIn8YlL1oM, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._8rDSn6e9Ip9WdOogjhIn8YlL1oM = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_25<string>(1553986965u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm, _3t4w2BwPGr8GQDmJlQU929IFD8f._FrsyMDX7TebzFk8nSLTyRDPi1QH, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Avian Forearm Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm, _3t4w2BwPGr8GQDmJlQU929IFD8f._FrsyMDX7TebzFk8nSLTyRDPi1QH, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._FrsyMDX7TebzFk8nSLTyRDPi1QH = color_0;
@@ -1279,15 +1270,15 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _VCrdQDifkN8NHlzPICTmtbgWFwp(ControlCollection controlCollection_0)
 	{
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_28<string>(2625769491u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin, _3t4w2BwPGr8GQDmJlQU929IFD8f._cUtgkG5qDvgFmI8c29I9xsLVNON, delegate(Color color_0)
+		//IL_0010: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Long Shin Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongShin, _3t4w2BwPGr8GQDmJlQU929IFD8f._cUtgkG5qDvgFmI8c29I9xsLVNON, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._cUtgkG5qDvgFmI8c29I9xsLVNON = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_27<string>(622183322u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin, _3t4w2BwPGr8GQDmJlQU929IFD8f._LcOPiDaC2j5vzxOEYhvW4vRoaRX, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Short Shin Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortShin, _3t4w2BwPGr8GQDmJlQU929IFD8f._LcOPiDaC2j5vzxOEYhvW4vRoaRX, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._LcOPiDaC2j5vzxOEYhvW4vRoaRX = color_0;
@@ -1301,7 +1292,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x1EC3711Fu) % 3u)
 				{
 				case 2u:
-					goto IL_0059;
+					goto IL_0051;
 				default:
 					return;
 				case 0u:
@@ -1310,8 +1301,8 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					return;
 				}
 				break;
-				IL_0059:
-				_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, _003CModule_003E.smethod_24<string>(3118222735u), _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianShin, _3t4w2BwPGr8GQDmJlQU929IFD8f._meyNS02iTIxo212B6c5eoKns2wj, delegate(Color color_0)
+				IL_0051:
+				_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Avian Shin Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianShin, _3t4w2BwPGr8GQDmJlQU929IFD8f._meyNS02iTIxo212B6c5eoKns2wj, delegate(Color color_0)
 				{
 					//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 					_3t4w2BwPGr8GQDmJlQU929IFD8f._meyNS02iTIxo212B6c5eoKns2wj = color_0;
@@ -1323,13 +1314,13 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _vXrWU56trsuFNc9CNcHuctfkI2S(ControlCollection controlCollection_0)
 	{
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ea: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00da: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0155: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_026a: Unknown result type (might be due to invalid IL or missing references)
 		PlayerCustomizationScene _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = default(PlayerCustomizationScene);
 		Panel _5DnedRtrhRxc4WXg7XVOkddr43f = default(Panel);
 		Panel _KH5vstJZR49J3eWlwNclJbU5SDe = default(Panel);
@@ -1342,7 +1333,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xAAA1B2CFu) % 11u)
 				{
 				case 10u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_24<string>(2618842813u), _3t4w2BwPGr8GQDmJlQU929IFD8f._1qfGl3Oc2JyQEpnQtdOxMeMkqhi, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Head Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._1qfGl3Oc2JyQEpnQtdOxMeMkqhi, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._1qfGl3Oc2JyQEpnQtdOxMeMkqhi = color_0;
@@ -1350,7 +1341,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 476479877) ^ 0x17D39B6E);
 					continue;
 				case 9u:
-					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), _003CModule_003E.smethod_27<string>(3486700604u), _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Snout, _3t4w2BwPGr8GQDmJlQU929IFD8f._lUyqwDvFCoXEZ6VM9PVCQ970jps, delegate(Color color_0)
+					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), "Snout Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Snout, _3t4w2BwPGr8GQDmJlQU929IFD8f._lUyqwDvFCoXEZ6VM9PVCQ970jps, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._lUyqwDvFCoXEZ6VM9PVCQ970jps = color_0;
@@ -1358,12 +1349,12 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 290136431) ^ 0x2EE8B3AF);
 					continue;
 				case 8u:
-					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), _003CModule_003E.smethod_26<string>(1710590507u), _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Gaunt, _3t4w2BwPGr8GQDmJlQU929IFD8f._Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt, delegate(Color color_0)
+					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), "Gaunt Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Gaunt, _3t4w2BwPGr8GQDmJlQU929IFD8f._Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt = color_0;
 					});
-					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), _003CModule_003E.smethod_24<string>(2192059066u), _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Scruffy, _3t4w2BwPGr8GQDmJlQU929IFD8f._WvoLJ4MA4gYEsgOmmIQvfK3xFlu, delegate(Color color_0)
+					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), "Scruffy Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Scruffy, _3t4w2BwPGr8GQDmJlQU929IFD8f._WvoLJ4MA4gYEsgOmmIQvfK3xFlu, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._WvoLJ4MA4gYEsgOmmIQvfK3xFlu = color_0;
@@ -1371,7 +1362,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1205282038) ^ 0x36D160DD;
 					continue;
 				case 7u:
-					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_28<string>(1598186517u), _3t4w2BwPGr8GQDmJlQU929IFD8f._UjtZovBCLAtBZnUfbTvRFsaf5mx, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EHeadType eheadType_0)
+					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Head", _3t4w2BwPGr8GQDmJlQU929IFD8f._UjtZovBCLAtBZnUfbTvRFsaf5mx, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EHeadType eheadType_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._UjtZovBCLAtBZnUfbTvRFsaf5mx = eheadType_0;
 						int num3;
@@ -1443,7 +1434,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 1600450992) ^ 0x24403A90);
 					continue;
 				case 5u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_KH5vstJZR49J3eWlwNclJbU5SDe)), _003CModule_003E.smethod_28<string>(3647107269u), _3t4w2BwPGr8GQDmJlQU929IFD8f._sbSAaAmkhONcFX6f0JtHbVQbEfG, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_KH5vstJZR49J3eWlwNclJbU5SDe)), "Eyesholes Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._sbSAaAmkhONcFX6f0JtHbVQbEfG, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._sbSAaAmkhONcFX6f0JtHbVQbEfG = color_0;
@@ -1453,7 +1444,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)(num2 * 1356144737) ^ -1446726226;
 					continue;
 				case 3u:
-					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), _003CModule_003E.smethod_27<string>(854562901u), _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Stripes, _3t4w2BwPGr8GQDmJlQU929IFD8f._qKGefHxdjIUD6ObjxrxnLwbBEsh, delegate(Color color_0)
+					_h7MUbT306Ju5xwvamN8SatTR2Mo(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_5DnedRtrhRxc4WXg7XVOkddr43f)), "Stripes Marking", _opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Stripes, _3t4w2BwPGr8GQDmJlQU929IFD8f._qKGefHxdjIUD6ObjxrxnLwbBEsh, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._qKGefHxdjIUD6ObjxrxnLwbBEsh = color_0;
@@ -1478,7 +1469,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1051481546) ^ -696687821;
 					continue;
 				case 0u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_KH5vstJZR49J3eWlwNclJbU5SDe)), _003CModule_003E.smethod_25<string>(208425409u), _3t4w2BwPGr8GQDmJlQU929IFD8f._VWdlqWB4z2wNtm197Oiv32QGVbE, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_KH5vstJZR49J3eWlwNclJbU5SDe)), "Paper Bag Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._VWdlqWB4z2wNtm197Oiv32QGVbE, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._VWdlqWB4z2wNtm197Oiv32QGVbE = color_0;
@@ -1499,16 +1490,16 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _vg6ASaP7xNqc0jerF3mcrXv4dn7(ControlCollection controlCollection_0)
 	{
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0091: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0116: Unknown result type (might be due to invalid IL or missing references)
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_24<string>(2046116799u), _3t4w2BwPGr8GQDmJlQU929IFD8f._4QUr9lDqmNxEuy7B4xgb7Lj1HU0, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EMuzzleType emuzzleType_0)
+		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00fe: Unknown result type (might be due to invalid IL or missing references)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Muzzle", _3t4w2BwPGr8GQDmJlQU929IFD8f._4QUr9lDqmNxEuy7B4xgb7Lj1HU0, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EMuzzleType emuzzleType_0)
 		{
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._4QUr9lDqmNxEuy7B4xgb7Lj1HU0 = emuzzleType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_26<string>(4091800722u), _3t4w2BwPGr8GQDmJlQU929IFD8f._VsEYbNSam3IFYYWY4QC2lb4ia61, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Muzzle Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._VsEYbNSam3IFYYWY4QC2lb4ia61, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._VsEYbNSam3IFYYWY4QC2lb4ia61 = color_0;
@@ -1522,12 +1513,12 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xCCEC0A40u) % 4u)
 				{
 				case 3u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_24<string>(4189578754u), _3t4w2BwPGr8GQDmJlQU929IFD8f._y1SiMmRVXWDhDtY17knDpitt46F, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Nose Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._y1SiMmRVXWDhDtY17knDpitt46F, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._y1SiMmRVXWDhDtY17knDpitt46F = color_0;
 					});
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_27<string>(393420997u), _3t4w2BwPGr8GQDmJlQU929IFD8f._T98drEOtEEZKeB5tXzsuPrhb5Xk, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Teeth Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._T98drEOtEEZKeB5tXzsuPrhb5Xk, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._T98drEOtEEZKeB5tXzsuPrhb5Xk = color_0;
@@ -1535,7 +1526,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1708515340) ^ -621933188;
 					continue;
 				case 0u:
-					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, _003CModule_003E.smethod_25<string>(1954303387u), _3t4w2BwPGr8GQDmJlQU929IFD8f._hkFDGB5pWIuOVcIyDAFqHrDdSpjA, _3t4w2BwPGr8GQDmJlQU929IFD8f._q2iDxJYfqribHB1bD8aSkSjqrfnA, delegate(bool bool_0)
+					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Muzzle Horn", _3t4w2BwPGr8GQDmJlQU929IFD8f._hkFDGB5pWIuOVcIyDAFqHrDdSpjA, _3t4w2BwPGr8GQDmJlQU929IFD8f._q2iDxJYfqribHB1bD8aSkSjqrfnA, delegate(bool bool_0)
 					{
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._hkFDGB5pWIuOVcIyDAFqHrDdSpjA = bool_0;
 					}, delegate(Color color_0)
@@ -1543,7 +1534,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._q2iDxJYfqribHB1bD8aSkSjqrfnA = color_0;
 					});
-					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, _003CModule_003E.smethod_24<string>(2718568814u), _3t4w2BwPGr8GQDmJlQU929IFD8f._UAZhvJ3a9BGOBM0CLiDkKLwUFC9, _3t4w2BwPGr8GQDmJlQU929IFD8f._phJrpk3rql5MfNJxPQ9X7nC8aAk, delegate(bool bool_0)
+					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Muzzle Mask", _3t4w2BwPGr8GQDmJlQU929IFD8f._UAZhvJ3a9BGOBM0CLiDkKLwUFC9, _3t4w2BwPGr8GQDmJlQU929IFD8f._phJrpk3rql5MfNJxPQ9X7nC8aAk, delegate(bool bool_0)
 					{
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._UAZhvJ3a9BGOBM0CLiDkKLwUFC9 = bool_0;
 					}, delegate(Color color_0)
@@ -1567,19 +1558,19 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _Xhurp3mVVoR5kNlnxgLoDDkeQxM(ControlCollection controlCollection_0)
 	{
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0063: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008e: Unknown result type (might be due to invalid IL or missing references)
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_26<string>(1723019202u), _3t4w2BwPGr8GQDmJlQU929IFD8f._pmr0FnBBvgaggpusBKMWplUa63c, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EHeadAccessoriesType eheadAccessoriesType_0)
+		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007e: Unknown result type (might be due to invalid IL or missing references)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Ears and Horns", _3t4w2BwPGr8GQDmJlQU929IFD8f._pmr0FnBBvgaggpusBKMWplUa63c, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EHeadAccessoriesType eheadAccessoriesType_0)
 		{
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._pmr0FnBBvgaggpusBKMWplUa63c = eheadAccessoriesType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_25<string>(2488918115u), _3t4w2BwPGr8GQDmJlQU929IFD8f._9b2asKZDwVM1TcSfmfeFCuk0TJZb, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Horns Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._9b2asKZDwVM1TcSfmfeFCuk0TJZb, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._9b2asKZDwVM1TcSfmfeFCuk0TJZb = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_26<string>(2069469882u), _3t4w2BwPGr8GQDmJlQU929IFD8f._vUhBAXEgvpGKopOUkDJFoc4EYQ3, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Ear Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._vUhBAXEgvpGKopOUkDJFoc4EYQ3, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._vUhBAXEgvpGKopOUkDJFoc4EYQ3 = color_0;
@@ -1593,7 +1584,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xE492274Eu) % 3u)
 				{
 				case 2u:
-					goto IL_007c;
+					goto IL_0070;
 				default:
 					return;
 				case 0u:
@@ -1602,8 +1593,8 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					return;
 				}
 				break;
-				IL_007c:
-				_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_27<string>(2303099185u), _3t4w2BwPGr8GQDmJlQU929IFD8f._uaBF7rEib15d42vH8AzoXWFMMkE, delegate(Color color_0)
+				IL_0070:
+				_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Ear Inner Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._uaBF7rEib15d42vH8AzoXWFMMkE, delegate(Color color_0)
 				{
 					//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 					_3t4w2BwPGr8GQDmJlQU929IFD8f._uaBF7rEib15d42vH8AzoXWFMMkE = color_0;
@@ -1615,9 +1606,9 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _gHA9C0CRN2NaRMtfTrvlotJOd0T(ControlCollection controlCollection_0)
 	{
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009f: Unknown result type (might be due to invalid IL or missing references)
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_27<string>(633035084u), _3t4w2BwPGr8GQDmJlQU929IFD8f._03h2I0mTkGTzIA5R48rgwJh7JZA, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EHairstyleType ehairstyleType_0)
+		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Hair", _3t4w2BwPGr8GQDmJlQU929IFD8f._03h2I0mTkGTzIA5R48rgwJh7JZA, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EHairstyleType ehairstyleType_0)
 		{
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._03h2I0mTkGTzIA5R48rgwJh7JZA = ehairstyleType_0;
 		});
@@ -1630,19 +1621,19 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xB391C99Eu) % 4u)
 				{
 				case 1u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_28<string>(4103810813u), _3t4w2BwPGr8GQDmJlQU929IFD8f._bJmvnPs69aVDXxG48lmruYZFHKt, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Hair Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._bJmvnPs69aVDXxG48lmruYZFHKt, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._bJmvnPs69aVDXxG48lmruYZFHKt = color_0;
 					});
-					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_25<string>(4211373115u), _3t4w2BwPGr8GQDmJlQU929IFD8f._fzMbZCCd7imnrcrYWkSj5u8UZ2J, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EFringeType efringeType_0)
+					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Fringe", _3t4w2BwPGr8GQDmJlQU929IFD8f._fzMbZCCd7imnrcrYWkSj5u8UZ2J, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EFringeType efringeType_0)
 					{
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._fzMbZCCd7imnrcrYWkSj5u8UZ2J = efringeType_0;
 					});
 					num = ((int)num2 * -1895455439) ^ -2030303005;
 					continue;
 				case 0u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_26<string>(2827843947u), _3t4w2BwPGr8GQDmJlQU929IFD8f._EvdUMrkAAdTeMv6fOpGrOLCAMq8A, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Fringe Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._EvdUMrkAAdTeMv6fOpGrOLCAMq8A, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._EvdUMrkAAdTeMv6fOpGrOLCAMq8A = color_0;
@@ -1663,10 +1654,10 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _hNo7o9fG9jvwcKyMq1nYl4q7cXc(ControlCollection controlCollection_0)
 	{
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_27<string>(3966804101u), _3t4w2BwPGr8GQDmJlQU929IFD8f._c0ThYURHAGN0Wzlzw9Ibh3Z8qyo, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EEyesType eeyesType_0)
+		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Eyes", _3t4w2BwPGr8GQDmJlQU929IFD8f._c0ThYURHAGN0Wzlzw9Ibh3Z8qyo, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EEyesType eeyesType_0)
 		{
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._c0ThYURHAGN0Wzlzw9Ibh3Z8qyo = eeyesType_0;
 		});
@@ -1679,12 +1670,12 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xDB859BE1u) % 5u)
 				{
 				case 2u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_24<string>(1910467669u), _3t4w2BwPGr8GQDmJlQU929IFD8f._GXnDb1oaJlPbAQV2mjAwCQFK0nmb, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Eyes Back Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._GXnDb1oaJlPbAQV2mjAwCQFK0nmb, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._GXnDb1oaJlPbAQV2mjAwCQFK0nmb = color_0;
 					});
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_28<string>(3707317810u), _3t4w2BwPGr8GQDmJlQU929IFD8f._0K4lcN7iwo5q0iP1YlkpY9GdayR, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Eyes Front Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._0K4lcN7iwo5q0iP1YlkpY9GdayR, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._0K4lcN7iwo5q0iP1YlkpY9GdayR = color_0;
@@ -1692,14 +1683,14 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1382836480) ^ -896115478;
 					continue;
 				case 1u:
-					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_28<string>(2409908111u), _3t4w2BwPGr8GQDmJlQU929IFD8f._KBOJ0qhM8C5evPQxibgX74m2WHg, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBrowType ebrowType_0)
+					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Brows", _3t4w2BwPGr8GQDmJlQU929IFD8f._KBOJ0qhM8C5evPQxibgX74m2WHg, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBrowType ebrowType_0)
 					{
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._KBOJ0qhM8C5evPQxibgX74m2WHg = ebrowType_0;
 					});
 					num = ((int)num2 * -1752776231) ^ 0x5521BF2D;
 					continue;
 				case 0u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_25<string>(608741831u), _3t4w2BwPGr8GQDmJlQU929IFD8f._HRPv5rzDY5zNiP4NADDEGhrzGTe, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Brows Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._HRPv5rzDY5zNiP4NADDEGhrzGTe, delegate(Color color_0)
 					{
 						//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._HRPv5rzDY5zNiP4NADDEGhrzGTe = color_0;
@@ -1720,11 +1711,11 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _mWS8UuA4xcT1bSdjDObiubOE0wH(ControlCollection controlCollection_0)
 	{
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0124: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0287: Unknown result type (might be due to invalid IL or missing references)
-		//IL_037a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0118: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_026f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_035a: Unknown result type (might be due to invalid IL or missing references)
 		Control _Jhlc8lMI1rq07omae9xc6uig5tv = default(Control);
 		Panel _TLsIePSD9UbEwlT0HwKiF2xZX87 = default(Panel);
 		PlayerCustomizationScene _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = default(PlayerCustomizationScene);
@@ -1739,7 +1730,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xE017D15Au) % 14u)
 				{
 				case 13u:
-					_Jhlc8lMI1rq07omae9xc6uig5tv = _z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TLsIePSD9UbEwlT0HwKiF2xZX87)), _003CModule_003E.smethod_27<string>(2553565034u), _3t4w2BwPGr8GQDmJlQU929IFD8f._o6OnmHi5rZIQPHESokp9rTaO1ei, delegate(Color color_0)
+					_Jhlc8lMI1rq07omae9xc6uig5tv = _z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TLsIePSD9UbEwlT0HwKiF2xZX87)), "Cock Tip Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._o6OnmHi5rZIQPHESokp9rTaO1ei, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._o6OnmHi5rZIQPHESokp9rTaO1ei = color_0;
@@ -1751,7 +1742,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 1508786066) ^ 0x7A14DADC);
 					continue;
 				case 11u:
-					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_28<string>(2891113378u), _3t4w2BwPGr8GQDmJlQU929IFD8f._BCncLn6BIYiBX6NdFByAquBYGpH, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType ebreastsType_0)
+					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Breasts", _3t4w2BwPGr8GQDmJlQU929IFD8f._BCncLn6BIYiBX6NdFByAquBYGpH, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType ebreastsType_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._BCncLn6BIYiBX6NdFByAquBYGpH = ebreastsType_0;
 						_003C_003Ec__DisplayClass31_0.smethod_0((Control)(object)_63PX0QXRoq6jeUvG5xheRABNwsg, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._BCncLn6BIYiBX6NdFByAquBYGpH != _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.None);
@@ -1772,7 +1763,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 7u:
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_63PX0QXRoq6jeUvG5xheRABNwsg)), _003CModule_003E.smethod_25<string>(877338443u), _3t4w2BwPGr8GQDmJlQU929IFD8f._pigzqi6DgcSToQkL9g7Ns2QrLfp, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_63PX0QXRoq6jeUvG5xheRABNwsg)), "Breasts Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._pigzqi6DgcSToQkL9g7Ns2QrLfp, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._pigzqi6DgcSToQkL9g7Ns2QrLfp = color_0;
@@ -1794,7 +1785,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -512819727) ^ 0x47AE572A;
 					continue;
 				case 4u:
-					_HdTJZZGoOMNi89T0yAdBraCZMjc(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_63PX0QXRoq6jeUvG5xheRABNwsg)), _003CModule_003E.smethod_25<string>(3738750548u), _3t4w2BwPGr8GQDmJlQU929IFD8f._Q2AbpMWcrhtCW9MLTtT5gwoleu7, _3t4w2BwPGr8GQDmJlQU929IFD8f._2yydfEIrSiLPTti2dT8JXGoIaM3, delegate(bool bool_0)
+					_HdTJZZGoOMNi89T0yAdBraCZMjc(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_63PX0QXRoq6jeUvG5xheRABNwsg)), "Nipples", _3t4w2BwPGr8GQDmJlQU929IFD8f._Q2AbpMWcrhtCW9MLTtT5gwoleu7, _3t4w2BwPGr8GQDmJlQU929IFD8f._2yydfEIrSiLPTti2dT8JXGoIaM3, delegate(bool bool_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._Q2AbpMWcrhtCW9MLTtT5gwoleu7 = bool_0;
 					}, delegate(Color color_0)
@@ -1809,7 +1800,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = -1221509930;
 					continue;
 				case 1u:
-					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_24<string>(1583409923u), _3t4w2BwPGr8GQDmJlQU929IFD8f._rtyJgfViJdXL2Ela5APpDlk99dI, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType ecockType_0)
+					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Cock", _3t4w2BwPGr8GQDmJlQU929IFD8f._rtyJgfViJdXL2Ela5APpDlk99dI, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType ecockType_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._rtyJgfViJdXL2Ela5APpDlk99dI = ecockType_0;
 						_003C_003Ec__DisplayClass31_0.smethod_0((Control)(object)_TLsIePSD9UbEwlT0HwKiF2xZX87, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._rtyJgfViJdXL2Ela5APpDlk99dI != _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.None);
@@ -1840,7 +1831,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							}
 						}
 					});
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TLsIePSD9UbEwlT0HwKiF2xZX87)), _003CModule_003E.smethod_25<string>(1481680820u), _3t4w2BwPGr8GQDmJlQU929IFD8f._XnNREK59QnV1onFFWfSUaS9WK0E, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_TLsIePSD9UbEwlT0HwKiF2xZX87)), "Cock Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._XnNREK59QnV1onFFWfSUaS9WK0E, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._XnNREK59QnV1onFFWfSUaS9WK0E = color_0;
@@ -1859,12 +1850,12 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 3u:
 					break;
 				default:
-					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_24<string>(2978074103u), _3t4w2BwPGr8GQDmJlQU929IFD8f._7OCMpsMmozHsAG0GDljMMAlGLJBA, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBallsType eballsType_0)
+					_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Balls", _3t4w2BwPGr8GQDmJlQU929IFD8f._7OCMpsMmozHsAG0GDljMMAlGLJBA, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EBallsType eballsType_0)
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._7OCMpsMmozHsAG0GDljMMAlGLJBA = eballsType_0;
 						_003C_003Ec__DisplayClass31_0.smethod_0((Control)(object)_s9TeQxnG80yYnmcOHHr4bw9fWCh, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._7OCMpsMmozHsAG0GDljMMAlGLJBA != _opIJo2jLUqdOL5yAFP4yzXce0DG.EBallsType.None);
 					});
-					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_s9TeQxnG80yYnmcOHHr4bw9fWCh)), _003CModule_003E.smethod_27<string>(3744400961u), _3t4w2BwPGr8GQDmJlQU929IFD8f._8qQ7XVlyRYW4icBFxPQCJqgueYD, delegate(Color color_0)
+					_z5npzs7mj5H3zJ1PF64BFNsXBmm(PlayerCustomizationScene.smethod_33(PlayerCustomizationScene.smethod_32(_s9TeQxnG80yYnmcOHHr4bw9fWCh)), "Balls Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._8qQ7XVlyRYW4icBFxPQCJqgueYD, delegate(Color color_0)
 					{
 						//IL_000b: Unknown result type (might be due to invalid IL or missing references)
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3t4w2BwPGr8GQDmJlQU929IFD8f._8qQ7XVlyRYW4icBFxPQCJqgueYD = color_0;
@@ -1879,14 +1870,14 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _7JR6eL4D0qdIJNOwfInnlg2HEgZ(ControlCollection controlCollection_0)
 	{
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0073: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_24<string>(2091583148u), _3t4w2BwPGr8GQDmJlQU929IFD8f._NrFEKLWh80bQXi9PujCBTqm01AA, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.ETailType etailType_0)
+		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0067: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Tail", _3t4w2BwPGr8GQDmJlQU929IFD8f._NrFEKLWh80bQXi9PujCBTqm01AA, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.ETailType etailType_0)
 		{
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._NrFEKLWh80bQXi9PujCBTqm01AA = etailType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_25<string>(2220321503u), _3t4w2BwPGr8GQDmJlQU929IFD8f._qsK1J3jktKH3eJ2i8sL1oaxXtLc, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Tail Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._qsK1J3jktKH3eJ2i8sL1oaxXtLc, delegate(Color color_0)
 		{
 			//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._qsK1J3jktKH3eJ2i8sL1oaxXtLc = color_0;
@@ -1900,7 +1891,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x7AF9A7Cu) % 4u)
 				{
 				case 3u:
-					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, _003CModule_003E.smethod_28<string>(4164021354u), _3t4w2BwPGr8GQDmJlQU929IFD8f._tEXwTuSRSq5JaaFE4W8edEHxS9q, _3t4w2BwPGr8GQDmJlQU929IFD8f._LufmRsAZrlyDgRKYocQXPzANMaF, delegate(bool bool_0)
+					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Tail Part B", _3t4w2BwPGr8GQDmJlQU929IFD8f._tEXwTuSRSq5JaaFE4W8edEHxS9q, _3t4w2BwPGr8GQDmJlQU929IFD8f._LufmRsAZrlyDgRKYocQXPzANMaF, delegate(bool bool_0)
 					{
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._tEXwTuSRSq5JaaFE4W8edEHxS9q = bool_0;
 					}, delegate(Color color_0)
@@ -1911,7 +1902,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)(num2 * 791703359) ^ -250827927;
 					continue;
 				case 1u:
-					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, _003CModule_003E.smethod_25<string>(2486339619u), _3t4w2BwPGr8GQDmJlQU929IFD8f._PVQfhwHODkR6bzHmfeCK4L8riIG, _3t4w2BwPGr8GQDmJlQU929IFD8f._62dl1HYYkor3TZL58k5Y33Tj83, delegate(bool bool_0)
+					_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Tail Part A", _3t4w2BwPGr8GQDmJlQU929IFD8f._PVQfhwHODkR6bzHmfeCK4L8riIG, _3t4w2BwPGr8GQDmJlQU929IFD8f._62dl1HYYkor3TZL58k5Y33Tj83, delegate(bool bool_0)
 					{
 						_3t4w2BwPGr8GQDmJlQU929IFD8f._PVQfhwHODkR6bzHmfeCK4L8riIG = bool_0;
 					}, delegate(Color color_0)
@@ -1935,8 +1926,8 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _PBEdYyzYEWcXAodjVf58ocOQ3Jf(ControlCollection controlCollection_0)
 	{
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, _003CModule_003E.smethod_24<string>(3050670278u), _3t4w2BwPGr8GQDmJlQU929IFD8f._LZ8c6hRMRYKjnlLOPhbZHcWqUGG, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EFeetType efeetType_0)
+		//IL_0034: Unknown result type (might be due to invalid IL or missing references)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Feet", _3t4w2BwPGr8GQDmJlQU929IFD8f._LZ8c6hRMRYKjnlLOPhbZHcWqUGG, delegate(_opIJo2jLUqdOL5yAFP4yzXce0DG.EFeetType efeetType_0)
 		{
 			_3t4w2BwPGr8GQDmJlQU929IFD8f._LZ8c6hRMRYKjnlLOPhbZHcWqUGG = efeetType_0;
 		});
@@ -1949,7 +1940,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x7291AB0Cu) % 3u)
 				{
 				case 1u:
-					goto IL_002a;
+					goto IL_0026;
 				default:
 					return;
 				case 0u:
@@ -1958,8 +1949,8 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					return;
 				}
 				break;
-				IL_002a:
-				_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, _003CModule_003E.smethod_26<string>(3330940918u), _3t4w2BwPGr8GQDmJlQU929IFD8f._LZfuQybASevOsCykEWqdvA5GqUF, delegate(Color color_0)
+				IL_0026:
+				_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Feet Color", _3t4w2BwPGr8GQDmJlQU929IFD8f._LZfuQybASevOsCykEWqdvA5GqUF, delegate(Color color_0)
 				{
 					//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 					_3t4w2BwPGr8GQDmJlQU929IFD8f._LZfuQybASevOsCykEWqdvA5GqUF = color_0;
@@ -1971,7 +1962,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public void _KkwafXXLVg1QfQgqqCAojg2ySyZ(SpriteBatch spriteBatch_0)
 	{
-		PlayerCustomizationScene.smethod_36(PlayerCustomizationScene.smethod_35(PlayerCustomizationScene.smethod_34(_9jklVVcQQYcyqOYrkPiht2VP0IG), _003CModule_003E.smethod_26<string>(3533174002u)), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+		PlayerCustomizationScene.smethod_36(PlayerCustomizationScene.smethod_35(PlayerCustomizationScene.smethod_34(_9jklVVcQQYcyqOYrkPiht2VP0IG), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
 		while (true)
 		{
 			int num = -1530364818;
@@ -1981,7 +1972,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xF7BD2591u) % 3u)
 				{
 				case 1u:
-					goto IL_0026;
+					goto IL_0022;
 				default:
 					return;
 				case 0u:
@@ -1990,7 +1981,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					return;
 				}
 				break;
-				IL_0026:
+				IL_0022:
 				PlayerCustomizationScene.smethod_38(PlayerCustomizationScene.smethod_37(), spriteBatch_0, _9jklVVcQQYcyqOYrkPiht2VP0IG);
 				num = (int)(num2 * 721460408) ^ -714498080;
 			}
@@ -2192,9 +2183,9 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	private void _HdTJZZGoOMNi89T0yAdBraCZMjc(ControlCollection controlCollection_0, string string_0, bool bool_0, Color color_0, Action<bool> action_0, Action<Color> action_1)
 	{
 		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cc: Expected O, but got Unknown
+		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00be: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c8: Expected O, but got Unknown
 		PlayerCustomizationScene _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = default(PlayerCustomizationScene);
 		CheckBox _SbG09NUiMRUtR5nySpplBTa1qug = default(CheckBox);
 		Control _XXaN99sI8FddBJPpuffIrCZZ49q = default(Control);
@@ -2215,7 +2206,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					PlayerCustomizationScene.smethod_42(obj, bool_0);
 					((Control)obj).set_Margin(new Margin(0, 0, 0, 5));
 					_SbG09NUiMRUtR5nySpplBTa1qug = obj;
-					_XXaN99sI8FddBJPpuffIrCZZ49q = _lV0oshnYavLGLHyogGNxv60JpoM(string_0 + _003CModule_003E.smethod_27<string>(3748018215u), color_0, action_1);
+					_XXaN99sI8FddBJPpuffIrCZZ49q = _lV0oshnYavLGLHyogGNxv60JpoM(string_0 + " Color", color_0, action_1);
 					num = (int)((num2 * 1373050834) ^ 0x24DC31A7);
 					continue;
 				}
@@ -2514,7 +2505,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					PlayerCustomizationScene.smethod_23((Control)(object)obj, (DockStyle)2);
 					PlayerCustomizationScene.smethod_45((Label)(object)obj, (Alignment)4);
 					PlayerCustomizationScene.smethod_25((Label)(object)obj, string_0);
-					PlayerCustomizationScene.smethod_46((Control)(object)obj, _003CModule_003E.smethod_25<string>(3493576914u));
+					PlayerCustomizationScene.smethod_46((Control)(object)obj, "buttonOpaque");
 					_u0Xt0uZRA6nEpUColLBccMdwezW = obj;
 					int num3;
 					int num4;
@@ -2546,15 +2537,15 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		//IL_003e: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0048: Expected O, but got Unknown
-		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0104: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0109: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0125: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0129: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013c: Expected O, but got Unknown
+		//IL_0138: Expected O, but got Unknown
 		DropDownList val2 = default(DropDownList);
 		int num3 = default(int);
 		Action<int> _qhAM4Wrvf8c5jzKBQqLfosAE9D = default(Action<int>);
@@ -2611,7 +2602,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					DropDownList obj2 = PlayerCustomizationScene.smethod_48();
 					PlayerCustomizationScene.smethod_23((Control)(object)obj2, (DockStyle)2);
-					PlayerCustomizationScene.smethod_46((Control)(object)obj2, _003CModule_003E.smethod_25<string>(2160907838u));
+					PlayerCustomizationScene.smethod_46((Control)(object)obj2, "button");
 					((Control)PlayerCustomizationScene.smethod_49(obj2)).set_Margin(new Margin(10, 0, 0, 0));
 					obj2.get_Dropdown().set_Resizable(false);
 					((Control)obj2).set_Margin(new Margin(0, 0, 0, 5));
@@ -2686,17 +2677,17 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _bABf372CnRI0x85NIaTEbIUNZ10<T>(ControlCollection controlCollection_0, string string_0, T gparam_0, Action<T> action_0)
 	{
-		//IL_0169: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0184: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01aa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b4: Expected O, but got Unknown
-		//IL_01e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0165: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0180: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b0: Expected O, but got Unknown
+		//IL_01dd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ea: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0204: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0208: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021b: Expected O, but got Unknown
+		//IL_0217: Expected O, but got Unknown
 		PlayerCustomizationScene _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = default(PlayerCustomizationScene);
 		int num3 = default(int);
 		string[] names = default(string[]);
@@ -2765,7 +2756,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					val3 = obj;
 					DropDownList obj2 = PlayerCustomizationScene.smethod_48();
 					PlayerCustomizationScene.smethod_23((Control)(object)obj2, (DockStyle)2);
-					PlayerCustomizationScene.smethod_46((Control)(object)obj2, _003CModule_003E.smethod_27<string>(604097052u));
+					PlayerCustomizationScene.smethod_46((Control)(object)obj2, "button");
 					((Control)PlayerCustomizationScene.smethod_49(obj2)).set_Margin(new Margin(10, 0, 0, 0));
 					obj2.get_Dropdown().set_Resizable(false);
 					((Control)obj2).set_Margin(new Margin(0, 0, 0, 5));
@@ -2810,188 +2801,188 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _gaKeabKyjzz2jeJCEYxHW9Gc8CGA(string string_0, Color color_0, Action<Color> action_0)
 	{
-		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0071: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
 		//IL_007a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0088: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ac: Expected O, but got Unknown
-		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ee: Expected O, but got Unknown
-		//IL_010e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0118: Expected O, but got Unknown
-		//IL_0125: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012f: Expected O, but got Unknown
-		//IL_0158: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0164: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0174: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017d: Expected O, but got Unknown
-		//IL_0186: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0190: Expected O, but got Unknown
-		//IL_01c9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ce: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ed: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fc: Expected O, but got Unknown
+		//IL_0084: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a8: Expected O, but got Unknown
+		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00de: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ea: Expected O, but got Unknown
+		//IL_010a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0114: Expected O, but got Unknown
+		//IL_0121: Unknown result type (might be due to invalid IL or missing references)
+		//IL_012b: Expected O, but got Unknown
+		//IL_0154: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0159: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0160: Unknown result type (might be due to invalid IL or missing references)
+		//IL_016c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0175: Expected O, but got Unknown
+		//IL_017e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0188: Expected O, but got Unknown
+		//IL_01c1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01cd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f0: Expected O, but got Unknown
+		//IL_021d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0222: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0229: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0235: Unknown result type (might be due to invalid IL or missing references)
-		//IL_023d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0247: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0273: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0282: Expected O, but got Unknown
-		//IL_031a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_031f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0231: Unknown result type (might be due to invalid IL or missing references)
+		//IL_023b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0262: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0267: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0276: Expected O, but got Unknown
+		//IL_030e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0313: Unknown result type (might be due to invalid IL or missing references)
+		//IL_033f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0344: Unknown result type (might be due to invalid IL or missing references)
 		//IL_034b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0350: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0357: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0363: Expected O, but got Unknown
-		//IL_03b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03bb: Expected O, but got Unknown
-		//IL_0400: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0357: Expected O, but got Unknown
+		//IL_03a8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03af: Expected O, but got Unknown
+		//IL_03f4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0426: Unknown result type (might be due to invalid IL or missing references)
+		//IL_042b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0432: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0437: Unknown result type (might be due to invalid IL or missing references)
 		//IL_043e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0455: Unknown result type (might be due to invalid IL or missing references)
-		//IL_045a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0466: Expected O, but got Unknown
-		//IL_04bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04c8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04da: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04df: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04eb: Expected O, but got Unknown
-		//IL_04eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04f7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0507: Unknown result type (might be due to invalid IL or missing references)
-		//IL_050e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0513: Unknown result type (might be due to invalid IL or missing references)
-		//IL_051f: Expected O, but got Unknown
-		//IL_0520: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0525: Unknown result type (might be due to invalid IL or missing references)
-		//IL_052c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0531: Unknown result type (might be due to invalid IL or missing references)
-		//IL_053b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0547: Expected O, but got Unknown
+		//IL_0445: Unknown result type (might be due to invalid IL or missing references)
+		//IL_044a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0456: Expected O, but got Unknown
+		//IL_04ac: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04b1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04b8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04c0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04ca: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04cf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04db: Expected O, but got Unknown
+		//IL_04db: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04e0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04e7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04f3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04fa: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04ff: Unknown result type (might be due to invalid IL or missing references)
+		//IL_050b: Expected O, but got Unknown
+		//IL_050c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0511: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0518: Unknown result type (might be due to invalid IL or missing references)
+		//IL_051d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0527: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0533: Expected O, but got Unknown
+		//IL_056d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0572: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0579: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0581: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0586: Unknown result type (might be due to invalid IL or missing references)
-		//IL_058d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0595: Unknown result type (might be due to invalid IL or missing references)
-		//IL_059f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05a4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05b0: Expected O, but got Unknown
-		//IL_05ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05f3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0605: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0610: Expected O, but got Unknown
-		//IL_0611: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0616: Unknown result type (might be due to invalid IL or missing references)
-		//IL_061d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_062d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0638: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0647: Expected O, but got Unknown
-		//IL_0684: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0689: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0690: Unknown result type (might be due to invalid IL or missing references)
-		//IL_069c: Expected O, but got Unknown
-		//IL_06fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0700: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0735: Unknown result type (might be due to invalid IL or missing references)
-		//IL_073a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0741: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0749: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0753: Unknown result type (might be due to invalid IL or missing references)
+		//IL_058b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0590: Unknown result type (might be due to invalid IL or missing references)
+		//IL_059c: Expected O, but got Unknown
+		//IL_05da: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05df: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05e6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05fc: Expected O, but got Unknown
+		//IL_05fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0602: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0609: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0615: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0620: Unknown result type (might be due to invalid IL or missing references)
+		//IL_062f: Expected O, but got Unknown
+		//IL_066c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0671: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0678: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0684: Expected O, but got Unknown
+		//IL_06e3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06e8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_071d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0722: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0729: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0731: Unknown result type (might be due to invalid IL or missing references)
+		//IL_073b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0740: Unknown result type (might be due to invalid IL or missing references)
+		//IL_074c: Expected O, but got Unknown
+		//IL_074c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0751: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0758: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0764: Expected O, but got Unknown
 		//IL_0764: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0769: Unknown result type (might be due to invalid IL or missing references)
+		//IL_076b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0770: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0780: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0787: Unknown result type (might be due to invalid IL or missing references)
-		//IL_078c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0798: Expected O, but got Unknown
-		//IL_084d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_084e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0891: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0896: Unknown result type (might be due to invalid IL or missing references)
-		//IL_089d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08a2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08ac: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08b8: Expected O, but got Unknown
-		//IL_08b8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08db: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08ec: Expected O, but got Unknown
-		//IL_0958: Unknown result type (might be due to invalid IL or missing references)
-		//IL_095d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0964: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0970: Expected O, but got Unknown
-		//IL_09a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09b0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09de: Expected O, but got Unknown
-		//IL_0a60: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a65: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a6c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a7c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a83: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a88: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a94: Expected O, but got Unknown
-		//IL_0a95: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a9a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0aa1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0aad: Expected O, but got Unknown
+		//IL_077c: Expected O, but got Unknown
+		//IL_0831: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0832: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0875: Unknown result type (might be due to invalid IL or missing references)
+		//IL_087a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0881: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0886: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0890: Unknown result type (might be due to invalid IL or missing references)
+		//IL_089c: Expected O, but got Unknown
+		//IL_089c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08a8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08b4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08bb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08c0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08cc: Expected O, but got Unknown
+		//IL_0938: Unknown result type (might be due to invalid IL or missing references)
+		//IL_093d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0944: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0950: Expected O, but got Unknown
+		//IL_0988: Unknown result type (might be due to invalid IL or missing references)
+		//IL_098d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0990: Unknown result type (might be due to invalid IL or missing references)
+		//IL_099a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_09be: Expected O, but got Unknown
+		//IL_0a40: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a45: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a4c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a58: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a5f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a64: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a70: Expected O, but got Unknown
+		//IL_0a71: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a76: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a7d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a89: Expected O, but got Unknown
+		//IL_0ad3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0ad8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0adf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0aeb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0af2: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0af7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0afc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b03: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b13: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b1a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b1f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b2b: Expected O, but got Unknown
-		//IL_0c13: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c18: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c23: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c2d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b03: Expected O, but got Unknown
+		//IL_0beb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bf0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bfb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c05: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c12: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c1d: Expected O, but got Unknown
+		//IL_0c2e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c33: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0c3a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c45: Expected O, but got Unknown
-		//IL_0c56: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c5b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c62: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c69: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c71: Expected O, but got Unknown
-		//IL_0cab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cb0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cb7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cc7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cce: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cd3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cdf: Expected O, but got Unknown
-		//IL_0ce0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ce5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cec: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cf1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cfb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0d07: Expected O, but got Unknown
+		//IL_0c41: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c49: Expected O, but got Unknown
+		//IL_0c83: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c88: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c8f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c9b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0ca2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0ca7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0cb3: Expected O, but got Unknown
+		//IL_0cb4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0cb9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0cc0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0cc5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0ccf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0cdb: Expected O, but got Unknown
+		//IL_0d50: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0d80: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0db0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0dba: Expected O, but got Unknown
-		//IL_0df1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0dfb: Expected O, but got Unknown
+		//IL_0d8a: Expected O, but got Unknown
+		//IL_0dc1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0dcb: Expected O, but got Unknown
 		Panel val = default(Panel);
 		Panel val6 = default(Panel);
 		Texture2D val4 = default(Texture2D);
@@ -3050,7 +3041,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				case 69u:
 					val4.SetData<int>(array);
-					Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_24<string>(702712603u), (object)_3PAjrCP0TE07YQ22X6EIpPwOlib);
+					Gui.get_Renderer().SetTexture("ColorPickerBox", (object)_3PAjrCP0TE07YQ22X6EIpPwOlib);
 					num = (int)(num2 * 1163883532) ^ -203824253;
 					continue;
 				case 68u:
@@ -3589,7 +3580,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					((ActiveList<Control>)(object)_L7VColD35B3sDgJdUnjTeXGa7pv.get_Controls()).Add((Control)(object)_wbSWz1LplcReMBnbKlnmd0UzxRP);
 					Button val28 = new Button();
 					((Control)val28).set_Dock((DockStyle)5);
-					((Label)val28).set_Text(_003CModule_003E.smethod_27<string>(1471246727u));
+					((Label)val28).set_Text("Close");
 					((Label)val28).set_TextAlign((Alignment)4);
 					val23 = val28;
 					((Control)val23).add_MouseClick((MouseEvent)delegate
@@ -3608,7 +3599,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					ImageControl val16 = new ImageControl();
 					((Control)val16).set_Dock((DockStyle)5);
-					val16.set_Texture(_003CModule_003E.smethod_25<string>(3963620985u));
+					val16.set_Texture("ColorPickerSlider");
 					((Control)val16).set_Size(new Point(25, 250));
 					_nTvWggfVqVEF25GV4NOsfpNhR4C = val16;
 					((ActiveList<Control>)(object)val17.get_Content().get_Controls()).Add((Control)(object)_UI1mLnvMX5jk5cl6WgxFoVZi1ne);
@@ -3674,7 +3665,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					Label val42 = new Label();
 					((Control)val42).set_Dock((DockStyle)1);
-					val42.set_Text(_003CModule_003E.smethod_28<string>(2584294538u));
+					val42.set_Text("S:");
 					val42.set_TextAlign((Alignment)4);
 					((Control)val42).set_Size(new Point(30, 30));
 					val43 = val42;
@@ -3698,7 +3689,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					val2 = val39;
 					Label val40 = new Label();
 					((Control)val40).set_Dock((DockStyle)1);
-					val40.set_Text(_003CModule_003E.smethod_28<string>(97405830u));
+					val40.set_Text("V:");
 					val40.set_TextAlign((Alignment)4);
 					((Control)val40).set_Size(new Point(30, 30));
 					val22 = val40;
@@ -3758,7 +3749,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					val17 = val34;
 					ImageControl val35 = new ImageControl();
 					((Control)val35).set_Dock((DockStyle)1);
-					val35.set_Texture(_003CModule_003E.smethod_28<string>(3995880123u));
+					val35.set_Texture("ColorPickerBox");
 					((Control)val35).set_Size(new Point(250, 250));
 					_UI1mLnvMX5jk5cl6WgxFoVZi1ne = val35;
 					num = (int)(num2 * 87424960) ^ -1252332843;
@@ -3799,7 +3790,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					val6 = val31;
 					Label val32 = new Label();
 					((Control)val32).set_Dock((DockStyle)1);
-					val32.set_Text(_003CModule_003E.smethod_25<string>(1184612495u));
+					val32.set_Text("Hex:");
 					val32.set_TextAlign((Alignment)4);
 					((Control)val32).set_Size(new Point(45, 30));
 					val7 = val32;
@@ -3873,7 +3864,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					_hOIb3XNfIEDsngLrYzmNfLTPVAS = val29;
 					Label val30 = new Label();
 					((Control)val30).set_Dock((DockStyle)1);
-					val30.set_Text(_003CModule_003E.smethod_26<string>(1786006168u));
+					val30.set_Text("G:");
 					val30.set_TextAlign((Alignment)4);
 					((Control)val30).set_Size(new Point(30, 30));
 					val25 = val30;
@@ -3943,7 +3934,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					Label val20 = new Label();
 					((Control)val20).set_Dock((DockStyle)1);
-					val20.set_Text(_003CModule_003E.smethod_27<string>(3856535835u));
+					val20.set_Text("B:");
 					val20.set_TextAlign((Alignment)4);
 					((Control)val20).set_Size(new Point(30, 30));
 					val8 = val20;
@@ -3963,7 +3954,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					Label val19 = new Label();
 					((Control)val19).set_Dock((DockStyle)1);
-					val19.set_Text(_003CModule_003E.smethod_27<string>(3380924915u));
+					val19.set_Text("R:");
 					val19.set_TextAlign((Alignment)4);
 					((Control)val19).set_Size(new Point(30, 30));
 					val9 = val19;
@@ -4023,7 +4014,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 								case 3u:
 									break;
 								default:
-									_8lboaaRLcpJoVxfwF1kBCisgrjL.set_Text(string.Format(_003CModule_003E.smethod_25<string>(2452710914u), ((Color)(ref _9ycmcfwZ9EbmXanrFe7pEfGAAUi)).get_R(), ((Color)(ref _9ycmcfwZ9EbmXanrFe7pEfGAAUi)).get_G(), ((Color)(ref _9ycmcfwZ9EbmXanrFe7pEfGAAUi)).get_B()));
+									_8lboaaRLcpJoVxfwF1kBCisgrjL.set_Text($"#{((Color)(ref _9ycmcfwZ9EbmXanrFe7pEfGAAUi)).get_R():X2}{((Color)(ref _9ycmcfwZ9EbmXanrFe7pEfGAAUi)).get_G():X2}{((Color)(ref _9ycmcfwZ9EbmXanrFe7pEfGAAUi)).get_B():X2}");
 									return;
 								}
 								break;
@@ -4116,7 +4107,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					Label val10 = new Label();
 					((Control)val10).set_Dock((DockStyle)1);
-					val10.set_Text(_003CModule_003E.smethod_28<string>(776215950u));
+					val10.set_Text("H:");
 					val10.set_TextAlign((Alignment)4);
 					((Control)val10).set_Size(new Point(30, 30));
 					val11 = val10;
@@ -4129,7 +4120,7 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 13u:
-					Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_25<string>(3963620985u), (object)val4);
+					Gui.get_Renderer().SetTexture("ColorPickerSlider", (object)val4);
 					num = (int)(num2 * 688914403) ^ -1928411394;
 					continue;
 				case 12u:
@@ -4145,16 +4136,16 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 10u:
 					_8lboaaRLcpJoVxfwF1kBCisgrjL.add_TextCommit((EventHandler)delegate
 					{
-						//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-						//IL_00e2: Unknown result type (might be due to invalid IL or missing references)
-						if (_003C_003Ec__DisplayClass44_0.smethod_8(_003C_003Ec__DisplayClass44_0.smethod_5(_8lboaaRLcpJoVxfwF1kBCisgrjL), _003CModule_003E.smethod_26<string>(3386470667u)) && _003C_003Ec__DisplayClass44_0.smethod_9(_003C_003Ec__DisplayClass44_0.smethod_5(_8lboaaRLcpJoVxfwF1kBCisgrjL)) <= 7)
+						//IL_0050: Unknown result type (might be due to invalid IL or missing references)
+						//IL_00de: Unknown result type (might be due to invalid IL or missing references)
+						if (_003C_003Ec__DisplayClass44_0.smethod_8(_003C_003Ec__DisplayClass44_0.smethod_5(_8lboaaRLcpJoVxfwF1kBCisgrjL), "#") && _003C_003Ec__DisplayClass44_0.smethod_9(_003C_003Ec__DisplayClass44_0.smethod_5(_8lboaaRLcpJoVxfwF1kBCisgrjL)) <= 7)
 						{
 							try
 							{
 								int num51 = _003C_003Ec__DisplayClass44_0.smethod_11(_003C_003Ec__DisplayClass44_0.smethod_10(_003C_003Ec__DisplayClass44_0.smethod_5(_8lboaaRLcpJoVxfwF1kBCisgrjL), 1), 16);
 								while (true)
 								{
-									IL_0122:
+									IL_011e:
 									int num52 = -440240185;
 									while (true)
 									{
@@ -4179,15 +4170,15 @@ public class PlayerCustomizationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 											num52 = ((int)num53 * -483044069) ^ 0x25C9BE43;
 											continue;
 										default:
-											goto end_IL_00f9;
+											goto end_IL_00f5;
 										case 5u:
 											break;
 										case 3u:
-											goto end_IL_00f9;
+											goto end_IL_00f5;
 										}
-										goto IL_0122;
+										goto IL_011e;
 										continue;
-										end_IL_00f9:
+										end_IL_00f5:
 										break;
 									}
 									break;

@@ -8,8 +8,8 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 
 	public bool _oD87G7SXjsTukw7IVWxVlVFEgvA(uint uint_0, _JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_00af: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b9: Expected O, but got Unknown
+		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b5: Expected O, but got Unknown
 		try
 		{
 			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F = _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_0(uint_0);
@@ -17,14 +17,14 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 			{
 				goto IL_0019;
 			}
-			goto IL_008a;
-			IL_008a:
+			goto IL_0086;
+			IL_0086:
 			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_3(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F);
 			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_4(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F, bool_0: true);
 			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_5(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F, new ScreenshotRequestDelegate(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._VN2LxjGLZldLNfiJ1OniiaXfYBg));
 			int num = -320953982;
-			goto IL_0061;
-			IL_0061:
+			goto IL_005d;
+			IL_005d:
 			bool result = default(bool);
 			while (true)
 			{
@@ -34,7 +34,7 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 				case 5u:
 					break;
 				case 3u:
-					_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_7(_003CModule_003E.smethod_26<string>(3769408675u), new object[1] { _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_6(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F) });
+					_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_7("Successfully loaded Steamworks, welcome {0}!", new object[1] { _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_6(_f9R8NSqY1uzRQ0MIHLS7AsTyi7F) });
 					num = (int)((num2 * 512923780) ^ 0x1FB9C87D);
 					continue;
 				case 0u:
@@ -42,9 +42,9 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 					num = (int)((num2 * 1106373239) ^ 0x30AB4D75);
 					continue;
 				case 1u:
-					goto IL_008a;
+					goto IL_0086;
 				case 2u:
-					throw _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_2(_003CModule_003E.smethod_25<string>(3751859542u));
+					throw _KDiaUloddpdv1QwixDEBIJs6IMA.smethod_2("Invalid Steam-client");
 				default:
 					return result;
 				case 4u:
@@ -55,11 +55,11 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 			goto IL_0019;
 			IL_0019:
 			num = -796879165;
-			goto IL_0061;
+			goto IL_005d;
 		}
 		catch (Exception)
 		{
-			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_8(_003CModule_003E.smethod_27<string>(3969430070u), new object[0]);
+			_KDiaUloddpdv1QwixDEBIJs6IMA.smethod_8("Failed to load Steamworks, falling back to non-Steam version.", new object[0]);
 		}
 		return false;
 	}

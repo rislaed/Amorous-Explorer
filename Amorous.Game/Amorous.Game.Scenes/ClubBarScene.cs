@@ -14,11 +14,11 @@ public class ClubBarScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x17E785C4u) % 5u)
 				{
 				case 4u:
-					ClubBarScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(970621262u), _003CModule_003E.smethod_26<string>(3719604427u), 0, 0);
+					ClubBarScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Bar", "Assets/Scenes/ClubBar/Bar", 0, 0);
 					num = ((int)num2 * -30070926) ^ 0x3CC27D9D;
 					continue;
 				case 2u:
-					ClubBarScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_28<string>(1301941825u), 0, 0);
+					ClubBarScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubBar/Base", 0, 0);
 					num = (int)((num2 * 2066724412) ^ 0x59922FDD);
 					continue;
 				case 0u:

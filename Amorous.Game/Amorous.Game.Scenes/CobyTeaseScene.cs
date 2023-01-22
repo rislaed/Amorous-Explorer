@@ -18,13 +18,13 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public CobyTeaseScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ = CobyTeaseScene.smethod_15(CobyTeaseScene.smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), _003CModule_003E.smethod_26<string>(4285733098u), 1f, bool_0: true, (List<SpineEvent>)null);
-		CobyTeaseScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(993097303u));
+		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ = CobyTeaseScene.smethod_15(CobyTeaseScene.smethod_14(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), "Assets/Scenes/CobyTease/Coby buttshake Teasel", 1f, bool_0: true, (List<SpineEvent>)null);
+		CobyTeaseScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Panties");
 		CobyTeaseScene.smethod_17(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, 1f);
-		CobyTeaseScene.smethod_18(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, _003CModule_003E.smethod_25<string>(3692662391u), (Action<int>)null);
+		CobyTeaseScene.smethod_18(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, "animation", (Action<int>)null);
 		CobyTeaseScene.smethod_19(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, 985f);
 		CobyTeaseScene.smethod_20(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, 1081f);
-		CobyTeaseScene.smethod_21(_003CModule_003E.smethod_25<string>(1577301686u), 0.4f);
+		CobyTeaseScene.smethod_21("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 	}
 
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
@@ -42,7 +42,7 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num3;
 					int num4;
-					if (CobyTeaseScene.smethod_22(string_0, _003CModule_003E.smethod_28<string>(3051247055u)))
+					if (CobyTeaseScene.smethod_22(string_0, "Panties"))
 					{
 						num3 = -1985814189;
 						num4 = -1985814189;
@@ -56,7 +56,7 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 1u:
-					CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, _003CModule_003E.smethod_28<string>(2090119818u));
+					CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, "default");
 					num = -2016440876;
 					continue;
 				default:
@@ -66,7 +66,7 @@ public class CobyTeaseScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 2u:
 					return;
 				case 3u:
-					CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, _003CModule_003E.smethod_24<string>(993097303u));
+					CobyTeaseScene.smethod_23(_7vYi5xfMKLYMkbLDqzCDgoxrzIJ, "Panties");
 					return;
 				}
 				break;

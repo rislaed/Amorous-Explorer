@@ -45,7 +45,7 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_10(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9());
 					int num6;
 					int num7;
-					if (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_12(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11(_003CModule_003E.smethod_28<string>(169282765u), (object)object_)))
+					if (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_12(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)))
 					{
 						num6 = 1390897583;
 						num7 = 1390897583;
@@ -59,20 +59,20 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 					continue;
 				}
 				case 2u:
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_14(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11(_003CModule_003E.smethod_28<string>(169282765u), (object)object_), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_13(_003CModule_003E.smethod_27<string>(866462659u), (object)object_, (object)DateTime.Now));
+					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_14(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_13("{0}-log-backup-{1:yyyy.MM.dd-HH.mm.ss}.txt", (object)object_, (object)DateTime.Now));
 					num = ((int)num2 * -359327722) ^ -1645722884;
 					continue;
 				case 0u:
 					break;
 				default:
 				{
-					string[] source = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_15(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_7(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_6()), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11(_003CModule_003E.smethod_25<string>(249219023u), (object)text));
+					string[] source = _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_15(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_7(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_6()), _ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log-backup-*.txt", (object)text));
 					IEnumerator<string> enumerator = source.OrderByDescending((string string_0) => string_0).Skip(10).GetEnumerator();
 					try
 					{
 						while (true)
 						{
-							IL_0193:
+							IL_0183:
 							int num3;
 							int num4;
 							if (_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_17((IEnumerator)enumerator))
@@ -100,15 +100,15 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 									num3 = 2037272019;
 									continue;
 								default:
-									goto end_IL_0165;
+									goto end_IL_0155;
 								case 3u:
 									break;
 								case 1u:
-									goto end_IL_0165;
+									goto end_IL_0155;
 								}
-								goto IL_0193;
+								goto IL_0183;
 								continue;
-								end_IL_0165:
+								end_IL_0155:
 								break;
 							}
 							break;
@@ -120,34 +120,34 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 						{
 							while (true)
 							{
-								IL_01d6:
+								IL_01c6:
 								int num5 = 536617194;
 								while (true)
 								{
 									switch ((num2 = (uint)num5 ^ 0x1C082481u) % 3u)
 									{
 									case 1u:
-										goto IL_01a4;
+										goto IL_0194;
 									default:
-										goto end_IL_01b8;
+										goto end_IL_01a8;
 									case 2u:
 										break;
 									case 0u:
-										goto end_IL_01b8;
+										goto end_IL_01a8;
 									}
-									goto IL_01d6;
-									IL_01a4:
+									goto IL_01c6;
+									IL_0194:
 									_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_18((IDisposable)enumerator);
 									num5 = (int)(num2 * 686932994) ^ -620651783;
 									continue;
-									end_IL_01b8:
+									end_IL_01a8:
 									break;
 								}
 								break;
 							}
 						}
 					}
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_19(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11(_003CModule_003E.smethod_28<string>(169282765u), (object)object_)));
+					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_19(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_11("{0}-log.txt", (object)object_)));
 					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_20(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_9(), (TraceListener)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_21(bool_0: false));
 					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_22(bool_0: true);
 					return;
@@ -171,7 +171,7 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 					switch ((num2 = (uint)num ^ 0x869F6A5u) % 4u)
 					{
 					case 2u:
-						_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25(_003CModule_003E.smethod_28<string>(2534601431u), (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_24(string_1, object_0)));
+						_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_24(string_1, object_0)));
 						num = ((int)num2 * -548473028) ^ 0x43D74930;
 						continue;
 					case 0u:
@@ -179,36 +179,36 @@ public static class _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 					case 1u:
 						return;
 					default:
-						goto end_IL_0066;
+						goto end_IL_0062;
 					}
 					break;
 				}
 				continue;
-				end_IL_0066:
+				end_IL_0062:
 				break;
 			}
 		}
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25(_003CModule_003E.smethod_28<string>(2534601431u), (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)string_1));
+		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_26(_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_25("[{0:0000.00}] {1}: {2}", (object)((float)_ETHljYp3aQy9GQ1ZAzhfOYDI1sO.smethod_23(_fW0XUSoDEDzTuYfvYXFC3oVcKvN) / 1000f), (object)string_0, (object)string_1));
 	}
 
 	public static void _8GJSgyb6FWRvKxxAcjyaU02i18E(string string_0, params object[] object_0)
 	{
-		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Gray, _003CModule_003E.smethod_26<string>(2785684326u), string_0, object_0);
+		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Gray, "Log", string_0, object_0);
 	}
 
 	public static void _IGmWy5uYuv50rXGtBNbMPGzJhWh(string string_0, params object[] object_0)
 	{
-		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Yellow, _003CModule_003E.smethod_24<string>(3908173470u), string_0, object_0);
+		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Yellow, "Warning", string_0, object_0);
 	}
 
 	public static void _0rEYVY1cDKfLPVuLw54UlaIts2m(string string_0, params object[] object_0)
 	{
-		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Red, _003CModule_003E.smethod_28<string>(2002882371u), string_0, object_0);
+		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Red, "Error", string_0, object_0);
 	}
 
 	public static void _JmIDYFXDf2wcAGArwRlNg4WYoUEA(string string_0, params object[] object_0)
 	{
-		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Green, _003CModule_003E.smethod_27<string>(2267784226u), string_0, object_0);
+		_8GJSgyb6FWRvKxxAcjyaU02i18E(ConsoleColor.Green, "Success", string_0, object_0);
 	}
 
 	static Stopwatch smethod_0()

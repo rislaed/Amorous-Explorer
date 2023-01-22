@@ -172,51 +172,51 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	private static readonly List<_eT2GJReQj8Acaq2A0H0eUir97Qf> _bUtL25YVF26t7moyja8EyHgA85q = new List<_eT2GJReQj8Acaq2A0H0eUir97Qf>
 	{
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(2956285818u), _003CModule_003E.smethod_26<string>(3728793360u), _003CModule_003E.smethod_27<string>(3930515599u), _003CModule_003E.smethod_25<string>(1871791515u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(4294318015u), _003CModule_003E.smethod_27<string>(1781223324u), _003CModule_003E.smethod_28<string>(3479445099u), _003CModule_003E.smethod_25<string>(3010748620u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_27<string>(561449365u), _003CModule_003E.smethod_27<string>(114776477u), _003CModule_003E.smethod_26<string>(2414278314u), _003CModule_003E.smethod_25<string>(3615090997u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_27<string>(1037060285u), _003CModule_003E.smethod_24<string>(624322793u), _003CModule_003E.smethod_27<string>(3701753274u), _003CModule_003E.smethod_24<string>(1768274987u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(1855651594u), _003CModule_003E.smethod_25<string>(660528265u), _003CModule_003E.smethod_27<string>(2750531434u), _003CModule_003E.smethod_28<string>(1731577052u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(697748882u), _003CModule_003E.smethod_24<string>(2195058734u), _003CModule_003E.smethod_24<string>(651452619u), _003CModule_003E.smethod_24<string>(2313121258u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(3723821882u), _003CModule_003E.smethod_25<string>(3075319277u), _003CModule_003E.smethod_27<string>(3708987782u), _003CModule_003E.smethod_25<string>(3881109113u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(2055369122u), _003CModule_003E.smethod_26<string>(967974367u), _003CModule_003E.smethod_26<string>(1372440535u), _003CModule_003E.smethod_24<string>(278178607u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(4091799482u), _003CModule_003E.smethod_24<string>(4264424680u), _003CModule_003E.smethod_25<string>(1504995541u), _003CModule_003E.smethod_25<string>(1907890459u), _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(4287420080u), _003CModule_003E.smethod_27<string>(2387055388u), _003CModule_003E.smethod_26<string>(3897868346u), _003CModule_003E.smethod_26<string>(4234376070u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(2433126537u), _003CModule_003E.smethod_26<string>(4100101430u), _003CModule_003E.smethod_26<string>(159042031u), _003CModule_003E.smethod_28<string>(4044079333u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(743148394u), _003CModule_003E.smethod_28<string>(2813125371u), _003CModule_003E.smethod_26<string>(816299554u), _003CModule_003E.smethod_27<string>(4170129686u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(1982668189u), _003CModule_003E.smethod_27<string>(4067971251u), _003CModule_003E.smethod_26<string>(2532795029u), _003CModule_003E.smethod_24<string>(1859207685u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(1884683995u), _003CModule_003E.smethod_24<string>(3982833283u), _003CModule_003E.smethod_28<string>(4056569725u), _003CModule_003E.smethod_24<string>(2522116480u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_27<string>(1581399031u), _003CModule_003E.smethod_28<string>(2759160026u), _003CModule_003E.smethod_28<string>(3660076722u), _003CModule_003E.smethod_28<string>(3311303868u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(2687895335u), _003CModule_003E.smethod_26<string>(3442843907u), _003CModule_003E.smethod_26<string>(2532795029u), _003CModule_003E.smethod_26<string>(2515394856u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(1418033955u), _003CModule_003E.smethod_24<string>(2557289692u), _003CModule_003E.smethod_27<string>(3349128990u), _003CModule_003E.smethod_26<string>(38039577u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(1304482091u), _003CModule_003E.smethod_28<string>(104130087u), _003CModule_003E.smethod_28<string>(3660076722u), _003CModule_003E.smethod_26<string>(38039577u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(967575607u), _003CModule_003E.smethod_26<string>(1268838254u), _003CModule_003E.smethod_27<string>(1918678976u), _003CModule_003E.smethod_24<string>(1768274987u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_24<string>(3438736929u), _003CModule_003E.smethod_24<string>(2248568469u), _003CModule_003E.smethod_24<string>(2956943613u), _003CModule_003E.smethod_27<string>(125628239u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_24<string>(2276448212u), _003CModule_003E.smethod_25<string>(4185804669u), _003CModule_003E.smethod_25<string>(27714175u), _003CModule_003E.smethod_27<string>(125628239u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(3938483661u), _003CModule_003E.smethod_26<string>(3447815385u), _003CModule_003E.smethod_28<string>(1683856903u), _003CModule_003E.smethod_25<string>(1466318101u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(2150702111u), _003CModule_003E.smethod_28<string>(1858243330u), _003CModule_003E.smethod_24<string>(2956943613u), _003CModule_003E.smethod_27<string>(2990145521u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(1612803195u), _003CModule_003E.smethod_26<string>(4155631179u), _003CModule_003E.smethod_24<string>(4001169806u), _003CModule_003E.smethod_26<string>(2866817014u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(1966711092u), _003CModule_003E.smethod_27<string>(4082440267u), _003CModule_003E.smethod_24<string>(2511823343u), _003CModule_003E.smethod_28<string>(3653831526u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(295010683u), _003CModule_003E.smethod_25<string>(2370199042u), _003CModule_003E.smethod_24<string>(2956943613u), _003CModule_003E.smethod_26<string>(3776865892u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(2876759970u), _003CModule_003E.smethod_26<string>(1981625526u), _003CModule_003E.smethod_26<string>(816299554u), _003CModule_003E.smethod_24<string>(342731396u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(603693096u), _003CModule_003E.smethod_24<string>(3129265789u), _003CModule_003E.smethod_27<string>(1918678976u), _003CModule_003E.smethod_26<string>(3776865892u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(500521233u), _003CModule_003E.smethod_24<string>(3556049536u), _003CModule_003E.smethod_28<string>(4056569725u), _003CModule_003E.smethod_27<string>(1428599040u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(1678079544u), _003CModule_003E.smethod_25<string>(4250375326u), _003CModule_003E.smethod_25<string>(27714175u), _003CModule_003E.smethod_24<string>(278178607u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_27<string>(2321944816u), _003CModule_003E.smethod_27<string>(3617681109u), _003CModule_003E.smethod_26<string>(2532795029u), _003CModule_003E.smethod_26<string>(1473557077u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(1034031344u), _003CModule_003E.smethod_24<string>(3419650489u), _003CModule_003E.smethod_24<string>(2956943613u), _003CModule_003E.smethod_25<string>(1907890459u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(2924832502u), _003CModule_003E.smethod_26<string>(869343564u), _003CModule_003E.smethod_24<string>(4001169806u), _003CModule_003E.smethod_24<string>(3646982234u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(3085633261u), _003CModule_003E.smethod_28<string>(1017537175u), _003CModule_003E.smethod_27<string>(1918678976u), _003CModule_003E.smethod_26<string>(2231931142u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_27<string>(4100526537u), _003CModule_003E.smethod_25<string>(2569068005u), _003CModule_003E.smethod_25<string>(3240559535u), _003CModule_003E.smethod_27<string>(2009985649u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_24<string>(23717036u), _003CModule_003E.smethod_26<string>(3849795814u), _003CModule_003E.smethod_28<string>(4015094772u), _003CModule_003E.smethod_24<string>(2140799082u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(1162750234u), _003CModule_003E.smethod_24<string>(2448770388u), _003CModule_003E.smethod_26<string>(1769449486u), _003CModule_003E.smethod_25<string>(74235360u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(3832395641u), _003CModule_003E.smethod_27<string>(3530867013u), _003CModule_003E.smethod_26<string>(2275032196u), _003CModule_003E.smethod_24<string>(2140799082u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_27<string>(4249709274u), _003CModule_003E.smethod_26<string>(4092644213u), _003CModule_003E.smethod_26<string>(101026543u), _003CModule_003E.smethod_27<string>(2009985649u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_24<string>(133736174u), _003CModule_003E.smethod_24<string>(2185515514u), _003CModule_003E.smethod_28<string>(855641140u), _003CModule_003E.smethod_26<string>(690325622u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_27<string>(677201493u), _003CModule_003E.smethod_27<string>(2583262427u), _003CModule_003E.smethod_27<string>(2111268761u), _003CModule_003E.smethod_27<string>(4020946949u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_28<string>(3853198737u), _003CModule_003E.smethod_28<string>(1030027567u), _003CModule_003E.smethod_26<string>(755798327u), _003CModule_003E.smethod_27<string>(4020946949u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_26<string>(1008589682u), _003CModule_003E.smethod_28<string>(861886336u), _003CModule_003E.smethod_24<string>(124192954u), _003CModule_003E.smethod_26<string>(3030920522u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_25<string>(14821695u), _003CModule_003E.smethod_25<string>(146541505u), _003CModule_003E.smethod_27<string>(448439168u), _003CModule_003E.smethod_27<string>(4020946949u)),
-		new _eT2GJReQj8Acaq2A0H0eUir97Qf(_003CModule_003E.smethod_24<string>(4092102504u), _003CModule_003E.smethod_25<string>(1623822871u), _003CModule_003E.smethod_28<string>(693745105u), _003CModule_003E.smethod_28<string>(922096877u))
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberCoby", "ACHIEVEMENT_PHONENUMBER_COBY", "Coby", "MessageIconCoby", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberJax", "ACHIEVEMENT_PHONENUMBER_JAX", "Jax", "MessageIconJax", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberSeth", "ACHIEVEMENT_PHONENUMBER_SETH", "Seth", "MessageIconSeth", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberSkye", "ACHIEVEMENT_PHONENUMBER_SKYE", "Skye", "MessageIconSkye", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberDustin", "ACHIEVEMENT_PHONENUMBER_DUSTIN", "Dustin", "MessageIconDustin", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberZenith", "ACHIEVEMENT_PHONENUMBER_ZENITH", "Zenith", "MessageIconZenith", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberMercy", "ACHIEVEMENT_PHONENUMBER_MERCY", "Mercy", "MessageIconMercy", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberRemy", "ACHIEVEMENT_PHONENUMBER_REMY", "Remy", "MessageIconRemy", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementPhonenumberLex", "ACHIEVEMENT_PHONENUMBER_LEX", "Lex", "MessageIconLex", _UARKn0z34q7eyfLAgMhaieKBn33.Contact),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Coby", "ACHIEVEMENT_DATE1_COBY", "Oh, Brother!", "MessageIconCoby"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Jax", "ACHIEVEMENT_DATE1_JAX", "Testing the Waters", "MessageIconJax"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Jax", "ACHIEVEMENT_DATE2_JAX", "Someone Likes You", "MessageIconJax"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Jax", "ACHIEVEMENT_DATE3_JAX", "This is Love", "MessageIconJax"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Seth", "ACHIEVEMENT_DATE1_SETH", "Testing the Waters", "MessageIconSeth"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Seth", "ACHIEVEMENT_DATE2_SETH", "Someone Likes You", "MessageIconSeth"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Seth", "ACHIEVEMENT_DATE3_SETH", "This is Love", "MessageIconSeth"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Skye", "ACHIEVEMENT_DATE1_SKYE", "Testing the Waters", "MessageIconSkye"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Skye", "ACHIEVEMENT_DATE2_SKYE", "Someone Likes You", "MessageIconSkye"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Skye", "ACHIEVEMENT_DATE3_SKYE", "This is Love", "MessageIconSkye"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Dustin", "ACHIEVEMENT_DATE1_DUSTIN", "Testing the Waters", "MessageIconDustin"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Dustin", "ACHIEVEMENT_DATE2_DUSTIN", "Someone Likes You", "MessageIconDustin"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Dustin", "ACHIEVEMENT_DATE3_DUSTIN", "This is Love", "MessageIconDustin"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Zenith", "ACHIEVEMENT_DATE1_ZENITH", "Testing the Waters", "MessageIconZenith"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Zenith", "ACHIEVEMENT_DATE2_ZENITH", "Someone Likes You", "MessageIconZenith"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Zenith", "ACHIEVEMENT_DATE3_ZENITH", "This is Love", "MessageIconZenith"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Mercy", "ACHIEVEMENT_DATE1_MERCY", "Testing the Waters", "MessageIconMercy"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Mercy", "ACHIEVEMENT_DATE2_MERCY", "Someone Likes You", "MessageIconMercy"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Mercy", "ACHIEVEMENT_DATE3_MERCY", "This is Love", "MessageIconMercy"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Remy", "ACHIEVEMENT_DATE1_REMY", "Testing the Waters", "MessageIconRemy"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Remy", "ACHIEVEMENT_DATE2_REMY", "Someone Likes You", "MessageIconRemy"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Remy", "ACHIEVEMENT_DATE3_REMY", "This is Love", "MessageIconRemy"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate1Lex", "ACHIEVEMENT_DATE1_LEX", "Testing the Waters", "MessageIconLex"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate2Lex", "ACHIEVEMENT_DATE2_LEX", "Someone Likes You", "MessageIconLex"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementDate3Lex", "ACHIEVEMENT_DATE3_LEX", "This is Love", "MessageIconLex"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric1", "ACHIEVEMENT_GENERIC1", "Bells and Whistles"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric2", "ACHIEVEMENT_GENERIC2", "Welcome to Amorous"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric3", "ACHIEVEMENT_GENERIC3", "Hey Mr. D.J.", "MessageIconDJ"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric4", "ACHIEVEMENT_GENERIC4", "Last Night a D.J.Saved My Life"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric5", "ACHIEVEMENT_GENERIC5", "Ohh, what does THIS button do?"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric6", "ACHIEVEMENT_GENERIC6", "Clothes Maketh Man"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric7", "ACHIEVEMENT_GENERIC7", "Gunslinger", "MessageIconShootingRange"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric8", "ACHIEVEMENT_GENERIC8", "Boom Headshot!", "MessageIconShootingRange"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric9", "ACHIEVEMENT_GENERIC9", "Steady Aim", "MessageIconShootingRange"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric10", "ACHIEVEMENT_GENERIC10", "Sleight of Hand", "MessageIconShootingRange"),
+		new _eT2GJReQj8Acaq2A0H0eUir97Qf("AchievementGeneric11", "ACHIEVEMENT_GENERIC11", "Yes Chef!", "MessageIconCooking")
 	};
 
 	private static readonly Dictionary<string, _eT2GJReQj8Acaq2A0H0eUir97Qf> _f6JnaqJEhaBQyPQ8hoUgwIj9WcQ;
@@ -239,15 +239,15 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	public void _NtDfAf24kD2Korbc5hoME725A7d(string string_0, int int_0)
 	{
-		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_27<string>(851705008u)))
+		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "Clothes"))
 		{
-			goto IL_00aa;
+			goto IL_00a2;
 		}
-		goto IL_0199;
-		IL_0199:
+		goto IL_017d;
+		IL_017d:
 		int num;
 		int num2;
-		if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(2287578913u)))
+		if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "Prologue"))
 		{
 			num = -1917305655;
 			num2 = -1917305655;
@@ -257,8 +257,8 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			num = -1098112221;
 			num2 = -1098112221;
 		}
-		goto IL_0144;
-		IL_0144:
+		goto IL_0128;
+		IL_0128:
 		while (true)
 		{
 			uint num3;
@@ -301,25 +301,25 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			case 9u:
 				break;
 			case 6u:
-				goto end_IL_0144;
+				goto end_IL_0128;
 			case 5u:
-				_8DePzSVoGzWFpzrB1bmfWEjf0uy(_003CModule_003E.smethod_27<string>(3008231791u), _003CModule_003E.smethod_28<string>(396696177u));
+				_8DePzSVoGzWFpzrB1bmfWEjf0uy("Club Amorous DJ", "MessageIconDJ");
 				num = ((int)num3 * -700662267) ^ 0x3E5085F1;
 				continue;
 			case 4u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(133736174u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric6");
 				num = ((int)num3 * -1080697704) ^ 0x31F31BE4;
 				continue;
 			case 3u:
-				goto IL_00fc;
+				goto IL_00e8;
 			case 1u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(1334550436u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric4");
 				num = (int)((num3 * 1290444723) ^ 0xED539BA);
 				continue;
 			default:
 				return;
 			case 8u:
-				goto IL_0199;
+				goto IL_017d;
 			case 0u:
 				return;
 			case 2u:
@@ -327,11 +327,11 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			case 7u:
 				return;
 			case 12u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_28<string>(3051726116u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Coby");
 				return;
 			}
 			int num8;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_26<string>(4135745267u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "CobyDate"))
 			{
 				num = -1897934388;
 				num8 = -1897934388;
@@ -342,9 +342,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num8 = -1264079912;
 			}
 			continue;
-			IL_00fc:
+			IL_00e8:
 			int num9;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(3844712122u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DJ"))
 			{
 				num = -1164340289;
 				num9 = -1164340289;
@@ -355,26 +355,26 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num9 = -360690319;
 			}
 			continue;
-			end_IL_0144:
+			end_IL_0128:
 			break;
 		}
-		goto IL_00aa;
-		IL_00aa:
+		goto IL_00a2;
+		IL_00a2:
 		num = -1830298458;
-		goto IL_0144;
+		goto IL_0128;
 	}
 
 	public void _fPyIv5zbbSj5sjZlbAwQTFXnJ5G(string string_0, int int_0)
 	{
-		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_27<string>(1102170857u)))
+		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "JaxDate"))
 		{
-			goto IL_07ca;
+			goto IL_0752;
 		}
-		goto IL_0ad8;
-		IL_0ad8:
+		goto IL_0a50;
+		IL_0a50:
 		int num;
 		int num2;
-		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(3394253774u)))
+		if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "JaxDate"))
 		{
 			num = -1044367411;
 			num2 = -1044367411;
@@ -384,8 +384,8 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			num = -629124462;
 			num2 = -629124462;
 		}
-		goto IL_0968;
-		IL_0968:
+		goto IL_08e0;
+		IL_08e0:
 		while (true)
 		{
 			uint num3;
@@ -428,7 +428,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 78u:
-				goto IL_00aa;
+				goto IL_00a2;
 			case 77u:
 			{
 				int num44;
@@ -447,11 +447,11 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 75u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(569313224u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Lex");
 				num = (int)((num3 * 1401667332) ^ 0x77861F13);
 				continue;
 			case 73u:
-				goto IL_0123;
+				goto IL_0113;
 			case 71u:
 			{
 				int num22;
@@ -470,11 +470,11 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 69u:
-				goto IL_017a;
+				goto IL_0166;
 			case 68u:
-				goto IL_01a8;
+				goto IL_0190;
 			case 67u:
-				goto IL_01d6;
+				goto IL_01ba;
 			case 66u:
 			{
 				int num8;
@@ -493,15 +493,15 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 65u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(1113022619u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Dustin");
 				num = (int)((num3 * 1320652470) ^ 0x1B386CF0);
 				continue;
 			case 64u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_26<string>(1612803195u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Zenith");
 				num = (int)(num3 * 796527421) ^ -305174735;
 				continue;
 			case 63u:
-				goto IL_0271;
+				goto IL_0249;
 			case 62u:
 			{
 				int num26;
@@ -520,9 +520,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 60u:
-				goto IL_02c8;
+				goto IL_029c;
 			case 59u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(2657765610u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Lex");
 				num = ((int)num3 * -1955391859) ^ -967477683;
 				continue;
 			case 58u:
@@ -543,9 +543,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 55u:
-				goto IL_0341;
+				goto IL_030d;
 			case 54u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(3026318061u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Zenith");
 				num = (int)(num3 * 787238293) ^ -557630130;
 				continue;
 			case 53u:
@@ -566,17 +566,17 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 52u:
-				goto IL_03ba;
+				goto IL_037e;
 			case 50u:
-				goto IL_03e8;
+				goto IL_03a8;
 			case 48u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(3438736929u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Dustin");
 				num = ((int)num3 * -1219913438) ^ 0x45FD6B53;
 				continue;
 			case 46u:
-				goto IL_0438;
+				goto IL_03f0;
 			case 45u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(4292304423u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Dustin");
 				num = ((int)num3 * -2016514820) ^ -996169722;
 				continue;
 			case 44u:
@@ -631,17 +631,17 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 40u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_28<string>(1982668189u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Jax");
 				num = ((int)num3 * -1190833717) ^ -1262350954;
 				continue;
 			case 39u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(1363488468u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Mercy");
 				num = ((int)num3 * -957478284) ^ -200892696;
 				continue;
 			case 38u:
-				goto IL_0547;
+				goto IL_04ef;
 			case 35u:
-				goto IL_0575;
+				goto IL_0519;
 			case 31u:
 			{
 				int num36;
@@ -694,11 +694,11 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 27u:
-				goto IL_061e;
+				goto IL_05be;
 			case 25u:
-				goto IL_064c;
+				goto IL_05e8;
 			case 22u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(1377414369u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Mercy");
 				num = (int)(num3 * 1659105396) ^ -321902828;
 				continue;
 			case 21u:
@@ -736,7 +736,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 19u:
-				goto IL_06ee;
+				goto IL_0682;
 			case 18u:
 			{
 				int num40;
@@ -755,7 +755,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 17u:
-				goto IL_0745;
+				goto IL_06d5;
 			case 16u:
 			{
 				int num38;
@@ -774,9 +774,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 15u:
-				goto IL_079c;
+				goto IL_0728;
 			case 12u:
-				goto end_IL_0968;
+				goto end_IL_08e0;
 			case 11u:
 			{
 				int num32;
@@ -863,15 +863,15 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 6u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_26<string>(3478487744u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Seth");
 				num = (int)((num3 * 123455870) ^ 0x3FA70975);
 				continue;
 			case 5u:
-				goto IL_08c3;
+				goto IL_0847;
 			case 3u:
-				goto IL_08ee;
+				goto IL_086e;
 			case 1u:
-				goto IL_0919;
+				goto IL_0895;
 			case 0u:
 			{
 				int num4;
@@ -892,39 +892,39 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			default:
 				return;
 			case 34u:
-				goto IL_0ad8;
+				goto IL_0a50;
 			case 2u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(3520015251u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Lex");
 				return;
 			case 4u:
 				return;
 			case 13u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_26<string>(2113414427u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Jax");
 				return;
 			case 14u:
 				return;
 			case 23u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_28<string>(2211019961u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Skye");
 				return;
 			case 24u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_25<string>(743148394u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Jax");
 				return;
 			case 26u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(3465866755u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Remy");
 				return;
 			case 29u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(2603505958u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Seth");
 				return;
 			case 32u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(3484203278u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Mercy");
 				return;
 			case 33u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_28<string>(3514674856u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Zenith");
 				return;
 			case 36u:
 				return;
 			case 37u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(3734308560u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Skye");
 				return;
 			case 41u:
 				return;
@@ -933,12 +933,12 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			case 49u:
 				return;
 			case 51u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_28<string>(523362455u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate3Remy");
 				return;
 			case 56u:
 				return;
 			case 57u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(626559937u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Seth");
 				return;
 			case 61u:
 				return;
@@ -949,14 +949,14 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			case 74u:
 				return;
 			case 76u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_25<string>(3157939406u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate1Skye");
 				return;
 			case 80u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_28<string>(1766806809u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementDate2Remy");
 				return;
 			}
 			int num52;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_26<string>(1961739614u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "JaxDate"))
 			{
 				num = -1733423016;
 				num52 = -1733423016;
@@ -967,9 +967,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num52 = -1422717347;
 			}
 			continue;
-			IL_0919:
+			IL_0895:
 			int num53;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_27<string>(3748777576u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MercyDate"))
 			{
 				num = -1905593189;
 				num53 = -1905593189;
@@ -980,9 +980,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num53 = -918078493;
 			}
 			continue;
-			IL_0575:
+			IL_0519:
 			int num54;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(1316348461u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "LexDate"))
 			{
 				num = -1610748649;
 				num54 = -1610748649;
@@ -993,9 +993,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num54 = -1227750501;
 			}
 			continue;
-			IL_0123:
+			IL_0113:
 			int num55;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(1760561613u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DustinDate"))
 			{
 				num = -740392097;
 				num55 = -740392097;
@@ -1006,9 +1006,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num55 = -1478173687;
 			}
 			continue;
-			IL_08ee:
+			IL_086e:
 			int num56;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_26<string>(2320618989u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MercyDate"))
 			{
 				num = -1774536558;
 				num56 = -1774536558;
@@ -1019,9 +1019,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num56 = -1747227865;
 			}
 			continue;
-			IL_01a8:
+			IL_0190:
 			int num57;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(2379161192u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SkyeDate"))
 			{
 				num = -200822902;
 				num57 = -200822902;
@@ -1032,9 +1032,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num57 = -2121140891;
 			}
 			continue;
-			IL_0547:
+			IL_04ef:
 			int num58;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_27<string>(1603102555u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "RemyDate"))
 			{
 				num = -793454390;
 				num58 = -793454390;
@@ -1045,9 +1045,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num58 = -766460265;
 			}
 			continue;
-			IL_08c3:
+			IL_0847:
 			int num59;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(2822193641u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SkyeDate"))
 			{
 				num = -1416064282;
 				num59 = -1416064282;
@@ -1058,9 +1058,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num59 = -1556939426;
 			}
 			continue;
-			IL_02c8:
+			IL_029c:
 			int num60;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_27<string>(1849951150u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "LexDate"))
 			{
 				num = -118613067;
 				num60 = -118613067;
@@ -1071,9 +1071,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num60 = -168442849;
 			}
 			continue;
-			IL_0341:
+			IL_030d:
 			int num61;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_27<string>(3748777576u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MercyDate"))
 			{
 				num = -1305076374;
 				num61 = -1305076374;
@@ -1084,9 +1084,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num61 = -1620631097;
 			}
 			continue;
-			IL_079c:
+			IL_0728:
 			int num62;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_24<string>(215125652u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "RemyDate"))
 			{
 				num = -391459660;
 				num62 = -391459660;
@@ -1097,9 +1097,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num62 = -1095320154;
 			}
 			continue;
-			IL_0438:
+			IL_03f0:
 			int num63;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(1548938230u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SethDate"))
 			{
 				num = -953684506;
 				num63 = -953684506;
@@ -1110,9 +1110,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num63 = -326202685;
 			}
 			continue;
-			IL_061e:
+			IL_05be:
 			int num64;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(1548938230u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SethDate"))
 			{
 				num = -1931787938;
 				num64 = -1931787938;
@@ -1123,9 +1123,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num64 = -646941889;
 			}
 			continue;
-			IL_0745:
+			IL_06d5:
 			int num65;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(1760561613u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DustinDate"))
 			{
 				num = -522779440;
 				num65 = -522779440;
@@ -1136,9 +1136,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num65 = -1850339981;
 			}
 			continue;
-			IL_0271:
+			IL_0249:
 			int num66;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(1882105499u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "ZenithDate"))
 			{
 				num = -6617752;
 				num66 = -6617752;
@@ -1149,9 +1149,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num66 = -379608763;
 			}
 			continue;
-			IL_03e8:
+			IL_03a8:
 			int num67;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(913610262u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "ZenithDate"))
 			{
 				num = -290529137;
 				num67 = -290529137;
@@ -1162,9 +1162,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num67 = -565793729;
 			}
 			continue;
-			IL_06ee:
+			IL_0682:
 			int num68;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_27<string>(1849951150u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "LexDate"))
 			{
 				num = -555737679;
 				num68 = -555737679;
@@ -1175,9 +1175,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num68 = -866640753;
 			}
 			continue;
-			IL_017a:
+			IL_0166:
 			int num69;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_26<string>(3023463305u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SethDate"))
 			{
 				num = -104920227;
 				num69 = -104920227;
@@ -1188,9 +1188,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num69 = -174204806;
 			}
 			continue;
-			IL_00aa:
+			IL_00a2:
 			int num70;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(337674980u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "DustinDate"))
 			{
 				num = -558414629;
 				num70 = -558414629;
@@ -1201,9 +1201,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num70 = -1779741906;
 			}
 			continue;
-			IL_064c:
+			IL_05e8:
 			int num71;
-			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_26<string>(849457652u)))
+			if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "SkyeDate"))
 			{
 				num = -577146702;
 				num71 = -577146702;
@@ -1214,9 +1214,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num71 = -1564508124;
 			}
 			continue;
-			IL_03ba:
+			IL_037e:
 			int num72;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_28<string>(913610262u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "ZenithDate"))
 			{
 				num = -638114067;
 				num72 = -638114067;
@@ -1227,9 +1227,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num72 = -491409776;
 			}
 			continue;
-			IL_01d6:
+			IL_01ba:
 			int num73;
-			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(670842249u)))
+			if (_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "RemyDate"))
 			{
 				num = -219282804;
 				num73 = -219282804;
@@ -1240,13 +1240,13 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num73 = -1508289465;
 			}
 			continue;
-			end_IL_0968:
+			end_IL_08e0:
 			break;
 		}
-		goto IL_07ca;
-		IL_07ca:
+		goto IL_0752;
+		IL_0752:
 		num = -828459079;
-		goto IL_0968;
+		goto IL_08e0;
 	}
 
 	public void _4Fscz8ryB3hm0NmL5xw39HHiPd1(string string_0, bool bool_0)
@@ -1257,10 +1257,10 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 	{
 		if (ephoneContacts_0 <= _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Dustin)
 		{
-			goto IL_0103;
+			goto IL_00f3;
 		}
-		goto IL_025c;
-		IL_025c:
+		goto IL_0244;
+		IL_0244:
 		int num;
 		int num2;
 		if (ephoneContacts_0 > _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Mercy)
@@ -1273,8 +1273,8 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			num = 1157148427;
 			num2 = 1157148427;
 		}
-		goto IL_01cf;
-		IL_01cf:
+		goto IL_01b7;
+		IL_01b7:
 		while (true)
 		{
 			uint num3;
@@ -1298,15 +1298,15 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 24u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(2002751141u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberLex");
 				num = 444258547;
 				continue;
 			case 23u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(2731111702u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberDustin");
 				num = 319630086;
 				continue;
 			case 20u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_26<string>(2260117762u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberZenith");
 				num = 1777015905;
 				continue;
 			case 17u:
@@ -1327,7 +1327,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				continue;
 			}
 			case 14u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(1378164286u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberRemy");
 				num = 2145357594;
 				continue;
 			case 12u:
@@ -1350,7 +1350,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			case 11u:
 				break;
 			case 10u:
-				goto IL_010d;
+				goto IL_00fd;
 			case 6u:
 			{
 				int num10;
@@ -1389,34 +1389,34 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				switch (ephoneContacts_0)
 				{
 				case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby:
-					goto IL_0266;
+					goto IL_024e;
 				case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax:
-					goto IL_0278;
+					goto IL_025c;
 				case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby | _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax:
 					return;
 				case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth:
-					goto IL_028f;
+					goto IL_026f;
 				}
 				num = ((int)num3 * -1243128081) ^ 0x5472F00E;
 				continue;
 			case 1u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(1037060285u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberSkye");
 				num = 1520017591;
 				continue;
 			case 0u:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(25216870u));
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberMercy");
 				num = 343307292;
 				continue;
 			default:
 				return;
 			case 25u:
-				goto IL_025c;
+				goto IL_0244;
 			case 2u:
-				goto IL_0266;
+				goto IL_024e;
 			case 4u:
 				return;
 			case 7u:
-				goto IL_0278;
+				goto IL_025c;
 			case 8u:
 				return;
 			case 9u:
@@ -1430,23 +1430,23 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			case 18u:
 				return;
 			case 19u:
-				goto IL_028f;
+				goto IL_026f;
 			case 21u:
 				return;
 			case 22u:
 				return;
-				IL_028f:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_26<string>(1046719258u));
+				IL_026f:
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberSeth");
 				return;
-				IL_0278:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_24<string>(1422880718u));
+				IL_025c:
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberJax");
 				return;
-				IL_0266:
-				_vVZVLriSGPExpn1KeobglMabsoi(_003CModule_003E.smethod_27<string>(1138343397u));
+				IL_024e:
+				_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberCoby");
 				return;
 			}
 			break;
-			IL_010d:
+			IL_00fd:
 			int num14;
 			if (ephoneContacts_0 == _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy)
 			{
@@ -1459,10 +1459,10 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				num14 = 1311183368;
 			}
 		}
-		goto IL_0103;
-		IL_0103:
+		goto IL_00f3;
+		IL_00f3:
 		num = 1013099324;
-		goto IL_01cf;
+		goto IL_01b7;
 	}
 
 	public void _vVZVLriSGPExpn1KeobglMabsoi(string string_0)
@@ -1572,12 +1572,12 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	private void _A3aw0JDUC0JuHjJDLBjCNpAj01Q(string string_0, string string_1)
 	{
-		_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, string_1, _003CModule_003E.smethod_27<string>(2478362061u), _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_4(_003CModule_003E.smethod_28<string>(3641341134u), string_0, _003CModule_003E.smethod_24<string>(2213395257u)));
+		_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, string_1, "Achievement", _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_4("Congratulations, you've unlocked the '", string_0, "'-achievement!"));
 	}
 
 	private void _8DePzSVoGzWFpzrB1bmfWEjf0uy(string string_0, string string_1)
 	{
-		_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, string_1, _003CModule_003E.smethod_26<string>(2712656462u), _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_4(_003CModule_003E.smethod_24<string>(2449520305u), string_0, _003CModule_003E.smethod_25<string>(1807220858u)));
+		_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, string_1, "Contact", _bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_4("The phonenumber of ", string_0, " has been added to your contacts!"));
 	}
 
 	public void _0Y1BTbSbP9IopfJXfeA4x02PifL(string string_0)
@@ -1595,7 +1595,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				{
 					int num5;
 					int num6;
-					if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, _003CModule_003E.smethod_25<string>(2744730504u)))
+					if (!_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_0(string_0, "MessageTutorial1"))
 					{
 						num5 = 1584896438;
 						num6 = 1584896438;
@@ -1609,7 +1609,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 					continue;
 				}
 				case 2u:
-					_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_24<string>(2140799082u), _003CModule_003E.smethod_24<string>(52346696u), _003CModule_003E.smethod_25<string>(3416222034u));
+					_bm5ybW5ND5sDF6bvP0sbYyOpvP.smethod_5(_4L7hfXrWoDdArQiscG4ukHCV46B, "MessageIconGeneric", "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
 					num = ((int)num2 * -784582659) ^ 0x15A6504A;
 					continue;
 				case 1u:
@@ -1689,7 +1689,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 				switch ((num2 = (uint)num ^ 0xC25CC694u) % 3u)
 				{
 				case 1u:
-					goto IL_0930;
+					goto IL_0660;
 				default:
 					return;
 				case 2u:
@@ -1698,7 +1698,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 					return;
 				}
 				break;
-				IL_0930:
+				IL_0660:
 				_f6JnaqJEhaBQyPQ8hoUgwIj9WcQ = _bUtL25YVF26t7moyja8EyHgA85q.ToDictionary((_eT2GJReQj8Acaq2A0H0eUir97Qf _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0._qXE0hlPdNyl0lTUyddbAS1PZhVV, (_eT2GJReQj8Acaq2A0H0eUir97Qf _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0);
 				num = ((int)num2 * -1156540164) ^ -707699616;
 			}

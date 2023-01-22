@@ -20,7 +20,7 @@ public class DonnaNPC : LayerNPC<DonnaNPC.EHeads, DonnaNPC.EPoses, DonnaNPC.EClo
 		None
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_27<string>(457308360u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Donna";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
 
@@ -31,8 +31,8 @@ public class DonnaNPC : LayerNPC<DonnaNPC.EHeads, DonnaNPC.EPoses, DonnaNPC.EClo
 
 	static DonnaNPC()
 	{
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
 		while (true)
 		{
 			int num = 1153792622;
@@ -42,7 +42,7 @@ public class DonnaNPC : LayerNPC<DonnaNPC.EHeads, DonnaNPC.EPoses, DonnaNPC.EClo
 				switch ((num2 = (uint)num ^ 0x10176B57u) % 3u)
 				{
 				case 2u:
-					goto IL_0011;
+					goto IL_000d;
 				default:
 					return;
 				case 0u:
@@ -51,7 +51,7 @@ public class DonnaNPC : LayerNPC<DonnaNPC.EHeads, DonnaNPC.EPoses, DonnaNPC.EClo
 					return;
 				}
 				break;
-				IL_0011:
+				IL_000d:
 				_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(255, 0, 255);
 				num = ((int)num2 * -578255629) ^ 0x18497CCD;
 			}

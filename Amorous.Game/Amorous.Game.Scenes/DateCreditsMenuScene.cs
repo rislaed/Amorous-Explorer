@@ -16,7 +16,7 @@ public class DateCreditsMenuScene : CreditsMenuScene
 				switch ((num2 = (uint)num ^ 0x6B93335Eu) % 4u)
 				{
 				case 3u:
-					base._ICAb9QUE8hnbl0uKD8fBpEB1kSV = _003CModule_003E.smethod_25<string>(3217028300u);
+					base._ICAb9QUE8hnbl0uKD8fBpEB1kSV = "Press Escape or Left-click here to return to the club.";
 					_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
 					num = (int)((num2 * 557759589) ^ 0x52C7EC8);
 					continue;

@@ -47,7 +47,7 @@ public static class _boyt8NIMtKsAGSTcjHeL0WMbFxs
 				case 7u:
 				{
 					byte b = array2[num3];
-					stringBuilder.Append(b.ToString(_003CModule_003E.smethod_28<string>(1397401829u)));
+					stringBuilder.Append(b.ToString("X2"));
 					num = -45308932;
 					continue;
 				}

@@ -247,7 +247,7 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 		_cBXbsynpanoywEAm2hd5ysuf78l = string_0;
 		_uCN0rAUpYyEIvrweCRehrSN3Vsm = new List<_e6Sul13xByZYV3zUae0HX9fjnS>();
 		base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = float_0;
-		_9jklVVcQQYcyqOYrkPiht2VP0IG = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Effect>(_003CModule_003E.smethod_25<string>(3184376220u));
+		_9jklVVcQQYcyqOYrkPiht2VP0IG = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
 	public override void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
@@ -580,9 +580,9 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : _QGGOTxZ8aNWGh0hc26wcmx8wmw
 					continue;
 				}
 				case 1u:
-					_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_9(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_8(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_7(_9jklVVcQQYcyqOYrkPiht2VP0IG), _003CModule_003E.smethod_27<string>(3982696521u)), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-					_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_9(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_8(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_7(_9jklVVcQQYcyqOYrkPiht2VP0IG), _003CModule_003E.smethod_28<string>(701001825u)), _jSsdHgef86oxWXEOENwyht1nIvn);
-					_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_9(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_8(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_7(_9jklVVcQQYcyqOYrkPiht2VP0IG), _003CModule_003E.smethod_25<string>(650696138u)), _ZSm5WiT2IPnq6W1i4QmcxHACwQh);
+					_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_9(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_8(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_7(_9jklVVcQQYcyqOYrkPiht2VP0IG), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+					_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_9(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_8(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_7(_9jklVVcQQYcyqOYrkPiht2VP0IG), "BreathingOffset"), _jSsdHgef86oxWXEOENwyht1nIvn);
+					_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_9(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_8(_xZgbANe7gi6i2DAhBEkKpR1QFLe.smethod_7(_9jklVVcQQYcyqOYrkPiht2VP0IG), "BreathingSpeed"), _ZSm5WiT2IPnq6W1i4QmcxHACwQh);
 					num = (int)((num2 * 946216162) ^ 0x2FF8B836);
 					continue;
 				case 0u:

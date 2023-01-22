@@ -5,7 +5,7 @@ public class ClubUpstairsStaffRoomScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ClubUpstairsStaffRoomScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		ClubUpstairsStaffRoomScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_26<string>(130011920u), 0, 0);
+		ClubUpstairsStaffRoomScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubUpstairsStaffRoom/Background", 0, 0);
 		ClubUpstairsStaffRoomScene.smethod_15(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
 	}
 

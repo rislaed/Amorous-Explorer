@@ -24,7 +24,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	private readonly RasterizerState _T3zdQhKBBD6DNUg8RQ7EupUHIoE;
 
-	private readonly string _3qOVW0rru0fnFsK9qtJ6Gk1F0bE = _003CModule_003E.smethod_27<string>(4086085158u);
+	private readonly string _3qOVW0rru0fnFsK9qtJ6Gk1F0bE = "Assets/Gui/Fonts/Bold-14";
 
 	private int _SfJPevkmlfWx0UJQBD7GNI1bOPA;
 
@@ -34,11 +34,11 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public _k8LAl8bPyzLGEpo59dKFGU4sCQ(Game game_0)
 	{
-		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0079: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008a: Expected O, but got Unknown
+		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
+		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0086: Expected O, but got Unknown
 		while (true)
 		{
 			int num = -1142689067;
@@ -142,7 +142,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		}
 		goto IL_0075;
 		IL_00a7:
-		value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_7(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_5(name), _003CModule_003E.smethod_27<string>(2954346559u), _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_6(name)));
+		value = _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_4(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_7(_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_5(name), "/", _k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_6(name)));
 		num = -2028055299;
 		goto IL_007a;
 	}
@@ -198,12 +198,12 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public int GetFont(string name)
 	{
-		if (_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_8(name, _003CModule_003E.smethod_27<string>(4057888257u)))
+		if (_k8LAl8bPyzLGEpo59dKFGU4sCQ.smethod_8(name, "default"))
 		{
-			goto IL_004c;
+			goto IL_0048;
 		}
-		goto IL_00bd;
-		IL_00bd:
+		goto IL_00b9;
+		IL_00b9:
 		int num;
 		int num2;
 		if (_ludG33HqMIBuda5aoAUm6woMHdh.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
@@ -216,8 +216,8 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 			num = -960486932;
 			num2 = -960486932;
 		}
-		goto IL_0081;
-		IL_0081:
+		goto IL_007d;
+		IL_007d:
 		int count = default(int);
 		SpriteFont value = default(SpriteFont);
 		while (true)
@@ -241,7 +241,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 				num = (int)(num3 * 1564583496) ^ -1417693182;
 				continue;
 			case 0u:
-				goto IL_00bd;
+				goto IL_00b9;
 			default:
 				_Ks5fhSCbnJp6pmRDanq4sn9DlRF.Add(count, value);
 				return count;
@@ -250,10 +250,10 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 			}
 			break;
 		}
-		goto IL_004c;
-		IL_004c:
+		goto IL_0048;
+		IL_0048:
 		num = -705253990;
-		goto IL_0081;
+		goto IL_007d;
 	}
 
 	public Point GetTextSize(string text, int font)

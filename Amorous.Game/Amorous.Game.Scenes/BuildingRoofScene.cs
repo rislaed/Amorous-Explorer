@@ -5,8 +5,8 @@ public class BuildingRoofScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public BuildingRoofScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		BuildingRoofScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_26<string>(124196951u), 0, 0);
-		BuildingRoofScene.smethod_15(_003CModule_003E.smethod_28<string>(232558723u), 0.4f);
+		BuildingRoofScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/BuildingRoof/Background", 0, 0);
+		BuildingRoofScene.smethod_15("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

@@ -24,19 +24,19 @@ public class HikingTrailScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xC76D89F7u) % 6u)
 				{
 				case 4u:
-					_4Hew2VldDt2hPLjc5fBPbqIVUEQ = HikingTrailScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_27<string>(434086114u), 0, 0);
+					_4Hew2VldDt2hPLjc5fBPbqIVUEQ = HikingTrailScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
 					num = (int)(num2 * 905666896) ^ -392209372;
 					continue;
 				case 2u:
-					HikingTrailScene.smethod_16(_003CModule_003E.smethod_27<string>(2473869484u), 0.4f);
+					HikingTrailScene.smethod_16("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 					num = (int)(num2 * 257362888) ^ -1979066064;
 					continue;
 				case 1u:
-					_bYgAJ7foDqpxOElDOYhOkQFMzrz = HikingTrailScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(1418381216u), 0, 0);
+					_bYgAJ7foDqpxOElDOYhOkQFMzrz = HikingTrailScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
 					num = (int)((num2 * 1202077244) ^ 0x7CB3CDB7);
 					continue;
 				case 0u:
-					HikingTrailScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(3259653244u));
+					HikingTrailScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Day");
 					num = (int)(num2 * 1088807789) ^ -1725884999;
 					continue;
 				default:
@@ -74,7 +74,7 @@ public class HikingTrailScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num3;
 					int num4;
-					if (!HikingTrailScene.smethod_17(string_0, _003CModule_003E.smethod_24<string>(2271948710u)))
+					if (!HikingTrailScene.smethod_17(string_0, "Night"))
 					{
 						num3 = 599511709;
 						num4 = 599511709;

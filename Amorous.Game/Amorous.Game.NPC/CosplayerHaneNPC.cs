@@ -22,12 +22,12 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 		Jacket
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_26<string>(972901111u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Hane Maxwell";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(186, 78, 60);
 
 	public CosplayerHaneNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(524301005u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CosplayerHane", 1f)
 	{
 		while (true)
 		{
@@ -38,11 +38,11 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 				switch ((num2 = (uint)num ^ 0x181CAE61u) % 4u)
 				{
 				case 3u:
-					CosplayerHaneNPC.smethod_17(CosplayerHaneNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Jacket, _003CModule_003E.smethod_25<string>(1598687453u))));
+					CosplayerHaneNPC.smethod_17(CosplayerHaneNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)")));
 					num = ((int)num2 * -1492571897) ^ -1485282322;
 					continue;
 				case 1u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_27<string>(522418932u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Hane Maxwell Cosplayer (nude)");
 					num = ((int)num2 * -1833023278) ^ 0x75F5DE98;
 					continue;
 				case 0u:

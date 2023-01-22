@@ -12,10 +12,10 @@ public class _VSQz6uDf5A6KqE8xqKxxcrkhZkA : JsonConverter
 		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
 		Color val = (Color)value;
 		JObject obj = _VSQz6uDf5A6KqE8xqKxxcrkhZkA.smethod_0();
-		obj.set_Item(_003CModule_003E.smethod_27<string>(217496194u), JToken.op_Implicit(((Color)(ref val)).get_B()));
-		obj.set_Item(_003CModule_003E.smethod_24<string>(1544169782u), JToken.op_Implicit(((Color)(ref val)).get_G()));
-		obj.set_Item(_003CModule_003E.smethod_24<string>(1126384892u), JToken.op_Implicit(((Color)(ref val)).get_R()));
-		obj.set_Item(_003CModule_003E.smethod_26<string>(3921032252u), JToken.op_Implicit(((Color)(ref val)).get_A()));
+		obj.set_Item("B", JToken.op_Implicit(((Color)(ref val)).get_B()));
+		obj.set_Item("G", JToken.op_Implicit(((Color)(ref val)).get_G()));
+		obj.set_Item("R", JToken.op_Implicit(((Color)(ref val)).get_R()));
+		obj.set_Item("A", JToken.op_Implicit(((Color)(ref val)).get_A()));
 		JObject val2 = obj;
 		((JToken)val2).WriteTo(writer, (JsonConverter[])(object)new JsonConverter[0]);
 	}
@@ -23,7 +23,7 @@ public class _VSQz6uDf5A6KqE8xqKxxcrkhZkA : JsonConverter
 	public override object _YLNjFZnbxagddA6Iuw9uqVAxcSg(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
 	{
 		//IL_0002: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00df: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cf: Unknown result type (might be due to invalid IL or missing references)
 		Color val = default(Color);
 		JToken val2 = _VSQz6uDf5A6KqE8xqKxxcrkhZkA.smethod_1(reader);
 		while (true)
@@ -35,16 +35,16 @@ public class _VSQz6uDf5A6KqE8xqKxxcrkhZkA : JsonConverter
 				switch ((num2 = (uint)num ^ 0xCF837BB8u) % 5u)
 				{
 				case 4u:
-					((Color)(ref val)).set_B((byte)Extensions.Value<int>((IEnumerable<JToken>)val2.get_Item((object)_003CModule_003E.smethod_24<string>(4239350344u))));
+					((Color)(ref val)).set_B((byte)Extensions.Value<int>((IEnumerable<JToken>)val2.get_Item((object)"B")));
 					num = (int)((num2 * 141588232) ^ 0x3DC2777);
 					continue;
 				case 2u:
-					((Color)(ref val)).set_R((byte)Extensions.Value<int>((IEnumerable<JToken>)_VSQz6uDf5A6KqE8xqKxxcrkhZkA.smethod_2(val2, (object)_003CModule_003E.smethod_24<string>(1126384892u))));
-					((Color)(ref val)).set_G((byte)Extensions.Value<int>((IEnumerable<JToken>)val2.get_Item((object)_003CModule_003E.smethod_26<string>(3667054104u))));
+					((Color)(ref val)).set_R((byte)Extensions.Value<int>((IEnumerable<JToken>)_VSQz6uDf5A6KqE8xqKxxcrkhZkA.smethod_2(val2, (object)"R")));
+					((Color)(ref val)).set_G((byte)Extensions.Value<int>((IEnumerable<JToken>)val2.get_Item((object)"G")));
 					num = (int)(num2 * 657889368) ^ -350813811;
 					continue;
 				case 1u:
-					((Color)(ref val)).set_A((byte)Extensions.Value<int>((IEnumerable<JToken>)val2.get_Item((object)_003CModule_003E.smethod_25<string>(1794326252u))));
+					((Color)(ref val)).set_A((byte)Extensions.Value<int>((IEnumerable<JToken>)val2.get_Item((object)"A")));
 					num = ((int)num2 * -659823000) ^ -1287603400;
 					continue;
 				case 0u:

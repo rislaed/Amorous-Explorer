@@ -12,23 +12,23 @@ public class ClubBackScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ClubBackScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_26<string>(4021356539u), -535, 0);
-		ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(4181535368u), 1313, 486);
+		ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubBack/Club back main", -535, 0);
+		ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubBack/Club back bodies", 1313, 486);
 		if (!ClubBackScene.smethod_15())
 		{
-			ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_27<string>(4258926352u), 1313, 486);
+			ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubBack/Club back shirts", 1313, 486);
 		}
 		if (!ClubBackScene.smethod_16())
 		{
-			ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_27<string>(4026546773u), 1313, 486);
+			ClubBackScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubBack/Club back pants", 1313, 486);
 		}
-		ClubBackScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(1554470145u), _003CModule_003E.smethod_25<string>(1548721716u), -217, 120, (Action)OnDoorClick);
-		ClubBackScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3550935853u), _003CModule_003E.smethod_26<string>(3768565184u), 608, 0, (Action)OnClubFrontClick);
-		ClubBackScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(2245770657u), _003CModule_003E.smethod_25<string>(3292021198u), 524, 75, 10f, 68, 75);
+		ClubBackScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Door", "Assets/Scenes/ClubBack/Door to lounge selectable", -217, 120, (Action)OnDoorClick);
+		ClubBackScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Side", "Assets/Scenes/ClubBack/Front of Club Selectable", 608, 0, (Action)OnClubFrontClick);
+		ClubBackScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Fan", "Assets/Scenes/ClubBack/Fan", 524, 75, 10f, 68, 75);
 		ClubBackScene.smethod_20(ClubBackScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -535, 535, 0, 0);
 		ClubBackScene.smethod_21(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = ClubBackScene.smethod_22();
-		_showLex = !ClubBackScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(3356641799u));
+		_showLex = !ClubBackScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexLeftClub");
 	}
 
 	public override void Start()
@@ -79,7 +79,7 @@ public class ClubBackScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void OnLexClick()
 	{
-		ClubBackScene.smethod_28(ClubBackScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_25<string>(2344197568u));
+		ClubBackScene.smethod_28(ClubBackScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "LexPreDate");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

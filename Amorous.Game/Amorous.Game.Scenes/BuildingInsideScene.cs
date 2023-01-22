@@ -14,11 +14,11 @@ public class BuildingInsideScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x4693C9FCu) % 4u)
 				{
 				case 2u:
-					BuildingInsideScene.smethod_15(_003CModule_003E.smethod_26<string>(210443793u), 0.4f);
+					BuildingInsideScene.smethod_15("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 					num = ((int)num2 * -904671676) ^ -1233916648;
 					continue;
 				case 1u:
-					BuildingInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(2505824007u), 0, 0);
+					BuildingInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/BuildingInside/Background", 0, 0);
 					num = ((int)num2 * -2041568641) ^ -1225864823;
 					continue;
 				default:

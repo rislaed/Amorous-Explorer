@@ -3,7 +3,7 @@ namespace Amorous.Game.NPC;
 public class ClubEntranceDNPC : ClubStaticNPC
 {
 	public ClubEntranceDNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(3215207603u), _003CModule_003E.smethod_27<string>(2581279857u), bool_0: true, bool_1: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubEntranceStatic", "D", bool_0: true, bool_1: true)
 	{
 		while (true)
 		{
@@ -14,7 +14,7 @@ public class ClubEntranceDNPC : ClubStaticNPC
 				switch ((num2 = (uint)num ^ 0x7BEA4F53u) % 3u)
 				{
 				case 1u:
-					goto IL_001f;
+					goto IL_0017;
 				case 0u:
 					break;
 				default:
@@ -23,7 +23,7 @@ public class ClubEntranceDNPC : ClubStaticNPC
 					return;
 				}
 				break;
-				IL_001f:
+				IL_0017:
 				ClubEntranceDNPC.smethod_19((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, 0.7f);
 				num = ((int)num2 * -941753236) ^ 0x51E8B8F1;
 			}

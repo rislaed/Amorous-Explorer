@@ -5,8 +5,8 @@ public class BedsideScene : TimeOfDayScene
 	public BedsideScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		BedsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), _003CModule_003E.smethod_24<string>(810276289u), 0, 0);
-		BedsideScene.smethod_19(_003CModule_003E.smethod_27<string>(556956788u), 0.4f);
+		BedsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedside/Background", 0, 0);
+		BedsideScene.smethod_19("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_18(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

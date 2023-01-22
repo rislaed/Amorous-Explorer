@@ -108,20 +108,20 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 	[STAThread]
 	public static void _PijxDMohBfV8yAM5NbVyQM599kM(string[] args)
 	{
-		//IL_00d9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00da: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dc: Expected I4, but got Unknown
-		//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Expected I4, but got Unknown
-		//IL_0128: Incompatible stack heights: 0 vs 1
-		//IL_012f: Incompatible stack heights: 0 vs 1
-		//IL_0327: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0328: Unknown result type (might be due to invalid IL or missing references)
-		//IL_032a: Expected I4, but got Unknown
-		//IL_032b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_033d: Expected I4, but got Unknown
-		//IL_0352: Incompatible stack heights: 0 vs 1
-		//IL_0359: Incompatible stack heights: 0 vs 1
+		//IL_00c9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cc: Expected I4, but got Unknown
+		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00df: Expected I4, but got Unknown
+		//IL_0110: Incompatible stack heights: 0 vs 1
+		//IL_0117: Incompatible stack heights: 0 vs 1
+		//IL_02e3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02e4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02e6: Expected I4, but got Unknown
+		//IL_02e7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02f9: Expected I4, but got Unknown
+		//IL_030e: Incompatible stack heights: 0 vs 1
+		//IL_0315: Incompatible stack heights: 0 vs 1
 		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_1(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0(), (UnhandledExceptionEventHandler)delegate(object sender, UnhandledExceptionEventArgs e)
 		{
 			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_0(e) as Exception);
@@ -162,39 +162,39 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 				case 0u:
 					break;
 				default:
-					_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_5(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_2(), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_3(_003CModule_003E.smethod_28<string>(3445387025u)));
+					_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_5(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_2(), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_3("en-US"));
 					_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_6();
 					try
 					{
 						SetDefaultDllDirectories(4096);
-						AddDllDirectory(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_9(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_7(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0()), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_8() ? _003CModule_003E.smethod_26<string>(298779026u) : _003CModule_003E.smethod_26<string>(4220332840u)));
+						AddDllDirectory(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_9(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_7(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0()), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_8() ? "x64" : "x86"));
 					}
 					catch
 					{
 						while (true)
 						{
-							IL_012a:
+							IL_0112:
 							_ = -2026384873;
 							while (true)
 							{
-								_003F val = /*Error near IL_00da: Stack underflow*/^ -1672119606;
+								_003F val = /*Error near IL_00ca: Stack underflow*/^ -1672119606;
 								num2 = (uint)(int)val;
 								switch (val % 3)
 								{
 								default:
-									goto end_IL_00d4;
+									goto end_IL_00c4;
 								case 1:
-									SetDllDirectory(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_9(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_7(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0()), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_8() ? _003CModule_003E.smethod_27<string>(2738170318u) : _003CModule_003E.smethod_25<string>(2102511816u)));
+									SetDllDirectory(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_9(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_7(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_0()), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_8() ? "x64" : "x86"));
 									_ = -893065434;
 									continue;
 								case 2:
 									break;
 								case 0:
-									goto end_IL_00d4;
+									goto end_IL_00c4;
 								}
-								goto IL_012a;
+								goto IL_0112;
 								continue;
-								end_IL_00d4:
+								end_IL_00c4:
 								break;
 							}
 							break;
@@ -217,7 +217,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 								{
 									_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_3(string_0, new object[0]);
 								};
-								goto IL_0178;
+								goto IL_0160;
 							case 0u:
 								break;
 							default:
@@ -225,19 +225,19 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 								{
 									_vz0zJ2bWCWnCTFEeLdbjjSHoFxp.smethod_4(string_0, new object[0]);
 								};
-								_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10(_003CModule_003E.smethod_26<string>(1688105100u), _003CModule_003E.smethod_27<string>(270902921u));
+								_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("FNA_OPENGL_DISABLE_LATESWAPTEAR", "1");
 								try
 								{
-									bool bool_ = args.Contains(_003CModule_003E.smethod_27<string>(1838418819u));
-									if (args.Contains(_003CModule_003E.smethod_24<string>(2275171885u)))
+									bool bool_ = args.Contains("-safemode");
+									if (args.Contains("-disablesound"))
 									{
-										goto IL_0240;
+										goto IL_0210;
 									}
-									goto IL_02ba;
-									IL_02ba:
+									goto IL_027a;
+									IL_027a:
 									int num4;
 									int num5;
-									if (!args.Contains(_003CModule_003E.smethod_28<string>(2347632945u)))
+									if (!args.Contains("-d3d11"))
 									{
 										num4 = -1160233637;
 										num5 = -1160233637;
@@ -247,25 +247,25 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 										num4 = -1962883964;
 										num5 = -1962883964;
 									}
-									goto IL_0286;
-									IL_0286:
+									goto IL_0246;
+									IL_0246:
 									while (true)
 									{
 										switch ((num2 = (uint)num4 ^ 0x9C557ACAu) % 5u)
 										{
 										case 3u:
-											_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10(_003CModule_003E.smethod_24<string>(5403808u), _003CModule_003E.smethod_27<string>(270902921u));
+											_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("FNA_AUDIO_DISABLE_SOUND", "1");
 											num4 = ((int)num2 * -477678675) ^ 0x8B08BCB;
 											continue;
 										case 2u:
 											break;
 										case 1u:
-											_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10(_003CModule_003E.smethod_27<string>(3879307884u), _003CModule_003E.smethod_25<string>(3369351857u));
-											_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10(_003CModule_003E.smethod_26<string>(814289062u), _003CModule_003E.smethod_27<string>(270902921u));
+											_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("FNA_OPENGL_FORCE_ES3", "1");
+											_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_10("SDL_OPENGL_ES_DRIVER", "1");
 											num4 = ((int)num2 * -1799389097) ^ 0x5BA491D9;
 											continue;
 										case 4u:
-											goto IL_02ba;
+											goto IL_027a;
 										default:
 										{
 											_SkYjfUaaNhTySNgoGUeFZ46X4dM skYjfUaaNhTySNgoGUeFZ46X4dM = new _SkYjfUaaNhTySNgoGUeFZ46X4dM(bool_);
@@ -280,27 +280,27 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 												{
 													while (true)
 													{
-														IL_0315:
+														IL_02d1:
 														int num6 = -637312835;
 														while (true)
 														{
 															switch ((num2 = (uint)num6 ^ 0x9C557ACAu) % 3u)
 															{
 															case 1u:
-																goto IL_02e5;
+																goto IL_02a1;
 															default:
-																goto end_IL_02f8;
+																goto end_IL_02b4;
 															case 0u:
 																break;
 															case 2u:
-																goto end_IL_02f8;
+																goto end_IL_02b4;
 															}
-															goto IL_0315;
-															IL_02e5:
+															goto IL_02d1;
+															IL_02a1:
 															_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_12((IDisposable)skYjfUaaNhTySNgoGUeFZ46X4dM);
 															num6 = ((int)num2 * -1616146471) ^ -1666693613;
 															continue;
-															end_IL_02f8:
+															end_IL_02b4:
 															break;
 														}
 														break;
@@ -311,10 +311,10 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 										}
 										break;
 									}
-									goto IL_0240;
-									IL_0240:
+									goto IL_0210;
+									IL_0210:
 									num4 = -864963222;
-									goto IL_0286;
+									goto IL_0246;
 								}
 								catch (Exception exception_)
 								{
@@ -323,7 +323,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 										_ = -600898340;
 										while (true)
 										{
-											_003F val2 = /*Error near IL_0328: Stack underflow*/^ -1672119606;
+											_003F val2 = /*Error near IL_02e4: Stack underflow*/^ -1672119606;
 											num2 = (uint)(int)val2;
 											switch (val2 % 3)
 											{
@@ -344,7 +344,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 								}
 							}
 							break;
-							IL_0178:
+							IL_0160:
 							FNALoggerEXT.LogWarn = logWarn;
 							num3 = -259473331;
 						}
@@ -352,7 +352,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 				}
 				break;
 				IL_002b:
-				_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_4(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_2(), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_3(_003CModule_003E.smethod_24<string>(1439602105u)));
+				_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_4(_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_2(), _teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_3("en-US"));
 				num = (int)(num2 * 557156422) ^ -1273390447;
 			}
 		}
@@ -360,7 +360,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 
 	private static void _mxSbmCQQPRHc7t2A2pm8HsbyvqfA(Exception exception_0)
 	{
-		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_13(_003CModule_003E.smethod_24<string>(3047016434u), new object[1] { exception_0 });
+		_teqj4nlfsRIR7hafjKGQ9NYjEZe.smethod_13("Unhandled exception: {0}", new object[1] { exception_0 });
 	}
 
 	static AppDomain smethod_0()

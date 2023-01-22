@@ -5,14 +5,14 @@ public class BeachScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public BeachScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		BeachScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_26<string>(3795908313u), 0, 0);
-		if (BeachScene.smethod_16(BeachScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) != null && BeachScene.smethod_19(BeachScene.smethod_18(BeachScene.smethod_17(BeachScene.smethod_16(BeachScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)))), _003CModule_003E.smethod_26<string>(3028434783u)) && BeachScene.smethod_22(BeachScene.smethod_21(BeachScene.smethod_20(BeachScene.smethod_16(BeachScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this))))) == 60)
+		BeachScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Beach/Beach Background", 0, 0);
+		if (BeachScene.smethod_16(BeachScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)) != null && BeachScene.smethod_19(BeachScene.smethod_18(BeachScene.smethod_17(BeachScene.smethod_16(BeachScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)))), "DustinDate") && BeachScene.smethod_22(BeachScene.smethod_21(BeachScene.smethod_20(BeachScene.smethod_16(BeachScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this))))) == 60)
 		{
-			BeachScene.smethod_23(_003CModule_003E.smethod_27<string>(3907936752u), 0.4f);
+			BeachScene.smethod_23("Assets/Music/Hopeku - In A Finger Blink", 0.4f);
 		}
 		else
 		{
-			BeachScene.smethod_23(_003CModule_003E.smethod_26<string>(3615248123u), 0.4f);
+			BeachScene.smethod_23("Assets/Music/Warhector - Free Floating", 0.4f);
 		}
 	}
 

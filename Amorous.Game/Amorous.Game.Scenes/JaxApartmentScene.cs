@@ -18,12 +18,12 @@ public class JaxApartmentScene : TimeOfDayScene
 				case 0u:
 					break;
 				default:
-					JaxApartmentScene.smethod_19(_003CModule_003E.smethod_26<string>(3850639305u), 0.4f);
+					JaxApartmentScene.smethod_19("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 					return;
 				}
 				break;
 				IL_0009:
-				JaxApartmentScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_24<string>(1610334048u), 0, 0);
+				JaxApartmentScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/JaxApartment/jax background apartment", 0, 0);
 				num = (int)((num2 * 430504250) ^ 0x18698391);
 			}
 		}

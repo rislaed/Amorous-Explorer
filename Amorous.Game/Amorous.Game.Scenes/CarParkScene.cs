@@ -18,12 +18,12 @@ public class CarParkScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 0u:
 					break;
 				default:
-					CarParkScene.smethod_15(_003CModule_003E.smethod_28<string>(4077067671u), 0.4f);
+					CarParkScene.smethod_15("Assets/Music/Hopeku - In A Finger Blink", 0.4f);
 					return;
 				}
 				break;
 				IL_0009:
-				CarParkScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_25<string>(4046241114u), 0, 0);
+				CarParkScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CarPark/Car Park Background", 0, 0);
 				num = (int)((num2 * 802462811) ^ 0x5E2AC639);
 			}
 		}

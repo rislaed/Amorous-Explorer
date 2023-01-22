@@ -23,16 +23,16 @@ public class SororityGirlNPC : LayerNPC<SororityGirlNPC.EHeads, SororityGirlNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(198133202u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Lunar";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(221, 110, 218);
 
 	public SororityGirlNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_26<string>(3447770651u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/SororityGirl", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_26<string>(3801678548u));
-		SororityGirlNPC.smethod_17(SororityGirlNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_26<string>(4105028174u))));
-		SororityGirlNPC.smethod_19(SororityGirlNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_27<string>(3637402063u))));
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Sorority Girl Body");
+		SororityGirlNPC.smethod_17(SororityGirlNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Sorority Girl Pants")));
+		SororityGirlNPC.smethod_19(SororityGirlNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Sorority Girl Top")));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

@@ -23,12 +23,12 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 		Shorts
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_25<string>(2006739363u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Rose Wood";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(195, 69, 81);
 
 	public RoseWoodNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(733483952u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/RoseWood", 1f)
 	{
 		while (true)
 		{
@@ -39,17 +39,17 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 				switch ((num2 = (uint)num ^ 0xA02503D4u) % 5u)
 				{
 				case 4u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_28<string>(1590983199u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Rose Wood Body");
 					num = (int)(num2 * 106022831) ^ -2034179393;
 					continue;
 				case 1u:
-					RoseWoodNPC.smethod_19(RoseWoodNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_26<string>(424217347u))));
+					RoseWoodNPC.smethod_19(RoseWoodNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Rose Wood Shirt")));
 					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
 					_upl1k7yzBzlU7vErvbydGmXROfA = true;
 					num = (int)((num2 * 512282757) ^ 0x3184DCFC);
 					continue;
 				case 0u:
-					RoseWoodNPC.smethod_17(RoseWoodNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shorts, _003CModule_003E.smethod_26<string>(171425992u))));
+					RoseWoodNPC.smethod_17(RoseWoodNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts")));
 					num = ((int)num2 * -1337295347) ^ 0x1F574259;
 					continue;
 				default:

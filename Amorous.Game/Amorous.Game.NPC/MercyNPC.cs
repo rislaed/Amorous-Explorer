@@ -34,62 +34,32 @@ public class MercyNPC : SpineNPC<MercyNPC.EHeads, MercyNPC.EPoses, MercyNPC.EClo
 		Necklace
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(2242245941u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Mercy";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(172, 135, 255);
 
 	public MercyNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(3388399863u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Mercy/Mercy", 1f, bool_0: true)
 	{
-		MercyNPC.smethod_19(MercyNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_26<string>(4184661290u), (Action<int>)null);
-		string[] first = new string[7]
-		{
-			_003CModule_003E.smethod_27<string>(1281926310u),
-			_003CModule_003E.smethod_27<string>(3869781642u),
-			_003CModule_003E.smethod_27<string>(2715993578u),
-			_003CModule_003E.smethod_25<string>(3992742240u),
-			_003CModule_003E.smethod_27<string>(630293153u),
-			_003CModule_003E.smethod_26<string>(3716319931u),
-			_003CModule_003E.smethod_25<string>(4191611203u)
-		};
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, first.Union(new string[2]
-		{
-			_003CModule_003E.smethod_24<string>(3683449579u),
-			_003CModule_003E.smethod_27<string>(815416506u)
-		}).ToArray());
-		MercyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, first.Union(new string[3]
-		{
-			_003CModule_003E.smethod_26<string>(3222322425u),
-			_003CModule_003E.smethod_24<string>(2232275996u),
-			_003CModule_003E.smethod_28<string>(3888753669u)
-		}).ToArray()), _003CModule_003E.smethod_28<string>(2218069393u));
-		MercyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, first.Union(new string[2]
-		{
-			_003CModule_003E.smethod_24<string>(3919574627u),
-			_003CModule_003E.smethod_24<string>(3975334113u)
-		}).ToArray()), _003CModule_003E.smethod_24<string>(3537507312u));
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.BlushConfident, first.Union(new string[2]
-		{
-			_003CModule_003E.smethod_28<string>(1401864961u),
-			_003CModule_003E.smethod_25<string>(232389672u)
-		}).ToArray());
-		MercyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.BlushShy, first.Union(new string[2]
-		{
-			_003CModule_003E.smethod_25<string>(903881202u),
-			_003CModule_003E.smethod_27<string>(815416506u)
-		}).ToArray()), _003CModule_003E.smethod_24<string>(3537507312u));
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_24<string>(225213088u), _003CModule_003E.smethod_26<string>(2267530245u), _003CModule_003E.smethod_27<string>(3679933788u), _003CModule_003E.smethod_25<string>(3436741745u));
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.ArmsShy, _003CModule_003E.smethod_28<string>(3155978204u), _003CModule_003E.smethod_25<string>(1908540001u), _003CModule_003E.smethod_26<string>(3933467449u), _003CModule_003E.smethod_27<string>(2371827011u));
-		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Dress, _003CModule_003E.smethod_24<string>(1696223028u))));
-		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.SkimpyDress, _003CModule_003E.smethod_28<string>(1065582499u))));
-		MercyNPC.smethod_23(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.SportsBra, _003CModule_003E.smethod_25<string>(3050075602u))));
-		MercyNPC.smethod_24(MercyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.SportsShorts, _003CModule_003E.smethod_24<string>(888121883u))));
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Necklace, _003CModule_003E.smethod_27<string>(2492715115u));
-		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.Dress, _003CModule_003E.smethod_27<string>(3443936955u))));
-		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.SkimpyDress, _003CModule_003E.smethod_26<string>(42966321u))));
-		MercyNPC.smethod_23(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.SportsBra, _003CModule_003E.smethod_26<string>(245199405u))));
-		MercyNPC.smethod_24(MercyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.SportsShorts, _003CModule_003E.smethod_28<string>(3102012859u))));
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.Necklace, _003CModule_003E.smethod_25<string>(3520119673u));
+		MercyNPC.smethod_19(MercyNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
+		string[] first = new string[7] { "Pupils", "Eyeback", "Hair back", "Hairlock left", "Fringe", "Horn", "Horn tip" };
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, first.Union(new string[2] { "Angry head", "AngrySad ear" }).ToArray());
+		MercyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, first.Union(new string[3] { "Happy head", "Happy Jaw", "Happy ear" }).ToArray()), "Happy blink");
+		MercyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, first.Union(new string[2] { "Sad head", "AngrySad ear" }).ToArray()), "Sad Blink");
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.BlushConfident, first.Union(new string[2] { "Blush Confident Head", "AngrySad ear" }).ToArray());
+		MercyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.BlushShy, first.Union(new string[2] { "Blush Shy Head", "AngrySad ear" }).ToArray()), "Sad Blink");
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Body one", "Arm left hip", "Arm right hip", "Tail");
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.ArmsShy, "Body one", "Arms shy", "Arms shy back", "Tail");
+		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Dress, "Dress")));
+		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.SkimpyDress, "Skimpy Dress")));
+		MercyNPC.smethod_23(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.SportsBra, "Sports Bra")));
+		MercyNPC.smethod_24(MercyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.SportsShorts, "Sports Shorts")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Necklace, "Necklace");
+		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.Dress, "Dress")));
+		MercyNPC.smethod_22(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.SkimpyDress, "Skimpy Dress")));
+		MercyNPC.smethod_23(MercyNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.SportsBra, "Sports Bra")));
+		MercyNPC.smethod_24(MercyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.SportsShorts, "Sports Shorts")));
+		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsShy, EClothes.Necklace, "Necklace");
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

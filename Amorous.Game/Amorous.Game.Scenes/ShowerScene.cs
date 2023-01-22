@@ -14,11 +14,11 @@ public class ShowerScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x2D67E26Bu) % 4u)
 				{
 				case 3u:
-					ShowerScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_26<string>(2200370558u), 0, 0);
+					ShowerScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Shower/Shower BG", 0, 0);
 					num = (int)((num2 * 1682519006) ^ 0x2EC4E179);
 					continue;
 				case 0u:
-					ShowerScene.smethod_15(_003CModule_003E.smethod_26<string>(3946784369u), 0.4f);
+					ShowerScene.smethod_15("Assets/Music/4U - Long Gone", 0.4f);
 					num = (int)(num2 * 224707113) ^ -1744720194;
 					continue;
 				default:

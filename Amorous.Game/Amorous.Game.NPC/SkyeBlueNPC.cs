@@ -31,7 +31,7 @@ public class SkyeBlueNPC : SkyeNPC
 				}
 				break;
 				IL_0009:
-				SkyeBlueNPC.smethod_34((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this, SkyeBlueNPC.smethod_33(SkyeBlueNPC.smethod_32((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this)).Load<Texture2D>(_003CModule_003E.smethod_25<string>(4152933763u)));
+				SkyeBlueNPC.smethod_34((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this, SkyeBlueNPC.smethod_33(SkyeBlueNPC.smethod_32((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this)).Load<Texture2D>("Assets/NPC/Skye/skye expressions (Blue)"));
 				num = ((int)num2 * -1767596527) ^ -175482426;
 			}
 		}

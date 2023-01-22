@@ -225,14 +225,14 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 	private float _Ja1biX4ByqpjkgcLg9SPPz8y4itA;
 
 	public CensoredSexscene(ContentManager contentManager_0, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null, float float_1 = 1000f)
-		: base(contentManager_0, string_0, string_1, CensoredSexscene.smethod_9() ? _003CModule_003E.smethod_28<string>(513592543u) : string_2, float_0, bool_0, CensoredSexscene.smethod_9() ? null : list_0, _sa8EsNgk4VDRaASdXE7VprdlNlg_0)
+		: base(contentManager_0, string_0, string_1, CensoredSexscene.smethod_9() ? "Assets/SexScenes/Generic/Overlay" : string_2, float_0, bool_0, CensoredSexscene.smethod_9() ? null : list_0, _sa8EsNgk4VDRaASdXE7VprdlNlg_0)
 	{
 		if (CensoredSexscene.smethod_9())
 		{
 			_YDmx0efYtcyg4olWGsr0rBMkyjD = (_aElCqTEKQdwgSGVsOO7nt14UEsn = float_1);
 			_lpzETYXyRHxYihXrkJactMysoTi = new List<Particle>();
-			_tt9eBN54CTaryoKDBFZI2D44oni = contentManager_0.Load<Texture2D>(_003CModule_003E.smethod_24<string>(1280688036u));
-			CensoredSexscene.smethod_10(_003CModule_003E.smethod_24<string>(2150342302u), 0.4f);
+			_tt9eBN54CTaryoKDBFZI2D44oni = contentManager_0.Load<Texture2D>("Assets/SexScenes/Generic/Heart");
+			CensoredSexscene.smethod_10("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 		}
 	}
 

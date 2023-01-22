@@ -35,7 +35,7 @@ public class _lnXs1JfCeIBNCpFYs8XVRorc0h4 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 	}
 
 	public _lnXs1JfCeIBNCpFYs8XVRorc0h4(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
-		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _003CModule_003E.smethod_25<string>(3873806653u))
+		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "Pool Water")
 	{
 		_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_4((_fAUddQEKfZyemRb327NhM3GGlmzA)this, (Action<GameTime>)delegate(GameTime gameTime_0)
 		{
@@ -45,10 +45,10 @@ public class _lnXs1JfCeIBNCpFYs8XVRorc0h4 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 		{
 			_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_11(_9kpyWj69TJrEE13VPDWRIsYgsND, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 		});
-		_9kpyWj69TJrEE13VPDWRIsYgsND = _lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_8(_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_7(_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_6(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), _003CModule_003E.smethod_26<string>(2377746252u), 1f, bool_0: true, (List<SpineEvent>)null);
+		_9kpyWj69TJrEE13VPDWRIsYgsND = _lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_8(_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_7(_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_6(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/ClubPool/Club Pool water", 1f, bool_0: true, (List<SpineEvent>)null);
 		_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_1(_9kpyWj69TJrEE13VPDWRIsYgsND, 0f);
 		_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_3(_9kpyWj69TJrEE13VPDWRIsYgsND, 0f);
-		_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_9(_9kpyWj69TJrEE13VPDWRIsYgsND, _003CModule_003E.smethod_25<string>(3692662391u), (Action<int>)null);
+		_lnXs1JfCeIBNCpFYs8XVRorc0h4.smethod_9(_9kpyWj69TJrEE13VPDWRIsYgsND, "animation", (Action<int>)null);
 	}
 
 	[CompilerGenerated]

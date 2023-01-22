@@ -23,16 +23,16 @@ public class AuthorNPC : LayerNPC<AuthorNPC.EHeads, AuthorNPC.EPoses, AuthorNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_27<string>(3774857715u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Nik Kovak";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(145, 109, 236);
 
 	public AuthorNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(1736385065u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Author", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Reading, _003CModule_003E.smethod_24<string>(214919951u));
-		AuthorNPC.smethod_17(AuthorNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Reading, EClothes.Pants, _003CModule_003E.smethod_24<string>(2230776162u))));
-		AuthorNPC.smethod_19(AuthorNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Reading, EClothes.Shirt, _003CModule_003E.smethod_27<string>(2951115088u))));
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Reading, "Sonic Fox Expressions");
+		AuthorNPC.smethod_17(AuthorNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Reading, EClothes.Pants, "Sonic Fox Expressions - Pants")));
+		AuthorNPC.smethod_19(AuthorNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Reading, EClothes.Shirt, "Sonic Fox Expressions - Shirt")));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

@@ -16,10 +16,10 @@ public class SkyeBedroomScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x72783061u) % 10u)
 				{
 				case 9u:
-					SkyeBedroomScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), _003CModule_003E.smethod_26<string>(1285350202u), 0, 0);
-					SkyeBedroomScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(1285282096u), _003CModule_003E.smethod_28<string>(479971258u), 1534, 70, (Action)delegate
+					SkyeBedroomScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/SkyeBedroom/interactable bedroom - Backround", 0, 0);
+					SkyeBedroomScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Door", "Assets/Scenes/SkyeBedroom/interactable bedroom - Door", 1534, 70, (Action)delegate
 					{
-						if (_003C_003Ec__DisplayClass0_0.smethod_1(_003C_003Ec__DisplayClass0_0.smethod_0(), _003CModule_003E.smethod_27<string>(3015466299u)) == 55)
+						if (_003C_003Ec__DisplayClass0_0.smethod_1(_003C_003Ec__DisplayClass0_0.smethod_0(), "SkyeDate") == 55)
 						{
 							while (true)
 							{
@@ -30,7 +30,7 @@ public class SkyeBedroomScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 									switch ((num6 = (uint)num5 ^ 0x7D8DF6B9u) % 3u)
 									{
 									case 1u:
-										goto IL_001a;
+										goto IL_0016;
 									default:
 										return;
 									case 0u:
@@ -39,25 +39,25 @@ public class SkyeBedroomScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 										return;
 									}
 									break;
-									IL_001a:
-									_003C_003Ec__DisplayClass0_0.smethod_2(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_24<string>(3220948404u));
+									IL_0016:
+									_003C_003Ec__DisplayClass0_0.smethod_2(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "SkyeDate");
 									num5 = (int)((num6 * 386377504) ^ 0x2B40FBCB);
 								}
 							}
 						}
 					});
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(120903738u), _003CModule_003E.smethod_27<string>(1790967839u), 1008, 289, (string)null, 0, 0, _003CModule_003E.smethod_27<string>(2509810100u));
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Mirror", "Assets/Scenes/SkyeBedroom/interactable bedroom - Mirror", 1008, 289, (string)null, 0, 0, "<i>That's me!</i>");
 					num = ((int)num2 * -569881705) ^ -1147955980;
 					continue;
 				case 8u:
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(3143647026u), _003CModule_003E.smethod_27<string>(3841718933u), 1166, 547, (string)null, 0, 0, _003CModule_003E.smethod_25<string>(1242097206u));
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Droor Right", "Assets/Scenes/SkyeBedroom/interactable bedroom - Droor Right SFW", 1166, 547, (string)null, 0, 0, "<i>Wow,░ there are some pretty exotic looking panties in here.░ I should probably close this one...</i>");
 					num = ((int)num2 * -1122149579) ^ -2130213536;
 					continue;
 				case 6u:
 				{
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1946185097u), _003CModule_003E.smethod_26<string>(982000576u), 982, 483, (string)null, 0, 0, _003CModule_003E.smethod_24<string>(4270762531u));
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(1071699956u), _003CModule_003E.smethod_25<string>(1340296568u), 1215, 424, (string)null, 0, 0, _003CModule_003E.smethod_28<string>(2919139817u));
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(1591185567u), _003CModule_003E.smethod_25<string>(263331624u), 964, 542, (string)null, 0, 0, _003CModule_003E.smethod_26<string>(2602350987u));
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Mangas", "Assets/Scenes/SkyeBedroom/interactable bedroom - Mangas", 982, 483, (string)null, 0, 0, "<i>A collection of comic books and mangas.░ The mangas haven't even been translated to English,░ can she read in Japanese?</i>");
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Anime Wolf", "Assets/Scenes/SkyeBedroom/interactable bedroom - Anime Wolf", 1215, 424, (string)null, 0, 0, "Plush animal: <i>A plush of a fox character with a pompadour.░ Another obscure anime reference perhaps?");
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Droor Left", "Assets/Scenes/SkyeBedroom/interactable bedroom - Droor Left", 964, 542, (string)null, 0, 0, "<i>I probably shouldn't be trifling through her private stuff,░ but there's a tonne of cosplay material in here.░ I could dye myself the entire colour spectrum here.</i>");
 					int num3;
 					int num4;
 					if (!SkyeBedroomScene.smethod_17())
@@ -77,19 +77,19 @@ public class SkyeBedroomScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -327407969) ^ 0x4B5A927A;
 					continue;
 				case 4u:
-					SkyeBedroomScene.smethod_18(_003CModule_003E.smethod_24<string>(2514823011u), 0.4f);
+					SkyeBedroomScene.smethod_18("Assets/Music/4U - Long Gone", 0.4f);
 					num = (int)((num2 * 1539881164) ^ 0x122334D4);
 					continue;
 				case 3u:
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(1075831472u), _003CModule_003E.smethod_25<string>(2241599013u), 450, 171, (string)null, 0, 0, _003CModule_003E.smethod_26<string>(250969640u));
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Wallscroll", "Assets/Scenes/SkyeBedroom/interactable bedroom - Wallscroll", 450, 171, (string)null, 0, 0, "<i>Looks like a cosplay poster,░ I don't recognise the character but the pose is very flamboyant.</i>");
 					num = (int)(num2 * 1921701150) ^ -28840621;
 					continue;
 				case 1u:
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(1932040745u), _003CModule_003E.smethod_28<string>(1688185855u), 1166, 547, (string)null, 0, 0, _003CModule_003E.smethod_26<string>(3984824477u));
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Droor Right", "Assets/Scenes/SkyeBedroom/interactable bedroom - Droor Right", 1166, 547, (string)null, 0, 0, "<i>Woops,░ I guess I found where she keeps her toys!░ There are some pretty exotic looking panties in here too.░ I should probably close this one...</i>");
 					num = 999074781;
 					continue;
 				case 0u:
-					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(2821984244u), _003CModule_003E.smethod_24<string>(1009728291u), 698, 214, (string)null, 0, 0, _003CModule_003E.smethod_25<string>(3990055487u));
+					SkyeBedroomScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Frame", "Assets/Scenes/SkyeBedroom/interactable bedroom - Frame", 698, 214, (string)null, 0, 0, "<i>A risqué poster of a popular video game character laying nude in a field of grass.░ She must be very proud of this one, It's even framed!</i>");
 					num = 826586158;
 					continue;
 				default:

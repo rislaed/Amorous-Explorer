@@ -31,9 +31,9 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	private const int _VTrOShnWP89ESyeqO1LPtrBoUIB = 350;
 
-	private static readonly string _U8RMOUb18ulpoDDaA6ORCGlTl9P = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_97(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_96()), _003CModule_003E.smethod_24<string>(580900494u));
+	private static readonly string _U8RMOUb18ulpoDDaA6ORCGlTl9P = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_97(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_96()), "Saves");
 
-	private static readonly string _yMVbZb1CBoa3bnnWLWCSnPFoK4o = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_97(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_96()), _003CModule_003E.smethod_26<string>(2897444639u));
+	private static readonly string _yMVbZb1CBoa3bnnWLWCSnPFoK4o = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_97(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_96()), "Saves/playertemplates.json");
 
 	private readonly _oVHccpskJmMcOYan50N52Esmi8k _KyRTfqdr2zZtsEAgkvOlUoQoB5j;
 
@@ -202,7 +202,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 				switch ((num2 = (uint)num ^ 0x5D065F99u) % 7u)
 				{
 				case 6u:
-					text = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_9(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_7(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_6(base._ZzBuoSDMWwerejOO9Goyv2OCKgE)), _003CModule_003E.smethod_25<string>(1799160599u)));
+					text = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_9(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_7(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_6(base._ZzBuoSDMWwerejOO9Goyv2OCKgE)), "Data/PlayerCustomization/Customization.json"));
 					_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<_oVHccpskJmMcOYan50N52Esmi8k>(text, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
 					num = (int)(num2 * 338391800) ^ -883323971;
 					continue;
@@ -212,7 +212,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					num = (int)(num2 * 562796832) ^ -1024884266;
 					continue;
 				case 3u:
-					text = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_9(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_7(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_6(base._ZzBuoSDMWwerejOO9Goyv2OCKgE)), _003CModule_003E.smethod_26<string>(2505407166u)));
+					text = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_9(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_8(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_7(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_6(base._ZzBuoSDMWwerejOO9Goyv2OCKgE)), "Data/PlayerCustomization/DefaultTemplates.json"));
 					num = (int)((num2 * 1675331100) ^ 0x61D44C3E);
 					continue;
 				case 2u:
@@ -853,7 +853,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	private void _aXgmKv0acZSej4DXtFZ3EwykcX4(_WmDwUqOXqj6xpaw8SzHUPXR0uwB _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0, _Qzndj0TwqO8yTQMbRwL4FFwlTbv _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0)
 	{
-		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._dPmC8tBC0iph2YBAFmztEsmwUdSA = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_23((_21uBmerICJi18moE2gpxlEipBgz)this, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._jhBAT894A3bGMn1rWLUbcueBbZdA, _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_22(_003CModule_003E.smethod_27<string>(3716338252u), (object)_WmDwUqOXqj6xpaw8SzHUPXR0uwB_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i, (object)_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._jhBAT894A3bGMn1rWLUbcueBbZdA), _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._7Xn1C5tjYnmIif1iZKV8AWsEEbL + _nD28BmrDaEzCHelTAa14TKyuSyG, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._bCjZ3VSXGKyhmykd2zCnQBiSpDf + _LkckKdvuh9GaAwn7XojfbJBd91r, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._FXzOOJAq9or1Z9tuVa5CAUUsLxe, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
+		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._dPmC8tBC0iph2YBAFmztEsmwUdSA = _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_23((_21uBmerICJi18moE2gpxlEipBgz)this, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._jhBAT894A3bGMn1rWLUbcueBbZdA, _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_22("Assets/PlayerCustomization/{0}/{1}", (object)_WmDwUqOXqj6xpaw8SzHUPXR0uwB_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i, (object)_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._jhBAT894A3bGMn1rWLUbcueBbZdA), _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._7Xn1C5tjYnmIif1iZKV8AWsEEbL + _nD28BmrDaEzCHelTAa14TKyuSyG, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._bCjZ3VSXGKyhmykd2zCnQBiSpDf + _LkckKdvuh9GaAwn7XojfbJBd91r, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._FXzOOJAq9or1Z9tuVa5CAUUsLxe, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
 		_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_17((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0._dPmC8tBC0iph2YBAFmztEsmwUdSA, bool_0: false);
 	}
 
@@ -987,51 +987,51 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 
 	public override void _oD87G7SXjsTukw7IVWxVlVFEgvA(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0125: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0196: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0232: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0346: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0384: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_047f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04cb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0517: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_067e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06b1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_077c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07e4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0817: Unknown result type (might be due to invalid IL or missing references)
-		//IL_085a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08d9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_094a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0988: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a46: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a92: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b1b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b4e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0be2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c2f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c7b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cb0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cfd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0d60: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0da3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0e0a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0e56: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ea3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0edd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0f7b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0099: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
+		//IL_016e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01a7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0202: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0234: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0266: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0302: Unknown result type (might be due to invalid IL or missing references)
+		//IL_033c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_035d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0427: Unknown result type (might be due to invalid IL or missing references)
+		//IL_046b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04af: Unknown result type (might be due to invalid IL or missing references)
+		//IL_053d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0582: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05fe: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0629: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06f0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0750: Unknown result type (might be due to invalid IL or missing references)
+		//IL_077b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07b6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07fa: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0825: Unknown result type (might be due to invalid IL or missing references)
+		//IL_088e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08c8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0936: Unknown result type (might be due to invalid IL or missing references)
+		//IL_097a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_09be: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a3f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a6a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0af6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b3b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b7f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bb0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bf5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c54: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c8f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0cee: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0d32: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0d77: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0da9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0e3f: Unknown result type (might be due to invalid IL or missing references)
 		_wO2k8QO0Jb1ECTFpHuFC2wQFtRB = 0;
 		while (true)
 		{
@@ -1042,20 +1042,20 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 				switch ((num2 = (uint)num ^ 0x5F39BD0Au) % 65u)
 				{
 				case 64u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_27<string>(3879990005u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_79(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_80(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("MaleGenitalia", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_79(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_80(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1178105770) ^ 0x5BE554FE;
 					continue;
 				case 63u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_26<string>(4022155296u), _003CModule_003E.smethod_24<string>(4139612903u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_37(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Snout", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_37(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1609450644) ^ 0x5F7FCDCA);
 					continue;
 				case 62u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_27<string>(2064360421u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_58(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_24<string>(1860501818u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_59(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(816275625u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_60(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_61(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Hairstyles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_58(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Fringe"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_59(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Tails", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_60(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_61(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 1367536568) ^ -989163777;
 					continue;
 				case 61u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(3911834551u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_66(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(106796778u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_87(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Nails", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_66(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Nails"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_87(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -214620638) ^ -1310512319;
 					continue;
 				case 60u:
@@ -1074,12 +1074,12 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 59u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(3403004783u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_82(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_27<string>(2689154078u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_85(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Breasts", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_82(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Nipples"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_85(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -821919258) ^ -1196122126;
 					continue;
 				case 58u:
 				{
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(53282621u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					int num4;
 					if (!_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_27((Enum)_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_34(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._iDe3W6qb7jKTPuJV79yf2i7UoIq.Gaunt))
 					{
@@ -1094,9 +1094,9 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 57u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(1006934324u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_49(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(1006934324u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_28<string>(229838243u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_50(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_27<string>(626675899u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(28051887u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_51(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_49(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Nose"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_50(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Teeth"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_51(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = 999966858;
 					continue;
 				case 56u:
@@ -1130,15 +1130,15 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 54u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(1933097993u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_42(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_43(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Eyebrows", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_42(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_43(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1919505115) ^ 0x54945A9A);
 					continue;
 				case 53u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(3792030074u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_56(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_57(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Hairstyles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_56(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_57(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = 988240254;
 					continue;
 				case 52u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(632576442u), _003CModule_003E.smethod_25<string>(4141645466u), Color.get_White());
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Phone", "Screen", Color.get_White());
 					num = ((int)num2 * -1002866236) ^ 0x4B7558;
 					continue;
 				case 51u:
@@ -1189,15 +1189,15 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 48u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(3002688361u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_27<string>(390679066u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_53(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Horn"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_53(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 1162514683) ^ -1859864094;
 					continue;
 				case 47u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_27<string>(3719955506u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_25<string>(1659705301u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_73(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "LongShin"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_73(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 916410464) ^ 0x702C7161);
 					continue;
 				case 46u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_26<string>(3870480483u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_24<string>(844155368u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_71(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "ShortForearm"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_71(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1241117206) ^ 0x61B135EA);
 					continue;
 				case 45u:
@@ -1233,11 +1233,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 43u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(1833371992u), _003CModule_003E.smethod_25<string>(1125090573u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Scruffy", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_36(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -161430545) ^ 0x4F72D39B;
 					continue;
 				case 42u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(252151584u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_60(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_25<string>(50704125u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_63(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Tails", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_60(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Part1"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_63(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 1192580528) ^ -1455911580;
 					continue;
 				case 40u:
@@ -1256,11 +1256,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 39u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(2877598185u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(2394347668u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_70(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "LongForearm"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_70(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1736699213) ^ -1944490252;
 					continue;
 				case 38u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_27<string>(1095052311u), _003CModule_003E.smethod_24<string>(1506314246u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "PaperBag", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1226750504) ^ -1381035980;
 					continue;
 				case 37u:
@@ -1313,7 +1313,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 34u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_26<string>(3668247399u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("BodyTypes", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1006133704) ^ 0x42876599;
 					continue;
 				case 33u:
@@ -1332,23 +1332,23 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 32u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(1833371992u), _003CModule_003E.smethod_26<string>(4035472216u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_38(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Stripes", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_38(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -2064419343) ^ 0x7F838F68;
 					continue;
 				case 31u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(3940198007u), _003CModule_003E.smethod_24<string>(889621717u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_88(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Phone", "Case", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_88(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = 1413375300;
 					continue;
 				case 30u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_27<string>(3719955506u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(3354954817u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_75(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "AvianShin"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_75(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -704346432) ^ 0x3987F031;
 					continue;
 				case 29u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(254730080u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(4035472216u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_69(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Stripes"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_69(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1103026781) ^ -1775354816;
 					continue;
 				case 28u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(1833371992u), _003CModule_003E.smethod_24<string>(2550540439u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Humanoid", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1420849335) ^ 0x781CF5BA);
 					continue;
 				case 27u:
@@ -1367,11 +1367,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 26u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(1190965480u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_27<string>(3494810435u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_55(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Mask"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_55(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1872523710) ^ -1036480959;
 					continue;
 				case 25u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(236083439u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_77(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_78(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Balls", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_77(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_78(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1014740868) ^ 0x66457B44;
 					continue;
 				case 24u:
@@ -1390,15 +1390,15 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 22u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(2891113378u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_82(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_83(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Breasts", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_82(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_83(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 1920375292) ^ -1152013359;
 					continue;
 				case 21u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(3503467761u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_25<string>(585318853u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_68(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Underthigh"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_68(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1441576974) ^ -2102118285;
 					continue;
 				case 20u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(3095386710u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_39(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_27<string>(2532736833u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_41(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Eyes", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_39(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Front"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_41(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1513649851) ^ 0x1DE0D899);
 					continue;
 				case 19u:
@@ -1419,11 +1419,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 18u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(2877598185u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_25<string>(61451137u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Underbelly"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 54769269) ^ 0x764D1908);
 					continue;
 				case 17u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(3221150644u), _003CModule_003E.smethod_28<string>(566120705u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_35(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Gaunt", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_35(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1611087459) ^ 0x7A7D1219);
 					continue;
 				case 16u:
@@ -1445,23 +1445,23 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					num = (int)(num2 * 1454603885) ^ -1183759916;
 					continue;
 				case 14u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_27<string>(3487575927u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_44(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_28<string>(3960171305u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_45(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("HeadAccessories", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_44(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Horn"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_45(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 236915105) ^ 0x71C9264D);
 					continue;
 				case 13u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(2865811559u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_79(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_25<string>(3067259018u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_81(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("MaleGenitalia", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_79(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Flesh"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_81(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1581180448) ^ -1626863924;
 					continue;
 				case 12u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(1796582103u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_39(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_24<string>(3830891680u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_40(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Eyes", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_39(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Back"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_40(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = 1374760883;
 					continue;
 				case 11u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_26<string>(4070227828u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_48(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1499459613) ^ 0x3E647726);
 					continue;
 				case 10u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(344014129u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_60(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(1939323229u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_65(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Tails", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_60(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Part2"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_65(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 288584621) ^ 0x74D4B0B1);
 					continue;
 				case 9u:
@@ -1480,11 +1480,11 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 8u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_26<string>(2090998042u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_66(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_67(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Feet", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_66(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_67(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = 1664947155;
 					continue;
 				case 7u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(3911834551u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(1180949164u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_87(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Nails", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Nail"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_87(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -166722164) ^ 0x63AFCBBB;
 					continue;
 				case 6u:
@@ -1503,16 +1503,16 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 5u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_25<string>(53282621u), _003CModule_003E.smethod_25<string>(1057941420u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "PaperBagEyes", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -2042907086) ^ -1254014239;
 					continue;
 				case 4u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(3503467761u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_24<string>(2741949055u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_74(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "ShortShin"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_74(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 485110841) ^ 0x3742437C);
 					continue;
 				case 3u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_24<string>(888871800u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_44(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_26<string>(3817436473u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_46(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_26<string>(2404290624u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_44(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_27<string>(3251579094u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_47(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("HeadAccessories", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_44(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "Ear"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_46(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("HeadAccessories", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_44(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "EarInner"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_47(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1834373012) ^ -1703218697;
 					continue;
 				case 2u:
@@ -1546,7 +1546,7 @@ public class _MqMsYrF1I2ghuKhx3f6aKuRGquq : _21uBmerICJi18moE2gpxlEipBgz
 					continue;
 				}
 				case 0u:
-					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG(_003CModule_003E.smethod_28<string>(3503467761u), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), _003CModule_003E.smethod_25<string>(1391108689u)), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_72(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_28(_MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0).ToString(), "AvianForearm"), _MqMsYrF1I2ghuKhx3f6aKuRGquq.smethod_72(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1806611172) ^ 0x6BAF700D);
 					continue;
 				default:

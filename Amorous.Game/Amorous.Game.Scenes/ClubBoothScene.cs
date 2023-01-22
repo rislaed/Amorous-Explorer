@@ -14,11 +14,11 @@ public class ClubBoothScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x867E34E5u) % 4u)
 				{
 				case 3u:
-					ClubBoothScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_25<string>(1357588241u), 0, 0);
+					ClubBoothScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubBooth/Background booth", 0, 0);
 					num = ((int)num2 * -84022254) ^ -992989245;
 					continue;
 				case 0u:
-					ClubBoothScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(3776022401u), _003CModule_003E.smethod_27<string>(2174744649u), 0, 0);
+					ClubBoothScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Table", "Assets/Scenes/ClubBooth/Background booth table", 0, 0);
 					ClubBoothScene.smethod_16(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
 					num = ((int)num2 * -1520404011) ^ -189661764;
 					continue;

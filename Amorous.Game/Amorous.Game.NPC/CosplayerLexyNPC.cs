@@ -22,12 +22,12 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 		Costume
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(1206980588u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Lexy";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(60, 128, 241);
 
 	public CosplayerLexyNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(2754908049u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CosplayerLexy", 1f)
 	{
 		while (true)
 		{
@@ -38,7 +38,7 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 				switch ((num2 = (uint)num ^ 0xBADD7707u) % 3u)
 				{
 				case 1u:
-					goto IL_001b;
+					goto IL_0017;
 				case 0u:
 					break;
 				default:
@@ -47,9 +47,9 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 					return;
 				}
 				break;
-				IL_001b:
-				CosplayerLexyNPC.smethod_16(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_24<string>(1177006749u)), new string[1] { _003CModule_003E.smethod_27<string>(2282914383u) });
-				CosplayerLexyNPC.smethod_19(CosplayerLexyNPC.smethod_18(CosplayerLexyNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Costume, _003CModule_003E.smethod_26<string>(3862179775u)))));
+				IL_0017:
+				CosplayerLexyNPC.smethod_16(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Lexy Cosplayer (nude)"), new string[1] { "Lexy Cosplayer (fringe for nude)" });
+				CosplayerLexyNPC.smethod_19(CosplayerLexyNPC.smethod_18(CosplayerLexyNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Costume, "Lexy Cosplayer (clothed)"))));
 				num = ((int)num2 * -1998768848) ^ 0x505EA493;
 			}
 		}

@@ -29,15 +29,15 @@ public class SkyGazeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xA08BA653u) % 7u)
 				{
 				case 5u:
-					_NGOOUGHxCQRJ95YqBGvCZoDVi1K = SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(1971830539u), _003CModule_003E.smethod_28<string>(3508754835u), list[0], list2[0]);
+					_NGOOUGHxCQRJ95YqBGvCZoDVi1K = SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Cloud1", "Assets/Scenes/SkyGaze/Cloud1", list[0], list2[0]);
 					num = ((int)num2 * -1639221724) ^ -1643866171;
 					continue;
 				case 4u:
-					_5ucKPpTFNOSSSAiQwUdMbhUYRPC = SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(1250217899u), _003CModule_003E.smethod_27<string>(1975447793u), list[1], list2[1]);
+					_5ucKPpTFNOSSSAiQwUdMbhUYRPC = SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Cloud2", "Assets/Scenes/SkyGaze/Cloud2", list[1], list2[1]);
 					num = (int)(num2 * 1608653837) ^ -279214624;
 					continue;
 				case 3u:
-					SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_26<string>(2675280909u), 0, 0);
+					SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/SkyGaze/Background", 0, 0);
 					num = (int)((num2 * 1661157880) ^ 0x6F483F1A);
 					continue;
 				case 2u:
@@ -67,8 +67,8 @@ public class SkyGazeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 0u:
 					break;
 				default:
-					_6pX8CiiBs3G2EaPqh95VdNHT3tu = SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(2325521022u), _003CModule_003E.smethod_27<string>(4128357322u), list[2], list2[2]);
-					SkyGazeScene.smethod_16(_003CModule_003E.smethod_26<string>(210443793u), 0.4f);
+					_6pX8CiiBs3G2EaPqh95VdNHT3tu = SkyGazeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Cloud3", "Assets/Scenes/SkyGaze/Cloud3", list[2], list2[2]);
+					SkyGazeScene.smethod_16("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 					return;
 				}
 				break;

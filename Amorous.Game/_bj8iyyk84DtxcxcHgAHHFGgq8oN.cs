@@ -782,7 +782,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					num = (int)(num2 * 262694384) ^ -1586396137;
 					continue;
 				case 9u:
-					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_19(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8, _003CModule_003E.smethod_26<string>(1771935225u));
+					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_19(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8, "Content-Release");
 					num = 1143018016;
 					continue;
 				case 8u:
@@ -896,21 +896,21 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				switch ((num2 = (uint)num ^ 0x4C3E7276u) % 8u)
 				{
 				case 6u:
-					string_ = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_31(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_30()), _003CModule_003E.smethod_27<string>(1170898683u));
+					string_ = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_31(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_30()), "NonSteam");
 					if (!_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(string_))
 					{
 						num = (int)((num2 * 1123350921) ^ 0x636AFCCC);
 						continue;
 					}
 					num5 = 1;
-					goto IL_00b7;
+					goto IL_00b3;
 				case 5u:
 					_p3BLtW5bCDzTS86VFihe1pfwDoP = null;
 					num = ((int)num2 * -2058089525) ^ 0x2D5864EE;
 					continue;
 				case 4u:
-					num5 = (_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_34(string_, _003CModule_003E.smethod_26<string>(2176401393u))) ? 1 : 0);
-					goto IL_00b7;
+					num5 = (_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_34(string_, ".txt")) ? 1 : 0);
+					goto IL_00b3;
 				case 3u:
 					_p3BLtW5bCDzTS86VFihe1pfwDoP = new _KDiaUloddpdv1QwixDEBIJs6IMA();
 					num = (int)((num2 * 1644934995) ^ 0x3ADFF07E);
@@ -956,7 +956,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 						_db5uuwyBnUwxthW14pfDBlBoqUp = new _bm5ybW5ND5sDF6bvP0sbYyOpvP(this, _p3BLtW5bCDzTS86VFihe1pfwDoP);
 						return;
 					}
-					IL_00b7:
+					IL_00b3:
 					flag = (byte)num5 != 0;
 					num = 1947930150;
 					continue;
@@ -968,22 +968,22 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public void _eW1Nkl8VqFHVExM8l3IqxgSbMBg()
 	{
-		//IL_069e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06a3: Unknown result type (might be due to invalid IL or missing references)
-		string string_ = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_31(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_30()), _003CModule_003E.smethod_24<string>(2784621437u));
+		//IL_062a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_062f: Unknown result type (might be due to invalid IL or missing references)
+		string string_ = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_31(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_30()), "ShowMeSomeBooty");
 		if (!_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(string_))
 		{
-			goto IL_04dd;
+			goto IL_0499;
 		}
 		int num = 1;
-		goto IL_0854;
-		IL_083f:
-		num = (_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_34(string_, _003CModule_003E.smethod_26<string>(2176401393u))) ? 1 : 0);
-		goto IL_0854;
-		IL_04dd:
+		goto IL_07c4;
+		IL_07b3:
+		num = (_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_34(string_, ".txt")) ? 1 : 0);
+		goto IL_07c4;
+		IL_0499:
 		int num2 = -354736648;
-		goto IL_07a0;
-		IL_07a0:
+		goto IL_0714;
+		IL_0714:
 		Texture2D texture2D_2 = default(Texture2D);
 		bool bool_ = default(bool);
 		_lRHDfpOTd4PxClZkjMpoakPEA9d lRHDfpOTd4PxClZkjMpoakPEA9d2 = default(_lRHDfpOTd4PxClZkjMpoakPEA9d);
@@ -997,11 +997,11 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			switch ((num3 = (uint)num2 ^ 0xFBB70612u) % 35u)
 			{
 			case 34u:
-				texture2D_2 = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>(_003CModule_003E.smethod_27<string>(2132972285u));
+				texture2D_2 = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
 				num2 = (int)((num3 * 1230608347) ^ 0x393E549);
 				continue;
 			case 33u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_26<string>(1473557077u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_25<string>(3537519603u)));
+				Gui.get_Renderer().SetTexture("MessageIconRemy", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Remy"));
 				num2 = (int)(num3 * 1460039430) ^ -879577632;
 				continue;
 			case 32u:
@@ -1047,12 +1047,12 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				num2 = -750004074;
 				continue;
 			case 26u:
-				_0SvmBhkBX8SImQwyvuy5xVObqLn = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>(_003CModule_003E.smethod_27<string>(1181750445u));
+				_0SvmBhkBX8SImQwyvuy5xVObqLn = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Squid/DefaultCursor");
 				num2 = ((int)num3 * -851714296) ^ -146839919;
 				continue;
 			case 25u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_28<string>(3431724950u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_24<string>(4094352255u)));
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_27<string>(1084084587u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_24<string>(3286251110u)));
+				Gui.get_Renderer().SetTexture("MessageIconLex", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Lex"));
+				Gui.get_Renderer().SetTexture("MessageIconMercy", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Mercy"));
 				num2 = (int)(num3 * 1586483880) ^ -979665655;
 				continue;
 			case 24u:
@@ -1062,13 +1062,13 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					continue;
 				}
 				lRHDfpOTd4PxClZkjMpoakPEA9d = _DW9IcpdMEINZmuzfrqmwsduBGih._NyR9YmfkeF4CXGOi1ENApzh6B5V(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO);
-				goto IL_026b;
+				goto IL_0247;
 			case 23u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_24<string>(1768274987u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_26<string>(2033027288u)));
+				Gui.get_Renderer().SetTexture("MessageIconSkye", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Skye"));
 				num2 = ((int)num3 * -1920140519) ^ -2109735720;
 				continue;
 			case 22u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_25<string>(278261315u), (object)_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>(_003CModule_003E.smethod_26<string>(103512282u)));
+				Gui.get_Renderer().SetTexture("Contact_DJ", (object)_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
 				_KyKsjBAROeUAsKraBIxtuHTSPwg._Uh2GhEF2pLNc3a7l5WMdPGP2bZd = _pql4s9X0U3svdBghGax6VsdF2Gq;
 				num2 = (int)((num3 * 482560461) ^ 0x78B6356F);
 				continue;
@@ -1079,7 +1079,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				num2 = ((int)num3 * -230510415) ^ -217895981;
 				continue;
 			case 20u:
-				spriteFont_ = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>(_003CModule_003E.smethod_26<string>(3185081074u));
+				spriteFont_ = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>("Assets/GUI/Fonts/BoldItalic-26");
 				num2 = ((int)num3 * -1644785617) ^ 0x243BC50E;
 				continue;
 			case 18u:
@@ -1095,7 +1095,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				num2 = (int)((num3 * 1351817797) ^ 0x183CB42C);
 				continue;
 			case 15u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_27<string>(4020946949u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_28<string>(3991876346u)));
+				Gui.get_Renderer().SetTexture("MessageIconShootingRange", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_ShootingRange"));
 				num2 = (int)((num3 * 1759097649) ^ 0x37AFC492);
 				continue;
 			case 14u:
@@ -1123,15 +1123,15 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				continue;
 			}
 			case 12u:
-				texture2D_ = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>(_003CModule_003E.smethod_28<string>(982307418u));
+				texture2D_ = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Dialogue/button");
 				num2 = (int)(num3 * 55486812) ^ -1615940079;
 				continue;
 			case 11u:
 				break;
 			case 10u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_27<string>(2990145521u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_26<string>(2589168269u)));
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_26<string>(690325622u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_26<string>(3195867521u)));
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_27<string>(1813778610u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_28<string>(2916573223u)));
+				Gui.get_Renderer().SetTexture("MessageIconZenith", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Zenith"));
+				Gui.get_Renderer().SetTexture("MessageIconGeneric", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Generic"));
+				Gui.get_Renderer().SetTexture("MessageIconDJ", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_DJ"));
 				num2 = ((int)num3 * -1559662443) ^ 0x27A220E;
 				continue;
 			case 8u:
@@ -1139,9 +1139,9 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				num2 = (int)((num3 * 1776419702) ^ 0x516CABB9);
 				continue;
 			case 7u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_26<string>(4234376070u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_24<string>(2076246293u)));
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_28<string>(1731577052u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_26<string>(771556252u)));
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_26<string>(1757020791u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_25<string>(988430285u)));
+				Gui.get_Renderer().SetTexture("MessageIconCoby", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Coby"));
+				Gui.get_Renderer().SetTexture("MessageIconDustin", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Dustin"));
+				Gui.get_Renderer().SetTexture("MessageIconJax", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Jax"));
 				num2 = (int)((num3 * 1911294434) ^ 0x10F51296);
 				continue;
 			case 6u:
@@ -1153,45 +1153,45 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				num2 = (int)((num3 * 843064448) ^ 0x4F007AB);
 				continue;
 			case 4u:
-				lRHDfpOTd4PxClZkjMpoakPEA9d = _DW9IcpdMEINZmuzfrqmwsduBGih._sabDA8yXNR8DIRSbHjOcXx1e1Ax(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO, _003CModule_003E.smethod_28<string>(2171786427u));
-				goto IL_026b;
+				lRHDfpOTd4PxClZkjMpoakPEA9d = _DW9IcpdMEINZmuzfrqmwsduBGih._sabDA8yXNR8DIRSbHjOcXx1e1Ax(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO);
+				goto IL_0247;
 			case 3u:
 				_9rxbJ7LsE3DhACUHVlPZaixc5Jp = new _XJasjdoOf6PYbfaC5MsbXSjDWV3();
 				num2 = ((int)num3 * -1083066228) ^ -746708448;
 				continue;
 			case 2u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_24<string>(2522116480u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_26<string>(417648355u)));
+				Gui.get_Renderer().SetTexture("MessageIconSeth", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Seth"));
 				num2 = ((int)num3 * -2022733853) ^ 0x65F610B0;
 				continue;
 			case 1u:
 				_LWcoDwIWvf8DT3nQmNe5z8fkUvI = true;
-				_xnYepZuegigJCU2jcbZsfVIakzF = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>(_003CModule_003E.smethod_26<string>(2831173177u));
+				_xnYepZuegigJCU2jcbZsfVIakzF = _4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 				num2 = (int)(num3 * 1570822138) ^ -566079902;
 				continue;
 			case 0u:
-				Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_26<string>(2530309290u), (object)_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>(_003CModule_003E.smethod_25<string>(4038613883u)));
+				Gui.get_Renderer().SetTexture("PhoneScreen", (object)_4L7hfXrWoDdArQiscG4ukHCV46B.get_Content().Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
 				num2 = ((int)num3 * -298488712) ^ -133536666;
 				continue;
 			case 19u:
-				goto IL_083f;
+				goto IL_07b3;
 			default:
 				{
-					Gui.get_Renderer().SetTexture(_003CModule_003E.smethod_26<string>(1468585599u), (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(_003CModule_003E.smethod_26<string>(2948047644u)));
+					Gui.get_Renderer().SetTexture("MessageIconCooking", (object)_uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Cooking"));
 					_g9Sx54kMPiHz5jrqWh4Kb1pTijH();
 					return;
 				}
-				IL_026b:
+				IL_0247:
 				lRHDfpOTd4PxClZkjMpoakPEA9d2 = lRHDfpOTd4PxClZkjMpoakPEA9d;
 				num2 = -1572588511;
 				continue;
 			}
 			break;
 		}
-		goto IL_04dd;
-		IL_0854:
+		goto IL_0499;
+		IL_07c4:
 		bool_ = (byte)num != 0;
 		num2 = -1180433721;
-		goto IL_07a0;
+		goto IL_0714;
 	}
 
 	protected virtual void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
@@ -1798,39 +1798,39 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(GameTime gameTime_0)
 	{
-		//IL_0125: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0210: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0319: Unknown result type (might be due to invalid IL or missing references)
-		//IL_031e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0349: Unknown result type (might be due to invalid IL or missing references)
-		//IL_034e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_038f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0394: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03c0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0465: Unknown result type (might be due to invalid IL or missing references)
-		//IL_046a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0658: Unknown result type (might be due to invalid IL or missing references)
-		//IL_065d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06ed: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0742: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0747: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0810: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0815: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0935: Unknown result type (might be due to invalid IL or missing references)
-		//IL_093a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0121: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0126: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0203: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0208: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0301: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0306: Unknown result type (might be due to invalid IL or missing references)
+		//IL_032d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0332: Unknown result type (might be due to invalid IL or missing references)
+		//IL_036f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0374: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03a0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0426: Unknown result type (might be due to invalid IL or missing references)
+		//IL_042b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0441: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0446: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05b4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_062c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0631: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0688: Unknown result type (might be due to invalid IL or missing references)
+		//IL_068d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06b9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_070a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_070f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07d0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08f6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0ad4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b13: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0b18: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b57: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b5c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c2b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c3b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bdb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0beb: Unknown result type (might be due to invalid IL or missing references)
 		TimeSpan timeSpan = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_77(gameTime_0);
 		string path2 = default(string);
 		string text = default(string);
@@ -1841,7 +1841,6 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			{
 				SpriteBatch zXUztyGtStF4WzGVig7wu43cfnf;
 				SpriteFont xnYepZuegigJCU2jcbZsfVIakzF;
-				string text2;
 				object obj2;
 				int num10;
 				uint num2;
@@ -1885,7 +1884,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					num = (int)((num2 * 1167162887) ^ 0x51399687);
 					continue;
 				case 40u:
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_25<string>(3733810070u) + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[1], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Stage: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[1], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = (int)(num2 * 2116426696) ^ -1979220494;
 					continue;
 				case 39u:
@@ -1928,7 +1927,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					num = (int)(num2 * 604344262) ^ -1411203564;
 					continue;
 				case 35u:
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_26<string>(3855610783u), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Press Tab to toggle", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = (int)(num2 * 967663) ^ -1693250914;
 					continue;
 				case 34u:
@@ -1953,7 +1952,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				{
 					int num16;
 					int num17;
-					if (Directory.Exists(_003CModule_003E.smethod_28<string>(664281483u)))
+					if (Directory.Exists("Screenshots"))
 					{
 						num16 = 1095245849;
 						num17 = 1095245849;
@@ -1972,15 +1971,15 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					continue;
 				case 31u:
 					_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, string.Format(_003CModule_003E.smethod_27<string>(3236118793u), (_Ta8oiGRfjrRGtgUaA5S061UepZb == null) ? _003CModule_003E.smethod_26<string>(1734649140u) : _003CModule_003E.smethod_26<string>(1633532598u)), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, string.Format("Cutscene in progress: {0}", (_Ta8oiGRfjrRGtgUaA5S061UepZb == null) ? "No" : "Yes"), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = -183246254;
 					continue;
 				case 30u:
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_24<string>(516553406u), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: None", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = (int)((num2 * 967999982) ^ 0x4E9FAC4E);
 					continue;
 				case 29u:
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_24<string>(1796904647u) + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[0], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[0], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = -388515812;
 					continue;
 				case 28u:
@@ -2010,9 +2009,8 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 					SpriteBatch zXUztyGtStF4WzGVig7wu43cfnf2 = _ZXUztyGtStF4WzGVig7wu43cfnf;
 					SpriteFont xnYepZuegigJCU2jcbZsfVIakzF2 = _xnYepZuegigJCU2jcbZsfVIakzF;
-					string text3 = _003CModule_003E.smethod_28<string>(1451022293u);
 					Color sWODlbUkQEqfwrtprjLPOeGF7HO = _RA1aFlOff0jGfI2cKUGhYI1MRLBA._SWODlbUkQEqfwrtprjLPOeGF7HO;
-					zXUztyGtStF4WzGVig7wu43cfnf2._FY70IFLoBond3ORPe0ndCLvIeVcA(xnYepZuegigJCU2jcbZsfVIakzF2, text3 + ((Color)(ref sWODlbUkQEqfwrtprjLPOeGF7HO)).get_A(), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					zXUztyGtStF4WzGVig7wu43cfnf2._FY70IFLoBond3ORPe0ndCLvIeVcA(xnYepZuegigJCU2jcbZsfVIakzF2, "ScreenFader: " + ((Color)(ref sWODlbUkQEqfwrtprjLPOeGF7HO)).get_A(), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 					num = ((int)num2 * -1416497604) ^ 0x4BD3A0B;
 					continue;
@@ -2021,7 +2019,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					num = (int)(num2 * 2089833203) ^ -457574660;
 					continue;
 				case 24u:
-					path2 = string.Format(_003CModule_003E.smethod_26<string>(66226197u), DateTime.Now.DayOfYear, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+					path2 = $"Screenshots/screenshot-{DateTime.Now.DayOfYear}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}.png";
 					num = -104092216;
 					continue;
 				case 23u:
@@ -2069,11 +2067,10 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					continue;
 				case 16u:
 				{
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_26<string>(3554746896u), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "[Generic]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 					zXUztyGtStF4WzGVig7wu43cfnf = _ZXUztyGtStF4WzGVig7wu43cfnf;
 					xnYepZuegigJCU2jcbZsfVIakzF = _xnYepZuegigJCU2jcbZsfVIakzF;
-					text2 = _003CModule_003E.smethod_25<string>(1251869905u);
 					_7UlnfykmEmZDFt3BmCKZekI43Ih xfiKuXXh5LQA9CUQiex6tutzFKQ2 = _xfiKuXXh5LQA9CUQiex6tutzFKQ;
 					if (xfiKuXXh5LQA9CUQiex6tutzFKQ2 == null)
 					{
@@ -2084,11 +2081,11 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 						obj2 = xfiKuXXh5LQA9CUQiex6tutzFKQ2.GetType().Name;
 						if (obj2 != null)
 						{
-							goto IL_06b6;
+							goto IL_0682;
 						}
 					}
-					obj2 = _003CModule_003E.smethod_27<string>(2517276532u);
-					goto IL_06b6;
+					obj2 = "None";
+					goto IL_0682;
 				}
 				case 15u:
 					_xfiKuXXh5LQA9CUQiex6tutzFKQ._f5ctqAmdNsZ889UjM4LxDm8WGxA(_ZXUztyGtStF4WzGVig7wu43cfnf, _BuJyoOT5ylWcIMxjcKRnxVmYvBd, _chds2l0ZCMMghly7dv4eik3iSH5._00mMjYnrMXUVj1aA8AYlqz1bdTI);
@@ -2096,11 +2093,11 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					continue;
 				case 14u:
 					_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_28<string>(2640501302u) + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[2], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Path: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[2], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = ((int)num2 * -196152892) ^ -1534725173;
 					continue;
 				case 13u:
-					Directory.CreateDirectory(_003CModule_003E.smethod_26<string>(4158960409u));
+					Directory.CreateDirectory("Screenshots");
 					num = ((int)num2 * -1602079445) ^ -1623230192;
 					continue;
 				case 12u:
@@ -2113,13 +2110,13 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 						num = -1386771258;
 						continue;
 					}
-					goto IL_0caf;
+					goto IL_0c5f;
 				case 9u:
 					_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
 					num = ((int)num2 * -1960956960) ^ -594506121;
 					continue;
 				case 8u:
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_26<string>(2594139747u) + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[3], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "Current: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[3], _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = ((int)num2 * -1157406634) ^ 0x6276C078;
 					continue;
 				case 7u:
@@ -2183,7 +2180,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				}
 				case 1u:
 					_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, _003CModule_003E.smethod_24<string>(3222448238u), _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					_ZXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(_xnYepZuegigJCU2jcbZsfVIakzF, "[Cutscenes]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = ((int)num2 * -17505117) ^ -1385591749;
 					continue;
 				case 11u:
@@ -2201,27 +2198,27 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 							{
 								while (true)
 								{
-									IL_0a92:
+									IL_0a4e:
 									int num3 = -1022974275;
 									while (true)
 									{
 										switch ((num2 = (uint)num3 ^ 0xD4291E24u) % 3u)
 										{
 										case 2u:
-											goto IL_0a5f;
+											goto IL_0a1b;
 										default:
-											goto end_IL_0a74;
+											goto end_IL_0a30;
 										case 0u:
 											break;
 										case 1u:
-											goto end_IL_0a74;
+											goto end_IL_0a30;
 										}
-										goto IL_0a92;
-										IL_0a5f:
+										goto IL_0a4e;
+										IL_0a1b:
 										((IDisposable)stream).Dispose();
 										num3 = (int)(num2 * 1114362052) ^ -1770319822;
 										continue;
-										end_IL_0a74:
+										end_IL_0a30:
 										break;
 									}
 									break;
@@ -2230,19 +2227,18 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 						}
 						if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
 						{
-							goto IL_0b35;
+							goto IL_0af1;
 						}
-						goto IL_0c55;
+						goto IL_0c05;
 					}
-					IL_0caf:
+					IL_0c5f:
 					_4L7hfXrWoDdArQiscG4ukHCV46B.get_GraphicsDevice().SetRenderTarget((RenderTarget2D)null);
 					num10 = -538569233;
-					goto IL_0c74;
-					IL_0c74:
+					goto IL_0c24;
+					IL_0c24:
 					while (true)
 					{
 						string path;
-						string format;
 						object[] array;
 						object obj;
 						switch ((num2 = (uint)num10 ^ 0xD4291E24u) % 10u)
@@ -2295,8 +2291,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 						}
 						case 4u:
 						{
-							path = string.Format(_003CModule_003E.smethod_26<string>(622367178u), text);
-							format = _003CModule_003E.smethod_26<string>(774041991u);
+							path = $"{text}.txt";
 							array = new object[5];
 							_7UlnfykmEmZDFt3BmCKZekI43Ih xfiKuXXh5LQA9CUQiex6tutzFKQ = _xfiKuXXh5LQA9CUQiex6tutzFKQ;
 							if (xfiKuXXh5LQA9CUQiex6tutzFKQ == null)
@@ -2308,39 +2303,39 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 								obj = xfiKuXXh5LQA9CUQiex6tutzFKQ.GetType().Name;
 								if (obj != null)
 								{
-									goto IL_0bdb;
+									goto IL_0b8b;
 								}
 							}
-							obj = _003CModule_003E.smethod_28<string>(886388059u);
-							goto IL_0bdb;
+							obj = "None";
+							goto IL_0b8b;
 						}
 						case 3u:
 							_ZXUztyGtStF4WzGVig7wu43cfnf.Draw(_0SvmBhkBX8SImQwyvuy5xVObqLn, _RbWJ7YGnYHCSoD44MRW1h5X6E7E._6M9HDt28e1QHBuYsAXgqiY8jVlA, _CCtbrNWS4Gi5hRSEsXYI5VzS7gI._Hnb6mPvrZFgOMCIApIeMW88jSsF._uOkbmfW26QVAvyEMQakki9kTMDbA);
 							num10 = (int)(num2 * 1152200583) ^ -1871734155;
 							continue;
 						case 1u:
-							goto IL_0c55;
+							goto IL_0c05;
 						case 0u:
-							goto IL_0caf;
+							goto IL_0c5f;
 						default:
 							{
 								_ZXUztyGtStF4WzGVig7wu43cfnf.End();
 								return;
 							}
-							IL_0bdb:
+							IL_0b8b:
 							array[0] = obj;
 							array[1] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[0];
 							array[2] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[1];
 							array[3] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[2];
 							array[4] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[3];
-							File.WriteAllText(path, string.Format(format, array));
+							File.WriteAllText(path, string.Format("Scene: {0}\r\nCutscene: {1}\r\nStage: {2}\r\nPath: {3}\r\nCurrent: {4}", array));
 							num10 = -1121899480;
 							continue;
 						}
 						break;
 					}
-					goto IL_0b35;
-					IL_0c55:
+					goto IL_0af1;
+					IL_0c05:
 					if (_Fs6y8qquj1mRHLz6xw6KoI4SAvH)
 					{
 						num10 = -813506402;
@@ -2351,12 +2346,12 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 						num10 = -1121899480;
 						num15 = -1121899480;
 					}
-					goto IL_0c74;
-					IL_0b35:
+					goto IL_0c24;
+					IL_0af1:
 					num10 = -1041267901;
-					goto IL_0c74;
-					IL_06b6:
-					zXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(xnYepZuegigJCU2jcbZsfVIakzF, text2 + (string?)obj2, _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
+					goto IL_0c24;
+					IL_0682:
+					zXUztyGtStF4WzGVig7wu43cfnf._FY70IFLoBond3ORPe0ndCLvIeVcA(xnYepZuegigJCU2jcbZsfVIakzF, "Scene: " + (string?)obj2, _Vh2qdN4Ha62herl19def6PyuanQ, Color.get_White());
 					num = -1120367994;
 					continue;
 				}
@@ -2662,7 +2657,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					continue;
 				}
 				case 4u:
-					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90(_003CModule_003E.smethod_25<string>(2992590891u), new object[1] { string_0 });
+					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90("Failed to load scene '{0}'", new object[1] { string_0 });
 					num = (int)((num2 * 1067897700) ^ 0x12434BD);
 					continue;
 				case 2u:
@@ -2786,7 +2781,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					num = -577121870;
 					continue;
 				case 2u:
-					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90(_003CModule_003E.smethod_25<string>(3529784115u), new object[1] { _n6iPJ4jnSQTmNXcr3d8lbsKKvZl });
+					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90("Failed to load sexscene '{0}'", new object[1] { _n6iPJ4jnSQTmNXcr3d8lbsKKvZl });
 					num = (int)(num2 * 889884693) ^ -200396085;
 					continue;
 				case 1u:
@@ -2867,14 +2862,14 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	private _nR8eroJOHehP0ZGyyTveo6aMTHg _5yVCuTv9lVSCCxs7cUlv79ysuRh(string string_0)
 	{
-		string string_ = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_21(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8), _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_96(_003CModule_003E.smethod_27<string>(3965812816u), (object)string_0));
-		string string_2 = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_21(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8), _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_96(_003CModule_003E.smethod_26<string>(764099035u), (object)string_0));
+		string string_ = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_21(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8), _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_96("Content-Mods/Data/Quests/{0}.json", (object)string_0));
+		string string_2 = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_32(_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_21(_uwNDZuqdFb9tyQtlQMxiz1DQ7x8), _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_96("Data/Quests/{0}.json", (object)string_0));
 		if (_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(string_))
 		{
-			goto IL_00d4;
+			goto IL_00cc;
 		}
-		goto IL_01b6;
-		IL_01b6:
+		goto IL_01a6;
+		IL_01a6:
 		int num;
 		int num2;
 		if (!_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_33(string_2))
@@ -2887,8 +2882,8 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 			num = -596827404;
 			num2 = -596827404;
 		}
-		goto IL_0160;
-		IL_0160:
+		goto IL_0150;
+		IL_0150:
 		string text = default(string);
 		_0SvCRe0EgzR9DhI3QPe1GUqubAt _0SvCRe0EgzR9DhI3QPe1GUqubAt = default(_0SvCRe0EgzR9DhI3QPe1GUqubAt);
 		JsonSerializerSettings val = default(JsonSerializerSettings);
@@ -2937,11 +2932,11 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				continue;
 			}
 			case 4u:
-				_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90(_003CModule_003E.smethod_27<string>(1962086024u), new object[1] { string_0 });
+				_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90("Failed to load cutscene '{0}'", new object[1] { string_0 });
 				num = -1776460700;
 				continue;
 			case 1u:
-				_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_97(_003CModule_003E.smethod_27<string>(3388918784u), new object[1] { string_0 });
+				_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_97("Loaded modded cutscene '{0}'", new object[1] { string_0 });
 				num = ((int)num3 * -756499474) ^ 0x12EEE1B7;
 				continue;
 			case 0u:
@@ -2949,20 +2944,20 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 				num = ((int)num3 * -1215277849) ^ 0x5DBE75ED;
 				continue;
 			case 11u:
-				goto IL_01b6;
+				goto IL_01a6;
 			case 2u:
 				return null;
 			default:
-				return _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_105((_JbeCmOie0phb2cbgG6DdGZrbs3pB)this, _0SvCRe0EgzR9DhI3QPe1GUqubAt, new Assembly[1] { _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_104(_003CModule_003E.smethod_27<string>(767632843u)) });
+				return _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_105((_JbeCmOie0phb2cbgG6DdGZrbs3pB)this, _0SvCRe0EgzR9DhI3QPe1GUqubAt, new Assembly[1] { _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_104("Amorous.Game") });
 			case 10u:
 				return null;
 			}
 			break;
 		}
-		goto IL_00d4;
-		IL_00d4:
+		goto IL_00cc;
+		IL_00cc:
 		num = -1938102435;
-		goto IL_0160;
+		goto IL_0150;
 	}
 
 	private _zkUeZhJDizkmvvRfp4S0G7aap8J _PSROht9Hy1Ik63UUdnKDUGBA0yQ()
@@ -3402,7 +3397,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					goto case 13u;
 				}
 				case 14u:
-					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90(_003CModule_003E.smethod_25<string>(2654266630u), new object[1] { _hzqOBkJhJBhsTRNARxHLctcvhN0 });
+					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90("Failed to instance npc '{0}'", new object[1] { _hzqOBkJhJBhsTRNARxHLctcvhN0 });
 					num = ((int)num2 * -786355019) ^ 0x6DAC1577;
 					continue;
 				case 12u:
@@ -3422,7 +3417,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					continue;
 				}
 				case 10u:
-					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90(_003CModule_003E.smethod_25<string>(2052502749u), new object[1] { _hzqOBkJhJBhsTRNARxHLctcvhN0 });
+					_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_90("Failed to load npc '{0}'", new object[1] { _hzqOBkJhJBhsTRNARxHLctcvhN0 });
 					num = (int)((num2 * 1485916818) ^ 0x5356C33A);
 					continue;
 				case 9u:
@@ -3516,7 +3511,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 		_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_136(lRHDfpOTd4PxClZkjMpoakPEA9d_, _PSROht9Hy1Ik63UUdnKDUGBA0yQ());
 		_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_137(lRHDfpOTd4PxClZkjMpoakPEA9d_, _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_116((MemberInfo)_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_115((object)_xfiKuXXh5LQA9CUQiex6tutzFKQ)));
 		_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_138(lRHDfpOTd4PxClZkjMpoakPEA9d_, _poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj);
-		_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_139(int_0, lRHDfpOTd4PxClZkjMpoakPEA9d_, _003CModule_003E.smethod_26<string>(3640105513u));
+		_bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_139(int_0, lRHDfpOTd4PxClZkjMpoakPEA9d_, "save");
 	}
 
 	public void _CYyzfcX8IclN1GnWsApBFWBpush(int int_0)
@@ -3568,7 +3563,7 @@ public class _bj8iyyk84DtxcxcHgAHHFGgq8oN : _JbeCmOie0phb2cbgG6DdGZrbs3pB
 					continue;
 				case 11u:
 				{
-					lRHDfpOTd4PxClZkjMpoakPEA9d = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_141(int_0, _003CModule_003E.smethod_27<string>(3813888148u));
+					lRHDfpOTd4PxClZkjMpoakPEA9d = _bj8iyyk84DtxcxcHgAHHFGgq8oN.smethod_141(int_0, "save");
 					int num4;
 					int num5;
 					if (lRHDfpOTd4PxClZkjMpoakPEA9d != null)

@@ -319,7 +319,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public new float _fO7gSlrDDNMoHR4FO5QXAq8fUyA => _i8C0PwO83NRzGvNoyMhHwLV9HeC;
 
 		public TargetModel(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, int int_0, int int_1, float float_0 = 1f)
-			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _003CModule_003E.smethod_25<string>(2168426812u))
+			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "Target")
 		{
 			while (true)
 			{
@@ -334,7 +334,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						{
 							TargetModel.smethod_10(_pO4d7wyWlp6cYLHahUVYplpUWxw, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
 						});
-						_pO4d7wyWlp6cYLHahUVYplpUWxw = TargetModel.smethod_4(TargetModel.smethod_3(TargetModel.smethod_2(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), _003CModule_003E.smethod_26<string>(4030456004u), 1f, bool_0: true, (List<SpineEvent>)null);
+						_pO4d7wyWlp6cYLHahUVYplpUWxw = TargetModel.smethod_4(TargetModel.smethod_3(TargetModel.smethod_2(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/ShootingRange/Target", 1f, bool_0: true, (List<SpineEvent>)null);
 						num = (int)(num2 * 1462814697) ^ -783381816;
 						continue;
 					case 3u:
@@ -411,17 +411,17 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		public void _edcakvTOp2fd2J9ZHAu9GKjDaN7(Action action_0 = null)
 		{
-			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, _003CModule_003E.smethod_27<string>(3621414325u), action_0);
+			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, "Rise", action_0);
 		}
 
 		public void _DcBCpcEfsjl4zP1zbrOrd1bwNReb(Action action_0 = null)
 		{
-			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, _003CModule_003E.smethod_28<string>(665564780u), action_0);
+			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, "Headshot", action_0);
 		}
 
 		public void _u1yq8F9lG8oMcA9vZO9c7Qbh8vj(Action action_0 = null)
 		{
-			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, _003CModule_003E.smethod_26<string>(1553100725u), action_0);
+			TargetModel.smethod_7(_pO4d7wyWlp6cYLHahUVYplpUWxw, "Bodyshot", action_0);
 		}
 
 		public bool _ZCfNJ0nxXx3YppgLl5SvS2LkQ5B(Point point_0, out CollisionType collisionType_0)
@@ -679,34 +679,34 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		}
 
 		public GunModel(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
-			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _003CModule_003E.smethod_26<string>(1704775538u))
+			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "GunModel")
 		{
-			//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00e9: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00f1: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00f6: Unknown result type (might be due to invalid IL or missing references)
-			//IL_013c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0175: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01be: Unknown result type (might be due to invalid IL or missing references)
-			//IL_020c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0241: Unknown result type (might be due to invalid IL or missing references)
-			//IL_027a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_02c4: Unknown result type (might be due to invalid IL or missing references)
-			//IL_02f9: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0347: Unknown result type (might be due to invalid IL or missing references)
-			//IL_037c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_03ca: Unknown result type (might be due to invalid IL or missing references)
-			//IL_03ff: Unknown result type (might be due to invalid IL or missing references)
-			//IL_044d: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0482: Unknown result type (might be due to invalid IL or missing references)
-			//IL_04d0: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0505: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0553: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0590: Unknown result type (might be due to invalid IL or missing references)
-			//IL_05cd: Unknown result type (might be due to invalid IL or missing references)
-			//IL_060a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0647: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0684: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00e5: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00ea: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0124: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0155: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0196: Unknown result type (might be due to invalid IL or missing references)
+			//IL_01dc: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0209: Unknown result type (might be due to invalid IL or missing references)
+			//IL_023a: Unknown result type (might be due to invalid IL or missing references)
+			//IL_027c: Unknown result type (might be due to invalid IL or missing references)
+			//IL_02a9: Unknown result type (might be due to invalid IL or missing references)
+			//IL_02ef: Unknown result type (might be due to invalid IL or missing references)
+			//IL_031c: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0362: Unknown result type (might be due to invalid IL or missing references)
+			//IL_038f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_03d5: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0402: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0448: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0475: Unknown result type (might be due to invalid IL or missing references)
+			//IL_04bb: Unknown result type (might be due to invalid IL or missing references)
+			//IL_04f0: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0525: Unknown result type (might be due to invalid IL or missing references)
+			//IL_055a: Unknown result type (might be due to invalid IL or missing references)
+			//IL_058f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_05c4: Unknown result type (might be due to invalid IL or missing references)
 			GunModel.smethod_3((_fAUddQEKfZyemRb327NhM3GGlmzA)this, (Action<GameTime>)delegate(GameTime gameTime_0)
 			{
 				GunModel.smethod_24(_XcQKV7iP9Sk10poAFYuakLJaltL, gameTime_0, 1000f);
@@ -715,8 +715,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				GunModel.smethod_25(_XcQKV7iP9Sk10poAFYuakLJaltL, skeletonMeshRenderer_0, (Texture2D)null, (Func<int, string, bool>)null, (Color?)null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
 			});
-			_XcQKV7iP9Sk10poAFYuakLJaltL = GunModel.smethod_7(GunModel.smethod_6(GunModel.smethod_5(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), _003CModule_003E.smethod_25<string>(3777427988u), 1f, bool_0: true, (List<SpineEvent>)null);
-			GunModel.smethod_8(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(2023185020u), 0f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL = GunModel.smethod_7(GunModel.smethod_6(GunModel.smethod_5(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/GUI/Phone/Phone", 1f, bool_0: true, (List<SpineEvent>)null);
+			GunModel.smethod_8(_XcQKV7iP9Sk10poAFYuakLJaltL, "Arm rise", 0f);
 			GunModel.smethod_9(_XcQKV7iP9Sk10poAFYuakLJaltL, 0f);
 			GunModel.smethod_0(_XcQKV7iP9Sk10poAFYuakLJaltL, 0f);
 			GunModel.smethod_1(_XcQKV7iP9Sk10poAFYuakLJaltL, 1080f);
@@ -724,55 +724,55 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			bool flag = GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm);
 			bool flag2;
 			Color color_ = ((flag2 = GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm)) ? GunModel.smethod_14(opIJo2jLUqdOL5yAFP4yzXce0DG_) : (flag ? GunModel.smethod_13(opIJo2jLUqdOL5yAFP4yzXce0DG_) : Color.get_White()));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(1951350224u), 0f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(2564266145u), 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(153952222u), GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(352821185u), (float)((flag2 || flag) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(1108910076u), color_);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(1176233669u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(4187102295u), GunModel.smethod_18(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(2194581565u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(1292909327u), GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(325278541u), 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(528483684u), GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(1494356786u), (float)((flag2 || flag) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(182746407u), color_);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(1762953398u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(1482973812u), GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(48906544u), 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(3777298263u), GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(1243359725u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(2367295775u), GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(3044522798u), 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(3044522798u), GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(1486591066u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(2367004539u), GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(2389261317u), 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(2569237623u), GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(839951207u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(2670354165u), GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(2648029795u), 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(3371954574u), GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(2973703791u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(3774849492u), GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(535369226u), 1f);
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(4096396305u), GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(3052170112u), (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(3158698684u), GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(671809976u), (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(2934107588u), GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(3732077856u), (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(84224573u), GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(3342554812u), (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(350242689u), GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(900814680u), (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(221351628u), GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(887435913u), (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(887435913u), GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_26<string>(1305280848u), 1f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(4065860576u), 1f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(1578971868u), 1f);
-			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_24<string>(1254102426u), 1f);
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Hoody Sleeve", 0f);
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Default Forearm", 1f);
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Default Forearm", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Forearm", (float)((flag2 || flag) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Forearm", color_);
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Striped forearm", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Striped forearm", GunModel.smethod_18(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Forearm", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Forearm", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Hand", 1f);
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Hand", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Hand", (float)((flag2 || flag) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Marking Hand", color_);
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Hand", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Hand", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index", 1f);
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian index", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian index", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky", 1f);
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Pinky", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Pinky", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring", 1f);
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian ring", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian ring", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude", 1f);
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Rude", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Rude", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb", 1f);
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb", GunModel.smethod_16(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Thumb", (float)(GunModel.smethod_12((Enum)GunModel.smethod_11(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Avian Thumb", GunModel.smethod_19(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Pinky Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Ring Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Rude Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Index Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb Nail", (float)(GunModel.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+			GunModel.smethod_17(_XcQKV7iP9Sk10poAFYuakLJaltL, "Thumb Nail", GunModel.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Muzzle flash", 1f);
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun casing", 1f);
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun", 1f);
+			GunModel.smethod_15(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun Slide", 1f);
 		}
 
 		public void _edcakvTOp2fd2J9ZHAu9GKjDaN7(Action action_0 = null)
@@ -798,7 +798,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					case 0u:
 						break;
 					default:
-						GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_28<string>(3951684690u), (Action)delegate
+						GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun rise", (Action)delegate
 						{
 							_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AjdlsblH9b6FNnDEW7N5sQ8iHs();
 							_qhAM4Wrvf8c5jzKBQqLfosAE9D?.Invoke();
@@ -812,12 +812,12 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 		private void _3AjdlsblH9b6FNnDEW7N5sQ8iHs()
 		{
-			GunModel.smethod_23(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_25<string>(2697884548u), (Action<int>)null);
+			GunModel.smethod_23(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun Idle", (Action<int>)null);
 		}
 
 		public void _e2DHCcfpFNWn5NTzMOw3FBUkwzA()
 		{
-			GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(1737056915u), (Action)_3AjdlsblH9b6FNnDEW7N5sQ8iHs);
+			GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun Shoot", (Action)_3AjdlsblH9b6FNnDEW7N5sQ8iHs);
 		}
 
 		public void _hAt3H7isKECkVrQjY4L0hESiqLF(Action action_0 = null)
@@ -845,7 +845,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					IL_0008:
 					_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = this;
 					_qhAM4Wrvf8c5jzKBQqLfosAE9D = action_0;
-					GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, _003CModule_003E.smethod_27<string>(3646735103u), (Action)delegate
+					GunModel.smethod_22(_XcQKV7iP9Sk10poAFYuakLJaltL, "Gun reload", (Action)delegate
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AjdlsblH9b6FNnDEW7N5sQ8iHs();
 						_qhAM4Wrvf8c5jzKBQqLfosAE9D?.Invoke();
@@ -1066,7 +1066,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						num = ((int)num2 * -1408565178) ^ 0x12B9854F;
 						continue;
 					case 1u:
-						_xnYepZuegigJCU2jcbZsfVIakzF = FloatingFeedbackDrawable.smethod_1(FloatingFeedbackDrawable.smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)).Load<SpriteFont>(_003CModule_003E.smethod_26<string>(2831173177u));
+						_xnYepZuegigJCU2jcbZsfVIakzF = FloatingFeedbackDrawable.smethod_1(FloatingFeedbackDrawable.smethod_0(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)).Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 						num = (int)(num2 * 917400066) ^ -431957950;
 						continue;
 					default:
@@ -1405,12 +1405,12 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	protected ShootingRangeMiniGameScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_014a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0177: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0197: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05c2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05c7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0136: Unknown result type (might be due to invalid IL or missing references)
+		//IL_013b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_017b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_055e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0563: Unknown result type (might be due to invalid IL or missing references)
 		while (true)
 		{
 			int num = -891750590;
@@ -1420,12 +1420,12 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x87083E8Bu) % 30u)
 				{
 				case 29u:
-					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ(_003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_26<string>(1360810597u), 0, 0), 2);
+					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Background", "Assets/Scenes/ShootingRange/Background", 0, 0), 2);
 					num = (int)(num2 * 1490616270) ^ -871608577;
 					continue;
 				case 28u:
 					_M8VVMN3GHWWmFmORCACqNTXVh6b = 1;
-					ShootingRangeMiniGameScene.smethod_24(_003CModule_003E.smethod_25<string>(1339647026u), 0.4f);
+					ShootingRangeMiniGameScene.smethod_24("Assets/Music/Mittsies - Mech", 0.4f);
 					num = (int)(num2 * 2023830856) ^ -1679982380;
 					continue;
 				case 27u:
@@ -1433,19 +1433,19 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)(num2 * 743269163) ^ -5253012;
 					continue;
 				case 26u:
-					_6YCQhlMaqcDds8uGX1g8fjBKqV4A = ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>(_003CModule_003E.smethod_28<string>(767250274u));
-					_MnMUFBDfrGZBHvrJ30IAQilqivI = ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>(_003CModule_003E.smethod_25<string>(2625903174u));
+					_6YCQhlMaqcDds8uGX1g8fjBKqV4A = ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
+					_MnMUFBDfrGZBHvrJ30IAQilqivI = ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 					_AWLddj1Rm2sqiBwYcJDngG0QaQI = ShootingRangeMiniGameScene.smethod_22(ShootingRangeMiniGameScene.smethod_21());
 					num = (int)(num2 * 1181526060) ^ -1013252267;
 					continue;
 				case 25u:
-					_YhybMVqCJnFekEXVbF1huXupDmh = ShootingRangeMiniGameScene.smethod_23(_MnMUFBDfrGZBHvrJ30IAQilqivI, _003CModule_003E.smethod_26<string>(1757819548u)).X;
-					_MZh3nVRuDktDpIu8X149SF90ZjO = ShootingRangeMiniGameScene.smethod_23(_MnMUFBDfrGZBHvrJ30IAQilqivI, _003CModule_003E.smethod_24<string>(3760545256u)).X;
+					_YhybMVqCJnFekEXVbF1huXupDmh = ShootingRangeMiniGameScene.smethod_23(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.").X;
+					_MZh3nVRuDktDpIu8X149SF90ZjO = ShootingRangeMiniGameScene.smethod_23(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Time up, game over! Press <Enter> to retry or <Escape> to continue.").X;
 					_0zKXRrSXqoTAuTYQNrJIgtt7Emq = 90f;
 					num = (int)(num2 * 1157710023) ^ -616209616;
 					continue;
 				case 24u:
-					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ(_003CModule_003E.smethod_25<string>(768608583u), _003CModule_003E.smethod_24<string>(4132319434u), 0, 0), 6);
+					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Countertop", "Assets/Scenes/ShootingRange/Countertop", 0, 0), 6);
 					num = (int)((num2 * 694760565) ^ 0x52F1F611);
 					continue;
 				case 23u:
@@ -1454,7 +1454,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				case 22u:
 					_ykeARom1bl7r01BeRXMOSqoJU6o = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					ShootingRangeMiniGameScene.smethod_19(_ykeARom1bl7r01BeRXMOSqoJU6o, new string[1] { _003CModule_003E.smethod_24<string>(1971270873u) });
+					ShootingRangeMiniGameScene.smethod_19(_ykeARom1bl7r01BeRXMOSqoJU6o, new string[1] { "Assets/Sounds/MiniGames/ShootingRange/Reload" });
 					num = ((int)num2 * -1307085432) ^ 0x6C8AA686;
 					continue;
 				case 21u:
@@ -1462,15 +1462,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 573909147) ^ 0x22B534EA);
 					continue;
 				case 20u:
-					ShootingRangeMiniGameScene.smethod_19(_vCjkdRWXT5mvEu0c22Hgh93luLg, new string[1] { _003CModule_003E.smethod_28<string>(3638141593u) });
+					ShootingRangeMiniGameScene.smethod_19(_vCjkdRWXT5mvEu0c22Hgh93luLg, new string[1] { "Assets/Sounds/MiniGames/ShootingRange/Fire" });
 					num = (int)((num2 * 2078035888) ^ 0x6FE9D4D1);
 					continue;
 				case 19u:
-					ShootingRangeMiniGameScene.smethod_19(_gabFSY9HcJdPu830plKx8W936qG, new string[2]
-					{
-						_003CModule_003E.smethod_28<string>(3866493365u),
-						_003CModule_003E.smethod_25<string>(766030087u)
-					});
+					ShootingRangeMiniGameScene.smethod_19(_gabFSY9HcJdPu830plKx8W936qG, new string[2] { "Assets/Sounds/MiniGames/ShootingRange/Headshot 1", "Assets/Sounds/MiniGames/ShootingRange/Headshot 2" });
 					num = ((int)num2 * -1429946232) ^ 0xD0809A4;
 					continue;
 				case 18u:
@@ -1482,12 +1478,12 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1915329421) ^ 0x3EC03A5B;
 					continue;
 				case 16u:
-					_tvM0bxD4ITME03hjc6seyYclzxf = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ(_003CModule_003E.smethod_27<string>(2985768906u), _003CModule_003E.smethod_28<string>(1842553397u), 0, 0);
+					_tvM0bxD4ITME03hjc6seyYclzxf = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Crosshair", "Assets/Scenes/ShootingRange/Crosshair", 0, 0);
 					num = ((int)num2 * -114934410) ^ 0x3B653422;
 					continue;
 				case 15u:
-					_m1dNhD2jwJ6iTVUgUzMJUvnQFS = ShootingRangeMiniGameScene.smethod_17(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)).Load<Texture2D>(_003CModule_003E.smethod_26<string>(3433699708u));
-					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ(_003CModule_003E.smethod_27<string>(1272297757u), _003CModule_003E.smethod_27<string>(3900818206u), 600, 180), 0);
+					_m1dNhD2jwJ6iTVUgUzMJUvnQFS = ShootingRangeMiniGameScene.smethod_17(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)).Load<Texture2D>("Assets/Scenes/ShootingRange/Bullet");
+					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180), 0);
 					num = (int)((num2 * 1280408943) ^ 0xCA6A9EB);
 					continue;
 				case 14u:
@@ -1525,7 +1521,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				case 6u:
 					_RiMZpLLSGIesSXF8vhSlVQ8SrDg = ShootingRangeMiniGameScene.smethod_18(ShootingRangeMiniGameScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					ShootingRangeMiniGameScene.smethod_19(_RiMZpLLSGIesSXF8vhSlVQ8SrDg, new string[1] { _003CModule_003E.smethod_24<string>(3442280813u) });
+					ShootingRangeMiniGameScene.smethod_19(_RiMZpLLSGIesSXF8vhSlVQ8SrDg, new string[1] { "Assets/Sounds/MiniGames/ShootingRange/Dry" });
 					num = (int)(num2 * 344802142) ^ -871702937;
 					continue;
 				case 5u:
@@ -1533,12 +1529,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)(num2 * 1527074788) ^ -1245872427;
 					continue;
 				case 4u:
-					ShootingRangeMiniGameScene.smethod_19(_Oeqego17TDqmByfLbOEB1isMXzJ, new string[3]
-					{
-						_003CModule_003E.smethod_24<string>(2543246970u),
-						_003CModule_003E.smethod_24<string>(863241808u),
-						_003CModule_003E.smethod_27<string>(3218148485u)
-					});
+					ShootingRangeMiniGameScene.smethod_19(_Oeqego17TDqmByfLbOEB1isMXzJ, new string[3] { "Assets/Sounds/MiniGames/ShootingRange/Ricochete 1", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 2", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 3" });
 					num = (int)(num2 * 486070731) ^ -1385638840;
 					continue;
 				case 3u:
@@ -1546,12 +1537,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1584532091) ^ -662095143;
 					continue;
 				case 2u:
-					ShootingRangeMiniGameScene.smethod_19(_Hsn6Qz2oeKaTkin9XGwBJUJqy1C, new string[3]
-					{
-						_003CModule_003E.smethod_27<string>(1533615368u),
-						_003CModule_003E.smethod_26<string>(1112990720u),
-						_003CModule_003E.smethod_24<string>(4204915609u)
-					});
+					ShootingRangeMiniGameScene.smethod_19(_Hsn6Qz2oeKaTkin9XGwBJUJqy1C, new string[3] { "Assets/Sounds/MiniGames/ShootingRange/Impact 1", "Assets/Sounds/MiniGames/ShootingRange/Impact 2", "Assets/Sounds/MiniGames/ShootingRange/Impact 3" });
 					num = (int)(num2 * 500529810) ^ -220716765;
 					continue;
 				case 1u:
@@ -1896,8 +1882,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	private void _8GHK7o3vLmG6sThZNN5JsWHoKkE(float float_0)
 	{
 		//IL_018f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0338: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0330: Unknown result type (might be due to invalid IL or missing references)
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq -= float_0;
 		bool flag = default(bool);
 		_003C_003Ec__DisplayClass55_0 _003C_003Ec__DisplayClass55_ = default(_003C_003Ec__DisplayClass55_0);
@@ -1936,14 +1922,14 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						num = ((int)num2 * -940838382) ^ 0xB7E9791;
 						continue;
 					}
-					goto IL_06d3;
+					goto IL_06cb;
 				case 3u:
 					if (!_nHs33RHZMuYhYev0dQ6ic0aHmvO)
 					{
 						num = (int)((num2 * 613831625) ^ 0x6084F7FD);
 						continue;
 					}
-					goto IL_06d3;
+					goto IL_06cb;
 				case 1u:
 				{
 					int num12;
@@ -1967,7 +1953,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						num = ((int)num2 * -868019215) ^ -1457248459;
 						continue;
 					}
-					goto IL_06d3;
+					goto IL_06cb;
 				case 6u:
 					break;
 				default:
@@ -1976,7 +1962,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					{
 						while (true)
 						{
-							IL_047a:
+							IL_0472:
 							int num3;
 							int num4;
 							if (enumerator.MoveNext())
@@ -2014,7 +2000,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 								}
 								case 13u:
 									_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 10;
-									_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, _003CModule_003E.smethod_27<string>(266817107u), Color.get_Red());
+									_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "10!", Color.get_Red());
 									num3 = ((int)num2 * -2072399446) ^ -1337038236;
 									continue;
 								case 12u:
@@ -2060,7 +2046,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 									_C6cjmtLovCejw2N3OZYswcoYxsd++;
 									ShootingRangeMiniGameScene.smethod_29(_gabFSY9HcJdPu830plKx8W936qG, 1f);
 									_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 30;
-									_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, _003CModule_003E.smethod_27<string>(1221656201u), Color.get_Yellow());
+									_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "30!", Color.get_Yellow());
 									_003C_003Ec__DisplayClass55_._OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
 									_003C_003Ec__DisplayClass55_._OJbyketBmeLlVtChfay03TIx5KM._DcBCpcEfsjl4zP1zbrOrd1bwNReb(_003C_003Ec__DisplayClass55_._hrhEHg1BbdqZCbfzTU8MqnmfrKn);
 									num3 = (int)((num2 * 261672218) ^ 0x1CF37BAC);
@@ -2095,17 +2081,17 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 									num3 = 1894232234;
 									continue;
 								default:
-									goto end_IL_0414;
+									goto end_IL_040c;
 								case 16u:
 									break;
 								case 2u:
-									goto end_IL_0414;
+									goto end_IL_040c;
 								case 14u:
-									goto end_IL_0414;
+									goto end_IL_040c;
 								}
-								goto IL_047a;
+								goto IL_0472;
 								continue;
-								end_IL_0414:
+								end_IL_040c:
 								break;
 							}
 							break;
@@ -2113,16 +2099,16 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					}
 					if (!flag)
 					{
-						goto IL_05c1;
+						goto IL_05b9;
 					}
-					goto IL_06d3;
+					goto IL_06cb;
 				}
 				case 4u:
 					{
 						ShootingRangeMiniGameScene.smethod_29(_RiMZpLLSGIesSXF8vhSlVQ8SrDg, 1f);
-						goto IL_06d3;
+						goto IL_06cb;
 					}
-					IL_06d3:
+					IL_06cb:
 					if (_eMnDHRem25x38ZqmbzZLc1CLkwlA)
 					{
 						num10 = 1313193272;
@@ -2133,8 +2119,8 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						num10 = 894138368;
 						num11 = 894138368;
 					}
-					goto IL_067d;
-					IL_067d:
+					goto IL_0675;
+					IL_0675:
 					while (true)
 					{
 						switch ((num2 = (uint)num10 ^ 0x6F5DC808u) % 13u)
@@ -2253,16 +2239,16 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						default:
 							return;
 						case 7u:
-							goto IL_06d3;
+							goto IL_06cb;
 						case 10u:
 							return;
 						}
 						break;
 					}
-					goto IL_05c1;
-					IL_05c1:
+					goto IL_05b9;
+					IL_05b9:
 					num10 = 1627807915;
-					goto IL_067d;
+					goto IL_0675;
 				}
 				break;
 			}
@@ -2629,30 +2615,30 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
 	{
 		//IL_0003: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0162: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0254: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0293: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0298: Unknown result type (might be due to invalid IL or missing references)
-		//IL_031c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0321: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0387: Unknown result type (might be due to invalid IL or missing references)
-		//IL_038c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0400: Unknown result type (might be due to invalid IL or missing references)
-		//IL_043f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0458: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0460: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0155: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0198: Unknown result type (might be due to invalid IL or missing references)
+		//IL_019d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_023b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0240: Unknown result type (might be due to invalid IL or missing references)
+		//IL_027b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0280: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0300: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0305: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0367: Unknown result type (might be due to invalid IL or missing references)
+		//IL_036c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_039d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03a2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03d3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03d8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0417: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0426: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0430: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0438: Unknown result type (might be due to invalid IL or missing references)
 		this.method_0(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
 		ShootingRangeMiniGameScene.smethod_32(spriteBatch_0);
 		_LSweOA3cIPq1IjLzplF4mDludQf(spriteBatch_0);
@@ -2696,14 +2682,14 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 556529440) ^ 0x5031E841);
 					continue;
 				case 19u:
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _003CModule_003E.smethod_24<string>(936587900u), new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.get_Red());
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.", new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.get_Red());
 					num = 1578771551;
 					continue;
 				case 18u:
 					num = ((int)num2 * -1389303595) ^ 0x69FE4CC5;
 					continue;
 				case 17u:
-					goto IL_00d3;
+					goto IL_00cf;
 				case 16u:
 					num3 = 5;
 					num4 = 0;
@@ -2725,15 +2711,15 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 14u:
-					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, _003CModule_003E.smethod_24<string>(364611803u) + _C6cjmtLovCejw2N3OZYswcoYxsd, new Vector2(10f, 120f), Color.get_White());
+					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Headshots: " + _C6cjmtLovCejw2N3OZYswcoYxsd, new Vector2(10f, 120f), Color.get_White());
 					num = (int)((num2 * 409492433) ^ 0x170601CA);
 					continue;
 				case 13u:
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString(_003CModule_003E.smethod_25<string>(223679871u)), new Vector2(960f, 10f), Color.get_Red());
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F1"), new Vector2(960f, 10f), Color.get_Red());
 					num = (int)((num2 * 460806256) ^ 0x38634031);
 					continue;
 				case 12u:
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _003CModule_003E.smethod_24<string>(246549279u), new Vector2(1750f, 70f), Color.get_Red());
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Reload!", new Vector2(1750f, 70f), Color.get_Red());
 					num = ((int)num2 * -44432714) ^ 0x3BA4F100;
 					continue;
 				case 11u:
@@ -2742,17 +2728,17 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					case GameState.NotStarted:
 						break;
 					case GameState.Started:
-						goto IL_00d3;
+						goto IL_00cf;
 					default:
-						goto IL_0215;
+						goto IL_0205;
 					case GameState.GameOver:
-						goto IL_0227;
+						goto IL_0217;
 					}
 					goto case 19u;
 				case 9u:
-					goto IL_0227;
+					goto IL_0217;
 				case 10u:
-					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, _003CModule_003E.smethod_27<string>(985659368u) + _pL6aoe4HLq4X3yQACLFyUH3xwBp, new Vector2(10f, 100f), Color.get_White());
+					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Bodyshots: " + _pL6aoe4HLq4X3yQACLFyUH3xwBp, new Vector2(10f, 100f), Color.get_White());
 					num = ((int)num2 * -1587234983) ^ 0x6A804116;
 					continue;
 				case 8u:
@@ -2777,7 +2763,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 6u:
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString(_003CModule_003E.smethod_27<string>(1700884375u)), new Vector2(960f, 10f), Color.get_White());
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F0"), new Vector2(960f, 10f), Color.get_White());
 					num = 359117373;
 					continue;
 				case 4u:
@@ -2789,9 +2775,9 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = 1328760285;
 					continue;
 				case 2u:
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _003CModule_003E.smethod_25<string>(2907067495u) + _G0GwJ5OWQOA4BjacW3XmFsyMFjz, new Vector2(10f, 10f), Color.get_White());
-					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, _003CModule_003E.smethod_27<string>(3367331222u) + _JvgphfrWtBncPfgb6ERRVKKtlQG, new Vector2(10f, 60f), Color.get_White());
-					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, _003CModule_003E.smethod_27<string>(3606945309u) + _dH7hlTzeJboGa5rfpgerBfCmyKO, new Vector2(10f, 80f), Color.get_White());
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Score: " + _G0GwJ5OWQOA4BjacW3XmFsyMFjz, new Vector2(10f, 10f), Color.get_White());
+					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Targets missed: " + _JvgphfrWtBncPfgb6ERRVKKtlQG, new Vector2(10f, 60f), Color.get_White());
+					spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Shots missed: " + _dH7hlTzeJboGa5rfpgerBfCmyKO, new Vector2(10f, 80f), Color.get_White());
 					num = ((int)num2 * -805003029) ^ -1361015719;
 					continue;
 				case 1u:
@@ -2807,7 +2793,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					break;
 				case 5u:
 					return;
-					IL_00d3:
+					IL_00cf:
 					if (_0zKXRrSXqoTAuTYQNrJIgtt7Emq >= 0f)
 					{
 						num = 1984145438;
@@ -2819,11 +2805,11 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						num5 = 541740129;
 					}
 					continue;
-					IL_0227:
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _003CModule_003E.smethod_25<string>(1163768013u), new Vector2((1920f - _MZh3nVRuDktDpIu8X149SF90ZjO) / 2f, 10f), Color.get_Red());
+					IL_0217:
+					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Time up, game over! Press <Enter> to retry or <Escape> to continue.", new Vector2((1920f - _MZh3nVRuDktDpIu8X149SF90ZjO) / 2f, 10f), Color.get_Red());
 					num = 541740129;
 					continue;
-					IL_0215:
+					IL_0205:
 					num = ((int)num2 * -1487906456) ^ 0x2E5421A0;
 					continue;
 				}
@@ -3021,7 +3007,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _Vu9iV57zUVa3p8WMfOsDaoqv7wL(int int_0, int int_1, float float_0)
 	{
-		FrameAnimation frameAnimation = new FrameAnimation(this, _003CModule_003E.smethod_24<string>(2434727666u), 0.5f, 12, 125, 111, float_0);
+		FrameAnimation frameAnimation = new FrameAnimation(this, "Assets/Scenes/ShootingRange/Explosion_12x1", 0.5f, 12, 125, 111, float_0);
 		frameAnimation._QrgbXEg7MMeD9Ybz12fFVsbmAd9(int_0, int_1, ShootingRangeMiniGameScene.smethod_33(0f, 360f));
 		while (true)
 		{
@@ -3032,7 +3018,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xFBEE9F5Du) % 3u)
 				{
 				case 1u:
-					goto IL_0036;
+					goto IL_0032;
 				default:
 					return;
 				case 0u:
@@ -3041,7 +3027,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					return;
 				}
 				break;
-				IL_0036:
+				IL_0032:
 				_xEG3axnWkco0Erk0PdjakXDULcA.Add(frameAnimation);
 				num = (int)((num2 * 1320198444) ^ 0x3D2B27D8);
 			}
@@ -3050,7 +3036,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void _Kp1esj4V82aePkZwvlresNSkHsC(int int_0, int int_1, float float_0)
 	{
-		FrameAnimation frameAnimation = new FrameAnimation(this, _003CModule_003E.smethod_25<string>(1295487823u), 0.5f, 12, 122, 129, float_0);
+		FrameAnimation frameAnimation = new FrameAnimation(this, "Assets/Scenes/ShootingRange/Smoke_12x1", 0.5f, 12, 122, 129, float_0);
 		frameAnimation._QrgbXEg7MMeD9Ybz12fFVsbmAd9(int_0, int_1, 0f);
 		while (true)
 		{
@@ -3061,7 +3047,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xF698B8Au) % 3u)
 				{
 				case 2u:
-					goto IL_002f;
+					goto IL_002b;
 				default:
 					return;
 				case 0u:
@@ -3070,7 +3056,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					return;
 				}
 				break;
-				IL_002f:
+				IL_002b:
 				_xEG3axnWkco0Erk0PdjakXDULcA.Add(frameAnimation);
 				num = ((int)num2 * -1746689839) ^ 0x12B895E5;
 			}
@@ -3116,10 +3102,10 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		if (_G0GwJ5OWQOA4BjacW3XmFsyMFjz > 2500)
 		{
-			goto IL_004e;
+			goto IL_004a;
 		}
-		goto IL_015d;
-		IL_015d:
+		goto IL_014d;
+		IL_014d:
 		int num;
 		int num2;
 		if (_C6cjmtLovCejw2N3OZYswcoYxsd > 60)
@@ -3132,44 +3118,44 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			num = 1179166581;
 			num2 = 1179166581;
 		}
-		goto IL_0118;
-		IL_0118:
+		goto IL_0108;
+		IL_0108:
 		while (true)
 		{
 			uint num3;
 			switch ((num3 = (uint)num ^ 0x5DE77678u) % 9u)
 			{
 			case 7u:
-				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_27<string>(2594114189u));
+				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric10");
 				num = (int)(num3 * 801326306) ^ -1181297310;
 				continue;
 			case 5u:
 				break;
 			case 4u:
-				goto IL_0058;
+				goto IL_0054;
 			case 3u:
-				goto IL_007c;
+				goto IL_0078;
 			case 2u:
-				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_28<string>(3685057506u));
+				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric9");
 				num = ((int)num3 * -1919105674) ^ 0xF4FE4F3;
 				continue;
 			case 1u:
-				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_27<string>(677201493u));
+				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric7");
 				num = (int)(num3 * 1817726114) ^ -972106761;
 				continue;
 			case 0u:
-				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_28<string>(3853198737u));
+				ShootingRangeMiniGameScene.smethod_35(ShootingRangeMiniGameScene.smethod_34(ShootingRangeMiniGameScene.smethod_20((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric8");
 				num = ((int)num3 * -254701329) ^ 0x25C12B11;
 				continue;
 			default:
 				return;
 			case 6u:
-				goto IL_015d;
+				goto IL_014d;
 			case 8u:
 				return;
 			}
 			break;
-			IL_007c:
+			IL_0078:
 			int num4;
 			if (_JvgphfrWtBncPfgb6ERRVKKtlQG < 30)
 			{
@@ -3182,7 +3168,7 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num4 = 1992467438;
 			}
 			continue;
-			IL_0058:
+			IL_0054:
 			int num5;
 			if (_dH7hlTzeJboGa5rfpgerBfCmyKO == 0)
 			{
@@ -3195,10 +3181,10 @@ public abstract class ShootingRangeMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num5 = 1417494693;
 			}
 		}
-		goto IL_004e;
-		IL_004e:
+		goto IL_004a;
+		IL_004a:
 		num = 2114315116;
-		goto IL_0118;
+		goto IL_0108;
 	}
 
 	[CompilerGenerated]

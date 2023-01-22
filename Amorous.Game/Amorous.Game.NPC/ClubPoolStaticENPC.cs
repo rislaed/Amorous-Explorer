@@ -2,20 +2,10 @@ namespace Amorous.Game.NPC;
 
 public class ClubPoolStaticENPC : ClubStaticSpineNPC
 {
-	private static readonly string[] _faT8q4ZAxVWFlC2DnvTQkGsQ8Dh = new string[8]
-	{
-		_003CModule_003E.smethod_27<string>(3071359793u),
-		_003CModule_003E.smethod_28<string>(940678579u),
-		_003CModule_003E.smethod_27<string>(686070685u),
-		_003CModule_003E.smethod_24<string>(2064997538u),
-		_003CModule_003E.smethod_28<string>(1598186517u),
-		_003CModule_003E.smethod_26<string>(4205301225u),
-		_003CModule_003E.smethod_26<string>(62008742u),
-		_003CModule_003E.smethod_26<string>(314800097u)
-	};
+	private static readonly string[] _faT8q4ZAxVWFlC2DnvTQkGsQ8Dh = new string[8] { "Bar cover", "Chest", "Forearm back", "Forearm front", "Head", "Shaker", "Shoulder back", "Shoulder front" };
 
 	public ClubPoolStaticENPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(2205391812u), _faT8q4ZAxVWFlC2DnvTQkGsQ8Dh)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubPoolStatic/E club", _faT8q4ZAxVWFlC2DnvTQkGsQ8Dh)
 	{
 		while (true)
 		{
@@ -26,7 +16,7 @@ public class ClubPoolStaticENPC : ClubStaticSpineNPC
 				switch ((num2 = (uint)num ^ 0x62ABDDF9u) % 3u)
 				{
 				case 1u:
-					goto IL_001a;
+					goto IL_0016;
 				case 0u:
 					break;
 				default:
@@ -34,7 +24,7 @@ public class ClubPoolStaticENPC : ClubStaticSpineNPC
 					return;
 				}
 				break;
-				IL_001a:
+				IL_0016:
 				_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 				num = ((int)num2 * -313419672) ^ -99949414;
 			}

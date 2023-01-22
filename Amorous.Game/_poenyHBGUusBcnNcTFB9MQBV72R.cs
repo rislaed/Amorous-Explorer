@@ -294,7 +294,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						num2 = (int)((num3 * 14443100) ^ 0x17F3264F);
 						continue;
 					case 0u:
-						_tdcogRALfEB0rsQ5m98f4c9BTIO.smethod_4(_tdcogRALfEB0rsQ5m98f4c9BTIO.smethod_3(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._4L7hfXrWoDdArQiscG4ukHCV46B), _003CModule_003E.smethod_26<string>(1162750234u));
+						_tdcogRALfEB0rsQ5m98f4c9BTIO.smethod_4(_tdcogRALfEB0rsQ5m98f4c9BTIO.smethod_3(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._4L7hfXrWoDdArQiscG4ukHCV46B), "AchievementGeneric3");
 						num2 = ((int)num3 * -722594123) ^ 0x3182D5F4;
 						continue;
 					default:
@@ -385,11 +385,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 0u:
 					goto IL_0063;
 				default:
-					_7bXnkUo5ETqYLrtdisr6hKFAP6p.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _7bXnkUo5ETqYLrtdisr6hKFAP6p.smethod_3(_003CModule_003E.smethod_26<string>(1417094369u), (object)(_7bXnkUo5ETqYLrtdisr6hKFAP6p.smethod_1(_7OcRfli7CrlI9YYUDJj3j5nDI9k) + 1)), new string[2]
-					{
-						_003CModule_003E.smethod_26<string>(1015158674u),
-						_003CModule_003E.smethod_26<string>(1267950029u)
-					}, 250, (Action<int>)delegate(int int_0)
+					_7bXnkUo5ETqYLrtdisr6hKFAP6p.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _7bXnkUo5ETqYLrtdisr6hKFAP6p.smethod_3("Are you sure you wish to overwrite slot #{0}?", (object)(_7bXnkUo5ETqYLrtdisr6hKFAP6p.smethod_1(_7OcRfli7CrlI9YYUDJj3j5nDI9k) + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 					{
 						if (int_0 == 1)
 						{
@@ -526,11 +522,11 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			{
 				goto IL_0010;
 			}
-			goto IL_00b2;
-			IL_00b2:
+			goto IL_00a2;
+			IL_00a2:
 			int num = 244825878;
-			goto IL_00d2;
-			IL_00d2:
+			goto IL_00c2;
+			IL_00c2:
 			while (true)
 			{
 				uint num2;
@@ -539,7 +535,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 4u:
 					break;
 				case 2u:
-					goto IL_00b2;
+					goto IL_00a2;
 				case 1u:
 					_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
 					num = ((int)num2 * -1782745634) ^ -90371643;
@@ -549,7 +545,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 0u:
 					return;
 				case 3u:
-					_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_3(_003CModule_003E.smethod_27<string>(3732325990u), (object)(_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_1(_7OcRfli7CrlI9YYUDJj3j5nDI9k) ? _003CModule_003E.smethod_26<string>(3136120317u) : string.Empty), (object)(_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_2(_7OcRfli7CrlI9YYUDJj3j5nDI9k) + 1)), 250, _003CModule_003E.smethod_24<string>(329438591u), (Action)delegate
+					_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_3("There is no save in {0}slot #{1}!", (object)(_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_1(_7OcRfli7CrlI9YYUDJj3j5nDI9k) ? "autosave " : string.Empty), (object)(_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_2(_7OcRfli7CrlI9YYUDJj3j5nDI9k) + 1)), 250, "OK", (Action)delegate
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
 					});
@@ -560,11 +556,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			goto IL_0010;
 			IL_0010:
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
-			_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_5(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_3(_003CModule_003E.smethod_26<string>(3133589844u), (object)((!_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_1(_7OcRfli7CrlI9YYUDJj3j5nDI9k)) ? string.Empty : _003CModule_003E.smethod_25<string>(2060779522u)), (object)(_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_2(_7OcRfli7CrlI9YYUDJj3j5nDI9k) + 1)), new string[2]
-			{
-				_003CModule_003E.smethod_26<string>(1015158674u),
-				_003CModule_003E.smethod_28<string>(4056415839u)
-			}, 250, (Action<int>)delegate(int int_0)
+			_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_5(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_3("Are you sure you wish to load {0}slot #{1}?", (object)((!_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_1(_7OcRfli7CrlI9YYUDJj3j5nDI9k)) ? string.Empty : "autosave "), (object)(_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_2(_7OcRfli7CrlI9YYUDJj3j5nDI9k) + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 			{
 				if (int_0 == 1)
 				{
@@ -616,7 +608,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 								return;
 							case 5u:
-								_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_24<string>(4117526795u), 250, _003CModule_003E.smethod_28<string>(4224231895u), (Action)delegate
+								_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Failed to load save, it's most likely corrupted.", 250, "OK", (Action)delegate
 								{
 									_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._77rSPCEs6VEYjlGrwW0KN0btLEG = false;
 									_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
@@ -648,7 +640,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
 			});
 			num = 1995271253;
-			goto IL_00d2;
+			goto IL_00c2;
 		}
 
 		internal void _8RPKM2hyJWlk66jtUUwuyCt2FlF(int int_0)
@@ -703,7 +695,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 							_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 							return;
 						case 5u:
-							_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_24<string>(4117526795u), 250, _003CModule_003E.smethod_28<string>(4224231895u), (Action)delegate
+							_2GLJdEpKkJ7x72M9J1r6gZaf9yp.smethod_4(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Failed to load save, it's most likely corrupted.", 250, "OK", (Action)delegate
 							{
 								_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._77rSPCEs6VEYjlGrwW0KN0btLEG = false;
 								_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
@@ -901,7 +893,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						case 0u:
 							break;
 						default:
-							_ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_2((Label)(object)_diVdxVCKW4CzhbYSG15BcHJB0Ub, _ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_0() ? _003CModule_003E.smethod_28<string>(3589942383u) : _003CModule_003E.smethod_25<string>(1732877502u));
+							_ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_2((Label)(object)_diVdxVCKW4CzhbYSG15BcHJB0Ub, _ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_0() ? "Disable SFW" : "Enable SFW");
 							return;
 						}
 						break;
@@ -929,7 +921,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					case 0u:
 						break;
 					default:
-						_ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_2((Label)(object)_diVdxVCKW4CzhbYSG15BcHJB0Ub, _ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_0() ? _003CModule_003E.smethod_28<string>(3589942383u) : _003CModule_003E.smethod_25<string>(1732877502u));
+						_ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_2((Label)(object)_diVdxVCKW4CzhbYSG15BcHJB0Ub, _ySEG6XuZVhXoWbL0fJc0sGefKrh.smethod_0() ? "Disable SFW" : "Enable SFW");
 						return;
 					}
 					break;
@@ -1172,8 +1164,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						{
 						case 1u:
 							epeel2m9h5O12V2ERwlnNTE3FdM = _Epeel2m9h5O12V2ERwlnNTE3FdM;
-							string_ = (_J2cDcMayMidSIab2lnReI8upBwS.smethod_0() ? _003CModule_003E.smethod_25<string>(4279388324u) : _003CModule_003E.smethod_25<string>(3610475290u));
-							goto IL_0032;
+							string_ = (_J2cDcMayMidSIab2lnReI8upBwS.smethod_0() ? "Disable Topless Cheat" : "Enable Topless Cheat");
+							goto IL_002a;
 						default:
 							return;
 						case 0u:
@@ -1182,7 +1174,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 							return;
 						}
 						break;
-						IL_0032:
+						IL_002a:
 						_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)epeel2m9h5O12V2ERwlnNTE3FdM, string_);
 						num = -646255287;
 					}
@@ -1204,8 +1196,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					{
 					case 1u:
 						epeel2m9h5O12V2ERwlnNTE3FdM = _Epeel2m9h5O12V2ERwlnNTE3FdM;
-						string_ = (_J2cDcMayMidSIab2lnReI8upBwS.smethod_0() ? _003CModule_003E.smethod_25<string>(4279388324u) : _003CModule_003E.smethod_25<string>(3610475290u));
-						goto IL_0032;
+						string_ = (_J2cDcMayMidSIab2lnReI8upBwS.smethod_0() ? "Disable Topless Cheat" : "Enable Topless Cheat");
+						goto IL_002a;
 					default:
 						return;
 					case 0u:
@@ -1214,7 +1206,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						return;
 					}
 					break;
-					IL_0032:
+					IL_002a:
 					_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)epeel2m9h5O12V2ERwlnNTE3FdM, string_);
 					num = -646255287;
 				}
@@ -1226,14 +1218,14 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._YdyKdWT8QbQOIWkgEuPe6a9hJtd(delegate
 			{
 				_J2cDcMayMidSIab2lnReI8upBwS.smethod_4(!_J2cDcMayMidSIab2lnReI8upBwS.smethod_3());
-				_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)_FxyX2MMMdsf69424VDXa8LqP1nq, _J2cDcMayMidSIab2lnReI8upBwS.smethod_3() ? _003CModule_003E.smethod_28<string>(3139484035u) : _003CModule_003E.smethod_28<string>(2292532684u));
+				_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)_FxyX2MMMdsf69424VDXa8LqP1nq, _J2cDcMayMidSIab2lnReI8upBwS.smethod_3() ? "Disable Bottomless Cheat" : "Enable Bottomless Cheat");
 			});
 		}
 
 		internal void _vsOcQWBxGADsTpFI7jsoDDsob3A()
 		{
 			_J2cDcMayMidSIab2lnReI8upBwS.smethod_4(!_J2cDcMayMidSIab2lnReI8upBwS.smethod_3());
-			_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)_FxyX2MMMdsf69424VDXa8LqP1nq, _J2cDcMayMidSIab2lnReI8upBwS.smethod_3() ? _003CModule_003E.smethod_28<string>(3139484035u) : _003CModule_003E.smethod_28<string>(2292532684u));
+			_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)_FxyX2MMMdsf69424VDXa8LqP1nq, _J2cDcMayMidSIab2lnReI8upBwS.smethod_3() ? "Disable Bottomless Cheat" : "Enable Bottomless Cheat");
 		}
 
 		static bool smethod_0()
@@ -1324,19 +1316,19 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 		internal bool _J03dD2qBGOpQ04m2KKxkL3CkUtCb(int int_0, string string_0)
 		{
-			//IL_0100: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01f3: Unknown result type (might be due to invalid IL or missing references)
-			//IL_02b0: Unknown result type (might be due to invalid IL or missing references)
-			//IL_033e: Unknown result type (might be due to invalid IL or missing references)
-			if (_HQitgQ0mYB5XukcD7eKHBJPmdqs.smethod_0(string_0, _003CModule_003E.smethod_26<string>(3690619050u)))
+			//IL_00fc: Unknown result type (might be due to invalid IL or missing references)
+			//IL_01ef: Unknown result type (might be due to invalid IL or missing references)
+			//IL_02ac: Unknown result type (might be due to invalid IL or missing references)
+			//IL_033a: Unknown result type (might be due to invalid IL or missing references)
+			if (_HQitgQ0mYB5XukcD7eKHBJPmdqs.smethod_0(string_0, "Sheen Two"))
 			{
-				goto IL_03fc;
+				goto IL_03f8;
 			}
-			goto IL_0501;
-			IL_0501:
+			goto IL_04fd;
+			IL_04fd:
 			int num;
 			int num2;
-			if (!(string_0 == _003CModule_003E.smethod_24<string>(4096396305u)))
+			if (!(string_0 == "Thumb"))
 			{
 				num = -580014027;
 				num2 = -580014027;
@@ -1346,8 +1338,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				num = -767311204;
 				num2 = -767311204;
 			}
-			goto IL_0490;
-			IL_0490:
+			goto IL_048c;
+			IL_048c:
 			while (true)
 			{
 				uint num3;
@@ -1402,7 +1394,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 14u:
 					break;
 				case 13u:
-					goto IL_0189;
+					goto IL_0185;
 				case 12u:
 					_wr6xcvFOgUbaTATC17S6Y9v3y3S._EKVVcDQFi8O0uiXnuvUCgwRPdh4._f5ctqAmdNsZ889UjM4LxDm8WGxA(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._Et7ViKuaneif1JVK3bifonUhKPR, (Vector2?)new Vector2((float)(_eeWHzOz6LrTokRQr52VaB0dKbQO.X - 16), (float)(_eeWHzOz6LrTokRQr52VaB0dKbQO.Y - 128)), (Rectangle?)null, (Rectangle?)null, (Vector2?)null, (float)_09rdYyvQzUwbdQbzRZF4vbpdUCO, (Vector2?)null, (Color?)null, (SpriteEffects)0, 0f);
 					_wr6xcvFOgUbaTATC17S6Y9v3y3S._EKVVcDQFi8O0uiXnuvUCgwRPdh4.End();
@@ -1427,7 +1419,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = ((int)num3 * -1235502726) ^ -588814635;
 					continue;
 				case 6u:
-					goto end_IL_0490;
+					goto end_IL_048c;
 				case 5u:
 					num = ((int)num3 * -6241874) ^ -1360121413;
 					continue;
@@ -1449,13 +1441,13 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 3u:
-					goto IL_0448;
+					goto IL_0444;
 				case 0u:
 					_wr6xcvFOgUbaTATC17S6Y9v3y3S._r1FADOtDcwMP4Tohv3ntBfhuMNp.End();
 					num = ((int)num3 * -1552473053) ^ -1067285126;
 					continue;
 				case 2u:
-					goto IL_0501;
+					goto IL_04fd;
 				default:
 					return true;
 				case 7u:
@@ -1473,7 +1465,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num10 = -1852070317;
 				}
 				continue;
-				IL_0448:
+				IL_0444:
 				int num11;
 				if (!_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._97m6gVcwgWbLFyNUxI3P1KuD0Gn)
 				{
@@ -1486,7 +1478,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num11 = -1778984381;
 				}
 				continue;
-				IL_0189:
+				IL_0185:
 				int num12;
 				if (_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._1gXQH16lmsacxQMOpjFFqZSmjQl)
 				{
@@ -1499,13 +1491,13 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num12 = -239189803;
 				}
 				continue;
-				end_IL_0490:
+				end_IL_048c:
 				break;
 			}
-			goto IL_03fc;
-			IL_03fc:
+			goto IL_03f8;
+			IL_03f8:
 			num = -1823368979;
-			goto IL_0490;
+			goto IL_048c;
 		}
 
 		static bool smethod_0(string string_0, string string_1)
@@ -1572,39 +1564,39 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby,
-			_003CModule_003E.smethod_28<string>(2384927327u)
+			"CobySexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Dustin,
-			_003CModule_003E.smethod_25<string>(1628871606u)
+			"DustinSexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax,
-			_003CModule_003E.smethod_24<string>(2327708196u)
+			"JaxSexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex,
-			_003CModule_003E.smethod_24<string>(3798718136u)
+			"LexSexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Mercy,
-			_003CModule_003E.smethod_24<string>(2563833244u)
+			"MercySexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy,
-			_003CModule_003E.smethod_28<string>(1820293093u)
+			"RemySexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth,
-			_003CModule_003E.smethod_28<string>(3628371681u)
+			"SethSexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye,
-			_003CModule_003E.smethod_27<string>(211682974u)
+			"SkyeSexscene"
 		},
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith,
-			_003CModule_003E.smethod_25<string>(3909364312u)
+			"ZenithSexscene"
 		}
 	};
 
@@ -1612,14 +1604,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private _iDN1IKOu3e1uADYzeMEUon5D9fg _ERdtO3cV05TBYFV0mT86wv01GJf;
 
-	private readonly string[] _OZU2jcD6pvGbls1ACzPQPKBf9ci = new string[5]
-	{
-		_003CModule_003E.smethod_26<string>(563463465u),
-		_003CModule_003E.smethod_28<string>(148171634u),
-		_003CModule_003E.smethod_27<string>(3930399637u),
-		_003CModule_003E.smethod_27<string>(3451171463u),
-		_003CModule_003E.smethod_26<string>(3233108872u)
-	};
+	private readonly string[] _OZU2jcD6pvGbls1ACzPQPKBf9ci = new string[5] { "That song is awesome!", "This one is so underrated!", "Haven't heard that one in a while!", "Always gives me goosebumbs!", "The beat in this one is just amazing!" };
 
 	private static _poenyHBGUusBcnNcTFB9MQBV72R _6T55wit7MiGfAWRkPwjNbJ8N8lG;
 
@@ -1633,114 +1618,36 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private readonly Dictionary<string, bool> _PcaKA8lfkZnYKjOTdM7RWYPBlGr = new Dictionary<string, bool>
 	{
-		{
-			_003CModule_003E.smethod_25<string>(1993738626u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_27<string>(3698020058u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_27<string>(3930515599u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_25<string>(2665230156u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_26<string>(745855371u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_24<string>(2150136601u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_26<string>(1261336303u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_27<string>(4177248232u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_24<string>(3121766619u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_24<string>(488467962u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_25<string>(2607853702u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_24<string>(1959477902u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_27<string>(3708987782u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_28<string>(1512037070u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_26<string>(1372440535u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_24<string>(2367925126u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_27<string>(2982911013u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_28<string>(833226950u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_27<string>(3701753274u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_27<string>(601123197u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_26<string>(3988997198u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_26<string>(4140672011u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_28<string>(319991467u),
-			false
-		},
-		{
-			_003CModule_003E.smethod_25<string>(1590843708u),
-			false
-		}
+		{ "Alex", false },
+		{ "Alex image", false },
+		{ "Coby", false },
+		{ "Coby image", false },
+		{ "Dustin", false },
+		{ "Dustin image", false },
+		{ "Gen", false },
+		{ "Gen image", false },
+		{ "Jacky", false },
+		{ "Jacky image", false },
+		{ "Jax", false },
+		{ "Jax image", false },
+		{ "Mercy", false },
+		{ "Mercy image", false },
+		{ "Remy", false },
+		{ "Remy image", false },
+		{ "Seth", false },
+		{ "Seth image", false },
+		{ "Skye", false },
+		{ "Skye image", false },
+		{ "Verge", false },
+		{ "Verge image", false },
+		{ "Zenith", false },
+		{ "Zenith image", false }
 	};
 
 	private readonly Dictionary<string, bool> _0OvMkQYTGPrNhckv6iHt3zmR5ni = new Dictionary<string, bool>
 	{
-		{
-			_003CModule_003E.smethod_27<string>(1319965458u),
-			true
-		},
-		{
-			_003CModule_003E.smethod_25<string>(1924010977u),
-			true
-		}
+		{ "reject call with message", true },
+		{ "Incoming call", true }
 	};
 
 	private _wlQdV74JhqkBVxNonpbfqZEmjIbA _2xrvCNtGtRPjKFYKw9nbGLrJCPy;
@@ -1751,15 +1658,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private bool _p4cbe03cXPNybrHUo9DHRTp6W7m;
 
-	private static readonly string[] _MCqah9fRROAHE2fkIv4nkhrpDKX = new string[6]
-	{
-		_003CModule_003E.smethod_25<string>(4269074340u),
-		_003CModule_003E.smethod_24<string>(1804742332u),
-		_003CModule_003E.smethod_28<string>(2539620044u),
-		_003CModule_003E.smethod_25<string>(578449421u),
-		_003CModule_003E.smethod_24<string>(3393814796u),
-		_003CModule_003E.smethod_25<string>(1451388410u)
-	};
+	private static readonly string[] _MCqah9fRROAHE2fkIv4nkhrpDKX = new string[6] { "Marlboro", "Angry Curds", "God of Warfare Modern War", "Inanimate 3", "The Blinding of Blissac", "Traffic Controller" };
 
 	private static readonly string[] _I35ziY7HYJkfL20RDXWOC7Pcv1q;
 
@@ -1885,7 +1784,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					switch ((num2 = (uint)num ^ 0x2EA1E0BCu) % 11u)
 					{
 					case 10u:
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_25<string>(2600659499u), (Action<int>)null);
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, "Message idle", (Action<int>)null);
 						num = 927337395;
 						continue;
 					case 8u:
@@ -1895,19 +1794,19 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						case _wlQdV74JhqkBVxNonpbfqZEmjIbA.MessageIdle:
 							break;
 						default:
-							goto IL_005c;
+							goto IL_0058;
 						case _wlQdV74JhqkBVxNonpbfqZEmjIbA.NoMessage:
-							goto IL_006b;
+							goto IL_0067;
 						case _wlQdV74JhqkBVxNonpbfqZEmjIbA.MessageUrgent:
-							goto IL_008c;
+							goto IL_0084;
 						case _wlQdV74JhqkBVxNonpbfqZEmjIbA.MessageNew:
-							goto IL_010b;
+							goto IL_00ff;
 						}
 						goto case 10u;
 					case 0u:
-						goto IL_006b;
+						goto IL_0067;
 					case 3u:
-						goto IL_008c;
+						goto IL_0084;
 					case 6u:
 						_6T55wit7MiGfAWRkPwjNbJ8N8lG._IiWYS6YP6cEj83PIAXepbAHBaJB();
 						num = (int)(num2 * 181481796) ^ -1424087806;
@@ -1921,23 +1820,23 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					case 5u:
 						return;
 					case 1u:
-						goto IL_010b;
+						goto IL_00ff;
 					case 9u:
 						return;
 					case 2u:
 						return;
-						IL_010b:
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_25<string>(2869256111u), (Action<int>)null);
+						IL_00ff:
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, "Message new", (Action<int>)null);
 						return;
-						IL_008c:
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_27<string>(2597615481u), (Action<int>)null);
+						IL_0084:
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, "Urgent message", (Action<int>)null);
 						num = 1702573655;
 						continue;
-						IL_006b:
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_27<string>(1163548213u), (Action<int>)null);
+						IL_0067:
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._lpMGMQZJYmHr6q9XBRwiM0Lse4N, "No message", (Action<int>)null);
 						num = 236012838;
 						continue;
-						IL_005c:
+						IL_0058:
 						num = ((int)num2 * -1444573795) ^ 0x3ABDAE04;
 						continue;
 					}
@@ -1963,9 +1862,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = ((int)num2 * -1566277596) ^ -1219023795;
 					continue;
 				case 2u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_27<string>(3872523573u), (Action)delegate
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone answer start", (Action)delegate
 					{
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_28<string>(563400225u), (Action<int>)null);
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone answer loop", (Action<int>)null);
 					});
 					_Pbt0pgZ2cGZkaxR9cQe0r2v2lVd();
 					num = (int)(num2 * 1118625658) ^ -383312638;
@@ -2003,9 +1902,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				}
 				break;
 				IL_0009:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_27<string>(1483617211u), (Action)delegate
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone IM accept", (Action)delegate
 				{
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_26<string>(338858730u), (Action<int>)null);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone IM idle", (Action<int>)null);
 				});
 				num = (int)(num2 * 915961225) ^ -128157385;
 			}
@@ -2092,9 +1991,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				IL_0009:
 				_8hw6Dkw1FlTEpsiy0adBUXTGpRe(bool_0: true);
 				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_0(_wTbB4YBL4PSkaotwKX3CFc50DmX);
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_26<string>(86067375u), (Action)delegate
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone Call start", (Action)delegate
 				{
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_28<string>(2035196351u), (Action<int>)null);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone Call loop", (Action<int>)null);
 				});
 				_Pbt0pgZ2cGZkaxR9cQe0r2v2lVd();
 				num = ((int)num2 * -650851734) ^ 0x246E9C89;
@@ -2129,7 +2028,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				}
 				break;
 				IL_0009:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_24<string>(2323208694u), (Action<int>)null);
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone IM idle", (Action<int>)null);
 				_Pbt0pgZ2cGZkaxR9cQe0r2v2lVd();
 				num = (int)(num2 * 525057927) ^ -514815722;
 			}
@@ -2149,9 +2048,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	public void _d77xq6Q69C4sosexup4aU79nRCI(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts ephoneContacts_0)
 	{
 		_3mKo17hkpGwyDp6sHVZAhV1c6Qv(ephoneContacts_0);
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_27<string>(2202459472u), (Action)delegate
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone IM messaging loop", (Action)delegate
 		{
-			_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_24<string>(2323208694u), (Action<int>)null);
+			_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone IM idle", (Action<int>)null);
 		});
 		_iclFNsZuDOZLCNYXakYmA0rt3UU();
 	}
@@ -2168,9 +2067,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				switch ((num2 = (uint)num ^ 0xF7431DBEu) % 5u)
 				{
 				case 4u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_26<string>(86067375u), (Action)delegate
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone Call start", (Action)delegate
 					{
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_24<string>(4056723591u), (Action<int>)null);
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone Call loop", (Action<int>)null);
 					});
 					_Pbt0pgZ2cGZkaxR9cQe0r2v2lVd();
 					num = ((int)num2 * -1345329803) ^ -741335429;
@@ -2228,7 +2127,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = (int)((num2 * 1194650986) ^ 0x2257C096);
 					continue;
 				case 1u:
-					_Et7ViKuaneif1JVK3bifonUhKPR = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_3(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4(_003CModule_003E.smethod_24<string>(3302882098u), _MCqah9fRROAHE2fkIv4nkhrpDKX[_WLqMMhDU6lDWhPjohexo40VadrB]));
+					_Et7ViKuaneif1JVK3bifonUhKPR = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_3(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4("Assets/GUI/Phone/Gameboxes/", _MCqah9fRROAHE2fkIv4nkhrpDKX[_WLqMMhDU6lDWhPjohexo40VadrB]));
 					_WLqMMhDU6lDWhPjohexo40VadrB++;
 					num = ((int)num2 * -1552007730) ^ -1282079636;
 					continue;
@@ -2253,7 +2152,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	public void _f2CdPIvAGYavrZlA3VXyxB0B8Jh()
 	{
 		_97m6gVcwgWbLFyNUxI3P1KuD0Gn = false;
-		_BphDC8XZceMl5rqVm5zdrD6meOf = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_3(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4(_003CModule_003E.smethod_27<string>(161684817u), _I35ziY7HYJkfL20RDXWOC7Pcv1q[_j2EdRylzMDum240gfhMGkyqki8j]));
+		_BphDC8XZceMl5rqVm5zdrD6meOf = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_3(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4("Assets/GUI/Phone/Gallery/Remy/", _I35ziY7HYJkfL20RDXWOC7Pcv1q[_j2EdRylzMDum240gfhMGkyqki8j]));
 		while (true)
 		{
 			int num = -1668782083;
@@ -2317,7 +2216,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				}
 				break;
 				IL_0009:
-				_BphDC8XZceMl5rqVm5zdrD6meOf = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_3(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4(_003CModule_003E.smethod_28<string>(3745593222u), _I35ziY7HYJkfL20RDXWOC7Pcv1q[int_0]));
+				_BphDC8XZceMl5rqVm5zdrD6meOf = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_3(_4L7hfXrWoDdArQiscG4ukHCV46B).Load<Texture2D>(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4("Assets/GUI/Phone/Gallery/Remy/", _I35ziY7HYJkfL20RDXWOC7Pcv1q[int_0]));
 				_Pbt0pgZ2cGZkaxR9cQe0r2v2lVd();
 				num = ((int)num2 * -372396970) ^ -1478977468;
 			}
@@ -2473,10 +2372,10 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		if (!_kf3EbE0B70xGe1szklqAZyCqoLj)
 		{
-			goto IL_00f3;
+			goto IL_00ef;
 		}
-		goto IL_0141;
-		IL_0141:
+		goto IL_013d;
+		IL_013d:
 		int num;
 		int num2;
 		if (_6T55wit7MiGfAWRkPwjNbJ8N8lG._0IwNM2MxOUN4RsEqXREAdDRe4Ad)
@@ -2489,15 +2388,15 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			num = -1595119236;
 			num2 = -1595119236;
 		}
-		goto IL_00f8;
-		IL_00f8:
+		goto IL_00f4;
+		IL_00f4:
 		while (true)
 		{
 			uint num3;
 			switch ((num3 = (uint)num ^ 0xB0138CD8u) % 10u)
 			{
 			case 8u:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_7(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_6(_6T55wit7MiGfAWRkPwjNbJ8N8lG._4L7hfXrWoDdArQiscG4ukHCV46B), _003CModule_003E.smethod_26<string>(3789294587u));
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_7(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_6(_6T55wit7MiGfAWRkPwjNbJ8N8lG._4L7hfXrWoDdArQiscG4ukHCV46B), "AchievementGeneric5");
 				num = ((int)num3 * -1931914016) ^ -333101813;
 				continue;
 			case 7u:
@@ -2528,9 +2427,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				continue;
 			}
 			case 0u:
-				goto end_IL_00f8;
+				goto end_IL_00f4;
 			case 9u:
-				goto IL_0141;
+				goto IL_013d;
 			case 2u:
 				return;
 			case 3u:
@@ -2556,13 +2455,13 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				num6 = -1342490087;
 			}
 			continue;
-			end_IL_00f8:
+			end_IL_00f4:
 			break;
 		}
-		goto IL_00f3;
-		IL_00f3:
+		goto IL_00ef;
+		IL_00ef:
 		num = -2002951924;
-		goto IL_00f8;
+		goto IL_00f4;
 	}
 
 	public static void _RiDuYMeg3EHnBUteUcAb8VlfQVl()
@@ -2739,7 +2638,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	private void _Pbt0pgZ2cGZkaxR9cQe0r2v2lVd()
 	{
 		_flEA1zdf7DHRkPwzrlsWVEAXZiX = false;
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_6T55wit7MiGfAWRkPwjNbJ8N8lG._hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(932244658u), (Action)_aEgXugtdIuFieAwnDhnIlYNEysg);
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_6T55wit7MiGfAWRkPwjNbJ8N8lG._hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Swipe", (Action)_aEgXugtdIuFieAwnDhnIlYNEysg);
 	}
 
 	private void _iclFNsZuDOZLCNYXakYmA0rt3UU()
@@ -2764,7 +2663,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				}
 				break;
 				IL_0009:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_6T55wit7MiGfAWRkPwjNbJ8N8lG._hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(1267990423u), (Action)_aEgXugtdIuFieAwnDhnIlYNEysg);
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_6T55wit7MiGfAWRkPwjNbJ8N8lG._hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Typing", (Action)_aEgXugtdIuFieAwnDhnIlYNEysg);
 				num = (int)(num2 * 1190521994) ^ -426169389;
 			}
 		}
@@ -2772,7 +2671,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private void _aEgXugtdIuFieAwnDhnIlYNEysg()
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(1524048401u), (Action<int>)null);
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_6T55wit7MiGfAWRkPwjNbJ8N8lG._hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Idle", (Action<int>)null);
 		while (true)
 		{
 			int num = -1033014987;
@@ -2782,7 +2681,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				switch ((num2 = (uint)num ^ 0xF4469482u) % 3u)
 				{
 				case 2u:
-					goto IL_001c;
+					goto IL_0018;
 				default:
 					return;
 				case 0u:
@@ -2791,7 +2690,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					return;
 				}
 				break;
-				IL_001c:
+				IL_0018:
 				_flEA1zdf7DHRkPwzrlsWVEAXZiX = true;
 				num = (int)((num2 * 856223499) ^ 0x7ADE5C58);
 			}
@@ -2998,49 +2897,49 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private ListBox _NWt4WEiiiqjMHAUuqWscxChtSMd()
 	{
-		//IL_0108: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0114: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0124: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0134: Expected O, but got Unknown
-		//IL_01d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0276: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0286: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02c5: Expected O, but got Unknown
-		//IL_02c5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0104: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0109: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0110: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0123: Unknown result type (might be due to invalid IL or missing references)
+		//IL_012c: Expected O, but got Unknown
+		//IL_01c1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_025a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_025f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0266: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0272: Unknown result type (might be due to invalid IL or missing references)
+		//IL_028f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0299: Unknown result type (might be due to invalid IL or missing references)
+		//IL_029e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02a8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02b1: Expected O, but got Unknown
+		//IL_02b1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02b6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02bd: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02ca: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02de: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02da: Expected O, but got Unknown
+		//IL_02dc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02e1: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ee: Expected O, but got Unknown
-		//IL_02f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0303: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0305: Unknown result type (might be due to invalid IL or missing references)
-		//IL_030f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0326: Expected O, but got Unknown
-		//IL_0335: Unknown result type (might be due to invalid IL or missing references)
-		//IL_033f: Expected O, but got Unknown
-		//IL_03b6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03f4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03fe: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0400: Unknown result type (might be due to invalid IL or missing references)
-		//IL_040c: Expected O, but got Unknown
-		//IL_0422: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0427: Unknown result type (might be due to invalid IL or missing references)
-		//IL_042d: Expected O, but got Unknown
+		//IL_02ef: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02fb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0312: Expected O, but got Unknown
+		//IL_0321: Unknown result type (might be due to invalid IL or missing references)
+		//IL_032b: Expected O, but got Unknown
+		//IL_03a2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03a7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03d7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03dc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03e0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03ea: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03ec: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03f8: Expected O, but got Unknown
+		//IL_040e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0413: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0419: Expected O, but got Unknown
 		_jacy9UYskskbRRyetoO92L4m4YS CS_0024_003C_003E8__locals0 = new _jacy9UYskskbRRyetoO92L4m4YS();
 		CS_0024_003C_003E8__locals0._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = this;
 		CustomListBoxItem val2 = default(CustomListBoxItem);
@@ -3075,7 +2974,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = (int)((num2 * 2041616181) ^ 0x13678EAE);
 					continue;
 				case 22u:
-					source = Enum.GetNames(typeof(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts)).Except(new string[1] { _003CModule_003E.smethod_26<string>(3908654793u) }).ToList();
+					source = Enum.GetNames(typeof(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts)).Except(new string[1] { "None" }).ToList();
 					num = -2080445590;
 					continue;
 				case 21u:
@@ -3099,7 +2998,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Label val8 = new Label();
 					((Control)val8).set_Dock((DockStyle)5);
-					val8.set_Text(_003CModule_003E.smethod_25<string>(3630561973u));
+					val8.set_Text("Club Amorous DJ");
 					val8.set_TextAlign((Alignment)4);
 					((Control)val8).set_NoEvents(true);
 					val4 = val8;
@@ -3114,7 +3013,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num10;
 					int num11;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(CS_0024_003C_003E8__locals0._7FpdmRzPrcoARiGqtJekOfu7KqP, _003CModule_003E.smethod_27<string>(3963070885u)) == 20)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(CS_0024_003C_003E8__locals0._7FpdmRzPrcoARiGqtJekOfu7KqP, "DJ") == 20)
 					{
 						num10 = 1332145128;
 						num11 = 1332145128;
@@ -3131,7 +3030,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					ImageControl obj3 = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_21();
 					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj3, (DockStyle)1);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_22(obj3, _003CModule_003E.smethod_28<string>(2111575886u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_22(obj3, "Contact_DJ");
 					obj3.set_TextureRect(new Rectangle((int)num9, 0, (int)num6, 158));
 					((Control)obj3).set_Size(new Point(60, 50));
 					((Control)obj3).set_NoEvents(true);
@@ -3156,7 +3055,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					ImageControl val11 = new ImageControl();
 					((Control)val11).set_Dock((DockStyle)1);
-					val11.set_Texture(_003CModule_003E.smethod_28<string>(2562034234u));
+					val11.set_Texture("PhoneScreen");
 					val11.set_TextureRect(new Rectangle(((Rectangle)(ref val9)).get_Left() + (int)num7, ((Rectangle)(ref val9)).get_Top(), (int)num8, ((Rectangle)(ref val9)).get_Height()));
 					((Control)val11).set_Size(new Point(60, 50));
 					((Control)val11).set_NoEvents(true);
@@ -3304,58 +3203,58 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
 		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0032: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003e: Expected O, but got Unknown
-		//IL_007a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0096: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a6: Expected O, but got Unknown
-		//IL_00af: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b9: Expected O, but got Unknown
-		//IL_016b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0175: Expected O, but got Unknown
-		//IL_02aa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02b4: Expected O, but got Unknown
+		//IL_003a: Expected O, but got Unknown
+		//IL_0076: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0092: Unknown result type (might be due to invalid IL or missing references)
+		//IL_009e: Expected O, but got Unknown
+		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b1: Expected O, but got Unknown
+		//IL_0157: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0161: Expected O, but got Unknown
+		//IL_028e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0298: Expected O, but got Unknown
+		//IL_04d4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04de: Expected O, but got Unknown
+		//IL_04f0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04f5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04fc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0508: Unknown result type (might be due to invalid IL or missing references)
 		//IL_050c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0516: Expected O, but got Unknown
-		//IL_0528: Unknown result type (might be due to invalid IL or missing references)
-		//IL_052d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0534: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0544: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0548: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0554: Expected O, but got Unknown
-		//IL_06ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06e2: Expected O, but got Unknown
-		//IL_077e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0788: Expected O, but got Unknown
-		//IL_079b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07a0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07ce: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07da: Expected O, but got Unknown
-		//IL_0899: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0900: Unknown result type (might be due to invalid IL or missing references)
-		//IL_090a: Expected O, but got Unknown
-		//IL_095d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0962: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0969: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0979: Unknown result type (might be due to invalid IL or missing references)
-		//IL_097d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0989: Expected O, but got Unknown
-		//IL_0a08: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a0d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a14: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a24: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a28: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a34: Expected O, but got Unknown
+		//IL_0518: Expected O, but got Unknown
+		//IL_0662: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0667: Unknown result type (might be due to invalid IL or missing references)
+		//IL_066e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_067a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0687: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0692: Expected O, but got Unknown
+		//IL_072a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0734: Expected O, but got Unknown
+		//IL_0747: Unknown result type (might be due to invalid IL or missing references)
+		//IL_074c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0753: Unknown result type (might be due to invalid IL or missing references)
+		//IL_076e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0772: Unknown result type (might be due to invalid IL or missing references)
+		//IL_077e: Expected O, but got Unknown
+		//IL_0835: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0898: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08a2: Expected O, but got Unknown
+		//IL_08f5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08fa: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0901: Unknown result type (might be due to invalid IL or missing references)
+		//IL_090d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0911: Unknown result type (might be due to invalid IL or missing references)
+		//IL_091d: Expected O, but got Unknown
+		//IL_0998: Unknown result type (might be due to invalid IL or missing references)
+		//IL_099d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_09a4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_09b0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_09b4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_09c0: Expected O, but got Unknown
 		Panel obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_23();
 		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj, (DockStyle)5);
 		Panel val = obj;
@@ -3381,7 +3280,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Button val13 = new Button();
 					((Control)val13).set_Dock((DockStyle)2);
-					((Label)val13).set_Text(_003CModule_003E.smethod_24<string>(1877338507u));
+					((Label)val13).set_Text("Extra: Cooking Mini-Game");
 					((Control)val13).set_Size(new Point(0, 50));
 					val10 = val13;
 					num = ((int)num2 * -1866581454) ^ 0x4EA6BD17;
@@ -3406,7 +3305,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Button val14 = new Button();
 					((Control)val14).set_Dock((DockStyle)2);
-					((Label)val14).set_Text(_003CModule_003E.smethod_27<string>(165302071u));
+					((Label)val14).set_Text("Extra: Shooting Range");
 					((Control)val14).set_Size(new Point(0, 50));
 					val15 = val14;
 					((Control)val15).add_MouseClick((MouseEvent)delegate
@@ -3443,7 +3342,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num40;
 					int num41;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_28<string>(1316348461u)) != 50)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("LexDate") != 50)
 					{
 						num40 = 957516790;
 						num41 = 957516790;
@@ -3460,7 +3359,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num30;
 					int num31;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_26<string>(348846420u)) > 20)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("RemyDate") > 20)
 					{
 						num30 = -1477643547;
 						num31 = -1477643547;
@@ -3474,13 +3373,13 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 55u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_25<string>(4018527200u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "LexPostDate";
 					num = ((int)num2 * -265978130) ^ -767239042;
 					continue;
 				case 54u:
 					((Control)val10).add_MouseClick((MouseEvent)delegate
 					{
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_27<string>(2902340140u));
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "MiniGameCooking");
 						while (true)
 						{
 							int num46 = -1423211482;
@@ -3490,7 +3389,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								switch ((num47 = (uint)num46 ^ 0xB40C3BEDu) % 3u)
 								{
 								case 2u:
-									goto IL_0017;
+									goto IL_0013;
 								default:
 									return;
 								case 0u:
@@ -3499,7 +3398,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 									return;
 								}
 								break;
-								IL_0017:
+								IL_0013:
 								_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 								num46 = ((int)num47 * -1979497693) ^ -1261130622;
 							}
@@ -3541,7 +3440,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num26;
 					int num27;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_25<string>(1882105499u)) != 70)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("ZenithDate") != 70)
 					{
 						num26 = 315625122;
 						num27 = 315625122;
@@ -3561,7 +3460,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num19;
 					int num20;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_27<string>(3748777576u)) == 60)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("MercyDate") == 60)
 					{
 						num19 = -351952551;
 						num20 = -351952551;
@@ -3577,8 +3476,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 45u:
 					((Control)val8).add_MouseClick((MouseEvent)delegate
 					{
-						//IL_00a9: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0136: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0099: Unknown result type (might be due to invalid IL or missing references)
+						//IL_011a: Unknown result type (might be due to invalid IL or missing references)
 						string string_ = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_77((MemberInfo)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_76((object)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_75(_4L7hfXrWoDdArQiscG4ukHCV46B)));
 						string string_2 = default(string);
 						while (true)
@@ -3593,7 +3492,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								{
 									int num52;
 									int num53;
-									if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, _003CModule_003E.smethod_24<string>(2366219591u)))
+									if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, "LivingRoomScene"))
 									{
 										num52 = -536382399;
 										num53 = -536382399;
@@ -3609,7 +3508,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								case 9u:
 								{
 									int num51;
-									if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, _003CModule_003E.smethod_24<string>(3601104483u)))
+									if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, "BedroomScene"))
 									{
 										num48 = -1446054941;
 										num51 = -1446054941;
@@ -3626,7 +3525,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 									num48 = -627923288;
 									continue;
 								case 4u:
-									_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_003CModule_003E.smethod_28<string>(1817897788u), _003CModule_003E.smethod_27<string>(2895105632u), Color.get_White());
+									_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81("<i>Reception is really bad at the moment, I should try again when I'm back at home.</i>", "%playername%", Color.get_White());
 									num48 = ((int)num49 * -953685960) ^ 0x8E3ADE7;
 									continue;
 								case 3u:
@@ -3647,7 +3546,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 									continue;
 								}
 								case 2u:
-									_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_37(_003CModule_003E.smethod_27<string>(2415877458u), _H6UwM4zjGzglzMY478iBDDvTk6I.ToString(), _003CModule_003E.smethod_27<string>(1461038364u)), _003CModule_003E.smethod_27<string>(2895105632u), Color.get_White());
+									_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_37("<i>", _H6UwM4zjGzglzMY478iBDDvTk6I.ToString(), " is kind of... preoccupied right now.</i>"), "%playername%", Color.get_White());
 									num48 = ((int)num49 * -921096924) ^ 0xB72AA17;
 									continue;
 								case 1u:
@@ -3655,7 +3554,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 									_TwlwMC1hhdSzamwGWEBxuUkz1gH twlwMC1hhdSzamwGWEBxuUkz1gH = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_78(_4L7hfXrWoDdArQiscG4ukHCV46B);
 									string_2 = ((twlwMC1hhdSzamwGWEBxuUkz1gH != null) ? _poenyHBGUusBcnNcTFB9MQBV72R.smethod_77((MemberInfo)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_79((object)twlwMC1hhdSzamwGWEBxuUkz1gH)) : null);
 									int num50;
-									if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_80(string_, _003CModule_003E.smethod_24<string>(3174320736u)))
+									if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_80(string_, "PlayerSexScene"))
 									{
 										num48 = -1023079257;
 										num50 = -1023079257;
@@ -3690,7 +3589,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = ((int)num2 * -250980110) ^ 0x4BBD0C90;
 					continue;
 				case 43u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_26<string>(107640269u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "CobySexscene";
 					num = (int)((num2 * 809617180) ^ 0x48DF415A);
 					continue;
 				case 42u:
@@ -3700,7 +3599,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num42;
 					int num43;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_27<string>(2765000450u)) == 20)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("CobyDate") == 20)
 					{
 						num42 = -1622769509;
 						num43 = -1622769509;
@@ -3714,11 +3613,11 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 40u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_27<string>(651764753u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "SethPostDate";
 					num = (int)(num2 * 1378359636) ^ -961584797;
 					continue;
 				case 39u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_26<string>(1471026604u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "DustinPostDate";
 					num = (int)(num2 * 1229705050) ^ -1481146667;
 					continue;
 				case 38u:
@@ -3759,7 +3658,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num23;
 					int num24;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_25<string>(1882105499u)) <= 20)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("ZenithDate") <= 20)
 					{
 						num23 = 1271361936;
 						num24 = 1271361936;
@@ -3776,7 +3675,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num17;
 					int num18;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_27<string>(2775852212u)) != 40)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("SethDate") != 40)
 					{
 						num17 = -2101580998;
 						num18 = -2101580998;
@@ -3805,7 +3704,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 32u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_28<string>(754280821u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "JaxPostDate";
 					num = (int)(num2 * 688223946) ^ -219584857;
 					continue;
 				case 31u:
@@ -3828,22 +3727,18 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					((Control)val6).add_MouseClick((MouseEvent)delegate
 					{
 						_3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44(_003CModule_003E.smethod_26<string>(556006248u), (object)_H6UwM4zjGzglzMY478iBDDvTk6I), new string[2]
-						{
-							_003CModule_003E.smethod_27<string>(628194621u),
-							_003CModule_003E.smethod_26<string>(1267950029u)
-						}, 250, (Action<int>)delegate(int int_0)
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44("Are you sure you wish to remove {0}? This will reset all progression!", (object)_H6UwM4zjGzglzMY478iBDDvTk6I), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 						{
 							if (int_0 == 1)
 							{
-								goto IL_0077;
+								goto IL_006f;
 							}
-							goto IL_00a5;
-							IL_00a5:
+							goto IL_009d;
+							IL_009d:
 							_270ZVixWLhgEiLA6QosapJMyU6h();
 							int num56 = -1472990853;
-							goto IL_007c;
-							IL_007c:
+							goto IL_0074;
+							IL_0074:
 							while (true)
 							{
 								uint num57;
@@ -3854,7 +3749,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 									num56 = ((int)num57 * -1504968640) ^ -671097885;
 									continue;
 								case 2u:
-									_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44(_003CModule_003E.smethod_27<string>(502582016u), (object)_H6UwM4zjGzglzMY478iBDDvTk6I), 250, _003CModule_003E.smethod_26<string>(2746613317u), (Action)delegate
+									_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44("{0} will be available again after you went home.", (object)_H6UwM4zjGzglzMY478iBDDvTk6I), 250, "OK", (Action)delegate
 									{
 										_270ZVixWLhgEiLA6QosapJMyU6h();
 										_3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
@@ -3864,7 +3759,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								case 0u:
 									break;
 								case 1u:
-									goto IL_00a5;
+									goto IL_009d;
 								case 3u:
 									return;
 								default:
@@ -3873,16 +3768,16 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								}
 								break;
 							}
-							goto IL_0077;
-							IL_0077:
+							goto IL_006f;
+							IL_006f:
 							num56 = -174232024;
-							goto IL_007c;
+							goto IL_0074;
 						});
 					});
 					((ActiveList<Control>)(object)val.get_Content().get_Controls()).Add((Control)(object)val6);
 					Button val7 = new Button();
 					((Control)val7).set_Dock((DockStyle)2);
-					((Label)val7).set_Text(_003CModule_003E.smethod_24<string>(3420944622u));
+					((Label)val7).set_Text("Call");
 					((Control)val7).set_Size(new Point(0, 50));
 					val8 = val7;
 					num = ((int)num2 * -1596962574) ^ -932229052;
@@ -3910,14 +3805,14 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 27u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_25<string>(4284545316u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "MercyPostDate";
 					num = ((int)num2 * -777372813) ^ 0x4DC2ABE9;
 					continue;
 				case 26u:
 				{
 					int num38;
 					int num39;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_25<string>(2822193641u)) == 60)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("SkyeDate") == 60)
 					{
 						num38 = 574382742;
 						num39 = 574382742;
@@ -3934,7 +3829,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num36;
 					int num37;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_27<string>(1603102555u)) <= 30)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("RemyDate") <= 30)
 					{
 						num36 = 1967021121;
 						num37 = 1967021121;
@@ -3951,7 +3846,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num32;
 					int num33;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_24<string>(1967726989u)) != 70)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("DustinDate") != 70)
 					{
 						num32 = -1471107078;
 						num33 = -1471107078;
@@ -3983,7 +3878,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					CustomImageControl val16 = new CustomImageControl();
 					((Control)val16).set_Dock((DockStyle)2);
-					((ImageControl)val16).set_Texture(_003CModule_003E.smethod_27<string>(2608583205u));
+					((ImageControl)val16).set_Texture("PhoneScreen");
 					((ImageControl)val16).set_TextureRect(_kALYOlSwbvFyd9uFqFZW8Y2IsnL[_H6UwM4zjGzglzMY478iBDDvTk6I]);
 					val4 = (ImageControl)val16;
 					((ActiveList<Control>)(object)val.get_Content().get_Controls()).Add((Control)(object)val9);
@@ -3991,7 +3886,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 20u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_27<string>(2085832021u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "RemyPostDate";
 					num = (int)(num2 * 95668514) ^ -1357565809;
 					continue;
 				case 19u:
@@ -4021,7 +3916,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Button val11 = new Button();
 					((Control)val11).set_Dock((DockStyle)2);
-					((Label)val11).set_Text(_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? _003CModule_003E.smethod_25<string>(1399710233u) : _003CModule_003E.smethod_27<string>(1849835188u));
+					((Label)val11).set_Text(_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? "Extra: Love scene" : "Extra: Sexscene");
 					((Control)val11).set_Size(new Point(0, 50));
 					val12 = val11;
 					num = 425036234;
@@ -4048,7 +3943,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num15;
 					int num16;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_27<string>(1603102555u)) != 40)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("RemyDate") != 40)
 					{
 						num15 = 547190670;
 						num16 = 547190670;
@@ -4069,7 +3964,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					Label obj2 = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_24();
 					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj2, (DockStyle)2);
 					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25(obj2, _H6UwM4zjGzglzMY478iBDDvTk6I.ToString());
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_26((Control)(object)obj2, _003CModule_003E.smethod_24<string>(766515475u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_26((Control)(object)obj2, "button");
 					((Control)obj2).set_Size(new Point(0, 40));
 					((Control)obj2).set_NoEvents(true);
 					val9 = obj2;
@@ -4080,7 +3975,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num12;
 					int num13;
-					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK(_003CModule_003E.smethod_27<string>(1102170857u)) != 40)
+					if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("JaxDate") != 40)
 					{
 						num12 = -2011164427;
 						num13 = -2011164427;
@@ -4096,7 +3991,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 10u:
 					((Control)val3).add_MouseClick((MouseEvent)delegate
 					{
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_26<string>(1361564620u));
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "NudesRemy");
 						_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 					});
 					((ActiveList<Control>)(object)val.get_Content().get_Controls()).Add((Control)(object)val3);
@@ -4123,14 +4018,14 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Button val5 = new Button();
 					((Control)val5).set_Dock((DockStyle)2);
-					((Label)val5).set_Text(_003CModule_003E.smethod_28<string>(2334007637u));
+					((Label)val5).set_Text("Delete contact");
 					((Control)val5).set_Size(new Point(0, 50));
 					val6 = val5;
 					num = ((int)num2 * -284406673) ^ -297361974;
 					continue;
 				}
 				case 7u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_27<string>(3519899289u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "ZenithPostDate";
 					num = ((int)num2 * -1594970739) ^ 0x27E23018;
 					continue;
 				case 5u:
@@ -4167,14 +4062,14 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Button val2 = new Button();
 					((Control)val2).set_Dock((DockStyle)2);
-					((Label)val2).set_Text(_003CModule_003E.smethod_24<string>(715049790u));
+					((Label)val2).set_Text("Extra: Nude pictures");
 					((Control)val2).set_Size(new Point(0, 50));
 					val3 = val2;
 					num = (int)(num2 * 1526469372) ^ -1250356722;
 					continue;
 				}
 				case 2u:
-					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = _003CModule_003E.smethod_26<string>(3844779602u);
+					k3u7ViHsWHD7nMkxlJgXOyDYc0F._nc2gJWKJm6yAMtppwpcfigGPFj3 = "SkyePostDate";
 					num = (int)(num2 * 1052413313) ^ -1800626780;
 					continue;
 				case 1u:
@@ -4211,18 +4106,18 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0046: Expected O, but got Unknown
-		//IL_0061: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006b: Expected O, but got Unknown
-		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0037: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0042: Expected O, but got Unknown
+		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0067: Expected O, but got Unknown
+		//IL_00e8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0116: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0122: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0132: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0136: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0141: Expected O, but got Unknown
+		//IL_0126: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0131: Expected O, but got Unknown
 		Panel obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_23();
 		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj, (DockStyle)5);
 		Panel val = obj;
@@ -4241,7 +4136,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					CustomImageControl val6 = new CustomImageControl();
 					((Control)val6).set_Dock((DockStyle)2);
-					((ImageControl)val6).set_Texture(_003CModule_003E.smethod_24<string>(2766284914u));
+					((ImageControl)val6).set_Texture("Contact_DJ");
 					((ImageControl)val6).set_TextureRect(new Rectangle(0, 0, 268, 158));
 					val5 = (ImageControl)val6;
 					num = (int)(num2 * 70838874) ^ -1055093194;
@@ -4250,18 +4145,18 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 5u:
 					((Control)val3).add_MouseClick((MouseEvent)delegate
 					{
-						//IL_007d: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0071: Unknown result type (might be due to invalid IL or missing references)
 						string string_ = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_77((MemberInfo)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_76((object)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_75(_4L7hfXrWoDdArQiscG4ukHCV46B)));
-						if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_83(string_, _003CModule_003E.smethod_27<string>(3626898187u)))
+						if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_83(string_, "Club"))
 						{
-							goto IL_003f;
+							goto IL_003b;
 						}
-						goto IL_0069;
-						IL_0069:
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_003CModule_003E.smethod_28<string>(238170972u), _003CModule_003E.smethod_26<string>(2524404853u), Color.get_White());
+						goto IL_0065;
+						IL_0065:
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81("<i>Hmm, the operator is telling me: 'The number you are trying to reach is currently unavailable'. I guess the DJ only has his phone enabled during Club hours.</i>", "%playername%", Color.get_White());
 						int num3 = 647745293;
-						goto IL_0044;
-						IL_0044:
+						goto IL_0040;
+						IL_0040:
 						while (true)
 						{
 							uint num4;
@@ -4276,7 +4171,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 							default:
 								return;
 							case 3u:
-								goto IL_0069;
+								goto IL_0065;
 							case 1u:
 								return;
 							case 4u:
@@ -4284,10 +4179,10 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 							}
 							break;
 						}
-						goto IL_003f;
-						IL_003f:
+						goto IL_003b;
+						IL_003b:
 						num3 = 1184456034;
-						goto IL_0044;
+						goto IL_0040;
 					});
 					((ActiveList<Control>)(object)val.get_Content().get_Controls()).Add((Control)(object)val4);
 					((ActiveList<Control>)(object)val.get_Content().get_Controls()).Add((Control)(object)val5);
@@ -4301,8 +4196,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Label obj2 = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_24();
 					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj2, (DockStyle)2);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25(obj2, _003CModule_003E.smethod_27<string>(3008231791u));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_26((Control)(object)obj2, _003CModule_003E.smethod_27<string>(604097052u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25(obj2, "Club Amorous DJ");
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_26((Control)(object)obj2, "button");
 					((Control)obj2).set_Size(new Point(0, 40));
 					((Control)obj2).set_NoEvents(true);
 					val4 = obj2;
@@ -4313,7 +4208,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Button val2 = new Button();
 					((Control)val2).set_Dock((DockStyle)2);
-					((Label)val2).set_Text(_003CModule_003E.smethod_25<string>(2068623267u));
+					((Label)val2).set_Text("Request a song");
 					((Control)val2).set_Size(new Point(0, 50));
 					val3 = val2;
 					num = (int)((num2 * 677424184) ^ 0x53F6C141);
@@ -4339,20 +4234,20 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00e5: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0114: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0131: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0148: Expected O, but got Unknown
-		//IL_0148: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0154: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0158: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0162: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0184: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018d: Expected O, but got Unknown
+		//IL_010c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0113: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0129: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0130: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0137: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0140: Expected O, but got Unknown
+		//IL_0140: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0145: Unknown result type (might be due to invalid IL or missing references)
+		//IL_014c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0150: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0171: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0178: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0181: Expected O, but got Unknown
 		ListBox val = _Y29nu3VoVEY6acDadsfRh60BNDh();
 		List<_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._vNekDVpW2fr7UkjA16E9ifFmD9s> list = _KZ7hNP1K5E99Xfup1lTZ9UDrxPE._LUJAgYjQ8oEpFgPKC5CzY9Ne5ju.OrderBy((_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._vNekDVpW2fr7UkjA16E9ifFmD9s _vNekDVpW2fr7UkjA16E9ifFmD9s_0) => _vNekDVpW2fr7UkjA16E9ifFmD9s_0._D5QiLGGNtfoCEnZIUPvH4OKqUabA).ToList();
 		using List<_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._vNekDVpW2fr7UkjA16E9ifFmD9s>.Enumerator enumerator = list.GetEnumerator();
@@ -4400,7 +4295,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					Label val3 = new Label();
 					((Control)val3).set_Dock((DockStyle)2);
 					((Control)val3).set_Size(new Point(0, 50));
-					val3.set_Text(_003CModule_003E.smethod_25<string>(2270070726u) + current._D5QiLGGNtfoCEnZIUPvH4OKqUabA + _003CModule_003E.smethod_24<string>(4110983243u));
+					val3.set_Text("\"" + current._D5QiLGGNtfoCEnZIUPvH4OKqUabA + "\"");
 					val3.set_TextAlign((Alignment)4);
 					val3.set_TextColor(ColorInt.RGB(255, 255, 0));
 					val3.set_TextWrap(true);
@@ -4410,7 +4305,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					Label val5 = new Label();
 					((Control)val5).set_Dock((DockStyle)2);
 					((Control)val5).set_Size(new Point(0, 40));
-					val5.set_Text(_003CModule_003E.smethod_28<string>(532174245u) + current._ynar3ZAutlIbbTWMBGvo1mdRNYz);
+					val5.set_Text("by " + current._ynar3ZAutlIbbTWMBGvo1mdRNYz);
 					val5.set_TextAlign((Alignment)4);
 					((Control)val5).set_NoEvents(true);
 					Label val6 = val5;
@@ -4442,39 +4337,39 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001f: Expected O, but got Unknown
-		//IL_0061: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008c: Expected O, but got Unknown
-		//IL_00d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00db: Expected O, but got Unknown
-		//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0104: Expected O, but got Unknown
-		//IL_0119: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0124: Expected O, but got Unknown
-		//IL_0133: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0148: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0158: Expected O, but got Unknown
-		//IL_01f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0201: Expected O, but got Unknown
-		//IL_0210: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0088: Expected O, but got Unknown
+		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d7: Expected O, but got Unknown
+		//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ed: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00fc: Expected O, but got Unknown
+		//IL_0111: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0116: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011c: Expected O, but got Unknown
+		//IL_012b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0130: Unknown result type (might be due to invalid IL or missing references)
+		//IL_013c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0140: Unknown result type (might be due to invalid IL or missing references)
+		//IL_014c: Expected O, but got Unknown
+		//IL_01ea: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ef: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f5: Expected O, but got Unknown
+		//IL_0204: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0209: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0215: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0225: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0229: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0235: Expected O, but got Unknown
-		//IL_0245: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0219: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0225: Expected O, but got Unknown
+		//IL_0235: Unknown result type (might be due to invalid IL or missing references)
+		//IL_023a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0246: Unknown result type (might be due to invalid IL or missing references)
 		//IL_024a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_025a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_025e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0269: Expected O, but got Unknown
+		//IL_0255: Expected O, but got Unknown
 		ListBox val = _Y29nu3VoVEY6acDadsfRh60BNDh();
 		ListBoxItem val13 = default(ListBoxItem);
 		ListBoxItem val4 = default(ListBoxItem);
@@ -4503,7 +4398,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 11u:
 				{
 					ListBoxItem obj3 = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_28();
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj3, _003CModule_003E.smethod_27<string>(3759513376u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj3, "Messages");
 					((Control)obj3).set_Size(new Point(0, 50));
 					val7 = obj3;
 					ListBoxItem obj4 = val7;
@@ -4540,7 +4435,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					}
 					((Control)obj6).add_MouseClick((MouseEvent)obj7);
 					ListBoxItem val10 = new ListBoxItem();
-					((Label)val10).set_Text(_003CModule_003E.smethod_27<string>(1617455609u));
+					((Label)val10).set_Text("Save");
 					((Control)val10).set_Size(new Point(0, 50));
 					val11 = val10;
 					ListBoxItem obj8 = val11;
@@ -4561,7 +4456,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 8u:
 				{
 					ListBoxItem val14 = new ListBoxItem();
-					((Label)val14).set_Text(_003CModule_003E.smethod_26<string>(2631381098u));
+					((Label)val14).set_Text("Steam Achievements");
 					((Control)val14).set_Size(new Point(0, 50));
 					val13 = val14;
 					num = ((int)num2 * -1731765626) ^ 0x6D808009;
@@ -4612,7 +4507,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 2u:
 				{
 					ListBoxItem val5 = new ListBoxItem();
-					((Label)val5).set_Text(_003CModule_003E.smethod_25<string>(3008711409u));
+					((Label)val5).set_Text("Load");
 					((Control)val5).set_Size(new Point(0, 50));
 					val2 = val5;
 					num = (int)((num2 * 400213404) ^ 0x323B9BC9);
@@ -4621,7 +4516,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 1u:
 				{
 					ListBoxItem val3 = new ListBoxItem();
-					((Label)val3).set_Text(_003CModule_003E.smethod_24<string>(2948694526u));
+					((Label)val3).set_Text("Achievements");
 					((Control)val3).set_Size(new Point(0, 50));
 					val4 = val3;
 					num = (int)(num2 * 438264422) ^ -1140545432;
@@ -4643,32 +4538,32 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private ListBox _ZAzvI9G8CsjLJ0AWtoSCmHUuR2q()
 	{
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0145: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0141: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0146: Unknown result type (might be due to invalid IL or missing references)
 		//IL_014a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0158: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0166: Expected O, but got Unknown
-		//IL_0170: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017a: Expected O, but got Unknown
-		//IL_018d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0192: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0199: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fe: Expected O, but got Unknown
-		//IL_0259: Unknown result type (might be due to invalid IL or missing references)
-		//IL_025e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0265: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0277: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0286: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028f: Expected O, but got Unknown
+		//IL_0154: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0156: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0162: Expected O, but got Unknown
+		//IL_016c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0176: Expected O, but got Unknown
+		//IL_0189: Unknown result type (might be due to invalid IL or missing references)
+		//IL_018e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0195: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ce: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01df: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ed: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f6: Expected O, but got Unknown
+		//IL_0251: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0256: Unknown result type (might be due to invalid IL or missing references)
+		//IL_025d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_026f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0274: Unknown result type (might be due to invalid IL or missing references)
+		//IL_027e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0287: Expected O, but got Unknown
 		ListBox val = _Y29nu3VoVEY6acDadsfRh60BNDh();
 		ListBoxItem val8 = default(ListBoxItem);
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = default(_opIJo2jLUqdOL5yAFP4yzXce0DG);
@@ -4687,7 +4582,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 6u:
 				{
 					ListBoxItem obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_28();
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _003CModule_003E.smethod_27<string>(1138227435u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, "There are no messages yet!");
 					((Control)obj).set_Size(new Point(0, 50));
 					val8 = obj;
 					num = (int)((num2 * 793398456) ^ 0x67172064);
@@ -4764,7 +4659,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								{
 									Label val5 = new Label();
 									((Control)val5).set_Dock((DockStyle)5);
-									val5.set_Text(fnNGEJUaoVFTsE2HNBVI37kl4xb._qsRYa7wg9K5fRrgfqdfMwLILTrbA._D5QiLGGNtfoCEnZIUPvH4OKqUabA + _003CModule_003E.smethod_24<string>(4210709244u) + fnNGEJUaoVFTsE2HNBVI37kl4xb._qsRYa7wg9K5fRrgfqdfMwLILTrbA._QkxGXtWLzE0Z8JKyKkMiiph9giD.ToShortDateString());
+									val5.set_Text(fnNGEJUaoVFTsE2HNBVI37kl4xb._qsRYa7wg9K5fRrgfqdfMwLILTrbA._D5QiLGGNtfoCEnZIUPvH4OKqUabA + "\r\n" + fnNGEJUaoVFTsE2HNBVI37kl4xb._qsRYa7wg9K5fRrgfqdfMwLILTrbA._QkxGXtWLzE0Z8JKyKkMiiph9giD.ToShortDateString());
 									val5.set_TextAlign((Alignment)3);
 									((Control)val5).set_Margin(new Margin(10, 0, 10, 0));
 									val5.set_AutoEllipsis(true);
@@ -4816,27 +4711,27 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						{
 							while (true)
 							{
-								IL_034b:
+								IL_0343:
 								int num5 = 1070033535;
 								while (true)
 								{
 									switch ((num2 = (uint)num5 ^ 0x2B8EBABFu) % 3u)
 									{
 									case 1u:
-										goto IL_0319;
+										goto IL_0311;
 									default:
-										goto end_IL_032d;
+										goto end_IL_0325;
 									case 2u:
 										break;
 									case 0u:
-										goto end_IL_032d;
+										goto end_IL_0325;
 									}
-									goto IL_034b;
-									IL_0319:
+									goto IL_0343;
+									IL_0311:
 									enumerator.Dispose();
 									num5 = (int)(num2 * 1239442766) ^ -1378844376;
 									continue;
-									end_IL_032d:
+									end_IL_0325:
 									break;
 								}
 								break;
@@ -4976,39 +4871,39 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cb: Expected O, but got Unknown
-		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0120: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0131: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0148: Expected O, but got Unknown
-		//IL_015b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0160: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c7: Expected O, but got Unknown
+		//IL_00fc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0101: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0108: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0119: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0126: Unknown result type (might be due to invalid IL or missing references)
+		//IL_012d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0134: Unknown result type (might be due to invalid IL or missing references)
+		//IL_013b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0144: Expected O, but got Unknown
+		//IL_0157: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0163: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0167: Unknown result type (might be due to invalid IL or missing references)
-		//IL_016b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0175: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0177: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0181: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0191: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0199: Expected O, but got Unknown
-		//IL_01b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bc: Expected O, but got Unknown
-		//IL_01dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01fd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0209: Expected O, but got Unknown
+		//IL_0171: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0173: Unknown result type (might be due to invalid IL or missing references)
+		//IL_017d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0189: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0191: Expected O, but got Unknown
+		//IL_01aa: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b4: Expected O, but got Unknown
+		//IL_01d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01da: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ed: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01fd: Expected O, but got Unknown
 		Panel obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_23();
 		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj, (DockStyle)5);
 		Panel val = obj;
@@ -5037,7 +4932,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Label val10 = new Label();
 					((Control)val10).set_Dock((DockStyle)5);
-					val10.set_Text(_ERdtO3cV05TBYFV0mT86wv01GJf._D5QiLGGNtfoCEnZIUPvH4OKqUabA + _003CModule_003E.smethod_24<string>(4210709244u) + _ERdtO3cV05TBYFV0mT86wv01GJf._QkxGXtWLzE0Z8JKyKkMiiph9giD.ToShortDateString());
+					val10.set_Text(_ERdtO3cV05TBYFV0mT86wv01GJf._D5QiLGGNtfoCEnZIUPvH4OKqUabA + "\r\n" + _ERdtO3cV05TBYFV0mT86wv01GJf._QkxGXtWLzE0Z8JKyKkMiiph9giD.ToShortDateString());
 					val10.set_TextAlign((Alignment)3);
 					((Control)val10).set_Margin(new Margin(10, 0, 10, 0));
 					val10.set_AutoEllipsis(true);
@@ -5068,7 +4963,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					((Control)val6).set_Dock((DockStyle)2);
 					((Control)val6).set_Size(new Point(0, 60));
 					((Control)val6).set_Padding(new Margin(2));
-					((Control)val6).set_Style(_003CModule_003E.smethod_26<string>(2774799937u));
+					((Control)val6).set_Style("button");
 					((Control)val6).set_NoEvents(true);
 					val5 = val6;
 					num = ((int)num2 * -1186841308) ^ -1067010746;
@@ -5078,11 +4973,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					((Control)val3).add_MouseClick((MouseEvent)delegate
 					{
 						_3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
-						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_25<string>(105502083u), new string[2]
-						{
-							_003CModule_003E.smethod_27<string>(628194621u),
-							_003CModule_003E.smethod_25<string>(988971570u)
-						}, 250, (Action<int>)delegate(int int_0)
+						_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Are you sure you wish to remove this message?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 						{
 							if (int_0 == 1)
 							{
@@ -5135,7 +5026,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Button val4 = new Button();
 					((Control)val4).set_Dock((DockStyle)2);
-					((Label)val4).set_Text(_003CModule_003E.smethod_24<string>(651246918u));
+					((Label)val4).set_Text("Delete message");
 					((Control)val4).set_Size(new Point(0, 50));
 					val3 = val4;
 					num = ((int)num2 * -94919089) ^ 0x46898834;
@@ -5156,7 +5047,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
 		//IL_003f: Expected O, but got Unknown
-		//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f1: Unknown result type (might be due to invalid IL or missing references)
 		ListBox val = _Y29nu3VoVEY6acDadsfRh60BNDh();
 		List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> list = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_31(bool_0: true);
 		using List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p>.Enumerator enumerator = list.GetEnumerator();
@@ -5206,7 +5097,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 6u:
 				{
 					ListBoxItem obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_28();
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_37(string_, _003CModule_003E.smethod_26<string>(161483036u), string_2));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_37(string_, "\r\n", string_2));
 					((Control)obj).set_Size(new Point(0, 50));
 					val2 = obj;
 					num = ((int)num3 * -2144537798) ^ 0x62FDC84F;
@@ -5243,7 +5134,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		//IL_00eb: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00f5: Expected O, but got Unknown
-		//IL_0134: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0130: Unknown result type (might be due to invalid IL or missing references)
 		ListBox val = _Y29nu3VoVEY6acDadsfRh60BNDh();
 		List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> list = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_31(bool_0: false);
 		using List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p>.Enumerator enumerator = list.GetEnumerator();
@@ -5305,7 +5196,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 0u:
 				{
 					ListBoxItem obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_28();
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_37(string_, _003CModule_003E.smethod_26<string>(161483036u), string_2));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_37(string_, "\r\n", string_2));
 					((Control)obj).set_Size(new Point(0, 50));
 					val2 = obj;
 					num = ((int)num3 * -164260584) ^ -1916582018;
@@ -5328,52 +5219,52 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c4: Expected O, but got Unknown
-		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0109: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0117: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0131: Expected O, but got Unknown
-		//IL_0151: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015b: Expected O, but got Unknown
+		//IL_00c0: Expected O, but got Unknown
+		//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00df: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0101: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0125: Expected O, but got Unknown
+		//IL_0145: Unknown result type (might be due to invalid IL or missing references)
+		//IL_014f: Expected O, but got Unknown
+		//IL_014f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0154: Unknown result type (might be due to invalid IL or missing references)
 		//IL_015b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0160: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0167: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0178: Expected O, but got Unknown
-		//IL_018c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0191: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0198: Unknown result type (might be due to invalid IL or missing references)
-		//IL_019f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01aa: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0168: Expected O, but got Unknown
+		//IL_017c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0181: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0188: Unknown result type (might be due to invalid IL or missing references)
+		//IL_018f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_019a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01bc: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01c0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01de: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f8: Expected O, but got Unknown
-		//IL_0205: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020f: Expected O, but got Unknown
-		//IL_0231: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0250: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0255: Unknown result type (might be due to invalid IL or missing references)
-		//IL_025c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0263: Unknown result type (might be due to invalid IL or missing references)
-		//IL_026e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0284: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0294: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0298: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02a2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02bc: Expected O, but got Unknown
-		//IL_02c9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02d3: Expected O, but got Unknown
-		//IL_02d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02df: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f1: Expected O, but got Unknown
+		//IL_01ca: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e0: Expected O, but got Unknown
+		//IL_01ed: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f7: Expected O, but got Unknown
+		//IL_0219: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0238: Unknown result type (might be due to invalid IL or missing references)
+		//IL_023d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0244: Unknown result type (might be due to invalid IL or missing references)
+		//IL_024b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0256: Unknown result type (might be due to invalid IL or missing references)
+		//IL_026c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0278: Unknown result type (might be due to invalid IL or missing references)
+		//IL_027c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0286: Unknown result type (might be due to invalid IL or missing references)
+		//IL_029c: Expected O, but got Unknown
+		//IL_02a9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02b3: Expected O, but got Unknown
+		//IL_02b3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02b8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02bf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02cd: Expected O, but got Unknown
 		Panel val = default(Panel);
 		Label val9 = default(Label);
 		Slider _XEgAfmv7sJWJSaC2diC3eaD4Fgl = default(Slider);
@@ -5405,16 +5296,16 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Label val8 = new Label();
 					((Control)val8).set_Dock((DockStyle)2);
-					val8.set_Text(_003CModule_003E.smethod_25<string>(1598470939u));
+					val8.set_Text("Master Volume");
 					val9 = val8;
 					Slider val10 = new Slider();
 					((Control)val10).set_Dock((DockStyle)2);
 					val10.set_Orientation((Orientation)0);
 					val10.set_Steps(100f);
 					val10.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * 100f);
-					((Control)val10).set_Style(_003CModule_003E.smethod_25<string>(1799918398u));
+					((Control)val10).set_Style("scrollSlider");
 					((Control)val10).set_Size(new Point(0, 30));
-					((Control)val10.get_Button()).set_Style(_003CModule_003E.smethod_25<string>(2065936514u));
+					((Control)val10.get_Button()).set_Style("scrollSliderButton");
 					_XEgAfmv7sJWJSaC2diC3eaD4Fgl = val10;
 					num = ((int)num2 * -1055974064) ^ -1551136675;
 					continue;
@@ -5427,7 +5318,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					});
 					Label val6 = new Label();
 					((Control)val6).set_Dock((DockStyle)2);
-					val6.set_Text(_003CModule_003E.smethod_26<string>(1262978551u));
+					val6.set_Text("Music Volume");
 					val7 = val6;
 					num = ((int)num2 * -810564141) ^ 0x575222A7;
 					continue;
@@ -5439,9 +5330,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					val5.set_Orientation((Orientation)0);
 					val5.set_Steps(100f);
 					val5.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH * 100f);
-					((Control)val5).set_Style(_003CModule_003E.smethod_27<string>(3707005212u));
+					((Control)val5).set_Style("scrollSlider");
 					((Control)val5).set_Size(new Point(0, 30));
-					((Control)val5.get_Button()).set_Style(_003CModule_003E.smethod_25<string>(2065936514u));
+					((Control)val5.get_Button()).set_Style("scrollSliderButton");
 					_5mK9ExiyKm0md8q4J1C6xc4TzdF = val5;
 					_5mK9ExiyKm0md8q4J1C6xc4TzdF.add_ValueChanged((VoidEvent)delegate
 					{
@@ -5466,9 +5357,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					val2.set_Orientation((Orientation)0);
 					val2.set_Steps(100f);
 					val2.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * 100f);
-					((Control)val2).set_Style(_003CModule_003E.smethod_26<string>(3993125185u));
+					((Control)val2).set_Style("scrollSlider");
 					((Control)val2).set_Size(new Point(0, 30));
-					((Control)val2.get_Button()).set_Style(_003CModule_003E.smethod_27<string>(370494264u));
+					((Control)val2.get_Button()).set_Style("scrollSliderButton");
 					_gjeIIVx9bHyd0aMj0WD483nrLWK = val2;
 					_gjeIIVx9bHyd0aMj0WD483nrLWK.add_ValueChanged((VoidEvent)delegate
 					{
@@ -5476,7 +5367,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					});
 					Label val3 = new Label();
 					((Control)val3).set_Dock((DockStyle)2);
-					val3.set_Text(_003CModule_003E.smethod_24<string>(267679769u));
+					val3.set_Text("SFX Volume");
 					val4 = val3;
 					num = (int)(num2 * 1228811068) ^ -1476867902;
 					continue;
@@ -5494,13 +5385,13 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	private Control _H2blb6Djx9JemSUBYepwlzNOXxz()
 	{
 		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c0: Expected O, but got Unknown
-		//IL_00d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ec: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0101: Expected O, but got Unknown
+		//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ac: Expected O, but got Unknown
+		//IL_00bc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e9: Expected O, but got Unknown
 		Panel obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_23();
 		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj, (DockStyle)5);
 		((Control)obj).set_Margin(new Margin(10));
@@ -5515,13 +5406,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				switch ((num2 = (uint)num ^ 0xA34AEE90u) % 5u)
 				{
 				case 4u:
-					_YemBTJprwfbd3mpg5Gy9uyEJWwI(val.get_Content().get_Controls(), _003CModule_003E.smethod_26<string>(515390933u), new string[4]
-					{
-						_003CModule_003E.smethod_28<string>(487978812u),
-						_003CModule_003E.smethod_27<string>(3474625633u),
-						_003CModule_003E.smethod_25<string>(4080411104u),
-						_003CModule_003E.smethod_24<string>(2592257203u)
-					}, (int)_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO, delegate(int int_0)
+					_YemBTJprwfbd3mpg5Gy9uyEJWwI(val.get_Content().get_Controls(), "Dialogue Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO, delegate(int int_0)
 					{
 						_rm4nO8SKFlFnD1XybaGLNsNLB5F.smethod_2(_rm4nO8SKFlFnD1XybaGLNsNLB5F.smethod_1(), (DialogueSpeed)int_0);
 						while (true)
@@ -5562,7 +5447,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					CheckBox val2 = new CheckBox();
 					((Control)val2).set_Dock((DockStyle)2);
-					val2.set_Text(_003CModule_003E.smethod_26<string>(818740559u));
+					val2.set_Text("Dialogue Auto-skip");
 					val2.set_Checked(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3);
 					_feL3soNn6ZWaJqYfjYJUyH118tF = val2;
 					num = (int)(num2 * 2025978263) ^ -726630128;
@@ -5581,17 +5466,17 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	public static void _YemBTJprwfbd3mpg5Gy9uyEJWwI(ControlCollection controlCollection_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
 	{
-		//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00fb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00eb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0101: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0109: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0118: Expected O, but got Unknown
-		//IL_0159: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0163: Expected O, but got Unknown
+		//IL_0114: Expected O, but got Unknown
+		//IL_0155: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015f: Expected O, but got Unknown
 		Action<int> _qhAM4Wrvf8c5jzKBQqLfosAE9D = default(Action<int>);
 		DropDownList val = default(DropDownList);
 		int num3 = default(int);
@@ -5622,7 +5507,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					val2 = obj;
 					DropDownList obj2 = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_38();
 					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_13((Control)(object)obj2, (DockStyle)2);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_26((Control)(object)obj2, _003CModule_003E.smethod_26<string>(2774799937u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_26((Control)(object)obj2, "button");
 					((Control)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_39(obj2)).set_Margin(new Margin(10, 0, 0, 0));
 					obj2.get_Dropdown().set_Resizable(false);
 					((Control)obj2).set_Margin(new Margin(0, 0, 0, 5));
@@ -5687,23 +5572,23 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private ListBox _1Bze6b62yGQDi3JBE0TyQmPGkzU()
 	{
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0087: Expected O, but got Unknown
-		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b0: Expected O, but got Unknown
-		//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0104: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0108: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0117: Expected O, but got Unknown
-		//IL_0146: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0150: Expected O, but got Unknown
+		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0062: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0067: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0073: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007f: Expected O, but got Unknown
+		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a8: Expected O, but got Unknown
+		//IL_00d4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0107: Expected O, but got Unknown
+		//IL_0136: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0140: Expected O, but got Unknown
 		ListBox val = _Y29nu3VoVEY6acDadsfRh60BNDh();
 		ListBoxItem obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_28();
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _003CModule_003E.smethod_24<string>(460588219u));
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, "Player Customization");
 		((Control)obj).set_Size(new Point(0, 50));
 		ListBoxItem val2 = obj;
 		_ySEG6XuZVhXoWbL0fJc0sGefKrh ySEG6XuZVhXoWbL0fJc0sGefKrh = default(_ySEG6XuZVhXoWbL0fJc0sGefKrh);
@@ -5736,7 +5621,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					ySEG6XuZVhXoWbL0fJc0sGefKrh._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = this;
 					ListBoxItemCollection items = val.get_Items();
 					ListBoxItem val4 = new ListBoxItem();
-					((Label)val4).set_Text(_003CModule_003E.smethod_27<string>(3770365138u));
+					((Label)val4).set_Text("---");
 					((Control)val4).set_Enabled(false);
 					((ActiveList<ListBoxItem>)(object)items).Add(val4);
 					num = ((int)num2 * -996176352) ^ 0x316CEF4E;
@@ -5754,7 +5639,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					_ySEG6XuZVhXoWbL0fJc0sGefKrh ySEG6XuZVhXoWbL0fJc0sGefKrh2 = ySEG6XuZVhXoWbL0fJc0sGefKrh;
 					ListBoxItem val3 = new ListBoxItem();
-					((Label)val3).set_Text(_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? _003CModule_003E.smethod_28<string>(3589942383u) : _003CModule_003E.smethod_26<string>(1526556353u));
+					((Label)val3).set_Text(_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? "Disable SFW" : "Enable SFW");
 					((Control)val3).set_Size(new Point(0, 50));
 					ySEG6XuZVhXoWbL0fJc0sGefKrh2._diVdxVCKW4CzhbYSG15BcHJB0Ub = val3;
 					num = -842364522;
@@ -5787,11 +5672,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 								}
 								break;
 								IL_0009:
-								_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_27<string>(3392420076u), new string[2]
-								{
-									_003CModule_003E.smethod_24<string>(4072060446u),
-									_003CModule_003E.smethod_27<string>(2301875976u)
-								}, 250, (Action<int>)delegate(int int_0)
+								_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Are you sure you wish to customize your character? This may break some active dates even if make no changes!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 								{
 									if (int_0 == 1)
 									{
@@ -5979,49 +5860,49 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private ListBox _dT5L6g1CEsgeYg5W9sVqR2trRSK()
 	{
-		//IL_0042: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0053: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0063: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0067: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0073: Expected O, but got Unknown
-		//IL_0093: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0046: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0067: Expected O, but got Unknown
+		//IL_0087: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0098: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b7: Expected O, but got Unknown
-		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c9: Expected O, but got Unknown
-		//IL_00f0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00fa: Expected O, but got Unknown
-		//IL_0123: Unknown result type (might be due to invalid IL or missing references)
-		//IL_012d: Expected O, but got Unknown
+		//IL_009c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a7: Expected O, but got Unknown
+		//IL_00af: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b9: Expected O, but got Unknown
+		//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ea: Expected O, but got Unknown
+		//IL_0113: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011d: Expected O, but got Unknown
+		//IL_0126: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0130: Expected O, but got Unknown
 		//IL_0136: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0140: Expected O, but got Unknown
-		//IL_0146: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0167: Expected O, but got Unknown
-		//IL_01ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01df: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ee: Expected O, but got Unknown
+		//IL_013b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0147: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0153: Expected O, but got Unknown
+		//IL_01b6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01bb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01cb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d6: Expected O, but got Unknown
 		ListBox val = _Y29nu3VoVEY6acDadsfRh60BNDh();
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_19();
-		if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(3929323548u)) == 40)
+		if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue") == 40)
 		{
-			goto IL_0193;
+			goto IL_017f;
 		}
-		goto IL_01ca;
-		IL_01ca:
+		goto IL_01b6;
+		IL_01b6:
 		ListBoxItem val2 = new ListBoxItem();
-		((Label)val2).set_Text(_003CModule_003E.smethod_26<string>(3495843183u));
+		((Label)val2).set_Text("Exit to Main Menu");
 		((Control)val2).set_Size(new Point(0, 50));
 		ListBoxItem val3 = val2;
 		int num = -790493927;
-		goto IL_0198;
-		IL_0198:
+		goto IL_0184;
+		IL_0184:
 		ListBoxItem val6 = default(ListBoxItem);
 		ListBoxItem val5 = default(ListBoxItem);
 		ListBoxItem val4 = default(ListBoxItem);
@@ -6033,11 +5914,11 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			case 7u:
 			{
 				ListBoxItem obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_28();
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _003CModule_003E.smethod_27<string>(1388693284u));
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, "Back to Home");
 				((Control)obj).set_Size(new Point(0, 50));
 				val6 = obj;
 				ListBoxItem val9 = new ListBoxItem();
-				((Label)val9).set_Text(_003CModule_003E.smethod_24<string>(1931598159u));
+				((Label)val9).set_Text("Back to Club Amorous");
 				((Control)val9).set_Size(new Point(0, 50));
 				val5 = val9;
 				((ActiveList<ListBoxItem>)(object)val.get_Items()).Add(val6);
@@ -6047,17 +5928,13 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			case 6u:
 			{
 				ListBoxItem val8 = new ListBoxItem();
-				((Label)val8).set_Text(_003CModule_003E.smethod_24<string>(3638733147u));
+				((Label)val8).set_Text("Quit Game");
 				((Control)val8).set_Size(new Point(0, 50));
 				val4 = val8;
 				((Control)val4).add_MouseClick((MouseEvent)delegate
 				{
 					_3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_25<string>(2721740554u), new string[2]
-					{
-						_003CModule_003E.smethod_27<string>(628194621u),
-						_003CModule_003E.smethod_24<string>(1057444391u)
-					}, 250, (Action<int>)delegate(int int_0)
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Are you sure you wish to quit the game? All unsaved progress will be lost!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 					{
 						if (int_0 == 1)
 						{
@@ -6145,7 +6022,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				});
 				ListBoxItemCollection items = val.get_Items();
 				ListBoxItem val7 = new ListBoxItem();
-				((Label)val7).set_Text(_003CModule_003E.smethod_24<string>(1078030665u));
+				((Label)val7).set_Text("---");
 				((Control)val7).set_Enabled(false);
 				((ActiveList<ListBoxItem>)(object)items).Add(val7);
 				num = ((int)num2 * -511429952) ^ 0x506A2275;
@@ -6158,30 +6035,30 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			case 0u:
 				break;
 			case 1u:
-				goto IL_01ca;
+				goto IL_01b6;
 			default:
 				return val;
 			}
 			break;
 		}
-		goto IL_0193;
-		IL_0193:
+		goto IL_017f;
+		IL_017f:
 		num = -875996933;
-		goto IL_0198;
+		goto IL_0184;
 	}
 
 	private void _oWVabv0BTttUwHhKppcIL7h0vrZ(ListBox listBox_0)
 	{
-		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005e: Expected O, but got Unknown
-		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0087: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009a: Expected O, but got Unknown
-		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b1: Expected O, but got Unknown
+		//IL_0030: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0056: Expected O, but got Unknown
+		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0077: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008a: Expected O, but got Unknown
+		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a1: Expected O, but got Unknown
 		ListBoxItem _Epeel2m9h5O12V2ERwlnNTE3FdM;
 		_poenyHBGUusBcnNcTFB9MQBV72R _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = default(_poenyHBGUusBcnNcTFB9MQBV72R);
 		ListBoxItem _FxyX2MMMdsf69424VDXa8LqP1nq = default(ListBoxItem);
@@ -6196,7 +6073,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 4u:
 				{
 					ListBoxItem obj = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_28();
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_43() ? _003CModule_003E.smethod_24<string>(3193612877u) : _003CModule_003E.smethod_25<string>(3610475290u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_25((Label)(object)obj, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_43() ? "Disable Topless Cheat" : "Enable Topless Cheat");
 					((Control)obj).set_Size(new Point(0, 50));
 					_Epeel2m9h5O12V2ERwlnNTE3FdM = obj;
 					((Control)_Epeel2m9h5O12V2ERwlnNTE3FdM).add_MouseClick((MouseEvent)delegate
@@ -6215,8 +6092,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 									{
 									case 1u:
 										label_ = _Epeel2m9h5O12V2ERwlnNTE3FdM;
-										string_ = (_J2cDcMayMidSIab2lnReI8upBwS.smethod_0() ? _003CModule_003E.smethod_25<string>(4279388324u) : _003CModule_003E.smethod_25<string>(3610475290u));
-										goto IL_0032;
+										string_ = (_J2cDcMayMidSIab2lnReI8upBwS.smethod_0() ? "Disable Topless Cheat" : "Enable Topless Cheat");
+										goto IL_002a;
 									default:
 										return;
 									case 0u:
@@ -6225,7 +6102,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 										return;
 									}
 									break;
-									IL_0032:
+									IL_002a:
 									_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)label_, string_);
 									num3 = -646255287;
 								}
@@ -6233,7 +6110,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						});
 					});
 					ListBoxItem val = new ListBoxItem();
-					((Label)val).set_Text(_iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj ? _003CModule_003E.smethod_26<string>(1776861969u) : _003CModule_003E.smethod_26<string>(1422954072u));
+					((Label)val).set_Text(_iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj ? "Disable Bottomless Cheat" : "Enable Bottomless Cheat");
 					((Control)val).set_Size(new Point(0, 50));
 					_FxyX2MMMdsf69424VDXa8LqP1nq = val;
 					((Control)_FxyX2MMMdsf69424VDXa8LqP1nq).add_MouseClick((MouseEvent)delegate
@@ -6241,7 +6118,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._YdyKdWT8QbQOIWkgEuPe6a9hJtd(delegate
 						{
 							_J2cDcMayMidSIab2lnReI8upBwS.smethod_4(!_J2cDcMayMidSIab2lnReI8upBwS.smethod_3());
-							_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)_FxyX2MMMdsf69424VDXa8LqP1nq, _J2cDcMayMidSIab2lnReI8upBwS.smethod_3() ? _003CModule_003E.smethod_28<string>(3139484035u) : _003CModule_003E.smethod_28<string>(2292532684u));
+							_J2cDcMayMidSIab2lnReI8upBwS.smethod_2((Label)(object)_FxyX2MMMdsf69424VDXa8LqP1nq, _J2cDcMayMidSIab2lnReI8upBwS.smethod_3() ? "Disable Bottomless Cheat" : "Enable Bottomless Cheat");
 						});
 					});
 					((ActiveList<ListBoxItem>)(object)listBox_0.get_Items()).Add(_Epeel2m9h5O12V2ERwlnNTE3FdM);
@@ -6283,7 +6160,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num7;
 					int num8;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(2781899391u)) != 60)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "MercyDate") != 60)
 					{
 						num7 = 1810537969;
 						num8 = 1810537969;
@@ -6300,7 +6177,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num18;
 					int num19;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(348846420u)) != 40)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyDate") != 40)
 					{
 						num18 = 490275145;
 						num19 = 490275145;
@@ -6314,7 +6191,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 47u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_24<string>(215125652u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "RemyDate");
 					_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 					num = -605535158;
 					continue;
@@ -6322,7 +6199,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num28;
 					int num29;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_19(), _003CModule_003E.smethod_26<string>(4292391558u)) == 70)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_19(), "ZenithDate") == 70)
 					{
 						num28 = -659941550;
 						num29 = -659941550;
@@ -6336,7 +6213,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 44u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_25<string>(273104323u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "JaxDate");
 					num = -376009264;
 					continue;
 				case 43u:
@@ -6347,7 +6224,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num15;
 					int num16;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(3502539801u)) < 20)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyDate") < 20)
 					{
 						num15 = 75364306;
 						num16 = 75364306;
@@ -6376,14 +6253,14 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 36u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_26<string>(3023463305u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "SethDate");
 					num = -946260720;
 					continue;
 				case 35u:
 				{
 					int num9;
 					int num10;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(3015466299u)) != 60)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeDate") != 60)
 					{
 						num9 = -50953166;
 						num10 = -50953166;
@@ -6449,7 +6326,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num13;
 					int num14;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(2249318386u)) == 40)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "JaxDate") == 40)
 					{
 						num13 = -2080977641;
 						num14 = -2080977641;
@@ -6466,7 +6343,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num4;
 					int num5;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(1760561613u)) != 70)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "DustinDate") != 70)
 					{
 						num4 = -1900719818;
 						num5 = -1900719818;
@@ -6483,7 +6360,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num26;
 					int num27;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(1548938230u)) == 40)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethDate") == 40)
 					{
 						num26 = -1288527123;
 						num27 = -1288527123;
@@ -6559,7 +6436,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num11;
 					int num12;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(1316348461u)) == 50)
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexDate") == 50)
 					{
 						num11 = -1211441111;
 						num12 = -1211441111;
@@ -6592,15 +6469,15 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 10u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_27<string>(1116639873u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "ZenithDate");
 					num = -1494277211;
 					continue;
 				case 8u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_25<string>(2481290884u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "LexDate");
 					num = -96383867;
 					continue;
 				case 6u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_27<string>(3262314894u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "DustinDate");
 					num = -524286445;
 					continue;
 				case 5u:
@@ -6619,7 +6496,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 3u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_28<string>(3334043233u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "CobyDate");
 					num = -867453573;
 					continue;
 				case 1u:
@@ -6667,16 +6544,16 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 38u:
 					return;
 				case 39u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_24<string>(3220948404u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "SkyeDate");
 					_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 					return;
 				case 42u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_26<string>(2130769866u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "CobyPostDate");
 					return;
 				case 45u:
 					return;
 				case 48u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_24<string>(3175482055u));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "MercyDate");
 					_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 					return;
 				case 49u:
@@ -6691,7 +6568,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		_3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
 		string object_ = ephoneContacts_0.ToString();
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44(_003CModule_003E.smethod_25<string>(1528851547u), (object)object_), 250, _003CModule_003E.smethod_24<string>(2812295479u), (Action)delegate
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44("You finished all dates with {0}!", (object)object_), 250, "Gotcha!", (Action)delegate
 		{
 			_3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
 		});
@@ -6708,15 +6585,15 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 		//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0106: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0127: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04be: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04c8: Expected O, but got Unknown
-		//IL_04de: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04e8: Expected O, but got Unknown
-		//IL_054d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0552: Unknown result type (might be due to invalid IL or missing references)
-		//IL_055d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0568: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0577: Expected O, but got Unknown
+		//IL_0412: Unknown result type (might be due to invalid IL or missing references)
+		//IL_041c: Expected O, but got Unknown
+		//IL_0432: Unknown result type (might be due to invalid IL or missing references)
+		//IL_043c: Expected O, but got Unknown
+		//IL_04a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04b1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04bc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04cb: Expected O, but got Unknown
 		while (true)
 		{
 			int num = 1082371162;
@@ -6726,17 +6603,17 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				switch ((num2 = (uint)num ^ 0x3EF898BEu) % 14u)
 				{
 				case 13u:
-					_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE(_003CModule_003E.smethod_24<string>(2958987663u));
+					_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin");
 					num = ((int)num2 * -946596741) ^ -922488972;
 					continue;
 				case 12u:
-					_hrw3Kf8fCx7saJOmoYUD8sIz3uD._WPy6ICx3LVoejBaexyOoKGnX9jD(_003CModule_003E.smethod_28<string>(2023185020u), 0f);
+					_hrw3Kf8fCx7saJOmoYUD8sIz3uD._WPy6ICx3LVoejBaexyOoKGnX9jD("Arm rise", 0f);
 					num = (int)(num2 * 215855958) ^ -763149218;
 					continue;
 				case 10u:
 					_6T55wit7MiGfAWRkPwjNbJ8N8lG = this;
 					_4L7hfXrWoDdArQiscG4ukHCV46B = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
-					_hrw3Kf8fCx7saJOmoYUD8sIz3uD = contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(_003CModule_003E.smethod_25<string>(3777427988u));
+					_hrw3Kf8fCx7saJOmoYUD8sIz3uD = contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/GUI/Phone/Phone");
 					num = ((int)num2 * -783050374) ^ 0x4A672266;
 					continue;
 				case 9u:
@@ -6766,7 +6643,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 4u:
 					_lpMGMQZJYmHr6q9XBRwiM0Lse4N._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1845f;
 					_lpMGMQZJYmHr6q9XBRwiM0Lse4N._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1060f;
-					_wTbB4YBL4PSkaotwKX3CFc50DmX = contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(_003CModule_003E.smethod_24<string>(2357837690u));
+					_wTbB4YBL4PSkaotwKX3CFc50DmX = contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/GUI/Phone/PhoneScreen");
 					num = (int)((num2 * 186702251) ^ 0xA66BB);
 					continue;
 				case 3u:
@@ -6781,23 +6658,23 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					_9GQBAH2pi8Sm6ph1s6InjyQGe6R.set_ModalColor(ColorInt.ARGB(0.9f, 0f, 0f, 0f));
 					_9GQBAH2pi8Sm6ph1s6InjyQGe6R.MouseTransformFunc = delegate(Point point_0)
 					{
-						//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0017: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-						//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-						//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-						//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0055: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0056: Unknown result type (might be due to invalid IL or missing references)
-						//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-						//IL_005c: Unknown result type (might be due to invalid IL or missing references)
-						//IL_0063: Unknown result type (might be due to invalid IL or missing references)
-						//IL_006a: Unknown result type (might be due to invalid IL or missing references)
+						//IL_000e: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0013: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+						//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0031: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0036: Unknown result type (might be due to invalid IL or missing references)
+						//IL_003b: Unknown result type (might be due to invalid IL or missing references)
+						//IL_004c: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0051: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0052: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0058: Unknown result type (might be due to invalid IL or missing references)
+						//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+						//IL_0066: Unknown result type (might be due to invalid IL or missing references)
 						double double_ = default(double);
-						Point val2 = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_72(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(778852662u), ref double_);
+						Point val2 = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_72(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Sheen Two", ref double_);
 						Matrix val3 = Matrix.CreateTranslation((float)(-val2.X), (float)(-val2.Y), 0f) * Matrix.CreateRotationZ((float)(0.0 - double_));
 						Vector2 val4 = Vector2.Transform(new Vector2((float)((Point)(ref point_0)).get_x(), (float)((Point)(ref point_0)).get_y()), val3);
 						return new Point((int)val4.X, (int)val4.Y);
@@ -6808,8 +6685,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					_hrw3Kf8fCx7saJOmoYUD8sIz3uD._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
 					_hrw3Kf8fCx7saJOmoYUD8sIz3uD._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 0f;
 					_hrw3Kf8fCx7saJOmoYUD8sIz3uD._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1200f;
-					_lpMGMQZJYmHr6q9XBRwiM0Lse4N = contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni(_003CModule_003E.smethod_25<string>(2662651660u), 0.5f);
-					_lpMGMQZJYmHr6q9XBRwiM0Lse4N._C5vPbZ72rpVMDWGuHxZuR5FNpAH(_003CModule_003E.smethod_24<string>(1768069286u));
+					_lpMGMQZJYmHr6q9XBRwiM0Lse4N = contentManager_0._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/GUI/Phone/PhoneHUD", 0.5f);
+					_lpMGMQZJYmHr6q9XBRwiM0Lse4N._C5vPbZ72rpVMDWGuHxZuR5FNpAH("No message");
 					num = (int)((num2 * 1483306353) ^ 0xCCBADC6);
 					continue;
 				case 11u:
@@ -6825,33 +6702,33 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	public void _Xrfjrxr72hHh4bDdQB7HzEbJUCb()
 	{
-		//IL_0033: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0068: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0124: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0279: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02ae: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03d3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0430: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0465: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04b3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0505: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_061b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0690: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06be: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0735: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0750: Unknown result type (might be due to invalid IL or missing references)
-		//IL_083c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0930: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a43: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a8a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0110: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0184: Unknown result type (might be due to invalid IL or missing references)
+		//IL_019b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0245: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0272: Unknown result type (might be due to invalid IL or missing references)
+		//IL_037b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03d0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0443: Unknown result type (might be due to invalid IL or missing references)
+		//IL_048d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_051f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0587: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05f0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_061a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0689: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06a0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0774: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0854: Unknown result type (might be due to invalid IL or missing references)
+		//IL_090a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_094b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_098a: Unknown result type (might be due to invalid IL or missing references)
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_19();
 		bool flag = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm);
 		bool flag2 = default(bool);
@@ -6866,17 +6743,17 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				switch ((num2 = (uint)num ^ 0xD9D39E26u) % 47u)
 				{
 				case 46u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(4115111515u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(2320574255u), 1f);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(2320574255u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_57(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Thumb Nail", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone lines", 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone lines", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_57(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = ((int)num2 * -1160752560) ^ -522199796;
 					continue;
 				case 45u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(2625386365u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Rude", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
 					num = -444991666;
 					continue;
 				case 44u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(2872587249u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Rude", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = (int)((num2 * 3441658) ^ 0x2E3ACF5D);
 					continue;
 				case 43u:
@@ -6886,13 +6763,13 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						continue;
 					}
 					val = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_49(opIJo2jLUqdOL5yAFP4yzXce0DG_);
-					goto IL_0124;
+					goto IL_0110;
 				case 42u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(1856861824u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Diary", 1f);
 					num = (int)((num2 * 1887431387) ^ 0x5024F645);
 					continue;
 				case 41u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(2525270401u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "CONTACTS", 1f);
 					num = (int)((num2 * 534141426) ^ 0x6759F57D);
 					continue;
 				case 40u:
@@ -6902,178 +6779,178 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						continue;
 					}
 					val = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_48(opIJo2jLUqdOL5yAFP4yzXce0DG_);
-					goto IL_0124;
+					goto IL_0110;
 				case 38u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(3841998645u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Thumb", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = ((int)num2 * -1618539387) ^ 0x2AC7D374;
 					continue;
 				case 37u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(2973703791u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(535369226u), 1f);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(3175936875u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Rude", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Thumb", 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Thumb", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = (int)((num2 * 1932505567) ^ 0x45A077FA);
 					continue;
 				case 36u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(3866064892u), 0f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "BG AUDIO", 0f);
 					num = (int)(num2 * 1162133300) ^ -751126450;
 					continue;
 				case 35u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(2083395561u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(52523798u), 1f);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(2389261317u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(3103357962u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Pinky", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Ring", 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Ring", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian ring", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
 					num = -1494088623;
 					continue;
 				case 34u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(2821838699u), 0f);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(507933716u), 0f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "BG CHAT SETTINGS", 0f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "BG GALLERY", 0f);
 					num = ((int)num2 * -815148704) ^ 0x695ED96;
 					continue;
 				case 33u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(3704035853u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Hand", 1f);
 					num = ((int)num2 * -719537607) ^ 0x3B1E4EEF;
 					continue;
 				case 32u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(2725040423u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone Shadow", 1f);
 					num = ((int)num2 * -769224380) ^ -1666682615;
 					continue;
 				case 31u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(2648029795u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Rude", 1f);
 					num = ((int)num2 * -1358600444) ^ -1797624760;
 					continue;
 				case 30u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(1494356786u), color_);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Marking Hand", color_);
 					num = ((int)num2 * -166352756) ^ 0x1376436;
 					continue;
 				case 29u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(1482973812u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(599950793u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(48906544u), 1f);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(48906544u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(953858690u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(953858690u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Hand", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Hand", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Index", 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Index", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian index", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian index", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = -1693034843;
 					continue;
 				case 28u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(3134478069u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Power", 1f);
 					num = (int)(num2 * 1370187371) ^ -349835231;
 					continue;
 				case 27u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(3732077856u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Ring Nail", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = (int)((num2 * 1503880013) ^ 0x33553754);
 					continue;
 				case 26u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(2522807339u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone Colour", 1f);
 					num = (int)(num2 * 1743109151) ^ -2013451055;
 					continue;
 				case 25u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(542727614u), 1f);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(2425444158u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "white screen", 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "black screen", 1f);
 					num = ((int)num2 * -447196475) ^ -631597794;
 					continue;
 				case 23u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(900814680u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(1103047764u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Index Nail", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Thumb Nail", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
 					num = -1507371044;
 					continue;
 				case 22u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(136364039u), 0f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "BG POWER", 0f);
 					num = (int)((num2 * 274685156) ^ 0x51B08666);
 					continue;
 				case 21u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(153952222u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Default Forearm", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = ((int)num2 * -528693302) ^ -813810790;
 					continue;
 				case 20u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(2190029093u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Gallery", 1f);
 					num = (int)((num2 * 170867958) ^ 0x6BB739A4);
 					continue;
 				case 19u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(2215329726u), 1f);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(2633313891u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Pinky", 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Pinky", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = (int)(num2 * 1578643883) ^ -1789916635;
 					continue;
 				case 18u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(3124766287u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian ring", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = (int)(num2 * 1762371952) ^ -1083076873;
 					continue;
 				case 17u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(3158219623u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Power", 1f);
 					num = (int)((num2 * 862638526) ^ 0x705C1A2F);
 					continue;
 				case 16u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(1951350224u), 0f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Hoody Sleeve", 0f);
 					num = ((int)num2 * -677971159) ^ -186397407;
 					continue;
 				case 15u:
 					val = Color.get_White();
-					goto IL_0124;
+					goto IL_0110;
 				case 14u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(325278541u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(182746407u), (float)((flag2 || flag) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Hand", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_51(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Marking Hand", (float)((flag2 || flag) ? 1 : 0));
 					num = -739425532;
 					continue;
 				case 13u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(2764884488u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone Default Background", 1f);
 					num = (int)((num2 * 2115659084) ^ 0x12F58ABF);
 					continue;
 				case 12u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(3398713847u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Sheen Two", 1f);
 					num = ((int)num2 * -3098845) ^ -1983480812;
 					continue;
 				case 11u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(518597456u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Index Nail", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
 					num = -1152933502;
 					continue;
 				case 10u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(2934107588u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(3529844772u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(3732077856u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Pinky Nail", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Pinky Nail", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Ring Nail", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
 					num = -635259719;
 					continue;
 				case 9u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(1486591066u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Pinky", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
 					num = -962392865;
 					continue;
 				case 8u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(3841998645u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Thumb", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
 					num = -1071324376;
 					continue;
 				case 7u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(1458550786u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(3197362462u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Forearm", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Avian Forearm", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_54(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = -629930489;
 					continue;
 				case 6u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(3944960433u), 0f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "BG CONTACTS", 0f);
 					num = ((int)num2 * -165662128) ^ -890221314;
 					continue;
 				case 5u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(234006391u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Chat Settings", 1f);
 					num = (int)(num2 * 358887175) ^ -959103873;
 					continue;
 				case 4u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(375978126u), 0f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "BG DIARY", 0f);
 					num = (int)((num2 * 1686051750) ^ 0x44CD4C2C);
 					continue;
 				case 3u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(3149420659u), (float)((flag2 || flag) ? 1 : 0));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(3149420659u), color_);
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(1091461868u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1 : 0));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(4187102295u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_53(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Marking Forearm", (float)((flag2 || flag) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Marking Forearm", color_);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Striped forearm", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_47((Enum)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_46(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Striped forearm", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_53(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = -711947607;
 					continue;
 				case 2u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(3639500595u), (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(350242689u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Rude Nail", (float)(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_55(opIJo2jLUqdOL5yAFP4yzXce0DG_) ? 1 : 0));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Rude Nail", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_56(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 					num = -659772158;
 					continue;
 				case 1u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(3861028412u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Default Forearm", 1f);
 					num = (int)(num2 * 333456045) ^ -1256749157;
 					continue;
 				case 0u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(1655414365u), 1f);
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_50(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Audio", 1f);
 					num = ((int)num2 * -1141812432) ^ 0x7D3368FC;
 					continue;
 				case 39u:
@@ -7083,7 +6960,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 						_IiWYS6YP6cEj83PIAXepbAHBaJB();
 						return;
 					}
-					IL_0124:
+					IL_0110:
 					color_ = val;
 					num = -2063539131;
 					continue;
@@ -7095,9 +6972,9 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private void _IiWYS6YP6cEj83PIAXepbAHBaJB()
 	{
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_19();
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_26<string>(1282065706u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_57(opIJo2jLUqdOL5yAFP4yzXce0DG_));
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, "Phone", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_57(opIJo2jLUqdOL5yAFP4yzXce0DG_));
 	}
 
 	public static _poenyHBGUusBcnNcTFB9MQBV72R _AZrO8MxMUE7cKsFYTQ4k9O3q7yC()
@@ -7161,15 +7038,15 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 		{
 			goto IL_00b4;
 		}
-		goto IL_0154;
+		goto IL_0148;
 		IL_00b4:
 		int num4 = 1479651068;
-		goto IL_012b;
-		IL_0154:
+		goto IL_011f;
+		IL_0148:
 		_PcaKA8lfkZnYKjOTdM7RWYPBlGr[ephoneContacts_0.ToString()] = true;
 		num4 = 842093135;
-		goto IL_012b;
-		IL_012b:
+		goto IL_011f;
+		IL_011f:
 		while (true)
 		{
 			uint num3;
@@ -7178,18 +7055,18 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			case 5u:
 				break;
 			case 2u:
-				_PcaKA8lfkZnYKjOTdM7RWYPBlGr[_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4(ephoneContacts_0.ToString(), _003CModule_003E.smethod_24<string>(660790138u))] = true;
+				_PcaKA8lfkZnYKjOTdM7RWYPBlGr[_poenyHBGUusBcnNcTFB9MQBV72R.smethod_4(ephoneContacts_0.ToString(), " image")] = true;
 				num4 = (int)((num3 * 732569103) ^ 0x37EC6D9);
 				continue;
 			case 1u:
-				_PcaKA8lfkZnYKjOTdM7RWYPBlGr[_003CModule_003E.smethod_27<string>(833502776u)] = true;
-				_PcaKA8lfkZnYKjOTdM7RWYPBlGr[_003CModule_003E.smethod_25<string>(2396633544u)] = true;
+				_PcaKA8lfkZnYKjOTdM7RWYPBlGr["Alex"] = true;
+				_PcaKA8lfkZnYKjOTdM7RWYPBlGr["Alex image"] = true;
 				num4 = (int)((num3 * 1511911468) ^ 0x150AFD9);
 				continue;
 			default:
 				return;
 			case 3u:
-				goto IL_0154;
+				goto IL_0148;
 			case 0u:
 				return;
 			case 4u:
@@ -7202,8 +7079,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private void _8hw6Dkw1FlTEpsiy0adBUXTGpRe(bool bool_0)
 	{
-		_0OvMkQYTGPrNhckv6iHt3zmR5ni[_003CModule_003E.smethod_28<string>(1229719953u)] = bool_0;
-		_0OvMkQYTGPrNhckv6iHt3zmR5ni[_003CModule_003E.smethod_25<string>(1924010977u)] = bool_0;
+		_0OvMkQYTGPrNhckv6iHt3zmR5ni["reject call with message"] = bool_0;
+		_0OvMkQYTGPrNhckv6iHt3zmR5ni["Incoming call"] = bool_0;
 	}
 
 	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
@@ -7300,10 +7177,10 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		if (_TZx1AkahTLXoM2XUbm5U8YJOScb)
 		{
-			goto IL_0134;
+			goto IL_012c;
 		}
-		goto IL_0192;
-		IL_0192:
+		goto IL_018a;
+		IL_018a:
 		int num;
 		int num2;
 		if (!_WaCCr2ToiTDglrrE9z1EKOcLzT3)
@@ -7316,15 +7193,15 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			num = 1677286279;
 			num2 = 1677286279;
 		}
-		goto IL_0139;
-		IL_0139:
+		goto IL_0131;
+		IL_0131:
 		while (true)
 		{
 			uint num3;
 			switch ((num3 = (uint)num ^ 0x719263EDu) % 14u)
 			{
 			case 12u:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(818525376u), (Action)delegate
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Arm rise", (Action)delegate
 				{
 					_TZx1AkahTLXoM2XUbm5U8YJOScb = false;
 					while (true)
@@ -7377,7 +7254,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				num = ((int)num3 * -1320674301) ^ 0x58089D4D;
 				continue;
 			case 3u:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(4044526947u), (Action)delegate
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_1(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Arm lower", (Action)delegate
 				{
 					_TZx1AkahTLXoM2XUbm5U8YJOScb = false;
 					_j2OEvLQtM2lODSmH3ZFP6wWCWpF = _fFGgY4gvWNcTLSlsfe9k99ctumb.ArmDown;
@@ -7391,11 +7268,11 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			case 1u:
 				break;
 			case 0u:
-				goto end_IL_0139;
+				goto end_IL_0131;
 			default:
 				return;
 			case 13u:
-				goto IL_0192;
+				goto IL_018a;
 			case 5u:
 				return;
 			case 10u:
@@ -7415,24 +7292,24 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				num4 = 2140278844;
 			}
 			continue;
-			end_IL_0139:
+			end_IL_0131:
 			break;
 		}
-		goto IL_0134;
-		IL_0134:
+		goto IL_012c;
+		IL_012c:
 		num = 1774746726;
-		goto IL_0139;
+		goto IL_0131;
 	}
 
 	private void _48sn09DNztKRWaadCpDeWr57ENW(_wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
 	{
-		//IL_009d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01cb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01dc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0099: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01be: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d7: Unknown result type (might be due to invalid IL or missing references)
 		if (_f2smFxmYyFJyj81xWGaGLB2G7ef == _wlQdV74JhqkBVxNonpbfqZEmjIbA.None)
 		{
 			return;
@@ -7486,7 +7363,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = (int)(num2 * 709740943) ^ -1006293851;
 					continue;
 				case 9u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_27<string>(2928768165u), _poenyHBGUusBcnNcTFB9MQBV72R.smethod_57(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_19()));
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, "Phone", _poenyHBGUusBcnNcTFB9MQBV72R.smethod_57(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_19()));
 					num = ((int)num2 * -1012307649) ^ -703732382;
 					continue;
 				case 8u:
@@ -7494,7 +7371,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = -1653156162;
 					continue;
 				case 7u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_25<string>(3940198007u), Color.get_Red());
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_52(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, "Phone", Color.get_Red());
 					num = (int)((num2 * 524204908) ^ 0x100933E2);
 					continue;
 				case 6u:
@@ -7570,7 +7447,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					Point val = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_63(_wRd4nHuQQlAPEwrHOGkBfut6Uip_0, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_62(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_58(_4L7hfXrWoDdArQiscG4ukHCV46B)));
 					int num3;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, _003CModule_003E.smethod_24<string>(3522920374u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_lpMGMQZJYmHr6q9XBRwiM0Lse4N, "Phone", (float)val.X, (float)val.Y))
 					{
 						num = -1029358457;
 						num3 = -1029358457;
@@ -7601,27 +7478,27 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	private void _Xgbbx1uIlIM4mSecGPtARNWvSMm(_wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
 	{
-		//IL_0080: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0087: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0122: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0175: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0206: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0247: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02d8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02df: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0319: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0320: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03de: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0452: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0459: Unknown result type (might be due to invalid IL or missing references)
-		//IL_050d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0512: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0517: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0083: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0113: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0169: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0170: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
+		//IL_023a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02c0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02c7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0304: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03be: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03c5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_042e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0435: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04e9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04ee: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04f3: Unknown result type (might be due to invalid IL or missing references)
 		if (_j2OEvLQtM2lODSmH3ZFP6wWCWpF != _fFGgY4gvWNcTLSlsfe9k99ctumb.ArmUp)
 		{
 			return;
@@ -7664,7 +7541,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 34u:
 				{
 					int num14;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(1813662648u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Chat Settings", (float)val.X, (float)val.Y))
 					{
 						num = -1162818039;
 						num14 = -1162818039;
@@ -7703,7 +7580,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 28u:
 				{
 					int num9;
-					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_26<string>(861841613u), (float)val.X, (float)val.Y))
+					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone Default Background", (float)val.X, (float)val.Y))
 					{
 						num = -2107644211;
 						num9 = -2107644211;
@@ -7720,7 +7597,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = (int)((num2 * 1872765712) ^ 0x4FE805D5);
 					continue;
 				case 26u:
-					flag = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(3236878154u), (float)val.X, (float)val.Y);
+					flag = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone Colour", (float)val.X, (float)val.Y);
 					num = (int)(num2 * 1871619099) ^ -1875078647;
 					continue;
 				case 25u:
@@ -7740,7 +7617,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 21u:
 				{
 					int num15;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(2479409503u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Phone Default Background", (float)val.X, (float)val.Y))
 					{
 						num = -2109905494;
 						num15 = -2109905494;
@@ -7755,7 +7632,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 19u:
 				{
 					int num11;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_25<string>(1655414365u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Audio", (float)val.X, (float)val.Y))
 					{
 						num = -534793593;
 						num11 = -534793593;
@@ -7794,7 +7671,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 15u:
 				{
 					int num22;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_28<string>(2365233617u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Diary", (float)val.X, (float)val.Y))
 					{
 						num = -2146932578;
 						num22 = -2146932578;
@@ -7809,7 +7686,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 14u:
 				{
 					int num19;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(2053276735u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Gallery", (float)val.X, (float)val.Y))
 					{
 						num = -1047930622;
 						num19 = -1047930622;
@@ -7854,7 +7731,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num16;
 					int num17;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(1777612506u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "CONTACTS", (float)val.X, (float)val.Y))
 					{
 						num16 = 1292605196;
 						num17 = 1292605196;
@@ -7887,7 +7764,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 6u:
 				{
 					int num10;
-					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(1586953807u), (float)val.X, (float)val.Y))
+					if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_64(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Power", (float)val.X, (float)val.Y))
 					{
 						num = -900698500;
 						num10 = -900698500;
@@ -7963,8 +7840,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 
 	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 	{
-		//IL_0162: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0167: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0163: Unknown result type (might be due to invalid IL or missing references)
 		_7ogzNGSGXiMOYh3BcasDaqG9WpT _7ogzNGSGXiMOYh3BcasDaqG9WpT = new _7ogzNGSGXiMOYh3BcasDaqG9WpT();
 		RenderTargetBinding[] renderTargetBinding_ = default(RenderTargetBinding[]);
 		_HQitgQ0mYB5XukcD7eKHBJPmdqs hQitgQ0mYB5XukcD7eKHBJPmdqs = default(_HQitgQ0mYB5XukcD7eKHBJPmdqs);
@@ -8021,7 +7898,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = ((int)num2 * -861825580) ^ -1993641779;
 					continue;
 				case 7u:
-					hQitgQ0mYB5XukcD7eKHBJPmdqs._eeWHzOz6LrTokRQr52VaB0dKbQO = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_72(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_27<string>(2056893989u), ref hQitgQ0mYB5XukcD7eKHBJPmdqs._09rdYyvQzUwbdQbzRZF4vbpdUCO);
+					hQitgQ0mYB5XukcD7eKHBJPmdqs._eeWHzOz6LrTokRQr52VaB0dKbQO = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_72(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Sheen Two", ref hQitgQ0mYB5XukcD7eKHBJPmdqs._09rdYyvQzUwbdQbzRZF4vbpdUCO);
 					num = (int)((num2 * 1290686895) ^ 0x7C05DCE3);
 					continue;
 				case 6u:
@@ -8162,23 +8039,11 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				switch ((num2 = (uint)num ^ 0xEF589DF7u) % 4u)
 				{
 				case 3u:
-					_HzpuNgBJAQYObWMhiboQRiPGmvp = new string[4]
-					{
-						_003CModule_003E.smethod_25<string>(4110595257u),
-						_003CModule_003E.smethod_26<string>(3732077856u),
-						_003CModule_003E.smethod_25<string>(350242689u),
-						_003CModule_003E.smethod_28<string>(221351628u)
-					};
+					_HzpuNgBJAQYObWMhiboQRiPGmvp = new string[4] { "Pinky Nail", "Ring Nail", "Rude Nail", "Index Nail" };
 					num = ((int)num2 * -1829772931) ^ -918177664;
 					continue;
 				case 1u:
-					_I35ziY7HYJkfL20RDXWOC7Pcv1q = new string[4]
-					{
-						_003CModule_003E.smethod_25<string>(2120301444u),
-						_003CModule_003E.smethod_26<string>(3839808124u),
-						_003CModule_003E.smethod_25<string>(2254599750u),
-						_003CModule_003E.smethod_27<string>(2064128497u)
-					};
+					_I35ziY7HYJkfL20RDXWOC7Pcv1q = new string[4] { "Nude1", "Nude2", "Nude3", "Nude4" };
 					num = (int)((num2 * 196185129) ^ 0x2DB2E609);
 					continue;
 				default:
@@ -8196,53 +8061,49 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	[CompilerGenerated]
 	private void _uq8Rq4GCuGQy4QGu9s3PYE9GgHe()
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_28<string>(563400225u), (Action<int>)null);
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone answer loop", (Action<int>)null);
 	}
 
 	[CompilerGenerated]
 	private void _7nfe928NPd9KPPArPJXBbNyTOZs()
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_26<string>(338858730u), (Action<int>)null);
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone IM idle", (Action<int>)null);
 	}
 
 	[CompilerGenerated]
 	private void _oqZbZwE9tOfcSkViZ6NnriagwvN()
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_28<string>(2035196351u), (Action<int>)null);
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone Call loop", (Action<int>)null);
 	}
 
 	[CompilerGenerated]
 	private void _z7L2U9Tw7bWomxTCk7o4hq5lAmB()
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_24<string>(2323208694u), (Action<int>)null);
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone IM idle", (Action<int>)null);
 	}
 
 	[CompilerGenerated]
 	private void _ytMjqwjM52ILF41QLZdCgmhyf8D()
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, _003CModule_003E.smethod_24<string>(4056723591u), (Action<int>)null);
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_2(_wTbB4YBL4PSkaotwKX3CFc50DmX, "Phone Call loop", (Action<int>)null);
 	}
 
 	[CompilerGenerated]
 	private void _zE6Dh759IY2DMju31JJJ4eLOlPs(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
 		_3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44(_003CModule_003E.smethod_26<string>(556006248u), (object)_H6UwM4zjGzglzMY478iBDDvTk6I), new string[2]
-		{
-			_003CModule_003E.smethod_27<string>(628194621u),
-			_003CModule_003E.smethod_26<string>(1267950029u)
-		}, 250, (Action<int>)delegate(int int_0)
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44("Are you sure you wish to remove {0}? This will reset all progression!", (object)_H6UwM4zjGzglzMY478iBDDvTk6I), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
-				goto IL_0077;
+				goto IL_006f;
 			}
-			goto IL_00a5;
-			IL_00a5:
+			goto IL_009d;
+			IL_009d:
 			_270ZVixWLhgEiLA6QosapJMyU6h();
 			int num = -1472990853;
-			goto IL_007c;
-			IL_007c:
+			goto IL_0074;
+			IL_0074:
 			while (true)
 			{
 				uint num2;
@@ -8253,7 +8114,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = ((int)num2 * -1504968640) ^ -671097885;
 					continue;
 				case 2u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44(_003CModule_003E.smethod_27<string>(502582016u), (object)_H6UwM4zjGzglzMY478iBDDvTk6I), 250, _003CModule_003E.smethod_26<string>(2746613317u), (Action)delegate
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44("{0} will be available again after you went home.", (object)_H6UwM4zjGzglzMY478iBDDvTk6I), 250, "OK", (Action)delegate
 					{
 						_270ZVixWLhgEiLA6QosapJMyU6h();
 						_3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
@@ -8263,7 +8124,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 0u:
 					break;
 				case 1u:
-					goto IL_00a5;
+					goto IL_009d;
 				case 3u:
 					return;
 				default:
@@ -8272,10 +8133,10 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				}
 				break;
 			}
-			goto IL_0077;
-			IL_0077:
+			goto IL_006f;
+			IL_006f:
 			num = -174232024;
-			goto IL_007c;
+			goto IL_0074;
 		});
 	}
 
@@ -8284,14 +8145,14 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	{
 		if (int_0 == 1)
 		{
-			goto IL_0077;
+			goto IL_006f;
 		}
-		goto IL_00a5;
-		IL_00a5:
+		goto IL_009d;
+		IL_009d:
 		_270ZVixWLhgEiLA6QosapJMyU6h();
 		int num = -1472990853;
-		goto IL_007c;
-		IL_007c:
+		goto IL_0074;
+		IL_0074:
 		while (true)
 		{
 			uint num2;
@@ -8302,7 +8163,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				num = ((int)num2 * -1504968640) ^ -671097885;
 				continue;
 			case 2u:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44(_003CModule_003E.smethod_27<string>(502582016u), (object)_H6UwM4zjGzglzMY478iBDDvTk6I), 250, _003CModule_003E.smethod_26<string>(2746613317u), (Action)delegate
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_45(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _poenyHBGUusBcnNcTFB9MQBV72R.smethod_44("{0} will be available again after you went home.", (object)_H6UwM4zjGzglzMY478iBDDvTk6I), 250, "OK", (Action)delegate
 				{
 					_270ZVixWLhgEiLA6QosapJMyU6h();
 					_3AaEmo54VzWybgrrg7I8Z9JUV1e = false;
@@ -8312,7 +8173,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			case 0u:
 				break;
 			case 1u:
-				goto IL_00a5;
+				goto IL_009d;
 			case 3u:
 				return;
 			default:
@@ -8321,10 +8182,10 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			}
 			break;
 		}
-		goto IL_0077;
-		IL_0077:
+		goto IL_006f;
+		IL_006f:
 		num = -174232024;
-		goto IL_007c;
+		goto IL_0074;
 	}
 
 	[CompilerGenerated]
@@ -8337,8 +8198,8 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	[CompilerGenerated]
 	private void _LZqSHXlaGtTobsgnENx9E3EloPB(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
-		//IL_00a9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0136: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0099: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011a: Unknown result type (might be due to invalid IL or missing references)
 		string string_ = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_77((MemberInfo)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_76((object)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_75(_4L7hfXrWoDdArQiscG4ukHCV46B)));
 		string string_2 = default(string);
 		while (true)
@@ -8353,7 +8214,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				{
 					int num5;
 					int num6;
-					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, _003CModule_003E.smethod_24<string>(2366219591u)))
+					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, "LivingRoomScene"))
 					{
 						num5 = -536382399;
 						num6 = -536382399;
@@ -8369,7 +8230,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				case 9u:
 				{
 					int num4;
-					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, _003CModule_003E.smethod_24<string>(3601104483u)))
+					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_82(string_, "BedroomScene"))
 					{
 						num = -1446054941;
 						num4 = -1446054941;
@@ -8386,7 +8247,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					num = -627923288;
 					continue;
 				case 4u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_003CModule_003E.smethod_28<string>(1817897788u), _003CModule_003E.smethod_27<string>(2895105632u), Color.get_White());
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81("<i>Reception is really bad at the moment, I should try again when I'm back at home.</i>", "%playername%", Color.get_White());
 					num = ((int)num2 * -953685960) ^ 0x8E3ADE7;
 					continue;
 				case 3u:
@@ -8407,7 +8268,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					continue;
 				}
 				case 2u:
-					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_37(_003CModule_003E.smethod_27<string>(2415877458u), _H6UwM4zjGzglzMY478iBDDvTk6I.ToString(), _003CModule_003E.smethod_27<string>(1461038364u)), _003CModule_003E.smethod_27<string>(2895105632u), Color.get_White());
+					_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_poenyHBGUusBcnNcTFB9MQBV72R.smethod_37("<i>", _H6UwM4zjGzglzMY478iBDDvTk6I.ToString(), " is kind of... preoccupied right now.</i>"), "%playername%", Color.get_White());
 					num = ((int)num2 * -921096924) ^ 0xB72AA17;
 					continue;
 				case 1u:
@@ -8415,7 +8276,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					_TwlwMC1hhdSzamwGWEBxuUkz1gH twlwMC1hhdSzamwGWEBxuUkz1gH = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_78(_4L7hfXrWoDdArQiscG4ukHCV46B);
 					string_2 = ((twlwMC1hhdSzamwGWEBxuUkz1gH != null) ? _poenyHBGUusBcnNcTFB9MQBV72R.smethod_77((MemberInfo)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_79((object)twlwMC1hhdSzamwGWEBxuUkz1gH)) : null);
 					int num3;
-					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_80(string_, _003CModule_003E.smethod_24<string>(3174320736u)))
+					if (!_poenyHBGUusBcnNcTFB9MQBV72R.smethod_80(string_, "PlayerSexScene"))
 					{
 						num = -1023079257;
 						num3 = -1023079257;
@@ -8475,7 +8336,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	[CompilerGenerated]
 	private void _dzvdiBCzexDaTaw0dtlOYpufAN9(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_27<string>(2902340140u));
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "MiniGameCooking");
 		while (true)
 		{
 			int num = -1423211482;
@@ -8485,7 +8346,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				switch ((num2 = (uint)num ^ 0xB40C3BEDu) % 3u)
 				{
 				case 2u:
-					goto IL_0017;
+					goto IL_0013;
 				default:
 					return;
 				case 0u:
@@ -8494,7 +8355,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 					return;
 				}
 				break;
-				IL_0017:
+				IL_0013:
 				_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 				num = ((int)num2 * -1979497693) ^ -1261130622;
 			}
@@ -8504,25 +8365,25 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	[CompilerGenerated]
 	private void _mtSlo389ePbyE51TlqnT5fBb6gI(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, _003CModule_003E.smethod_26<string>(1361564620u));
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_42(_4L7hfXrWoDdArQiscG4ukHCV46B, "NudesRemy");
 		_RiDuYMeg3EHnBUteUcAb8VlfQVl();
 	}
 
 	[CompilerGenerated]
 	private void _wxGBGUQYvk0di1prM3ppqYDhqrj(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
-		//IL_007d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0071: Unknown result type (might be due to invalid IL or missing references)
 		string string_ = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_77((MemberInfo)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_76((object)_poenyHBGUusBcnNcTFB9MQBV72R.smethod_75(_4L7hfXrWoDdArQiscG4ukHCV46B)));
-		if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_83(string_, _003CModule_003E.smethod_27<string>(3626898187u)))
+		if (_poenyHBGUusBcnNcTFB9MQBV72R.smethod_83(string_, "Club"))
 		{
-			goto IL_003f;
+			goto IL_003b;
 		}
-		goto IL_0069;
-		IL_0069:
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81(_003CModule_003E.smethod_28<string>(238170972u), _003CModule_003E.smethod_26<string>(2524404853u), Color.get_White());
+		goto IL_0065;
+		IL_0065:
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_81("<i>Hmm, the operator is telling me: 'The number you are trying to reach is currently unavailable'. I guess the DJ only has his phone enabled during Club hours.</i>", "%playername%", Color.get_White());
 		int num = 647745293;
-		goto IL_0044;
-		IL_0044:
+		goto IL_0040;
+		IL_0040:
 		while (true)
 		{
 			uint num2;
@@ -8537,7 +8398,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			default:
 				return;
 			case 3u:
-				goto IL_0069;
+				goto IL_0065;
 			case 1u:
 				return;
 			case 4u:
@@ -8545,10 +8406,10 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 			}
 			break;
 		}
-		goto IL_003f;
-		IL_003f:
+		goto IL_003b;
+		IL_003b:
 		num = 1184456034;
-		goto IL_0044;
+		goto IL_0040;
 	}
 
 	[CompilerGenerated]
@@ -8561,11 +8422,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	private void _DYKzI7YGQNT3w0xlrg3r0WgZqmd(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
 		_3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_25<string>(105502083u), new string[2]
-		{
-			_003CModule_003E.smethod_27<string>(628194621u),
-			_003CModule_003E.smethod_25<string>(988971570u)
-		}, 250, (Action<int>)delegate(int int_0)
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Are you sure you wish to remove this message?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -8695,11 +8552,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 				}
 				break;
 				IL_0009:
-				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_27<string>(3392420076u), new string[2]
-				{
-					_003CModule_003E.smethod_24<string>(4072060446u),
-					_003CModule_003E.smethod_27<string>(2301875976u)
-				}, 250, (Action<int>)delegate(int int_0)
+				_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Are you sure you wish to customize your character? This may break some active dates even if make no changes!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 				{
 					if (int_0 == 1)
 					{
@@ -8836,11 +8689,7 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	private void _CXERWutNbwOjWbplSI9ohKinpAO(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
 		_3AaEmo54VzWybgrrg7I8Z9JUV1e = true;
-		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, _003CModule_003E.smethod_25<string>(2721740554u), new string[2]
-		{
-			_003CModule_003E.smethod_27<string>(628194621u),
-			_003CModule_003E.smethod_24<string>(1057444391u)
-		}, 250, (Action<int>)delegate(int int_0)
+		_poenyHBGUusBcnNcTFB9MQBV72R.smethod_73(_9GQBAH2pi8Sm6ph1s6InjyQGe6R, "Are you sure you wish to quit the game? All unsaved progress will be lost!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -8927,23 +8776,23 @@ public class _poenyHBGUusBcnNcTFB9MQBV72R
 	[CompilerGenerated]
 	private Point _Xz25BlZJnUNbNDPMKaWNQy0jbnY(Point point_0)
 	{
-		//IL_0012: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0063: Unknown result type (might be due to invalid IL or missing references)
-		//IL_006a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0031: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0051: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0052: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0058: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0066: Unknown result type (might be due to invalid IL or missing references)
 		double double_ = default(double);
-		Point val = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_72(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, _003CModule_003E.smethod_24<string>(778852662u), ref double_);
+		Point val = _poenyHBGUusBcnNcTFB9MQBV72R.smethod_72(_hrw3Kf8fCx7saJOmoYUD8sIz3uD, "Sheen Two", ref double_);
 		Matrix val2 = Matrix.CreateTranslation((float)(-val.X), (float)(-val.Y), 0f) * Matrix.CreateRotationZ((float)(0.0 - double_));
 		Vector2 val3 = Vector2.Transform(new Vector2((float)((Point)(ref point_0)).get_x(), (float)((Point)(ref point_0)).get_y()), val2);
 		return new Point((int)val3.X, (int)val3.Y);

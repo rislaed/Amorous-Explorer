@@ -9,7 +9,7 @@ public class ZenithDate3ABScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		ZenithDate3ABScene.smethod_15(ZenithDate3ABScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(913610262u));
+		ZenithDate3ABScene.smethod_15(ZenithDate3ABScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "ZenithDate");
 	}
 
 	static _JbeCmOie0phb2cbgG6DdGZrbs3pB smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)

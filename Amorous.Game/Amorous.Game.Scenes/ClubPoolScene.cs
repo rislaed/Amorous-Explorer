@@ -31,14 +31,14 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		private float _time;
 
 		public FrameAnimationLayer(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
-			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _003CModule_003E.smethod_26<string>(3011788633u))
+			: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "FrameAnimationLayer")
 		{
-			//IL_0072: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0077: Unknown result type (might be due to invalid IL or missing references)
-			//IL_009f: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00a4: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00b0: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00b5: Unknown result type (might be due to invalid IL or missing references)
+			//IL_006e: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0073: Unknown result type (might be due to invalid IL or missing references)
+			//IL_009b: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00a0: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00ac: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
 			while (true)
 			{
 				int num = -394294418;
@@ -307,28 +307,28 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ClubPoolScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		ClubPoolScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_26<string>(133341150u), -1677, 0);
-		ClubPoolScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(522766818u), _003CModule_003E.smethod_26<string>(689482131u), -691, 0, (Action)OnDoorClick);
+		ClubPoolScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
+		ClubPoolScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, (Action)OnDoorClick);
 		_lnXs1JfCeIBNCpFYs8XVRorc0h4 lnXs1JfCeIBNCpFYs8XVRorc0h = new _lnXs1JfCeIBNCpFYs8XVRorc0h4(this);
 		ClubPoolScene.smethod_16((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)lnXs1JfCeIBNCpFYs8XVRorc0h, 1525f);
 		ClubPoolScene.smethod_17((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)lnXs1JfCeIBNCpFYs8XVRorc0h, 890f);
 		_lnXs1JfCeIBNCpFYs8XVRorc0h4 gparam_ = lnXs1JfCeIBNCpFYs8XVRorc0h;
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(gparam_, 2);
-		FrameAnimationLayer frameAnimationLayer = new FrameAnimationLayer(this, _003CModule_003E.smethod_26<string>(1296181383u), 0.5f, 5, 200, 30, 1.5f);
+		FrameAnimationLayer frameAnimationLayer = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
 		frameAnimationLayer.Play(-1420, 200, 0, 10f);
-		FrameAnimationLayer frameAnimationLayer2 = new FrameAnimationLayer(this, _003CModule_003E.smethod_28<string>(1351099157u), 0.5f, 5, 200, 30, 1.5f);
+		FrameAnimationLayer frameAnimationLayer2 = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
 		frameAnimationLayer2.Play(-1170, 200, 2, 10f);
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(frameAnimationLayer, 2);
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(frameAnimationLayer2, 2);
-		ClubPoolScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(2911560316u), _003CModule_003E.smethod_25<string>(2682521829u), -1677, 0);
-		ClubPoolScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(3763544924u), _003CModule_003E.smethod_24<string>(322145122u), 2041, 351);
+		ClubPoolScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
+		ClubPoolScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
 		ClubPoolScene.smethod_20(ClubPoolScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -1677, 1677, 0, 0);
 		ClubPoolScene.smethod_21(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = ClubPoolScene.smethod_22();
-		_showRemy = !ClubPoolScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(375240109u));
+		_showRemy = !ClubPoolScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyLeftClub");
 		if (_showRemy)
 		{
-			ClubPoolScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(2047616633u), _003CModule_003E.smethod_28<string>(1579450929u), 995, 517);
+			ClubPoolScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
 		}
 	}
 
@@ -638,7 +638,7 @@ public class ClubPoolScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void OnRemyClick()
 	{
-		ClubPoolScene.smethod_31(ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_27<string>(1833847450u));
+		ClubPoolScene.smethod_31(ClubPoolScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "RemyPreDate");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

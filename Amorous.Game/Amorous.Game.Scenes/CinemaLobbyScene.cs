@@ -14,11 +14,11 @@ public class CinemaLobbyScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xE5E2A1F9u) % 4u)
 				{
 				case 3u:
-					CinemaLobbyScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_26<string>(385244280u), 0, 0);
+					CinemaLobbyScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CinemaLobby/Cinema Lobby", 0, 0);
 					num = (int)((num2 * 1845167659) ^ 0x1C990618);
 					continue;
 				case 0u:
-					CinemaLobbyScene.smethod_15(_003CModule_003E.smethod_27<string>(2473869484u), 0.4f);
+					CinemaLobbyScene.smethod_15("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 					num = (int)(num2 * 397138287) ^ -1562925592;
 					continue;
 				default:

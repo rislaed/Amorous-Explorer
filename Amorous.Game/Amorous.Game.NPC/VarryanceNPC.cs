@@ -23,12 +23,12 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 		Shirt
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_24<string>(2505074090u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Varryance";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(162, 65, 159);
 
 	public VarryanceNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(728602410u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Varryance", 1f)
 	{
 		while (true)
 		{
@@ -39,7 +39,7 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 				switch ((num2 = (uint)num ^ 0xFD6C932Au) % 8u)
 				{
 				case 7u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_25<string>(1438495930u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Varryance Body");
 					num = ((int)num2 * -1499453910) ^ 0xD123FF9;
 					continue;
 				case 6u:
@@ -47,7 +47,7 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 					num = (int)((num2 * 545146963) ^ 0x2D970DF2);
 					continue;
 				case 5u:
-					VarryanceNPC.smethod_17(VarryanceNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_27<string>(2874277431u))));
+					VarryanceNPC.smethod_17(VarryanceNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Varryance Shirt")));
 					num = (int)((num2 * 2128211301) ^ 0x474269DB);
 					continue;
 				case 3u:
@@ -59,7 +59,7 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 					num = (int)(num2 * 1126153955) ^ -1846952774;
 					continue;
 				case 0u:
-					VarryanceNPC.smethod_17(VarryanceNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_24<string>(107900481u))));
+					VarryanceNPC.smethod_17(VarryanceNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Varryance Pants")));
 					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 					num = ((int)num2 * -1203273739) ^ 0x130FADC;
 					continue;
@@ -77,12 +77,7 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 
 	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
 	{
-		return new string[3]
-		{
-			_003CModule_003E.smethod_28<string>(3330364631u),
-			_003CModule_003E.smethod_24<string>(3122516536u),
-			_003CModule_003E.smethod_24<string>(107900481u)
-		};
+		return new string[3] { "Varryance Body", "Varryance Shirt", "Varryance Pants" };
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)

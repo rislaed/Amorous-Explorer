@@ -12,8 +12,8 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 		{
 			goto IL_001d;
 		}
-		goto IL_027c;
-		IL_027c:
+		goto IL_0268;
+		IL_0268:
 		int num;
 		int num2;
 		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 1)
@@ -26,8 +26,8 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 			num = -1873172816;
 			num2 = -1873172816;
 		}
-		goto IL_0213;
-		IL_0213:
+		goto IL_01ff;
+		IL_01ff:
 		while (true)
 		{
 			uint num3;
@@ -41,7 +41,7 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 			{
 				int num6;
 				int num7;
-				if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_5(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), _003CModule_003E.smethod_26<string>(3403027349u)))
+				if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_5(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "PrologueDone"))
 				{
 					num6 = -978421054;
 					num7 = -978421054;
@@ -55,7 +55,7 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 				continue;
 			}
 			case 14u:
-				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_6(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), _003CModule_003E.smethod_26<string>(3858051788u), 10);
+				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_6(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Gender", 10);
 				num = (int)(num3 * 997875787) ^ -885990421;
 				continue;
 			case 13u:
@@ -74,7 +74,7 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 			{
 				int num4;
 				int num5;
-				if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), _003CModule_003E.smethod_28<string>(1922457648u)) < 20)
+				if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Prologue") < 20)
 				{
 					num4 = 560837913;
 					num5 = 560837913;
@@ -92,9 +92,9 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 				num = -218104701;
 				continue;
 			case 7u:
-				goto IL_0149;
+				goto IL_013d;
 			case 6u:
-				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_6(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), _003CModule_003E.smethod_28<string>(1922457648u), 40);
+				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_6(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Prologue", 40);
 				num = (int)(num3 * 920270592) ^ -1384524841;
 				continue;
 			case 5u:
@@ -102,9 +102,9 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 				num = (int)(num3 * 31422541) ^ -2052745331;
 				continue;
 			case 4u:
-				goto IL_01aa;
+				goto IL_019a;
 			case 3u:
-				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_7(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), _003CModule_003E.smethod_27<string>(3168382252u), bool_0: true);
+				_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_7(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Player.Gender", bool_0: true);
 				num = ((int)num3 * -2116312663) ^ -1767777809;
 				continue;
 			case 2u:
@@ -118,12 +118,12 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 			default:
 				return;
 			case 11u:
-				goto IL_027c;
+				goto IL_0268;
 			case 0u:
 				return;
 			}
 			break;
-			IL_01aa:
+			IL_019a:
 			int num8;
 			if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 3)
 			{
@@ -136,7 +136,7 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 				num8 = -1834196503;
 			}
 			continue;
-			IL_0149:
+			IL_013d:
 			int num9;
 			if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_0(_lRHDfpOTd4PxClZkjMpoakPEA9d_0) == 4)
 			{
@@ -165,12 +165,12 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 		goto IL_001d;
 		IL_001d:
 		num = -926596579;
-		goto IL_0213;
+		goto IL_01ff;
 	}
 
 	public static bool _RUw8RieezXPoVSmbk3eROtfKXVi(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0)
 	{
-		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), _003CModule_003E.smethod_24<string>(3929323548u)) == 30)
+		if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Prologue") == 30)
 		{
 			while (true)
 			{
@@ -184,7 +184,7 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 					{
 						int num3;
 						int num4;
-						if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), _003CModule_003E.smethod_25<string>(1388530193u)) == 10)
+						if (_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_2(_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_1(_lRHDfpOTd4PxClZkjMpoakPEA9d_0), "Gender") == 10)
 						{
 							num3 = 2095579349;
 							num4 = 2095579349;
@@ -198,7 +198,7 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 						continue;
 					}
 					case 0u:
-						_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_10(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, (_7UlnfykmEmZDFt3BmCKZekI43Ih)new SaveMigrationScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(1388530193u), _9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_9(_lRHDfpOTd4PxClZkjMpoakPEA9d_0)));
+						_9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_10(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, (_7UlnfykmEmZDFt3BmCKZekI43Ih)new SaveMigrationScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Gender", _9gbCIL8lNtgBPuVMJ6pA7rCsMoT.smethod_9(_lRHDfpOTd4PxClZkjMpoakPEA9d_0)));
 						num = ((int)num2 * -341654282) ^ 0x1A8539E;
 						continue;
 					case 2u:
@@ -206,12 +206,12 @@ public static class _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 					case 1u:
 						return true;
 					default:
-						goto end_IL_00a9;
+						goto end_IL_009d;
 					}
 					break;
 				}
 				continue;
-				end_IL_00a9:
+				end_IL_009d:
 				break;
 			}
 		}

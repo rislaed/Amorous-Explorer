@@ -23,12 +23,12 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_27<string>(4171764370u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Riptide";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(244, 146, 66);
 
 	public LifeguardNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(68746444u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Lifeguard", 1f)
 	{
 		while (true)
 		{
@@ -44,12 +44,12 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 					num = ((int)num2 * -1399120277) ^ -1496239523;
 					continue;
 				case 2u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_27<string>(3452922109u));
-					LifeguardNPC.smethod_17(LifeguardNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_25<string>(976079090u))));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Riptide - Nude");
+					LifeguardNPC.smethod_17(LifeguardNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Riptide - Pants")));
 					num = ((int)num2 * -980979245) ^ 0x51BA0089;
 					continue;
 				case 1u:
-					LifeguardNPC.smethod_19(LifeguardNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_26<string>(2521963848u))));
+					LifeguardNPC.smethod_19(LifeguardNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Riptide - Shirt")));
 					num = (int)(num2 * 1891576724) ^ -1090276498;
 					continue;
 				default:

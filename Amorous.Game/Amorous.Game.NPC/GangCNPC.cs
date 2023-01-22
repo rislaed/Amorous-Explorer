@@ -23,12 +23,12 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_26<string>(4084298771u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Jade";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(98, 178, 17);
 
 	public GangCNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_26<string>(2165570212u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/GangC", 1f)
 	{
 		while (true)
 		{
@@ -39,18 +39,18 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 				switch ((num2 = (uint)num ^ 0x5BF67898u) % 5u)
 				{
 				case 3u:
-					GangCNPC.smethod_19(GangCNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, _003CModule_003E.smethod_28<string>(4183082117u))));
+					GangCNPC.smethod_19(GangCNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Jade Pants")));
 					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 					num = (int)((num2 * 2021838610) ^ 0x4BBA3C63);
 					continue;
 				case 1u:
 					_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 610;
 					_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1002;
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, _003CModule_003E.smethod_27<string>(1757537230u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Jade Nude");
 					num = ((int)num2 * -1092515392) ^ 0x8A89E06;
 					continue;
 				case 0u:
-					GangCNPC.smethod_17(GangCNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, _003CModule_003E.smethod_28<string>(2375003529u))));
+					GangCNPC.smethod_17(GangCNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Jade Shirt")));
 					num = (int)(num2 * 2020062704) ^ -77358360;
 					continue;
 				case 4u:
@@ -66,12 +66,7 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 
 	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
 	{
-		return new string[3]
-		{
-			_003CModule_003E.smethod_27<string>(1757537230u),
-			_003CModule_003E.smethod_24<string>(1802492581u),
-			_003CModule_003E.smethod_27<string>(3667215418u)
-		};
+		return new string[3] { "Jade Nude", "Jade Pants", "Jade Shirt" };
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)

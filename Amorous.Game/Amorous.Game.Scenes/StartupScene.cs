@@ -37,7 +37,7 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public string _uNi8yrQVBFzFdV8f7FGmr8Vhobf { get; set; }
 	}
 
-	private static readonly string _Pxncvon3rRvuowKL1yYBOZjpf2y = StartupScene.smethod_26(StartupScene.smethod_25(StartupScene.smethod_24()), _003CModule_003E.smethod_24<string>(3579973993u));
+	private static readonly string _Pxncvon3rRvuowKL1yYBOZjpf2y = StartupScene.smethod_26(StartupScene.smethod_25(StartupScene.smethod_24()), "username.txt");
 
 	private readonly TextBox _njC7ZfEM6PTCffwkw18LisM3W9E;
 
@@ -46,69 +46,69 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public StartupScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_009c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e8: Expected O, but got Unknown
-		//IL_00e8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ed: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ff: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0106: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0117: Expected O, but got Unknown
-		//IL_0118: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0128: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0132: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0144: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0150: Expected O, but got Unknown
-		//IL_0171: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0176: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0188: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a1: Expected O, but got Unknown
-		//IL_01a2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01ce: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01d5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e1: Expected O, but got Unknown
-		//IL_01e2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0080: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0095: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00aa: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c8: Expected O, but got Unknown
+		//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00df: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f3: Expected O, but got Unknown
+		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0104: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0116: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0120: Unknown result type (might be due to invalid IL or missing references)
+		//IL_012c: Expected O, but got Unknown
+		//IL_014d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0152: Unknown result type (might be due to invalid IL or missing references)
+		//IL_015a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0164: Unknown result type (might be due to invalid IL or missing references)
+		//IL_016b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0179: Expected O, but got Unknown
+		//IL_017a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_017f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_018a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0194: Unknown result type (might be due to invalid IL or missing references)
+		//IL_019c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ad: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b9: Expected O, but got Unknown
+		//IL_01ba: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01bf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01c7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e3: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0201: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0227: Expected O, but got Unknown
-		//IL_0227: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0234: Unknown result type (might be due to invalid IL or missing references)
-		//IL_023e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0250: Expected O, but got Unknown
-		//IL_0259: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0263: Expected O, but got Unknown
-		//IL_0263: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0268: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0270: Unknown result type (might be due to invalid IL or missing references)
-		//IL_027a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0282: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029e: Expected O, but got Unknown
-		//IL_02a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02b1: Expected O, but got Unknown
-		StartupScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_28<string>(736024294u), 0, -540);
-		StartupScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_25<string>(3622501714u), 0, -170);
-		StartupScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(2246002085u), _003CModule_003E.smethod_27<string>(3520131213u), 616, 50);
-		StartupScene.smethod_16(_003CModule_003E.smethod_27<string>(2452165960u), 0.4f);
+		//IL_01fb: Expected O, but got Unknown
+		//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0200: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0208: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0212: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0220: Expected O, but got Unknown
+		//IL_0229: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0233: Expected O, but got Unknown
+		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0238: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0240: Unknown result type (might be due to invalid IL or missing references)
+		//IL_024a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0252: Unknown result type (might be due to invalid IL or missing references)
+		//IL_025c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_026a: Expected O, but got Unknown
+		//IL_0273: Unknown result type (might be due to invalid IL or missing references)
+		//IL_027d: Expected O, but got Unknown
+		StartupScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Intro/Background", 0, -540);
+		StartupScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Intro/Scenery", 0, -170);
+		StartupScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
+		StartupScene.smethod_16("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
 		Window obj = StartupScene.smethod_17();
 		((Control)obj).set_Position(new Point(704, 412));
 		((Control)obj).set_Size(new Point(512, 285));
@@ -116,12 +116,12 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		Label val2 = new Label();
 		((Control)val2).set_Position(new Point(15, 15));
 		((Control)val2).set_AutoSize((AutoSize)3);
-		val2.set_Text(_003CModule_003E.smethod_25<string>(291695080u));
+		val2.set_Text("Thank you for playing Amorous!\n\nThis release is for patrons only. To verify this, please\nlogin using your forum credentials below:");
 		Label val3 = val2;
 		Label val4 = new Label();
 		((Control)val4).set_Position(new Point(15, 135));
 		((Control)val4).set_AutoSize((AutoSize)3);
-		val4.set_Text(_003CModule_003E.smethod_28<string>(2385731563u));
+		val4.set_Text("Username:");
 		Label val5 = val4;
 		TextBox val6 = new TextBox();
 		((Control)val6).set_Position(new Point(140, 130));
@@ -135,7 +135,7 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		Label val7 = new Label();
 		((Control)val7).set_Position(new Point(15, 170));
 		((Control)val7).set_AutoSize((AutoSize)3);
-		val7.set_Text(_003CModule_003E.smethod_26<string>(1654172533u));
+		val7.set_Text("Password:");
 		Label val8 = val7;
 		TextBox val9 = new TextBox();
 		((Control)val9).set_Position(new Point(140, 165));
@@ -146,18 +146,18 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		CheckBox val10 = new CheckBox();
 		((Control)val10).set_Position(new Point(15, 200));
 		((Control)val10).set_Size(new Point(300, 30));
-		val10.set_Text(_003CModule_003E.smethod_24<string>(2726406499u));
+		val10.set_Text("Remember username");
 		val10.set_Checked(true);
 		_9nCiJkYgPYczxXJNlo8Z7BbfdsB = val10;
 		Button val11 = new Button();
 		((Control)val11).set_Position(new Point(15, 240));
-		((Label)val11).set_Text(_003CModule_003E.smethod_24<string>(2227026577u));
+		((Label)val11).set_Text("Login");
 		Button val12 = val11;
 		((Control)val12).add_MouseClick((MouseEvent)delegate
 		{
 			try
 			{
-				WebRequest webRequest_ = _003C_003Ec__DisplayClass5_0.smethod_0(_003CModule_003E.smethod_27<string>(2847090045u));
+				WebRequest webRequest_ = _003C_003Ec__DisplayClass5_0.smethod_0("https://download.amorousgame.com/api/v4/launcherLogin");
 				while (true)
 				{
 					int num = -437185949;
@@ -167,7 +167,7 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						switch ((num2 = (uint)num ^ 0x869C7D9Au) % 3u)
 						{
 						case 1u:
-							goto IL_0012;
+							goto IL_000e;
 						case 2u:
 							break;
 						default:
@@ -187,27 +187,27 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 								{
 									while (true)
 									{
-										IL_00cd:
+										IL_00c5:
 										int num3 = -1691695578;
 										while (true)
 										{
 											switch ((num2 = (uint)num3 ^ 0x869C7D9Au) % 3u)
 											{
 											case 1u:
-												goto IL_009d;
+												goto IL_0095;
 											default:
-												goto end_IL_00b0;
+												goto end_IL_00a8;
 											case 0u:
 												break;
 											case 2u:
-												goto end_IL_00b0;
+												goto end_IL_00a8;
 											}
-											goto IL_00cd;
-											IL_009d:
+											goto IL_00c5;
+											IL_0095:
 											_003C_003Ec__DisplayClass5_0.smethod_7((IDisposable)streamWriter);
 											num3 = (int)(num2 * 613339861) ^ -1184267403;
 											continue;
-											end_IL_00b0:
+											end_IL_00a8:
 											break;
 										}
 										break;
@@ -226,7 +226,7 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 										switch ((num2 = (uint)num4 ^ 0x869C7D9Au) % 8u)
 										{
 										case 7u:
-											_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5, 500, _003CModule_003E.smethod_25<string>(1923253178u), (Action)null);
+											_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5, 500, "OK", (Action)null);
 											num4 = (int)(num2 * 1944003615) ^ -1579978723;
 											continue;
 										case 5u:
@@ -234,7 +234,7 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 											num4 = (int)(num2 * 1041979734) ^ -1549281700;
 											continue;
 										case 3u:
-											_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(1484814867u), 250, _003CModule_003E.smethod_28<string>(4224231895u), (Action)null);
+											_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Sorry, please try again!", 250, "OK", (Action)null);
 											num4 = -1458244276;
 											continue;
 										case 2u:
@@ -290,27 +290,27 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 								{
 									while (true)
 									{
-										IL_0286:
+										IL_0272:
 										int num8 = -574922076;
 										while (true)
 										{
 											switch ((num2 = (uint)num8 ^ 0x869C7D9Au) % 3u)
 											{
 											case 1u:
-												goto IL_0256;
+												goto IL_0242;
 											default:
-												goto end_IL_0269;
+												goto end_IL_0255;
 											case 0u:
 												break;
 											case 2u:
-												goto end_IL_0269;
+												goto end_IL_0255;
 											}
-											goto IL_0286;
-											IL_0256:
+											goto IL_0272;
+											IL_0242:
 											_003C_003Ec__DisplayClass5_0.smethod_7((IDisposable)streamReader);
 											num8 = ((int)num2 * -1148353869) ^ -713398814;
 											continue;
-											end_IL_0269:
+											end_IL_0255:
 											break;
 										}
 										break;
@@ -320,25 +320,25 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						}
 						}
 						break;
-						IL_0012:
-						_003C_003Ec__DisplayClass5_0.smethod_1(webRequest_, _003CModule_003E.smethod_25<string>(1900696256u));
+						IL_000e:
+						_003C_003Ec__DisplayClass5_0.smethod_1(webRequest_, "POST");
 						num = (int)((num2 * 544097791) ^ 0x2A3C6730);
 					}
 				}
 			}
 			catch (Exception)
 			{
-				_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_26<string>(2460619130u), 500, _003CModule_003E.smethod_27<string>(280410800u), (Action)null);
+				_003C_003Ec__DisplayClass5_0.smethod_13(_003C_003Ec__DisplayClass5_0.smethod_12((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Sorry, an unexpected exception occured, see log-file for more details!", 500, "OK", (Action)null);
 			}
 		});
 		Button val13 = new Button();
 		((Control)val13).set_Position(new Point(120, 240));
 		((Control)val13).set_Size(new Point(180, 30));
-		((Label)val13).set_Text(_003CModule_003E.smethod_28<string>(2217590332u));
+		((Label)val13).set_Text("Forgot password?");
 		Button val14 = val13;
 		((Control)val14).add_MouseClick((MouseEvent)delegate
 		{
-			StartupScene.smethod_27(StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(2517411277u));
+			StartupScene.smethod_27(StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "https://forums.amorousgame.com/lost-password/");
 		});
 		((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val3);
 		((ActiveList<Control>)(object)val.get_Controls()).Add((Control)(object)val5);
@@ -443,7 +443,7 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	[CompilerGenerated]
 	private void _bC7RVqWYAiAlsTmOwh7DNLQdIat(Control control_0, MouseEventArgs mouseEventArgs_0)
 	{
-		StartupScene.smethod_27(StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(2517411277u));
+		StartupScene.smethod_27(StartupScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "https://forums.amorousgame.com/lost-password/");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

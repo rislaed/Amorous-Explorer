@@ -6,7 +6,7 @@ public class _SkYjfUaaNhTySNgoGUeFZ46X4dM : Game
 
 	public _SkYjfUaaNhTySNgoGUeFZ46X4dM(bool bool_0)
 	{
-		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_2(_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_0((Game)(object)this), _SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_1(_003CModule_003E.smethod_28<string>(417984315u), (object)_003CModule_003E.smethod_27<string>(957465254u)));
+		_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_2(_SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_0((Game)(object)this), _SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_1("Amorous v{0} (Windows)", (object)"1.0.4"));
 		_4L7hfXrWoDdArQiscG4ukHCV46B = _SkYjfUaaNhTySNgoGUeFZ46X4dM.smethod_3((Game)(object)this, bool_0);
 	}
 

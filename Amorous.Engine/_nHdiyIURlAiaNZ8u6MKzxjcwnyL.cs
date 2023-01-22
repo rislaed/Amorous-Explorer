@@ -947,7 +947,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 		case 3u:
 			goto IL_0039;
 		case 1u:
-			throw _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_45(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_44(_003CModule_003E.smethod_28<string>(1815913885u), string_0));
+			throw _nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_45(_nHdiyIURlAiaNZ8u6MKzxjcwnyL.smethod_44("Animation not found: ", string_0));
 		case 0u:
 			return;
 		}

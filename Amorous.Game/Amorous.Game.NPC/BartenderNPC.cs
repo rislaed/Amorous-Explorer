@@ -23,18 +23,18 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_26<string>(2967090065u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Rou";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
 
 	public BartenderNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(4109097887u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Bartender", 1f)
 	{
 		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 904;
 		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1008;
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_28<string>(2186843413u));
-		BartenderNPC.smethod_17(BartenderNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_26<string>(2542693251u))));
-		BartenderNPC.smethod_19(BartenderNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_25<string>(2058417540u))));
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Bovine Naked");
+		BartenderNPC.smethod_17(BartenderNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Bovine pants")));
+		BartenderNPC.smethod_19(BartenderNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Bovine Top")));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
@@ -123,8 +123,8 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 
 	static BartenderNPC()
 	{
-		//IL_0017: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
 		while (true)
 		{
 			int num = -251193026;
@@ -134,7 +134,7 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 				switch ((num2 = (uint)num ^ 0xF340D69Bu) % 3u)
 				{
 				case 1u:
-					goto IL_0011;
+					goto IL_000d;
 				default:
 					return;
 				case 2u:
@@ -143,7 +143,7 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 					return;
 				}
 				break;
-				IL_0011:
+				IL_000d:
 				_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(116, 116, 116);
 				num = (int)((num2 * 601172431) ^ 0x7423CF8E);
 			}

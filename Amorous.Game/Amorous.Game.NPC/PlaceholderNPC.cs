@@ -21,12 +21,12 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 		None
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(3855765331u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Placeholder";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(255, 0, 255);
 
 	public PlaceholderNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_24<string>(3665113056u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Placeholder", 1f)
 	{
 		while (true)
 		{
@@ -37,7 +37,7 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 				switch ((num2 = (uint)num ^ 0x7D81297Du) % 3u)
 				{
 				case 2u:
-					goto IL_0018;
+					goto IL_0014;
 				default:
 					return;
 				case 0u:
@@ -46,8 +46,8 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 					return;
 				}
 				break;
-				IL_0018:
-				_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Placeholder, _003CModule_003E.smethod_26<string>(1642587329u));
+				IL_0014:
+				_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Placeholder, "Placeholder");
 				num = (int)((num2 * 1994266627) ^ 0x752C2595);
 			}
 		}

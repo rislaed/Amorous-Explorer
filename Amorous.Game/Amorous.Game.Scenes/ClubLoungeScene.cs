@@ -16,35 +16,27 @@ public class ClubLoungeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public ClubLoungeScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_25<string>(3302335182u), -1295, 0);
-		ClubLoungeScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(458864292u), 638, 0, 500, new string[2]
-		{
-			_003CModule_003E.smethod_28<string>(1548224949u),
-			_003CModule_003E.smethod_25<string>(683518215u)
-		});
-		ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(1422158898u), _003CModule_003E.smethod_28<string>(3698831195u), 638, 0);
-		ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(39921390u), _003CModule_003E.smethod_24<string>(3654275703u), 1384, -150);
-		ClubLoungeScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(3434054992u), _003CModule_003E.smethod_24<string>(403534600u), -958, 0, (Action)OnUpstairsClick);
-		ClubLoungeScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1257102094u), _003CModule_003E.smethod_26<string>(140798367u), -242, 0, (Action)OnUpstairsClick);
-		ClubLoungeScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(522766818u), _003CModule_003E.smethod_26<string>(848614161u), 235, 0, (Action)OnDoorClick);
-		ClubLoungeScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(1505871684u), 2588, 0, (Action)OnClubClick, 1200, new string[2]
-		{
-			_003CModule_003E.smethod_28<string>(1386328914u),
-			_003CModule_003E.smethod_28<string>(2461632037u)
-		});
-		ClubLoungeScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(3498625649u), _003CModule_003E.smethod_24<string>(358068251u), -1295, 758);
+		ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubLounge/Lounge Main", -1295, 0);
+		ClubLoungeScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Lights", 638, 0, 500, new string[2] { "Assets/Scenes/ClubLounge/Lights Green Flicker", "Assets/Scenes/ClubLounge/Lights Yellow Flicker" });
+		ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Lights Glow", "Assets/Scenes/ClubLounge/Lights glow", 638, 0);
+		ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Pole", "Assets/Scenes/ClubLounge/Dance Pole", 1384, -150);
+		ClubLoungeScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Elevator", "Assets/Scenes/ClubLounge/Elevator Door Selectable", -958, 0, (Action)OnUpstairsClick);
+		ClubLoungeScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Stairs", "Assets/Scenes/ClubLounge/Stairs selectable", -242, 0, (Action)OnUpstairsClick);
+		ClubLoungeScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Door", "Assets/Scenes/ClubLounge/Exit door selectable", 235, 0, (Action)OnDoorClick);
+		ClubLoungeScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Club", 2588, 0, (Action)OnClubClick, 1200, new string[2] { "Assets/Scenes/ClubLounge/Main Room Blue", "Assets/Scenes/ClubLounge/Main Room Green" });
+		ClubLoungeScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Couches", "Assets/Scenes/ClubLounge/Foreground couches", -1295, 758);
 		ClubLoungeScene.smethod_20(ClubLoungeScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), -1295, 1295, 0, 0);
 		ClubLoungeScene.smethod_21(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = ClubLoungeScene.smethod_22();
-		_showDustin = !ClubLoungeScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(2804159695u));
-		_showMercy = !ClubLoungeScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(3945410320u));
+		_showDustin = !ClubLoungeScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, "DustinLeftClub");
+		_showMercy = !ClubLoungeScene.smethod_23(opIJo2jLUqdOL5yAFP4yzXce0DG_, "MercyLeftClub");
 		if (_showDustin)
 		{
-			ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(1282703600u), _003CModule_003E.smethod_24<string>(1003390440u), -426, 259);
+			ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Shadow", "Assets/Scenes/ClubLounge/ShadowDustin", -426, 259);
 		}
 		if (_showMercy)
 		{
-			ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(2689983809u), _003CModule_003E.smethod_28<string>(3482969815u), 2333, 448);
+			ClubLoungeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Shadow", "Assets/Scenes/ClubLounge/ShadowMercy", 2333, 448);
 		}
 	}
 
@@ -227,12 +219,12 @@ public class ClubLoungeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void OnDustinClick()
 	{
-		ClubLoungeScene.smethod_28(ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(1967726989u));
+		ClubLoungeScene.smethod_28(ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "DustinDate");
 	}
 
 	private void OnMercyClick()
 	{
-		ClubLoungeScene.smethod_28(ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(1396577887u));
+		ClubLoungeScene.smethod_28(ClubLoungeScene.smethod_24((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "MercyPreDate");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

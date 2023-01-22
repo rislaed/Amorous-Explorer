@@ -44,12 +44,12 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 
 			internal string _X6MAlu3DhuArzswQvg8ValCqpi8A(int int_0)
 			{
-				return _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0(_003CModule_003E.smethod_26<string>(3047216214u), (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF));
+				return _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0("{0}:{1}", (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF));
 			}
 
 			internal string _xjgamBFXFCDpMbjCbiSxfftKT5w(int int_0)
 			{
-				return _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0(_003CModule_003E.smethod_28<string>(1417124590u), (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF));
+				return _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0("{0}:{1}", (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF));
 			}
 
 			static string smethod_0(string string_0, object object_0, object object_1)
@@ -302,7 +302,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 
 		public string _IOKHSVtx0w8zZNPe8UqYKwU0gFB(int int_0 = 0)
 		{
-			IEnumerable<string> enumerable = _Eb7oabg29v057DnasBnAMWRlzGB.Select((int int_0) => _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0(_003CModule_003E.smethod_26<string>(3047216214u), (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF)));
+			IEnumerable<string> enumerable = _Eb7oabg29v057DnasBnAMWRlzGB.Select((int int_0) => _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0("{0}:{1}", (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF)));
 			while (true)
 			{
 				int num = 1715031243;
@@ -331,9 +331,9 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 						break;
 					default:
 						enumerable = enumerable.Skip(_Eb7oabg29v057DnasBnAMWRlzGB.Count - int_0 - 1).Take(int_0);
-						return _2MhByyFij8YJN7lWVuu8gpYhGCy.smethod_1(_003CModule_003E.smethod_26<string>(1657890140u), enumerable);
+						return _2MhByyFij8YJN7lWVuu8gpYhGCy.smethod_1(" > ", enumerable);
 					case 1u:
-						return _2MhByyFij8YJN7lWVuu8gpYhGCy.smethod_1(_003CModule_003E.smethod_27<string>(1628216728u), enumerable);
+						return _2MhByyFij8YJN7lWVuu8gpYhGCy.smethod_1(" > ", enumerable);
 					}
 					break;
 					IL_0046:
@@ -344,7 +344,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 
 		public string _g81KxY9Byh1XXf9fABWHnONlji2()
 		{
-			return _Eb7oabg29v057DnasBnAMWRlzGB.Select((int int_0) => _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0(_003CModule_003E.smethod_28<string>(1417124590u), (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF))).LastOrDefault();
+			return _Eb7oabg29v057DnasBnAMWRlzGB.Select((int int_0) => _OFEIPDotBMNUnmgGQqWMabhiEfI.smethod_0("{0}:{1}", (object)((int_0 >> 24) & 0xFF), (object)(int_0 & 0xFFFFFF))).LastOrDefault();
 		}
 
 		static Type smethod_0(object object_0)
@@ -734,7 +734,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 				case 0u:
 					return;
 				case 3u:
-					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh(_003CModule_003E.smethod_26<string>(2666248992u), _ruBDv9gxJDnyTFHwQrU3VTJuJNA, _Hnb6mPvrZFgOMCIApIeMW88jSsF._RB8fRXeQvK5vs7JEA0XfVCEpg1i);
+					_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Failed to find stage '{0}' in cutscene '{1}'", _ruBDv9gxJDnyTFHwQrU3VTJuJNA, _Hnb6mPvrZFgOMCIApIeMW88jSsF._RB8fRXeQvK5vs7JEA0XfVCEpg1i);
 					return;
 				default:
 					_3wk7bXUbhNqSQ9kMD9hieEubOhG = new _2MhByyFij8YJN7lWVuu8gpYhGCy(this, fMuxd8PX5exXCoRNDVuFFbnirof);

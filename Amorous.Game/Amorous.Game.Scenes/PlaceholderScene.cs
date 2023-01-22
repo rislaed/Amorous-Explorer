@@ -5,7 +5,7 @@ public class PlaceholderScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public PlaceholderScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		PlaceholderScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_27<string>(2212667835u), 0, 0);
+		PlaceholderScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Placeholder/Background", 0, 0);
 		PlaceholderScene.smethod_15();
 	}
 

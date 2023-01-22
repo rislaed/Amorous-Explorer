@@ -44,24 +44,24 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public CreditsMenuScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		//IL_0099: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
-		//IL_021b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0222: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0229: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0233: Unknown result type (might be due to invalid IL or missing references)
-		//IL_028d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_040d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0428: Unknown result type (might be due to invalid IL or missing references)
-		//IL_042d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_042f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0452: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0457: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0490: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0495: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01fe: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0205: Unknown result type (might be due to invalid IL or missing references)
+		//IL_020a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_020f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0265: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03d5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03ec: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_03f3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0416: Unknown result type (might be due to invalid IL or missing references)
+		//IL_041b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_044c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0451: Unknown result type (might be due to invalid IL or missing references)
 		int int_2 = default(int);
 		Vector2 val = default(Vector2);
 		bool _vfz3itarR7RfYdT3BqrAmb1qElP = default(bool);
@@ -83,8 +83,8 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x83253983u) % 28u)
 				{
 				case 27u:
-					CreditsMenuScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), _003CModule_003E.smethod_27<string>(1609577702u), 0, 0);
-					CreditsMenuScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3522873144u), _003CModule_003E.smethod_26<string>(4245961274u), 0, 0);
+					CreditsMenuScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/CreditsMenu/Background", 0, 0);
+					CreditsMenuScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Overlay", "Assets/Scenes/CreditsMenu/Overlay", 0, 0);
 					num = ((int)num2 * -1523030824) ^ 0x3981DE61;
 					continue;
 				case 25u:
@@ -95,7 +95,7 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 2047881710) ^ 0x7D401493);
 					continue;
 				case 23u:
-					val = CreditsMenuScene.smethod_18(_nQK443boDHTZ4Jfc3W1VhQkMCcX, _003CModule_003E.smethod_25<string>(3780222998u));
+					val = CreditsMenuScene.smethod_18(_nQK443boDHTZ4Jfc3W1VhQkMCcX, "Test");
 					num = (int)((num2 * 821303657) ^ 0x4A56CA44);
 					continue;
 				case 22u:
@@ -104,8 +104,8 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -622207207) ^ 0x619B1C2A;
 					continue;
 				case 21u:
-					_Otv0Xepue9AcysEmioBbEWTisDaA = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_RootDirectory(), _003CModule_003E.smethod_24<string>(2082789845u))).Replace(_003CModule_003E.smethod_26<string>(1164392482u), string.Empty).Split(new char[1] { '\n' });
-					gparam_ = new _fAUddQEKfZyemRb327NhM3GGlmzA(this, _003CModule_003E.smethod_25<string>(4250267069u))
+					_Otv0Xepue9AcysEmioBbEWTisDaA = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.get_RootDirectory(), "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
+					gparam_ = new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "Credits")
 					{
 						_NC5P3SKqKPpcAYG1mqquUEcUzTg = _y3e1BQlF0D44DVRCJQTcKxaeNOb,
 						_B6VrMlmWofCGqEzjzgFJiAliCge = _R35LFMCpqnW2Zsm1xJon3qf0UAg
@@ -117,7 +117,7 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1620836249) ^ 0x2F738BDE;
 					continue;
 				case 19u:
-					list.Add(string.Format(_003CModule_003E.smethod_24<string>(402784683u), num5));
+					list.Add($"Assets/Scenes/CreditsMenu/Skye/TYSkye{num5:D2}");
 					num5++;
 					num = -1297609773;
 					continue;
@@ -150,7 +150,7 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 2094512856) ^ 0x31419FBC);
 					continue;
 				case 14u:
-					_ICAb9QUE8hnbl0uKD8fBpEB1kSV = _003CModule_003E.smethod_27<string>(2560799542u);
+					_ICAb9QUE8hnbl0uKD8fBpEB1kSV = "Press Escape or Left-click here to return to the Main Menu.";
 					num = ((int)num2 * -1047571109) ^ -2068731690;
 					continue;
 				case 13u:
@@ -168,9 +168,9 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 48118031) ^ 0x45F9639C);
 					continue;
 				case 10u:
-					_nQK443boDHTZ4Jfc3W1VhQkMCcX = CreditsMenuScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>(_003CModule_003E.smethod_28<string>(814166187u));
-					_tYZIsh9jywDMNNUVaAxLdrUBPIS = CreditsMenuScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>(_003CModule_003E.smethod_24<string>(920501128u));
-					_6YCQhlMaqcDds8uGX1g8fjBKqV4A = CreditsMenuScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>(_003CModule_003E.smethod_26<string>(3939282418u));
+					_nQK443boDHTZ4Jfc3W1VhQkMCcX = CreditsMenuScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+					_tYZIsh9jywDMNNUVaAxLdrUBPIS = CreditsMenuScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-20");
+					_6YCQhlMaqcDds8uGX1g8fjBKqV4A = CreditsMenuScene.smethod_17(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0).Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
 					num = ((int)num2 * -1713457203) ^ 0x756A813E;
 					continue;
 				case 9u:
@@ -179,7 +179,7 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1517932693) ^ 0x20E45898;
 					continue;
 				case 7u:
-					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, _003CModule_003E.smethod_28<string>(4186760719u))
+					_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "GoBackText")
 					{
 						_NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate
 						{
@@ -366,14 +366,14 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				case 3u:
 					_lHXUPUciX33biAqfQQ8Yx79nzNB = val.Y;
-					val = CreditsMenuScene.smethod_18(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, _003CModule_003E.smethod_28<string>(342251771u));
+					val = CreditsMenuScene.smethod_18(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Test");
 					_3STGOMMEQo4zHKNnz9z7ftUA5Df = val.Y;
 					_AjA452JzkbwnCTtbITN5kOEaNrR = new Vector2(50f, 1080f - _2MfIKVtD2AO6rfNH8r9gBa9ABgc - 40f);
-					_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc(_003CModule_003E.smethod_25<string>(2984855403u), 0.4f);
+					_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Father-of-Death - Happy Jazz Shit", 0.4f);
 					num = (int)((num2 * 1239156916) ^ 0x724EEEAA);
 					continue;
 				case 2u:
-					val = CreditsMenuScene.smethod_18(_tYZIsh9jywDMNNUVaAxLdrUBPIS, _003CModule_003E.smethod_24<string>(2936357339u));
+					val = CreditsMenuScene.smethod_18(_tYZIsh9jywDMNNUVaAxLdrUBPIS, "Test");
 					num = (int)((num2 * 1685717605) ^ 0x64CE40FA);
 					continue;
 				case 1u:
@@ -381,7 +381,7 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -758367372) ^ -772335969;
 					continue;
 				case 0u:
-					kxm3yIqio0baXT5t5vOHBAEdviB = _gqeDf50vdgfHqlAbH8UK4sXgtYAA(_003CModule_003E.smethod_26<string>(4231890331u), int_, int_2, 16, list.ToArray());
+					kxm3yIqio0baXT5t5vOHBAEdviB = _gqeDf50vdgfHqlAbH8UK4sXgtYAA("Skye", int_, int_2, 16, list.ToArray());
 					num = -1591065230;
 					continue;
 				case 26u:
@@ -436,11 +436,11 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0188: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0189: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0108: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0180: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0181: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01af: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01b0: Unknown result type (might be due to invalid IL or missing references)
 		Vector2 zero = Vector2.get_Zero();
 		float num3 = default(float);
 		float num6 = default(float);
@@ -487,7 +487,7 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 8u:
 				{
 					int num10;
-					if (!CreditsMenuScene.smethod_22(string_, _003CModule_003E.smethod_24<string>(520847207u)))
+					if (!CreditsMenuScene.smethod_22(string_, "##"))
 					{
 						num = 443568990;
 						num10 = 443568990;
@@ -509,7 +509,7 @@ public class CreditsMenuScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 6u:
 				{
 					int num9;
-					if (CreditsMenuScene.smethod_22(string_, _003CModule_003E.smethod_25<string>(1765748408u)))
+					if (CreditsMenuScene.smethod_22(string_, "#"))
 					{
 						num = 2044608425;
 						num9 = 2044608425;

@@ -41,26 +41,26 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 	public _XJasjdoOf6PYbfaC5MsbXSjDWV3()
 	{
 		//IL_0022: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0066: Expected O, but got Unknown
-		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00db: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f0: Expected O, but got Unknown
+		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005a: Expected O, but got Unknown
+		//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00dc: Expected O, but got Unknown
 		Desktop obj = _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_0();
 		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_2(obj, _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_1());
 		((Control)obj).set_Size(new Point(1920, 1080));
 		_9GQBAH2pi8Sm6ph1s6InjyQGe6R = obj;
-		_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE(_003CModule_003E.smethod_24<string>(2958987663u), _003CModule_003E.smethod_25<string>(3044918610u));
+		_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 		ControlStyle val = new ControlStyle();
-		val.set_Font(_003CModule_003E.smethod_28<string>(3450785713u));
+		val.set_Font("Assets/Gui/Fonts/Bold-16");
 		ControlStyle value = val;
-		((Dictionary<string, ControlStyle>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Skin())[_003CModule_003E.smethod_26<string>(4282403868u)].set_Tint(ColorInt.ARGB(0.75f, 1f, 1f, 1f));
-		((Dictionary<string, ControlStyle>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Skin()).Add(_003CModule_003E.smethod_25<string>(90355878u), value);
+		((Dictionary<string, ControlStyle>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Skin())["window"].set_Tint(ColorInt.ARGB(0.75f, 1f, 1f, 1f));
+		((Dictionary<string, ControlStyle>)(object)_9GQBAH2pi8Sm6ph1s6InjyQGe6R.get_Skin()).Add("header", value);
 		Frame val2 = new Frame();
 		((Control)val2).set_Dock((DockStyle)3);
 		((Control)val2).set_Size(new Point(600, 1080));
@@ -73,34 +73,34 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 
 	public void _EXfoFnp1OKxeZbd4GcVZMCO2urH(string string_0, string string_1, string string_2)
 	{
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0069: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0073: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007b: Expected O, but got Unknown
-		//IL_0106: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0112: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0122: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0143: Expected O, but got Unknown
-		//IL_0143: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0148: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0156: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015f: Expected O, but got Unknown
-		//IL_018b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0190: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0197: Unknown result type (might be due to invalid IL or missing references)
-		//IL_019f: Expected O, but got Unknown
+		//IL_001b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0039: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0044: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0050: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
+		//IL_006f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0077: Expected O, but got Unknown
+		//IL_0102: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0107: Unknown result type (might be due to invalid IL or missing references)
+		//IL_010e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_011a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0133: Expected O, but got Unknown
+		//IL_0133: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
+		//IL_013f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0146: Unknown result type (might be due to invalid IL or missing references)
+		//IL_014f: Expected O, but got Unknown
+		//IL_017b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0180: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0187: Unknown result type (might be due to invalid IL or missing references)
+		//IL_018f: Expected O, but got Unknown
 		Frame obj = _XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_3();
 		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_4((Control)(object)obj, (DockStyle)4);
-		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_5((Control)(object)obj, _003CModule_003E.smethod_25<string>(4049577409u));
+		_XJasjdoOf6PYbfaC5MsbXSjDWV3.smethod_5((Control)(object)obj, "window");
 		((Control)obj).set_Padding(new Margin(10));
 		((Control)obj).set_Margin(new Margin(0, 0, 0, 10));
 		((Control)obj).set_Size(new Point(0, 120));
@@ -143,8 +143,8 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 				{
 					Label val6 = new Label();
 					((Control)val6).set_Dock((DockStyle)2);
-					((Control)val6).set_Style(_003CModule_003E.smethod_26<string>(139111385u));
-					val6.set_Text(_003CModule_003E.smethod_28<string>(1474565894u) + string_1 + _003CModule_003E.smethod_27<string>(2180755948u));
+					((Control)val6).set_Style("header");
+					val6.set_Text("New message: " + string_1 + "!");
 					val7 = val6;
 					Label val8 = new Label();
 					((Control)val8).set_Dock((DockStyle)5);

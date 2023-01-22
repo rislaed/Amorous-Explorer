@@ -25,8 +25,8 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		public GUI(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, Action action_0)
 			: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		{
-			//IL_0036: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0056: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0046: Unknown result type (might be due to invalid IL or missing references)
 			while (true)
 			{
 				int num = -1556749410;
@@ -45,7 +45,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					}
 					break;
 					IL_000c:
-					_wmL1cFR5CsMqZS9jOXyCnmqveCG = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(_003CModule_003E.smethod_26<string>(1035089320u), _003CModule_003E.smethod_27<string>(2075212183u), _003CModule_003E.smethod_24<string>(3098386378u), _003CModule_003E.smethod_25<string>(1610605620u), Color.get_White(), 832, 970, new Rectangle(832, 970, 256, 102), action_0);
+					_wmL1cFR5CsMqZS9jOXyCnmqveCG = _QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/Gui/Fonts/Bold-26", "Stop cooking!", Color.get_White(), 832, 970, new Rectangle(832, 970, 256, 102), action_0);
 					num = (int)(num2 * 1035233199) ^ -1053371884;
 				}
 			}
@@ -161,31 +161,31 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 1736374734) ^ 0x1F5FEDDD);
 					continue;
 				case 27u:
-					CookingMiniGameScene.smethod_24(_WwmWk5kaVSyVGOqHYV9xCL01Mmq, new string[1] { _003CModule_003E.smethod_26<string>(1941808968u) });
+					CookingMiniGameScene.smethod_24(_WwmWk5kaVSyVGOqHYV9xCL01Mmq, new string[1] { "Assets/Sounds/MiniGames/Cooking/Pan spawn" });
 					num = (int)((num2 * 1945802107) ^ 0x40D908D5);
 					continue;
 				case 26u:
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb = CookingMiniGameScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(568799835u));
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb = CookingMiniGameScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Cooking");
 					num = (int)(num2 * 740771401) ^ -1815843401;
 					continue;
 				case 25u:
-					CookingMiniGameScene.smethod_24(_7f8HjbO7kyXkAQLb2mIqPJKHcLb, new string[1] { _003CModule_003E.smethod_26<string>(2913202564u) });
+					CookingMiniGameScene.smethod_24(_7f8HjbO7kyXkAQLb2mIqPJKHcLb, new string[1] { "Assets/Sounds/MiniGames/Cooking/Bay leaves" });
 					_vdz7lnEalvPxBPYYcR15bPICZOc = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
 					num = (int)(num2 * 1161466801) ^ -650616712;
 					continue;
 				case 23u:
-					_RZsDgwVY7R44E6mMbUF7YWYyBjK = CookingMiniGameScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(1797448863u), 0, 0);
+					_RZsDgwVY7R44E6mMbUF7YWYyBjK = CookingMiniGameScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cooking/Okay", 0, 0);
 					CookingMiniGameScene.smethod_17(_RZsDgwVY7R44E6mMbUF7YWYyBjK, bool_0: false);
 					num = ((int)num2 * -484892327) ^ 0x75BE3539;
 					continue;
 				case 22u:
-					CookingMiniGameScene.smethod_27(_003CModule_003E.smethod_27<string>(1166406106u), 0.1f);
+					CookingMiniGameScene.smethod_27("Assets/Music/Warhector - Free Floating", 0.1f);
 					num = (int)(num2 * 242832744) ^ -644382898;
 					continue;
 				case 21u:
-					CookingMiniGameScene.smethod_24(_vdz7lnEalvPxBPYYcR15bPICZOc, new string[1] { _003CModule_003E.smethod_28<string>(3083756332u) });
+					CookingMiniGameScene.smethod_24(_vdz7lnEalvPxBPYYcR15bPICZOc, new string[1] { "Assets/Sounds/MiniGames/Cooking/Burning" });
 					_3h9I4xBs98PF8vAbLXJAdpmHA8dA = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					CookingMiniGameScene.smethod_24(_3h9I4xBs98PF8vAbLXJAdpmHA8dA, new string[1] { _003CModule_003E.smethod_28<string>(4159059455u) });
+					CookingMiniGameScene.smethod_24(_3h9I4xBs98PF8vAbLXJAdpmHA8dA, new string[1] { "Assets/Sounds/MiniGames/Cooking/Drum roll" });
 					_QQrPUpwIvHnFnZeHb0cfL7CPSHh = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
 					num = (int)((num2 * 1971855476) ^ 0x5A86FE92);
 					continue;
@@ -195,11 +195,11 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				case 19u:
 					_Yl6cx6lo29nhZhAYCwYNXftaePb = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					CookingMiniGameScene.smethod_24(_Yl6cx6lo29nhZhAYCwYNXftaePb, new string[1] { _003CModule_003E.smethod_28<string>(2116862960u) });
+					CookingMiniGameScene.smethod_24(_Yl6cx6lo29nhZhAYCwYNXftaePb, new string[1] { "Assets/Sounds/MiniGames/Cooking/Add ingrediant" });
 					num = (int)((num2 * 1468355135) ^ 0x102B0B46);
 					continue;
 				case 18u:
-					_bFjOLB3sqVGFgwwMENJRlZ5vouC = CookingMiniGameScene.smethod_20(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), _003CModule_003E.smethod_25<string>(1181925742u), 1f, bool_0: true, (List<SpineEvent>)null);
+					_bFjOLB3sqVGFgwwMENJRlZ5vouC = CookingMiniGameScene.smethod_20(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0), "Assets/Scenes/Cooking/Cooking", 1f, bool_0: true, (List<SpineEvent>)null);
 					CookingMiniGameScene.smethod_21(_bFjOLB3sqVGFgwwMENJRlZ5vouC, 960f);
 					num = (int)((num2 * 1273765122) ^ 0x2A5E01C9);
 					continue;
@@ -219,7 +219,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -544540853) ^ 0x164EF60C;
 					continue;
 				case 15u:
-					CookingMiniGameScene.smethod_24(_QQrPUpwIvHnFnZeHb0cfL7CPSHh, new string[1] { _003CModule_003E.smethod_28<string>(993360627u) });
+					CookingMiniGameScene.smethod_24(_QQrPUpwIvHnFnZeHb0cfL7CPSHh, new string[1] { "Assets/Sounds/MiniGames/Cooking/Bad food" });
 					num = ((int)num2 * -1012891788) ^ -2085661610;
 					continue;
 				case 14u:
@@ -239,22 +239,22 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -408123302) ^ 0x6C297D6A;
 					continue;
 				case 10u:
-					CookingMiniGameScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_24<string>(1988107562u), 0, 0);
-					_urxVZoSWXCtbeM9oQmVXW0Fb7co = CookingMiniGameScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_25<string>(3599295250u), 0, 0);
+					CookingMiniGameScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cooking/Background", 0, 0);
+					_urxVZoSWXCtbeM9oQmVXW0Fb7co = CookingMiniGameScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cooking/Bad", 0, 0);
 					num = ((int)num2 * -1641638006) ^ -1575881377;
 					continue;
 				case 9u:
-					CookingMiniGameScene.smethod_24(_E5COS2Wew1BQS9CZNJcDAnV99Y, new string[1] { _003CModule_003E.smethod_26<string>(526177380u) });
+					CookingMiniGameScene.smethod_24(_E5COS2Wew1BQS9CZNJcDAnV99Y, new string[1] { "Assets/Sounds/MiniGames/Cooking/Beef" });
 					num = (int)(num2 * 159661265) ^ -132518377;
 					continue;
 				case 8u:
 					_R1mDpxg72ZTKnMeOQ0sH8szndlG = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					CookingMiniGameScene.smethod_24(_R1mDpxg72ZTKnMeOQ0sH8szndlG, new string[1] { _003CModule_003E.smethod_27<string>(4159393886u) });
+					CookingMiniGameScene.smethod_24(_R1mDpxg72ZTKnMeOQ0sH8szndlG, new string[1] { "Assets/Sounds/MiniGames/Cooking/Onion" });
 					num = ((int)num2 * -991630973) ^ 0x5ABAF658;
 					continue;
 				case 7u:
 					_MHlWAOoiEHfmdM0FqWO6WSRbC1hA = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					CookingMiniGameScene.smethod_24(_MHlWAOoiEHfmdM0FqWO6WSRbC1hA, new string[1] { _003CModule_003E.smethod_25<string>(1889516216u) });
+					CookingMiniGameScene.smethod_24(_MHlWAOoiEHfmdM0FqWO6WSRbC1hA, new string[1] { "Assets/Sounds/MiniGames/Cooking/Great food" });
 					_coudx6g9HL4THj8r5aYCDxaHH0I();
 					num = ((int)num2 * -1745607208) ^ 0x6D609A78;
 					continue;
@@ -267,13 +267,13 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 750572503) ^ 0x30BE11AB);
 					continue;
 				case 3u:
-					CookingMiniGameScene.smethod_24(_NCyPsw4quyw64ZmYLMqlIaQaclA, new string[1] { _003CModule_003E.smethod_26<string>(1800920602u) });
+					CookingMiniGameScene.smethod_24(_NCyPsw4quyw64ZmYLMqlIaQaclA, new string[1] { "Assets/Sounds/MiniGames/Cooking/Carrots" });
 					_gDkX1mAt76eLA8P3gGXs2wM5wTE = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					CookingMiniGameScene.smethod_24(_gDkX1mAt76eLA8P3gGXs2wM5wTE, new string[1] { _003CModule_003E.smethod_26<string>(2357061583u) });
+					CookingMiniGameScene.smethod_24(_gDkX1mAt76eLA8P3gGXs2wM5wTE, new string[1] { "Assets/Sounds/MiniGames/Cooking/Tomatoe" });
 					num = (int)((num2 * 1723788613) ^ 0x722B723B);
 					continue;
 				case 2u:
-					_9cxzh98qcLMOVst3Rlmc4AaYoBp = CookingMiniGameScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_27<string>(1763253016u), 0, 0);
+					_9cxzh98qcLMOVst3Rlmc4AaYoBp = CookingMiniGameScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cooking/Excellent", 0, 0);
 					num = ((int)num2 * -1423303710) ^ 0x1A33B7D4;
 					continue;
 				case 1u:
@@ -282,7 +282,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				case 0u:
 					_8CTAuE7kLwrQAWKi1EOgTa2AKEx = CookingMiniGameScene.smethod_23(CookingMiniGameScene.smethod_19(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-					CookingMiniGameScene.smethod_24(_8CTAuE7kLwrQAWKi1EOgTa2AKEx, new string[1] { _003CModule_003E.smethod_25<string>(1016577227u) });
+					CookingMiniGameScene.smethod_24(_8CTAuE7kLwrQAWKi1EOgTa2AKEx, new string[1] { "Assets/Sounds/MiniGames/Cooking/Ok food" });
 					num = ((int)num2 * -1696261613) ^ 0x5D655A9F;
 					continue;
 				default:
@@ -299,15 +299,15 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private bool _YwAdHC5A5VB16lereNxJLkAP3Z9A(int int_0, string string_0)
 	{
-		if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_26<string>(989502527u)))
+		if (CookingMiniGameScene.smethod_28(string_0, "Pasta"))
 		{
-			goto IL_02ee;
+			goto IL_02b2;
 		}
-		goto IL_05aa;
-		IL_05aa:
+		goto IL_0546;
+		IL_0546:
 		int num;
 		int num2;
-		if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_25<string>(2491280097u)))
+		if (!CookingMiniGameScene.smethod_28(string_0, "Onions bowl shadow"))
 		{
 			num = -275779329;
 			num2 = -275779329;
@@ -317,8 +317,8 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			num = -1397539609;
 			num2 = -1397539609;
 		}
-		goto IL_04f1;
-		IL_04f1:
+		goto IL_048d;
+		IL_048d:
 		while (true)
 		{
 			uint num3;
@@ -328,7 +328,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num30;
 				int num31;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(1342133481u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "Carrot bowl"))
 				{
 					num30 = -269409124;
 					num31 = -269409124;
@@ -347,7 +347,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num18;
 				int num19;
-				if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(4279480537u)))
+				if (CookingMiniGameScene.smethod_28(string_0, "Ground Beef 2"))
 				{
 					num18 = -1841657020;
 					num19 = -1841657020;
@@ -361,14 +361,14 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 33u:
-				goto IL_00c4;
+				goto IL_00b4;
 			case 32u:
-				goto IL_00f2;
+				goto IL_00de;
 			case 25u:
 			{
 				int num32;
 				int num33;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(441216785u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "BayThyme 2"))
 				{
 					num32 = -1671844231;
 					num33 = -1671844231;
@@ -385,7 +385,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num24;
 				int num25;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(473881024u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "OnionsGarlic 2"))
 				{
 					num24 = 1404888853;
 					num25 = 1404888853;
@@ -402,7 +402,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num14;
 				int num15;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(1678415943u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "Ground beef bowl"))
 				{
 					num14 = 1214605651;
 					num15 = 1214605651;
@@ -416,12 +416,12 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 22u:
-				goto IL_01c2;
+				goto IL_019e;
 			case 21u:
 			{
 				int num26;
 				int num27;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(2997910460u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "Sauce 2"))
 				{
 					num26 = -189166374;
 					num27 = -189166374;
@@ -435,12 +435,12 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 20u:
-				goto IL_0226;
+				goto IL_01fa;
 			case 19u:
 			{
 				int num22;
 				int num23;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_25<string>(3898833814u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "Tomatoe bowl glow"))
 				{
 					num22 = 1895146097;
 					num23 = 1895146097;
@@ -457,7 +457,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num8;
 				int num9;
-				if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_27<string>(227027313u)))
+				if (CookingMiniGameScene.smethod_28(string_0, "Onions bowl glow"))
 				{
 					num8 = 1796632719;
 					num9 = 1796632719;
@@ -471,14 +471,14 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 17u:
-				goto IL_02c0;
+				goto IL_0288;
 			case 15u:
-				goto end_IL_04f1;
+				goto end_IL_048d;
 			case 14u:
 			{
 				int num10;
 				int num11;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_27<string>(1882242u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "Carrots 2"))
 				{
 					num10 = -1591767380;
 					num11 = -1591767380;
@@ -495,7 +495,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num16;
 				int num17;
-				if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_26<string>(1146148818u)))
+				if (CookingMiniGameScene.smethod_28(string_0, "Bayleaves bowl glow"))
 				{
 					num16 = -301434641;
 					num17 = -301434641;
@@ -509,12 +509,12 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 9u:
-				goto IL_0364;
+				goto IL_0320;
 			case 6u:
 			{
 				int num6;
 				int num7;
-				if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_26<string>(996959744u)))
+				if (CookingMiniGameScene.smethod_28(string_0, "Carrot bowl glow"))
 				{
 					num6 = -1313813562;
 					num7 = -1313813562;
@@ -531,7 +531,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num28;
 				int num29;
-				if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_26<string>(1697318321u)))
+				if (CookingMiniGameScene.smethod_28(string_0, "Onions bowl"))
 				{
 					num28 = 796902843;
 					num29 = 796902843;
@@ -548,7 +548,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num20;
 				int num21;
-				if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(764265724u)))
+				if (!CookingMiniGameScene.smethod_28(string_0, "Ground beef bowl glow"))
 				{
 					num20 = -206112834;
 					num21 = -206112834;
@@ -565,7 +565,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num12;
 				int num13;
-				if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(809732073u)))
+				if (CookingMiniGameScene.smethod_28(string_0, "Tomatoe bowl"))
 				{
 					num12 = 1897795197;
 					num13 = 1897795197;
@@ -582,7 +582,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			{
 				int num4;
 				int num5;
-				if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(3324598496u)))
+				if (CookingMiniGameScene.smethod_28(string_0, "Bayleaves bowl"))
 				{
 					num4 = 217861402;
 					num5 = 217861402;
@@ -596,11 +596,11 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				continue;
 			}
 			case 1u:
-				goto IL_049d;
+				goto IL_0441;
 			case 0u:
-				goto IL_04c8;
+				goto IL_0468;
 			case 29u:
-				goto IL_05aa;
+				goto IL_0546;
 			case 7u:
 				return !_mOljPVTpQkVD6dwmmr9m28l6fc;
 			case 8u:
@@ -627,7 +627,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				return !_g0GLDf9i20jtYweGI1DAr0f9WON;
 			}
 			int num34;
-			if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_26<string>(488891295u)))
+			if (!CookingMiniGameScene.smethod_28(string_0, "Sauce 1"))
 			{
 				num = -1475238426;
 				num34 = -1475238426;
@@ -638,9 +638,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num34 = -1248577175;
 			}
 			continue;
-			IL_04c8:
+			IL_0468:
 			int num35;
-			if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_26<string>(188027408u)))
+			if (!CookingMiniGameScene.smethod_28(string_0, "Ground Beef 1"))
 			{
 				num = -1469485903;
 				num35 = -1469485903;
@@ -651,9 +651,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num35 = -274914448;
 			}
 			continue;
-			IL_00f2:
+			IL_00de:
 			int num36;
-			if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(1953684267u)))
+			if (!CookingMiniGameScene.smethod_28(string_0, "Bayleaves bowl shadow"))
 			{
 				num = -1822670738;
 				num36 = -1822670738;
@@ -664,9 +664,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num36 = -736285858;
 			}
 			continue;
-			IL_0226:
+			IL_01fa:
 			int num37;
-			if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(885429937u)))
+			if (!CookingMiniGameScene.smethod_28(string_0, "Ground beef bowl shadow"))
 			{
 				num = -1043639923;
 				num37 = -1043639923;
@@ -677,9 +677,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num37 = -2122646061;
 			}
 			continue;
-			IL_049d:
+			IL_0441:
 			int num38;
-			if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(2970780634u)))
+			if (!CookingMiniGameScene.smethod_28(string_0, "Carrot bowl shadow"))
 			{
 				num = -829921057;
 				num38 = -829921057;
@@ -690,9 +690,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num38 = -840416852;
 			}
 			continue;
-			IL_02c0:
+			IL_0288:
 			int num39;
-			if (!CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(2044616965u)))
+			if (!CookingMiniGameScene.smethod_28(string_0, "Carrots 1"))
 			{
 				num = -1189546479;
 				num39 = -1189546479;
@@ -703,9 +703,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num39 = -532177345;
 			}
 			continue;
-			IL_00c4:
+			IL_00b4:
 			int num40;
-			if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(2928105493u)))
+			if (CookingMiniGameScene.smethod_28(string_0, "BayThyme 1"))
 			{
 				num = -856166931;
 				num40 = -856166931;
@@ -716,9 +716,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num40 = -1662264152;
 			}
 			continue;
-			IL_0364:
+			IL_0320:
 			int num41;
-			if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_28<string>(891675133u)))
+			if (CookingMiniGameScene.smethod_28(string_0, "Tomatoe bowl shadow"))
 			{
 				num = -480557230;
 				num41 = -480557230;
@@ -729,9 +729,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num41 = -985549548;
 			}
 			continue;
-			IL_01c2:
+			IL_019e:
 			int num42;
-			if (CookingMiniGameScene.smethod_28(string_0, _003CModule_003E.smethod_24<string>(782602247u)))
+			if (CookingMiniGameScene.smethod_28(string_0, "OnionsGarlic 1"))
 			{
 				num = -740696043;
 				num42 = -740696043;
@@ -742,13 +742,13 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				num42 = -1762685567;
 			}
 			continue;
-			end_IL_04f1:
+			end_IL_048d:
 			break;
 		}
-		goto IL_02ee;
-		IL_02ee:
+		goto IL_02b2;
+		IL_02b2:
 		num = -1645390749;
-		goto IL_04f1;
+		goto IL_048d;
 	}
 
 	private void _coudx6g9HL4THj8r5aYCDxaHH0I()
@@ -764,7 +764,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 				case 6u:
 					CookingMiniGameScene.smethod_30(_WwmWk5kaVSyVGOqHYV9xCL01Mmq, 1f);
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_24<string>(2925314285u), (Action)delegate
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Pan spawn", (Action)delegate
 					{
 						_K8aZsmpWRImwc2JedT7KcW3wdYQ = false;
 					});
@@ -805,19 +805,19 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
 	{
-		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_010f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0116: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0158: Unknown result type (might be due to invalid IL or missing references)
-		//IL_015f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0295: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_029f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04cb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0031: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0038: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ba: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ff: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0106: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0144: Unknown result type (might be due to invalid IL or missing references)
+		//IL_014b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_027d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0282: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0287: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0498: Unknown result type (might be due to invalid IL or missing references)
+		//IL_049f: Unknown result type (might be due to invalid IL or missing references)
 		this.method_0(gameTime_0);
 		Point val = default(Point);
 		while (true)
@@ -836,7 +836,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num5;
 					int num6;
-					if (_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN(_003CModule_003E.smethod_27<string>(3835707634u), val.X, val.Y))
+					if (_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Tomatoe bowl gold", val.X, val.Y))
 					{
 						num5 = -1784211478;
 						num6 = -1784211478;
@@ -850,7 +850,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 41u:
-					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ(_003CModule_003E.smethod_26<string>(1146148818u), 0f);
+					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Bayleaves bowl glow", 0f);
 					num = 641564420;
 					continue;
 				case 40u:
@@ -872,7 +872,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num39;
 					int num40;
-					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN(_003CModule_003E.smethod_25<string>(342507201u), val.X, val.Y))
+					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Ground beef bowl glow", val.X, val.Y))
 					{
 						num39 = 835641556;
 						num40 = 835641556;
@@ -889,7 +889,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num11;
 					int num12;
-					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN(_003CModule_003E.smethod_27<string>(495579432u), val.X, val.Y))
+					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Carrot bowl gold", val.X, val.Y))
 					{
 						num11 = 686372669;
 						num12 = 686372669;
@@ -906,7 +906,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num14;
 					int num15;
-					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN(_003CModule_003E.smethod_27<string>(724341757u), val.X, val.Y))
+					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Bayleaves bowl glow", val.X, val.Y))
 					{
 						num14 = 1174000945;
 						num15 = 1174000945;
@@ -946,7 +946,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				case 33u:
 				{
-					_QMxAinggzISmU1LmkqSK0bfv9h5(_003CModule_003E.smethod_28<string>(3552950268u), EIngrediants.Carrots, _NCyPsw4quyw64ZmYLMqlIaQaclA);
+					_QMxAinggzISmU1LmkqSK0bfv9h5("Carrot highlight", EIngrediants.Carrots, _NCyPsw4quyw64ZmYLMqlIaQaclA);
 					int num23;
 					int num24;
 					if (!base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
@@ -1040,7 +1040,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 25u:
-					_QMxAinggzISmU1LmkqSK0bfv9h5(_003CModule_003E.smethod_27<string>(16351258u), EIngrediants.OnionsGarlic, _R1mDpxg72ZTKnMeOQ0sH8szndlG);
+					_QMxAinggzISmU1LmkqSK0bfv9h5("OnionsGarlic highlight", EIngrediants.OnionsGarlic, _R1mDpxg72ZTKnMeOQ0sH8szndlG);
 					num = ((int)num2 * -958290835) ^ 0x682940B2;
 					continue;
 				case 24u:
@@ -1059,11 +1059,11 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 23u:
-					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ(_003CModule_003E.smethod_25<string>(272779552u), 0f);
+					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Tomatoe bowl gold", 0f);
 					num = 1596824657;
 					continue;
 				case 22u:
-					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ(_003CModule_003E.smethod_24<string>(954924423u), 0f);
+					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Carrot bowl gold", 0f);
 					num = 289905427;
 					continue;
 				case 21u:
@@ -1100,7 +1100,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				case 18u:
 				{
-					_QMxAinggzISmU1LmkqSK0bfv9h5(_003CModule_003E.smethod_27<string>(252348091u), EIngrediants.GroundBeef, _E5COS2Wew1BQS9CZNJcDAnV99Y);
+					_QMxAinggzISmU1LmkqSK0bfv9h5("Ground beef highlight", EIngrediants.GroundBeef, _E5COS2Wew1BQS9CZNJcDAnV99Y);
 					int num34;
 					int num35;
 					if (!base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
@@ -1120,7 +1120,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num30;
 					int num31;
-					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN(_003CModule_003E.smethod_28<string>(488936934u), val.X, val.Y))
+					if (!_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Onions bowl glow", val.X, val.Y))
 					{
 						num30 = 1697269769;
 						num31 = 1697269769;
@@ -1155,7 +1155,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 11u:
-					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ(_003CModule_003E.smethod_27<string>(1189100915u), 0f);
+					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Ground beef bowl glow", 0f);
 					num = 263149343;
 					continue;
 				case 10u:
@@ -1195,7 +1195,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				case 7u:
 				{
-					_QMxAinggzISmU1LmkqSK0bfv9h5(_003CModule_003E.smethod_27<string>(4213652696u), EIngrediants.TinnedTomatoes, _gDkX1mAt76eLA8P3gGXs2wM5wTE);
+					_QMxAinggzISmU1LmkqSK0bfv9h5("Tomatoe highlight", EIngrediants.TinnedTomatoes, _gDkX1mAt76eLA8P3gGXs2wM5wTE);
 					int num18;
 					int num19;
 					if (!base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
@@ -1248,11 +1248,11 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1692743153) ^ -1313420793;
 					continue;
 				case 2u:
-					_QMxAinggzISmU1LmkqSK0bfv9h5(_003CModule_003E.smethod_28<string>(2705998917u), EIngrediants.Herbs, _7f8HjbO7kyXkAQLb2mIqPJKHcLb);
+					_QMxAinggzISmU1LmkqSK0bfv9h5("Bay highlight", EIngrediants.Herbs, _7f8HjbO7kyXkAQLb2mIqPJKHcLb);
 					num = (int)(num2 * 1907297213) ^ -589971911;
 					continue;
 				case 1u:
-					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ(_003CModule_003E.smethod_24<string>(2326208362u), 0f);
+					_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Onions bowl glow", 0f);
 					num = 501792630;
 					continue;
 				case 0u:
@@ -1353,7 +1353,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 4u:
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_27<string>(1588749501u), (Action)delegate
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "OnionsGarlic toss", (Action)delegate
 					{
 						_HXs79I5YAlnCxHxJS0JxD7jccyt = true;
 						_n5dqiyQaiIqiC4wtWicCzzA8coG(EIngrediants.OnionsGarlic);
@@ -1422,7 +1422,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1971736335) ^ 0x7AD0190A;
 					continue;
 				case 1u:
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_28<string>(165144864u), (Action)delegate
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Ground beef toss", (Action)delegate
 					{
 						_HylCIZnie9TY7iCNyKurgxQFFji = true;
 						while (true)
@@ -1504,7 +1504,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					break;
 				default:
 					CookingMiniGameScene.smethod_30(_Yl6cx6lo29nhZhAYCwYNXftaePb, 1f);
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_25<string>(2150377340u), (Action)delegate
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Carrot toss", (Action)delegate
 					{
 						_mOljPVTpQkVD6dwmmr9m28l6fc = true;
 						while (true)
@@ -1574,7 +1574,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 1u:
 					_p28QNaoEJvHENbJjA4icWq92tkI = true;
 					CookingMiniGameScene.smethod_30(_Yl6cx6lo29nhZhAYCwYNXftaePb, 1f);
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_24<string>(1409587913u), (Action)delegate
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Tomatoe toss", (Action)delegate
 					{
 						_g0GLDf9i20jtYweGI1DAr0f9WON = true;
 						while (true)
@@ -1652,7 +1652,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				default:
 					_p28QNaoEJvHENbJjA4icWq92tkI = true;
 					CookingMiniGameScene.smethod_30(_Yl6cx6lo29nhZhAYCwYNXftaePb, 1f);
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_26<string>(4167216383u), (Action)delegate
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Bay toss", (Action)delegate
 					{
 						_ylWBqGZTor7PB0HyMRwAuoV4hvH = true;
 						_n5dqiyQaiIqiC4wtWicCzzA8coG(EIngrediants.Herbs);
@@ -1684,7 +1684,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = 1765385858;
 					continue;
 				case 4u:
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_27<string>(641144915u), (Action)_N6dXvS7twg0NRk66JAgWjTvfMRC);
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Ingrediant mixing", (Action)_N6dXvS7twg0NRk66JAgWjTvfMRC);
 					num = ((int)num2 * -1381719231) ^ -692176506;
 					continue;
 				case 2u:
@@ -1705,10 +1705,10 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 1u:
-					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_24<string>(3425444124u), (Action)delegate
+					CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Ingrediant mixing", (Action)delegate
 					{
 						_MOR64YNiUTpJJkXDvGxkr2BYs4n();
-						CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_24<string>(2499280455u), (Action)_Ee9VcMQIfuD0ElqFdXVvMHxofkf);
+						CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Shits burning", (Action)_Ee9VcMQIfuD0ElqFdXVvMHxofkf);
 					});
 					num = ((int)num2 * -112763101) ^ -5752499;
 					continue;
@@ -2047,7 +2047,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)(num2 * 228902393) ^ -154226560;
 					continue;
 				case 6u:
-					CookingMiniGameScene.smethod_39(CookingMiniGameScene.smethod_38(), _003CModule_003E.smethod_26<string>(327273526u), _Y8SewnxQuAuHOtMeTeuRSJlpbGJ);
+					CookingMiniGameScene.smethod_39(CookingMiniGameScene.smethod_38(), "Pasta.Poor", _Y8SewnxQuAuHOtMeTeuRSJlpbGJ);
 					num = -130663768;
 					continue;
 				case 5u:
@@ -2055,7 +2055,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)(num2 * 831876374) ^ -1240405650;
 					continue;
 				case 4u:
-					CookingMiniGameScene.smethod_39(CookingMiniGameScene.smethod_38(), _003CModule_003E.smethod_28<string>(1408589218u), _YVtICgpvRZU0ZRqniFuAVlkSOFM);
+					CookingMiniGameScene.smethod_39(CookingMiniGameScene.smethod_38(), "Pasta.Perfect", _YVtICgpvRZU0ZRqniFuAVlkSOFM);
 					num = ((int)num2 * -2130633442) ^ -499772679;
 					continue;
 				case 3u:
@@ -2116,8 +2116,8 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						{
 							goto IL_0065;
 						}
-						goto IL_00f0;
-						IL_00f0:
+						goto IL_00ec;
+						IL_00ec:
 						int num16;
 						int num17;
 						if (!_Y8SewnxQuAuHOtMeTeuRSJlpbGJ)
@@ -2130,8 +2130,8 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							num16 = -1150107580;
 							num17 = -1150107580;
 						}
-						goto IL_00b4;
-						IL_00b4:
+						goto IL_00b0;
+						IL_00b0:
 						while (true)
 						{
 							uint num18;
@@ -2148,7 +2148,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 							case 4u:
 								break;
 							case 3u:
-								_003C_003Ec__DisplayClass65_0.smethod_2(_003C_003Ec__DisplayClass65_0.smethod_1(_003C_003Ec__DisplayClass65_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA)), _003CModule_003E.smethod_28<string>(3348775044u));
+								_003C_003Ec__DisplayClass65_0.smethod_2(_003C_003Ec__DisplayClass65_0.smethod_1(_003C_003Ec__DisplayClass65_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA)), "AchievementGeneric11");
 								num16 = ((int)num18 * -1929270516) ^ -1328326970;
 								continue;
 							case 0u:
@@ -2156,7 +2156,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 								num16 = -866236688;
 								continue;
 							case 1u:
-								goto IL_00f0;
+								goto IL_00ec;
 							default:
 								_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._T81AMuUIGw7sZkYmJkIpiDPosrD = true;
 								return;
@@ -2166,7 +2166,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 						goto IL_0065;
 						IL_0065:
 						num16 = -740983379;
-						goto IL_00b4;
+						goto IL_00b0;
 					});
 					return;
 				}
@@ -2298,7 +2298,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	private void _9NAQTxnipbPGv6LRIkqhUgKuPRh()
 	{
 		_MOR64YNiUTpJJkXDvGxkr2BYs4n();
-		CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, _003CModule_003E.smethod_24<string>(2499280455u), (Action)_Ee9VcMQIfuD0ElqFdXVvMHxofkf);
+		CookingMiniGameScene.smethod_31(_bFjOLB3sqVGFgwwMENJRlZ5vouC, "Shits burning", (Action)_Ee9VcMQIfuD0ElqFdXVvMHxofkf);
 	}
 
 	[CompilerGenerated]

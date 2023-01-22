@@ -30,26 +30,26 @@ public class CinemaScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x4D35E695u) % 6u)
 				{
 				case 4u:
-					_cDOKpatcramNDb8aZK14Rc6Y91p = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_25<string>(74776645u), 0, 0);
+					_cDOKpatcramNDb8aZK14Rc6Y91p = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cinema/Movie None", 0, 0);
 					num = ((int)num2 * -1208130352) ^ -527628063;
 					continue;
 				case 3u:
-					_AaYP9AZ7ZvHeMGXs5FNl1sIar5E = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_27<string>(2095692498u), 0, 0);
+					_AaYP9AZ7ZvHeMGXs5FNl1sIar5E = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cinema/Movie Comedy-Romantic", 0, 0);
 					num = (int)(num2 * 67494193) ^ -1778372855;
 					continue;
 				case 1u:
-					_g14D6v9FBXiZihegPw9BIGlBConA = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_24<string>(347569413u), 0, 0);
+					_g14D6v9FBXiZihegPw9BIGlBConA = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cinema/Movie Noire Gloomy", 0, 0);
 					num = (int)((num2 * 1325299162) ^ 0x38ECF6B7);
 					continue;
 				case 0u:
-					_28AfW2C2UvwyhrjsUQU4Sq4LV0c = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_27<string>(4005370686u), 0, 0);
+					_28AfW2C2UvwyhrjsUQU4Sq4LV0c = CinemaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Cinema/Movie Action-Western", 0, 0);
 					num = ((int)num2 * -475379084) ^ 0x193DE9CA;
 					continue;
 				case 5u:
 					break;
 				default:
-					CinemaScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(886388059u));
-					CinemaScene.smethod_16(_003CModule_003E.smethod_28<string>(232558723u), 0.4f);
+					CinemaScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "None");
+					CinemaScene.smethod_16("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 					return;
 				}
 				break;
@@ -80,7 +80,7 @@ public class CinemaScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num5;
 					int num6;
-					if (CinemaScene.smethod_18(string_0, _003CModule_003E.smethod_26<string>(84380393u)))
+					if (CinemaScene.smethod_18(string_0, "Romantic"))
 					{
 						num5 = 2026769026;
 						num6 = 2026769026;
@@ -103,7 +103,7 @@ public class CinemaScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					CinemaScene.smethod_17((_ujAkjlfN5TywwbLAUDzPvtab6uJ)_cDOKpatcramNDb8aZK14Rc6Y91p, bool_0: false);
 					int num7;
 					int num8;
-					if (!CinemaScene.smethod_18(string_0, _003CModule_003E.smethod_25<string>(3026760881u)))
+					if (!CinemaScene.smethod_18(string_0, "Western"))
 					{
 						num7 = -576399066;
 						num8 = -576399066;
@@ -120,7 +120,7 @@ public class CinemaScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num3;
 					int num4;
-					if (!CinemaScene.smethod_18(string_0, _003CModule_003E.smethod_24<string>(156910714u)))
+					if (!CinemaScene.smethod_18(string_0, "Horror"))
 					{
 						num3 = -734977066;
 						num4 = -734977066;

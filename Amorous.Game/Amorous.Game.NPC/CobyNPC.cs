@@ -32,12 +32,12 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 		Underwear
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_25<string>(1468896597u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Coby";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(104, 193, 255);
 
 	public CobyNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(3642145370u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Coby/Coby", 1f, bool_0: true)
 	{
 		while (true)
 		{
@@ -48,11 +48,11 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 				switch ((num2 = (uint)num ^ 0x2F399879u) % 15u)
 				{
 				case 14u:
-					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, _003CModule_003E.smethod_28<string>(2800960154u), _003CModule_003E.smethod_24<string>(1260645978u), _003CModule_003E.smethod_25<string>(1784555679u), _003CModule_003E.smethod_28<string>(3593946160u)), _003CModule_003E.smethod_27<string>(3811030255u));
+					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Happy Head", "Happy Pupil", "Happy Black eye back", "Happy Jaw"), "Happy Blink");
 					num = (int)((num2 * 192624091) ^ 0x30146626);
 					continue;
 				case 13u:
-					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Shirt, _003CModule_003E.smethod_27<string>(2696156662u))));
+					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Shirt, "Flirty shirt only")));
 					num = ((int)num2 * -1192242492) ^ -614267447;
 					continue;
 				case 12u:
@@ -61,51 +61,51 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 					num = (int)(num2 * 782436719) ^ -756480548;
 					continue;
 				case 10u:
-					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Underwear, _003CModule_003E.smethod_28<string>(1677936882u)))));
+					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Underwear, "Chill underwear"))));
 					num = ((int)num2 * -1995533177) ^ 0x3313A30C;
 					continue;
 				case 9u:
-					CobyNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Chill, _003CModule_003E.smethod_24<string>(3703285936u), _003CModule_003E.smethod_27<string>(2220545742u)), new string[1] { _003CModule_003E.smethod_25<string>(237546664u) });
+					CobyNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Chill, "Neck puff", "Chill Bod"), new string[1] { "Chill cock" });
 					num = (int)(num2 * 1380077651) ^ -908023747;
 					continue;
 				case 7u:
-					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Sleeves, _003CModule_003E.smethod_26<string>(2667024935u))));
+					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Sleeves, "Chill Sleeves")));
 					num = (int)(num2 * 1061397964) ^ -969787826;
 					continue;
 				case 6u:
-					CobyNPC.smethod_26(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Underwear, _003CModule_003E.smethod_28<string>(1281443879u))));
-					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Shirt, _003CModule_003E.smethod_28<string>(1563760996u))));
-					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Shorts, _003CModule_003E.smethod_25<string>(3458127512u)))));
+					CobyNPC.smethod_26(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Underwear, "Shy underwear")));
+					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Shirt, "Chill shirt only")));
+					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Chill, EClothes.Shorts, "Chil outfit"))));
 					num = ((int)num2 * -1294443655) ^ 0x531259AA;
 					continue;
 				case 5u:
-					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Sleeves, _003CModule_003E.smethod_28<string>(3371839584u))));
+					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Sleeves, "Flirty Sleeves")));
 					num = (int)(num2 * 1940827979) ^ -2117195771;
 					continue;
 				case 4u:
-					CobyNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Flirty, _003CModule_003E.smethod_26<string>(748296376u), _003CModule_003E.smethod_25<string>(2453468713u), _003CModule_003E.smethod_25<string>(2722065325u)), new string[1] { _003CModule_003E.smethod_26<string>(1405553899u) });
-					CobyNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, _003CModule_003E.smethod_26<string>(748296376u), _003CModule_003E.smethod_28<string>(260106101u)), new string[1] { _003CModule_003E.smethod_24<string>(879328580u) });
+					CobyNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Flirty, "Neck puff", "Flirty Bod", "Leg extension"), new string[1] { "Flirty cock" });
+					CobyNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, "Neck puff", "Shy Bod"), new string[1] { "Chill/Shy Cock" });
 					num = (int)(num2 * 1452525282) ^ -185096495;
 					continue;
 				case 3u:
-					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Shorts, _003CModule_003E.smethod_27<string>(3650995756u)))));
+					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Shorts, "Flirty outfit"))));
 					num = ((int)num2 * -1799712807) ^ -1565152588;
 					continue;
 				case 2u:
-					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, _003CModule_003E.smethod_28<string>(4175553624u), _003CModule_003E.smethod_25<string>(1611579933u), _003CModule_003E.smethod_27<string>(1382334099u)), _003CModule_003E.smethod_26<string>(4274103160u));
-					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Cocky, _003CModule_003E.smethod_26<string>(181368948u), _003CModule_003E.smethod_28<string>(1269432548u), _003CModule_003E.smethod_25<string>(2951984497u), _003CModule_003E.smethod_28<string>(3870497142u)), _003CModule_003E.smethod_24<string>(1449054926u));
-					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Flirty, _003CModule_003E.smethod_26<string>(2062811422u), _003CModule_003E.smethod_25<string>(172976007u), _003CModule_003E.smethod_28<string>(1725657031u), _003CModule_003E.smethod_25<string>(2228814790u)), _003CModule_003E.smethod_27<string>(3404147161u));
+					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad Head", "Sad Pupils", "Sad Eye back"), "Sad Blink");
+					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Cocky, "Cocky Head", "Cocky Pupils", "Cocky Black eye back", "Cocky Jaw"), "Cocky Blink");
+					CobyNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Flirty, "Flirty Head", "Flirty Pupils", "Flirty Black eye back", "Flirty Jaw"), "Flirty Blink");
 					num = (int)(num2 * 244769056) ^ -288337803;
 					continue;
 				case 1u:
-					CobyNPC.smethod_19(CobyNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_24<string>(1830372324u), (Action<int>)null);
+					CobyNPC.smethod_19(CobyNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Breathing", (Action<int>)null);
 					num = ((int)num2 * -440564624) ^ -1460822227;
 					continue;
 				case 0u:
-					CobyNPC.smethod_26(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Underwear, _003CModule_003E.smethod_27<string>(1744934822u))));
-					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Shirt, _003CModule_003E.smethod_28<string>(3257663698u))));
-					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Shorts, _003CModule_003E.smethod_27<string>(3658230264u)))));
-					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Sleeves, _003CModule_003E.smethod_28<string>(3768332587u))));
+					CobyNPC.smethod_26(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Flirty, EClothes.Underwear, "Flirty underwear")));
+					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Shirt, "Shy shirt only")));
+					CobyNPC.smethod_26(CobyNPC.smethod_25(CobyNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Shorts, "Shy outfit"))));
+					CobyNPC.smethod_23(CobyNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Sleeves, "Shy sleeves")));
 					num = (int)((num2 * 454567242) ^ 0x3B817EFB);
 					continue;
 				default:

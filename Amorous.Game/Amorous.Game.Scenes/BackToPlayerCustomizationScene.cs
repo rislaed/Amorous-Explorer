@@ -9,7 +9,7 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 {
 	private bool _e1Kru66UIN1SkWkBreRDCF5RsWA;
 
-	string PlayerCustomizationScene._l3SUNsFudHnZpYO0ErWgbTaz1DF => _003CModule_003E.smethod_24<string>(3335055642u);
+	string PlayerCustomizationScene._l3SUNsFudHnZpYO0ErWgbTaz1DF => "Back to Club";
 
 	public BackToPlayerCustomizationScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
@@ -24,11 +24,7 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 
 	protected override void _n3b8BstkorCsu4TW0U2YVdFbdGp()
 	{
-		BackToPlayerCustomizationScene.smethod_55(BackToPlayerCustomizationScene.smethod_54((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(3235403394u), new string[2]
-		{
-			_003CModule_003E.smethod_26<string>(3029233540u),
-			_003CModule_003E.smethod_27<string>(557072750u)
-		}, 250, (Action<int>)delegate(int int_0)
+		BackToPlayerCustomizationScene.smethod_55(BackToPlayerCustomizationScene.smethod_54((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure this how you want to look in the game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -41,7 +37,7 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 						switch ((num2 = (uint)num ^ 0xD99D4326u) % 8u)
 						{
 						case 7u:
-							BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), _003CModule_003E.smethod_28<string>(2783182688u), 10);
+							BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
 							num = (int)((num2 * 1864778244) ^ 0x808B76B);
 							continue;
 						case 6u:
@@ -49,19 +45,19 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 							num = (int)(num2 * 919358732) ^ -958413674;
 							continue;
 						case 4u:
-							BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(1842915212u));
+							BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
 							num = ((int)num2 * -658024311) ^ -87273508;
 							continue;
 						case 3u:
-							BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_24<string>(1994106898u));
+							BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
 							num = ((int)num2 * -195282626) ^ -389842117;
 							continue;
 						case 2u:
-							BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), _003CModule_003E.smethod_26<string>(938899522u), bool_0: true);
+							BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
 							num = (int)((num2 * 1243217287) ^ 0x332EE074);
 							continue;
 						case 1u:
-							BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), _003CModule_003E.smethod_28<string>(4080592387u), bool_0: true);
+							BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
 							num = ((int)num2 * -1642411554) ^ -1547486486;
 							continue;
 						default:
@@ -168,7 +164,7 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 				switch ((num2 = (uint)num ^ 0xD99D4326u) % 8u)
 				{
 				case 7u:
-					BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), _003CModule_003E.smethod_28<string>(2783182688u), 10);
+					BackToPlayerCustomizationScene.smethod_62(BackToPlayerCustomizationScene.smethod_61(), "Gender", 10);
 					num = (int)((num2 * 1864778244) ^ 0x808B76B);
 					continue;
 				case 6u:
@@ -176,19 +172,19 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 					num = (int)(num2 * 919358732) ^ -958413674;
 					continue;
 				case 4u:
-					BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(1842915212u));
+					BackToPlayerCustomizationScene.smethod_64(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Gender");
 					num = ((int)num2 * -658024311) ^ -87273508;
 					continue;
 				case 3u:
-					BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_24<string>(1994106898u));
+					BackToPlayerCustomizationScene.smethod_60(BackToPlayerCustomizationScene.smethod_59(BackToPlayerCustomizationScene.smethod_56((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric1");
 					num = ((int)num2 * -195282626) ^ -389842117;
 					continue;
 				case 2u:
-					BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), _003CModule_003E.smethod_26<string>(938899522u), bool_0: true);
+					BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.No", bool_0: true);
 					num = (int)((num2 * 1243217287) ^ 0x332EE074);
 					continue;
 				case 1u:
-					BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), _003CModule_003E.smethod_28<string>(4080592387u), bool_0: true);
+					BackToPlayerCustomizationScene.smethod_63(BackToPlayerCustomizationScene.smethod_61(), "Player.Gender", bool_0: true);
 					num = ((int)num2 * -1642411554) ^ -1547486486;
 					continue;
 				default:

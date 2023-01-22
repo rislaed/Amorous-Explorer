@@ -5,8 +5,8 @@ public class MercyApartmentScene : TimeOfDayScene
 	public MercyApartmentScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		MercyApartmentScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_25<string>(195316415u), 0, 0);
-		MercyApartmentScene.smethod_19(_003CModule_003E.smethod_24<string>(4040092603u), 0.4f);
+		MercyApartmentScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MercyApartment/Background", 0, 0);
+		MercyApartmentScene.smethod_19("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_18(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

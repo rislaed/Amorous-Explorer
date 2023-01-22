@@ -9,8 +9,8 @@ public class LivingRoomScene : TimeOfDayScene
 	public LivingRoomScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		LivingRoomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_27<string>(3816398155u), 0, 0);
-		LivingRoomScene.smethod_19(_003CModule_003E.smethod_28<string>(1133475419u), 0.4f);
+		LivingRoomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/LivingRoom/Foyer", 0, 0);
+		LivingRoomScene.smethod_19("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
 	}
 

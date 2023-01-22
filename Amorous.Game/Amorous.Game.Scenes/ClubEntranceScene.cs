@@ -22,7 +22,7 @@ public class ClubEntranceScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xFE534442u) % 11u)
 				{
 				case 10u:
-					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(1844699212u), _003CModule_003E.smethod_27<string>(2803155560u), -535, 0);
+					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Rope Back", "Assets/Scenes/ClubEntrance/Club Front Ropes (behind)", -535, 0);
 					num = (int)((num2 * 1311701399) ^ 0x20698A50);
 					continue;
 				case 9u:
@@ -39,18 +39,18 @@ public class ClubEntranceScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1741445963) ^ -516687160;
 					continue;
 				case 5u:
-					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_25<string>(2406189729u), -535, 0);
+					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubEntrance/Club Front", -535, 0);
 					num = (int)(num2 * 1881360938) ^ -135237582;
 					continue;
 				case 4u:
-					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3910794645u), _003CModule_003E.smethod_25<string>(926329867u), -535, 0);
+					ClubEntranceScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Rope Front", "Assets/Scenes/ClubEntrance/Club Front Ropes (infront)", -535, 0);
 					num = ((int)num2 * -591594063) ^ -1050660732;
 					continue;
 				case 3u:
 				{
 					int num3;
 					int num4;
-					if (ClubEntranceScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(1922457648u)) < 20)
+					if (ClubEntranceScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue") < 20)
 					{
 						num3 = 1930675680;
 						num4 = 1930675680;
@@ -64,16 +64,12 @@ public class ClubEntranceScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					continue;
 				}
 				case 1u:
-					ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(2683395602u), _003CModule_003E.smethod_25<string>(2873655304u), 410, 96, (Action)OnDoorClick);
-					ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(713005740u), _003CModule_003E.smethod_24<string>(2184015680u), -535, 0, (Action)OnClubBackClick);
+					ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Entrance", "Assets/Scenes/ClubEntrance/Club Entrance Door Selectable", 410, 96, (Action)OnDoorClick);
+					ClubEntranceScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Club Back", "Assets/Scenes/ClubEntrance/Back of Club Selectable", -535, 0, (Action)OnClubBackClick);
 					num = ((int)num2 * -1961955718) ^ 0x297FC6F;
 					continue;
 				case 0u:
-					ClubEntranceScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(458864292u), -535, 0, 500, new string[2]
-					{
-						_003CModule_003E.smethod_27<string>(181869619u),
-						_003CModule_003E.smethod_28<string>(2532091551u)
-					});
+					ClubEntranceScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Lights", -535, 0, 500, new string[2] { "Assets/Scenes/ClubEntrance/Club Front Glow (option one)", "Assets/Scenes/ClubEntrance/Club Front Glow (option two)" });
 					num = (int)(num2 * 828320904) ^ -480263842;
 					continue;
 				default:
@@ -249,7 +245,7 @@ public class ClubEntranceScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x4B70D049u) % 5u)
 				{
 				case 4u:
-					ClubEntranceScene.smethod_29(ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_27<string>(3195569638u));
+					ClubEntranceScene.smethod_29(ClubEntranceScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Kane");
 					num = (int)((num2 * 539605991) ^ 0x78674437);
 					continue;
 				case 3u:

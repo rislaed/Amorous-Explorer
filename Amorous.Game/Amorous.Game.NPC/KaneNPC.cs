@@ -24,36 +24,26 @@ public class KaneNPC : LayerNPC<KaneNPC.EHeads, KaneNPC.EPoses, KaneNPC.EClothes
 		Shorts
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_27<string>(3195569638u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Kane";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(233, 193, 150);
 
 	public KaneNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(2871942864u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Kane", 1f)
 	{
 		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 1110;
 		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1965;
-		KaneNPC.smethod_16(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, _003CModule_003E.smethod_25<string>(3073390323u), _003CModule_003E.smethod_25<string>(3409136088u), _003CModule_003E.smethod_27<string>(1466406264u), _003CModule_003E.smethod_28<string>(1598186517u)), _003CModule_003E.smethod_25<string>(1985894881u));
-		KaneNPC.smethod_17(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Stern, _003CModule_003E.smethod_27<string>(1244878447u)), new string[1] { _003CModule_003E.smethod_27<string>(1480875280u) });
-		KaneNPC.smethod_19(KaneNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shirt, _003CModule_003E.smethod_25<string>(3946329312u))));
-		KaneNPC.smethod_21(KaneNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shorts, _003CModule_003E.smethod_25<string>(4212347428u))));
+		KaneNPC.smethod_16(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Plate", "Eyeback", "Pupil", "Head"), "Blink");
+		KaneNPC.smethod_17(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Stern, "Stern"), new string[1] { "Dick" });
+		KaneNPC.smethod_19(KaneNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shirt, "Stern Shirt")));
+		KaneNPC.smethod_21(KaneNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Stern, EClothes.Shorts, "Stern Shorts")));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
 	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
 	{
-		return new string[8]
-		{
-			_003CModule_003E.smethod_26<string>(1427925550u),
-			_003CModule_003E.smethod_24<string>(2031324160u),
-			_003CModule_003E.smethod_28<string>(3303621489u),
-			_003CModule_003E.smethod_28<string>(3531973261u),
-			_003CModule_003E.smethod_28<string>(3982431609u),
-			_003CModule_003E.smethod_28<string>(2748757167u),
-			_003CModule_003E.smethod_25<string>(1985894881u),
-			_003CModule_003E.smethod_27<string>(3079817510u)
-		};
+		return new string[8] { "Plate", "Stern", "Stern Shirt", "Stern Shorts", "Eyeback", "Pupil", "Blink", "Head" };
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)

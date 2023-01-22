@@ -27,36 +27,30 @@ public class MainMenuScene : TimeOfDayScene
 	public MainMenuScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_27<string>(4063246750u), -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(2001728952u), _003CModule_003E.smethod_28<string>(2566363186u), -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3351638997u), _003CModule_003E.smethod_28<string>(1551270604u), -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(3776022401u), _003CModule_003E.smethod_26<string>(2516148879u), -240, -135);
-		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(3072289860u), _003CModule_003E.smethod_25<string>(2161557380u), -155, -135);
-		_fAUddQEKfZyemRb327NhM3GGlmzA fAUddQEKfZyemRb327NhM3GGlmzA = MainMenuScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(357945885u));
+		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
+		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
+		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
+		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
+		MainMenuScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
+		_fAUddQEKfZyemRb327NhM3GGlmzA fAUddQEKfZyemRb327NhM3GGlmzA = MainMenuScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Custom");
 		MainMenuScene.smethod_20(fAUddQEKfZyemRb327NhM3GGlmzA, (Action<SpriteBatch>)_KkwafXXLVg1QfQgqqCAojg2ySyZ);
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(fAUddQEKfZyemRb327NhM3GGlmzA, 0);
-		MainMenuScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1146127338u), _003CModule_003E.smethod_26<string>(696051123u), -240, -135);
-		_CD732c1llp0dkEnK6CI9WZR70Ap = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ(_003CModule_003E.smethod_27<string>(2325678032u), _003CModule_003E.smethod_24<string>(746679118u), 1220, 800);
-		_mdGACc5Q6BQjhranQdPI7V5unWx(_003CModule_003E.smethod_27<string>(497973477u), _003CModule_003E.smethod_27<string>(733970310u), 1090, 330);
-		_mdGACc5Q6BQjhranQdPI7V5unWx(_003CModule_003E.smethod_27<string>(3227777038u), _003CModule_003E.smethod_27<string>(733970310u), 1215, 330);
-		_mdGACc5Q6BQjhranQdPI7V5unWx(_003CModule_003E.smethod_25<string>(4147560257u), _003CModule_003E.smethod_26<string>(1302750375u), 1395, 330);
-		_mdGACc5Q6BQjhranQdPI7V5unWx(_003CModule_003E.smethod_25<string>(188338726u), _003CModule_003E.smethod_27<string>(733970310u), 1520, 330);
+		MainMenuScene.smethod_21((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
+		_CD732c1llp0dkEnK6CI9WZR70Ap = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
+		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 1", "Assets/Scenes/MainMenu/{0}", 1090, 330);
+		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 2", "Assets/Scenes/MainMenu/{0}", 1215, 330);
+		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 3", "Assets/Scenes/MainMenu/{0}", 1395, 330);
+		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 4", "Assets/Scenes/MainMenu/{0}", 1520, 330);
 		_BR9uYwHtclf8uWEyxJ20ADY6mpg = 750;
-		_dNKOpSAr033bMQm76I1LEv39GTm = MainMenuScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(3072289860u));
+		_dNKOpSAr033bMQm76I1LEv39GTm = MainMenuScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "LCD Separator");
 		MainMenuScene.smethod_23((_21uBmerICJi18moE2gpxlEipBgz)new _hiwkgwXJpRLUFatcgZFfH6ECNfm(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
-		MainMenuScene.smethod_24(_003CModule_003E.smethod_24<string>(2931313621u), 0.4f);
+		MainMenuScene.smethod_24("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
 		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._lXEQJcXKxsjtZp00Y9aPe0ymGue(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		{
 			_uIOOxdCbSvCxXvjNgoXh2qYj0hr = delegate
 			{
 				MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-				MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(998647701u), new string[4]
-				{
-					_003CModule_003E.smethod_28<string>(3035078061u),
-					_003CModule_003E.smethod_24<string>(2928108252u),
-					_003CModule_003E.smethod_24<string>(1765819535u),
-					_003CModule_003E.smethod_27<string>(3489094649u)
-				}, 500, (Action<int>)delegate(int int_0)
+				MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, (Action<int>)delegate(int int_0)
 				{
 					_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = MainMenuScene.smethod_50();
 					int num10;
@@ -125,7 +119,7 @@ public class MainMenuScene : TimeOfDayScene
 								return;
 							case 11u:
 								MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-								MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(3929323548u));
+								MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
 								return;
 							}
 							break;
@@ -171,20 +165,20 @@ public class MainMenuScene : TimeOfDayScene
 							num3 = -433866289;
 							continue;
 						case 1u:
-							_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add(_003CModule_003E.smethod_27<string>(3489094649u));
+							_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
 							num3 = ((int)num4 * -1793215475) ^ 0x1B34B342;
 							continue;
 						case 0u:
 							break;
 						default:
-							MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(2188126710u), _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, (Action<int>)delegate(int int_0)
+							MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, (Action<int>)delegate(int int_0)
 							{
 								if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 								{
 									goto IL_0049;
 								}
-								goto IL_0184;
-								IL_0184:
+								goto IL_017c;
+								IL_017c:
 								_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_ = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 								int num5;
 								int num6;
@@ -198,8 +192,8 @@ public class MainMenuScene : TimeOfDayScene
 									num5 = -2025943654;
 									num6 = -2025943654;
 								}
-								goto IL_012c;
-								IL_012c:
+								goto IL_0124;
+								IL_0124:
 								bool flag = default(bool);
 								while (true)
 								{
@@ -209,7 +203,7 @@ public class MainMenuScene : TimeOfDayScene
 									case 12u:
 										break;
 									case 11u:
-										goto end_IL_012c;
+										goto end_IL_0124;
 									case 7u:
 										flag = _003C_003Ec__DisplayClass6_0.smethod_10(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_8(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_));
 										num5 = -1913734891;
@@ -228,7 +222,7 @@ public class MainMenuScene : TimeOfDayScene
 									case 1u:
 										goto IL_00d1;
 									case 0u:
-										_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_26<string>(3338353401u), 250, _003CModule_003E.smethod_24<string>(329438591u), (Action)delegate
+										_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Failed to load save, it's most likely corrupted.", 250, "OK", (Action)delegate
 										{
 											MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
 										});
@@ -237,14 +231,14 @@ public class MainMenuScene : TimeOfDayScene
 									default:
 										return;
 									case 8u:
-										goto IL_0184;
+										goto IL_017c;
 									case 3u:
 										_003C_003Ec__DisplayClass6_0.smethod_2(_003C_003Ec__DisplayClass6_0.smethod_1(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
 										return;
 									case 5u:
 										return;
 									case 9u:
-										_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_6(_003CModule_003E.smethod_24<string>(1674886837u), (object)(_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_) ? _003CModule_003E.smethod_24<string>(2646516855u) : string.Empty), (object)(int_0 + 1)), 250, _003CModule_003E.smethod_24<string>(329438591u), (Action)delegate
+										_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_6("There is no save in {0}slot #{1}!", (object)(_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_) ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", (Action)delegate
 										{
 											MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
 										});
@@ -277,13 +271,13 @@ public class MainMenuScene : TimeOfDayScene
 										num9 = -12961399;
 									}
 									continue;
-									end_IL_012c:
+									end_IL_0124:
 									break;
 								}
 								goto IL_0049;
 								IL_0049:
 								num5 = -265894308;
-								goto IL_012c;
+								goto IL_0124;
 							});
 							return;
 						}
@@ -294,11 +288,7 @@ public class MainMenuScene : TimeOfDayScene
 			_vE5Pvwth7cQFh82bMTB5u59Ju4o = delegate
 			{
 				MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-				MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(3763339223u), new string[2]
-				{
-					_003CModule_003E.smethod_25<string>(787524111u),
-					_003CModule_003E.smethod_28<string>(4056415839u)
-				}, 500, (Action<int>)delegate(int int_0)
+				MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, (Action<int>)delegate(int int_0)
 				{
 					if (int_0 == 1)
 					{
@@ -586,136 +576,136 @@ public class MainMenuScene : TimeOfDayScene
 		//IL_0090: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0097: Unknown result type (might be due to invalid IL or missing references)
 		//IL_009e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00af: Expected O, but got Unknown
-		//IL_00af: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00b4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00cd: Expected O, but got Unknown
-		//IL_0166: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0172: Unknown result type (might be due to invalid IL or missing references)
-		//IL_017e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01e6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01eb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01f2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0202: Unknown result type (might be due to invalid IL or missing references)
-		//IL_020d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00ab: Expected O, but got Unknown
+		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c5: Expected O, but got Unknown
+		//IL_015e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_016a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0176: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01de: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01e3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ea: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0201: Unknown result type (might be due to invalid IL or missing references)
+		//IL_020b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0217: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0223: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0228: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0234: Expected O, but got Unknown
-		//IL_0328: Unknown result type (might be due to invalid IL or missing references)
-		//IL_032d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0362: Unknown result type (might be due to invalid IL or missing references)
-		//IL_036a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_036e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0378: Unknown result type (might be due to invalid IL or missing references)
-		//IL_03a4: Expected O, but got Unknown
-		//IL_0438: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0442: Expected O, but got Unknown
-		//IL_0442: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0447: Unknown result type (might be due to invalid IL or missing references)
-		//IL_044e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_045e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0471: Expected O, but got Unknown
-		//IL_049b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04a0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04b9: Expected O, but got Unknown
-		//IL_04c3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04c8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04cf: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04e1: Expected O, but got Unknown
-		//IL_058c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0591: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0598: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05a8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_05bd: Expected O, but got Unknown
-		//IL_0648: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0652: Expected O, but got Unknown
-		//IL_0678: Unknown result type (might be due to invalid IL or missing references)
-		//IL_067d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0684: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0694: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06a4: Expected O, but got Unknown
-		//IL_06b8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06bd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_021c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0228: Expected O, but got Unknown
+		//IL_031c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0321: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0352: Unknown result type (might be due to invalid IL or missing references)
+		//IL_035a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_035e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0368: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0394: Expected O, but got Unknown
+		//IL_0428: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0432: Expected O, but got Unknown
+		//IL_0432: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0437: Unknown result type (might be due to invalid IL or missing references)
+		//IL_043e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_044a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_045d: Expected O, but got Unknown
+		//IL_0487: Unknown result type (might be due to invalid IL or missing references)
+		//IL_048c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0493: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04a1: Expected O, but got Unknown
+		//IL_04ab: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04b0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04b7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_04c5: Expected O, but got Unknown
+		//IL_055c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0561: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0568: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0574: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0589: Expected O, but got Unknown
+		//IL_0614: Unknown result type (might be due to invalid IL or missing references)
+		//IL_061e: Expected O, but got Unknown
+		//IL_0644: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0649: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0650: Unknown result type (might be due to invalid IL or missing references)
+		//IL_065c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_066c: Expected O, but got Unknown
+		//IL_0680: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0685: Unknown result type (might be due to invalid IL or missing references)
+		//IL_068c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0693: Unknown result type (might be due to invalid IL or missing references)
+		//IL_069e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06b4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06c0: Unknown result type (might be due to invalid IL or missing references)
 		//IL_06c4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06cb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06d6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06ec: Unknown result type (might be due to invalid IL or missing references)
-		//IL_06fc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0700: Unknown result type (might be due to invalid IL or missing references)
-		//IL_070a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0724: Expected O, but got Unknown
-		//IL_0744: Unknown result type (might be due to invalid IL or missing references)
-		//IL_074e: Expected O, but got Unknown
-		//IL_074e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0753: Unknown result type (might be due to invalid IL or missing references)
-		//IL_075a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_076c: Expected O, but got Unknown
-		//IL_07b1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07bb: Expected O, but got Unknown
-		//IL_0884: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0889: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0890: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0897: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08a9: Expected O, but got Unknown
-		//IL_08dd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08e7: Expected O, but got Unknown
-		//IL_08e9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08ee: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0905: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0915: Expected O, but got Unknown
-		//IL_0961: Unknown result type (might be due to invalid IL or missing references)
-		//IL_096b: Expected O, but got Unknown
-		//IL_0998: Unknown result type (might be due to invalid IL or missing references)
-		//IL_099d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09a4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09ab: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09bd: Expected O, but got Unknown
-		//IL_09bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09c2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09c9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09db: Expected O, but got Unknown
-		//IL_0a31: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a3b: Expected O, but got Unknown
-		//IL_0a7c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a86: Expected O, but got Unknown
-		//IL_0ab5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0aba: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ac1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ac8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ad3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ae9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0af9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0afd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b07: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b21: Expected O, but got Unknown
-		//IL_0b66: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0b70: Expected O, but got Unknown
-		//IL_0bad: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0bb2: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0bb9: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0bc0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0bcb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0be1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0bf1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0bf5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0bff: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c19: Expected O, but got Unknown
-		//IL_0c53: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c58: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c5f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c6f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c7f: Expected O, but got Unknown
-		//IL_0c8e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0c98: Expected O, but got Unknown
-		//IL_0cc8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ccd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cd4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0cdb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0ced: Expected O, but got Unknown
+		//IL_06ce: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06e4: Expected O, but got Unknown
+		//IL_0704: Unknown result type (might be due to invalid IL or missing references)
+		//IL_070e: Expected O, but got Unknown
+		//IL_070e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0713: Unknown result type (might be due to invalid IL or missing references)
+		//IL_071a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0728: Expected O, but got Unknown
+		//IL_076d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0777: Expected O, but got Unknown
+		//IL_0840: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0845: Unknown result type (might be due to invalid IL or missing references)
+		//IL_084c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0853: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0861: Expected O, but got Unknown
+		//IL_0895: Unknown result type (might be due to invalid IL or missing references)
+		//IL_089f: Expected O, but got Unknown
+		//IL_08a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08ad: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08b9: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08c9: Expected O, but got Unknown
+		//IL_0915: Unknown result type (might be due to invalid IL or missing references)
+		//IL_091f: Expected O, but got Unknown
+		//IL_094c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0951: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0958: Unknown result type (might be due to invalid IL or missing references)
+		//IL_095f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_096d: Expected O, but got Unknown
+		//IL_096d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0972: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0979: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0987: Expected O, but got Unknown
+		//IL_09dd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_09e7: Expected O, but got Unknown
+		//IL_0a28: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a32: Expected O, but got Unknown
+		//IL_0a61: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a66: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a6d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a74: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a7f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0a95: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0aa1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0aa5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0aaf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0ac5: Expected O, but got Unknown
+		//IL_0b0a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b14: Expected O, but got Unknown
+		//IL_0b51: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b56: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b5d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b64: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b6f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b85: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b91: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b95: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0b9f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bb5: Expected O, but got Unknown
+		//IL_0bef: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bf4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0bfb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c07: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c17: Expected O, but got Unknown
+		//IL_0c26: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c30: Expected O, but got Unknown
+		//IL_0c60: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c65: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c6c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c73: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0c81: Expected O, but got Unknown
 		_003C_003Ec__DisplayClass12_0 CS_0024_003C_003E8__locals0 = new _003C_003Ec__DisplayClass12_0();
 		int num10 = default(int);
 		Panel val5 = default(Panel);
@@ -761,11 +751,11 @@ public class MainMenuScene : TimeOfDayScene
 					Label val31 = new Label();
 					((Control)val31).set_Dock((DockStyle)2);
 					val31.set_TextAlign((Alignment)4);
-					val31.set_Text(_003CModule_003E.smethod_27<string>(2033323857u));
+					val31.set_Text("Display");
 					val28 = val31;
 					Label val32 = new Label();
 					((Control)val32).set_Dock((DockStyle)2);
-					val32.set_Text(_003CModule_003E.smethod_27<string>(1318098850u));
+					val32.set_Text("Resolutions");
 					val24 = val32;
 					num = ((int)num2 * -40981378) ^ 0x5F14F483;
 					continue;
@@ -830,7 +820,7 @@ public class MainMenuScene : TimeOfDayScene
 				{
 					DropDownList val29 = new DropDownList();
 					((Control)val29).set_Dock((DockStyle)2);
-					((Control)val29).set_Style(_003CModule_003E.smethod_28<string>(1490255827u));
+					((Control)val29).set_Style("button");
 					((Control)val29.get_Label()).set_Margin(new Margin(10, 0, 0, 0));
 					val29.get_Dropdown().set_Resizable(false);
 					((Control)val29).set_Margin(new Margin(0, 0, 0, 5));
@@ -852,7 +842,7 @@ public class MainMenuScene : TimeOfDayScene
 					{
 						while (true)
 						{
-							IL_03de:
+							IL_03ce:
 							int num3;
 							int num4;
 							if (!enumerator.MoveNext())
@@ -880,7 +870,7 @@ public class MainMenuScene : TimeOfDayScene
 								{
 									ActiveList<ListBoxItem> items = val.get_Items();
 									ListBoxItem val2 = new ListBoxItem();
-									((Label)val2).set_Text(current.get_Width() + _003CModule_003E.smethod_24<string>(149617245u) + current.get_Height());
+									((Label)val2).set_Text(current.get_Width() + "x" + current.get_Height());
 									val2.set_Value((object)current);
 									((Control)val2).set_Size(new Point(0, 30));
 									val2.set_Selected(CS_0024_003C_003E8__locals0._ExpbREeE97oXaFMwg5UwE6MpAAQ == current.get_Width() && CS_0024_003C_003E8__locals0._P2eFcUFiRYQgRf4ICqeX3kVcA2m == current.get_Height());
@@ -889,15 +879,15 @@ public class MainMenuScene : TimeOfDayScene
 									continue;
 								}
 								default:
-									goto end_IL_03a9;
+									goto end_IL_0399;
 								case 1u:
 									break;
 								case 3u:
-									goto end_IL_03a9;
+									goto end_IL_0399;
 								}
-								goto IL_03de;
+								goto IL_03ce;
 								continue;
-								end_IL_03a9:
+								end_IL_0399:
 								break;
 							}
 							break;
@@ -909,27 +899,27 @@ public class MainMenuScene : TimeOfDayScene
 						{
 							while (true)
 							{
-								IL_0427:
+								IL_0417:
 								int num5 = 1599520380;
 								while (true)
 								{
 									switch ((num2 = (uint)num5 ^ 0x3F094D9Au) % 3u)
 									{
 									case 1u:
-										goto IL_03f4;
+										goto IL_03e4;
 									default:
-										goto end_IL_0409;
+										goto end_IL_03f9;
 									case 0u:
 										break;
 									case 2u:
-										goto end_IL_0409;
+										goto end_IL_03f9;
 									}
-									goto IL_0427;
-									IL_03f4:
+									goto IL_0417;
+									IL_03e4:
 									enumerator.Dispose();
 									num5 = ((int)num2 * -590396664) ^ -282403861;
 									continue;
-									end_IL_0409:
+									end_IL_03f9:
 									break;
 								}
 								break;
@@ -990,7 +980,7 @@ public class MainMenuScene : TimeOfDayScene
 					});
 					CheckBox val3 = new CheckBox();
 					((Control)val3).set_Dock((DockStyle)2);
-					val3.set_Text(_003CModule_003E.smethod_28<string>(1785388511u));
+					val3.set_Text("Fullscreen");
 					val3.set_Checked(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe);
 					CheckBox val4 = val3;
 					while (true)
@@ -1008,7 +998,7 @@ public class MainMenuScene : TimeOfDayScene
 							{
 								Button val23 = new Button();
 								((Control)val23).set_Dock((DockStyle)4);
-								((Label)val23).set_Text(_003CModule_003E.smethod_27<string>(1471246727u));
+								((Label)val23).set_Text("Close");
 								val13 = val23;
 								num6 = 78839331;
 								continue;
@@ -1017,7 +1007,7 @@ public class MainMenuScene : TimeOfDayScene
 							{
 								Label val22 = new Label();
 								((Control)val22).set_Dock((DockStyle)2);
-								val22.set_Text(_003CModule_003E.smethod_27<string>(1800944278u));
+								val22.set_Text("Music Volume");
 								val21 = val22;
 								num6 = ((int)num2 * -2121076938) ^ 0x2D57FDD1;
 								continue;
@@ -1028,20 +1018,14 @@ public class MainMenuScene : TimeOfDayScene
 								continue;
 							case 36u:
 							{
-								_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(val5.get_Content().get_Controls(), _003CModule_003E.smethod_28<string>(2974867520u), new string[4]
-								{
-									_003CModule_003E.smethod_27<string>(3953853807u),
-									_003CModule_003E.smethod_28<string>(1052613046u),
-									_003CModule_003E.smethod_25<string>(4080411104u),
-									_003CModule_003E.smethod_26<string>(2375260513u)
-								}, (int)_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO, delegate(int int_0)
+								_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(val5.get_Content().get_Controls(), "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO, delegate(int int_0)
 								{
 									_003C_003Ec.smethod_2(_003C_003Ec.smethod_1(), (DialogueSpeed)int_0);
 									_003C_003Ec.smethod_3((DialogueSpeed)int_0);
 								});
 								CheckBox val8 = new CheckBox();
 								((Control)val8).set_Dock((DockStyle)2);
-								val8.set_Text(_003CModule_003E.smethod_25<string>(4279280067u));
+								val8.set_Text("Auto-skip");
 								val8.set_Checked(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3);
 								CS_0024_003C_003E8__locals0._feL3soNn6ZWaJqYfjYJUyH118tF = val8;
 								num6 = 1589548152;
@@ -1073,7 +1057,7 @@ public class MainMenuScene : TimeOfDayScene
 								_003C_003Ec__DisplayClass12_2 _003C_003Ec__DisplayClass12_5 = _003C_003Ec__DisplayClass12_3;
 								CheckBox val27 = new CheckBox();
 								((Control)val27).set_Dock((DockStyle)2);
-								val27.set_Text(_003CModule_003E.smethod_27<string>(138114685u));
+								val27.set_Text("Enable Topless");
 								val27.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._b52DDz3MN1kD8sgdQhCNO1tJRNn);
 								_003C_003Ec__DisplayClass12_5._PBgLcZr7dRzS97rFn3FU6lDw8ZE = val27;
 								num6 = (int)((num2 * 1489508646) ^ 0x2284AD1);
@@ -1086,9 +1070,9 @@ public class MainMenuScene : TimeOfDayScene
 								val26.set_Orientation((Orientation)0);
 								val26.set_Steps(100f);
 								val26.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * 100f);
-								((Control)val26).set_Style(_003CModule_003E.smethod_27<string>(3707005212u));
+								((Control)val26).set_Style("scrollSlider");
 								((Control)val26).set_Size(new Point(0, 30));
-								((Control)val26.get_Button()).set_Style(_003CModule_003E.smethod_25<string>(2065936514u));
+								((Control)val26.get_Button()).set_Style("scrollSliderButton");
 								CS_0024_003C_003E8__locals0._gjeIIVx9bHyd0aMj0WD483nrLWK = val26;
 								num6 = (int)((num2 * 1263621624) ^ 0x1F29E527);
 								continue;
@@ -1101,7 +1085,7 @@ public class MainMenuScene : TimeOfDayScene
 								});
 								Label val25 = new Label();
 								((Control)val25).set_Dock((DockStyle)2);
-								val25.set_Text(_003CModule_003E.smethod_26<string>(1465211635u));
+								val25.set_Text("SFX Volume");
 								val14 = val25;
 								num6 = ((int)num2 * -376827597) ^ 0x3AE7A04C;
 								continue;
@@ -1153,7 +1137,7 @@ public class MainMenuScene : TimeOfDayScene
 								Label val19 = new Label();
 								((Control)val19).set_Dock((DockStyle)2);
 								val19.set_TextAlign((Alignment)4);
-								val19.set_Text(_003CModule_003E.smethod_28<string>(3257184637u));
+								val19.set_Text("Dialogue");
 								Label val20 = val19;
 								((ActiveList<Control>)(object)val5.get_Content().get_Controls()).Add((Control)(object)val20);
 								num6 = (int)((num2 * 617938035) ^ 0x39E0A7EB);
@@ -1165,7 +1149,7 @@ public class MainMenuScene : TimeOfDayScene
 								_003C_003Ec__DisplayClass12_2 _003C_003Ec__DisplayClass12_4 = _003C_003Ec__DisplayClass12_3;
 								CheckBox val18 = new CheckBox();
 								((Control)val18).set_Dock((DockStyle)2);
-								val18.set_Text(_003CModule_003E.smethod_24<string>(3118766951u));
+								val18.set_Text("Enable Bottomless");
 								val18.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj);
 								_003C_003Ec__DisplayClass12_4._qWiPLfzctHo3AqPevD7VV4qTuDy = val18;
 								num6 = (int)((num2 * 1586031204) ^ 0x37570960);
@@ -1188,11 +1172,11 @@ public class MainMenuScene : TimeOfDayScene
 								Label val15 = new Label();
 								((Control)val15).set_Dock((DockStyle)2);
 								val15.set_TextAlign((Alignment)4);
-								val15.set_Text(_003CModule_003E.smethod_24<string>(2356132155u));
+								val15.set_Text("Sound");
 								val10 = val15;
 								Label val16 = new Label();
 								((Control)val16).set_Dock((DockStyle)2);
-								val16.set_Text(_003CModule_003E.smethod_25<string>(1598470939u));
+								val16.set_Text("Master Volume");
 								val17 = val16;
 								num6 = ((int)num2 * -379899990) ^ -1831130306;
 								continue;
@@ -1233,9 +1217,9 @@ public class MainMenuScene : TimeOfDayScene
 								val12.set_Orientation((Orientation)0);
 								val12.set_Steps(100f);
 								val12.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH * 100f);
-								((Control)val12).set_Style(_003CModule_003E.smethod_26<string>(3993125185u));
+								((Control)val12).set_Style("scrollSlider");
 								((Control)val12).set_Size(new Point(0, 30));
-								((Control)val12.get_Button()).set_Style(_003CModule_003E.smethod_26<string>(959628925u));
+								((Control)val12.get_Button()).set_Style("scrollSliderButton");
 								CS_0024_003C_003E8__locals0._5mK9ExiyKm0md8q4J1C6xc4TzdF = val12;
 								num6 = ((int)num2 * -1871190726) ^ -1497708342;
 								continue;
@@ -1262,9 +1246,9 @@ public class MainMenuScene : TimeOfDayScene
 								val11.set_Orientation((Orientation)0);
 								val11.set_Steps(100f);
 								val11.set_Value(_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * 100f);
-								((Control)val11).set_Style(_003CModule_003E.smethod_27<string>(3707005212u));
+								((Control)val11).set_Style("scrollSlider");
 								((Control)val11).set_Size(new Point(0, 30));
-								((Control)val11.get_Button()).set_Style(_003CModule_003E.smethod_28<string>(3143008751u));
+								((Control)val11.get_Button()).set_Style("scrollSliderButton");
 								CS_0024_003C_003E8__locals0._XEgAfmv7sJWJSaC2diC3eaD4Fgl = val11;
 								num6 = ((int)num2 * -1542527565) ^ 0x252678C8;
 								continue;
@@ -1278,7 +1262,7 @@ public class MainMenuScene : TimeOfDayScene
 								_003C_003Ec__DisplayClass12_1 _003C_003Ec__DisplayClass12_2 = _003C_003Ec__DisplayClass12_;
 								CheckBox val9 = new CheckBox();
 								((Control)val9).set_Dock((DockStyle)2);
-								val9.set_Text(_003CModule_003E.smethod_26<string>(3940081175u));
+								val9.set_Text("Enable SFW-mode");
 								val9.set_Checked(_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF);
 								_003C_003Ec__DisplayClass12_2._LFRG0GY4VuOaiC2XHbpUmFoVDAj = val9;
 								_003C_003Ec__DisplayClass12_._LFRG0GY4VuOaiC2XHbpUmFoVDAj.add_CheckedChanged(new VoidEvent(_003C_003Ec__DisplayClass12_._Oab9uZRQOkKmZSQzyzw4Ptg2PUf));
@@ -1305,7 +1289,7 @@ public class MainMenuScene : TimeOfDayScene
 								Label val6 = new Label();
 								((Control)val6).set_Dock((DockStyle)2);
 								val6.set_TextAlign((Alignment)4);
-								val6.set_Text(_003CModule_003E.smethod_27<string>(3957471061u));
+								val6.set_Text("Cheats");
 								val7 = val6;
 								num6 = ((int)num2 * -2103519397) ^ 0x51D0E302;
 								continue;
@@ -1363,13 +1347,7 @@ public class MainMenuScene : TimeOfDayScene
 	private void _fI217APzl4Tapt53WowQWN9Ipyi()
 	{
 		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-		MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(998647701u), new string[4]
-		{
-			_003CModule_003E.smethod_28<string>(3035078061u),
-			_003CModule_003E.smethod_24<string>(2928108252u),
-			_003CModule_003E.smethod_24<string>(1765819535u),
-			_003CModule_003E.smethod_27<string>(3489094649u)
-		}, 500, (Action<int>)delegate(int int_0)
+		MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, (Action<int>)delegate(int int_0)
 		{
 			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = MainMenuScene.smethod_50();
 			int num;
@@ -1438,7 +1416,7 @@ public class MainMenuScene : TimeOfDayScene
 						return;
 					case 11u:
 						MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-						MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(3929323548u));
+						MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
 						return;
 					}
 					break;
@@ -1530,7 +1508,7 @@ public class MainMenuScene : TimeOfDayScene
 					return;
 				case 11u:
 					MainMenuScene.smethod_57(MainMenuScene.smethod_56(MainMenuScene.smethod_53()));
-					MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(3929323548u));
+					MainMenuScene.smethod_58(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
 					return;
 				}
 				break;
@@ -1577,20 +1555,20 @@ public class MainMenuScene : TimeOfDayScene
 					num = -433866289;
 					continue;
 				case 1u:
-					_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add(_003CModule_003E.smethod_27<string>(3489094649u));
+					_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
 					num = ((int)num2 * -1793215475) ^ 0x1B34B342;
 					continue;
 				case 0u:
 					break;
 				default:
-					MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(2188126710u), _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, (Action<int>)delegate(int int_0)
+					MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, (Action<int>)delegate(int int_0)
 					{
 						if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 						{
 							goto IL_0049;
 						}
-						goto IL_0184;
-						IL_0184:
+						goto IL_017c;
+						IL_017c:
 						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_ = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 						int num3;
 						int num4;
@@ -1604,8 +1582,8 @@ public class MainMenuScene : TimeOfDayScene
 							num3 = -2025943654;
 							num4 = -2025943654;
 						}
-						goto IL_012c;
-						IL_012c:
+						goto IL_0124;
+						IL_0124:
 						bool flag = default(bool);
 						while (true)
 						{
@@ -1615,7 +1593,7 @@ public class MainMenuScene : TimeOfDayScene
 							case 12u:
 								break;
 							case 11u:
-								goto end_IL_012c;
+								goto end_IL_0124;
 							case 7u:
 								flag = _003C_003Ec__DisplayClass6_0.smethod_10(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_8(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_));
 								num3 = -1913734891;
@@ -1634,7 +1612,7 @@ public class MainMenuScene : TimeOfDayScene
 							case 1u:
 								goto IL_00d1;
 							case 0u:
-								_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_26<string>(3338353401u), 250, _003CModule_003E.smethod_24<string>(329438591u), (Action)delegate
+								_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Failed to load save, it's most likely corrupted.", 250, "OK", (Action)delegate
 								{
 									MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
 								});
@@ -1643,14 +1621,14 @@ public class MainMenuScene : TimeOfDayScene
 							default:
 								return;
 							case 8u:
-								goto IL_0184;
+								goto IL_017c;
 							case 3u:
 								_003C_003Ec__DisplayClass6_0.smethod_2(_003C_003Ec__DisplayClass6_0.smethod_1(_003C_003Ec__DisplayClass6_0.smethod_0((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
 								return;
 							case 5u:
 								return;
 							case 9u:
-								_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_6(_003CModule_003E.smethod_24<string>(1674886837u), (object)(_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_) ? _003CModule_003E.smethod_24<string>(2646516855u) : string.Empty), (object)(int_0 + 1)), 250, _003CModule_003E.smethod_24<string>(329438591u), (Action)delegate
+								_003C_003Ec__DisplayClass6_0.smethod_7(_003C_003Ec__DisplayClass6_0.smethod_4((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003C_003Ec__DisplayClass6_0.smethod_6("There is no save in {0}slot #{1}!", (object)(_003C_003Ec__DisplayClass6_0.smethod_5(_3CCr8Bt1rkuzt0M6gYLbceJGV0p_) ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", (Action)delegate
 								{
 									MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: true);
 								});
@@ -1683,13 +1661,13 @@ public class MainMenuScene : TimeOfDayScene
 								num7 = -12961399;
 							}
 							continue;
-							end_IL_012c:
+							end_IL_0124:
 							break;
 						}
 						goto IL_0049;
 						IL_0049:
 						num3 = -265894308;
-						goto IL_012c;
+						goto IL_0124;
 					});
 					return;
 				}
@@ -1714,11 +1692,7 @@ public class MainMenuScene : TimeOfDayScene
 	private void _W4PFYhu2NAZbDYPFpvdFr789eG0()
 	{
 		MainMenuScene.smethod_43(MainMenuScene.smethod_42(MainMenuScene.smethod_25((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), bool_0: false);
-		MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(3763339223u), new string[2]
-		{
-			_003CModule_003E.smethod_25<string>(787524111u),
-			_003CModule_003E.smethod_28<string>(4056415839u)
-		}, 500, (Action<int>)delegate(int int_0)
+		MainMenuScene.smethod_49(MainMenuScene.smethod_48((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, (Action<int>)delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{

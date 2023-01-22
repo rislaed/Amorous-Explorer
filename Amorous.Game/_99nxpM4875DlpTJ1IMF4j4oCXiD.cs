@@ -35,7 +35,7 @@ public class _99nxpM4875DlpTJ1IMF4j4oCXiD : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 	}
 
 	public _99nxpM4875DlpTJ1IMF4j4oCXiD(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0)
-		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _003CModule_003E.smethod_27<string>(3024335491u))
+		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "Campfire")
 	{
 		while (true)
 		{
@@ -64,12 +64,12 @@ public class _99nxpM4875DlpTJ1IMF4j4oCXiD : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 					num = (int)(num2 * 2042545506) ^ -2037616570;
 					continue;
 				case 2u:
-					_aWAfh7vUNHnjdyRPQNHL6D9yrCg = _99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_8(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_7(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_6(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), _003CModule_003E.smethod_26<string>(4147285737u), 1f, bool_0: true, (List<SpineEvent>)null);
+					_aWAfh7vUNHnjdyRPQNHL6D9yrCg = _99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_8(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_7(_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_6(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/Campfire/Campfire", 1f, bool_0: true, (List<SpineEvent>)null);
 					num = (int)((num2 * 525837351) ^ 0x34B23585);
 					continue;
 				case 1u:
 					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_3(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, 540f);
-					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_9(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, _003CModule_003E.smethod_25<string>(3692662391u), (Action<int>)null);
+					_99nxpM4875DlpTJ1IMF4j4oCXiD.smethod_9(_aWAfh7vUNHnjdyRPQNHL6D9yrCg, "animation", (Action<int>)null);
 					num = (int)((num2 * 992813771) ^ 0x7E5C24E2);
 					continue;
 				default:

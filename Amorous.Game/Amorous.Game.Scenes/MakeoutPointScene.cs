@@ -21,12 +21,12 @@ public class MakeoutPointScene : TimeOfDayScene
 				switch ((num2 = (uint)num ^ 0x6CD9281Bu) % 4u)
 				{
 				case 3u:
-					_4Hew2VldDt2hPLjc5fBPbqIVUEQ = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_28<string>(2960614770u), 0, 0);
+					_4Hew2VldDt2hPLjc5fBPbqIVUEQ = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
 					num = ((int)num2 * -2144539568) ^ 0x3F2DEDD6;
 					continue;
 				case 1u:
-					_bYgAJ7foDqpxOElDOYhOkQFMzrz = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_28<string>(984394951u), 0, 0);
-					MakeoutPointScene.smethod_19(_003CModule_003E.smethod_24<string>(1742644995u), 0.4f);
+					_bYgAJ7foDqpxOElDOYhOkQFMzrz = MakeoutPointScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
+					MakeoutPointScene.smethod_19("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 					num = ((int)num2 * -1100710363) ^ -114680260;
 					continue;
 				default:
@@ -44,16 +44,16 @@ public class MakeoutPointScene : TimeOfDayScene
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
 	{
 		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
-		if (MakeoutPointScene.smethod_20(string_0, _003CModule_003E.smethod_24<string>(2271948710u)))
+		if (MakeoutPointScene.smethod_20(string_0, "Night"))
 		{
-			goto IL_0063;
+			goto IL_005f;
 		}
-		goto IL_0091;
-		IL_0091:
+		goto IL_008d;
+		IL_008d:
 		((Color)(ref _bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA)).set_A((byte)0);
 		int num = 252582205;
-		goto IL_0068;
-		IL_0068:
+		goto IL_0064;
+		IL_0064:
 		while (true)
 		{
 			uint num2;
@@ -72,7 +72,7 @@ public class MakeoutPointScene : TimeOfDayScene
 			default:
 				return;
 			case 2u:
-				goto IL_0091;
+				goto IL_008d;
 			case 1u:
 				return;
 			case 3u:
@@ -81,10 +81,10 @@ public class MakeoutPointScene : TimeOfDayScene
 			}
 			break;
 		}
-		goto IL_0063;
-		IL_0063:
+		goto IL_005f;
+		IL_005f:
 		num = 544577936;
-		goto IL_0068;
+		goto IL_0064;
 	}
 
 	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)

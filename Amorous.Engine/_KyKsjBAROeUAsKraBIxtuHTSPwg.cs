@@ -87,11 +87,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 					case 4u:
 						return;
 					default:
-						_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_X5XjwV4HPrzF4fETYQUVvDpCp1p.smethod_0(_003CModule_003E.smethod_27<string>(2415180623u), (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2]
-						{
-							_003CModule_003E.smethod_26<string>(522542214u),
-							_003CModule_003E.smethod_26<string>(2229340973u)
-						}, 250, delegate(int int_0)
+						_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_X5XjwV4HPrzF4fETYQUVvDpCp1p.smethod_0("Are you sure you wish to overwrite slot #{0}?", (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 						{
 							if (int_0 == 1)
 							{
@@ -217,14 +213,14 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 			};
 			if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 			{
-				goto IL_00d5;
+				goto IL_00c9;
 			}
-			goto IL_010e;
-			IL_010e:
+			goto IL_0102;
+			IL_0102:
 			CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 			int num = 814760788;
-			goto IL_00da;
-			IL_00da:
+			goto IL_00ce;
+			IL_00ce:
 			while (true)
 			{
 				uint num2;
@@ -252,11 +248,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 					continue;
 				}
 				case 1u:
-					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_1(_003CModule_003E.smethod_26<string>(1292030398u), (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2]
-					{
-						_003CModule_003E.smethod_28<string>(1966001630u),
-						_003CModule_003E.smethod_24<string>(2489230363u)
-					}, 250, delegate(int int_0)
+					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_1("Are you sure you wish to load slot #{0}?", (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 					{
 						if (int_0 == 1)
 						{
@@ -293,9 +285,9 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				default:
 					return;
 				case 5u:
-					goto IL_010e;
+					goto IL_0102;
 				case 3u:
-					_ZR8JurNMoLTtI80Ip1cUndIgVYF._0pVU36wp9GYD1jM18raZtVEbA9q(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_0(_003CModule_003E.smethod_26<string>(1030498510u), (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? _003CModule_003E.smethod_24<string>(652502366u) : string.Empty), (object)(int_0 + 1)), 250, _003CModule_003E.smethod_25<string>(743666196u), delegate
+					_ZR8JurNMoLTtI80Ip1cUndIgVYF._0pVU36wp9GYD1jM18raZtVEbA9q(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_0("There is no save in {0}slot #{1}!", (object)(CS_0024_003C_003E8__locals0._yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", delegate
 					{
 						_EtoN5lDbDEKHh3WWgnYIT2zV8s(obj: true);
 					});
@@ -307,10 +299,10 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				}
 				break;
 			}
-			goto IL_00d5;
-			IL_00d5:
+			goto IL_00c9;
+			IL_00c9:
 			num = 81928569;
-			goto IL_00da;
+			goto IL_00ce;
 		}
 
 		internal void _4Xr38jW5e17508uGSVjYbO0jqFo()
@@ -478,8 +470,8 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				case 0u:
 					break;
 				default:
-					_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add(_003CModule_003E.smethod_24<string>(2606348759u));
-					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_003CModule_003E.smethod_24<string>(415561103u), _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
+					_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
+					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb("Which slot do you wish to save to?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
 					{
 						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _yhDD7spe4cjr78VqajGqVzwbiVN = default(_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p);
 						while (true)
@@ -544,11 +536,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 								case 4u:
 									return;
 								default:
-									_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_X5XjwV4HPrzF4fETYQUVvDpCp1p.smethod_0(_003CModule_003E.smethod_27<string>(2415180623u), (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2]
-									{
-										_003CModule_003E.smethod_26<string>(522542214u),
-										_003CModule_003E.smethod_26<string>(2229340973u)
-									}, 250, delegate(int int_0)
+									_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_X5XjwV4HPrzF4fETYQUVvDpCp1p.smethod_0("Are you sure you wish to overwrite slot #{0}?", (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 									{
 										if (int_0 == 1)
 										{
@@ -606,19 +594,19 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				switch ((num2 = (uint)num ^ 0xFD62AC41u) % 6u)
 				{
 				case 5u:
-					_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add(_003CModule_003E.smethod_26<string>(3514339193u));
-					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_003CModule_003E.smethod_25<string>(4142387711u), _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
+					_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
+					_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
 					{
 						if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 						{
-							goto IL_00d5;
+							goto IL_00c9;
 						}
-						goto IL_010e;
-						IL_010e:
+						goto IL_0102;
+						IL_0102:
 						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _yhDD7spe4cjr78VqajGqVzwbiVN = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 						int num3 = 814760788;
-						goto IL_00da;
-						IL_00da:
+						goto IL_00ce;
+						IL_00ce:
 						while (true)
 						{
 							uint num4;
@@ -646,11 +634,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 								continue;
 							}
 							case 1u:
-								_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_1(_003CModule_003E.smethod_26<string>(1292030398u), (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2]
-								{
-									_003CModule_003E.smethod_28<string>(1966001630u),
-									_003CModule_003E.smethod_24<string>(2489230363u)
-								}, 250, delegate(int int_0)
+								_ZR8JurNMoLTtI80Ip1cUndIgVYF._GtkWDtXwQHwgWY4aFkacjfUDyzb(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_1("Are you sure you wish to load slot #{0}?", (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._B3FsRMcQWBXzFf3nLOBKzncessO + 1)), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 250, delegate(int int_0)
 								{
 									if (int_0 == 1)
 									{
@@ -687,9 +671,9 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 							default:
 								return;
 							case 5u:
-								goto IL_010e;
+								goto IL_0102;
 							case 3u:
-								_ZR8JurNMoLTtI80Ip1cUndIgVYF._0pVU36wp9GYD1jM18raZtVEbA9q(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_0(_003CModule_003E.smethod_26<string>(1030498510u), (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? _003CModule_003E.smethod_24<string>(652502366u) : string.Empty), (object)(int_0 + 1)), 250, _003CModule_003E.smethod_25<string>(743666196u), delegate
+								_ZR8JurNMoLTtI80Ip1cUndIgVYF._0pVU36wp9GYD1jM18raZtVEbA9q(_N8RH6UOasCxN61n5StKWlrmnC4n.smethod_0("There is no save in {0}slot #{1}!", (object)(_yhDD7spe4cjr78VqajGqVzwbiVN._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty), (object)(int_0 + 1)), 250, "OK", delegate
 								{
 									action_0(obj: true);
 								});
@@ -701,10 +685,10 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 							}
 							break;
 						}
-						goto IL_00d5;
-						IL_00d5:
+						goto IL_00c9;
+						IL_00c9:
 						num3 = 81928569;
-						goto IL_00da;
+						goto IL_00ce;
 					});
 					num = (int)((num2 * 456301719) ^ 0x4259CA32);
 					continue;
@@ -751,11 +735,7 @@ public static class _KyKsjBAROeUAsKraBIxtuHTSPwg
 				case 0u:
 					break;
 				default:
-					desktop_0._GtkWDtXwQHwgWY4aFkacjfUDyzb(_003CModule_003E.smethod_24<string>(1992465052u), new string[2]
-					{
-						_003CModule_003E.smethod_27<string>(3314932122u),
-						_003CModule_003E.smethod_28<string>(1001177315u)
-					}, 500, delegate(int int_0)
+					desktop_0._GtkWDtXwQHwgWY4aFkacjfUDyzb("Are you sure you wish to exit the game? All unsaved progress will be lost!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int int_0)
 					{
 						if (int_0 == 1)
 						{

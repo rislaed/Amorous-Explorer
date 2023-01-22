@@ -24,8 +24,8 @@ public class ConCenterScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				break;
 				IL_0009:
-				ConCenterScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_27<string>(1638167848u), 0, 0);
-				ConCenterScene.smethod_15(_003CModule_003E.smethod_25<string>(2819506888u), 0.4f);
+				ConCenterScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ConCenter/Con Center BG", 0, 0);
+				ConCenterScene.smethod_15("Assets/Music/Warhector - Free Floating", 0.4f);
 				num = (int)((num2 * 382761120) ^ 0x4A565338);
 			}
 		}

@@ -5,7 +5,7 @@ namespace Amorous.Game.NPC;
 public class JaxPurpleNPC : JaxNPC
 {
 	public JaxPurpleNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(2871898729u))
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/JaxPurple/Jax")
 	{
 		while (true)
 		{
@@ -16,7 +16,7 @@ public class JaxPurpleNPC : JaxNPC
 				switch ((num2 = (uint)num ^ 0xAA805224u) % 3u)
 				{
 				case 2u:
-					goto IL_0013;
+					goto IL_000f;
 				default:
 					return;
 				case 0u:
@@ -25,7 +25,7 @@ public class JaxPurpleNPC : JaxNPC
 					return;
 				}
 				break;
-				IL_0013:
+				IL_000f:
 				JaxPurpleNPC.smethod_33((_QGGOTxZ8aNWGh0hc26wcmx8wmwT)this, new Type[2]
 				{
 					JaxPurpleNPC.smethod_32(typeof(JaxNPC).TypeHandle),

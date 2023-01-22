@@ -184,7 +184,7 @@ public static class _dXVK1NWaxcsgYg6KpavA0e8oion
 				_dXVK1NWaxcsgYg6KpavA0e8oion.smethod_2(spriteBatch_0, texture2D_0, nullable_0.Value, nullable_2, nullable_5.Value, float_0, nullable_3.Value, nullable_4.Value, spriteEffects_0, float_1);
 				return;
 			case 8u:
-				throw _dXVK1NWaxcsgYg6KpavA0e8oion.smethod_1(_003CModule_003E.smethod_25<string>(3030283438u));
+				throw _dXVK1NWaxcsgYg6KpavA0e8oion.smethod_1("Expected drawRectangle or position, but received neither or both.");
 			case 11u:
 				return;
 			}

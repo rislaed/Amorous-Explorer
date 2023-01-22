@@ -14,46 +14,13 @@ public class _ecVLwNBaQAiybVyX9cgWCvnbkWe : _Sx3k5xXMK0bV8Wvr1xdM6HgVnYG
 				switch ((num2 = (uint)num ^ 0xB576D4BDu) % 4u)
 				{
 				case 2u:
-					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_xk8tKI57uoSCbu9iZAwV41JAmAAA, new string[5]
-					{
-						_003CModule_003E.smethod_24<string>(763721508u),
-						_003CModule_003E.smethod_28<string>(2969255271u),
-						_003CModule_003E.smethod_26<string>(2152387494u),
-						_003CModule_003E.smethod_27<string>(770374774u),
-						_003CModule_003E.smethod_27<string>(2923284303u)
-					});
-					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_BwqdE4SEYHPh05gSHa62KyXObx2, new string[5]
-					{
-						_003CModule_003E.smethod_25<string>(2522763334u),
-						_003CModule_003E.smethod_27<string>(1975679717u),
-						_003CModule_003E.smethod_26<string>(706083547u),
-						_003CModule_003E.smethod_26<string>(1464457612u),
-						_003CModule_003E.smethod_26<string>(3282069629u)
-					});
-					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_ZR6NLJd6Ya49CeydiEGSCyZeDUb, new string[10]
-					{
-						_003CModule_003E.smethod_27<string>(181753657u),
-						_003CModule_003E.smethod_26<string>(1563088415u),
-						_003CModule_003E.smethod_27<string>(660981831u),
-						_003CModule_003E.smethod_28<string>(2531287315u),
-						_003CModule_003E.smethod_27<string>(4008344541u),
-						_003CModule_003E.smethod_24<string>(962423593u),
-						_003CModule_003E.smethod_28<string>(3270307976u),
-						_003CModule_003E.smethod_24<string>(3577385727u),
-						_003CModule_003E.smethod_28<string>(447136806u),
-						_003CModule_003E.smethod_25<string>(4033565148u)
-					});
+					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_xk8tKI57uoSCbu9iZAwV41JAmAAA, new string[5] { "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow1", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow2", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow3", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow4", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow5" });
+					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_BwqdE4SEYHPh05gSHa62KyXObx2, new string[5] { "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed1", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed2", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed3", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed4", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed5" });
+					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_ZR6NLJd6Ya49CeydiEGSCyZeDUb, new string[10] { "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast1", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast2", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast3", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast4", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast5", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast6", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast7", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast8", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast9", "Assets/Sounds/SexScenes/Moaning/Male/Fast/Dragonfast10" });
 					num = ((int)num2 * -1434605575) ^ 0x14298C2;
 					continue;
 				case 1u:
-					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_qNXThpU44xZknZwFt3xQG8NpINc, new string[5]
-					{
-						_003CModule_003E.smethod_27<string>(1165530783u),
-						_003CModule_003E.smethod_26<string>(556894473u),
-						_003CModule_003E.smethod_25<string>(2620854439u),
-						_003CModule_003E.smethod_27<string>(936768458u),
-						_003CModule_003E.smethod_26<string>(597509788u)
-					});
+					_ecVLwNBaQAiybVyX9cgWCvnbkWe.smethod_1(_qNXThpU44xZknZwFt3xQG8NpINc, new string[5] { "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid1", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid2", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid3", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid4", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid5" });
 					num = ((int)num2 * -460515293) ^ -624584987;
 					continue;
 				default:

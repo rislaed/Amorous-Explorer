@@ -30,12 +30,12 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_26<string>(2715142201u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Zenith";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(155, 213, 154);
 
 	public ZenithNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(2877894685u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Zenith/Zenith", 1f, bool_0: true)
 	{
 		while (true)
 		{
@@ -46,21 +46,21 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 				switch ((num2 = (uint)num ^ 0x7B4F7A9Du) % 9u)
 				{
 				case 8u:
-					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, _003CModule_003E.smethod_24<string>(1539237707u), _003CModule_003E.smethod_28<string>(2994082169u), _003CModule_003E.smethod_28<string>(1245735061u)), _003CModule_003E.smethod_25<string>(1985894881u));
+					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Head angry", "Eye Back", "Pupils"), "Blink");
 					num = ((int)num2 * -802343234) ^ -1398660638;
 					continue;
 				case 7u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.HandsOnHips, _003CModule_003E.smethod_24<string>(1560573898u), _003CModule_003E.smethod_24<string>(207626482u), _003CModule_003E.smethod_28<string>(2825940938u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.HandsOnHips, "Body hips", "Wing left", "Wing right");
 					num = (int)((num2 * 1271453272) ^ 0x649912CE);
 					continue;
 				case 6u:
-					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, _003CModule_003E.smethod_26<string>(499633008u), _003CModule_003E.smethod_24<string>(1696972945u), _003CModule_003E.smethod_24<string>(3391565045u)), _003CModule_003E.smethod_27<string>(1525157651u));
+					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Head Blush", "Eye Back", "Pupils"), "Blink");
 					num = ((int)num2 * -161919845) ^ -1968261875;
 					continue;
 				case 5u:
-					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, _003CModule_003E.smethod_28<string>(2219352690u), _003CModule_003E.smethod_27<string>(3121126026u), _003CModule_003E.smethod_25<string>(1652727612u)), _003CModule_003E.smethod_28<string>(2999848304u));
-					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.NotAmused, _003CModule_003E.smethod_25<string>(3248944565u), _003CModule_003E.smethod_24<string>(1696972945u), _003CModule_003E.smethod_27<string>(1281926310u)), _003CModule_003E.smethod_25<string>(1985894881u));
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.ArmsFolded, _003CModule_003E.smethod_25<string>(3987585248u), _003CModule_003E.smethod_28<string>(1017862350u), _003CModule_003E.smethod_27<string>(499840085u));
+					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Head Happy", "Eye Back", "Pupils"), "Blink");
+					ZenithNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.NotAmused, "Head Un-amused", "Eye Back", "Pupils"), "Blink");
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.ArmsFolded, "Body fold arms", "Wing left", "Wing right");
 					num = (int)(num2 * 2068157731) ^ -1553551670;
 					continue;
 				case 4u:
@@ -69,16 +69,16 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 					num = (int)((num2 * 996774024) ^ 0x235F56DA);
 					continue;
 				case 3u:
-					ZenithNPC.smethod_19(ZenithNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_26<string>(4184661290u), (Action<int>)null);
+					ZenithNPC.smethod_19(ZenithNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
 					num = ((int)num2 * -637276564) ^ -218693063;
 					continue;
 				case 2u:
-					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsFolded, EClothes.Security, _003CModule_003E.smethod_24<string>(3031583838u)));
-					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsFolded, EClothes.Shirt, _003CModule_003E.smethod_25<string>(831575057u)));
-					ZenithNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsFolded, EClothes.Pants, _003CModule_003E.smethod_27<string>(4079582374u)));
-					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.HandsOnHips, EClothes.Security, _003CModule_003E.smethod_27<string>(24229165u)));
-					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.HandsOnHips, EClothes.Shirt, _003CModule_003E.smethod_27<string>(1697910520u)));
-					ZenithNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.HandsOnHips, EClothes.Pants, _003CModule_003E.smethod_24<string>(3077050187u)));
+					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsFolded, EClothes.Security, "Security fold arms"));
+					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsFolded, EClothes.Shirt, "Shirt fold arms"));
+					ZenithNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.ArmsFolded, EClothes.Pants, "Pants fold arms"));
+					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.HandsOnHips, EClothes.Security, "Security hips"));
+					ZenithNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.HandsOnHips, EClothes.Shirt, "Shirt hips"));
+					ZenithNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.HandsOnHips, EClothes.Pants, "Pants hips"));
 					num = ((int)num2 * -1110292910) ^ 0x681EFBD3;
 					continue;
 				default:

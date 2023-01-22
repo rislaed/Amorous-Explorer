@@ -23,7 +23,7 @@ public class ClubPoolRailingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				break;
 				IL_0009:
-				ClubPoolRailingScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(4076559948u), 0, 0);
+				ClubPoolRailingScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ClubPoolRailing/Background", 0, 0);
 				num = (int)(num2 * 1149040351) ^ -3482152;
 			}
 		}

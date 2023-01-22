@@ -26,9 +26,9 @@ public static class _b3D8sFDNBNbyBUDmxg2f9XSWJKd
 
 	private static void _oD87G7SXjsTukw7IVWxVlVFEgvA(ContentManager contentManager_0)
 	{
-		FieldInfo fieldInfo_ = _b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_1(_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_0(typeof(ContentManager).TypeHandle), _003CModule_003E.smethod_25<string>(1917857672u), BindingFlags.Instance | BindingFlags.NonPublic);
+		FieldInfo fieldInfo_ = _b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_1(_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_0(typeof(ContentManager).TypeHandle), "loadedAssets", BindingFlags.Instance | BindingFlags.NonPublic);
 		_vFlf6NbDv32TsNiHZpYwZhv1lRo = (Dictionary<string, object>)_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_2(fieldInfo_, (object)contentManager_0);
-		FieldInfo fieldInfo_2 = _b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_1(_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_0(typeof(ContentManager).TypeHandle), _003CModule_003E.smethod_26<string>(1919422028u), BindingFlags.Instance | BindingFlags.NonPublic);
+		FieldInfo fieldInfo_2 = _b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_1(_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_0(typeof(ContentManager).TypeHandle), "disposableAssets", BindingFlags.Instance | BindingFlags.NonPublic);
 		while (true)
 		{
 			int num = -1801226876;
@@ -38,7 +38,7 @@ public static class _b3D8sFDNBNbyBUDmxg2f9XSWJKd
 				switch ((num2 = (uint)num ^ 0x9FC2B9BEu) % 3u)
 				{
 				case 1u:
-					goto IL_004b;
+					goto IL_0043;
 				default:
 					return;
 				case 2u:
@@ -47,7 +47,7 @@ public static class _b3D8sFDNBNbyBUDmxg2f9XSWJKd
 					return;
 				}
 				break;
-				IL_004b:
+				IL_0043:
 				_gtSa6GVF63EHA9kPi3x0tr1inFL = (List<IDisposable>)_b3D8sFDNBNbyBUDmxg2f9XSWJKd.smethod_2(fieldInfo_2, (object)contentManager_0);
 				num = ((int)num2 * -538391332) ^ -168145690;
 			}

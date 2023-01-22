@@ -14,11 +14,11 @@ public class BarScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xC7321EE0u) % 4u)
 				{
 				case 2u:
-					BarScene.smethod_15(_003CModule_003E.smethod_27<string>(1874396605u), 0.4f);
+					BarScene.smethod_15("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 					num = ((int)num2 * -1854587777) ^ -754671459;
 					continue;
 				case 1u:
-					BarScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_27<string>(3651227680u), 0, 0);
+					BarScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bar/Background", 0, 0);
 					num = ((int)num2 * -392173669) ^ -1559606607;
 					continue;
 				default:

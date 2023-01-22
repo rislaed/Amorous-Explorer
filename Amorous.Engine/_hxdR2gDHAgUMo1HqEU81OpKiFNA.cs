@@ -37,7 +37,7 @@ public class _hxdR2gDHAgUMo1HqEU81OpKiFNA : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	{
 		if (int_0 == 0)
 		{
-			throw _hxdR2gDHAgUMo1HqEU81OpKiFNA.smethod_0(_003CModule_003E.smethod_26<string>(3887752675u));
+			throw _hxdR2gDHAgUMo1HqEU81OpKiFNA.smethod_0("timePerFade == 0");
 		}
 		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
 		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = _hxdR2gDHAgUMo1HqEU81OpKiFNA.smethod_1(texture2D_0);

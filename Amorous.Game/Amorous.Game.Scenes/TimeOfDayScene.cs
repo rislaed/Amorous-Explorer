@@ -23,7 +23,7 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		TimeOfDayScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1536443740u));
+		TimeOfDayScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Day");
 	}
 
 	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
@@ -41,7 +41,7 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					int num5;
 					int num6;
-					if (!TimeOfDayScene.smethod_15(string_0, _003CModule_003E.smethod_28<string>(1198973034u)))
+					if (!TimeOfDayScene.smethod_15(string_0, "Night"))
 					{
 						num5 = 1180018066;
 						num6 = 1180018066;
@@ -57,7 +57,7 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 11u:
 				{
 					int num4;
-					if (TimeOfDayScene.smethod_15(string_0, _003CModule_003E.smethod_27<string>(951880873u)))
+					if (TimeOfDayScene.smethod_15(string_0, "Morning"))
 					{
 						num = -515184065;
 						num4 = -515184065;
@@ -72,7 +72,7 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 8u:
 				{
 					int num7;
-					if (!TimeOfDayScene.smethod_15(string_0, _003CModule_003E.smethod_24<string>(1536443740u)))
+					if (!TimeOfDayScene.smethod_15(string_0, "Day"))
 					{
 						num = -625386128;
 						num7 = -625386128;
@@ -95,7 +95,7 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 2u:
 				{
 					int num3;
-					if (TimeOfDayScene.smethod_15(string_0, _003CModule_003E.smethod_24<string>(1927098657u)))
+					if (TimeOfDayScene.smethod_15(string_0, "Sunset"))
 					{
 						num = -1948812120;
 						num3 = -1948812120;

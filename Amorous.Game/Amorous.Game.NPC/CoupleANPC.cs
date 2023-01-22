@@ -24,12 +24,12 @@ public class CoupleANPC : SpineNPC<CoupleANPC.EHeads, CoupleANPC.EPoses, CoupleA
 	}
 
 	public CoupleANPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_24<string>(388741961u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/Scenes/Intro/Couple A", 1f, bool_0: true)
 	{
-		CoupleANPC.smethod_19(CoupleANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_27<string>(2231397504u), (Action<int>)null);
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Waving, _003CModule_003E.smethod_28<string>(3660401897u), _003CModule_003E.smethod_26<string>(3025904310u), _003CModule_003E.smethod_27<string>(2238632012u));
-		CoupleANPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Shirt, _003CModule_003E.smethod_25<string>(3052654098u)));
-		CoupleANPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Pants, _003CModule_003E.smethod_26<string>(2390174947u)));
+		CoupleANPC.smethod_19(CoupleANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Waving", (Action<int>)null);
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Waving, "Skunk arm back", "Characters left", "Silver arm");
+		CoupleANPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Shirt, "Shirts"));
+		CoupleANPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Pants, "Pants"));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

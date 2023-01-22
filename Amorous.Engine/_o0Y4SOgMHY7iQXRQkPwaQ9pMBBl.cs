@@ -2615,7 +2615,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 
 	public static void _EMnZAXxoqoahiGOiNjffRycLtDE(this Desktop desktop_0, string string_0, string string_1 = null)
 	{
-		//IL_0127: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0123: Unknown result type (might be due to invalid IL or missing references)
 		_JQQysO7uwugUSzo1g63o3jzSP4H jQQysO7uwugUSzo1g63o3jzSP4H = new _JQQysO7uwugUSzo1g63o3jzSP4H();
 		Style current2 = default(Style);
 		while (true)
@@ -2637,7 +2637,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 						using Dictionary<ControlState, Style>.ValueCollection.Enumerator enumerator2 = ((Dictionary<ControlState, Style>)(object)_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_4(value)).Values.GetEnumerator();
 						while (true)
 						{
-							IL_017c:
+							IL_0178:
 							int num3;
 							int num4;
 							if (!enumerator2.MoveNext())
@@ -2699,15 +2699,15 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 									num3 = ((int)num2 * -640754362) ^ -1093116285;
 									continue;
 								default:
-									goto end_IL_013f;
+									goto end_IL_013b;
 								case 1u:
 									break;
 								case 5u:
-									goto end_IL_013f;
+									goto end_IL_013b;
 								}
-								goto IL_017c;
+								goto IL_0178;
 								continue;
-								end_IL_013f:
+								end_IL_013b:
 								break;
 							}
 							break;
@@ -2718,7 +2718,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 				}
 				break;
 				IL_0008:
-				jQQysO7uwugUSzo1g63o3jzSP4H._Gz8axRA2ks9sOlb2vx60ucqDEM0(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_2(_003CModule_003E.smethod_24<string>(2135170704u), (object)_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_1(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_0()), (object)string_0));
+				jQQysO7uwugUSzo1g63o3jzSP4H._Gz8axRA2ks9sOlb2vx60ucqDEM0(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_2("{0}/Content-Release/{1}.xml", (object)_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_1(_o0Y4SOgMHY7iQXRQkPwaQ9pMBBl.smethod_0()), (object)string_0));
 				num = (int)((num2 * 619860357) ^ 0x3BB1353C);
 			}
 		}

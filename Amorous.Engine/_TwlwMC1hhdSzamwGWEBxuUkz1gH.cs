@@ -207,7 +207,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 					case _qokIrmaaT3Lq6znW10HdrPUO9Fq.Fast:
 						goto IL_009e;
 					case _qokIrmaaT3Lq6znW10HdrPUO9Fq.Slow:
-						goto IL_035c;
+						goto IL_0350;
 					}
 					num = ((int)num2 * -1519260372) ^ -883671866;
 					continue;
@@ -300,7 +300,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 				case 9u:
 				{
 					int num7;
-					if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, _003CModule_003E.smethod_26<string>(1568669766u)))
+					if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, "ThrustEnd"))
 					{
 						num = -762444764;
 						num7 = -762444764;
@@ -323,7 +323,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 				case 5u:
 				{
 					int num6;
-					if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, _003CModule_003E.smethod_28<string>(3691523794u)))
+					if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, "Moan"))
 					{
 						num = -1212837631;
 						num6 = -1212837631;
@@ -338,7 +338,7 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 				case 4u:
 				{
 					int num3;
-					if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, _003CModule_003E.smethod_24<string>(3464801324u)))
+					if (_TwlwMC1hhdSzamwGWEBxuUkz1gH.smethod_2(string_0, "ThrustStart"))
 					{
 						num = -655890259;
 						num3 = -655890259;
@@ -379,12 +379,12 @@ public abstract class _TwlwMC1hhdSzamwGWEBxuUkz1gH
 				case 27u:
 					return;
 				case 11u:
-					goto IL_035c;
+					goto IL_0350;
 				case 29u:
 					return;
 				case 18u:
 					return;
-					IL_035c:
+					IL_0350:
 					_wQSC6rD8bbXFvRxba0kr1RqxlOV._BwqdE4SEYHPh05gSHa62KyXObx2._xDFlaclLtJxSUU63JEJALvRLdfe();
 					return;
 					IL_009e:

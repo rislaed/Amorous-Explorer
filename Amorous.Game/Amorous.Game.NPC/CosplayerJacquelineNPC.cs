@@ -23,12 +23,12 @@ public class CosplayerJacquelineNPC : LayerNPC<CosplayerJacquelineNPC.EHeads, Co
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(191888006u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Jacqueline Knight";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(138, 148, 170);
 
 	public CosplayerJacquelineNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(1771614822u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CosplayerJacqueline", 1f)
 	{
 		while (true)
 		{
@@ -39,7 +39,7 @@ public class CosplayerJacquelineNPC : LayerNPC<CosplayerJacquelineNPC.EHeads, Co
 				switch ((num2 = (uint)num ^ 0xC1F4156Du) % 6u)
 				{
 				case 5u:
-					CosplayerJacquelineNPC.smethod_19(CosplayerJacquelineNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_28<string>(870698126u))));
+					CosplayerJacquelineNPC.smethod_19(CosplayerJacquelineNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Jacqueline Knight (pants)")));
 					num = (int)(num2 * 963588473) ^ -466316024;
 					continue;
 				case 4u:
@@ -47,11 +47,11 @@ public class CosplayerJacquelineNPC : LayerNPC<CosplayerJacquelineNPC.EHeads, Co
 					num = ((int)num2 * -111010245) ^ -2063968854;
 					continue;
 				case 1u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_25<string>(3008819666u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Jacqueline Knight (nude)");
 					num = (int)((num2 * 1962304096) ^ 0x570D2139);
 					continue;
 				case 0u:
-					CosplayerJacquelineNPC.smethod_17(CosplayerJacquelineNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_25<string>(3613162043u))));
+					CosplayerJacquelineNPC.smethod_17(CosplayerJacquelineNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Jacqueline Knight (shirt)")));
 					num = (int)((num2 * 2012805698) ^ 0x46FF36FC);
 					continue;
 				case 2u:

@@ -29,12 +29,12 @@ public class SethNPC : SpineNPC<SethNPC.EHeads, SethNPC.EPoses, SethNPC.EClothes
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_25<string>(3749389303u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Seth";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(176, 255, 83);
 
 	public SethNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_24<string>(1612583799u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Seth/Seth", 1f, bool_0: true)
 	{
 		while (true)
 		{
@@ -45,16 +45,16 @@ public class SethNPC : SpineNPC<SethNPC.EHeads, SethNPC.EPoses, SethNPC.EClothes
 				switch ((num2 = (uint)num ^ 0xE0A02225u) % 12u)
 				{
 				case 11u:
-					SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Top, _003CModule_003E.smethod_28<string>(79953539u))));
+					SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Top, "Shy top")));
 					num = ((int)num2 * -2140277277) ^ -109503643;
 					continue;
 				case 10u:
-					SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Top, _003CModule_003E.smethod_24<string>(4036887234u))));
+					SethNPC.smethod_23(SethNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Top, "Gesture top")));
 					num = (int)((num2 * 1940880305) ^ 0x4185EC4D);
 					continue;
 				case 9u:
-					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, _003CModule_003E.smethod_27<string>(3520774612u), _003CModule_003E.smethod_27<string>(2086707344u), _003CModule_003E.smethod_24<string>(1730646323u)), _003CModule_003E.smethod_25<string>(1089857685u));
-					SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, _003CModule_003E.smethod_28<string>(1719890896u)), new string[1] { _003CModule_003E.smethod_27<string>(2569552772u) });
+					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Smirk Head", "Smirk Pupil", "Smirk eye back"), "Smirk Blink");
+					SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Shy, "Shy body"), new string[1] { "Seth cock" });
 					num = ((int)num2 * -1370198624) ^ 0x6551E922;
 					continue;
 				case 8u:
@@ -63,28 +63,28 @@ public class SethNPC : SpineNPC<SethNPC.EHeads, SethNPC.EPoses, SethNPC.EClothes
 					num = (int)((num2 * 1318789066) ^ 0x7B4A3419);
 					continue;
 				case 7u:
-					SethNPC.smethod_19(SethNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_28<string>(1524048401u), (Action<int>)null);
+					SethNPC.smethod_19(SethNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Idle", (Action<int>)null);
 					num = (int)((num2 * 346423980) ^ 0x202F6DBF);
 					continue;
 				case 6u:
-					SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Pants, _003CModule_003E.smethod_26<string>(2390174947u))));
+					SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Pants, "Pants")));
 					num = ((int)num2 * -1269712522) ^ -1109104563;
 					continue;
 				case 5u:
-					SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Pants, _003CModule_003E.smethod_27<string>(2385072818u))));
+					SethNPC.smethod_25(SethNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Shy, EClothes.Pants, "Pants")));
 					num = (int)((num2 * 778804989) ^ 0x278EA92E);
 					continue;
 				case 3u:
-					SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, _003CModule_003E.smethod_27<string>(1135485504u)), new string[1] { _003CModule_003E.smethod_26<string>(1546442265u) });
+					SethNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, "Gesture Body"), new string[1] { "Seth cock" });
 					num = ((int)num2 * -976838956) ^ -1442795402;
 					continue;
 				case 2u:
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, _003CModule_003E.smethod_24<string>(3374728356u), _003CModule_003E.smethod_25<string>(1549587772u), _003CModule_003E.smethod_25<string>(2618817228u));
+					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Blush head", "Blush pupils", "Blush eyeback");
 					num = (int)((num2 * 780462747) ^ 0x217505D6);
 					continue;
 				case 1u:
-					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, _003CModule_003E.smethod_28<string>(2091403115u), _003CModule_003E.smethod_27<string>(4232382365u), _003CModule_003E.smethod_27<string>(895871417u), _003CModule_003E.smethod_24<string>(1766569452u)), _003CModule_003E.smethod_28<string>(2218069393u));
-					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, _003CModule_003E.smethod_28<string>(2942358243u), _003CModule_003E.smethod_24<string>(3118017034u), _003CModule_003E.smethod_24<string>(4018550711u)), _003CModule_003E.smethod_25<string>(3083704307u));
+					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Happy head", "Happy Pupils", "Happy eyeback", "Happy jaw"), "Happy blink");
+					SethNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad head", "Sad pupils", "Sad eye back"), "Sad blink");
 					num = ((int)num2 * -1980443707) ^ -2112772803;
 					continue;
 				default:

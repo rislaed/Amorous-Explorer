@@ -23,12 +23,12 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(1949525965u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Alexis Pryde";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(17, 178, 105);
 
 	public SecurityGuardNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(2688328363u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/SecurityGuard", 1f)
 	{
 		while (true)
 		{
@@ -51,7 +51,7 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 					num = ((int)num2 * -1250901560) ^ -470928619;
 					continue;
 				case 3u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, _003CModule_003E.smethod_27<string>(489863646u), _003CModule_003E.smethod_24<string>(3426738257u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Alexis Nude", "Alexis Tufts");
 					num = (int)((num2 * 1957525581) ^ 0x1E8D9640);
 					continue;
 				case 2u:
@@ -59,11 +59,11 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 					num = (int)(num2 * 1182762663) ^ -2097610273;
 					continue;
 				case 1u:
-					SecurityGuardNPC.smethod_19(SecurityGuardNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, _003CModule_003E.smethod_27<string>(2875152754u))));
+					SecurityGuardNPC.smethod_19(SecurityGuardNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Alexis Pants")));
 					num = (int)((num2 * 1635205519) ^ 0x7A155D0D);
 					continue;
 				case 0u:
-					SecurityGuardNPC.smethod_17(SecurityGuardNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, _003CModule_003E.smethod_25<string>(3829863964u))));
+					SecurityGuardNPC.smethod_17(SecurityGuardNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Alexis Shirt")));
 					num = (int)(num2 * 482151371) ^ -657123347;
 					continue;
 				default:
@@ -80,13 +80,7 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 
 	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
 	{
-		return new string[4]
-		{
-			_003CModule_003E.smethod_25<string>(3292670740u),
-			_003CModule_003E.smethod_25<string>(3561267352u),
-			_003CModule_003E.smethod_27<string>(2875152754u),
-			_003CModule_003E.smethod_28<string>(4208062901u)
-		};
+		return new string[4] { "Alexis Nude", "Alexis Tufts", "Alexis Pants", "Alexis Shirt" };
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)

@@ -29,12 +29,12 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_28<string>(2013894169u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Dustin";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
 
 	public DustinNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(1651761541u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Dustin/Dustin", 1f, bool_0: true)
 	{
 		while (true)
 		{
@@ -49,22 +49,22 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 					num = ((int)num2 * -738617529) ^ -163297875;
 					continue;
 				case 7u:
-					DustinNPC.smethod_19(DustinNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_27<string>(3797436562u), (Action<int>)null);
-					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Neutral, _003CModule_003E.smethod_25<string>(1802496894u), _003CModule_003E.smethod_26<string>(4253373757u), _003CModule_003E.smethod_25<string>(2269962469u), _003CModule_003E.smethod_25<string>(3008603152u), _003CModule_003E.smethod_24<string>(1783406141u)), _003CModule_003E.smethod_25<string>(3545796376u));
-					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, _003CModule_003E.smethod_24<string>(1356622394u), _003CModule_003E.smethod_27<string>(224928781u), _003CModule_003E.smethod_24<string>(2212439639u), _003CModule_003E.smethod_28<string>(905927883u)), _003CModule_003E.smethod_24<string>(3565387055u));
-					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, _003CModule_003E.smethod_25<string>(601764142u), _003CModule_003E.smethod_27<string>(573060488u), _003CModule_003E.smethod_26<string>(3407155336u), _003CModule_003E.smethod_24<string>(3374728356u)), _003CModule_003E.smethod_28<string>(58976532u));
+					DustinNPC.smethod_19(DustinNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Idle", (Action<int>)null);
+					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Neutral, "Neutral Mane", "Neutral eye back", "Neutral pupil", "Neutral jaw", "Neutral head"), "Neutral blink");
+					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Angry mane", "Angry eyeback", "Angry pupil", "Angry head"), "Angry blink");
+					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Blush mane", "Blush eye back", "Blush pupil", "Blush head"), "Blush blink");
 					num = ((int)num2 * -1615084381) ^ 0x33280B7E;
 					continue;
 				case 6u:
-					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, _003CModule_003E.smethod_26<string>(778125244u), _003CModule_003E.smethod_26<string>(980358328u), _003CModule_003E.smethod_27<string>(97449568u), _003CModule_003E.smethod_28<string>(1768894342u), _003CModule_003E.smethod_25<string>(2747958542u)), _003CModule_003E.smethod_28<string>(401504190u));
+					DustinNPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad earback", "Sad mane", "Sad eyeback", "Sad pupils", "Sad head"), "Sad blink");
 					num = ((int)num2 * -829587058) ^ 0x10D66867;
 					continue;
 				case 4u:
-					DustinNPC.smethod_25(DustinNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, _003CModule_003E.smethod_28<string>(585660529u))));
+					DustinNPC.smethod_25(DustinNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Pants")));
 					num = (int)(num2 * 1737701995) ^ -1616732642;
 					continue;
 				case 3u:
-					DustinNPC.smethod_23(DustinNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Shirt, _003CModule_003E.smethod_24<string>(4137363152u))));
+					DustinNPC.smethod_23(DustinNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Shirt, "Gesture shirt")));
 					num = ((int)num2 * -861304010) ^ 0xDDD18C6;
 					continue;
 				case 2u:
@@ -72,13 +72,13 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 					num = ((int)num2 * -2051524469) ^ 0xD2CEC5C;
 					continue;
 				case 1u:
-					DustinNPC.smethod_25(DustinNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Pants, _003CModule_003E.smethod_24<string>(2546040937u))));
+					DustinNPC.smethod_25(DustinNPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.Pants, "Pants")));
 					num = ((int)num2 * -2001794899) ^ -698822884;
 					continue;
 				case 0u:
-					DustinNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, _003CModule_003E.smethod_26<string>(1688174122u), _003CModule_003E.smethod_27<string>(2725970017u)), new string[1] { _003CModule_003E.smethod_25<string>(1078785902u) });
-					DustinNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, _003CModule_003E.smethod_26<string>(2143198561u)), new string[1] { _003CModule_003E.smethod_27<string>(3025558700u) });
-					DustinNPC.smethod_23(DustinNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, _003CModule_003E.smethod_28<string>(233362959u))));
+					DustinNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Body Neutral", "Neutral thumb"), new string[1] { "Cock" });
+					DustinNPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Gesture, "Body Gesture"), new string[1] { "Cock" });
+					DustinNPC.smethod_23(DustinNPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Neutral shirt")));
 					num = (int)(num2 * 1377384309) ^ -1426714263;
 					continue;
 				default:
@@ -168,8 +168,8 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 
 	static DustinNPC()
 	{
-		//IL_0020: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0025: Unknown result type (might be due to invalid IL or missing references)
+		//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0021: Unknown result type (might be due to invalid IL or missing references)
 		while (true)
 		{
 			int num = -1094046505;
@@ -179,7 +179,7 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 				switch ((num2 = (uint)num ^ 0xC5859AAEu) % 3u)
 				{
 				case 1u:
-					goto IL_0011;
+					goto IL_000d;
 				default:
 					return;
 				case 2u:
@@ -188,7 +188,7 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 					return;
 				}
 				break;
-				IL_0011:
+				IL_000d:
 				_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(242, 208, 150);
 				num = (int)(num2 * 1221004592) ^ -1326380760;
 			}

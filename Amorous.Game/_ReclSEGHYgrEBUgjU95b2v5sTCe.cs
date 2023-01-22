@@ -75,7 +75,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0064: Unknown result type (might be due to invalid IL or missing references)
 		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
 		_hdlaM13VgXOJTfnH8B4Vm0r9Oun hdlaM13VgXOJTfnH8B4Vm0r9Oun = default(_hdlaM13VgXOJTfnH8B4Vm0r9Oun);
 		_pkx9DqzKT7YbtdZazGtnHskUTgX pkx9DqzKT7YbtdZazGtnHskUTgX = default(_pkx9DqzKT7YbtdZazGtnHskUTgX);
@@ -103,7 +103,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 					continue;
 				}
 				case 25u:
-					_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_8(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_7(_003CModule_003E.smethod_28<string>(1782668031u), _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f), _003CModule_003E.smethod_25<string>(3723820857u), Color.get_Green());
+					_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_8(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_7("A unknown command is triggered: ", _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._ddpIk5D8fXe6Y5j72gvmVuDhU1f), "[Command]", Color.get_Green());
 					num = -135428604;
 					continue;
 				case 23u:
@@ -134,7 +134,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 				}
 				case 18u:
 				{
-					int.TryParse(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._09WFE7OooC0GyCzyLlqQ9Su7myB[_003CModule_003E.smethod_24<string>(741223998u)], out var result);
+					int.TryParse(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD._09WFE7OooC0GyCzyLlqQ9Su7myB["Nude"], out var result);
 					_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._f2CdPIvAGYavrZlA3VXyxB0B8Jh(result);
 					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 					num = (int)((num2 * 986241686) ^ 0x3C52E021);
@@ -256,13 +256,13 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 					continue;
 				}
 				case 0u:
-					_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_6(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_3(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr), _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._09WFE7OooC0GyCzyLlqQ9Su7myB[_003CModule_003E.smethod_24<string>(1476728968u)]);
+					_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_6(_ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_3(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr), _Eq0ZSbjV3AWfNe2m5mpykEVrjtD._09WFE7OooC0GyCzyLlqQ9Su7myB["Cutscene"]);
 					num = ((int)num2 * -22132117) ^ -1656491905;
 					continue;
 				case 24u:
 					break;
 				case 7u:
-					throw _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_5(_003CModule_003E.smethod_24<string>(2947738908u));
+					throw _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_5("Current scene is not CookingScene!");
 				case 9u:
 					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 					return;
@@ -275,7 +275,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<Command
 				case 21u:
 					return;
 				case 27u:
-					throw _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_5(_003CModule_003E.smethod_24<string>(2947738908u));
+					throw _ReclSEGHYgrEBUgjU95b2v5sTCe.smethod_5("Current scene is not CookingScene!");
 				default:
 					_7TpbhhncTYU8N40kUaAahODEjQT = _NjQNLofcM2wbpSVJX5f9ltGMCNg;
 					_YY04FeZbOVc47HHNN5R0M1nZYpc = _T09IZIRhbGpjZWBAffDLYRnGVST;

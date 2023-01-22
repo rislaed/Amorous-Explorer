@@ -43,9 +43,9 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 
 		internal void _K6ChlThGNJzhDniJ1it7PMagA2d(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
-			//IL_022c: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0218: Unknown result type (might be due to invalid IL or missing references)
 			RenderTargetBinding[] renderTargetBinding_ = _BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_2(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_wr6xcvFOgUbaTATC17S6Y9v3y3S._KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)));
 			float num3 = default(float);
 			while (true)
@@ -57,14 +57,14 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 					switch ((num2 = (uint)num ^ 0xCFBAD5Du) % 12u)
 					{
 					case 10u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_24<string>(3409151651u)), num3 / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_24<string>(3953997922u)), _wr6xcvFOgUbaTATC17S6Y9v3y3S._z63evmklawgrVTepZWr3BQhfZCK);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskEnd"), num3 / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Inverse"), _wr6xcvFOgUbaTATC17S6Y9v3y3S._z63evmklawgrVTepZWr3BQhfZCK);
 						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_18(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_17(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_16(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_15(_2e92rEtSCXO9jXcjI77aTgE9ZBq)), 0));
 						spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.X, (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Y), Color.get_White());
 						num = (int)((num2 * 2100513107) ^ 0x47B06A7C);
 						continue;
 					case 9u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_25<string>(2595394250u)), _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskStart"), _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF / (float)_wr6xcvFOgUbaTATC17S6Y9v3y3S._YqYs2NQHqpJMOFO0oHumIz6vgVd.Height);
 						num = ((int)num2 * -742408634) ^ -1887275123;
 						continue;
 					case 8u:
@@ -72,11 +72,11 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 						num = ((int)num2 * -369931997) ^ -1903507603;
 						continue;
 					case 6u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_28<string>(2254582447u)), 0);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolOffset"), 0);
 						num = ((int)num2 * -1020670258) ^ -433298044;
 						continue;
 					case 5u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_24<string>(2056204235u)), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskTexture"), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
 						num = (int)((num2 * 532984158) ^ 0x4A1A8F42);
 						continue;
 					case 4u:
@@ -89,8 +89,8 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 						continue;
 					case 2u:
 						num3 = _wr6xcvFOgUbaTATC17S6Y9v3y3S._dEj1SINFcMo2azAbZIsDW2P7BQF + (float)_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_8(_0NizriMRCkKJuXStgvnNKe6Lo4y);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_26<string>(3533174002u)), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_28<string>(2026230675u)), 0.1f);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolSpeed"), 0.1f);
 						num = ((int)num2 * -1369051648) ^ 0x47D6EDCB;
 						continue;
 					case 1u:
@@ -237,23 +237,23 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 	}
 
 	public _jOXcj4HBkU5j6LOJprpiXLCcLR0(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, float float_0, Rectangle rectangle_0, bool bool_0)
-		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _003CModule_003E.smethod_26<string>(307342880u))
+		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, "Pool Water")
 	{
 		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
 		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0 _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = this;
 		RenderTarget2D _YazjYDLENT6HQ0JTluCcQMsqZaB = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_6(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_5(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(base._XbOXR6AypLIdJ3gBMGseGi3Wi2i)), rectangle_0.Width, rectangle_0.Height);
-		Effect _2e92rEtSCXO9jXcjI77aTgE9ZBq = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_7(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(base._XbOXR6AypLIdJ3gBMGseGi3Wi2i)).Load<Effect>(_003CModule_003E.smethod_25<string>(4139824769u));
-		Texture2D _0NizriMRCkKJuXStgvnNKe6Lo4y = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_7(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(base._XbOXR6AypLIdJ3gBMGseGi3Wi2i)).Load<Texture2D>(_003CModule_003E.smethod_26<string>(1922721813u));
+		Effect _2e92rEtSCXO9jXcjI77aTgE9ZBq = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_7(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(base._XbOXR6AypLIdJ3gBMGseGi3Wi2i)).Load<Effect>("Assets/Shaders/SpinePool");
+		Texture2D _0NizriMRCkKJuXStgvnNKe6Lo4y = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_7(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(base._XbOXR6AypLIdJ3gBMGseGi3Wi2i)).Load<Texture2D>("Assets/Scenes/ClubPool/Wave Mask");
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_8((_fAUddQEKfZyemRb327NhM3GGlmzA)this, (Action<GameTime>)delegate(GameTime gameTime_0)
 		{
 			_O8G74kUThoRhYWCOb1McUKcqi8A.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND, gameTime_0, 1000f);
 		});
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_9((_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)this, (Action<SpriteBatch, SkeletonMeshRenderer>)delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			//IL_00c5: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
-			//IL_022c: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0218: Unknown result type (might be due to invalid IL or missing references)
 			RenderTargetBinding[] renderTargetBinding_ = _BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_2(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_1(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_0(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._XbOXR6AypLIdJ3gBMGseGi3Wi2i)));
 			float num3 = default(float);
 			while (true)
@@ -265,14 +265,14 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 					switch ((num2 = (uint)num ^ 0xCFBAD5Du) % 12u)
 					{
 					case 10u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_24<string>(3409151651u)), num3 / (float)rectangle_0.Height);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_24<string>(3953997922u)), bool_0);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskEnd"), num3 / (float)rectangle_0.Height);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_14(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Inverse"), bool_0);
 						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_18(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_17(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_16(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_15(_2e92rEtSCXO9jXcjI77aTgE9ZBq)), 0));
 						spriteBatch_0.Draw((Texture2D)(object)_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2((float)rectangle_0.X, (float)rectangle_0.Y), Color.get_White());
 						num = (int)((num2 * 2100513107) ^ 0x47B06A7C);
 						continue;
 					case 9u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_25<string>(2595394250u)), float_0 / (float)rectangle_0.Height);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskStart"), float_0 / (float)rectangle_0.Height);
 						num = ((int)num2 * -742408634) ^ -1887275123;
 						continue;
 					case 8u:
@@ -280,11 +280,11 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 						num = ((int)num2 * -369931997) ^ -1903507603;
 						continue;
 					case 6u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_28<string>(2254582447u)), 0);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_12(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolOffset"), 0);
 						num = ((int)num2 * -1020670258) ^ -433298044;
 						continue;
 					case 5u:
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_24<string>(2056204235u)), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_13(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "MaskTexture"), (Texture)(object)_0NizriMRCkKJuXStgvnNKe6Lo4y);
 						num = (int)((num2 * 532984158) ^ 0x4A1A8F42);
 						continue;
 					case 4u:
@@ -297,8 +297,8 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 						continue;
 					case 2u:
 						num3 = float_0 + (float)_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_8(_0NizriMRCkKJuXStgvnNKe6Lo4y);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_26<string>(3533174002u)), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), _003CModule_003E.smethod_28<string>(2026230675u)), 0.1f);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "Time"), _boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+						_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_11(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_10(_BS7sXLmK84E2giYA4cGbwz26Ycx.smethod_9(_2e92rEtSCXO9jXcjI77aTgE9ZBq), "PoolSpeed"), 0.1f);
 						num = ((int)num2 * -1369051648) ^ 0x47D6EDCB;
 						continue;
 					case 1u:
@@ -319,10 +319,10 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 				}
 			}
 		});
-		_9kpyWj69TJrEE13VPDWRIsYgsND = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_10(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_7(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), _003CModule_003E.smethod_28<string>(3666168032u), 1f, bool_0: true, (List<SpineEvent>)null);
+		_9kpyWj69TJrEE13VPDWRIsYgsND = _jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_10(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_7(_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_4(_7UlnfykmEmZDFt3BmCKZekI43Ih_0)), "Assets/Scenes/ClubPool/Club Pool water", 1f, bool_0: true, (List<SpineEvent>)null);
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_1(_9kpyWj69TJrEE13VPDWRIsYgsND, 0f);
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_3(_9kpyWj69TJrEE13VPDWRIsYgsND, 0f);
-		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_11(_9kpyWj69TJrEE13VPDWRIsYgsND, _003CModule_003E.smethod_27<string>(131112101u), (Action<int>)null);
+		_jOXcj4HBkU5j6LOJprpiXLCcLR0.smethod_11(_9kpyWj69TJrEE13VPDWRIsYgsND, "animation", (Action<int>)null);
 	}
 
 	static float smethod_0(_nHdiyIURlAiaNZ8u6MKzxjcwnyL _nHdiyIURlAiaNZ8u6MKzxjcwnyL_0)

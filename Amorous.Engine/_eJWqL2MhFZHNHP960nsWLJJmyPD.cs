@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 {
-	private static readonly string _wvD7pijDcO3KNAgJ4go8LykDZAv = _eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_6(_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_5(_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_4()), _003CModule_003E.smethod_28<string>(4127193830u));
+	private static readonly string _wvD7pijDcO3KNAgJ4go8LykDZAv = _eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_6(_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_5(_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_4()), "options.json");
 
 	public static _eNOTHZZiu5nx6PrADzfLyng3Igc _Hnb6mPvrZFgOMCIApIeMW88jSsF { get; private set; }
 
@@ -61,8 +61,8 @@ public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 		//IL_007a: Expected I4, but got Unknown
 		//IL_007b: Unknown result type (might be due to invalid IL or missing references)
 		//IL_008d: Expected I4, but got Unknown
-		//IL_00bb: Incompatible stack heights: 0 vs 1
-		//IL_00c2: Incompatible stack heights: 0 vs 1
+		//IL_00b7: Incompatible stack heights: 0 vs 1
+		//IL_00be: Incompatible stack heights: 0 vs 1
 		if (!_eJWqL2MhFZHNHP960nsWLJJmyPD.smethod_0(_wvD7pijDcO3KNAgJ4go8LykDZAv))
 		{
 			while (true)
@@ -110,7 +110,7 @@ public class _eJWqL2MhFZHNHP960nsWLJJmyPD
 					default:
 						return;
 					case 2:
-						_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh(_003CModule_003E.smethod_27<string>(753675055u));
+						_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Failed to load options, falling back to default.");
 						_Hnb6mPvrZFgOMCIApIeMW88jSsF = new _eNOTHZZiu5nx6PrADzfLyng3Igc();
 						_ = (num2 * 2137104146) ^ 0xF82A2FDBu;
 						continue;

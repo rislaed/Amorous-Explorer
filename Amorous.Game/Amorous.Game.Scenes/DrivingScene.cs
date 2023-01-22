@@ -63,8 +63,8 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				break;
 				IL_0015:
-				DrivingScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(634338800u));
-				DrivingScene.smethod_15(_003CModule_003E.smethod_25<string>(105177312u), 0.4f);
+				DrivingScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Day");
+				DrivingScene.smethod_15("Assets/Music/AudioDriver - Detective's Scoop", 0.4f);
 				num = ((int)num2 * -1385853581) ^ 0x6E40CC08;
 			}
 		}
@@ -82,8 +82,8 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x99F31939u) % 8u)
 				{
 				case 6u:
-					_2WuocFtGsvuqlLRNzg1JvWYdCPu = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), DrivingScene.smethod_16(_003CModule_003E.smethod_25<string>(2559295306u), string_0, _003CModule_003E.smethod_24<string>(865285858u)), 0, 0);
-					_keMqzR2MH8pk2eRBjpmBvvHsKkH = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), DrivingScene.smethod_16(_003CModule_003E.smethod_24<string>(3144396943u), string_0, _003CModule_003E.smethod_24<string>(2336295798u)), 0, 680);
+					_2WuocFtGsvuqlLRNzg1JvWYdCPu = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Background"), 0, 0);
+					_keMqzR2MH8pk2eRBjpmBvvHsKkH = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Background 2"), 0, 680);
 					num = (int)(num2 * 1776632948) ^ -1680534511;
 					continue;
 				case 5u:
@@ -98,16 +98,16 @@ public class DrivingScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1681620836) ^ -1217622160;
 					continue;
 				case 2u:
-					_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), DrivingScene.smethod_16(_003CModule_003E.smethod_27<string>(2084840736u), string_0, _003CModule_003E.smethod_27<string>(2571303418u)), 0, 0);
+					_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Tree C"), 0, 0);
 					num = ((int)num2 * -154532391) ^ -1912594648;
 					continue;
 				case 1u:
-					_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), DrivingScene.smethod_16(_003CModule_003E.smethod_27<string>(2084840736u), string_0, _003CModule_003E.smethod_28<string>(3458793267u)), 0, 0);
-					_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), DrivingScene.smethod_16(_003CModule_003E.smethod_24<string>(3144396943u), string_0, _003CModule_003E.smethod_28<string>(917939214u)), 0, 0);
+					_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Tree A"), 0, 0);
+					_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Tree B"), 0, 0);
 					num = (int)((num2 * 684282993) ^ 0x65234C82);
 					continue;
 				case 0u:
-					_NtI6JcCZUIU6eqmZEqieFBtS51g = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), DrivingScene.smethod_16(_003CModule_003E.smethod_26<string>(2655394997u), string_0, _003CModule_003E.smethod_27<string>(1133618896u)), 0, 0);
+					_NtI6JcCZUIU6eqmZEqieFBtS51g = DrivingScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", DrivingScene.smethod_16("Assets/Scenes/Driving/", string_0, " Foreground"), 0, 0);
 					num = (int)((num2 * 1040600061) ^ 0x4A66E160);
 					continue;
 				default:

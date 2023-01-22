@@ -27,13 +27,13 @@ public class SaveMigrationScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = (int)((num2 * 1977004589) ^ 0x3CF82504);
 					continue;
 				case 4u:
-					SaveMigrationScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_25<string>(3152457643u), 0, -540);
+					SaveMigrationScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Intro/Background", 0, -540);
 					num = (int)((num2 * 1221340939) ^ 0x149C9F38);
 					continue;
 				case 2u:
-					SaveMigrationScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_28<string>(1246693183u), 0, -170);
-					SaveMigrationScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1790905311u), _003CModule_003E.smethod_25<string>(200473407u), 616, 50);
-					SaveMigrationScene.smethod_16(_003CModule_003E.smethod_27<string>(2452165960u), 0.4f);
+					SaveMigrationScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Intro/Scenery", 0, -170);
+					SaveMigrationScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
+					SaveMigrationScene.smethod_16("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
 					num = ((int)num2 * -1628247473) ^ -1587653125;
 					continue;
 				case 1u:

@@ -12,7 +12,7 @@ public class CobySexscene : CensoredSexscene
 	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
 
 	public CobySexscene(ContentManager contentManager_0)
-		: base(contentManager_0, _003CModule_003E.smethod_26<string>(570166659u), _003CModule_003E.smethod_26<string>(2084429050u), null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _ecVLwNBaQAiybVyX9cgWCvnbkWe._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: CobySexscene.smethod_14() ? 1.5f : 1f, bool_0: true, float_1: 3000f)
+		: base(contentManager_0, "Assets/SexScenes/Coby/Coby Sex", "Assets/SexScenes/Coby/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _ecVLwNBaQAiybVyX9cgWCvnbkWe._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: CobySexscene.smethod_14() ? 1.5f : 1f, bool_0: true, float_1: 3000f)
 	{
 		while (true)
 		{
@@ -23,7 +23,7 @@ public class CobySexscene : CensoredSexscene
 				switch ((num2 = (uint)num ^ 0xFD8BEF40u) % 7u)
 				{
 				case 5u:
-					CobySexscene.smethod_16(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(131112101u), (Action<int>)null);
+					CobySexscene.smethod_16(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", (Action<int>)null);
 					num = ((int)num2 * -1252233527) ^ 0x509B3209;
 					continue;
 				case 3u:
@@ -58,7 +58,7 @@ public class CobySexscene : CensoredSexscene
 					CobySexscene.smethod_18(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 1700f);
 					return;
 				default:
-					CobySexscene.smethod_19(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3841390518u), -0.3f);
+					CobySexscene.smethod_19(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "animation", -0.3f);
 					return;
 				}
 				break;
@@ -68,29 +68,29 @@ public class CobySexscene : CensoredSexscene
 
 	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_00d4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
-		//IL_011c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0149: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0214: Unknown result type (might be due to invalid IL or missing references)
-		//IL_022f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_025c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0325: Unknown result type (might be due to invalid IL or missing references)
-		//IL_04ea: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0734: Unknown result type (might be due to invalid IL or missing references)
-		//IL_074f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_076a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00b8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00cf: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0121: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01d8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01ef: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0218: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0280: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02d1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0472: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0680: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0697: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06ae: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06c5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_06dc: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0705: Unknown result type (might be due to invalid IL or missing references)
+		//IL_071c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0785: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07a0: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07cd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07e8: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0859: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0886: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_09e1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a0e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0a3b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07ae: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07c5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_08ed: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0916: Unknown result type (might be due to invalid IL or missing references)
+		//IL_093f: Unknown result type (might be due to invalid IL or missing references)
 		CobySexscene.smethod_20(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 0f);
 		while (true)
 		{
@@ -101,189 +101,189 @@ public class CobySexscene : CensoredSexscene
 				switch ((num2 = (uint)num ^ 0xCE2AC67Cu) % 45u)
 				{
 				case 44u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(3953210408u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2893361386u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(4061928604u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3247269283u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3014747149u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(776452328u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby jaw", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby eye", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby pupil", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby head", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby eyelid", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby Shoulder", 1f);
 					num = ((int)num2 * -1483292973) ^ -565733592;
 					continue;
 				case 43u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(1716540470u), CobySexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(1517957091u), CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back high sleeve", CobySexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back stripes", CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 536389536) ^ -2104816907;
 					continue;
 				case 42u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(1248727625u), CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player arm", CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 323663213) ^ -1253352362;
 					continue;
 				case 41u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3868314643u), CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint underbelly", CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -376773537) ^ -1950081710;
 					continue;
 				case 40u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(190789793u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby Shoulder", 1f);
 					num = (int)((num2 * 842666581) ^ 0x4CB50321);
 					continue;
 				case 39u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(4013506993u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby leg top", 1f);
 					num = (int)((num2 * 1304628054) ^ 0xF48137B);
 					continue;
 				case 38u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(3953210408u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(573812726u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby jaw", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby eye", 1f);
 					num = ((int)num2 * -280008004) ^ -1301771243;
 					continue;
 				case 37u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3183832623u), CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(415117882u), CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player arm stripes", CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player forearm", CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -2082645945) ^ 0xF8C838;
 					continue;
 				case 36u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(2751492275u), CobySexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls back", CobySexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 2002430088) ^ 0x781C0978);
 					continue;
 				case 35u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(4115688446u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player arm stripes", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
 					num = -739875222;
 					continue;
 				case 33u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(2279242179u), CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back underbelly", CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 506221492) ^ -1502226946;
 					continue;
 				case 32u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(3896915109u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls top", 1f);
 					num = (int)(num2 * 465147187) ^ -1742120717;
 					continue;
 				case 31u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(1687290682u), CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls back underbelly", CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -1148046137) ^ 0x20EAAA29;
 					continue;
 				case 30u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(2828661418u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player forearm", 1f);
 					num = (int)((num2 * 2141540899) ^ 0x6C1B1352);
 					continue;
 				case 29u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(2324237725u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby tail", 1f);
 					num = (int)(num2 * 1836089267) ^ -166818492;
 					continue;
 				case 28u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3173518639u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(2162901602u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls top underbelly", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby taint", 1f);
 					num = -364699615;
 					continue;
 				case 27u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3526989105u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player forearm stripes", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
 					num = -1045642959;
 					continue;
 				case 26u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3482660465u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back stripes", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
 					num = -1949210042;
 					continue;
 				case 25u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3811381464u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(3561436883u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint underbelly", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
 					num = -808550343;
 					continue;
 				case 24u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(3513716734u), CobySexscene.smethod_34(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					base._DUynKBx2CM4riE68wCCfknspxeg.Add(_003CModule_003E.smethod_26<string>(2283288170u));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player nails", CobySexscene.smethod_34(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum butt back");
 					num = (int)(num2 * 559607676) ^ -894782385;
 					continue;
 				case 23u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(173631479u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(2159284348u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby balls", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls back", 1f);
 					num = ((int)num2 * -2090079823) ^ -986036854;
 					continue;
 				case 22u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(3843817465u), CobySexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player nails", CobySexscene.smethod_25(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) ? 1f : 0f);
 					num = -1397357114;
 					continue;
 				case 21u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(2587963402u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby leg back", 1f);
 					num = (int)((num2 * 441909765) ^ 0x1EAB973C);
 					continue;
 				case 20u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3041662235u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(1971187140u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(4293408112u), (CobySexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls back underbelly", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock knot", (CobySexscene.smethod_24(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
 					num = -1378796720;
 					continue;
 				case 19u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(4052827655u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby thigh top", 1f);
 					num = ((int)num2 * -41236437) ^ -1853037032;
 					continue;
 				case 18u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(35557920u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3014747149u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(1291731090u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby head", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby eyelid", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player arm", 1f);
 					num = ((int)num2 * -577783295) ^ -18978569;
 					continue;
 				case 16u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(2852923811u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby Body", 1f);
 					num = ((int)num2 * -725749265) ^ -1572400606;
 					continue;
 				case 15u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(2994754060u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby Body", 1f);
 					num = -1807397437;
 					continue;
 				case 14u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(430717350u), CobySexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3985757436u), CobySexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(3896915109u), CobySexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3173518639u), CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(1360491508u), CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", CobySexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock knot", CobySexscene.smethod_33(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls top", CobySexscene.smethod_32(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player balls top underbelly", CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg top", CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 1060528971) ^ -1667654522;
 					continue;
 				case 13u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(1927744722u), CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3335957130u), CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg top underbelly", CobySexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg top stripes", CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 2082791986) ^ -797620462;
 					continue;
 				case 12u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3986377167u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player forearm shortlong sleeve", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm) ? 1f : 0f);
 					num = -1488087087;
 					continue;
 				case 11u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(975682929u), CobySexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player hand shortlong sleeve", CobySexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 1786133508) ^ 0x149E2998);
 					continue;
 				case 10u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3986377167u), CobySexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(2398898435u), CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player forearm shortlong sleeve", CobySexscene.smethod_31(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player forearm stripes", CobySexscene.smethod_30(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)((num2 * 2104216573) ^ 0x298FFA89);
 					continue;
 				case 9u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2488006993u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(1716540470u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back underbelly", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back high sleeve", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
 					num = -1506276133;
 					continue;
 				case 8u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(1561938967u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(2852919079u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3121515691u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg top stripes", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player hand", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player hand shortlong sleeve", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm) ? 1f : 0f);
 					num = -1752114568;
 					continue;
 				case 7u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3960056555u), CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player taint", CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = (int)(num2 * 1801197220) ^ -1120595573;
 					continue;
 				case 6u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(1474355834u), CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player hand", CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -2060649756) ^ -1447061106;
 					continue;
 				case 5u:
-					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(2907500523u), CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
+					CobySexscene.smethod_27(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back", CobySexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0));
 					num = ((int)num2 * -72186217) ^ 0x17933463;
 					continue;
 				case 3u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(1235639974u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg back", 1f);
 					num = (int)((num2 * 739392179) ^ 0x16B864DB);
 					continue;
 				case 2u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3371390173u), 1f);
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(3836582957u), CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg top", 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player leg top underbelly", CobySexscene.smethod_23((Enum)CobySexscene.smethod_22(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
 					num = -1699446291;
 					continue;
 				case 1u:
@@ -304,14 +304,14 @@ public class CobySexscene : CensoredSexscene
 					continue;
 				}
 				case 0u:
-					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3045036199u), 1f);
+					CobySexscene.smethod_21(CobySexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Coby pupil", 1f);
 					num = (int)((num2 * 1680023476) ^ 0x63F14DD5);
 					continue;
 				case 34u:
 					break;
 				default:
-					base._DUynKBx2CM4riE68wCCfknspxeg.Add(_003CModule_003E.smethod_28<string>(1309145143u));
-					base._DUynKBx2CM4riE68wCCfknspxeg.Add(_003CModule_003E.smethod_24<string>(2469900878u));
+					base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum cock");
+					base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum butt top");
 					return;
 				case 17u:
 					return;
@@ -325,8 +325,8 @@ public class CobySexscene : CensoredSexscene
 	{
 		List<SpineEvent> list = new List<SpineEvent>();
 		SpineEvent val = CobySexscene.smethod_35();
-		val.AnimationName = _003CModule_003E.smethod_27<string>(131112101u);
-		val.EventName = _003CModule_003E.smethod_24<string>(1098822640u);
+		val.AnimationName = "animation";
+		val.EventName = "ThrustStart";
 		SpineEvent obj = val;
 		float[] array = new float[6];
 		CobySexscene.smethod_36((Array)array, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
@@ -343,8 +343,8 @@ public class CobySexscene : CensoredSexscene
 				case 3u:
 				{
 					val = CobySexscene.smethod_35();
-					val.AnimationName = _003CModule_003E.smethod_27<string>(131112101u);
-					val.EventName = _003CModule_003E.smethod_24<string>(2451770056u);
+					val.AnimationName = "animation";
+					val.EventName = "Moan";
 					SpineEvent obj3 = val;
 					float[] array3 = new float[6];
 					CobySexscene.smethod_36((Array)array3, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
@@ -357,8 +357,8 @@ public class CobySexscene : CensoredSexscene
 				case 1u:
 				{
 					val = CobySexscene.smethod_35();
-					val.AnimationName = _003CModule_003E.smethod_25<string>(3692662391u);
-					val.EventName = _003CModule_003E.smethod_25<string>(2744838761u);
+					val.AnimationName = "animation";
+					val.EventName = "ThrustEnd";
 					SpineEvent obj2 = val;
 					float[] array2 = new float[6];
 					CobySexscene.smethod_36((Array)array2, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);

@@ -24,12 +24,12 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_25<string>(2396741801u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Coby's Dad";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(176, 206, 255);
 
 	public CobysDadNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(3884250658u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CobysDad", 1f)
 	{
 		while (true)
 		{
@@ -40,14 +40,14 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 				switch ((num2 = (uint)num ^ 0xA2576508u) % 5u)
 				{
 				case 4u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_26<string>(1483455299u));
-					CobysDadNPC.smethod_17(CobysDadNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_28<string>(1561998638u))));
-					CobysDadNPC.smethod_19(CobysDadNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_24<string>(2394305035u))));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Coby's Dad Body");
+					CobysDadNPC.smethod_17(CobysDadNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Coby's Dad Pants")));
+					CobysDadNPC.smethod_19(CobysDadNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Coby's Dad Shirt")));
 					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 					num = (int)((num2 * 613320299) ^ 0x3D4E943D);
 					continue;
 				case 3u:
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Stern, _003CModule_003E.smethod_25<string>(854889778u), _003CModule_003E.smethod_24<string>(3320468704u));
+					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Stern, "Coby's Dad eye", "Coby's Dad Head");
 					num = ((int)num2 * -1586422666) ^ -146145270;
 					continue;
 				case 1u:

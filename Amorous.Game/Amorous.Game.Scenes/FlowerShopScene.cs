@@ -5,8 +5,8 @@ public class FlowerShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public FlowerShopScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		FlowerShopScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(1155126342u), 0, 0);
-		FlowerShopScene.smethod_15(_003CModule_003E.smethod_24<string>(1460303681u), 0.4f);
+		FlowerShopScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/FlowerShop/Background", 0, 0);
+		FlowerShopScene.smethod_15("Assets/Music/Warhector - Free Floating", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

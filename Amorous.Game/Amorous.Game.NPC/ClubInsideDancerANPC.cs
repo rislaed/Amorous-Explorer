@@ -32,7 +32,7 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 	private int _ujQoS5Vtc4de0wSOTrBu7W9PbRc;
 
 	public ClubInsideDancerANPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_26<string>(2736625627u), 0.8f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubInsideStatic/Dancer A", 0.8f, bool_0: true)
 	{
 		while (true)
 		{
@@ -43,14 +43,14 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 				switch ((num2 = (uint)num ^ 0xAA29D7B0u) % 4u)
 				{
 				case 2u:
-					ClubInsideDancerANPC.smethod_19(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_25<string>(735845934u), (Action<int>)null);
-					ClubInsideDancerANPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, _003CModule_003E.smethod_24<string>(3009497730u), _003CModule_003E.smethod_24<string>(1310611829u), _003CModule_003E.smethod_24<string>(657040553u), _003CModule_003E.smethod_26<string>(16421949u)), _003CModule_003E.smethod_24<string>(2583463900u));
-					ClubInsideDancerANPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, _003CModule_003E.smethod_25<string>(937293393u), _003CModule_003E.smethod_26<string>(471446388u), _003CModule_003E.smethod_27<string>(896746740u), _003CModule_003E.smethod_26<string>(3899465860u), _003CModule_003E.smethod_24<string>(4053723923u), _003CModule_003E.smethod_25<string>(3436741745u), _003CModule_003E.smethod_25<string>(2076250498u)), new string[1] { _003CModule_003E.smethod_27<string>(3025558700u) });
-					ClubInsideDancerANPC.smethod_23(ClubInsideDancerANPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, _003CModule_003E.smethod_25<string>(1278196150u))));
+					ClubInsideDancerANPC.smethod_19(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dance_B", (Action<int>)null);
+					ClubInsideDancerANPC.smethod_20(_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Eye", "Head", "Jaw", "Pupil"), "Blink");
+					ClubInsideDancerANPC.smethod_21(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arm left", "Character", "Forearm right", "Leg left", "Leg right", "Tail", "shoulder right"), new string[1] { "Cock" });
+					ClubInsideDancerANPC.smethod_23(ClubInsideDancerANPC.smethod_22(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")));
 					num = (int)((num2 * 1955871607) ^ 0x579FBE83);
 					continue;
 				case 1u:
-					ClubInsideDancerANPC.smethod_25(ClubInsideDancerANPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Pants, _003CModule_003E.smethod_27<string>(2570428095u), _003CModule_003E.smethod_24<string>(2392055284u), _003CModule_003E.smethod_25<string>(2814891181u))));
+					ClubInsideDancerANPC.smethod_25(ClubInsideDancerANPC.smethod_24(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Pants, "Pants crotch", "Pants left", "Pants right")));
 					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 					_upl1k7yzBzlU7vErvbydGmXROfA = true;
 					num = (int)((num2 * 1973836194) ^ 0x52AFCC6D);
@@ -79,13 +79,13 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 				switch ((num2 = (uint)num ^ 0xEED3A125u) % 4u)
 				{
 				case 2u:
-					ClubInsideDancerANPC.smethod_26(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_26<string>(3242208337u), _003CModule_003E.smethod_27<string>(4004495363u), 0.5f);
+					ClubInsideDancerANPC.smethod_26(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dance_B", "Dance_A", 0.5f);
 					_ujQoS5Vtc4de0wSOTrBu7W9PbRc = _MRHxrmqa7mb7D9woehQMcBaVzSfA;
 					num = (int)((num2 * 1301120) ^ 0x6C2E1F6A);
 					continue;
 				case 1u:
 					_CuajPz31r9WOAgF3NIMwGAOneYc = int_1;
-					ClubInsideDancerANPC.smethod_26(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_27<string>(4004495363u), _003CModule_003E.smethod_28<string>(2298298819u), 0.5f);
+					ClubInsideDancerANPC.smethod_26(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dance_A", "Dance_B", 0.5f);
 					num = (int)(num2 * 1096314718) ^ -1292970263;
 					continue;
 				case 0u:
@@ -101,7 +101,7 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 
 	public void _W59CJD6wYGEUk3hOFlZnc3R24Ct()
 	{
-		ClubInsideDancerANPC.smethod_27(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_27<string>(4004495363u), bool_0: true, 0f, (Action<int>)delegate
+		ClubInsideDancerANPC.smethod_27(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dance_A", bool_0: true, 0f, (Action<int>)delegate
 		{
 			_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
 			if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)
@@ -138,7 +138,7 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 
 	public void _QxrbucYEdHM0AE1Mfd0LKZp28pv()
 	{
-		ClubInsideDancerANPC.smethod_27(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_24<string>(2464651459u), bool_0: true, 0f, (Action<int>)delegate
+		ClubInsideDancerANPC.smethod_27(ClubInsideDancerANPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dance_B", bool_0: true, 0f, (Action<int>)delegate
 		{
 			_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
 			if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)

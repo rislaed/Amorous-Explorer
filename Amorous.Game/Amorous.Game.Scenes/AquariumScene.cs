@@ -14,11 +14,11 @@ public class AquariumScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x853740CBu) % 4u)
 				{
 				case 3u:
-					AquariumScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_25<string>(2661785604u), 0, 0);
+					AquariumScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Aquarium/Background", 0, 0);
 					num = (int)(num2 * 700628006) ^ -806256944;
 					continue;
 				case 1u:
-					AquariumScene.smethod_15(_003CModule_003E.smethod_25<string>(1843319802u), 0.4f);
+					AquariumScene.smethod_15("Assets/Music/Hopeku - In A Finger Blink", 0.4f);
 					num = ((int)num2 * -1589500026) ^ -1768320393;
 					continue;
 				default:

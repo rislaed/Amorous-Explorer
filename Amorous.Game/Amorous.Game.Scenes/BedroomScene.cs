@@ -22,7 +22,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num5;
 					int num6;
-					if (BedroomScene.smethod_21(BedroomScene.smethod_20(), _003CModule_003E.smethod_24<string>(3929323548u)) >= 40)
+					if (BedroomScene.smethod_21(BedroomScene.smethod_20(), "Prologue") >= 40)
 					{
 						num5 = 119338689;
 						num6 = 119338689;
@@ -61,44 +61,44 @@ public class BedroomScene : TimeOfDayScene
 					num = ((int)num2 * -1286553608) ^ -914312263;
 					continue;
 				case 10u:
-					BedroomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_27<string>(3312197089u), -458, 0);
-					BedroomScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_25<string>(3124202444u), 1008, 186, (Action)OnDoorClick);
+					BedroomScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
+					BedroomScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Door", 1008, 186, (Action)OnDoorClick);
 					num = (int)((num2 * 365038358) ^ 0x3BF203);
 					continue;
 				case 9u:
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_28<string>(55930877u), 1551, 112, _003CModule_003E.smethod_28<string>(3672088053u), 1517, 102, _003CModule_003E.smethod_27<string>(2226261528u));
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, "Assets/Scenes/Bedroom/Closet active", 1517, 102, "Most of his clothes have been taken to his boyfriend's house. I can still see his ass hugging swim trunks that I'm pretty sure were designed for girls, and a dress for, well... he liked to wear a dress at one point. I don't judge.");
 					num = 904039981;
 					continue;
 				case 8u:
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_27<string>(624925253u), 359, 159, (string)null, 0, 0, _003CModule_003E.smethod_24<string>(2247818552u));
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_27<string>(2538220695u), 1153, 662, (string)null, 0, 0, _003CModule_003E.smethod_26<string>(2497151192u));
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Kangaroo Plush", 359, 159, (string)null, 0, 0, "A little something my brother bought as a reminder of his long-distance boyfriend. It must be a pretty open relationship.");
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Laptop", 1153, 662, (string)null, 0, 0, "My entertainment centre for the last few weeks.");
 					num = 1944191880;
 					continue;
 				case 7u:
-					BedroomScene.smethod_26(_003CModule_003E.smethod_27<string>(556956788u), 0.4f);
+					BedroomScene.smethod_26("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 					_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
 					num = (int)((num2 * 359660346) ^ 0x5928AD32);
 					continue;
 				case 6u:
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_27<string>(4056360128u), 496, 156, (string)null, 0, 0, _003CModule_003E.smethod_24<string>(1600996529u));
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_26<string>(2332204193u), 96, 217, (string)null, 0, 0, _003CModule_003E.smethod_24<string>(2981073771u));
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_27<string>(4078063652u), 410, 310, (string)null, 0, 0, _003CModule_003E.smethod_28<string>(4087316644u));
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Photo frame", 496, 156, (string)null, 0, 0, "Thats Coby's Australian boyfriend Marty. Apparently he is making plans to visit sometime. I guess he understands my brother can't keep his pants on for that long.");
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Poster", 96, 217, (string)null, 0, 0, "Coby's still got the hots for Marsupials after meeting his penpal. Apparently he was the thunder down under and then some.");
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Con badges", 410, 310, (string)null, 0, 0, "Badges Coby has collected from going to cons.");
 					num = (int)((num2 * 450279290) ^ 0x39F3FED);
 					continue;
 				case 5u:
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_27<string>(262324530u), 672, 493, _003CModule_003E.smethod_25<string>(562220646u), 672, 493, _003CModule_003E.smethod_26<string>(1174335438u));
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Alarm clock", 672, 493, "Assets/Scenes/Bedroom/Alarm clock active", 672, 493, "Never something I used often myself, but it's been at least getting me up before noon.");
 					num = ((int)num2 * -1867368157) ^ -1188370171;
 					continue;
 				case 2u:
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(4194768273u), _003CModule_003E.smethod_28<string>(794951538u), -446, 447, (string)null, 0, 0, _003CModule_003E.smethod_27<string>(705380164u));
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Matress", -446, 447, (string)null, 0, 0, "My brother's bed. The springs are a little worn out but otherwise still leagues better than mine. If you're wondering why I'm sleeping here, it's for a fresher perspective. Everytime I look over at his corner of the bedroom from mine, I just think of them going at it.");
 					num = 1766354334;
 					continue;
 				case 1u:
-					BedroomScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_26<string>(2799657327u), 1551, 112, (Action)OnClosetClick);
+					BedroomScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, (Action)OnClosetClick);
 					num = ((int)num2 * -1032950414) ^ 0x3D873075;
 					continue;
 				case 0u:
-					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_27<string>(4088915414u), 531, 568, _003CModule_003E.smethod_27<string>(2662082654u), 454, 538, _003CModule_003E.smethod_25<string>(4051398106u));
+					BedroomScene.smethod_22((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Bedroom/Drawer", 531, 568, "Assets/Scenes/Bedroom/Drawer active", 454, 538, "It's a struggle just to get this thing open. Always keeping the emergency supply at arms' reach I guess.");
 					num = (int)((num2 * 1886256037) ^ 0x53D90BE9);
 					continue;
 				default:
@@ -115,17 +115,17 @@ public class BedroomScene : TimeOfDayScene
 
 	private void Reset()
 	{
-		if (BedroomScene.smethod_21(BedroomScene.smethod_20(), _003CModule_003E.smethod_26<string>(3680720828u)) == 40)
+		if (BedroomScene.smethod_21(BedroomScene.smethod_20(), "Prologue") == 40)
 		{
-			goto IL_0018;
+			goto IL_0014;
 		}
-		goto IL_0067;
-		IL_0067:
+		goto IL_005f;
+		IL_005f:
 		ResetFailedDates();
 		ResetDeletedContacts();
 		int num = 1752950668;
-		goto IL_0046;
-		IL_0046:
+		goto IL_003e;
+		IL_003e:
 		while (true)
 		{
 			uint num2;
@@ -134,22 +134,22 @@ public class BedroomScene : TimeOfDayScene
 			case 3u:
 				break;
 			case 2u:
-				BedroomScene.smethod_29(BedroomScene.smethod_28(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_28<string>(1100487081u));
+				BedroomScene.smethod_29(BedroomScene.smethod_28(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "MessageTutorial1");
 				num = (int)((num2 * 664688378) ^ 0x6040F689);
 				continue;
 			default:
 				return;
 			case 1u:
-				goto IL_0067;
+				goto IL_005f;
 			case 0u:
 				return;
 			}
 			break;
 		}
-		goto IL_0018;
-		IL_0018:
+		goto IL_0014;
+		IL_0014:
 		num = 452797918;
-		goto IL_0046;
+		goto IL_003e;
 	}
 
 	public override void StopCutscene()
@@ -169,13 +169,13 @@ public class BedroomScene : TimeOfDayScene
 				switch ((num2 = (uint)num ^ 0x855D6347u) % 24u)
 				{
 				case 23u:
-					BedroomScene.smethod_34(BedroomScene.smethod_28(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_25<string>(2623324678u));
+					BedroomScene.smethod_34(BedroomScene.smethod_28(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric4");
 					num = (int)(num2 * 1223083346) ^ -859202002;
 					continue;
 				case 22u:
 				{
 					int num6;
-					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(1334310959u)))
+					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeLeftClub"))
 					{
 						num = -1237039803;
 						num6 = -1237039803;
@@ -191,7 +191,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num20;
 					int num21;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(1316348461u)) == 40)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexDate") == 40)
 					{
 						num20 = 498475463;
 						num21 = 498475463;
@@ -211,7 +211,7 @@ public class BedroomScene : TimeOfDayScene
 				case 19u:
 				{
 					int num19;
-					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(4219136558u)))
+					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyLeftClub"))
 					{
 						num = -584271290;
 						num19 = -584271290;
@@ -224,13 +224,13 @@ public class BedroomScene : TimeOfDayScene
 					continue;
 				}
 				case 18u:
-					BedroomScene.smethod_32(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(1807004344u), bool_0: true);
+					BedroomScene.smethod_32(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyLeftClub", bool_0: true);
 					num = ((int)num2 * -1067584245) ^ 0x368F39BC;
 					continue;
 				case 17u:
 				{
 					int num10;
-					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(3991397285u)))
+					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethLeftClub"))
 					{
 						num = -1933773271;
 						num10 = -1933773271;
@@ -249,7 +249,7 @@ public class BedroomScene : TimeOfDayScene
 				case 15u:
 				{
 					int num5;
-					if (BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(2075600956u)))
+					if (BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexLeftClub"))
 					{
 						num = -1266314298;
 						num5 = -1266314298;
@@ -265,7 +265,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num15;
 					int num16;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(913610262u)) == 10)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithDate") == 10)
 					{
 						num15 = -1218052861;
 						num16 = -1218052861;
@@ -288,14 +288,14 @@ public class BedroomScene : TimeOfDayScene
 					continue;
 				case 10u:
 					BedroomScene.smethod_30(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
-					BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(3680720828u), 40);
+					BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue", 40);
 					num = (int)((num2 * 1923206509) ^ 0x4A1210C7);
 					continue;
 				case 9u:
 				{
 					int num8;
 					int num9;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(2481290884u)) == 40)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexDate") == 40)
 					{
 						num8 = 1239897960;
 						num9 = 1239897960;
@@ -312,7 +312,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num22;
 					int num23;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(2183318697u)) != 10)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyPreDate") != 10)
 					{
 						num22 = -127748026;
 						num23 = -127748026;
@@ -329,7 +329,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num17;
 					int num18;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(3680720828u)) != 30)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue") != 30)
 					{
 						num17 = -1052394435;
 						num18 = -1052394435;
@@ -346,7 +346,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num13;
 					int num14;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(3540938937u)) != 10)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyePreDate") != 10)
 					{
 						num13 = 983842371;
 						num14 = 983842371;
@@ -371,7 +371,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num11;
 					int num12;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(1132077875u)) != 10)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethPreDate") != 10)
 					{
 						num11 = 1698103815;
 						num12 = 1698103815;
@@ -387,7 +387,7 @@ public class BedroomScene : TimeOfDayScene
 				case 2u:
 				{
 					int num7;
-					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(4221795356u)))
+					if (!BedroomScene.smethod_35(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithLeftClub"))
 					{
 						num = -1910304150;
 						num7 = -1910304150;
@@ -403,7 +403,7 @@ public class BedroomScene : TimeOfDayScene
 				{
 					int num3;
 					int num4;
-					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(2344197568u)) == 20)
+					if (BedroomScene.smethod_21(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexPreDate") == 20)
 					{
 						num3 = -295721792;
 						num4 = -295721792;
@@ -433,10 +433,10 @@ public class BedroomScene : TimeOfDayScene
 		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = BedroomScene.smethod_20();
 		if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby))
 		{
-			goto IL_00f9;
+			goto IL_00e1;
 		}
-		goto IL_064e;
-		IL_064e:
+		goto IL_05ce;
+		IL_05ce:
 		int num;
 		int num2;
 		if (!BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Dustin))
@@ -449,8 +449,8 @@ public class BedroomScene : TimeOfDayScene
 			num = -1827287803;
 			num2 = -1827287803;
 		}
-		goto IL_05a1;
-		IL_05a1:
+		goto IL_0521;
+		IL_0521:
 		while (true)
 		{
 			uint num3;
@@ -459,129 +459,129 @@ public class BedroomScene : TimeOfDayScene
 			case 34u:
 				break;
 			case 33u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(3599866181u), bool_0: true);
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(1670127542u), bool_0: true);
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(3769290709u), bool_0: true);
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(3486973592u), bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Remy", bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Rip.", bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Chef.", bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Strip.", bool_0: true);
 				num = ((int)num3 * -905920649) ^ 0x40C83364;
 				continue;
 			case 32u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(3423957522u), 10);
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(3625191079u), bool_0: true);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "MercyDate", 10);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Mercy", bool_0: true);
 				num = ((int)num3 * -603772875) ^ -1517501637;
 				continue;
 			case 31u:
-				goto end_IL_05a1;
+				goto end_IL_0521;
 			case 30u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(745855371u), bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Dustin", bool_0: true);
 				num = (int)(num3 * 1523908147) ^ -1318623811;
 				continue;
 			case 28u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(2819794649u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethPreDate", 10);
 				num = ((int)num3 * -1558522242) ^ -1905884089;
 				continue;
 			case 27u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(2775852212u), 10);
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(2414278314u), bool_0: true);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethDate", 10);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Seth", bool_0: true);
 				num = (int)((num3 * 389931556) ^ 0x406132);
 				continue;
 			case 26u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(1401530930u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "MercyPreDate", 10);
 				num = ((int)num3 * -1475049199) ^ 0x1C36EA3E;
 				continue;
 			case 25u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(348846420u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyDate", 10);
 				num = ((int)num3 * -1944106790) ^ 0x5CBCCFEC;
 				continue;
 			case 24u:
-				goto IL_01c7;
+				goto IL_0197;
 			case 23u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(844470500u), bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Zenith", bool_0: true);
 				num = ((int)num3 * -288509917) ^ 0x532C8358;
 				continue;
 			case 22u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(3540938937u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyePreDate", 10);
 				num = ((int)num3 * -1595908989) ^ -1105248937;
 				continue;
 			case 21u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(1655904249u), bool_0: true);
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(864337706u), bool_0: false);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Jax", bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SimpleOrder", bool_0: false);
 				num = (int)(num3 * 344636902) ^ -95735681;
 				continue;
 			case 19u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(4292391558u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithDate", 10);
 				num = (int)(num3 * 681705864) ^ -53807112;
 				continue;
 			case 18u:
-				goto IL_029a;
+				goto IL_0256;
 			case 17u:
-				goto IL_02ce;
+				goto IL_028a;
 			case 16u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(2249318386u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "JaxDate", 10);
 				num = (int)(num3 * 973375090) ^ -12360687;
 				continue;
 			case 15u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(205582432u), bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Lex", bool_0: true);
 				num = (int)((num3 * 102302126) ^ 0x48076740);
 				continue;
 			case 14u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(3015466299u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeDate", 10);
 				num = ((int)num3 * -1773626045) ^ 0x33DFC5FB;
 				continue;
 			case 13u:
-				goto IL_036e;
+				goto IL_031e;
 			case 12u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(1566573234u), bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "First_Dustin_", bool_0: true);
 				num = ((int)num3 * -660870025) ^ 0x424405B7;
 				continue;
 			case 11u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(2183318697u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "RemyPreDate", 10);
 				num = (int)(num3 * 1666119868) ^ -1238061525;
 				continue;
 			case 10u:
-				goto IL_03ea;
+				goto IL_0392;
 			case 9u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(1967726989u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "DustinDate", 10);
 				num = (int)((num3 * 728166175) ^ 0x399CC374);
 				continue;
 			case 8u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(1991568482u), bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Club_Dustin_", bool_0: true);
 				num = ((int)num3 * -1438548766) ^ 0x4003D675;
 				continue;
 			case 7u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(4199871891u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "ZenithPreDate", 10);
 				num = (int)(num3 * 1438725942) ^ -610902071;
 				continue;
 			case 6u:
-				goto IL_048d;
+				goto IL_0429;
 			case 5u:
 				BedroomScene.smethod_30(opIJo2jLUqdOL5yAFP4yzXce0DG_, _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
 				num = (int)(num3 * 1555635665) ^ -1962521735;
 				continue;
 			case 4u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(2610799427u), bool_0: false);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Player.Dork", bool_0: false);
 				num = ((int)num3 * -1745470462) ^ -1755588322;
 				continue;
 			case 3u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(4135745267u), 10);
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_25<string>(1468896597u), bool_0: true);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "CobyDate", 10);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Coby", bool_0: true);
 				num = (int)((num3 * 280444523) ^ 0x74D7DE45);
 				continue;
 			case 2u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(3260680210u), 10);
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(3084549357u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexPreDate", 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "LexDate", 10);
 				num = (int)(num3 * 968314929) ^ -489259615;
 				continue;
 			case 1u:
-				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(1257852011u), 10);
+				BedroomScene.smethod_31(opIJo2jLUqdOL5yAFP4yzXce0DG_, "JaxPreDate", 10);
 				num = ((int)num3 * -516845257) ^ -943532768;
 				continue;
 			case 0u:
-				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(1032770017u), bool_0: true);
+				BedroomScene.smethod_39(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Skye", bool_0: true);
 				num = ((int)num3 * -1671705431) ^ -2047223522;
 				continue;
 			case 20u:
-				goto IL_064e;
+				goto IL_05ce;
 			default:
 				BedroomScene.smethod_40(opIJo2jLUqdOL5yAFP4yzXce0DG_);
 				return;
@@ -598,7 +598,7 @@ public class BedroomScene : TimeOfDayScene
 				num4 = -378836226;
 			}
 			continue;
-			IL_048d:
+			IL_0429:
 			int num5;
 			if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth))
 			{
@@ -611,7 +611,7 @@ public class BedroomScene : TimeOfDayScene
 				num5 = -16079590;
 			}
 			continue;
-			IL_02ce:
+			IL_028a:
 			int num6;
 			if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Mercy))
 			{
@@ -624,7 +624,7 @@ public class BedroomScene : TimeOfDayScene
 				num6 = -988986332;
 			}
 			continue;
-			IL_01c7:
+			IL_0197:
 			int num7;
 			if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax))
 			{
@@ -637,7 +637,7 @@ public class BedroomScene : TimeOfDayScene
 				num7 = -1255633573;
 			}
 			continue;
-			IL_03ea:
+			IL_0392:
 			int num8;
 			if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex))
 			{
@@ -650,7 +650,7 @@ public class BedroomScene : TimeOfDayScene
 				num8 = -2034893700;
 			}
 			continue;
-			IL_036e:
+			IL_031e:
 			int num9;
 			if (!BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith))
 			{
@@ -663,7 +663,7 @@ public class BedroomScene : TimeOfDayScene
 				num9 = -799276869;
 			}
 			continue;
-			IL_029a:
+			IL_0256:
 			int num10;
 			if (BedroomScene.smethod_38((Enum)BedroomScene.smethod_37(opIJo2jLUqdOL5yAFP4yzXce0DG_), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye))
 			{
@@ -676,13 +676,13 @@ public class BedroomScene : TimeOfDayScene
 				num10 = -945434623;
 			}
 			continue;
-			end_IL_05a1:
+			end_IL_0521:
 			break;
 		}
-		goto IL_00f9;
-		IL_00f9:
+		goto IL_00e1;
+		IL_00e1:
 		num = -2138101341;
-		goto IL_05a1;
+		goto IL_0521;
 	}
 
 	public override void Update(GameTime gameTime)
@@ -699,12 +699,12 @@ public class BedroomScene : TimeOfDayScene
 
 	private void OnClosetClick()
 	{
-		BedroomScene.smethod_41(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(1177962367u));
+		BedroomScene.smethod_41(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Clothes");
 	}
 
 	private void OnDoorClick()
 	{
-		if (BedroomScene.smethod_21(BedroomScene.smethod_20(), _003CModule_003E.smethod_25<string>(2287578913u)) >= 40)
+		if (BedroomScene.smethod_21(BedroomScene.smethod_20(), "Prologue") >= 40)
 		{
 			while (true)
 			{
@@ -723,16 +723,16 @@ public class BedroomScene : TimeOfDayScene
 					case 3u:
 						return;
 					default:
-						goto end_IL_0053;
+						goto end_IL_004f;
 					}
 					break;
 				}
 				continue;
-				end_IL_0053:
+				end_IL_004f:
 				break;
 			}
 		}
-		BedroomScene.smethod_41(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_24<string>(3929323548u));
+		BedroomScene.smethod_41(BedroomScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_18(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)

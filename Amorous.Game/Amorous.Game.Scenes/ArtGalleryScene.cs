@@ -7,13 +7,13 @@ public class ArtGalleryScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		if (ArtGalleryScene.smethod_14())
 		{
-			ArtGalleryScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_24<string>(3933617349u), 0, 0);
+			ArtGalleryScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ArtGallery/Background-SFW", 0, 0);
 		}
 		else
 		{
-			ArtGalleryScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(18108931u), _003CModule_003E.smethod_25<string>(3550195569u), 0, 0);
+			ArtGalleryScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ArtGallery/Background", 0, 0);
 		}
-		ArtGalleryScene.smethod_16(_003CModule_003E.smethod_24<string>(1479390121u), 0.4f);
+		ArtGalleryScene.smethod_16("Assets/Music/RyeGuyHead - Outdated", 0.4f);
 	}
 
 	static bool smethod_14()

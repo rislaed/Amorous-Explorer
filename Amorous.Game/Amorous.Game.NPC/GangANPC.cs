@@ -23,12 +23,12 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_27<string>(3420366823u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Kazee Fullford";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
 
 	public GangANPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(555849541u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/GangA", 1f)
 	{
 		while (true)
 		{
@@ -39,7 +39,7 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 				switch ((num2 = (uint)num ^ 0x9AC98E50u) % 6u)
 				{
 				case 5u:
-					GangANPC.smethod_17(GangANPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, _003CModule_003E.smethod_28<string>(620890286u))));
+					GangANPC.smethod_17(GangANPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Kazee and Taylor Shirts")));
 					num = (int)(num2 * 1523062491) ^ -953210445;
 					continue;
 				case 3u:
@@ -51,13 +51,13 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 					num = ((int)num2 * -1946377923) ^ -168495123;
 					continue;
 				case 1u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, _003CModule_003E.smethod_26<string>(3732876613u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Kazee and Taylor Nude");
 					num = (int)((num2 * 1318744022) ^ 0x2469DA85);
 					continue;
 				case 0u:
 					break;
 				default:
-					GangANPC.smethod_19(GangANPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, _003CModule_003E.smethod_28<string>(1467841637u))));
+					GangANPC.smethod_19(GangANPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Kazee and Taylor Pants")));
 					_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 					_upl1k7yzBzlU7vErvbydGmXROfA = true;
 					return;
@@ -69,12 +69,7 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 
 	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
 	{
-		return new string[3]
-		{
-			_003CModule_003E.smethod_24<string>(1893425279u),
-			_003CModule_003E.smethod_24<string>(2746992773u),
-			_003CModule_003E.smethod_26<string>(851055166u)
-		};
+		return new string[3] { "Kazee and Taylor Nude", "Kazee and Taylor Pants", "Kazee and Taylor Shirts" };
 	}
 
 	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
@@ -164,8 +159,8 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 
 	static GangANPC()
 	{
-		//IL_0018: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0019: Unknown result type (might be due to invalid IL or missing references)
 		while (true)
 		{
 			int num = -1488326209;
@@ -175,7 +170,7 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 				switch ((num2 = (uint)num ^ 0xBC7EEB54u) % 3u)
 				{
 				case 1u:
-					goto IL_0011;
+					goto IL_000d;
 				default:
 					return;
 				case 0u:
@@ -184,7 +179,7 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 					return;
 				}
 				break;
-				IL_0011:
+				IL_000d:
 				_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(220, 0, 0);
 				num = ((int)num2 * -54659354) ^ 0x7E7C3034;
 			}

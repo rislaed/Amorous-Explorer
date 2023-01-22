@@ -53,7 +53,7 @@ public class _3IHp43rpkJgOBcY9lrIrwMuwWve : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	}
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, _QGGOTxZ8aNWGh0hc26wcmx8wmwT _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0, _a2qVgWDIm3fBp49WubttSTPsx8K _a2qVgWDIm3fBp49WubttSTPsx8K_0)
-		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _3IHp43rpkJgOBcY9lrIrwMuwWve.smethod_2(_003CModule_003E.smethod_25<string>(3462321915u), _3IHp43rpkJgOBcY9lrIrwMuwWve.smethod_1((MemberInfo)_3IHp43rpkJgOBcY9lrIrwMuwWve.smethod_0((object)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_0))))
+		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, _3IHp43rpkJgOBcY9lrIrwMuwWve.smethod_2("NPCLayer_", _3IHp43rpkJgOBcY9lrIrwMuwWve.smethod_1((MemberInfo)_3IHp43rpkJgOBcY9lrIrwMuwWve.smethod_0((object)_QGGOTxZ8aNWGh0hc26wcmx8wmwT_0))))
 	{
 		_4QLHHCk23T1BjK7acKxASbkCefG = _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0;
 		_dPmC8tBC0iph2YBAFmztEsmwUdSA = _a2qVgWDIm3fBp49WubttSTPsx8K_0;

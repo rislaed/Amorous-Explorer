@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public static class _XlQgilk5wbs9pucgf8gEovko2zf
 {
-	private static readonly PropertyInfo _2m1r1A4nAJ2cK1CdX6V7NfWkAWv = ((_XlQgilk5wbs9pucgf8gEovko2zf)(object)_XlQgilk5wbs9pucgf8gEovko2zf.smethod_1(typeof(RenderTarget2D).TypeHandle)).method_0(_003CModule_003E.smethod_25<string>(1724275958u), BindingFlags.Instance | BindingFlags.Public);
+	private static readonly PropertyInfo _2m1r1A4nAJ2cK1CdX6V7NfWkAWv = ((_XlQgilk5wbs9pucgf8gEovko2zf)(object)_XlQgilk5wbs9pucgf8gEovko2zf.smethod_1(typeof(RenderTarget2D).TypeHandle)).method_0("RenderTargetUsage", BindingFlags.Instance | BindingFlags.Public);
 
 	public static void _w2YD42TXOY22EP4Mpp7wzDUO4xv(this RenderTarget2D renderTarget2D_0, RenderTargetUsage renderTargetUsage_0)
 	{

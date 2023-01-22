@@ -55,7 +55,7 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 					num = (int)((num2 * 1428734000) ^ 0x67255946);
 					continue;
 				case 0u:
-					ClubStaticSpineNPC.smethod_23(ClubStaticSpineNPC.smethod_22((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_28<string>(2267705786u), (Action<int>)null);
+					ClubStaticSpineNPC.smethod_23(ClubStaticSpineNPC.smethod_22((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
 					num = ((int)num2 * -1054481406) ^ -834301907;
 					continue;
 				default:

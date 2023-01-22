@@ -38,47 +38,35 @@ public class ClubInsideScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x3DDC40B4u) % 18u)
 				{
 				case 17u:
-					ClubInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(2340504901u), -1770, 0, 1200, new string[2]
-					{
-						_003CModule_003E.smethod_26<string>(2593296256u),
-						_003CModule_003E.smethod_25<string>(3005375114u)
-					});
-					ClubInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(520407145u), 50, 0, 1200, new string[2]
-					{
-						_003CModule_003E.smethod_27<string>(3202804146u),
-						_003CModule_003E.smethod_28<string>(3727815756u)
-					});
+					ClubInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background Left", -1770, 0, 1200, new string[2] { "Assets/Scenes/ClubInside/Clubdance_left", "Assets/Scenes/ClubInside/Clubdancegreen_left" });
+					ClubInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background Middle", 50, 0, 1200, new string[2] { "Assets/Scenes/ClubInside/Clubdance_mid", "Assets/Scenes/ClubInside/Clubdancegreen_mid" });
 					num = (int)(num2 * 34847202) ^ -2147086224;
 					continue;
 				case 16u:
-					ClubInsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(3534832850u), _003CModule_003E.smethod_24<string>(1839371328u), -1234, 516);
-					ClubInsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1958933686u), _003CModule_003E.smethod_24<string>(1039313569u), -718, 314);
+					ClubInsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Coat check-in", "Assets/Scenes/ClubInside/Service desk coverup", -1234, 516);
+					ClubInsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "DJ", "Assets/Scenes/ClubInside/DJ Booth Coverup", -718, 314);
 					num = (int)((num2 * 2099123716) ^ 0x3351C796);
 					continue;
 				case 15u:
 					_showCoby = true;
-					_showJax = !ClubInsideScene.smethod_24(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(2764856981u));
+					_showJax = !ClubInsideScene.smethod_24(opIJo2jLUqdOL5yAFP4yzXce0DG_, "JaxLeftClub");
 					num = (int)(num2 * 1579817466) ^ -1915588999;
 					continue;
 				case 14u:
-					ClubInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(585135459u), 1870, 0, 1200, new string[2]
-					{
-						_003CModule_003E.smethod_25<string>(2065286972u),
-						_003CModule_003E.smethod_26<string>(619037948u)
-					});
-					ClubInsideScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(1979947709u), _003CModule_003E.smethod_25<string>(3942884760u), -1740, 748, 1200, 0, 0);
-					ClubInsideScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(2826899060u), _003CModule_003E.smethod_27<string>(2026437235u), 54, 736, 1200, 0, 0);
+					ClubInsideScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background Right", 1870, 0, 1200, new string[2] { "Assets/Scenes/ClubInside/Clubdance_right", "Assets/Scenes/ClubInside/Clubdancegreen_right" });
+					ClubInsideScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Floor Left", "Assets/Scenes/ClubInside/dancefloor_left", -1740, 748, 1200, 0, 0);
+					ClubInsideScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Floor Middle", "Assets/Scenes/ClubInside/dancefloor_mid", 54, 736, 1200, 0, 0);
 					num = (int)(num2 * 2071809180) ^ -2011433441;
 					continue;
 				case 13u:
-					ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(2292432369u), _003CModule_003E.smethod_25<string>(3470262193u), 1078, 75);
+					ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Spotlight Green", "Assets/Scenes/ClubInside/Green_spotlight", 1078, 75);
 					num = (int)((num2 * 2043220566) ^ 0x1B4482D5);
 					continue;
 				case 12u:
 				{
 					int num3;
 					int num4;
-					if (ClubInsideScene.smethod_25(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(3220948404u)) != 20)
+					if (ClubInsideScene.smethod_25(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeDate") != 20)
 					{
 						num3 = -1300021641;
 						num4 = -1300021641;
@@ -96,41 +84,41 @@ public class ClubInsideScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 					num = ((int)num2 * -1487603818) ^ -1399357205;
 					continue;
 				case 9u:
-					ClubInsideScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(3910297041u), _003CModule_003E.smethod_27<string>(2745279496u), 1874, 815, 1200, 0, 0);
-					ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2197006782u), _003CModule_003E.smethod_26<string>(1736291388u), -1454, 75);
+					ClubInsideScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Floor Right", "Assets/Scenes/ClubInside/dancefloor_right", 1874, 815, 1200, 0, 0);
+					ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Spotlight Blue", "Assets/Scenes/ClubInside/blue_spotlight", -1454, 75);
 					num = (int)((num2 * 2126754943) ^ 0x7EAA0AEE);
 					continue;
 				case 8u:
-					ClubInsideScene.smethod_26(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(849457652u), 10);
+					ClubInsideScene.smethod_26(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeDate", 10);
 					num = (int)((num2 * 28388376) ^ 0x57F1D995);
 					continue;
 				case 7u:
-					ClubInsideScene.smethod_29(ClubInsideScene.smethod_28(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), _003CModule_003E.smethod_28<string>(2885826304u));
+					ClubInsideScene.smethod_29(ClubInsideScene.smethod_28(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this)), "AchievementGeneric2");
 					num = 1894868981;
 					continue;
 				case 6u:
 				{
-					_uqydQVaCmCvK7zzWs5W4gZFpKBu uqydQVaCmCvK7zzWs5W4gZFpKBu = ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1917761138u), _003CModule_003E.smethod_25<string>(2997639626u), 1162, 541);
+					_uqydQVaCmCvK7zzWs5W4gZFpKBu uqydQVaCmCvK7zzWs5W4gZFpKBu = ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Bar", "Assets/Scenes/ClubInside/Bar", 1162, 541);
 					uqydQVaCmCvK7zzWs5W4gZFpKBu._VNgmwYSLsJyyiR6cPQ35UHJBR4d = 1;
 					num = ((int)num2 * -386583700) ^ -1685721724;
 					continue;
 				}
 				case 5u:
-					ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(3101364705u), _003CModule_003E.smethod_25<string>(247102849u), 1580, 100);
-					ClubInsideScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(2752428286u), _003CModule_003E.smethod_27<string>(2276903084u), -1733, 302, (Action)OnDoorClick);
-					ClubInsideScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(1925831674u), _003CModule_003E.smethod_24<string>(3573636142u), 231, 347, (Action)OnLoungeClick);
+					ClubInsideScene.smethod_16((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Spotlight Pink", "Assets/Scenes/ClubInside/pink_spotlight", 1580, 100);
+					ClubInsideScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Entrance", "Assets/Scenes/ClubInside/Entrance Selectable", -1733, 302, (Action)OnDoorClick);
+					ClubInsideScene.smethod_17((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Lounge", "Assets/Scenes/ClubInside/Loungeroom Selectable", 231, 347, (Action)OnLoungeClick);
 					num = ((int)num2 * -988988727) ^ -2071920081;
 					continue;
 				case 4u:
-					ClubInsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(2008968655u), _003CModule_003E.smethod_24<string>(2628386033u), -701, 385);
-					ClubInsideScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(3518199572u), _003CModule_003E.smethod_27<string>(729825619u), -1425, 100, 1200, 0, 1200);
-					ClubInsideScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(3790674750u), _003CModule_003E.smethod_26<string>(441662254u), 708, 120, 1200, 600, 600);
-					ClubInsideScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_26<string>(997803235u), _003CModule_003E.smethod_26<string>(2259274271u), 48, 130, 1200, 1200, 0);
+					ClubInsideScene.smethod_18((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "DJ Screen", "Assets/Scenes/ClubInside/Jumbo screen", -701, 385);
+					ClubInsideScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Strobe Blue", "Assets/Scenes/ClubInside/blue_strobe", -1425, 100, 1200, 0, 1200);
+					ClubInsideScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Strobe Green", "Assets/Scenes/ClubInside/green_strobe", 708, 120, 1200, 600, 600);
+					ClubInsideScene.smethod_19((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Strobe Pink", "Assets/Scenes/ClubInside/pink_strobe", 48, 130, 1200, 1200, 0);
 					num = (int)(num2 * 1799532772) ^ -501516252;
 					continue;
 				case 3u:
-					_showSeth = !ClubInsideScene.smethod_24(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(399780182u));
-					_showSkye = !ClubInsideScene.smethod_24(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_26<string>(1334310959u));
+					_showSeth = !ClubInsideScene.smethod_24(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SethLeftClub");
+					_showSkye = !ClubInsideScene.smethod_24(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeLeftClub");
 					num = ((int)num2 * -1360622019) ^ 0x72D179B5;
 					continue;
 				case 2u:
@@ -561,22 +549,22 @@ public class ClubInsideScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void OnJaxClick()
 	{
-		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_25<string>(595741094u));
+		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "JaxPreDate");
 	}
 
 	private void OnRouClick()
 	{
-		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_25<string>(1156140782u));
+		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Rou");
 	}
 
 	private void OnSethClick()
 	{
-		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_25<string>(3416005520u));
+		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "SethPreDate");
 	}
 
 	private void OnSkyeClick()
 	{
-		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_26<string>(1536544043u));
+		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "SkyePreDate");
 	}
 
 	private void OnCobyClick()
@@ -591,18 +579,18 @@ public class ClubInsideScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xF3740906u) % 6u)
 				{
 				case 5u:
-					ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_28<string>(3806761885u));
+					ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "CobyClub");
 					num = (int)(num2 * 1340835314) ^ -1887392234;
 					continue;
 				case 3u:
-					ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_25<string>(2287578913u));
+					ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "Prologue");
 					num = -2141330523;
 					continue;
 				case 2u:
 				{
 					int num3;
 					int num4;
-					if (ClubInsideScene.smethod_25(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_27<string>(2049775443u)) >= 40)
+					if (ClubInsideScene.smethod_25(opIJo2jLUqdOL5yAFP4yzXce0DG_, "Prologue") >= 40)
 					{
 						num3 = -940210177;
 						num4 = -940210177;
@@ -631,7 +619,7 @@ public class ClubInsideScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private void OnDJClick()
 	{
-		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), _003CModule_003E.smethod_25<string>(3764860279u));
+		ClubInsideScene.smethod_35(ClubInsideScene.smethod_27((_7UlnfykmEmZDFt3BmCKZekI43Ih)this), "DJ");
 	}
 
 	static _kxm3yIqio0baXT5t5vOHBAEdviB smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, int int_0, int int_1, int int_2, string[] string_1)

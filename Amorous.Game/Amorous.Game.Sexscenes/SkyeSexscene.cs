@@ -25,7 +25,7 @@ public class SkyeSexscene : CensoredSexscene
 	private static readonly List<SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6;
 
 	public SkyeSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, _003CModule_003E.smethod_26<string>(508777207u), _003CModule_003E.smethod_27<string>(1393417785u), null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: SkyeSexscene.smethod_14() ? 2f : 1f, bool_0: true, float_1: 3000f)
+		: base(contentManager_0, "Assets/SexScenes/Skye/Skye Sex", "Assets/SexScenes/Skye/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: SkyeSexscene.smethod_14() ? 2f : 1f, bool_0: true, float_1: 3000f)
 	{
 		bool flag2 = default(bool);
 		bool flag = default(bool);
@@ -61,19 +61,19 @@ public class SkyeSexscene : CensoredSexscene
 					continue;
 				}
 				case 15u:
-					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, _003CModule_003E.smethod_24<string>(3977583864u));
+					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Blue");
 					num = ((int)num2 * -487802181) ^ -263375689;
 					continue;
 				case 14u:
 				{
 					_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG_ = SkyeSexscene.smethod_19();
-					flag = SkyeSexscene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_28<string>(1045563614u));
-					flag2 = SkyeSexscene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, _003CModule_003E.smethod_24<string>(109400315u));
+					flag = SkyeSexscene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeSkinYellow");
+					flag2 = SkyeSexscene.smethod_20(opIJo2jLUqdOL5yAFP4yzXce0DG_, "SkyeSkinBlue");
 					num = (int)(num2 * 2011771227) ^ -2042457305;
 					continue;
 				}
 				case 13u:
-					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, _003CModule_003E.smethod_28<string>(3135959319u));
+					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Gray");
 					num = (int)(num2 * 595257188) ^ -166903749;
 					continue;
 				case 12u:
@@ -94,12 +94,12 @@ public class SkyeSexscene : CensoredSexscene
 					continue;
 				}
 				case 11u:
-					_a2vuTNBvRtI0ysFdoyLqbnVKmKb = contentManager_0.Load<Texture2D>(_003CModule_003E.smethod_24<string>(1671342953u));
-					_8Wpyx8UxfA2ieouQH6qdonhcCok = contentManager_0.Load<Texture2D>(_003CModule_003E.smethod_25<string>(562112389u));
+					_a2vuTNBvRtI0ysFdoyLqbnVKmKb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
+					_8Wpyx8UxfA2ieouQH6qdonhcCok = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
 					num = (int)((num2 * 1221396719) ^ 0x7AF16B4C);
 					continue;
 				case 10u:
-					SkyeSexscene.smethod_16(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(420718839u), (Action<int>)null);
+					SkyeSexscene.smethod_16(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Sex", (Action<int>)null);
 					num = ((int)num2 * -219315432) ^ 0x30773C68;
 					continue;
 				case 8u:
@@ -124,7 +124,7 @@ public class SkyeSexscene : CensoredSexscene
 					continue;
 				}
 				case 6u:
-					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, _003CModule_003E.smethod_27<string>(3546327314u));
+					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Yellow");
 					num = ((int)num2 * -1293535002) ^ -928390319;
 					continue;
 				case 4u:
@@ -147,11 +147,11 @@ public class SkyeSexscene : CensoredSexscene
 					num = ((int)num2 * -1809082333) ^ -763083908;
 					continue;
 				case 1u:
-					_p65Ex7slWkEu44TWzMfnrHkavQb = contentManager_0.Load<Texture2D>(_003CModule_003E.smethod_24<string>(2906227845u));
+					_p65Ex7slWkEu44TWzMfnrHkavQb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex");
 					num = 2147199595;
 					continue;
 				case 0u:
-					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, _003CModule_003E.smethod_24<string>(4286305087u));
+					SkyeSexscene.smethod_21((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this, "Gray");
 					num = 820739383;
 					continue;
 				default:
@@ -174,12 +174,7 @@ public class SkyeSexscene : CensoredSexscene
 
 	public override string[] _tCw3HO9jqoEm2Ad1hqdKsA8vS7b()
 	{
-		return new string[3]
-		{
-			_003CModule_003E.smethod_25<string>(1972244602u),
-			_003CModule_003E.smethod_26<string>(4197045251u),
-			_003CModule_003E.smethod_27<string>(921424119u)
-		};
+		return new string[3] { "Gray", "Yellow", "Blue" };
 	}
 
 	public override void _GGyEXu1JJKcG2X3txvtCwyZAylK(string string_0)
@@ -197,7 +192,7 @@ public class SkyeSexscene : CensoredSexscene
 				{
 					int num5;
 					int num6;
-					if (SkyeSexscene.smethod_22(string_0, _003CModule_003E.smethod_25<string>(2375139520u)))
+					if (SkyeSexscene.smethod_22(string_0, "Yellow"))
 					{
 						num5 = -261307233;
 						num6 = -261307233;
@@ -218,7 +213,7 @@ public class SkyeSexscene : CensoredSexscene
 				{
 					int num7;
 					int num8;
-					if (SkyeSexscene.smethod_22(string_0, _003CModule_003E.smethod_24<string>(3977583864u)))
+					if (SkyeSexscene.smethod_22(string_0, "Blue"))
 					{
 						num7 = 2146229679;
 						num8 = 2146229679;
@@ -243,7 +238,7 @@ public class SkyeSexscene : CensoredSexscene
 				{
 					int num3;
 					int num4;
-					if (SkyeSexscene.smethod_22(string_0, _003CModule_003E.smethod_24<string>(4286305087u)))
+					if (SkyeSexscene.smethod_22(string_0, "Gray"))
 					{
 						num3 = -1911194089;
 						num4 = -1911194089;
@@ -276,72 +271,72 @@ public class SkyeSexscene : CensoredSexscene
 
 	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		//IL_006c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0071: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0081: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0086: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0096: Unknown result type (might be due to invalid IL or missing references)
-		//IL_009b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+		//IL_007a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c7: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00d7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00dc: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00ec: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00fc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0101: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0138: Unknown result type (might be due to invalid IL or missing references)
-		//IL_013d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_014d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0152: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0162: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0167: Unknown result type (might be due to invalid IL or missing references)
-		//IL_018c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0191: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a1: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01a6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01b6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_01bb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_024f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_025f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0264: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0274: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0279: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02f6: Unknown result type (might be due to invalid IL or missing references)
-		//IL_02fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_030b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0310: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0320: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0325: Unknown result type (might be due to invalid IL or missing references)
-		//IL_061c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0621: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0631: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0636: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0646: Unknown result type (might be due to invalid IL or missing references)
-		//IL_064b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0670: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0675: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0685: Unknown result type (might be due to invalid IL or missing references)
-		//IL_068a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_069a: Unknown result type (might be due to invalid IL or missing references)
-		//IL_069f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07e5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07ea: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07fa: Unknown result type (might be due to invalid IL or missing references)
-		//IL_07ff: Unknown result type (might be due to invalid IL or missing references)
-		//IL_080f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0814: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0839: Unknown result type (might be due to invalid IL or missing references)
-		//IL_083e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_084e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0124: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0129: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0139: Unknown result type (might be due to invalid IL or missing references)
+		//IL_013e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_014e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0153: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0174: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0179: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0189: Unknown result type (might be due to invalid IL or missing references)
+		//IL_018e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_019e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01a3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0226: Unknown result type (might be due to invalid IL or missing references)
+		//IL_022b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_023b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0240: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0250: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0255: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02c6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02cb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02db: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02e0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02f0: Unknown result type (might be due to invalid IL or missing references)
+		//IL_02f5: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05a8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05ad: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05bd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05c2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05d2: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05d7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05f8: Unknown result type (might be due to invalid IL or missing references)
+		//IL_05fd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_060d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0612: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0622: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0627: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0751: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0756: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0766: Unknown result type (might be due to invalid IL or missing references)
+		//IL_076b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_077b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0780: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07a1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07a6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07b6: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07bb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07cb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_07d0: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0853: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0863: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0858: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0868: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08f7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_08fc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_090c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0911: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0921: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0926: Unknown result type (might be due to invalid IL or missing references)
+		//IL_086d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_087d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0882: Unknown result type (might be due to invalid IL or missing references)
 		SkyeSexscene.smethod_24(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), 0f);
 		while (true)
 		{
@@ -353,157 +348,149 @@ public class SkyeSexscene : CensoredSexscene
 				switch ((num2 = (uint)num ^ 0x7036F47Du) % 33u)
 				{
 				case 32u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(2834719561u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(1825328606u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye tail", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye thigh left", 1f);
 					num = ((int)num2 * -183850062) ^ -817810392;
 					continue;
 				case 31u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL11 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_11 = _003CModule_003E.smethod_24<string>(1298818858u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
 					float float_21 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
 					float float_22 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL11._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_11, float_21, float_22, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL11._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh right", float_21, float_22, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = ((int)num2 * -1073682705) ^ -197810843;
 					continue;
 				}
 				case 30u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_ = _003CModule_003E.smethod_25<string>(959850315u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
 					float float_ = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
 					float float_2 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_, float_, float_2, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player knot", float_, float_2, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = ((int)num2 * -1479733753) ^ -842043252;
 					continue;
 				}
 				case 28u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL2 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_2 = _003CModule_003E.smethod_27<string>(2369960403u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 					float float_3 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 					float float_4 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL2._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_2, float_3, float_4, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL2._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe right", float_3, float_4, (float)(int)((Color)(ref val)).get_B() / 255f);
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL3 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_3 = _003CModule_003E.smethod_28<string>(2127111933u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 					float float_5 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 					float float_6 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL3._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_3, float_5, float_6, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL3._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe left", float_5, float_6, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = ((int)num2 * -2111747208) ^ -1090731798;
 					continue;
 				}
 				case 27u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(2842605095u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm left", 1f);
 					num = (int)((num2 * 2064708615) ^ 0x150DE1D4);
 					continue;
 				case 26u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(1670408389u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head back", 1f);
 					num = ((int)num2 * -1222093953) ^ 0x349C1BD6;
 					continue;
 				case 25u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL7 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_7 = _003CModule_003E.smethod_24<string>(63933966u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 					float float_13 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
 					float float_14 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL7._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_7, float_13, float_14, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL7._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player belly stripes", float_13, float_14, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = (int)(num2 * 461429451) ^ -1428778794;
 					continue;
 				}
 				case 24u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3044052554u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(4265169575u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm right", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye boob left", 1f);
 					num = (int)((num2 * 2095985147) ^ 0x5DB0A543);
 					continue;
 				case 23u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL10 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_10 = _003CModule_003E.smethod_28<string>(1505466699u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
 					float float_19 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
 					float float_20 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL10._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_10, float_19, float_20, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL10._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", float_19, float_20, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = (int)((num2 * 2067641739) ^ 0x3491524E);
 					continue;
 				}
 				case 22u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(260957330u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear right", 1f);
 					num = (int)(num2 * 469212501) ^ -1805527074;
 					continue;
 				case 21u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(38509675u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3141181263u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(1730618930u), SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(467516723u), SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player cock", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player body", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player belly stripes", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player underbelly", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
 					num = 251250305;
 					continue;
 				case 19u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(2437131681u), SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2735826870u), SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2392750154u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(3712965588u), SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(1226222683u), SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player stripe right", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player underthigh right", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh left", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player stripe left", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player underthigh left", SkyeSexscene.smethod_27((Enum)SkyeSexscene.smethod_26(_opIJo2jLUqdOL5yAFP4yzXce0DG_0), (Enum)_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
 					num = 873491612;
 					continue;
 				case 18u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2028011076u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye shin right", 1f);
 					num = ((int)num2 * -1333941580) ^ 0x42571FE6;
 					continue;
 				case 17u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(1790829471u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(3598908059u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye body", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye foot right", 1f);
 					num = ((int)num2 * -1206856973) ^ -32963669;
 					continue;
 				case 16u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(3695992467u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye shin back", 1f);
 					num = 1276043878;
 					continue;
 				case 15u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(2602339982u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(4050341916u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye jaw", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear left", 1f);
 					num = (int)(num2 * 1617783700) ^ -1398668446;
 					continue;
 				case 14u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL8 = SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this);
-					string string_8 = _003CModule_003E.smethod_25<string>(1122836848u);
 					val = SkyeSexscene.smethod_29(_opIJo2jLUqdOL5yAFP4yzXce0DG_0);
 					float float_15 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 					float float_16 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL8._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_8, float_15, float_16, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL8._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right", float_15, float_16, (float)(int)((Color)(ref val)).get_B() / 255f);
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL9 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_9 = _003CModule_003E.smethod_25<string>(1595459415u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 					float float_17 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 					float float_18 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL9._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_9, float_17, float_18, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL9._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left", float_17, float_18, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = (int)(num2 * 1036583631) ^ -1517610816;
 					continue;
 				}
 				case 13u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(1669131701u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(1271689032u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm right", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye boob left", 1f);
 					num = ((int)num2 * -484411334) ^ -2043869906;
 					continue;
 				case 12u:
@@ -524,93 +511,90 @@ public class SkyeSexscene : CensoredSexscene
 					continue;
 				}
 				case 11u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(2636000644u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(449430453u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye thigh right", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye arm left", 1f);
 					num = ((int)num2 * -49727133) ^ 0x5796E520;
 					continue;
 				case 10u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(1168272714u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye chest", 1f);
 					num = (int)(num2 * 847333428) ^ -531872205;
 					continue;
 				case 9u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(2834719561u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye tail", 1f);
 					num = (int)((num2 * 43320470) ^ 0x2929B0D8);
 					continue;
 				case 8u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL5 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_5 = _003CModule_003E.smethod_26<string>(3141181263u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 					float float_9 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
 					float float_10 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL5._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_5, float_9, float_10, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL5._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", float_9, float_10, (float)(int)((Color)(ref val)).get_B() / 255f);
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL6 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_6 = _003CModule_003E.smethod_25<string>(288358785u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ;
 					float float_11 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ;
 					float float_12 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL6._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_6, float_11, float_12, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL6._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underbelly", float_11, float_12, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = (int)(num2 * 1466639753) ^ -234706748;
 					continue;
 				}
 				case 7u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(2120866737u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye pupil", 1f);
 					num = (int)((num2 * 368354997) ^ 0x5EEE5C8);
 					continue;
 				case 6u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_27<string>(3027309346u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player thigh right", 1f);
 					num = ((int)num2 * -1629088616) ^ -1799041482;
 					continue;
 				case 4u:
 				{
 					_nHdiyIURlAiaNZ8u6MKzxjcwnyL nHdiyIURlAiaNZ8u6MKzxjcwnyL4 = base._1BgOJ3z4ZUXNS2L4JWf24pr41hB;
-					string string_4 = _003CModule_003E.smethod_27<string>(703513556u);
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
 					float float_7 = (float)(int)((Color)(ref val)).get_R() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
 					float float_8 = (float)(int)((Color)(ref val)).get_G() / 255f;
 					val = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA;
-					nHdiyIURlAiaNZ8u6MKzxjcwnyL4._VoeevpFh2kLKfHtpPDXWt0TFbuH(string_4, float_7, float_8, (float)(int)((Color)(ref val)).get_B() / 255f);
+					nHdiyIURlAiaNZ8u6MKzxjcwnyL4._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh left", float_7, float_8, (float)(int)((Color)(ref val)).get_B() / 255f);
 					num = ((int)num2 * -1224094391) ^ -462037535;
 					continue;
 				}
 				case 3u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(1029577964u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(1952725506u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(655315807u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(715981769u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(918214853u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head back", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear right", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelids", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelash", 1f);
 					num = ((int)num2 * -1953037733) ^ -1055234705;
 					continue;
 				case 2u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_25<string>(959850315u), (SkyeSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Player knot", (SkyeSexscene.smethod_28(_opIJo2jLUqdOL5yAFP4yzXce0DG_0) == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
 					num = 716157761;
 					continue;
 				case 1u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(2433977749u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyes", 1f);
 					num = ((int)num2 * -2091246445) ^ -397322295;
 					continue;
 				case 0u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2174714411u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2376947495u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(2579180579u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(3898667103u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(2066901392u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye chest", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyes", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye pupil", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye jaw", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye ear left", 1f);
 					num = (int)(num2 * 1979012979) ^ -817271647;
 					continue;
 				case 5u:
 					break;
 				case 20u:
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_24<string>(872035111u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_26<string>(715981769u), 1f);
-					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), _003CModule_003E.smethod_28<string>(4271472983u), 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelids", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye head", 1f);
+					SkyeSexscene.smethod_25(SkyeSexscene.smethod_15((_TwlwMC1hhdSzamwGWEBxuUkz1gH)this), "Skye eyelash", 1f);
 					return;
 				default:
-					base._DUynKBx2CM4riE68wCCfknspxeg.Add(_003CModule_003E.smethod_24<string>(3650526118u));
+					base._DUynKBx2CM4riE68wCCfknspxeg.Add("Player wetness");
 					return;
 				}
 				break;
@@ -622,24 +606,24 @@ public class SkyeSexscene : CensoredSexscene
 	{
 		List<SpineEvent> list = new List<SpineEvent>();
 		SpineEvent val = SkyeSexscene.smethod_30();
-		val.AnimationName = _003CModule_003E.smethod_28<string>(420718839u);
-		val.EventName = _003CModule_003E.smethod_25<string>(2476242149u);
+		val.AnimationName = "Sex";
+		val.EventName = "ThrustStart";
 		SpineEvent obj = val;
 		float[] array = new float[6];
 		SkyeSexscene.smethod_31((Array)array, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
 		obj.FrameTimes = array;
 		list.Add(val);
 		val = SkyeSexscene.smethod_30();
-		val.AnimationName = _003CModule_003E.smethod_25<string>(4121017498u);
-		val.EventName = _003CModule_003E.smethod_26<string>(2619840628u);
+		val.AnimationName = "Sex";
+		val.EventName = "ThrustEnd";
 		SpineEvent obj2 = val;
 		float[] array2 = new float[6];
 		SkyeSexscene.smethod_31((Array)array2, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);
 		obj2.FrameTimes = array2;
 		list.Add(val);
 		val = SkyeSexscene.smethod_30();
-		val.AnimationName = _003CModule_003E.smethod_24<string>(935837983u);
-		val.EventName = _003CModule_003E.smethod_28<string>(586293476u);
+		val.AnimationName = "Sex";
+		val.EventName = "Moan";
 		SpineEvent obj3 = val;
 		float[] array3 = new float[6];
 		SkyeSexscene.smethod_31((Array)array3, (RuntimeFieldHandle)/*OpCode not supported: LdMemberToken*/);

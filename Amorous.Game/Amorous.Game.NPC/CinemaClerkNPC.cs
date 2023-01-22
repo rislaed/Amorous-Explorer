@@ -23,12 +23,12 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_25<string>(516565517u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Cryptic";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(255, 24, 24);
 
 	public CinemaClerkNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_24<string>(1967521288u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CinemaClerk", 1f)
 	{
 		while (true)
 		{
@@ -39,12 +39,12 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 				switch ((num2 = (uint)num ^ 0x2F6FA015u) % 4u)
 				{
 				case 1u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_25<string>(3269680790u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Cinema Clerk Expressions");
 					num = ((int)num2 * -372596738) ^ 0x77CAC82F;
 					continue;
 				case 0u:
-					CinemaClerkNPC.smethod_17(CinemaClerkNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_25<string>(3874023167u))));
-					CinemaClerkNPC.smethod_19(CinemaClerkNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Vest, _003CModule_003E.smethod_26<string>(1430411289u))));
+					CinemaClerkNPC.smethod_17(CinemaClerkNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Cinema Clerk Expressions - Pants")));
+					CinemaClerkNPC.smethod_19(CinemaClerkNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Vest, "Cinema Clerk Expressions - Vest")));
 					num = ((int)num2 * -1190724031) ^ -681494229;
 					continue;
 				case 3u:

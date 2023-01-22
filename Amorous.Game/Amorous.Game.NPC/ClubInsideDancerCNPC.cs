@@ -24,12 +24,12 @@ public class ClubInsideDancerCNPC : SpineNPC<ClubInsideDancerCNPC.EHeads, ClubIn
 	}
 
 	public ClubInsideDancerCNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_27<string>(3848078118u), 0.7f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubInsideStatic/Dancer C", 0.7f, bool_0: true)
 	{
-		ClubInsideDancerCNPC.smethod_19(ClubInsideDancerCNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_28<string>(1553032962u), (Action<int>)null);
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, _003CModule_003E.smethod_25<string>(2029188028u), _003CModule_003E.smethod_27<string>(1466406264u), _003CModule_003E.smethod_25<string>(2414574759u));
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, _003CModule_003E.smethod_27<string>(1706020351u), _003CModule_003E.smethod_27<string>(271953083u));
-		ClubInsideDancerCNPC.smethod_21(ClubInsideDancerCNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, _003CModule_003E.smethod_28<string>(2352264164u))));
+		ClubInsideDancerCNPC.smethod_19(ClubInsideDancerCNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Dance A", (Action<int>)null);
+		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Head", "Pupil", "eye");
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arm close", "Character");
+		ClubInsideDancerCNPC.smethod_21(ClubInsideDancerCNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, "Shorts")));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

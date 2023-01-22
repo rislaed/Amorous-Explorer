@@ -18,12 +18,12 @@ public class LibraryScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				case 0u:
 					break;
 				default:
-					LibraryScene.smethod_15(_003CModule_003E.smethod_28<string>(3061975089u), 0.4f);
+					LibraryScene.smethod_15("Assets/Music/RyeGuyHead - Outdated", 0.4f);
 					return;
 				}
 				break;
 				IL_0009:
-				LibraryScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_25<string>(958029618u), 0, 0);
+				LibraryScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Library/Background", 0, 0);
 				num = (int)(num2 * 1656556741) ^ -2066216365;
 			}
 		}

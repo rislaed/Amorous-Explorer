@@ -24,7 +24,7 @@ public class CoupleBNPC : SpineNPC<CoupleBNPC.EHeads, CoupleBNPC.EPoses, CoupleB
 	}
 
 	public CoupleBNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(380527183u), 1f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/Scenes/Intro/Couple B", 1f, bool_0: true)
 	{
 		while (true)
 		{
@@ -40,16 +40,16 @@ public class CoupleBNPC : SpineNPC<CoupleBNPC.EHeads, CoupleBNPC.EPoses, CoupleB
 					num = (int)((num2 * 90434849) ^ 0x345EE635);
 					continue;
 				case 4u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Waving, _003CModule_003E.smethod_27<string>(3425850685u), _003CModule_003E.smethod_25<string>(1040758004u), _003CModule_003E.smethod_24<string>(1551030678u));
-					CoupleBNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Shirt, _003CModule_003E.smethod_26<string>(1107175751u)));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Waving, "Dark arm", "Characters right", "fem arms");
+					CoupleBNPC.smethod_20(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Shirt, "Shirts right"));
 					num = ((int)num2 * -1113388198) ^ -1850195045;
 					continue;
 				case 2u:
-					CoupleBNPC.smethod_19(CoupleBNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_27<string>(2231397504u), (Action<int>)null);
+					CoupleBNPC.smethod_19(CoupleBNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "Waving", (Action<int>)null);
 					num = ((int)num2 * -1679065564) ^ 0xC9F0C7;
 					continue;
 				case 0u:
-					CoupleBNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Pants, _003CModule_003E.smethod_26<string>(1674901936u)));
+					CoupleBNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Waving, EClothes.Pants, "Pants right"));
 					num = ((int)num2 * -1294170961) ^ 0xF7D350C;
 					continue;
 				default:

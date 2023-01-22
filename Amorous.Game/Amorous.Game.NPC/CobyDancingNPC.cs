@@ -29,7 +29,7 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(104, 193, 255);
 
 	public CobyDancingNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_28<string>(4169308428u), 0.8f, bool_0: true)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CobyDancing/Coby", 0.8f, bool_0: true)
 	{
 		while (true)
 		{
@@ -40,7 +40,7 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 				switch ((num2 = (uint)num ^ 0xE1731893u) % 10u)
 				{
 				case 9u:
-					CobyDancingNPC.smethod_24(CobyDancingNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, _003CModule_003E.smethod_27<string>(1147212589u), _003CModule_003E.smethod_27<string>(2108410868u), _003CModule_003E.smethod_24<string>(2301122586u))));
+					CobyDancingNPC.smethod_24(CobyDancingNPC.smethod_23(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shorts, "Shorts right", "Shorts crotch", "Shorts left")));
 					num = (int)((num2 * 1042631655) ^ 0x79DC3F1);
 					continue;
 				case 8u:
@@ -49,15 +49,15 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 					num = (int)((num2 * 613473034) ^ 0x4624A3E);
 					continue;
 				case 7u:
-					CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Sleeves, _003CModule_003E.smethod_26<string>(3725419396u), _003CModule_003E.smethod_24<string>(1049401005u))));
+					CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Sleeves, "Sleeves right", "Sleeves left")));
 					num = (int)((num2 * 90662058) ^ 0x3D97DC6B);
 					continue;
 				case 6u:
-					CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, _003CModule_003E.smethod_24<string>(3217743035u))));
+					CobyDancingNPC.smethod_22(CobyDancingNPC.smethod_21(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")));
 					num = ((int)num2 * -1554209423) ^ 0x50CD81E2;
 					continue;
 				case 5u:
-					CobyDancingNPC.smethod_19(CobyDancingNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), _003CModule_003E.smethod_26<string>(4184661290u), (Action<int>)null);
+					CobyDancingNPC.smethod_19(CobyDancingNPC.smethod_18((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)this), "animation", (Action<int>)null);
 					num = (int)(num2 * 673706798) ^ -738237062;
 					continue;
 				case 4u:
@@ -65,12 +65,8 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 					num = ((int)num2 * -1795829623) ^ -992035461;
 					continue;
 				case 3u:
-					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, _003CModule_003E.smethod_26<string>(3118720144u), _003CModule_003E.smethod_25<string>(2078828994u), _003CModule_003E.smethod_25<string>(4093303584u), _003CModule_003E.smethod_24<string>(1310611829u));
-					CobyDancingNPC.smethod_20(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, _003CModule_003E.smethod_28<string>(414952704u), _003CModule_003E.smethod_25<string>(1810232382u), _003CModule_003E.smethod_27<string>(1927548168u), _003CModule_003E.smethod_25<string>(1357696498u), _003CModule_003E.smethod_25<string>(823839569u), _003CModule_003E.smethod_25<string>(937293393u)), new string[2]
-					{
-						_003CModule_003E.smethod_28<string>(236083439u),
-						_003CModule_003E.smethod_25<string>(1078785902u)
-					});
+					_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Eyes Back", "Pupil", "Jaw", "Head");
+					CobyDancingNPC.smethod_20(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Tail", "Leg right", "Arm right", "Body", "left leg", "Arm left"), new string[2] { "Balls", "Cock" });
 					num = (int)(num2 * 1588930926) ^ -1813722303;
 					continue;
 				case 2u:

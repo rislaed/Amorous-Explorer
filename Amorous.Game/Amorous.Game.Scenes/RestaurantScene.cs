@@ -24,9 +24,9 @@ public class RestaurantScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				}
 				break;
 				IL_0009:
-				RestaurantScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2395767488u), _003CModule_003E.smethod_25<string>(3821370677u), 0, 0);
-				RestaurantScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(673700201u), _003CModule_003E.smethod_25<string>(329614721u), 0, 0);
-				RestaurantScene.smethod_16(_003CModule_003E.smethod_26<string>(1393169938u), 0.4f);
+				RestaurantScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Restaurant/Background", 0, 0);
+				RestaurantScene.smethod_15((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Bar", "Assets/Scenes/Restaurant/Table", 0, 0);
+				RestaurantScene.smethod_16("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 				num = ((int)num2 * -1091138541) ^ -27345829;
 			}
 		}

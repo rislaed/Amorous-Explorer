@@ -30,12 +30,12 @@ public class IntroScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0x5E51D434u) % 4u)
 				{
 				case 2u:
-					_agB6DEyENfHFg1x2I4KsJqoQUpg = IntroScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(2902776559u), _003CModule_003E.smethod_27<string>(1850067112u), 0, 1250);
-					IntroScene.smethod_15(_003CModule_003E.smethod_25<string>(1311283570u), 0.4f);
+					_agB6DEyENfHFg1x2I4KsJqoQUpg = IntroScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Scenery", "Assets/Scenes/Intro/Scenery", 0, 1250);
+					IntroScene.smethod_15("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
 					num = ((int)num2 * -1066748878) ^ 0x3FE031B8;
 					continue;
 				case 1u:
-					_h29gtnqEWLAa5qsliRXuXiPwY2o = IntroScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_24<string>(1981564010u), 0, 0);
+					_h29gtnqEWLAa5qsliRXuXiPwY2o = IntroScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Intro/Background", 0, 0);
 					num = ((int)num2 * -1501514041) ^ -2130596183;
 					continue;
 				case 3u:

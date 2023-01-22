@@ -23,16 +23,16 @@ public class ChefAssissantNPC : LayerNPC<ChefAssissantNPC.EHeads, ChefAssissantN
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_27<string>(316235454u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Wraak Veldheer";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(204, 149, 0);
 
 	public ChefAssissantNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_25<string>(3535482392u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ChefAssissant", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_28<string>(1407631096u));
-		ChefAssissantNPC.smethod_17(ChefAssissantNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_24<string>(3246372695u))));
-		ChefAssissantNPC.smethod_19(ChefAssissantNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_27<string>(73004113u))));
+		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Wraak Veldheer - Nude");
+		ChefAssissantNPC.smethod_17(ChefAssissantNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Wraak Veldheer - Pants")));
+		ChefAssissantNPC.smethod_19(ChefAssissantNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Wraak Veldheer - Shirt")));
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

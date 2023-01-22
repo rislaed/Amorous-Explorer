@@ -14,18 +14,18 @@ public class ShootingRangeScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				switch ((num2 = (uint)num ^ 0xD1D5603Eu) % 4u)
 				{
 				case 2u:
-					ShootingRangeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_25<string>(3454574703u), _003CModule_003E.smethod_28<string>(3409789821u), 600, 180);
+					ShootingRangeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180);
 					num = ((int)num2 * -670452763) ^ -1811638691;
 					continue;
 				case 1u:
-					ShootingRangeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_27<string>(3171999506u), _003CModule_003E.smethod_27<string>(3421590032u), 0, 0);
-					ShootingRangeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_28<string>(754759882u), _003CModule_003E.smethod_24<string>(4132319434u), 0, 0);
+					ShootingRangeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/ShootingRange/Background", 0, 0);
+					ShootingRangeScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Countertop", "Assets/Scenes/ShootingRange/Countertop", 0, 0);
 					num = ((int)num2 * -1330432719) ^ 0xFED483F;
 					continue;
 				case 3u:
 					break;
 				default:
-					ShootingRangeScene.smethod_15(_003CModule_003E.smethod_27<string>(233270536u), 0.4f);
+					ShootingRangeScene.smethod_15("Assets/Music/Mittsies - Mech", 0.4f);
 					return;
 				}
 				break;

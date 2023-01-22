@@ -23,12 +23,12 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_25<string>(191133736u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Game Store Clerk";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(252, 137, 76);
 
 	public GamestoreClerkNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_24<string>(1267939447u), 1f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/GamestoreClerk", 1f)
 	{
 		while (true)
 		{
@@ -39,11 +39,11 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 				switch ((num2 = (uint)num ^ 0xA96E7065u) % 7u)
 				{
 				case 6u:
-					GamestoreClerkNPC.smethod_17(GamestoreClerkNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_24<string>(2857011911u))));
+					GamestoreClerkNPC.smethod_17(GamestoreClerkNPC.smethod_16(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Kula Game Store Clerk (pants)")));
 					num = ((int)num2 * -179760713) ^ -1699956428;
 					continue;
 				case 4u:
-					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_26<string>(3308524533u));
+					_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Kula Game Store Clerk (nude)");
 					num = ((int)num2 * -480122135) ^ 0x3E0A4E9B;
 					continue;
 				case 3u:
@@ -55,7 +55,7 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 					num = ((int)num2 * -2091970529) ^ 0x6840B78C;
 					continue;
 				case 1u:
-					GamestoreClerkNPC.smethod_19(GamestoreClerkNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_24<string>(2430228164u))));
+					GamestoreClerkNPC.smethod_19(GamestoreClerkNPC.smethod_18(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Kula Game Store Clerk (shirt)")));
 					num = (int)((num2 * 324612433) ^ 0x7AF2E52F);
 					continue;
 				default:

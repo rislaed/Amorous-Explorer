@@ -26,8 +26,8 @@ public class Commands
 	{
 	}
 
-	[_cHVuWjDON6rywwdWoqHCMj9ZKR(_qXE0hlPdNyl0lTUyddbAS1PZhVV = "Cutscene", _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Quest Name")]
 	[_x2edoMtYt97ClE6KEKnT8Q2ei8R(_RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Start Quest", _3aoBdJvXEwMLqtoffOySYmetk8t = "Start a Quest")]
+	[_cHVuWjDON6rywwdWoqHCMj9ZKR(_qXE0hlPdNyl0lTUyddbAS1PZhVV = "Cutscene", _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Quest Name")]
 	public class PlayCutscene
 	{
 		public const string PARAMETER_CUTSCENE = "Cutscene";

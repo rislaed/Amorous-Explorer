@@ -23,12 +23,12 @@ public class JasonDartsonNPC : LayerNPC<JasonDartsonNPC.EHeads, JasonDartsonNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = _003CModule_003E.smethod_24<string>(2711819561u);
+	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Jason Dartson";
 
 	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(122, 53, 54);
 
 	public JasonDartsonNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _003CModule_003E.smethod_26<string>(1938479738u), 0.9f)
+		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/JasonDartson", 0.9f)
 	{
 		while (true)
 		{
@@ -39,12 +39,12 @@ public class JasonDartsonNPC : LayerNPC<JasonDartsonNPC.EHeads, JasonDartsonNPC.
 				switch ((num2 = (uint)num ^ 0x690427DEu) % 4u)
 				{
 				case 1u:
-					JasonDartsonNPC.smethod_16(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, _003CModule_003E.smethod_25<string>(2879678352u)), new string[1] { _003CModule_003E.smethod_28<string>(3062779325u) });
-					JasonDartsonNPC.smethod_18(JasonDartsonNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, _003CModule_003E.smethod_27<string>(2025214026u))));
+					JasonDartsonNPC.smethod_16(_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Jason Body"), new string[1] { "Jason Cock" });
+					JasonDartsonNPC.smethod_18(JasonDartsonNPC.smethod_17(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Jason Pants")));
 					num = (int)((num2 * 53518763) ^ 0x4D61F961);
 					continue;
 				case 0u:
-					JasonDartsonNPC.smethod_20(JasonDartsonNPC.smethod_19(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, _003CModule_003E.smethod_26<string>(2899086887u))));
+					JasonDartsonNPC.smethod_20(JasonDartsonNPC.smethod_19(_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Jason Shirt")));
 					num = ((int)num2 * -971319471) ^ 0x74CB5D00;
 					continue;
 				case 3u:

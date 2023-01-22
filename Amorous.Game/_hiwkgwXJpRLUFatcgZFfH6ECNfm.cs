@@ -39,39 +39,39 @@ public class _hiwkgwXJpRLUFatcgZFfH6ECNfm : _21uBmerICJi18moE2gpxlEipBgz
 				switch ((num2 = (uint)num ^ 0x4D993A4Bu) % 10u)
 				{
 				case 9u:
-					_CgYyaJ1fBglIlQonaP3yzTPvphk = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_25<string>(1063098412u), _003CModule_003E.smethod_26<string>(3663275921u), -240, -135, 0, 1f);
-					_fMXez7BKdCTeNXQWYWvZhBekAM0 = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_27<string>(2267801968u), _003CModule_003E.smethod_25<string>(2204634013u), -240, -135, 0, 1f);
+					_CgYyaJ1fBglIlQonaP3yzTPvphk = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Forearm Color Short", "Assets/Scenes/MainMenu/Marking short forearm", -240, -135, 0, 1f);
+					_fMXez7BKdCTeNXQWYWvZhBekAM0 = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Forearm Stripes", "Assets/Scenes/MainMenu/Stripe forearm", -240, -135, 0, 1f);
 					num = ((int)num2 * -1594318020) ^ -1703702957;
 					continue;
 				case 8u:
-					_ZwJ4BSN6LGNljQT9ELN8Q1CnKXF = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_27<string>(1316580128u), _003CModule_003E.smethod_25<string>(3276441965u), -240, -135, 0, 1f);
+					_ZwJ4BSN6LGNljQT9ELN8Q1CnKXF = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Forearm Avian", "Assets/Scenes/MainMenu/Avian forearm", -240, -135, 0, 1f);
 					num = (int)(num2 * 274574903) ^ -854243093;
 					continue;
 				case 7u:
-					_INEJ4fjMGg0xqzZyqg6dhgwgFuJ = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_24<string>(1752732431u), _003CModule_003E.smethod_27<string>(1905201245u), -240, -135, 0, 1f);
-					_HzpuNgBJAQYObWMhiboQRiPGmvp = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_25<string>(3911834551u), _003CModule_003E.smethod_27<string>(714365318u), -240, -135, 0, 1f);
-					_8sPFDDypgS5X46RyH9fsZkixV6A = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_26<string>(1896222175u), _003CModule_003E.smethod_26<string>(1997338717u), -240, -135, 0, 1f);
+					_INEJ4fjMGg0xqzZyqg6dhgwgFuJ = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Bicep", "Assets/Scenes/MainMenu/Bicep", -240, -135, 0, 1f);
+					_HzpuNgBJAQYObWMhiboQRiPGmvp = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Nails", "Assets/Scenes/MainMenu/Nails", -240, -135, 0, 1f);
+					_8sPFDDypgS5X46RyH9fsZkixV6A = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Hand", "Assets/Scenes/MainMenu/Hand", -240, -135, 0, 1f);
 					num = ((int)num2 * -2134184691) ^ 0x34A16C3F;
 					continue;
 				case 6u:
-					_b8fQLPu8wgP0zb6b5uh6NiZnbti = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_26<string>(3008504137u), _003CModule_003E.smethod_28<string>(2247533015u), -240, -135, 0, 1f);
+					_b8fQLPu8wgP0zb6b5uh6NiZnbti = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Bicep Stripe", "Assets/Scenes/MainMenu/Stripe bicep", -240, -135, 0, 1f);
 					num = ((int)num2 * -808268624) ^ 0x6E907C25;
 					continue;
 				case 4u:
-					_PD530TR81Bikn39qLQleQO1Lcce = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_24<string>(2087833563u), _003CModule_003E.smethod_24<string>(2705276009u), -240, -135, 0, 1f);
+					_PD530TR81Bikn39qLQleQO1Lcce = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Forearm Color Long", "Assets/Scenes/MainMenu/Marking long forearm", -240, -135, 0, 1f);
 					num = (int)((num2 * 1664940633) ^ 0x5B644760);
 					continue;
 				case 3u:
-					_RGn2RWWok64qKnkTEl3xHTvBHTf = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_24<string>(1497520943u), _003CModule_003E.smethod_28<string>(4223752834u), -240, -135, 0, 1f);
+					_RGn2RWWok64qKnkTEl3xHTvBHTf = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Forearm", "Assets/Scenes/MainMenu/Forearm", -240, -135, 0, 1f);
 					num = (int)((num2 * 1467218693) ^ 0x702B0624);
 					continue;
 				case 2u:
-					_MubEAV4dekM9lVl1ANEZ7Lm5xGF = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_28<string>(3329081334u), _003CModule_003E.smethod_28<string>(842192626u), -240, -135, 0, 1f);
-					_KWjszP7sbsK49TDae2RymaJYdVG = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_26<string>(131654168u), _003CModule_003E.smethod_28<string>(1635178632u), -240, -135, 0, 1f);
+					_MubEAV4dekM9lVl1ANEZ7Lm5xGF = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Bicep Avian", "Assets/Scenes/MainMenu/Avian bicep", -240, -135, 0, 1f);
+					_KWjszP7sbsK49TDae2RymaJYdVG = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Hand Avian", "Assets/Scenes/MainMenu/Avian hand", -240, -135, 0, 1f);
 					num = ((int)num2 * -383023011) ^ 0xA314FA;
 					continue;
 				case 0u:
-					_nOGsauTMzdwD2xarXHlMLauvbPi = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, _003CModule_003E.smethod_27<string>(3215406554u), _003CModule_003E.smethod_25<string>(3211871308u), -240, -135, 0, 1f);
+					_nOGsauTMzdwD2xarXHlMLauvbPi = _hiwkgwXJpRLUFatcgZFfH6ECNfm.smethod_2((_21uBmerICJi18moE2gpxlEipBgz)this, "Hand Color", "Assets/Scenes/MainMenu/Marking long or short hand", -240, -135, 0, 1f);
 					num = (int)((num2 * 345813976) ^ 0x10C6322B);
 					continue;
 				default:

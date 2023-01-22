@@ -98,7 +98,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 		_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_2(obj, _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_1());
 		((Control)obj).set_Size(new Point(1920, 1080));
 		_PnkAlVnMv0SZvRBFexqzE5DF9tp = obj;
-		_PnkAlVnMv0SZvRBFexqzE5DF9tp._EMnZAXxoqoahiGOiNjffRycLtDE(_003CModule_003E.smethod_26<string>(3211973988u), _003CModule_003E.smethod_27<string>(744276088u));
+		_PnkAlVnMv0SZvRBFexqzE5DF9tp._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 	}
 
 	public virtual void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
@@ -258,7 +258,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 			case 3u:
 				goto IL_00de;
 			case 1u:
-				throw _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_3(_003CModule_003E.smethod_26<string>(2076626062u));
+				throw _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_3("Images cannot be empty");
 			default:
 				return result;
 			}
@@ -421,7 +421,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 			case 3u:
 				goto IL_00df;
 			case 2u:
-				throw _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_3(_003CModule_003E.smethod_27<string>(67112722u));
+				throw _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_3("Images cannot be empty");
 			default:
 				return result;
 			}
@@ -1552,7 +1552,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _VvFE2zgy4FbDjvaEvb67tXJ7aRm(string string_0)
 	{
-		return _0c5TjZklJbu1wzYG2FIcvf3SIdh(_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_10(_003CModule_003E.smethod_26<string>(1109100527u), string_0)) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
+		return _0c5TjZklJbu1wzYG2FIcvf3SIdh(_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_10("NPCLayer_", string_0)) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
 	}
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _VvFE2zgy4FbDjvaEvb67tXJ7aRm(NPCLocation npclocation_0)
@@ -1583,7 +1583,7 @@ public abstract class _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _VvFE2zgy4FbDjvaEvb67tXJ7aRm<T>()
 	{
-		return _0c5TjZklJbu1wzYG2FIcvf3SIdh(_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_10(_003CModule_003E.smethod_27<string>(1913610555u), _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_12((MemberInfo)_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_11(typeof(T).TypeHandle)))) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
+		return _0c5TjZklJbu1wzYG2FIcvf3SIdh(_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_10("NPCLayer_", _7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_12((MemberInfo)_7UlnfykmEmZDFt3BmCKZekI43Ih.smethod_11(typeof(T).TypeHandle)))) as _3IHp43rpkJgOBcY9lrIrwMuwWve;
 	}
 
 	public _3IHp43rpkJgOBcY9lrIrwMuwWve _gWHVDvr9GDtRXP2zf2Md18MgZ4b(_QGGOTxZ8aNWGh0hc26wcmx8wmwT _QGGOTxZ8aNWGh0hc26wcmx8wmwT_0, _a2qVgWDIm3fBp49WubttSTPsx8K _a2qVgWDIm3fBp49WubttSTPsx8K_0)

@@ -5,8 +5,8 @@ public class SaunaScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public SaunaScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
 	{
-		SaunaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, _003CModule_003E.smethod_24<string>(1416131465u), _003CModule_003E.smethod_25<string>(2984530632u), 0, 0);
-		SaunaScene.smethod_15(_003CModule_003E.smethod_28<string>(2947799203u), 0.4f);
+		SaunaScene.smethod_14((_7UlnfykmEmZDFt3BmCKZekI43Ih)this, "Background", "Assets/Scenes/Sauna/Background", 0, 0);
+		SaunaScene.smethod_15("Assets/Music/Rekuiem - Flyin", 0.4f);
 	}
 
 	static _uqydQVaCmCvK7zzWs5W4gZFpKBu smethod_14(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, string string_1, int int_0, int int_1)
