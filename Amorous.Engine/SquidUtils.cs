@@ -4,48 +4,8 @@ using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework.Input;
 using Squid;
 
-public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
+public static class SquidUtils
 {
-	[CompilerGenerated]
-	private sealed class _egzIUSwqhQu2Msk17sGs8ZpSyUe
-	{
-		public Window _L7VColD35B3sDgJdUnjTeXGa7pv;
-
-		public Action _qhAM4Wrvf8c5jzKBQqLfosAE9D;
-
-		internal void _MQQUBuq2vTJWQYqeAIMhSi0xRWM(Control control_0, MouseEventArgs mouseEventArgs_0)
-		{
-			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-			if (_qhAM4Wrvf8c5jzKBQqLfosAE9D != null)
-			{
-				_qhAM4Wrvf8c5jzKBQqLfosAE9D();
-			}
-		}
-	}
-
-	[CompilerGenerated]
-	private sealed class _XiPtsmvdmy0ERqQAoPDCJt6G0SKA
-	{
-		public Window _L7VColD35B3sDgJdUnjTeXGa7pv;
-
-		public Action<int> _qhAM4Wrvf8c5jzKBQqLfosAE9D;
-	}
-
-	[CompilerGenerated]
-	private sealed class _1MgLxPAMx27aiB8gt4uUvPhdQGp
-	{
-		public int _5ft6kbimSBgLCWvFCD6FPEU8cCO;
-
-		public _XiPtsmvdmy0ERqQAoPDCJt6G0SKA _wr6xcvFOgUbaTATC17S6Y9v3y3S;
-
-		internal void _tFTAzUh4cNfoxvBvOhPdwJ4x9h4(Control control_0, MouseEventArgs mouseEventArgs_0)
-		{
-			int obj = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
-			_wr6xcvFOgUbaTATC17S6Y9v3y3S._L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-			_wr6xcvFOgUbaTATC17S6Y9v3y3S._qhAM4Wrvf8c5jzKBQqLfosAE9D(obj);
-		}
-	}
-
 	public static readonly Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?> _HSj1lr89AFIB9adVhSrAeWjS1xC = new Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?>
 	{
 		{
@@ -690,7 +650,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		}
 	};
 
-	public static char? _O2N6YVYHWf1FQNPMGlnVDG8GTqe(this Microsoft.Xna.Framework.Input.Keys keys_0, bool bool_0)
+	public static char? ChangeKeyboard(this Microsoft.Xna.Framework.Input.Keys keys_0, bool bool_0)
 	{
 		return keys_0 switch
 		{
@@ -765,7 +725,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		};
 	}
 
-	public static void _EMnZAXxoqoahiGOiNjffRycLtDE(this Desktop desktop_0, string string_0, string string_1 = null)
+	public static void SetSkin(this Desktop desktop_0, string string_0, string string_1 = null)
 	{
 		_JQQysO7uwugUSzo1g63o3jzSP4H jQQysO7uwugUSzo1g63o3jzSP4H = new _JQQysO7uwugUSzo1g63o3jzSP4H();
 		jQQysO7uwugUSzo1g63o3jzSP4H._Gz8axRA2ks9sOlb2vx60ucqDEM0($"{AppDomain.CurrentDomain.BaseDirectory}/Content-Release/{string_0}.xml");
@@ -782,7 +742,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		}
 	}
 
-	public static void _0pVU36wp9GYD1jM18raZtVEbA9q(this Desktop desktop_0, string string_0, int int_0, string string_1 = "OK", Action action_0 = null)
+	public static void ShowConfirm(this Desktop desktop_0, string string_0, int int_0, string string_1 = "OK", Action action_0 = null)
 	{
 		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
 		{
@@ -821,7 +781,7 @@ public static class _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
 	}
 
-	public static void _GtkWDtXwQHwgWY4aFkacjfUDyzb(this Desktop desktop_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
+	public static void ShowSelection(this Desktop desktop_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
 	{
 		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
 		{

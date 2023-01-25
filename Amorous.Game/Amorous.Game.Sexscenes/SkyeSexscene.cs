@@ -50,20 +50,20 @@ public class SkyeSexscene : CensoredSexscene
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Sex");
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1500f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 2000f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 1500f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 2000f;
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 950f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 950f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1100f;
 		}
 		_p65Ex7slWkEu44TWzMfnrHkavQb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex");
 		_a2vuTNBvRtI0ysFdoyLqbnVKmKb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
 		_8Wpyx8UxfA2ieouQH6qdonhcCok = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		bool flag = opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SkyeSkinYellow");
-		bool flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SkyeSkinBlue");
+		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		bool flag = opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("SkyeSkinYellow");
+		bool flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("SkyeSkinBlue");
 		if (!(flag && flag2))
 		{
 			if (flag)
@@ -107,23 +107,23 @@ public class SkyeSexscene : CensoredSexscene
 		}
 	}
 
-	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
 		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye shin back", 1f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", 1f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player belly stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player knot", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player belly stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player knot", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye tail", 1f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye thigh left", 1f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye body", 1f);
@@ -143,17 +143,17 @@ public class SkyeSexscene : CensoredSexscene
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelids", 1f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head", 1f);
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelash", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underbelly", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player belly stripes", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player knot", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underbelly", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player belly stripes", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.B / 255f);
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player knot", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.B / 255f);
 			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Player wetness");
 		}
 		else

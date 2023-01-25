@@ -1,9 +1,9 @@
 namespace Amorous.Game.Scenes;
 
-public class ClubBarScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class ClubBarScene : AbstractScene
 {
-	public ClubBarScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public ClubBarScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/ClubBar/Base", 0, 0);
 		_NC5VT77x8y2iH2pW56TBN1eyomA("Bar", "Assets/Scenes/ClubBar/Bar", 0, 0);

@@ -6,22 +6,8 @@ namespace Amorous.Engine.NPC;
 
 public abstract class LayerNPC<THead, TPose, TClothes> : _xZgbANe7gi6i2DAhBEkKpR1QFLe where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
 {
-	[Serializable]
-	[CompilerGenerated]
-	private sealed class _CLzBOI60196rKXmrRzSRwNuiYqP
-	{
-		public static readonly _CLzBOI60196rKXmrRzSRwNuiYqP _003C_003E9 = new _CLzBOI60196rKXmrRzSRwNuiYqP();
-
-		public static Func<TClothes, string> _003C_003E9__6_0;
-
-		internal string _jDsAwjl1Oz7ULh4XTWJjpVW0wjL(TClothes gparam_0)
-		{
-			return Enum.GetName(typeof(TClothes), (object)gparam_0);
-		}
-	}
-
-	protected LayerNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, float float_0 = 1f)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string_0, float_0)
+	protected LayerNPC(IAmorous game, string string_0, float float_0 = 1f)
+		: base(game, string_0, float_0)
 	{
 	}
 

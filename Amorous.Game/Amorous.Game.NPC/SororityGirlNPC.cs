@@ -23,12 +23,12 @@ public class SororityGirlNPC : LayerNPC<SororityGirlNPC.EHeads, SororityGirlNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Lunar";
+	public static string Name = "Lunar";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(221, 110, 218);
+	public static Color Color = new Color(221, 110, 218);
 
-	public SororityGirlNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/SororityGirl", 1f)
+	public SororityGirlNPC(IAmorous game)
+		: base(Game, "Assets/NPC/SororityGirl", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Sorority Girl Body");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Sorority Girl Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
@@ -44,18 +44,18 @@ public class SororityGirlNPC : LayerNPC<SororityGirlNPC.EHeads, SororityGirlNPC.
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 665f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 126f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 665f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 126f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -60f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 126f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -60f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 126f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1390f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 126f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1390f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 126f;
 			break;
 		}
 	}

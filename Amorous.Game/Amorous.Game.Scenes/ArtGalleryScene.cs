@@ -1,9 +1,9 @@
 namespace Amorous.Game.Scenes;
 
-public class ArtGalleryScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class ArtGalleryScene : AbstractScene
 {
-	public ArtGalleryScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public ArtGalleryScene(IAmorous game)
+		: base(Game)
 	{
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{

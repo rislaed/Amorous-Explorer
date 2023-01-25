@@ -1,45 +1,45 @@
 using Amorous.Game.Data.Cutscenes;
 using Microsoft.Xna.Framework;
 
-public class _ruYqFXOuzASxQLRDZQH6mm7soaA : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<JaxContactsCheckEventData>
+public class _ruYqFXOuzASxQLRDZQH6mm7soaA : AbstractEvent<JaxContactsCheckEventData>
 {
-	public int _SrLuBKGUzHvUzfECn7Dki6u1ylE { get; set; }
+	public int OnlyJaxID { get; set; }
 
-	public int _2vHIKBwcNS2YnDTBk3YPCPB6uUPA { get; set; }
+	public int OneOrTwoID { get; set; }
 
-	public int _tYEqM5Knj8AGULDcKcMshe9SYBp { get; set; }
+	public int ThreeOrMoreID { get; set; }
 
 	public _ruYqFXOuzASxQLRDZQH6mm7soaA(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
 
-	public override void _dCiaLpIow7UQ0MLMp2O4J0yeVfF(JaxContactsCheckEventData jaxContactsCheckEventData_0)
+	public override void SetData(JaxContactsCheckEventData jaxContactsCheckEventData_0)
 	{
-		base._dCiaLpIow7UQ0MLMp2O4J0yeVfF(jaxContactsCheckEventData_0);
-		_SrLuBKGUzHvUzfECn7Dki6u1ylE = jaxContactsCheckEventData_0._SrLuBKGUzHvUzfECn7Dki6u1ylE;
-		_2vHIKBwcNS2YnDTBk3YPCPB6uUPA = jaxContactsCheckEventData_0._2vHIKBwcNS2YnDTBk3YPCPB6uUPA;
-		_tYEqM5Knj8AGULDcKcMshe9SYBp = jaxContactsCheckEventData_0._tYEqM5Knj8AGULDcKcMshe9SYBp;
+		base.SetData(jaxContactsCheckEventData_0);
+		OnlyJaxID = jaxContactsCheckEventData_0.OnlyJaxID;
+		OneOrTwoID = jaxContactsCheckEventData_0.OneOrTwoID;
+		ThreeOrMoreID = jaxContactsCheckEventData_0.ThreeOrMoreID;
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)
+	public override void Update(GameTime gameTime)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
 		int num = opIJo2jLUqdOL5yAFP4yzXce0DG._X1b0dyIzsSyKwqWd3usrbDfKJAk();
 		if (num > 1)
 		{
 			if (num >= 1 && num <= 2)
 			{
-				base._GUdPCTGCrEJpuEchc38clNBP3ZAA = _2vHIKBwcNS2YnDTBk3YPCPB6uUPA;
+				base.NextID = OneOrTwoID;
 			}
 			else
 			{
-				base._GUdPCTGCrEJpuEchc38clNBP3ZAA = _tYEqM5Knj8AGULDcKcMshe9SYBp;
+				base.NextID = ThreeOrMoreID;
 			}
 		}
 		else
 		{
-			base._GUdPCTGCrEJpuEchc38clNBP3ZAA = _SrLuBKGUzHvUzfECn7Dki6u1ylE;
+			base.NextID = OnlyJaxID;
 		}
 		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 	}

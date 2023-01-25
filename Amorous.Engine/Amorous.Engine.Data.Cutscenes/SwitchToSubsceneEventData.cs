@@ -4,8 +4,8 @@ using Newtonsoft.Json;
 namespace Amorous.Engine.Data.Cutscenes;
 
 [Serializable]
-public class SwitchToSubsceneEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class SwitchToSubsceneEventData : EventData
 {
 	[JsonProperty("SubsceneName")]
-	public string _pLOoWzK05fpdh5qvjat0uSRyR0M { get; set; }
+	public string SubsceneName { get; set; }
 }

@@ -10,17 +10,17 @@ public class _fAUddQEKfZyemRb327NhM3GGlmzA : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	public Action<SpriteBatch> _B6VrMlmWofCGqEzjzgFJiAliCge { private get; set; }
 
-	public _fAUddQEKfZyemRb327NhM3GGlmzA(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)
-		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
+	public _fAUddQEKfZyemRb327NhM3GGlmzA(AbstractScene AbstractScene_0, string string_0)
+		: base(AbstractScene_0, string_0)
 	{
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public override void Update(GameTime gameTime_0)
 	{
 		_NC5P3SKqKPpcAYG1mqquUEcUzTg?.Invoke(gameTime_0);
 	}
 
-	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
+	public override void Draw(SpriteBatch spriteBatch_0)
 	{
 		_B6VrMlmWofCGqEzjzgFJiAliCge?.Invoke(spriteBatch_0);
 	}

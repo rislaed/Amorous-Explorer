@@ -9,56 +9,56 @@ public class _zkUeZhJDizkmvvRfp4S0G7aap8J
 	public class _CIFXVF6lKl3nSrVOhqjcFXDVlXc
 	{
 		[JsonProperty("Name")]
-		public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; set; }
+		public string Name { get; set; }
 
 		[JsonProperty("Location")]
-		public NPCLocation _qZXN2SXhpGdh4T5ZXzgMA9gjYZE { get; set; }
+		public NPCLocation Location { get; set; }
 
 		[JsonProperty("Head")]
-		public string _kni1uFw1BPElsVA74myj9H1jAKh { get; set; }
+		public string Head { get; set; }
 
 		[JsonProperty("Pose")]
-		public string _UjXB7oNK1WnbtEn6d4PkoGLaYEE { get; set; }
+		public string Pose { get; set; }
 
 		[JsonProperty("Clothes")]
-		public string[] _wUcbLpwYJ1T1bI8GaQwj9Jxx4YX { get; set; }
+		public string[] Clothes { get; set; }
 
 		[JsonProperty("Layer")]
-		public _a2qVgWDIm3fBp49WubttSTPsx8K _dPmC8tBC0iph2YBAFmztEsmwUdSA { get; set; }
+		public LayerOrder Layer { get; set; }
 
 		[JsonProperty("LayerOrder")]
-		public int _VNgmwYSLsJyyiR6cPQ35UHJBR4d { get; set; }
+		public int LayerOrder { get; set; }
 	}
 
 	[JsonProperty("Name")]
-	public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; set; }
+	public string Name { get; set; }
 
 	[JsonProperty("Stage")]
-	public int _8NBsjeWoi7V64KoA9ZtIybPpcom { get; set; }
+	public int Stage { get; set; }
 
 	[JsonProperty("ID")]
-	public int _WCJjJQRlVoZM67usdV2f1OR3arG { get; set; }
+	public int ID { get; set; }
 
 	[JsonProperty("Scene")]
-	public string _XbOXR6AypLIdJ3gBMGseGi3Wi2i { get; set; }
+	public string Scene { get; set; }
 
 	[JsonProperty("Subscene")]
-	public string _tTalXU1p5sOHKNCtH0ZDWD55yfD { get; set; }
+	public string Subscene { get; set; }
 
 	[JsonProperty("Sexscene")]
-	public string _KVSwpLj0RvURRswHn7ogRy4BRfd { get; set; }
+	public string Sexscene { get; set; }
 
 	[JsonProperty("SexscenePhase")]
-	public _TwlwMC1hhdSzamwGWEBxuUkz1gH._qokIrmaaT3Lq6znW10HdrPUO9Fq _zGDIuIFdpGkZI7SJBoEsZdKoN9F { get; set; }
+	public _TwlwMC1hhdSzamwGWEBxuUkz1gH._qokIrmaaT3Lq6znW10HdrPUO9Fq SexscenePhase { get; set; }
 
 	[JsonProperty("SexsceneFinished")]
-	public bool _xEhNfzWWkAGsoMu0XE2Cy84SXcp { get; set; }
+	public bool SexsceneFinished { get; set; }
 
 	[JsonProperty("FadedOut")]
-	public bool _KR48sJtGCfgf7jYtIsrj2N1iO3n { get; set; }
+	public bool FadedOut { get; set; }
 
 	[JsonProperty("NPCs")]
-	public List<_CIFXVF6lKl3nSrVOhqjcFXDVlXc> _SE8JVSojXz0WQ6EAeInGo3JGvSr { get; }
+	public List<_CIFXVF6lKl3nSrVOhqjcFXDVlXc> NPCs { get; }
 
 	public _zkUeZhJDizkmvvRfp4S0G7aap8J()
 	{
@@ -69,16 +69,16 @@ public class _zkUeZhJDizkmvvRfp4S0G7aap8J
 	{
 		if (_3IHp43rpkJgOBcY9lrIrwMuwWve_0 != null)
 		{
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT _4QLHHCk23T1BjK7acKxASbkCefG = _3IHp43rpkJgOBcY9lrIrwMuwWve_0._4QLHHCk23T1BjK7acKxASbkCefG;
-			_SE8JVSojXz0WQ6EAeInGo3JGvSr.Add(new _CIFXVF6lKl3nSrVOhqjcFXDVlXc
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT NPC = _3IHp43rpkJgOBcY9lrIrwMuwWve_0.NPC;
+			NPCs.Add(new _CIFXVF6lKl3nSrVOhqjcFXDVlXc
 			{
-				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = _4QLHHCk23T1BjK7acKxASbkCefG.GetType().Name,
-				_qZXN2SXhpGdh4T5ZXzgMA9gjYZE = _4QLHHCk23T1BjK7acKxASbkCefG._9m9LEAgaqaeXydYhykSBmf9BrDG,
-				_kni1uFw1BPElsVA74myj9H1jAKh = _4QLHHCk23T1BjK7acKxASbkCefG._mdS7Bu4eiPPwoFWUcGEOTzh73TJ,
-				_UjXB7oNK1WnbtEn6d4PkoGLaYEE = _4QLHHCk23T1BjK7acKxASbkCefG._vzNADWxcLucI3DyP1CebcfYXRut,
-				_wUcbLpwYJ1T1bI8GaQwj9Jxx4YX = _4QLHHCk23T1BjK7acKxASbkCefG._QeyVQAHb3TegEFsv9IPdYmxNkGZ,
-				_dPmC8tBC0iph2YBAFmztEsmwUdSA = _3IHp43rpkJgOBcY9lrIrwMuwWve_0._dPmC8tBC0iph2YBAFmztEsmwUdSA,
-				_VNgmwYSLsJyyiR6cPQ35UHJBR4d = _3IHp43rpkJgOBcY9lrIrwMuwWve_0._VNgmwYSLsJyyiR6cPQ35UHJBR4d
+				Name = NPC.GetType().Name,
+				Location = NPC._9m9LEAgaqaeXydYhykSBmf9BrDG,
+				Head = NPC._mdS7Bu4eiPPwoFWUcGEOTzh73TJ,
+				Pose = NPC._vzNADWxcLucI3DyP1CebcfYXRut,
+				Clothes = NPC._QeyVQAHb3TegEFsv9IPdYmxNkGZ,
+				Layer = _3IHp43rpkJgOBcY9lrIrwMuwWve_0.Layer,
+				LayerOrder = _3IHp43rpkJgOBcY9lrIrwMuwWve_0.LayerOrder
 			});
 		}
 	}

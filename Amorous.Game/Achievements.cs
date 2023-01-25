@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
+public class Achievements : IAchievements
 {
 	public enum _UARKn0z34q7eyfLAgMhaieKBn33
 	{
@@ -19,9 +19,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 		public _UARKn0z34q7eyfLAgMhaieKBn33 _hEIssNuRoEdRDJFan5fSkzWu4Kj { get; }
 
-		public string _dFaIUhufvE2Ld5IjNEwmPAqqraj { get; }
+		public string Icon { get; }
 
-		public string _D5QiLGGNtfoCEnZIUPvH4OKqUabA { get; }
+		public string Title { get; }
 
 		public _eT2GJReQj8Acaq2A0H0eUir97Qf(string string_0, string string_1, string string_2, string string_3 = "MessageIconGeneric", _UARKn0z34q7eyfLAgMhaieKBn33 _UARKn0z34q7eyfLAgMhaieKBn33_0 = _UARKn0z34q7eyfLAgMhaieKBn33.Generic)
 		{
@@ -30,23 +30,6 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			_EMZ4CoDjMCDwqSRTQd7miSitflF = _UARKn0z34q7eyfLAgMhaieKBn33_0;
 			_jmAZYxwCQcYOplIbeFsAtU6Dz8 = string_3;
 			_fHbF0r78UBMiyDseUhbwAvEaqmp = string_2;
-		}
-	}
-
-	[Serializable]
-	[CompilerGenerated]
-	private sealed class _1P2C9RqwI9antv0TdlfSFX7hSNN
-	{
-		public static readonly _1P2C9RqwI9antv0TdlfSFX7hSNN _003C_003E9 = new _1P2C9RqwI9antv0TdlfSFX7hSNN();
-
-		internal string _MmgdYv4AApuJX4n5p2gbDbN8qQt(_eT2GJReQj8Acaq2A0H0eUir97Qf _eT2GJReQj8Acaq2A0H0eUir97Qf_0)
-		{
-			return _eT2GJReQj8Acaq2A0H0eUir97Qf_0._qXE0hlPdNyl0lTUyddbAS1PZhVV;
-		}
-
-		internal _eT2GJReQj8Acaq2A0H0eUir97Qf _Bk0Vy9lXRoDeZhFo5f6ECTzMbFeA(_eT2GJReQj8Acaq2A0H0eUir97Qf _eT2GJReQj8Acaq2A0H0eUir97Qf_0)
-		{
-			return _eT2GJReQj8Acaq2A0H0eUir97Qf_0;
 		}
 	}
 
@@ -193,7 +176,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	public const string _G2CT6QF50RIPQkOak7frGuTK7ru = "MessageTutorial1";
 
-	private readonly _JbeCmOie0phb2cbgG6DdGZrbs3pB _4L7hfXrWoDdArQiscG4ukHCV46B;
+	private readonly IAmorous Amorous;
 
 	private readonly _KDiaUloddpdv1QwixDEBIJs6IMA _p3BLtW5bCDzTS86VFihe1pfwDoP;
 
@@ -201,9 +184,9 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	public bool _J5VHNpAqpO7aNRC9sbWCZTOF7XS => _p3BLtW5bCDzTS86VFihe1pfwDoP != null;
 
-	public _bm5ybW5ND5sDF6bvP0sbYyOpvP(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _KDiaUloddpdv1QwixDEBIJs6IMA _KDiaUloddpdv1QwixDEBIJs6IMA_0)
+	public Achievements(IAmorous game, _KDiaUloddpdv1QwixDEBIJs6IMA _KDiaUloddpdv1QwixDEBIJs6IMA_0)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
+		Amorous = game;
 		_p3BLtW5bCDzTS86VFihe1pfwDoP = _KDiaUloddpdv1QwixDEBIJs6IMA_0;
 	}
 
@@ -227,7 +210,7 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 		}
 	}
 
-	public void _fPyIv5zbbSj5sjZlbAwQTFXnJ5G(string string_0, int int_0)
+	public void SetDecimal(string string_0, int int_0)
 	{
 		if (string_0 == "JaxDate" && int_0 == 20)
 		{
@@ -342,39 +325,39 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 		}
 	}
 
-	public void _4Fscz8ryB3hm0NmL5xw39HHiPd1(string string_0, bool bool_0)
+	public void SetBit(string string_0, bool bool_0)
 	{
 	}
 
-	public void _rGMDL1kMYXSwaZiIoINCo5AqZuM(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts ephoneContacts_0)
+	public void _rGMDL1kMYXSwaZiIoINCo5AqZuM(PlayerData.EPhoneContacts ephoneContacts_0)
 	{
 		switch (ephoneContacts_0)
 		{
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye:
+		case PlayerData.EPhoneContacts.Skye:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberSkye");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Dustin:
+		case PlayerData.EPhoneContacts.Dustin:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberDustin");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby:
+		case PlayerData.EPhoneContacts.Coby:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberCoby");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax:
+		case PlayerData.EPhoneContacts.Jax:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberJax");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth:
+		case PlayerData.EPhoneContacts.Seth:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberSeth");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith:
+		case PlayerData.EPhoneContacts.Zenith:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberZenith");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Mercy:
+		case PlayerData.EPhoneContacts.Mercy:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberMercy");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy:
+		case PlayerData.EPhoneContacts.Remy:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberRemy");
 			break;
-		case _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex:
+		case PlayerData.EPhoneContacts.Lex:
 			_vVZVLriSGPExpn1KeobglMabsoi("AchievementPhonenumberLex");
 			break;
 		}
@@ -382,12 +365,12 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 
 	public void _vVZVLriSGPExpn1KeobglMabsoi(string string_0)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf(string_0))
+		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit(string_0))
 		{
 			return;
 		}
-		opIJo2jLUqdOL5yAFP4yzXce0DG._4Fscz8ryB3hm0NmL5xw39HHiPd1(string_0, bool_0: true);
+		opIJo2jLUqdOL5yAFP4yzXce0DG.SetBit(string_0, bool_0: true);
 		if (_f6JnaqJEhaBQyPQ8hoUgwIj9WcQ.TryGetValue(string_0, out var value))
 		{
 			if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
@@ -396,34 +379,34 @@ public class _bm5ybW5ND5sDF6bvP0sbYyOpvP : _691ooXdgg17CWFkMkjedKBBBfYw
 			}
 			if (value._hEIssNuRoEdRDJFan5fSkzWu4Kj != _UARKn0z34q7eyfLAgMhaieKBn33.Contact)
 			{
-				_A3aw0JDUC0JuHjJDLBjCNpAj01Q(value._D5QiLGGNtfoCEnZIUPvH4OKqUabA, value._dFaIUhufvE2Ld5IjNEwmPAqqraj);
+				_A3aw0JDUC0JuHjJDLBjCNpAj01Q(value.Title, value.Icon);
 			}
 			else
 			{
-				_8DePzSVoGzWFpzrB1bmfWEjf0uy(value._D5QiLGGNtfoCEnZIUPvH4OKqUabA, value._dFaIUhufvE2Ld5IjNEwmPAqqraj);
+				_8DePzSVoGzWFpzrB1bmfWEjf0uy(value.Title, value.Icon);
 			}
 		}
 	}
 
 	private void _A3aw0JDUC0JuHjJDLBjCNpAj01Q(string string_0, string string_1)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_1, "Achievement", "Congratulations, you've unlocked the '" + string_0 + "'-achievement!");
+		Amorous._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_1, "Achievement", "Congratulations, you've unlocked the '" + string_0 + "'-achievement!");
 	}
 
 	private void _8DePzSVoGzWFpzrB1bmfWEjf0uy(string string_0, string string_1)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_1, "Contact", "The phonenumber of " + string_0 + " has been added to your contacts!");
+		Amorous._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_1, "Contact", "The phonenumber of " + string_0 + " has been added to your contacts!");
 	}
 
 	public void _0Y1BTbSbP9IopfJXfeA4x02PifL(string string_0)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		if (!opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf(string_0))
+		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (!opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit(string_0))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._4Fscz8ryB3hm0NmL5xw39HHiPd1(string_0, bool_0: true);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetBit(string_0, bool_0: true);
 			if (string_0 == "MessageTutorial1")
 			{
-				_4L7hfXrWoDdArQiscG4ukHCV46B._EXfoFnp1OKxeZbd4GcVZMCO2urH("MessageIconGeneric", "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
+				Amorous._EXfoFnp1OKxeZbd4GcVZMCO2urH("MessageIconGeneric", "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
 			}
 		}
 	}

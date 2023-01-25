@@ -4,14 +4,14 @@ using Newtonsoft.Json;
 namespace Amorous.Game.Data.Cutscenes;
 
 [Serializable]
-public class JaxContactsCheckEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class JaxContactsCheckEventData : EventData
 {
 	[JsonProperty("OnlyJaxID")]
-	public int _SrLuBKGUzHvUzfECn7Dki6u1ylE { get; set; }
+	public int OnlyJaxID { get; set; }
 
 	[JsonProperty("OneOrTwoID")]
-	public int _2vHIKBwcNS2YnDTBk3YPCPB6uUPA { get; set; }
+	public int OneOrTwoID { get; set; }
 
 	[JsonProperty("ThreeOrMoreID")]
-	public int _tYEqM5Knj8AGULDcKcMshe9SYBp { get; set; }
+	public int ThreeOrMoreID { get; set; }
 }

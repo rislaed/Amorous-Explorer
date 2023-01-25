@@ -27,8 +27,8 @@ public class _hiwkgwXJpRLUFatcgZFfH6ECNfm : _21uBmerICJi18moE2gpxlEipBgz
 
 	private static _uqydQVaCmCvK7zzWs5W4gZFpKBu _KWjszP7sbsK49TDae2RymaJYdVG;
 
-	public _hiwkgwXJpRLUFatcgZFfH6ECNfm(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public _hiwkgwXJpRLUFatcgZFfH6ECNfm(IAmorous game)
+		: base(Game)
 	{
 		_INEJ4fjMGg0xqzZyqg6dhgwgFuJ = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Bicep", "Assets/Scenes/MainMenu/Bicep", -240, -135);
 		_HzpuNgBJAQYObWMhiboQRiPGmvp = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Nails", "Assets/Scenes/MainMenu/Nails", -240, -135);
@@ -44,28 +44,28 @@ public class _hiwkgwXJpRLUFatcgZFfH6ECNfm : _21uBmerICJi18moE2gpxlEipBgz
 		_KWjszP7sbsK49TDae2RymaJYdVG = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Hand Avian", "Assets/Scenes/MainMenu/Avian hand", -240, -135);
 	}
 
-	public override void _oD87G7SXjsTukw7IVWxVlVFEgvA(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	public override void Initialize(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
-		_INEJ4fjMGg0xqzZyqg6dhgwgFuJ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
-		_HzpuNgBJAQYObWMhiboQRiPGmvp._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._in5HHYmrdLTFpkgc8aimJpXqAXB;
-		_HzpuNgBJAQYObWMhiboQRiPGmvp._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._VmNLhqrIwSnE6JnCYiBcxnSqnEV;
-		_8sPFDDypgS5X46RyH9fsZkixV6A._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
-		_RGn2RWWok64qKnkTEl3xHTvBHTf._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G;
-		_b8fQLPu8wgP0zb6b5uh6NiZnbti._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
-		_b8fQLPu8wgP0zb6b5uh6NiZnbti._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes);
-		_nOGsauTMzdwD2xarXHlMLauvbPi._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._1ZKGQXLRAHEJR8v7jhlDsyOVLcz;
-		_nOGsauTMzdwD2xarXHlMLauvbPi._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm);
-		_PD530TR81Bikn39qLQleQO1Lcce._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._1ZKGQXLRAHEJR8v7jhlDsyOVLcz;
-		_PD530TR81Bikn39qLQleQO1Lcce._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm);
-		_CgYyaJ1fBglIlQonaP3yzTPvphk._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._8rDSn6e9Ip9WdOogjhIn8YlL1oM;
-		_CgYyaJ1fBglIlQonaP3yzTPvphk._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.ShortForearm);
-		_fMXez7BKdCTeNXQWYWvZhBekAM0._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ;
-		_fMXez7BKdCTeNXQWYWvZhBekAM0._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes);
-		_ZwJ4BSN6LGNljQT9ELN8Q1CnKXF._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._FrsyMDX7TebzFk8nSLTyRDPi1QH;
-		_ZwJ4BSN6LGNljQT9ELN8Q1CnKXF._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm);
-		_MubEAV4dekM9lVl1ANEZ7Lm5xGF._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._FrsyMDX7TebzFk8nSLTyRDPi1QH;
-		_MubEAV4dekM9lVl1ANEZ7Lm5xGF._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm);
-		_KWjszP7sbsK49TDae2RymaJYdVG._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._FrsyMDX7TebzFk8nSLTyRDPi1QH;
-		_KWjszP7sbsK49TDae2RymaJYdVG._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.AvianForearm);
+		_INEJ4fjMGg0xqzZyqg6dhgwgFuJ.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor;
+		_HzpuNgBJAQYObWMhiboQRiPGmvp.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.NailColor;
+		_HzpuNgBJAQYObWMhiboQRiPGmvp._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShowNails;
+		_8sPFDDypgS5X46RyH9fsZkixV6A.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor;
+		_RGn2RWWok64qKnkTEl3xHTvBHTf.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor;
+		_b8fQLPu8wgP0zb6b5uh6NiZnbti.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor;
+		_b8fQLPu8wgP0zb6b5uh6NiZnbti._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes);
+		_nOGsauTMzdwD2xarXHlMLauvbPi.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.LongForearmColor;
+		_nOGsauTMzdwD2xarXHlMLauvbPi._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
+		_PD530TR81Bikn39qLQleQO1Lcce.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.LongForearmColor;
+		_PD530TR81Bikn39qLQleQO1Lcce._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
+		_CgYyaJ1fBglIlQonaP3yzTPvphk.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShortForearmColor;
+		_CgYyaJ1fBglIlQonaP3yzTPvphk._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm);
+		_fMXez7BKdCTeNXQWYWvZhBekAM0.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor;
+		_fMXez7BKdCTeNXQWYWvZhBekAM0._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes);
+		_ZwJ4BSN6LGNljQT9ELN8Q1CnKXF.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.AvianForearmColor;
+		_ZwJ4BSN6LGNljQT9ELN8Q1CnKXF._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
+		_MubEAV4dekM9lVl1ANEZ7Lm5xGF.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.AvianForearmColor;
+		_MubEAV4dekM9lVl1ANEZ7Lm5xGF._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
+		_KWjszP7sbsK49TDae2RymaJYdVG.Color = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.AvianForearmColor;
+		_KWjszP7sbsK49TDae2RymaJYdVG._Fxy2SlgceW90FloFw6a1AEJODYA = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
 	}
 }

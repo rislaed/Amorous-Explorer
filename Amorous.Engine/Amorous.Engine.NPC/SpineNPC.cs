@@ -6,22 +6,8 @@ namespace Amorous.Engine.NPC;
 
 public abstract class SpineNPC<THead, TPose, TClothes> : _tfDAeR6npiqJMLRSXPO1DxGA0TgA where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
 {
-	[Serializable]
-	[CompilerGenerated]
-	private sealed class _syJCkHa67aOBa0YvSpixzD7bRPF
-	{
-		public static readonly _syJCkHa67aOBa0YvSpixzD7bRPF _003C_003E9 = new _syJCkHa67aOBa0YvSpixzD7bRPF();
-
-		public static Func<TClothes, string> _003C_003E9__6_0;
-
-		internal string _jDsAwjl1Oz7ULh4XTWJjpVW0wjL(TClothes gparam_0)
-		{
-			return Enum.GetName(typeof(TClothes), (object)gparam_0);
-		}
-	}
-
-	protected SpineNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, float float_0 = 1f, bool bool_0 = true)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string_0, float_0, bool_0)
+	protected SpineNPC(IAmorous game, string string_0, float float_0 = 1f, bool bool_0 = true)
+		: base(game, string_0, float_0, bool_0)
 	{
 	}
 

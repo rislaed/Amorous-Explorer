@@ -6,26 +6,26 @@ using Squid;
 
 public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 {
-	public _JbeCmOie0phb2cbgG6DdGZrbs3pB _ZzBuoSDMWwerejOO9Goyv2OCKgE { get; private set; }
+	public IAmorous Game { get; private set; }
 
 	public List<_1dTaaW9MQWoHm2Pqblg0u9bPhpe> _6qfro4buoEQEXNMVAj08xANyjWf { get; private set; }
 
 	public bool _nJKYvZJ57vjjlQwmoeBmKihtS0b { get; set; }
 
-	public _8lVOgkauaSHbAkAqHzI1K7mIyOI(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public _8lVOgkauaSHbAkAqHzI1K7mIyOI(IAmorous amorous)
 	{
-		_ZzBuoSDMWwerejOO9Goyv2OCKgE = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
+		Game = amorous;
 		_6qfro4buoEQEXNMVAj08xANyjWf = new List<_1dTaaW9MQWoHm2Pqblg0u9bPhpe>();
 		_nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 	}
 
 	public _d4ad1i8rcZMvfN9iaxggA1KtVgx _aiunwWjasFcF9afjl2FnUxWXB0M(string string_0, string string_1, int int_0, int int_1, Microsoft.Xna.Framework.Rectangle rectangle_0, Action action_0)
 	{
-		Texture2D texture2D_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
+		Texture2D texture2D_ = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 		Texture2D texture2D_2 = null;
 		if (!string.IsNullOrEmpty(string_1))
 		{
-			texture2D_2 = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
+			texture2D_2 = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
 		}
 		return _aiunwWjasFcF9afjl2FnUxWXB0M(texture2D_, texture2D_2, int_0, int_1, rectangle_0, action_0);
 	}
@@ -34,8 +34,8 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 	{
 		_d4ad1i8rcZMvfN9iaxggA1KtVgx d4ad1i8rcZMvfN9iaxggA1KtVgx = new _d4ad1i8rcZMvfN9iaxggA1KtVgx(texture2D_0, texture2D_1, action_0)
 		{
-			_7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0,
-			_bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1,
+			X = int_0,
+			Y = int_1,
 			_2psWLw4AI8EIjQzaXnhGg8M1FnaA = rectangle_0
 		};
 		_6qfro4buoEQEXNMVAj08xANyjWf.Add(d4ad1i8rcZMvfN9iaxggA1KtVgx);
@@ -44,13 +44,13 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	public _iHJrndJdM1jj9TEnuU3BvgdDuvf _QVqIVxBeF2SAQh6HDFwwp2RFmXB(string string_0, string string_1, string string_2, string string_3, Color color_0, int int_0, int int_1, Microsoft.Xna.Framework.Rectangle rectangle_0, Action action_0)
 	{
-		Texture2D texture2D_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
+		Texture2D texture2D_ = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
 		Texture2D texture2D_2 = null;
 		if (!string.IsNullOrEmpty(string_1))
 		{
-			texture2D_2 = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
+			texture2D_2 = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_1);
 		}
-		SpriteFont spriteFont_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>(string_2);
+		SpriteFont spriteFont_ = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>(string_2);
 		return _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_, texture2D_2, spriteFont_, string_3, color_0, int_0, int_1, rectangle_0, action_0);
 	}
 
@@ -58,8 +58,8 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 	{
 		_iHJrndJdM1jj9TEnuU3BvgdDuvf iHJrndJdM1jj9TEnuU3BvgdDuvf = new _iHJrndJdM1jj9TEnuU3BvgdDuvf(texture2D_0, texture2D_1, spriteFont_0, string_0, color_0, action_0)
 		{
-			_7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0,
-			_bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1,
+			X = int_0,
+			Y = int_1,
 			_2psWLw4AI8EIjQzaXnhGg8M1FnaA = rectangle_0
 		};
 		_6qfro4buoEQEXNMVAj08xANyjWf.Add(iHJrndJdM1jj9TEnuU3BvgdDuvf);
@@ -68,24 +68,24 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	public _abqs0UynzjUEhuA3VpR4t6Uuk0E _83EecuYIFalvL6Gd1s9MoTLHdgq(string string_0, string string_1, Alignment alignment_0, Color color_0, int int_0, int int_1)
 	{
-		SpriteFont spriteFont_ = _ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>(string_0);
+		SpriteFont spriteFont_ = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>(string_0);
 		_abqs0UynzjUEhuA3VpR4t6Uuk0E abqs0UynzjUEhuA3VpR4t6Uuk0E = new _abqs0UynzjUEhuA3VpR4t6Uuk0E(spriteFont_, string_1, color_0)
 		{
-			_7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0,
-			_bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1,
-			_Jqhiw18E7t7bvnwwzxO89bHpPnL = alignment_0
+			X = int_0,
+			Y = int_1,
+			Gravity = alignment_0
 		};
 		_6qfro4buoEQEXNMVAj08xANyjWf.Add(abqs0UynzjUEhuA3VpR4t6Uuk0E);
 		return abqs0UynzjUEhuA3VpR4t6Uuk0E;
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public void Update(GameTime gameTime_0)
 	{
 		if (!_nJKYvZJ57vjjlQwmoeBmKihtS0b)
 		{
 			return;
 		}
-		Microsoft.Xna.Framework.Point value = _ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(_ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		Microsoft.Xna.Framework.Point value = Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
 		foreach (_1dTaaW9MQWoHm2Pqblg0u9bPhpe item in _6qfro4buoEQEXNMVAj08xANyjWf)
 		{
 			if (item._Fxy2SlgceW90FloFw6a1AEJODYA)
@@ -101,7 +101,7 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 				}
 			}
 		}
-		if (!_ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+		if (!Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 		{
 			return;
 		}
@@ -114,14 +114,14 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 		}
 	}
 
-	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
+	public void Draw(SpriteBatch spriteBatch_0)
 	{
 		spriteBatch_0.Begin();
 		foreach (_1dTaaW9MQWoHm2Pqblg0u9bPhpe item in _6qfro4buoEQEXNMVAj08xANyjWf)
 		{
 			if (item._Fxy2SlgceW90FloFw6a1AEJODYA)
 			{
-				item._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+				item.Draw(spriteBatch_0);
 			}
 		}
 		spriteBatch_0.End();

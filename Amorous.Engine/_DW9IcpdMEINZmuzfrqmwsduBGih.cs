@@ -11,7 +11,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 		public bool _3y7m8OGVjMe7WGIhZ66YOw3ITUE { get; set; }
 
-		public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; set; }
+		public string Name { get; set; }
 
 		public int _B3FsRMcQWBXzFf3nLOBKzncessO { get; set; }
 	}
@@ -32,7 +32,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	private static int? _siS1qYJcEWci7Kqwn9xPyVqEDUe;
 
-	public static void _7cuPUL8aamrg9daETH6zQk3RwbF(int int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0, string string_0 = "save")
+	public static void Save(int int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0, string string_0 = "save")
 	{
 		string contents = JsonConvert.SerializeObject(_lRHDfpOTd4PxClZkjMpoakPEA9d_0, Formatting.Indented, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
 		string path = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
@@ -41,10 +41,10 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	public static void _3y7m8OGVjMe7WGIhZ66YOw3ITUE(int int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d _lRHDfpOTd4PxClZkjMpoakPEA9d_0)
 	{
-		_7cuPUL8aamrg9daETH6zQk3RwbF(int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d_0, "autosave");
+		Save(int_0, _lRHDfpOTd4PxClZkjMpoakPEA9d_0, "autosave");
 	}
 
-	public static _lRHDfpOTd4PxClZkjMpoakPEA9d _sabDA8yXNR8DIRSbHjOcXx1e1Ax(int int_0, string string_0 = "save")
+	public static _lRHDfpOTd4PxClZkjMpoakPEA9d Read(int int_0, string string_0 = "save")
 	{
 		string path = _8tmmqFhFpUnpTGEL7HpnRhEGP7h(int_0, string_0);
 		string value = File.ReadAllText(path);
@@ -56,14 +56,14 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 			{
 				throw new InvalidDataException("data is null");
 			}
-			if (lRHDfpOTd4PxClZkjMpoakPEA9d._M29jWtsDcmPvHjIYYSiTa8TbWri == null)
+			if (lRHDfpOTd4PxClZkjMpoakPEA9d.PlayerData == null)
 			{
 				throw new InvalidDataException("PlayerData is null");
 			}
 		}
 		catch (Exception ex)
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Failed to load save: {0}", ex.ToString());
+			Logger.Warning("Failed to load save: {0}", ex.ToString());
 			lRHDfpOTd4PxClZkjMpoakPEA9d = null;
 		}
 		_AiegX5a7OwPp1LYkClPD8o1ULsK = string_0;
@@ -73,7 +73,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 
 	public static _lRHDfpOTd4PxClZkjMpoakPEA9d _NyR9YmfkeF4CXGOi1ENApzh6B5V(int int_0)
 	{
-		return _sabDA8yXNR8DIRSbHjOcXx1e1Ax(int_0, "autosave");
+		return Read(int_0, "autosave");
 	}
 
 	public static bool _IWX6rV0RuGLrk1esoZktU0seJBF(int int_0, string string_0 = "save")
@@ -107,7 +107,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 					{
 						_r4LqoJiAr5K9UiLsUzUDbcJDQqo = false,
 						_3y7m8OGVjMe7WGIhZ66YOw3ITUE = true,
-						_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Autosave #{i + 1} - {lastWriteTime:g}",
+						Name = $"Autosave #{i + 1} - {lastWriteTime:g}",
 						_B3FsRMcQWBXzFf3nLOBKzncessO = i
 					});
 				}
@@ -117,7 +117,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 					{
 						_r4LqoJiAr5K9UiLsUzUDbcJDQqo = true,
 						_3y7m8OGVjMe7WGIhZ66YOw3ITUE = true,
-						_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Autosave #{i + 1} - Empty",
+						Name = $"Autosave #{i + 1} - Empty",
 						_B3FsRMcQWBXzFf3nLOBKzncessO = i
 					});
 				}
@@ -132,7 +132,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 				{
 					_r4LqoJiAr5K9UiLsUzUDbcJDQqo = false,
 					_3y7m8OGVjMe7WGIhZ66YOw3ITUE = false,
-					_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Slot #{j + 1} - {lastWriteTime2:g}",
+					Name = $"Slot #{j + 1} - {lastWriteTime2:g}",
 					_B3FsRMcQWBXzFf3nLOBKzncessO = j
 				});
 			}
@@ -142,7 +142,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 				{
 					_r4LqoJiAr5K9UiLsUzUDbcJDQqo = true,
 					_3y7m8OGVjMe7WGIhZ66YOw3ITUE = false,
-					_RB8fRXeQvK5vs7JEA0XfVCEpg1i = $"Slot #{j + 1} - Empty",
+					Name = $"Slot #{j + 1} - Empty",
 					_B3FsRMcQWBXzFf3nLOBKzncessO = j
 				});
 			}
@@ -158,7 +158,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 			{
 				_r4LqoJiAr5K9UiLsUzUDbcJDQqo = false,
 				_3y7m8OGVjMe7WGIhZ66YOw3ITUE = (_AiegX5a7OwPp1LYkClPD8o1ULsK == "autosave"),
-				_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string.Empty,
+				Name = string.Empty,
 				_B3FsRMcQWBXzFf3nLOBKzncessO = _siS1qYJcEWci7Kqwn9xPyVqEDUe.Value
 			};
 		}
@@ -196,7 +196,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 		{
 			_r4LqoJiAr5K9UiLsUzUDbcJDQqo = (num < 0),
 			_3y7m8OGVjMe7WGIhZ66YOw3ITUE = flag,
-			_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string.Empty,
+			Name = string.Empty,
 			_B3FsRMcQWBXzFf3nLOBKzncessO = num
 		};
 	}

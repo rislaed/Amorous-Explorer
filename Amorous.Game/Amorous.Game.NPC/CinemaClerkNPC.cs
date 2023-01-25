@@ -23,12 +23,12 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Cryptic";
+	public static string Name = "Cryptic";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(255, 24, 24);
+	public static Color Color = new Color(255, 24, 24);
 
-	public CinemaClerkNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CinemaClerk", 1f)
+	public CinemaClerkNPC(IAmorous game)
+		: base(Game, "Assets/NPC/CinemaClerk", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Cinema Clerk Expressions");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Cinema Clerk Expressions - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
@@ -44,18 +44,18 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 413f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 22f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 413f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 22f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -190f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 22f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -190f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 22f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1016f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 22f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1016f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 22f;
 			break;
 		}
 	}

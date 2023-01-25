@@ -14,41 +14,41 @@ public class _G2GbwTTqXkVDMUL6fDmljsAPB4s
 
 	private readonly _gJR4g7ak0hsZAUWX1vJbMqG2P5I _RA1aFlOff0jGfI2cKUGhYI1MRLBA;
 
-	private _RRECH42isVc35MkZPyLEGkp0hjs? _za3KOX0Td9JuYbMVuVrSRekcEdJ;
+	private TimeOfDay? _za3KOX0Td9JuYbMVuVrSRekcEdJ;
 
-	public _G2GbwTTqXkVDMUL6fDmljsAPB4s(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public _G2GbwTTqXkVDMUL6fDmljsAPB4s(IAmorous game)
 	{
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA = new _gJR4g7ak0hsZAUWX1vJbMqG2P5I(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._2yepMkVENnecIsduggABaU2qhXW);
+		_RA1aFlOff0jGfI2cKUGhYI1MRLBA = new _gJR4g7ak0hsZAUWX1vJbMqG2P5I(Game._2yepMkVENnecIsduggABaU2qhXW);
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public void Update(GameTime gameTime_0)
 	{
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		_RA1aFlOff0jGfI2cKUGhYI1MRLBA.Update(gameTime_0);
 		_1TexRAv8TgmLSYZPaXObsZp5CgP();
 	}
 
-	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
+	public void Draw(SpriteBatch spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
 	{
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0);
+		_RA1aFlOff0jGfI2cKUGhYI1MRLBA.Draw(spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0);
 	}
 
 	private void _1TexRAv8TgmLSYZPaXObsZp5CgP()
 	{
-		if (_za3KOX0Td9JuYbMVuVrSRekcEdJ != _5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q)
+		if (_za3KOX0Td9JuYbMVuVrSRekcEdJ != _5Anqe6GAAkzemoAXYpJmgMlk1yz.time)
 		{
-			_za3KOX0Td9JuYbMVuVrSRekcEdJ = _5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q;
-			switch (_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q)
+			_za3KOX0Td9JuYbMVuVrSRekcEdJ = _5Anqe6GAAkzemoAXYpJmgMlk1yz.time;
+			switch (_5Anqe6GAAkzemoAXYpJmgMlk1yz.time)
 			{
 			default:
 				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_MMqeUiXOyJf7vpX8piOiMK4x0bH);
 				break;
-			case _RRECH42isVc35MkZPyLEGkp0hjs.Morning:
+			case TimeOfDay.Morning:
 				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_Ib9VarTDKmfjV0rrVECzoNEzrSL);
 				break;
-			case _RRECH42isVc35MkZPyLEGkp0hjs.Day:
+			case TimeOfDay.Day:
 				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_FfaSCX3DjztPrRuzUxZ0SEncuSR);
 				break;
-			case _RRECH42isVc35MkZPyLEGkp0hjs.Sunset:
+			case TimeOfDay.Sunset:
 				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._7d2DAwjp6FutkJY09U0Mlk43Nmn(_or20jsQIs921jMzfkOHr9vXb9Cd);
 				break;
 			}

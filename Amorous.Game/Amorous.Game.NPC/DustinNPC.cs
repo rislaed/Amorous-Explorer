@@ -29,12 +29,12 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Dustin";
+	public static string Name = "Dustin";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(242, 208, 150);
+	public static Color Color = new Color(242, 208, 150);
 
-	public DustinNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Dustin/Dustin", 1f, bool_0: true)
+	public DustinNPC(IAmorous game)
+		: base(Game, "Assets/NPC/Dustin/Dustin", 1f, bool_0: true)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Idle");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Neutral, "Neutral Mane", "Neutral eye back", "Neutral pupil", "Neutral jaw", "Neutral head")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Neutral blink");
@@ -58,18 +58,18 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 960f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 960f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 400f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 400f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1520f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1520f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
 			break;
 		}
 	}

@@ -66,7 +66,7 @@ public class _JQQysO7uwugUSzo1g63o3jzSP4H
 		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = xmlSerializer.Deserialize(textReader) as _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>;
 	}
 
-	public void _7cuPUL8aamrg9daETH6zQk3RwbF(string string_0)
+	public void Save(string string_0)
 	{
 		Type typeFromHandle = typeof(_s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle>);
 		XmlSerializer xmlSerializer = new XmlSerializer(typeFromHandle);

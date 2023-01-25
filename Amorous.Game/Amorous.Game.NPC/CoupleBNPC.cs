@@ -23,8 +23,8 @@ public class CoupleBNPC : SpineNPC<CoupleBNPC.EHeads, CoupleBNPC.EPoses, CoupleB
 		Pants
 	}
 
-	public CoupleBNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/Scenes/Intro/Couple B", 1f, bool_0: true)
+	public CoupleBNPC(IAmorous game)
+		: base(Game, "Assets/Scenes/Intro/Couple B", 1f, bool_0: true)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Waving");
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Waving, "Dark arm", "Characters right", "fem arms");

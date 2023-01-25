@@ -22,8 +22,8 @@ public abstract class ClubStaticNPC : LayerNPC<ClubStaticNPC.EHeads, ClubStaticN
 		Pants
 	}
 
-	protected ClubStaticNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, string string_1, bool bool_0, bool bool_1)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string_0, 1f)
+	protected ClubStaticNPC(IAmorous game, string string_0, string string_1, bool bool_0, bool bool_1)
+		: base(game, string_0, 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Nude, $"{string_1} club nude");
 		if (bool_0)
@@ -36,9 +36,9 @@ public abstract class ClubStaticNPC : LayerNPC<ClubStaticNPC.EHeads, ClubStaticN
 		}
 	}
 
-	public override void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
+	public override void Begin()
 	{
-		base._g9Sx54kMPiHz5jrqWh4Kb1pTijH();
+		base.Begin();
 		_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
 		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
 		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);

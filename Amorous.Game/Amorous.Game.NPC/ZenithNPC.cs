@@ -30,12 +30,12 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Zenith";
+	public static string Name = "Zenith";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(155, 213, 154);
+	public static Color Color = new Color(155, 213, 154);
 
-	public ZenithNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Zenith/Zenith", 1f, bool_0: true)
+	public ZenithNPC(IAmorous game)
+		: base(Game, "Assets/NPC/Zenith/Zenith", 1f, bool_0: true)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Head angry", "Eye Back", "Pupils")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
@@ -61,18 +61,18 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1000f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1090f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1000f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 380f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1090f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 380f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1540f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1090f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1540f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
 			break;
 		}
 	}

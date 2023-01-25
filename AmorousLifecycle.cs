@@ -7,44 +7,8 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Microsoft.Xna.Framework;
 
-public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
+public static class AmorousLifecycle
 {
-	[Serializable]
-	[CompilerGenerated]
-	private sealed class _vz0zJ2bWCWnCTFEeLdbjjSHoFxp
-	{
-		public static readonly _vz0zJ2bWCWnCTFEeLdbjjSHoFxp _003C_003E9 = new _vz0zJ2bWCWnCTFEeLdbjjSHoFxp();
-
-		public static UnhandledExceptionEventHandler _003C_003E9__4_0;
-
-		public static Action<string> _003C_003E9__4_1;
-
-		public static Action<string> _003C_003E9__4_2;
-
-		public static Action<string> _003C_003E9__4_3;
-
-		internal void _eFwbCsKAq0jbRW4acFJl7FvMQ4m(object sender, UnhandledExceptionEventArgs e)
-		{
-			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(e.ExceptionObject as Exception);
-			Environment.Exit(0);
-		}
-
-		internal void _gqYR9xa7V4e781jQlVlzfzKa8fF(string string_0)
-		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._8GJSgyb6FWRvKxxAcjyaU02i18E(string_0);
-		}
-
-		internal void _9BmGPkOa9v7c4Lr9VwjSw8OgAYe(string string_0)
-		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh(string_0);
-		}
-
-		internal void _gswlJMFbjPEv8F4fulNOdPkvvum(string string_0)
-		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._0rEYVY1cDKfLPVuLw54UlaIts2m(string_0);
-		}
-	}
-
 	private const int _e2Ucgs0TphHTAenda7BAmHbfNPD = 4096;
 
 	[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
@@ -68,7 +32,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 		};
 		Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 		Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._oD87G7SXjsTukw7IVWxVlVFEgvA();
+		Logger.Initialize();
 		try
 		{
 			SetDefaultDllDirectories(_e2Ucgs0TphHTAenda7BAmHbfNPD);
@@ -80,15 +44,15 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 		}
 		FNALoggerEXT.LogInfo = delegate(string string_0)
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._8GJSgyb6FWRvKxxAcjyaU02i18E(string_0);
+			Logger.Log(string_0);
 		};
 		FNALoggerEXT.LogWarn = delegate(string string_0)
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh(string_0);
+			Logger.Warning(string_0);
 		};
 		FNALoggerEXT.LogError = delegate(string string_0)
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._0rEYVY1cDKfLPVuLw54UlaIts2m(string_0);
+			Logger.Error(string_0);
 		};
 		Environment.SetEnvironmentVariable("FNA_OPENGL_DISABLE_LATESWAPTEAR", "1");
 		try
@@ -103,7 +67,7 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 				Environment.SetEnvironmentVariable("FNA_OPENGL_FORCE_ES3", "1");
 				Environment.SetEnvironmentVariable("SDL_OPENGL_ES_DRIVER", "1");
 			}
-			using _SkYjfUaaNhTySNgoGUeFZ46X4dM skYjfUaaNhTySNgoGUeFZ46X4dM = new _SkYjfUaaNhTySNgoGUeFZ46X4dM(safemode);
+			using AmorousGame skYjfUaaNhTySNgoGUeFZ46X4dM = new AmorousGame(safemode);
 			skYjfUaaNhTySNgoGUeFZ46X4dM.Run();
 		}
 		catch (Exception exception_)
@@ -114,6 +78,6 @@ public static class _teqj4nlfsRIR7hafjKGQ9NYjEZe
 
 	private static void _mxSbmCQQPRHc7t2A2pm8HsbyvqfA(Exception exception_0)
 	{
-		_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._0rEYVY1cDKfLPVuLw54UlaIts2m("Unhandled exception: {0}", exception_0);
+		Logger.Error("Unhandled exception: {0}", exception_0);
 	}
 }

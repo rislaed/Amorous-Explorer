@@ -15,9 +15,9 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 
 	public float _pFgHmGjnwllBZ83LhpZv0o8ZcO { get; private set; }
 
-	public float _je8rVfyg4zywmqSi4Ozx1z7wJ4b => _nVnyJkkce6HsdRrKSpRrzUDElg0 - _SjhHztt8d5kOtb7Z2BJKnZZxEKh;
+	public float Width => _nVnyJkkce6HsdRrKSpRrzUDElg0 - _SjhHztt8d5kOtb7Z2BJKnZZxEKh;
 
-	public float _WJfGWBzn4wgdGBnMWRH2pcJ3AqH => _pFgHmGjnwllBZ83LhpZv0o8ZcO - _xqxFKfudZYzf8RtrC7EB1Ya6FPT;
+	public float Height => _pFgHmGjnwllBZ83LhpZv0o8ZcO - _xqxFKfudZYzf8RtrC7EB1Ya6FPT;
 
 	public _NxPDyghimJKCwBg53DaNTazjQ5k()
 	{
@@ -25,7 +25,7 @@ public class _NxPDyghimJKCwBg53DaNTazjQ5k
 		_A9kKAOOHImeN1Bymg7Y86T6pyXf = new ExposedList<Polygon>();
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(Skeleton skeleton_0)
+	public void Update(Skeleton skeleton_0)
 	{
 		_sc6AWQNc7BlGAmNMydEy7sD8v1j.AddRange(_A9kKAOOHImeN1Bymg7Y86T6pyXf);
 		_A9kKAOOHImeN1Bymg7Y86T6pyXf.Clear();

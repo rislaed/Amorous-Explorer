@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 {
-	private readonly _JbeCmOie0phb2cbgG6DdGZrbs3pB _4L7hfXrWoDdArQiscG4ukHCV46B;
+	private readonly IAmorous Amorous;
 
 	private bool _EKoVuulhFH2bvqZKateoyZN7Ink;
 
@@ -77,9 +77,9 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 		}
 	}
 
-	public _wRd4nHuQQlAPEwrHOGkBfut6Uip(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, int int_0, int int_1)
+	public _wRd4nHuQQlAPEwrHOGkBfut6Uip(IAmorous game, int int_0, int int_1)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
+		Amorous = game;
 		_L7Fbjq2u4uL5uJIyoRAHpKNXmDI = int_0;
 		_omy3Cp1IbOKtE3eoz7lAP5DqhT9 = int_1;
 		_2lMgp1KOzK9I6kd7CHrDq2A2CHm(int_0, int_1, int_0, int_1);
@@ -172,13 +172,13 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 		_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = 0f;
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public void Update(GameTime gameTime_0)
 	{
-		if (_1LQOhiUdxWk8bRA1sYnQMSYcjVm || _4L7hfXrWoDdArQiscG4ukHCV46B._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
+		if (_1LQOhiUdxWk8bRA1sYnQMSYcjVm || Amorous._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
 			return;
 		}
-		Point point_ = _u7uCdK9i8FnWhiaPn2bO2wIgUUuA(_4L7hfXrWoDdArQiscG4ukHCV46B._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		Point point_ = _u7uCdK9i8FnWhiaPn2bO2wIgUUuA(Amorous._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
 		if (point_.X >= 0 && point_.Y >= 0 && point_.X <= 1920 && point_.Y <= 1080)
 		{
 			if (_EKoVuulhFH2bvqZKateoyZN7Ink)

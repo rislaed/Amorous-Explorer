@@ -24,7 +24,7 @@ public abstract class _RlrsL89bialFQa9mzWurgsdr6FK<T>
 		_vbhwdZ3gErkBPSpla6ZPcciEtI1 = 750;
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public void Update(GameTime gameTime_0)
 	{
 		if (_XTvGE1JB69E9GLYnSRCwUVGb5PR <= 0)
 		{

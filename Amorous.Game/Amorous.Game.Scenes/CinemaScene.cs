@@ -1,6 +1,6 @@
 namespace Amorous.Game.Scenes;
 
-public class CinemaScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class CinemaScene : AbstractScene
 {
 	public const string _x8Ym16HTsmyDDdsJK37LoYtDAli = "None";
 
@@ -18,8 +18,8 @@ public class CinemaScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private _uqydQVaCmCvK7zzWs5W4gZFpKBu _g14D6v9FBXiZihegPw9BIGlBConA;
 
-	public CinemaScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public CinemaScene(IAmorous game)
+		: base(Game)
 	{
 		_cDOKpatcramNDb8aZK14Rc6Y91p = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Cinema/Movie None", 0, 0);
 		_28AfW2C2UvwyhrjsUQU4Sq4LV0c = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Cinema/Movie Action-Western", 0, 0);

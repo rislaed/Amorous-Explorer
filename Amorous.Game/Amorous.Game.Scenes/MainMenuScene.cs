@@ -24,8 +24,8 @@ public class MainMenuScene : TimeOfDayScene
 
 	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _CD732c1llp0dkEnK6CI9WZR70Ap;
 
-	public MainMenuScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public MainMenuScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
@@ -44,82 +44,82 @@ public class MainMenuScene : TimeOfDayScene
 		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 4", "Assets/Scenes/MainMenu/{0}", 1520, 330);
 		_BR9uYwHtclf8uWEyxJ20ADY6mpg = 750;
 		_dNKOpSAr033bMQm76I1LEv39GTm = _0c5TjZklJbu1wzYG2FIcvf3SIdh("LCD Separator");
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._Wrz1IORok7yBtsQA3czQUmnP6Yl(new _hiwkgwXJpRLUFatcgZFfH6ECNfm(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0));
+		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._Wrz1IORok7yBtsQA3czQUmnP6Yl(new _hiwkgwXJpRLUFatcgZFfH6ECNfm(Game));
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
-		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._lXEQJcXKxsjtZp00Y9aPe0ymGue(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+		Game._lXEQJcXKxsjtZp00Y9aPe0ymGue(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(Game)
 		{
 			_uIOOxdCbSvCxXvjNgoXh2qYj0hr = delegate
 			{
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int int_0)
+				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowSelection("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int int_0)
 				{
-					_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+					PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
 					switch (int_0)
 					{
 					default:
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+						base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 						break;
 					case 0:
 						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-						opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
+						opIJo2jLUqdOL5yAFP4yzXce0DG.Reset();
 						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = Options.Data.DialogueTextSpeed;
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+						base.Game.RequestScene("Prologue");
 						break;
 					case 1:
 						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-						opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
+						opIJo2jLUqdOL5yAFP4yzXce0DG.Reset();
 						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = Options.Data.DialogueTextSpeed;
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+						base.Game.StartScene<SkipProloguePlayerCustomizationScene>();
 						break;
 					case 2:
 						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-						opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
+						opIJo2jLUqdOL5yAFP4yzXce0DG.Reset();
 						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = Options.Data.DialogueTextSpeed;
+						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+						base.Game.StartScene<PlayerCustomizationScene>();
 						break;
 					}
 				});
 			},
 			_HmpXEsA3mxR8eI4MZmgIPCtSGQb = delegate
 			{
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
 				List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = _DW9IcpdMEINZmuzfrqmwsduBGih._25D1ZH2er0EbpKmvFksAbFjP2OX(bool_0: false);
-				List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToList();
+				List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0.Name).ToList();
 				_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
+				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowSelection("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
 				{
 					if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 					{
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+						base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 					}
 					else
 					{
 						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
 						if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 						{
-							if (!((!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE) ? base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Ut0dhlh4JTZBMNJPNxxI9f9VqTp(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : base._ZzBuoSDMWwerejOO9Goyv2OCKgE._1yDW5GeZ2MCcssz8ohrF9CK913i(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO)))
+							if (!((!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE) ? base.Game._Ut0dhlh4JTZBMNJPNxxI9f9VqTp(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : base.Game._1yDW5GeZ2MCcssz8ohrF9CK913i(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO)))
 							{
-								base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
+								base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
 								{
-									base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+									base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 								});
 							}
 							else
 							{
-								base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+								base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 							}
 						}
 						else
 						{
-							base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
+							base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
 							{
-								base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+								base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 							});
 						}
 					}
@@ -127,21 +127,21 @@ public class MainMenuScene : TimeOfDayScene
 			},
 			_vE5Pvwth7cQFh82bMTB5u59Ju4o = delegate
 			{
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int int_0)
+				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowSelection("Are you sure you wish to quit the Game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int int_0)
 				{
 					if (int_0 == 1)
 					{
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+						base.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
 						{
-							base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
+							base.Game._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
 						});
 					}
-					base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+					base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 				});
 			}
 		});
-		_zBw0aG4VRggByEYsHPjIPCYfoQJ = new _SsogwGgurAXPoDRtNVTCVKq9yRE(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+		_zBw0aG4VRggByEYsHPjIPCYfoQJ = new _SsogwGgurAXPoDRtNVTCVKq9yRE(Game)
 		{
 			_a6EfzLkl5vzR053eenrcOponhUA = _MRzbkwglCADk2fFjoxcsdCSJfKu
 		};
@@ -157,22 +157,22 @@ public class MainMenuScene : TimeOfDayScene
 		Texture2D[] array = new Texture2D[10];
 		for (int i = 0; i < array.Length; i++)
 		{
-			array[i] = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string.Format(string_1, i));
+			array[i] = base.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string.Format(string_1, i));
 		}
 		_Yu3OngEjZbsgelWEySu6GE7aoYg yu3OngEjZbsgelWEySu6GE7aoYg = new _Yu3OngEjZbsgelWEySu6GE7aoYg(this, string_0, array)
 		{
 			_C6GAq9XPMC9PQPnaaRqYWpv4V6S = true,
-			_7Xn1C5tjYnmIif1iZKV8AWsEEbL = int_0,
-			_bCjZ3VSXGKyhmykd2zCnQBiSpDf = int_1
+			X = int_0,
+			Y = int_1
 		};
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(yu3OngEjZbsgelWEySu6GE7aoYg, 2);
 		_3QdafDZxM3h1i8B990AwwFqleds.Add(yu3OngEjZbsgelWEySu6GE7aoYg);
 		return yu3OngEjZbsgelWEySu6GE7aoYg;
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public override void Update(GameTime gameTime_0)
 	{
-		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		base.Update(gameTime_0);
 		_BR9uYwHtclf8uWEyxJ20ADY6mpg -= gameTime_0.ElapsedGameTime.Milliseconds;
 		if (_BR9uYwHtclf8uWEyxJ20ADY6mpg < 0)
 		{
@@ -183,10 +183,10 @@ public class MainMenuScene : TimeOfDayScene
 		_3QdafDZxM3h1i8B990AwwFqleds[1]._SWODlbUkQEqfwrtprjLPOeGF7HO = DateTime.Now.Hour % 10;
 		_3QdafDZxM3h1i8B990AwwFqleds[2]._SWODlbUkQEqfwrtprjLPOeGF7HO = DateTime.Now.Minute / 10;
 		_3QdafDZxM3h1i8B990AwwFqleds[3]._SWODlbUkQEqfwrtprjLPOeGF7HO = DateTime.Now.Minute % 10;
-		if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y != null)
+		if (base.Game._o2QVQfIAsuLcmPxn14llGoZA52y != null)
 		{
-			_zBw0aG4VRggByEYsHPjIPCYfoQJ._nJKYvZJ57vjjlQwmoeBmKihtS0b = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b;
-			_zBw0aG4VRggByEYsHPjIPCYfoQJ._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+			_zBw0aG4VRggByEYsHPjIPCYfoQJ._nJKYvZJ57vjjlQwmoeBmKihtS0b = base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b;
+			_zBw0aG4VRggByEYsHPjIPCYfoQJ.Update(gameTime_0);
 		}
 	}
 
@@ -194,24 +194,24 @@ public class MainMenuScene : TimeOfDayScene
 	{
 		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._mW1Z69pRB1eedGT3FSmdItJre5Y != null)
 		{
-			spriteBatch_0._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
-			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._mW1Z69pRB1eedGT3FSmdItJre5Y._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+			spriteBatch_0.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
+			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._mW1Z69pRB1eedGT3FSmdItJre5Y.Draw(spriteBatch_0);
 			spriteBatch_0.End();
 		}
 	}
 
-	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
+	public override void Render(SpriteBatch spriteBatch_0)
 	{
-		base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
+		base.Render(spriteBatch_0);
 		spriteBatch_0.Begin();
-		_CD732c1llp0dkEnK6CI9WZR70Ap._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_CD732c1llp0dkEnK6CI9WZR70Ap.Draw(spriteBatch_0);
 		spriteBatch_0.End();
-		_zBw0aG4VRggByEYsHPjIPCYfoQJ._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0);
+		_zBw0aG4VRggByEYsHPjIPCYfoQJ.Draw(spriteBatch_0);
 	}
 
 	private void _MRzbkwglCADk2fFjoxcsdCSJfKu()
 	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+		base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
 		int num = 0;
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._X41qA9hgcgXH0Q1aFKWFWpg8UuM)
 		{
@@ -254,9 +254,9 @@ public class MainMenuScene : TimeOfDayScene
 		DropDownList dropDownList2 = dropDownList;
 		dropDownList2.Listbox.Scrollbar.ButtonUp.Visible = false;
 		dropDownList2.Listbox.Scrollbar.ButtonDown.Visible = false;
-		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._KOuUew34v1oSMnWlHSFJuRBiu1c;
-		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._dh9yjUXG1mhcfgwAWkWfggbGEIc;
-		foreach (DisplayMode supportedDisplayMode in base._ZzBuoSDMWwerejOO9Goyv2OCKgE._2yepMkVENnecIsduggABaU2qhXW.Adapter.SupportedDisplayModes)
+		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._KOuUew34v1oSMnWlHSFJuRBiu1c;
+		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._dh9yjUXG1mhcfgwAWkWfggbGEIc;
+		foreach (DisplayMode supportedDisplayMode in base.Game._2yepMkVENnecIsduggABaU2qhXW.Adapter.SupportedDisplayModes)
 		{
 			dropDownList2.Items.Add(new ListBoxItem
 			{
@@ -271,9 +271,9 @@ public class MainMenuScene : TimeOfDayScene
 			if (listBoxItem_0.Value is DisplayMode)
 			{
 				DisplayMode displayMode = listBoxItem_0.Value as DisplayMode;
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(displayMode.Width, displayMode.Height);
-				_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Iv7AHXGOFR9WoLBFx6PjEgEHmYI = displayMode.Width;
-				_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._84wHcdDxJz5ElyDPXXlgRgsiW8g = displayMode.Height;
+				base.Game._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(displayMode.Width, displayMode.Height);
+				Options.Data.ResolutionWidth = displayMode.Width;
+				Options.Data.ResolutionHeight = displayMode.Height;
 				_ExpbREeE97oXaFMwg5UwE6MpAAQ = displayMode.Width;
 				_P2eFcUFiRYQgRf4ICqeX3kVcA2m = displayMode.Height;
 			}
@@ -282,12 +282,12 @@ public class MainMenuScene : TimeOfDayScene
 		{
 			Dock = DockStyle.Top,
 			Text = "Fullscreen",
-			Checked = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe
+			Checked = base.Game._kSReo0whY1pgfTnFOSc44ppANOe
 		};
 		checkBox.CheckedChanged += delegate
 		{
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(_ExpbREeE97oXaFMwg5UwE6MpAAQ, _P2eFcUFiRYQgRf4ICqeX3kVcA2m, !base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe);
-			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._Bbx3oCtJkeUN6asRLqH0DJ3kkFg = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._kSReo0whY1pgfTnFOSc44ppANOe;
+			base.Game._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(_ExpbREeE97oXaFMwg5UwE6MpAAQ, _P2eFcUFiRYQgRf4ICqeX3kVcA2m, !base.Game._kSReo0whY1pgfTnFOSc44ppANOe);
+			Options.Data.Fullscreen = base.Game._kSReo0whY1pgfTnFOSc44ppANOe;
 		};
 		panel.Content.Controls.Add(item);
 		panel.Content.Controls.Add(item2);
@@ -308,14 +308,14 @@ public class MainMenuScene : TimeOfDayScene
 		slider.Dock = DockStyle.Top;
 		slider.Orientation = Orientation.Horizontal;
 		slider.Steps = 100f;
-		slider.Value = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * 100f;
+		slider.Value = Options.Data.MasterVolume * 100f;
 		slider.Style = "scrollSlider";
 		slider.Size = new Squid.Point(0, 30);
 		slider.Button.Style = "scrollSliderButton";
 		Slider _XEgAfmv7sJWJSaC2diC3eaD4Fgl = slider;
 		_XEgAfmv7sJWJSaC2diC3eaD4Fgl.ValueChanged += delegate
 		{
-			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF = _XEgAfmv7sJWJSaC2diC3eaD4Fgl.Value / 100f;
+			Options.Data.MasterVolume = _XEgAfmv7sJWJSaC2diC3eaD4Fgl.Value / 100f;
 		};
 		Label item5 = new Label
 		{
@@ -326,14 +326,14 @@ public class MainMenuScene : TimeOfDayScene
 		slider2.Dock = DockStyle.Top;
 		slider2.Orientation = Orientation.Horizontal;
 		slider2.Steps = 100f;
-		slider2.Value = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * 100f;
+		slider2.Value = Options.Data.MusicVolume * 100f;
 		slider2.Style = "scrollSlider";
 		slider2.Size = new Squid.Point(0, 30);
 		slider2.Button.Style = "scrollSliderButton";
 		Slider _gjeIIVx9bHyd0aMj0WD483nrLWK = slider2;
 		_gjeIIVx9bHyd0aMj0WD483nrLWK.ValueChanged += delegate
 		{
-			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC = _gjeIIVx9bHyd0aMj0WD483nrLWK.Value / 100f;
+			Options.Data.MusicVolume = _gjeIIVx9bHyd0aMj0WD483nrLWK.Value / 100f;
 		};
 		Label item6 = new Label
 		{
@@ -344,14 +344,14 @@ public class MainMenuScene : TimeOfDayScene
 		slider3.Dock = DockStyle.Top;
 		slider3.Orientation = Orientation.Horizontal;
 		slider3.Steps = 100f;
-		slider3.Value = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH * 100f;
+		slider3.Value = Options.Data.SfxVolume * 100f;
 		slider3.Style = "scrollSlider";
 		slider3.Size = new Squid.Point(0, 30);
 		slider3.Button.Style = "scrollSliderButton";
 		Slider _5mK9ExiyKm0md8q4J1C6xc4TzdF = slider3;
 		_5mK9ExiyKm0md8q4J1C6xc4TzdF.ValueChanged += delegate
 		{
-			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._2g4Ch8GXdUt0oEbdCZUY2QMbIuH = _5mK9ExiyKm0md8q4J1C6xc4TzdF.Value / 100f;
+			Options.Data.SfxVolume = _5mK9ExiyKm0md8q4J1C6xc4TzdF.Value / 100f;
 		};
 		panel.Content.Controls.Add(item3);
 		panel.Content.Controls.Add(item4);
@@ -367,20 +367,20 @@ public class MainMenuScene : TimeOfDayScene
 			Text = "Dialogue"
 		};
 		panel.Content.Controls.Add(item7);
-		_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO, delegate(int int_0)
+		_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
 		{
-			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO = (DialogueSpeed)int_0;
+			Options.Data.DialogueTextSpeed = (DialogueSpeed)int_0;
 			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = (DialogueSpeed)int_0;
 		});
 		CheckBox _feL3soNn6ZWaJqYfjYJUyH118tF = new CheckBox
 		{
 			Dock = DockStyle.Top,
 			Text = "Auto-skip",
-			Checked = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3
+			Checked = Options.Data.DialogueAutoSkip
 		};
 		_feL3soNn6ZWaJqYfjYJUyH118tF.CheckedChanged += delegate
 		{
-			_eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3 = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
+			Options.Data.DialogueAutoSkip = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
 			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
 		};
 		panel.Content.Controls.Add(_feL3soNn6ZWaJqYfjYJUyH118tF);
@@ -439,182 +439,17 @@ public class MainMenuScene : TimeOfDayScene
 		};
 		button.MouseClick += delegate
 		{
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-			_eJWqL2MhFZHNHP960nsWLJJmyPD._7cuPUL8aamrg9daETH6zQk3RwbF();
+			base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+			Options.Save();
 			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 		};
 		panel.Content.Controls.Add(button);
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(base._PnkAlVnMv0SZvRBFexqzE5DF9tp);
 	}
 
-	public override void _tO46aYSBLFIuhFNlhbrAeWbFDSf()
+	public override void End()
 	{
-		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
+		base.End();
 		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-	}
-
-	[CompilerGenerated]
-	private void _fI217APzl4Tapt53WowQWN9Ipyi()
-	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int int_0)
-		{
-			_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-			switch (int_0)
-			{
-			default:
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-				break;
-			case 0:
-				_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-				opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
-				_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-				_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-				_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
-				break;
-			case 1:
-				_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-				opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
-				_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-				_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-				_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
-				break;
-			case 2:
-				_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-				opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
-				_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-				_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-				_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
-				break;
-			}
-		});
-	}
-
-	[CompilerGenerated]
-	private void _SD73Tf7ANXaiMyg34yTgfWsn74y(int int_0)
-	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		switch (int_0)
-		{
-		default:
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-			break;
-		case 0:
-			_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
-			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
-			break;
-		case 1:
-			_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
-			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<SkipProloguePlayerCustomizationScene>();
-			break;
-		case 2:
-			_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Rj5BZHY1n3a8XV7jJAk9U8jZZ6m();
-			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._wVLRBSMULz8GfedBPXaVJB0sBEO;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._sbK0941BvW8HgPboNwOhIAd2jP3;
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<PlayerCustomizationScene>();
-			break;
-		}
-	}
-
-	[CompilerGenerated]
-	private void _3a8aQcA02aVpTZtKGWFgMtrJHSz()
-	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-		List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = _DW9IcpdMEINZmuzfrqmwsduBGih._25D1ZH2er0EbpKmvFksAbFjP2OX(bool_0: false);
-		List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0._RB8fRXeQvK5vs7JEA0XfVCEpg1i).ToList();
-		_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
-		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
-		{
-			if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
-			{
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-			}
-			else
-			{
-				_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
-				if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
-				{
-					if (!((!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE) ? base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Ut0dhlh4JTZBMNJPNxxI9f9VqTp(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : base._ZzBuoSDMWwerejOO9Goyv2OCKgE._1yDW5GeZ2MCcssz8ohrF9CK913i(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO)))
-					{
-						base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
-						{
-							base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-						});
-					}
-					else
-					{
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-					}
-				}
-				else
-				{
-					base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
-					{
-						base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-					});
-				}
-			}
-		});
-	}
-
-	[CompilerGenerated]
-	private void _2L0GcJVz3zT3U7tBW5tgN1ccYgp()
-	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-	}
-
-	[CompilerGenerated]
-	private void _plxCcrCl4DCKu5G7qBtjRepOyaM()
-	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-	}
-
-	[CompilerGenerated]
-	private void _W4PFYhu2NAZbDYPFpvdFr789eG0()
-	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-		base._PnkAlVnMv0SZvRBFexqzE5DF9tp._GtkWDtXwQHwgWY4aFkacjfUDyzb("Are you sure you wish to quit the game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int int_0)
-		{
-			if (int_0 == 1)
-			{
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
-				{
-					base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
-				});
-			}
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-		});
-	}
-
-	[CompilerGenerated]
-	private void _WXVOKjJHmBoMdMbldQqnBe7J5Ss(int int_0)
-	{
-		if (int_0 == 1)
-		{
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
-			{
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
-			});
-		}
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-	}
-
-	[CompilerGenerated]
-	private void _BK4Ag37J0xySDkNNVq7rfpQgFa4()
-	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
 	}
 }

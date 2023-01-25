@@ -2,10 +2,10 @@ using Microsoft.Xna.Framework;
 
 namespace Amorous.Game.Scenes;
 
-public class ClubPoolWaterScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class ClubPoolWaterScene : AbstractScene
 {
-	public ClubPoolWaterScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public ClubPoolWaterScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/ClubPoolWater/Background", 0, 0);
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0 gparam_ = new _jOXcj4HBkU5j6LOJprpiXLCcLR0(this, 700f, new Rectangle(0, -190, 1920, 1080), bool_0: true)

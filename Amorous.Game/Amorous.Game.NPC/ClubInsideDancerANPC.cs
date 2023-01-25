@@ -31,8 +31,8 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 
 	private int _ujQoS5Vtc4de0wSOTrBu7W9PbRc;
 
-	public ClubInsideDancerANPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubInsideStatic/Dancer A", 0.8f, bool_0: true)
+	public ClubInsideDancerANPC(IAmorous game)
+		: base(Game, "Assets/NPC/ClubInsideStatic/Dancer A", 0.8f, bool_0: true)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Dance_B");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Eye", "Head", "Jaw", "Pupil")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
@@ -77,27 +77,5 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 				_W59CJD6wYGEUk3hOFlZnc3R24Ct();
 			}
 		});
-	}
-
-	[CompilerGenerated]
-	private void _ERS5by8UZMa9rquJdzZ76kEtcKk(int int_0)
-	{
-		_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
-		if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)
-		{
-			_ujQoS5Vtc4de0wSOTrBu7W9PbRc = _CuajPz31r9WOAgF3NIMwGAOneYc;
-			_QxrbucYEdHM0AE1Mfd0LKZp28pv();
-		}
-	}
-
-	[CompilerGenerated]
-	private void _d8hOCRtKY4lKcCvED7zuBZRhVt9(int int_0)
-	{
-		_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
-		if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)
-		{
-			_ujQoS5Vtc4de0wSOTrBu7W9PbRc = _MRHxrmqa7mb7D9woehQMcBaVzSfA;
-			_W59CJD6wYGEUk3hOFlZnc3R24Ct();
-		}
 	}
 }

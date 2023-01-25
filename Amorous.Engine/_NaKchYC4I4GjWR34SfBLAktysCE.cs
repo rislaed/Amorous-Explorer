@@ -2,20 +2,20 @@ using System.Collections.Generic;
 
 public class _NaKchYC4I4GjWR34SfBLAktysCE : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 {
-	public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; private set; }
+	public string Name { get; private set; }
 
 	public List<string> _CjFYKEH7Vq8U6urMqr8ixn5Z8li { get; private set; }
 
 	public List<string> _l11eB5s4oGaWqILnwn3dX83PzrN { get; private set; }
 
-	public List<_EZ0kOLXoEoEfWGQDdTbNqaPzDUh> _wUcbLpwYJ1T1bI8GaQwj9Jxx4YX { get; private set; }
+	public List<_EZ0kOLXoEoEfWGQDdTbNqaPzDUh> Clothes { get; private set; }
 
 	public _NaKchYC4I4GjWR34SfBLAktysCE(string string_0, params string[] string_1)
 	{
-		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
+		Name = string_0;
 		_CjFYKEH7Vq8U6urMqr8ixn5Z8li = new List<string>(string_1);
 		_l11eB5s4oGaWqILnwn3dX83PzrN = new List<string>();
-		_wUcbLpwYJ1T1bI8GaQwj9Jxx4YX = new List<_EZ0kOLXoEoEfWGQDdTbNqaPzDUh>();
+		Clothes = new List<_EZ0kOLXoEoEfWGQDdTbNqaPzDUh>();
 	}
 
 	public _NaKchYC4I4GjWR34SfBLAktysCE _6NcgB9eEKq8eKu8SgNWnKbLsDhB(params string[] string_0)
@@ -29,7 +29,7 @@ public class _NaKchYC4I4GjWR34SfBLAktysCE : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 		List<string> list = new List<string>();
 		bool flag = false;
 		bool flag2 = false;
-		foreach (_EZ0kOLXoEoEfWGQDdTbNqaPzDUh item in _wUcbLpwYJ1T1bI8GaQwj9Jxx4YX)
+		foreach (_EZ0kOLXoEoEfWGQDdTbNqaPzDUh item in Clothes)
 		{
 			if (item._3ZeCDXqcWHY4XJDBGyav3UzxYaHA)
 			{

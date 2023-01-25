@@ -23,15 +23,15 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Rou";
+	public static string Name = "Rou";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(116, 116, 116);
+	public static Color Color = new Color(116, 116, 116);
 
-	public BartenderNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Bartender", 1f)
+	public BartenderNPC(IAmorous game)
+		: base(Game, "Assets/NPC/Bartender", 1f)
 	{
-		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 904;
-		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1008;
+		Width = 904;
+		Height = 1008;
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Bovine Naked");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Bovine pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Bovine Top")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
@@ -46,18 +46,18 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 608f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 72f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 608f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 72f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -160f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 72f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -160f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 72f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1176f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 72f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1176f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 72f;
 			break;
 		}
 	}

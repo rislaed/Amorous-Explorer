@@ -4,14 +4,14 @@ using Newtonsoft.Json;
 namespace Amorous.Engine.Data.Cutscenes;
 
 [Serializable]
-public class ConditionalBranchEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class ConditionalBranchEventData : EventData
 {
 	[JsonProperty("Flag")]
-	public string _Rk7jfnb14b9m38ZXjy64e1xOYhb { get; set; }
+	public string Flag { get; set; }
 
 	[JsonProperty("TrueID")]
-	public int _zx5XrNhtTVlO7yNyUhvE55ehfoA { get; set; }
+	public int TrueID { get; set; }
 
 	[JsonProperty("FalseID")]
-	public int _DOmMD7BCsAugCL5RA5YSOto6jT1 { get; set; }
+	public int FalseID { get; set; }
 }

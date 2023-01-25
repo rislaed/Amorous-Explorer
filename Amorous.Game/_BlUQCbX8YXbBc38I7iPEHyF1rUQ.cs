@@ -9,8 +9,8 @@ public class _BlUQCbX8YXbBc38I7iPEHyF1rUQ : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	public Action _vE5Pvwth7cQFh82bMTB5u59Ju4o { get; set; }
 
-	public _BlUQCbX8YXbBc38I7iPEHyF1rUQ(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public _BlUQCbX8YXbBc38I7iPEHyF1rUQ(IAmorous game)
+		: base(Game)
 	{
 		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/NEW GAME button dim", "Assets/Scenes/MainMenu/NEW GAME button illuminated", -240, -135, new Rectangle(1020, 525, 210, 100), _CD7mbFgvqfL9Cx207U8NnHC7FCi);
 		_aiunwWjasFcF9afjl2FnUxWXB0M("Assets/Scenes/MainMenu/CONTINUE button dim", "Assets/Scenes/MainMenu/CONTINUE button illuminated", -240, -135, new Rectangle(1240, 535, 210, 100), _6529SurdTJ5RkS6BucuzfiMXA7B);

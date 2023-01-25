@@ -8,20 +8,6 @@ using Microsoft.Xna.Framework.Media;
 
 public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 {
-	[Serializable]
-	[CompilerGenerated]
-	private sealed class _N94aLVGUDYCfmJQohqS7o05wjPB
-	{
-		public static readonly _N94aLVGUDYCfmJQohqS7o05wjPB _003C_003E9 = new _N94aLVGUDYCfmJQohqS7o05wjPB();
-
-		public static Func<string, int> _003C_003E9__10_0;
-
-		internal int _6VTY1QgG5nNEBJE6zmVBbO3BB2L(string string_0)
-		{
-			return _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G();
-		}
-	}
-
 	private readonly ContentManager _7FoDc5IeOhkrJIekU2AAQQKZqefA;
 
 	private static _UmxbIbk7pgaod0bD7pS309P3Lns _6T55wit7MiGfAWRkPwjNbJ8N8lG;
@@ -66,7 +52,7 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 
 	public void _LcX2y4hMIzQST4uGT2Q5Ce7vaGg()
 	{
-		MediaPlayer.Volume = _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._DF24JUrPFA6rJ2cQrOTlpC3I4FF * _eJWqL2MhFZHNHP960nsWLJJmyPD._Hnb6mPvrZFgOMCIApIeMW88jSsF._7NidKjx61ui5CP7JojwfqxH4aKC * base._SWODlbUkQEqfwrtprjLPOeGF7HO;
+		MediaPlayer.Volume = Options.Data.MasterVolume * Options.Data.MusicVolume * base._SWODlbUkQEqfwrtprjLPOeGF7HO;
 	}
 
 	public void _nqn4Aw4hEsNL81QdtrDK2OwS6Kr(string string_0, float float_0, bool bool_0)
@@ -147,26 +133,5 @@ public class _UmxbIbk7pgaod0bD7pS309P3Lns : _RlrsL89bialFQa9mzWurgsdr6FK<float>
 	public static void _E7yBM68AWt7OGHJ5D6xYA8RK8tAA(float float_0)
 	{
 		_6T55wit7MiGfAWRkPwjNbJ8N8lG._98dbKZq4dvkw2wLkjZ77Y5Ih4xP(float_0);
-	}
-
-	[CompilerGenerated]
-	private void _fI217APzl4Tapt53WowQWN9Ipyi(object sender, EventArgs e)
-	{
-		if (MediaPlayer.State != 0 || _eT7BaYRygkyX4kj8h6aEwrq2uN.Length <= 1)
-		{
-			return;
-		}
-		_bTbQqsABbUefrkPeEqkxzxUsr8F++;
-		if (_bTbQqsABbUefrkPeEqkxzxUsr8F >= _eT7BaYRygkyX4kj8h6aEwrq2uN.Length)
-		{
-			if (!_avz8WSjNjL0U8mdfRNAb5mHaApV)
-			{
-				return;
-			}
-			_bTbQqsABbUefrkPeEqkxzxUsr8F = 0;
-		}
-		_wx0H9mDGCmUNsmV59Nj48JPJkEc = _eT7BaYRygkyX4kj8h6aEwrq2uN[_bTbQqsABbUefrkPeEqkxzxUsr8F];
-		Song song = _7FoDc5IeOhkrJIekU2AAQQKZqefA.Load<Song>(_wx0H9mDGCmUNsmV59Nj48JPJkEc);
-		MediaPlayer.Play(song);
 	}
 }

@@ -3,14 +3,14 @@ using System.Reflection;
 
 public static class _z8oOEvKr598r7HgA3VFwVCn2j0q
 {
-	public static void _IVxmfAaagekk8d3cdgAtQRhbUY9(this _opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0, _xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
+	public static void _IVxmfAaagekk8d3cdgAtQRhbUY9(this PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0, _xJL9E6vKdg1LYZtKQU5RQKikpvE _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG_0._XDbzWLxDi2VVrJQrjjLsgcfdxju();
+		_opIJo2jLUqdOL5yAFP4yzXce0DG_0.ResetPlayer();
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0._rtyJgfViJdXL2Ela5APpDlk99dI = _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.None;
-			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0._7OCMpsMmozHsAG0GDljMMAlGLJBA = _opIJo2jLUqdOL5yAFP4yzXce0DG.EBallsType.None;
-			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0._BCncLn6BIYiBX6NdFByAquBYGpH = _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.None;
+			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0.CockType = PlayerData.ECockType.None;
+			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0.BallsType = PlayerData.EBallsType.None;
+			_xJL9E6vKdg1LYZtKQU5RQKikpvE_0.BreastsType = PlayerData.EBreastsType.None;
 		}
 		PropertyInfo[] properties = _xJL9E6vKdg1LYZtKQU5RQKikpvE_0.GetType().GetProperties();
 		PropertyInfo[] array = properties;
@@ -28,11 +28,11 @@ public static class _z8oOEvKr598r7HgA3VFwVCn2j0q
 		}
 	}
 
-	public static _xJL9E6vKdg1LYZtKQU5RQKikpvE _3phsCUyg0G1wDNmHtsfmOUToBpF(this _opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0, string string_0)
+	public static _xJL9E6vKdg1LYZtKQU5RQKikpvE _3phsCUyg0G1wDNmHtsfmOUToBpF(this PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0, string string_0)
 	{
 		_xJL9E6vKdg1LYZtKQU5RQKikpvE xJL9E6vKdg1LYZtKQU5RQKikpvE = new _xJL9E6vKdg1LYZtKQU5RQKikpvE
 		{
-			_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0
+			Name = string_0
 		};
 		PropertyInfo[] properties = xJL9E6vKdg1LYZtKQU5RQKikpvE.GetType().GetProperties();
 		PropertyInfo[] array = properties;

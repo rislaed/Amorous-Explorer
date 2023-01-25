@@ -11,16 +11,16 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 
 	private float _znKl2SuVqjuhuU4ZYVKzq6zGvfb;
 
-	private readonly _JbeCmOie0phb2cbgG6DdGZrbs3pB _4L7hfXrWoDdArQiscG4ukHCV46B;
+	private readonly IAmorous Amorous;
 
-	public _dvyBDFOZwoBLf9qqHSfHYLLXVwP(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public _dvyBDFOZwoBLf9qqHSfHYLLXVwP(IAmorous game)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
+		Amorous = game;
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public void Update(GameTime gameTime_0)
 	{
-		if (!_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj || _4L7hfXrWoDdArQiscG4ukHCV46B._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
+		if (!_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj || Amorous._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
 			return;
 		}
@@ -59,7 +59,7 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 		}
 	}
 
-	public void _tO46aYSBLFIuhFNlhbrAeWbFDSf()
+	public void End()
 	{
 		if (_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj)
 		{

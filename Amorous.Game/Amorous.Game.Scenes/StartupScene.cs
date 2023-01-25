@@ -8,33 +8,33 @@ using Squid;
 
 namespace Amorous.Game.Scenes;
 
-public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class StartupScene : AbstractScene
 {
 	private class ApiLogin
 	{
 		[JsonProperty("username")]
-		public string _LG9P2ATIfMzK27guq7fnGxxILwD { get; set; }
+		public string username { get; set; }
 
 		[JsonProperty("password")]
-		public string _zGqOm5iY9wKtyOLEu81UskKVggC { get; set; }
+		public string password { get; set; }
 	}
 
 	private class ApiReponse
 	{
 		[JsonProperty("error")]
-		public bool _0rEYVY1cDKfLPVuLw54UlaIts2m { get; set; }
+		public bool error { get; set; }
 
 		[JsonProperty("message")]
-		public string _NvMJ5jDaeRR7HysERrVDtSlxaI5 { get; set; }
+		public string message { get; set; }
 
 		[JsonProperty("userGroups")]
-		public string[] _U5SWg5Bx5R0vX25DxhWQ0Twb1eh { get; set; }
+		public string[] userGroups { get; set; }
 
 		[JsonProperty("timestamp")]
-		public string _3QVueTX1TxhBB03hZbnibQdussEb { get; set; }
+		public string timestamp { get; set; }
 
 		[JsonProperty("hash")]
-		public string _uNi8yrQVBFzFdV8f7FGmr8Vhobf { get; set; }
+		public string hash { get; set; }
 	}
 
 	private static readonly string _Pxncvon3rRvuowKL1yYBOZjpf2y = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "username.txt");
@@ -43,8 +43,8 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private readonly CheckBox _9nCiJkYgPYczxXJNlo8Z7BbfdsB;
 
-	public StartupScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public StartupScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Intro/Background", 0, -540);
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
@@ -112,32 +112,32 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 				{
 					streamWriter.Write(JsonConvert.SerializeObject(new ApiLogin
 					{
-						_LG9P2ATIfMzK27guq7fnGxxILwD = _njC7ZfEM6PTCffwkw18LisM3W9E.Text,
-						_zGqOm5iY9wKtyOLEu81UskKVggC = _mzwWNbSlBetGnbEr0j6IpMenjkp.Text
+						username = _njC7ZfEM6PTCffwkw18LisM3W9E.Text,
+						password = _mzwWNbSlBetGnbEr0j6IpMenjkp.Text
 					}));
 				}
 				using StreamReader streamReader = new StreamReader(webRequest.GetResponse().GetResponseStream());
 				ApiReponse apiReponse = JsonConvert.DeserializeObject<ApiReponse>(streamReader.ReadToEnd());
-				if (!apiReponse._0rEYVY1cDKfLPVuLw54UlaIts2m)
+				if (!apiReponse.error)
 				{
-					string text = _boyt8NIMtKsAGSTcjHeL0WMbFxs._mCgIgZp06WD70u8PXcTcCcl6zfe(_njC7ZfEM6PTCffwkw18LisM3W9E.Text + _mzwWNbSlBetGnbEr0j6IpMenjkp.Text + apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5 + apiReponse._3QVueTX1TxhBB03hZbnibQdussEb);
-					if (text == apiReponse._uNi8yrQVBFzFdV8f7FGmr8Vhobf)
+					string text = _boyt8NIMtKsAGSTcjHeL0WMbFxs._mCgIgZp06WD70u8PXcTcCcl6zfe(_njC7ZfEM6PTCffwkw18LisM3W9E.Text + _mzwWNbSlBetGnbEr0j6IpMenjkp.Text + apiReponse.message + apiReponse.timestamp);
+					if (text == apiReponse.hash)
 					{
 						_x8adRt6rvrXniPFYijbzqvPFr4j();
 					}
 					else
 					{
-						base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q("Sorry, please try again!", 250);
+						base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm("Sorry, please try again!", 250);
 					}
 				}
 				else
 				{
-					base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q(apiReponse._NvMJ5jDaeRR7HysERrVDtSlxaI5, 500);
+					base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm(apiReponse.message, 500);
 				}
 			}
 			catch (Exception)
 			{
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp._0pVU36wp9GYD1jM18raZtVEbA9q("Sorry, an unexpected exception occured, see log-file for more details!", 500);
+				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", 500);
 			}
 		};
 		Button button2 = new Button
@@ -148,7 +148,7 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		};
 		button2.MouseClick += delegate
 		{
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._fDSidqggP063WGf2vzkdlA1UDkn("https://forums.amorousgame.com/lost-password/");
+			base.Game._fDSidqggP063WGf2vzkdlA1UDkn("https://forums.amorousgame.com/lost-password/");
 		};
 		window.Controls.Add(item);
 		window.Controls.Add(item2);
@@ -163,14 +163,14 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
 	{
-		CoupleANPC coupleANPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		coupleANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 350f;
-		coupleANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1090f;
+		CoupleANPC coupleANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(LayerOrder.Background);
+		coupleANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 350f;
+		coupleANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
 		coupleANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleANPC.EPoses.Waving);
 		coupleANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
-		CoupleBNPC coupleBNPC = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(_a2qVgWDIm3fBp49WubttSTPsx8K.Background);
-		coupleBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 550f;
-		coupleBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1090f;
+		CoupleBNPC coupleBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(LayerOrder.Background);
+		coupleBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 550f;
+		coupleBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
 		coupleBNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleBNPC.EPoses.Waving);
 		coupleBNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
 	}
@@ -181,12 +181,6 @@ public class StartupScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			File.WriteAllText(_Pxncvon3rRvuowKL1yYBOZjpf2y, _njC7ZfEM6PTCffwkw18LisM3W9E.Text);
 		}
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<MainMenuScene>();
-	}
-
-	[CompilerGenerated]
-	private void _bC7RVqWYAiAlsTmOwh7DNLQdIat(Control control_0, MouseEventArgs mouseEventArgs_0)
-	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._fDSidqggP063WGf2vzkdlA1UDkn("https://forums.amorousgame.com/lost-password/");
+		base.Game.StartScene<MainMenuScene>();
 	}
 }

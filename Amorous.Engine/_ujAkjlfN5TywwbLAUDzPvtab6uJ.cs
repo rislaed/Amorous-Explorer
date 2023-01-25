@@ -5,17 +5,17 @@ public abstract class _ujAkjlfN5TywwbLAUDzPvtab6uJ
 {
 	public Vector2 _Jh6AK28sBy2bS8ZCoKHP3LX45Uk;
 
-	public Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
+	public Color Color;
 
 	public int _ac2H6kMdrgPhXXxabsikjji4SiT;
 
-	public int _VNgmwYSLsJyyiR6cPQ35UHJBR4d;
+	public int LayerOrder;
 
 	public float _fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
 
-	protected _7UlnfykmEmZDFt3BmCKZekI43Ih _XbOXR6AypLIdJ3gBMGseGi3Wi2i { get; private set; }
+	protected AbstractScene Scene { get; private set; }
 
-	public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; private set; }
+	public string Name { get; private set; }
 
 	public bool _3ZeCDXqcWHY4XJDBGyav3UzxYaHA { get; set; }
 
@@ -23,7 +23,7 @@ public abstract class _ujAkjlfN5TywwbLAUDzPvtab6uJ
 
 	public bool _C6GAq9XPMC9PQPnaaRqYWpv4V6S { get; set; }
 
-	public float _7Xn1C5tjYnmIif1iZKV8AWsEEbL
+	public float X
 	{
 		get
 		{
@@ -35,7 +35,7 @@ public abstract class _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		}
 	}
 
-	public float _bCjZ3VSXGKyhmykd2zCnQBiSpDf
+	public float Y
 	{
 		get
 		{
@@ -47,23 +47,23 @@ public abstract class _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		}
 	}
 
-	public int _je8rVfyg4zywmqSi4Ozx1z7wJ4b { get; protected set; }
+	public int Width { get; protected set; }
 
-	public int _WJfGWBzn4wgdGBnMWRH2pcJ3AqH { get; protected set; }
+	public int Height { get; protected set; }
 
-	protected _ujAkjlfN5TywwbLAUDzPvtab6uJ(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0)
+	protected _ujAkjlfN5TywwbLAUDzPvtab6uJ(AbstractScene AbstractScene_0, string string_0)
 	{
-		_XbOXR6AypLIdJ3gBMGseGi3Wi2i = _7UlnfykmEmZDFt3BmCKZekI43Ih_0;
-		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
+		Scene = AbstractScene_0;
+		Name = string_0;
 		_3ZeCDXqcWHY4XJDBGyav3UzxYaHA = true;
 		_Fxy2SlgceW90FloFw6a1AEJODYA = true;
-		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.White;
+		Color = Color.White;
 		_ac2H6kMdrgPhXXxabsikjji4SiT = 0;
 	}
 
-	public abstract void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0);
+	public abstract void Update(GameTime gameTime_0);
 
-	public abstract void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0);
+	public abstract void Draw(SpriteBatch spriteBatch_0);
 
 	public virtual bool _Hym13mjJB64DQkbAkEMmEae8pQdA()
 	{

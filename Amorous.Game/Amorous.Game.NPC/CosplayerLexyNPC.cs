@@ -22,12 +22,12 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 		Costume
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Lexy";
+	public static string Name = "Lexy";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(60, 128, 241);
+	public static Color Color = new Color(60, 128, 241);
 
-	public CosplayerLexyNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CosplayerLexy", 1f)
+	public CosplayerLexyNPC(IAmorous game)
+		: base(Game, "Assets/NPC/CosplayerLexy", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Lexy Cosplayer (nude)")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Lexy Cosplayer (fringe for nude)");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Costume, "Lexy Cosplayer (clothed)")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
@@ -42,18 +42,18 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 413f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 413f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -280f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -280f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1016f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1016f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
 			break;
 		}
 	}

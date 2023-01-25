@@ -1,9 +1,9 @@
 namespace Amorous.Game.Scenes;
 
-public class RestaurantScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class RestaurantScene : AbstractScene
 {
-	public RestaurantScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public RestaurantScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Restaurant/Background", 0, 0);
 		_NC5VT77x8y2iH2pW56TBN1eyomA("Bar", "Assets/Scenes/Restaurant/Table", 0, 0);

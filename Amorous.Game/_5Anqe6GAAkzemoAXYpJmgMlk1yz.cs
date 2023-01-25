@@ -40,22 +40,22 @@ public static class _5Anqe6GAAkzemoAXYpJmgMlk1yz
 		}
 	}
 
-	public static _RRECH42isVc35MkZPyLEGkp0hjs _rf41M6fa6MhAPBvvUvQseEZTt9Q
+	public static TimeOfDay time
 	{
 		get
 		{
 			if (_K9Elfb3mqQp0B5Vj74ibvRwgdGu < 6)
 			{
-				return _RRECH42isVc35MkZPyLEGkp0hjs.Night;
+				return TimeOfDay.Night;
 			}
 			if (_K9Elfb3mqQp0B5Vj74ibvRwgdGu >= 10)
 			{
 				if (_K9Elfb3mqQp0B5Vj74ibvRwgdGu < 17)
 				{
 				}
-				return _RRECH42isVc35MkZPyLEGkp0hjs.Night;
+				return TimeOfDay.Night;
 			}
-			return _RRECH42isVc35MkZPyLEGkp0hjs.Morning;
+			return TimeOfDay.Morning;
 		}
 		set
 		{
@@ -64,16 +64,16 @@ public static class _5Anqe6GAAkzemoAXYpJmgMlk1yz
 			default:
 				_K9Elfb3mqQp0B5Vj74ibvRwgdGu = 0;
 				break;
-			case _RRECH42isVc35MkZPyLEGkp0hjs.Morning:
+			case TimeOfDay.Morning:
 				_K9Elfb3mqQp0B5Vj74ibvRwgdGu = 9;
 				break;
-			case _RRECH42isVc35MkZPyLEGkp0hjs.Day:
+			case TimeOfDay.Day:
 				_K9Elfb3mqQp0B5Vj74ibvRwgdGu = 16;
 				break;
-			case _RRECH42isVc35MkZPyLEGkp0hjs.Sunset:
+			case TimeOfDay.Sunset:
 				_K9Elfb3mqQp0B5Vj74ibvRwgdGu = 19;
 				break;
-			case _RRECH42isVc35MkZPyLEGkp0hjs.Night:
+			case TimeOfDay.Night:
 				_K9Elfb3mqQp0B5Vj74ibvRwgdGu = 5;
 				break;
 			}

@@ -24,8 +24,8 @@ public class ClubInsideDancerBNPC : SpineNPC<ClubInsideDancerBNPC.EHeads, ClubIn
 		Skirt
 	}
 
-	public ClubInsideDancerBNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubInsideStatic/Dancer B", 0.7f, bool_0: true)
+	public ClubInsideDancerBNPC(IAmorous game)
+		: base(Game, "Assets/NPC/ClubInsideStatic/Dancer B", 0.7f, bool_0: true)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Dance A");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Hair", "Head", "Jaw");

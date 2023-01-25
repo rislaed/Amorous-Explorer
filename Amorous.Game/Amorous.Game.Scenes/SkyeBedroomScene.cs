@@ -2,17 +2,17 @@ using System;
 
 namespace Amorous.Game.Scenes;
 
-public class SkyeBedroomScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class SkyeBedroomScene : AbstractScene
 {
-	public SkyeBedroomScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public SkyeBedroomScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/SkyeBedroom/interactable bedroom - Backround", 0, 0);
 		_2CHUZ5vSi5NbJYJ4gGtr3C2VVEo("Door", "Assets/Scenes/SkyeBedroom/interactable bedroom - Door", 1534, 70, delegate
 		{
-			if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fvTKDuNATrUxfXZVvltePz3vYkK("SkyeDate") == 55)
+			if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().GetDecimal("SkyeDate") == 55)
 			{
-				_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._xyl3Tv5KdR5eezDgagxbBcS3cwt("SkyeDate");
+				Game.RequestScene("SkyeDate");
 			}
 		});
 		_2VwdavpaoNVxohFKsz1eYBmnxyh("Mirror", "Assets/Scenes/SkyeBedroom/interactable bedroom - Mirror", 1008, 289, null, 0, 0, "<i>That's me!</i>");
@@ -27,7 +27,7 @@ public class SkyeBedroomScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			_2VwdavpaoNVxohFKsz1eYBmnxyh("Droor Right", "Assets/Scenes/SkyeBedroom/interactable bedroom - Droor Right SFW", 1166, 547, null, 0, 0, "<i>Wow,░ there are some pretty exotic looking panties in here.░ I should probably close this one...</i>");
 		}
-		_2VwdavpaoNVxohFKsz1eYBmnxyh("Frame", "Assets/Scenes/SkyeBedroom/interactable bedroom - Frame", 698, 214, null, 0, 0, "<i>A risqué poster of a popular video game character laying nude in a field of grass.░ She must be very proud of this one, It's even framed!</i>");
+		_2VwdavpaoNVxohFKsz1eYBmnxyh("Frame", "Assets/Scenes/SkyeBedroom/interactable bedroom - Frame", 698, 214, null, 0, 0, "<i>A risqué poster of a popular video Game character laying nude in a field of grass.░ She must be very proud of this one, It's even framed!</i>");
 		_2VwdavpaoNVxohFKsz1eYBmnxyh("Wallscroll", "Assets/Scenes/SkyeBedroom/interactable bedroom - Wallscroll", 450, 171, null, 0, 0, "<i>Looks like a cosplay poster,░ I don't recognise the character but the pose is very flamboyant.</i>");
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/4U - Long Gone", 0.4f);
 	}

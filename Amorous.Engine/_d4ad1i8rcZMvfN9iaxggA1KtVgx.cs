@@ -28,12 +28,12 @@ public class _d4ad1i8rcZMvfN9iaxggA1KtVgx : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		}
 	}
 
-	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
+	public override void Draw(SpriteBatch spriteBatch_0)
 	{
 		if (base._NUP8Fs8I7oMuI6vfg25DFKFlQqE)
 		{
 			spriteBatch_0.Draw(_NsW6nQWUMy3K32z4OlInvOro6nF ?? _eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _cE3kSvrhsTV9gIQPkCoBhOFAs2c);
 		}
-		spriteBatch_0.Draw(_eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
+		spriteBatch_0.Draw(_eGxbzBRO3Gff6qF4UvzTSaP4XTl, _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, Color);
 	}
 }

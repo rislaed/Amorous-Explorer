@@ -7,18 +7,7 @@ using SDL2;
 
 public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 {
-	[CompilerGenerated]
-	private sealed class _KOh4sx2NZ0bM2cvCmfoSbVrCbxm
-	{
-		public Keys[] _qy4C18YJHEicy4hTkm6j5yaDlSV;
-
-		internal bool _A9CfPN7dQuZ3AAVKZF9ow2bKb7y(Keys keys_0)
-		{
-			return _qy4C18YJHEicy4hTkm6j5yaDlSV.Contains(keys_0);
-		}
-	}
-
-	private readonly _JbeCmOie0phb2cbgG6DdGZrbs3pB _4L7hfXrWoDdArQiscG4ukHCV46B;
+	private readonly IAmorous Amorous;
 
 	private Vector2 _z4wENYBCooFsUzGd3jpaiN6UNNL;
 
@@ -52,17 +41,17 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 		}
 		set
 		{
-			SDL.SDL_SetWindowGrab(_4L7hfXrWoDdArQiscG4ukHCV46B._8k7Do3TGW5NrB22zl8QzInP2j7k.Handle, value ? SDL.SDL_bool.SDL_TRUE : SDL.SDL_bool.SDL_FALSE);
+			SDL.SDL_SetWindowGrab(Amorous._8k7Do3TGW5NrB22zl8QzInP2j7k.Handle, value ? SDL.SDL_bool.SDL_TRUE : SDL.SDL_bool.SDL_FALSE);
 			_TuLPATzfvkT61cGzdP0BdAYgdRg = value;
 		}
 	}
 
-	public _3FFZvGWTAe7rsviKkDPTXEVjxWf(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public _3FFZvGWTAe7rsviKkDPTXEVjxWf(IAmorous game)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0;
+		Amorous = game;
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo()
+	public void Update()
 	{
 		_JxAOrrJ4bqv0CaScbroMtsBP9vo = _QyGrB1OudfOfivAikLqMIOfHz3L;
 		_QyGrB1OudfOfivAikLqMIOfHz3L = Keyboard.GetState();
@@ -70,8 +59,8 @@ public class _3FFZvGWTAe7rsviKkDPTXEVjxWf
 		_QG4mFT06aDk75H8FavD2erQSaah = GamePad.GetState(PlayerIndex.One);
 		_nL6AWNBZGcjH4ycaR2xzpUdcYpMA = _N9dtCLxcbyjVo7hRyMVQzD7exaM;
 		_N9dtCLxcbyjVo7hRyMVQzD7exaM = Mouse.GetState();
-		_z4wENYBCooFsUzGd3jpaiN6UNNL.X = Math.Max(0, Math.Min(_N9dtCLxcbyjVo7hRyMVQzD7exaM.X, _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._ssaTWDF5CYtQ9fGbLNtaLrgFtvJ));
-		_z4wENYBCooFsUzGd3jpaiN6UNNL.Y = Math.Max(0, Math.Min(_N9dtCLxcbyjVo7hRyMVQzD7exaM.Y, _4L7hfXrWoDdArQiscG4ukHCV46B._vsceSzSIjBy2nZrCxAzKZbUiwLq._EM2dYeybqjLlS6bODr1k9TxIRZU));
+		_z4wENYBCooFsUzGd3jpaiN6UNNL.X = Math.Max(0, Math.Min(_N9dtCLxcbyjVo7hRyMVQzD7exaM.X, Amorous._vsceSzSIjBy2nZrCxAzKZbUiwLq._ssaTWDF5CYtQ9fGbLNtaLrgFtvJ));
+		_z4wENYBCooFsUzGd3jpaiN6UNNL.Y = Math.Max(0, Math.Min(_N9dtCLxcbyjVo7hRyMVQzD7exaM.Y, Amorous._vsceSzSIjBy2nZrCxAzKZbUiwLq._EM2dYeybqjLlS6bODr1k9TxIRZU));
 		_bN58s8paKnVuWr3UMJsZkvbV9WA.X = (int)_z4wENYBCooFsUzGd3jpaiN6UNNL.X;
 		_bN58s8paKnVuWr3UMJsZkvbV9WA.Y = (int)_z4wENYBCooFsUzGd3jpaiN6UNNL.Y;
 	}

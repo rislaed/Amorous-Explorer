@@ -31,19 +31,19 @@ public class _Yu3OngEjZbsgelWEySu6GE7aoYg : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		}
 	}
 
-	public _Yu3OngEjZbsgelWEySu6GE7aoYg(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, Texture2D[] texture2D_0)
-		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
+	public _Yu3OngEjZbsgelWEySu6GE7aoYg(AbstractScene AbstractScene_0, string string_0, Texture2D[] texture2D_0)
+		: base(AbstractScene_0, string_0)
 	{
 		_I1ZbHemGfJWozEfpDc9aFgiZQhEb = texture2D_0;
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public override void Update(GameTime gameTime_0)
 	{
 	}
 
-	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
+	public override void Draw(SpriteBatch spriteBatch_0)
 	{
-		spriteBatch_0.Draw(_I1ZbHemGfJWozEfpDc9aFgiZQhEb[_SWODlbUkQEqfwrtprjLPOeGF7HO], _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
+		spriteBatch_0.Draw(_I1ZbHemGfJWozEfpDc9aFgiZQhEb[_SWODlbUkQEqfwrtprjLPOeGF7HO], _Jh6AK28sBy2bS8ZCoKHP3LX45Uk, Color);
 	}
 
 	public override void _ymyneWF6dfrtfUI08wyb3KExq0D()
@@ -51,7 +51,7 @@ public class _Yu3OngEjZbsgelWEySu6GE7aoYg : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		Texture2D[] i1ZbHemGfJWozEfpDc9aFgiZQhEb = _I1ZbHemGfJWozEfpDc9aFgiZQhEb;
 		foreach (Texture2D object_ in i1ZbHemGfJWozEfpDc9aFgiZQhEb)
 		{
-			base._XbOXR6AypLIdJ3gBMGseGi3Wi2i._ZzBuoSDMWwerejOO9Goyv2OCKgE._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._HXLRmt9GqcmA9GTG5xzRKNu3QpF(object_);
+			base.Scene.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._HXLRmt9GqcmA9GTG5xzRKNu3QpF(object_);
 		}
 	}
 }

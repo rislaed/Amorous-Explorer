@@ -6,19 +6,19 @@ using Newtonsoft.Json;
 public class _oVHccpskJmMcOYan50N52Esmi8k
 {
 	[JsonProperty("Name")]
-	public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; set; }
+	public string Name { get; set; }
 
 	[JsonProperty("Width")]
-	public int _je8rVfyg4zywmqSi4Ozx1z7wJ4b { get; set; }
+	public int Width { get; set; }
 
 	[JsonProperty("Height")]
-	public int _WJfGWBzn4wgdGBnMWRH2pcJ3AqH { get; set; }
+	public int Height { get; set; }
 
 	[JsonProperty("Groups")]
-	public List<_WmDwUqOXqj6xpaw8SzHUPXR0uwB> _ZWquBFoc0aD37PZyAGrp8WqVxBC { get; set; }
+	public List<_WmDwUqOXqj6xpaw8SzHUPXR0uwB> Groups { get; set; }
 
 	public _oVHccpskJmMcOYan50N52Esmi8k()
 	{
-		_ZWquBFoc0aD37PZyAGrp8WqVxBC = new List<_WmDwUqOXqj6xpaw8SzHUPXR0uwB>();
+		Groups = new List<_WmDwUqOXqj6xpaw8SzHUPXR0uwB>();
 	}
 }

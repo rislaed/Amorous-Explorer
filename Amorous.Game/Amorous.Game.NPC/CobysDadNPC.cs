@@ -24,12 +24,12 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Coby's Dad";
+	public static string Name = "Coby's Dad";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(176, 206, 255);
+	public static Color Color = new Color(176, 206, 255);
 
-	public CobysDadNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/CobysDad", 1f)
+	public CobysDadNPC(IAmorous game)
+		: base(Game, "Assets/NPC/CobysDad", 1f)
 	{
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Stern, "Coby's Dad eye", "Coby's Dad Head");
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Coby's Dad Body");
@@ -46,18 +46,18 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 612f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 24f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 612f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 24f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -160f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 24f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -160f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 24f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1185f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 24f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1185f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 24f;
 			break;
 		}
 	}

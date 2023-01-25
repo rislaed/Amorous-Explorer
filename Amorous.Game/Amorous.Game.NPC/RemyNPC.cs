@@ -34,12 +34,12 @@ public class RemyNPC : SpineNPC<RemyNPC.EHeads, RemyNPC.EPoses, RemyNPC.EClothes
 		Swimsuit
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Remy";
+	public static string Name = "Remy";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(255, 102, 51);
+	public static Color Color = new Color(255, 102, 51);
 
-	public RemyNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Remy/Remy", 0.75f, bool_0: true)
+	public RemyNPC(IAmorous game)
+		: base(Game, "Assets/NPC/Remy/Remy", 0.75f, bool_0: true)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
 		string[] first = new string[5] { "Fringe", "Ponytail", "Ear left", "Ear right", "Eyes back" };
@@ -79,18 +79,18 @@ public class RemyNPC : SpineNPC<RemyNPC.EHeads, RemyNPC.EPoses, RemyNPC.EClothes
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1000f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1200f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1000f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1200f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 380f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1200f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 380f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1200f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1540f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1200f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1540f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1200f;
 			break;
 		}
 	}

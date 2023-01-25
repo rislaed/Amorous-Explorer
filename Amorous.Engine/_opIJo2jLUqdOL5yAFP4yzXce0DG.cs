@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 
-public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
+public class PlayerData : IPlayerData
 {
 	public enum EBodyType
 	{
@@ -17,7 +17,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 	}
 
 	[Flags]
-	public enum _VzIdKOJ1Gq1YccwwHcwhrVV5V4U
+	public enum EMarkingsType
 	{
 		None = 0,
 		Underbelly = 1,
@@ -39,7 +39,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 	}
 
 	[Flags]
-	public enum _iDe3W6qb7jKTPuJV79yf2i7UoIq
+	public enum EHeadMarkingsType
 	{
 		None = 0,
 		Gaunt = 1,
@@ -205,378 +205,340 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 		Lex = 0x100
 	}
 
-	[Serializable]
-	[CompilerGenerated]
-	private sealed class _0sDtzIDsyA0r9WSGUGpY2WTEdUj
-	{
-		public static readonly _0sDtzIDsyA0r9WSGUGpY2WTEdUj _003C_003E9 = new _0sDtzIDsyA0r9WSGUGpY2WTEdUj();
-
-		public static Func<string, bool> _003C_003E9__300_0;
-
-		internal bool _sKQKx71rfMlEGGCBet4oVSSys1A(string string_0)
-		{
-			return string_0.StartsWith("Player.Outfit.");
-		}
-	}
-
-	[CompilerGenerated]
-	private sealed class _fU7pDGlGNq6EDvpigVdMzOpE2pkb
-	{
-		public bool _1DzAfBEb14L1dIDs9OVbFZ8lYJD;
-
-		public string _6ASPaeAeh8vdl643GgyWe0mG0a0;
-
-		public _opIJo2jLUqdOL5yAFP4yzXce0DG _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA;
-
-		internal bool _Y7joCM8kd5WrtAyQOTuG6a5ixjk(string string_0)
-		{
-			if (!_1DzAfBEb14L1dIDs9OVbFZ8lYJD)
-			{
-				return string_0 == _6ASPaeAeh8vdl643GgyWe0mG0a0;
-			}
-			return string_0.StartsWith(_6ASPaeAeh8vdl643GgyWe0mG0a0);
-		}
-
-		internal void _3uTshCsyDhL2cJyhUUEzrD5HdTb(string string_0)
-		{
-			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
-		}
-	}
-
 	[JsonProperty("Name")]
-	public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; set; }
+	public string Name { get; set; }
 
 	[JsonProperty("BodyType")]
-	public EBodyType _8CtoV1bqn0CwCzb1tuoNppBt0Gg { get; set; }
+	public EBodyType BodyType { get; set; }
 
 	[JsonProperty("BodyColor")]
-	public Color _6f1rvTENt5XWmHTE22zxBIwbH9G { get; set; }
+	public Color BodyColor { get; set; }
 
 	[JsonProperty("ShowNails")]
-	public bool _VmNLhqrIwSnE6JnCYiBcxnSqnEV { get; set; }
+	public bool ShowNails { get; set; }
 
 	[JsonProperty("NailColor")]
-	public Color _in5HHYmrdLTFpkgc8aimJpXqAXB { get; set; }
+	public Color NailColor { get; set; }
 
 	[JsonProperty("HeadType")]
-	public EHeadType _UjtZovBCLAtBZnUfbTvRFsaf5mx { get; set; }
+	public EHeadType HeadType { get; set; }
 
 	[JsonProperty("HeadColor")]
-	public Color _1qfGl3Oc2JyQEpnQtdOxMeMkqhi { get; set; }
+	public Color HeadColor { get; set; }
 
 	[JsonProperty("PaperBagColor")]
-	public Color _VWdlqWB4z2wNtm197Oiv32QGVbE { get; set; }
+	public Color PaperBagColor { get; set; }
 
 	[JsonProperty("PaperBagEyesColor")]
-	public Color _sbSAaAmkhONcFX6f0JtHbVQbEfG { get; set; }
+	public Color PaperBagEyesColor { get; set; }
 
 	[JsonProperty("HeadMarkingsType")]
-	public _iDe3W6qb7jKTPuJV79yf2i7UoIq _SnnHu3P4lDDxgkL6cuUt7y07yxG { get; set; }
+	public EHeadMarkingsType HeadMarkingsType { get; set; }
 
 	[JsonProperty("HeadGauntColor")]
-	public Color _Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt { get; set; }
+	public Color HeadGauntColor { get; set; }
 
 	[JsonProperty("HeadScruffyColor")]
-	public Color _WvoLJ4MA4gYEsgOmmIQvfK3xFlu { get; set; }
+	public Color HeadScruffyColor { get; set; }
 
 	[JsonProperty("HeadSnoutColor")]
-	public Color _lUyqwDvFCoXEZ6VM9PVCQ970jps { get; set; }
+	public Color HeadSnoutColor { get; set; }
 
 	[JsonProperty("HeadStripesColor")]
-	public Color _qKGefHxdjIUD6ObjxrxnLwbBEsh { get; set; }
+	public Color HeadStripesColor { get; set; }
 
 	[JsonProperty("HeadAccessoriesType")]
-	public EHeadAccessoriesType _pmr0FnBBvgaggpusBKMWplUa63c { get; set; }
+	public EHeadAccessoriesType HeadAccessoriesType { get; set; }
 
 	[JsonProperty("HeadHornsColor")]
-	public Color _9b2asKZDwVM1TcSfmfeFCuk0TJZb { get; set; }
+	public Color HeadHornsColor { get; set; }
 
 	[JsonProperty("EarColor")]
-	public Color _vUhBAXEgvpGKopOUkDJFoc4EYQ3 { get; set; }
+	public Color EarColor { get; set; }
 
 	[JsonProperty("EarInnerColor")]
-	public Color _uaBF7rEib15d42vH8AzoXWFMMkE { get; set; }
+	public Color EarInnerColor { get; set; }
 
 	[JsonProperty("EyesType")]
-	public EEyesType _c0ThYURHAGN0Wzlzw9Ibh3Z8qyo { get; set; }
+	public EEyesType EyesType { get; set; }
 
 	[JsonProperty("EyesBackColor")]
-	public Color _GXnDb1oaJlPbAQV2mjAwCQFK0nmb { get; set; }
+	public Color EyesBackColor { get; set; }
 
 	[JsonProperty("EyesFrontColor")]
-	public Color _0K4lcN7iwo5q0iP1YlkpY9GdayR { get; set; }
+	public Color EyesFrontColor { get; set; }
 
 	[JsonProperty("BrowType")]
-	public EBrowType _KBOJ0qhM8C5evPQxibgX74m2WHg { get; set; }
+	public EBrowType BrowType { get; set; }
 
 	[JsonProperty("BrowColor")]
-	public Color _HRPv5rzDY5zNiP4NADDEGhrzGTe { get; set; }
+	public Color BrowColor { get; set; }
 
 	[JsonProperty("MuzzleType")]
-	public EMuzzleType _4QUr9lDqmNxEuy7B4xgb7Lj1HU0 { get; set; }
+	public EMuzzleType MuzzleType { get; set; }
 
 	[JsonProperty("MuzzleColor")]
-	public Color _VsEYbNSam3IFYYWY4QC2lb4ia61 { get; set; }
+	public Color MuzzleColor { get; set; }
 
 	[JsonProperty("NoseColor")]
-	public Color _y1SiMmRVXWDhDtY17knDpitt46F { get; set; }
+	public Color NoseColor { get; set; }
 
 	[JsonProperty("TeethColor")]
-	public Color _T98drEOtEEZKeB5tXzsuPrhb5Xk { get; set; }
+	public Color TeethColor { get; set; }
 
 	[JsonProperty("ShowMuzzleHorn")]
-	public bool _hkFDGB5pWIuOVcIyDAFqHrDdSpjA { get; set; }
+	public bool ShowMuzzleHorn { get; set; }
 
 	[JsonProperty("MuzzleHornColor")]
-	public Color _q2iDxJYfqribHB1bD8aSkSjqrfnA { get; set; }
+	public Color MuzzleHornColor { get; set; }
 
 	[JsonProperty("ShowMuzzleMask")]
-	public bool _UAZhvJ3a9BGOBM0CLiDkKLwUFC9 { get; set; }
+	public bool ShowMuzzleMask { get; set; }
 
 	[JsonProperty("MuzzleMaskColor")]
-	public Color _phJrpk3rql5MfNJxPQ9X7nC8aAk { get; set; }
+	public Color MuzzleMaskColor { get; set; }
 
 	[JsonProperty("HairstyleType")]
-	public EHairstyleType _03h2I0mTkGTzIA5R48rgwJh7JZA { get; set; }
+	public EHairstyleType HairstyleType { get; set; }
 
 	[JsonProperty("HairColor")]
-	public Color _bJmvnPs69aVDXxG48lmruYZFHKt { get; set; }
+	public Color HairColor { get; set; }
 
 	[JsonProperty("FringeType")]
-	public EFringeType _fzMbZCCd7imnrcrYWkSj5u8UZ2J { get; set; }
+	public EFringeType FringeType { get; set; }
 
 	[JsonProperty("FringeColor")]
-	public Color _EvdUMrkAAdTeMv6fOpGrOLCAMq8A { get; set; }
+	public Color FringeColor { get; set; }
 
 	[JsonProperty("FeetType")]
-	public EFeetType _LZ8c6hRMRYKjnlLOPhbZHcWqUGG { get; set; }
+	public EFeetType FeetType { get; set; }
 
 	[JsonProperty("FeetColor")]
-	public Color _LZfuQybASevOsCykEWqdvA5GqUF { get; set; }
+	public Color FeetColor { get; set; }
 
 	[JsonProperty("TailType")]
-	public ETailType _NrFEKLWh80bQXi9PujCBTqm01AA { get; set; }
+	public ETailType TailType { get; set; }
 
 	[JsonProperty("TailColor")]
-	public Color _qsK1J3jktKH3eJ2i8sL1oaxXtLc { get; set; }
+	public Color TailColor { get; set; }
 
 	[JsonProperty("ShowTailPartOne")]
-	public bool _PVQfhwHODkR6bzHmfeCK4L8riIG { get; set; }
+	public bool ShowTailPartOne { get; set; }
 
 	[JsonProperty("TailPartOneColor")]
-	public Color _62dl1HYYkor3TZL58k5Y33Tj83 { get; set; }
+	public Color TailPartOneColor { get; set; }
 
 	[JsonProperty("ShowTailPartTwo")]
-	public bool _tEXwTuSRSq5JaaFE4W8edEHxS9q { get; set; }
+	public bool ShowTailPartTwo { get; set; }
 
 	[JsonProperty("TailPartTwoColor")]
-	public Color _LufmRsAZrlyDgRKYocQXPzANMaF { get; set; }
+	public Color TailPartTwoColor { get; set; }
 
 	[JsonProperty("MarkingsType")]
-	public _VzIdKOJ1Gq1YccwwHcwhrVV5V4U _Mz7LwHZqoGBscApFXmff1kEQnGY { get; set; }
+	public EMarkingsType MarkingsType { get; set; }
 
 	[JsonProperty("UnderbellyColor")]
-	public Color _PeK36AvFxEQCvX3fS62hNV7rpuJ { get; set; }
+	public Color UnderbellyColor { get; set; }
 
 	[JsonProperty("UnderthighColor")]
-	public Color _zBv1cYqPRU7uDCALpBlBSgObUcbA { get; set; }
+	public Color UnderthighColor { get; set; }
 
 	[JsonProperty("StripesColor")]
-	public Color _TxfCqloeyiHpsXka6B46iqCZNsZ { get; set; }
+	public Color StripesColor { get; set; }
 
 	[JsonProperty("LongForearmColor")]
-	public Color _1ZKGQXLRAHEJR8v7jhlDsyOVLcz { get; set; }
+	public Color LongForearmColor { get; set; }
 
 	[JsonProperty("ShortForearmColor")]
-	public Color _8rDSn6e9Ip9WdOogjhIn8YlL1oM { get; set; }
+	public Color ShortForearmColor { get; set; }
 
 	[JsonProperty("AvianForearmColor")]
-	public Color _FrsyMDX7TebzFk8nSLTyRDPi1QH { get; set; }
+	public Color AvianForearmColor { get; set; }
 
 	[JsonProperty("LongShinColor")]
-	public Color _cUtgkG5qDvgFmI8c29I9xsLVNON { get; set; }
+	public Color LongShinColor { get; set; }
 
 	[JsonProperty("ShortShinColor")]
-	public Color _LcOPiDaC2j5vzxOEYhvW4vRoaRX { get; set; }
+	public Color ShortShinColor { get; set; }
 
 	[JsonProperty("AvianShinColor")]
-	public Color _meyNS02iTIxo212B6c5eoKns2wj { get; set; }
+	public Color AvianShinColor { get; set; }
 
 	[JsonProperty("CockType")]
-	public ECockType _rtyJgfViJdXL2Ela5APpDlk99dI { get; set; }
+	public ECockType CockType { get; set; }
 
 	[JsonProperty("GenitaliaColor")]
-	public Color _XnNREK59QnV1onFFWfSUaS9WK0E { get; set; }
+	public Color GenitaliaColor { get; set; }
 
 	[JsonProperty("GenitaliaFleshColor")]
-	public Color _o6OnmHi5rZIQPHESokp9rTaO1ei { get; set; }
+	public Color GenitaliaFleshColor { get; set; }
 
 	[JsonProperty("BallsType")]
-	public EBallsType _7OCMpsMmozHsAG0GDljMMAlGLJBA { get; set; }
+	public EBallsType BallsType { get; set; }
 
 	[JsonProperty("BallsColor")]
-	public Color _8qQ7XVlyRYW4icBFxPQCJqgueYD { get; set; }
+	public Color BallsColor { get; set; }
 
 	[JsonProperty("BreastsType")]
-	public EBreastsType _BCncLn6BIYiBX6NdFByAquBYGpH { get; set; }
+	public EBreastsType BreastsType { get; set; }
 
 	[JsonProperty("BreastsColor")]
-	public Color _pigzqi6DgcSToQkL9g7Ns2QrLfp { get; set; }
+	public Color BreastsColor { get; set; }
 
 	[JsonProperty("ShowNipples")]
-	public bool _Q2AbpMWcrhtCW9MLTtT5gwoleu7 { get; set; }
+	public bool ShowNipples { get; set; }
 
 	[JsonProperty("NipplesColor")]
-	public Color _2yydfEIrSiLPTti2dT8JXGoIaM3 { get; set; }
+	public Color NipplesColor { get; set; }
 
 	[JsonProperty("PhoneColor")]
-	public Color _uOkbmfW26QVAvyEMQakki9kTMDbA { get; set; }
+	public Color PhoneColor { get; set; }
 
 	[JsonProperty("QuestStages")]
-	public Dictionary<string, int> _mPwD8DvxbNkq8fBcmlHJ80kVkB2 { get; private set; }
+	public Dictionary<string, int> QuestStages { get; private set; }
 
 	[JsonProperty("Contacts")]
-	public EPhoneContacts _4pE8Q2fYoSeltAUx7pxshukqsEb { get; private set; }
+	public EPhoneContacts Contacts { get; private set; }
 
 	[JsonProperty("DisabledContacts")]
-	public EPhoneContacts _uVBbxOT5AbKoffINIsfdTnEGd3xA { get; private set; }
+	public EPhoneContacts DisabledContacts { get; private set; }
 
 	[JsonProperty("Flags")]
-	public Dictionary<string, bool> _Cs2b43EFDtJdhoWWSmCcssGUmHZA { get; private set; }
+	public Dictionary<string, bool> Flags { get; private set; }
 
 	[JsonProperty("Messages")]
-	public List<_iDN1IKOu3e1uADYzeMEUon5D9fg> _7u6aevGWBE7ABqrBXoaPTkywcVo { get; private set; }
+	public List<PhoneMessage> Messages { get; private set; }
 
-	public _opIJo2jLUqdOL5yAFP4yzXce0DG()
+	public PlayerData()
 	{
-		_mPwD8DvxbNkq8fBcmlHJ80kVkB2 = new Dictionary<string, int>();
-		_Cs2b43EFDtJdhoWWSmCcssGUmHZA = new Dictionary<string, bool>();
-		_7u6aevGWBE7ABqrBXoaPTkywcVo = new List<_iDN1IKOu3e1uADYzeMEUon5D9fg>();
-		_haICL4qkfkOLhPhofWQH1GmjZx5();
+		QuestStages = new Dictionary<string, int>();
+		Flags = new Dictionary<string, bool>();
+		Messages = new List<PhoneMessage>();
+		ResetProgression();
 	}
 
-	public void _Rj5BZHY1n3a8XV7jJAk9U8jZZ6m()
+	public void Reset()
 	{
-		_XDbzWLxDi2VVrJQrjjLsgcfdxju();
-		_haICL4qkfkOLhPhofWQH1GmjZx5();
+		ResetPlayer();
+		ResetProgression();
 	}
 
-	public void _XDbzWLxDi2VVrJQrjjLsgcfdxju()
+	public void ResetPlayer()
 	{
-		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string.Empty;
-		_8CtoV1bqn0CwCzb1tuoNppBt0Gg = EBodyType.Lean;
-		_6f1rvTENt5XWmHTE22zxBIwbH9G = Color.White;
-		_VmNLhqrIwSnE6JnCYiBcxnSqnEV = false;
-		_in5HHYmrdLTFpkgc8aimJpXqAXB = Color.White;
-		_UjtZovBCLAtBZnUfbTvRFsaf5mx = EHeadType.Default;
-		_1qfGl3Oc2JyQEpnQtdOxMeMkqhi = Color.White;
-		_VWdlqWB4z2wNtm197Oiv32QGVbE = Color.White;
-		_sbSAaAmkhONcFX6f0JtHbVQbEfG = Color.White;
-		_SnnHu3P4lDDxgkL6cuUt7y07yxG = _iDe3W6qb7jKTPuJV79yf2i7UoIq.None;
-		_Fn7Kt1UvxcXOmJ1gIeWdJnRbaQt = Color.White;
-		_WvoLJ4MA4gYEsgOmmIQvfK3xFlu = Color.White;
-		_lUyqwDvFCoXEZ6VM9PVCQ970jps = Color.White;
-		_qKGefHxdjIUD6ObjxrxnLwbBEsh = Color.White;
-		_pmr0FnBBvgaggpusBKMWplUa63c = EHeadAccessoriesType.None;
-		_9b2asKZDwVM1TcSfmfeFCuk0TJZb = Color.White;
-		_vUhBAXEgvpGKopOUkDJFoc4EYQ3 = Color.White;
-		_uaBF7rEib15d42vH8AzoXWFMMkE = Color.White;
-		_c0ThYURHAGN0Wzlzw9Ibh3Z8qyo = EEyesType.Neutral;
-		_GXnDb1oaJlPbAQV2mjAwCQFK0nmb = Color.White;
-		_0K4lcN7iwo5q0iP1YlkpY9GdayR = Color.White;
-		_KBOJ0qhM8C5evPQxibgX74m2WHg = EBrowType.None;
-		_HRPv5rzDY5zNiP4NADDEGhrzGTe = Color.White;
-		_4QUr9lDqmNxEuy7B4xgb7Lj1HU0 = EMuzzleType.Short;
-		_VsEYbNSam3IFYYWY4QC2lb4ia61 = Color.White;
-		_y1SiMmRVXWDhDtY17knDpitt46F = Color.White;
-		_T98drEOtEEZKeB5tXzsuPrhb5Xk = Color.White;
-		_hkFDGB5pWIuOVcIyDAFqHrDdSpjA = false;
-		_q2iDxJYfqribHB1bD8aSkSjqrfnA = Color.White;
-		_UAZhvJ3a9BGOBM0CLiDkKLwUFC9 = false;
-		_phJrpk3rql5MfNJxPQ9X7nC8aAk = Color.White;
-		_03h2I0mTkGTzIA5R48rgwJh7JZA = EHairstyleType.None;
-		_bJmvnPs69aVDXxG48lmruYZFHKt = Color.White;
-		_fzMbZCCd7imnrcrYWkSj5u8UZ2J = EFringeType.None;
-		_EvdUMrkAAdTeMv6fOpGrOLCAMq8A = Color.White;
-		_LZ8c6hRMRYKjnlLOPhbZHcWqUGG = EFeetType.Beast;
-		_LZfuQybASevOsCykEWqdvA5GqUF = Color.White;
-		_NrFEKLWh80bQXi9PujCBTqm01AA = ETailType.None;
-		_qsK1J3jktKH3eJ2i8sL1oaxXtLc = Color.White;
-		_PVQfhwHODkR6bzHmfeCK4L8riIG = false;
-		_62dl1HYYkor3TZL58k5Y33Tj83 = Color.White;
-		_tEXwTuSRSq5JaaFE4W8edEHxS9q = false;
-		_LufmRsAZrlyDgRKYocQXPzANMaF = Color.White;
-		_Mz7LwHZqoGBscApFXmff1kEQnGY = _VzIdKOJ1Gq1YccwwHcwhrVV5V4U.None;
-		_PeK36AvFxEQCvX3fS62hNV7rpuJ = Color.White;
-		_zBv1cYqPRU7uDCALpBlBSgObUcbA = Color.White;
-		_TxfCqloeyiHpsXka6B46iqCZNsZ = Color.White;
-		_1ZKGQXLRAHEJR8v7jhlDsyOVLcz = Color.White;
-		_8rDSn6e9Ip9WdOogjhIn8YlL1oM = Color.White;
-		_FrsyMDX7TebzFk8nSLTyRDPi1QH = Color.White;
-		_cUtgkG5qDvgFmI8c29I9xsLVNON = Color.White;
-		_LcOPiDaC2j5vzxOEYhvW4vRoaRX = Color.White;
-		_meyNS02iTIxo212B6c5eoKns2wj = Color.White;
-		_rtyJgfViJdXL2Ela5APpDlk99dI = ECockType.None;
-		_XnNREK59QnV1onFFWfSUaS9WK0E = Color.White;
-		_o6OnmHi5rZIQPHESokp9rTaO1ei = Color.White;
-		_7OCMpsMmozHsAG0GDljMMAlGLJBA = EBallsType.None;
-		_8qQ7XVlyRYW4icBFxPQCJqgueYD = Color.White;
-		_BCncLn6BIYiBX6NdFByAquBYGpH = EBreastsType.None;
-		_pigzqi6DgcSToQkL9g7Ns2QrLfp = Color.White;
-		_Q2AbpMWcrhtCW9MLTtT5gwoleu7 = false;
-		_2yydfEIrSiLPTti2dT8JXGoIaM3 = Color.White;
-		_uOkbmfW26QVAvyEMQakki9kTMDbA = Color.White;
+		Name = string.Empty;
+		BodyType = EBodyType.Lean;
+		BodyColor = Color.White;
+		ShowNails = false;
+		NailColor = Color.White;
+		HeadType = EHeadType.Default;
+		HeadColor = Color.White;
+		PaperBagColor = Color.White;
+		PaperBagEyesColor = Color.White;
+		HeadMarkingsType = EHeadMarkingsType.None;
+		HeadGauntColor = Color.White;
+		HeadScruffyColor = Color.White;
+		HeadSnoutColor = Color.White;
+		HeadStripesColor = Color.White;
+		HeadAccessoriesType = EHeadAccessoriesType.None;
+		HeadHornsColor = Color.White;
+		EarColor = Color.White;
+		EarInnerColor = Color.White;
+		EyesType = EEyesType.Neutral;
+		EyesBackColor = Color.White;
+		EyesFrontColor = Color.White;
+		BrowType = EBrowType.None;
+		BrowColor = Color.White;
+		MuzzleType = EMuzzleType.Short;
+		MuzzleColor = Color.White;
+		NoseColor = Color.White;
+		TeethColor = Color.White;
+		ShowMuzzleHorn = false;
+		MuzzleHornColor = Color.White;
+		ShowMuzzleMask = false;
+		MuzzleMaskColor = Color.White;
+		HairstyleType = EHairstyleType.None;
+		HairColor = Color.White;
+		FringeType = EFringeType.None;
+		FringeColor = Color.White;
+		FeetType = EFeetType.Beast;
+		FeetColor = Color.White;
+		TailType = ETailType.None;
+		TailColor = Color.White;
+		ShowTailPartOne = false;
+		TailPartOneColor = Color.White;
+		ShowTailPartTwo = false;
+		TailPartTwoColor = Color.White;
+		MarkingsType = EMarkingsType.None;
+		UnderbellyColor = Color.White;
+		UnderthighColor = Color.White;
+		StripesColor = Color.White;
+		LongForearmColor = Color.White;
+		ShortForearmColor = Color.White;
+		AvianForearmColor = Color.White;
+		LongShinColor = Color.White;
+		ShortShinColor = Color.White;
+		AvianShinColor = Color.White;
+		CockType = ECockType.None;
+		GenitaliaColor = Color.White;
+		GenitaliaFleshColor = Color.White;
+		BallsType = EBallsType.None;
+		BallsColor = Color.White;
+		BreastsType = EBreastsType.None;
+		BreastsColor = Color.White;
+		ShowNipples = false;
+		NipplesColor = Color.White;
+		PhoneColor = Color.White;
 	}
 
-	public void _haICL4qkfkOLhPhofWQH1GmjZx5()
+	public void ResetProgression()
 	{
-		_mPwD8DvxbNkq8fBcmlHJ80kVkB2.Clear();
-		_4pE8Q2fYoSeltAUx7pxshukqsEb = EPhoneContacts.None;
-		_uVBbxOT5AbKoffINIsfdTnEGd3xA = EPhoneContacts.None;
-		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Clear();
+		QuestStages.Clear();
+		Contacts = EPhoneContacts.None;
+		DisabledContacts = EPhoneContacts.None;
+		Flags.Clear();
 	}
 
-	public int _fvTKDuNATrUxfXZVvltePz3vYkK(string string_0)
+	public int GetDecimal(string string_0)
 	{
-		if (!_mPwD8DvxbNkq8fBcmlHJ80kVkB2.ContainsKey(string_0))
+		if (!QuestStages.ContainsKey(string_0))
 		{
-			_fPyIv5zbbSj5sjZlbAwQTFXnJ5G(string_0, 10);
+			SetDecimal(string_0, 10);
 			return 10;
 		}
-		return _mPwD8DvxbNkq8fBcmlHJ80kVkB2[string_0];
+		return QuestStages[string_0];
 	}
 
-	public void _fPyIv5zbbSj5sjZlbAwQTFXnJ5G(string string_0, int int_0)
+	public void SetDecimal(string string_0, int int_0)
 	{
 		if (string_0 != null)
 		{
-			_mPwD8DvxbNkq8fBcmlHJ80kVkB2[string_0] = int_0;
+			QuestStages[string_0] = int_0;
 		}
 	}
 
-	public void _modEEaw3I1w8Mt0usyRNoa4Ri0H(EPhoneContacts ephoneContacts_0)
+	public void AddContact(EPhoneContacts ephoneContacts_0)
 	{
-		if (!_4pE8Q2fYoSeltAUx7pxshukqsEb.HasFlag(ephoneContacts_0))
+		if (!Contacts.HasFlag(ephoneContacts_0))
 		{
-			_4pE8Q2fYoSeltAUx7pxshukqsEb |= ephoneContacts_0;
+			Contacts |= ephoneContacts_0;
 		}
 	}
 
-	public void _Qd7anWdHpZ5AgaUbbEv07BnnI6Q(EPhoneContacts ephoneContacts_0)
+	public void ResetContact(EPhoneContacts ephoneContacts_0)
 	{
-		if (_4pE8Q2fYoSeltAUx7pxshukqsEb.HasFlag(ephoneContacts_0))
+		if (Contacts.HasFlag(ephoneContacts_0))
 		{
-			_4pE8Q2fYoSeltAUx7pxshukqsEb &= ~ephoneContacts_0;
+			Contacts &= ~ephoneContacts_0;
 		}
-		if (!_uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(ephoneContacts_0))
+		if (!DisabledContacts.HasFlag(ephoneContacts_0))
 		{
-			_uVBbxOT5AbKoffINIsfdTnEGd3xA |= ephoneContacts_0;
+			DisabledContacts |= ephoneContacts_0;
 		}
 	}
 
-	public void _Xwcp3PcmrSeqc3MSVH0tfLbcwXA()
+	public void ResetDeletedContacts()
 	{
-		_uVBbxOT5AbKoffINIsfdTnEGd3xA = EPhoneContacts.None;
+		DisabledContacts = EPhoneContacts.None;
 	}
 
 	public int _X1b0dyIzsSyKwqWd3usrbDfKJAk()
@@ -584,7 +546,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 		int num = 0;
 		foreach (object value in Enum.GetValues(typeof(EPhoneContacts)))
 		{
-			if (!value.Equals(EPhoneContacts.None) && _4pE8Q2fYoSeltAUx7pxshukqsEb.HasFlag((EPhoneContacts)value))
+			if (!value.Equals(EPhoneContacts.None) && Contacts.HasFlag((EPhoneContacts)value))
 			{
 				num++;
 			}
@@ -592,16 +554,16 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 		return num;
 	}
 
-	public bool _Oms9lumBodLGrGZ09YJaEuzmlAf(string string_0)
+	public bool GetBit(string string_0)
 	{
-		if (!_Cs2b43EFDtJdhoWWSmCcssGUmHZA.ContainsKey(string_0))
+		if (!Flags.ContainsKey(string_0))
 		{
-			return _3FWn0wjLhjL8yL0d2zLD5hMVHSV(string_0);
+			return HasChanged(string_0);
 		}
-		return _Cs2b43EFDtJdhoWWSmCcssGUmHZA[string_0];
+		return Flags[string_0];
 	}
 
-	private bool _3FWn0wjLhjL8yL0d2zLD5hMVHSV(string string_0)
+	private bool HasChanged(string string_0)
 	{
 		if (string_0.StartsWith("Player."))
 		{
@@ -621,7 +583,7 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 							{
 								if (Enum.TryParse<EBallsType>(array[2], out var result))
 								{
-									return _7OCMpsMmozHsAG0GDljMMAlGLJBA == result;
+									return BallsType == result;
 								}
 							}
 							else if (array[1] == "Outfit")
@@ -631,17 +593,17 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 						}
 						else if (Enum.TryParse<ECockType>(array[2], out result2))
 						{
-							return _rtyJgfViJdXL2Ela5APpDlk99dI == result2;
+							return CockType == result2;
 						}
 					}
 					else if (Enum.TryParse<EBreastsType>(array[2], out result3))
 					{
-						return _BCncLn6BIYiBX6NdFByAquBYGpH == result3;
+						return BreastsType == result3;
 					}
 				}
 				else if (Enum.TryParse<EBodyType>(array[2], out result4))
 				{
-					return _8CtoV1bqn0CwCzb1tuoNppBt0Gg == result4;
+					return BodyType == result4;
 				}
 			}
 		}
@@ -650,21 +612,21 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 			string[] array2 = string_0.Split(new char[1] { '.' });
 			if (array2.Length > 2 && int.TryParse(array2[2], out var result5))
 			{
-				return _fvTKDuNATrUxfXZVvltePz3vYkK(array2[1]) == result5;
+				return GetDecimal(array2[1]) == result5;
 			}
 		}
 		return string_0 switch
 		{
-			"PlayerChubby" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Chubby, 
-			"PlayerLean" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Lean, 
-			"HasBreasts" => _BCncLn6BIYiBX6NdFByAquBYGpH != EBreastsType.None, 
-			"PlayerMuscular" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Muscular, 
-			"PlayerTwinky" => _8CtoV1bqn0CwCzb1tuoNppBt0Gg == EBodyType.Twinky, 
+			"PlayerChubby" => BodyType == EBodyType.Chubby, 
+			"PlayerLean" => BodyType == EBodyType.Lean, 
+			"HasBreasts" => BreastsType != EBreastsType.None, 
+			"PlayerMuscular" => BodyType == EBodyType.Muscular, 
+			"PlayerTwinky" => BodyType == EBodyType.Twinky, 
 			_ => false, 
 		};
 	}
 
-	public void _4Fscz8ryB3hm0NmL5xw39HHiPd1(string string_0, bool bool_0)
+	public void SetBit(string string_0, bool bool_0)
 	{
 		if (string_0.StartsWith("Player."))
 		{
@@ -677,27 +639,21 @@ public class _opIJo2jLUqdOL5yAFP4yzXce0DG : _H2569zioKERtUkpADGx7Vb8aOJl
 				}
 				if (array[1] == "Outfit")
 				{
-					_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_0) => string_0.StartsWith("Player.Outfit.")).ToList().ForEach(delegate(string string_0)
+					Flags.Keys.Where((string string_0) => string_0.StartsWith("Player.Outfit.")).ToList().ForEach(delegate(string string_0)
 					{
-						_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
+						Flags.Remove(string_0);
 					});
 				}
 			}
 		}
-		_Cs2b43EFDtJdhoWWSmCcssGUmHZA[string_0] = bool_0;
+		Flags[string_0] = bool_0;
 	}
 
-	public void _aedbmRW9PZZduyLA3PVVHtafNAGA(string string_0, bool bool_0 = true)
+	public void Remove(string string_0, bool bool_0 = true)
 	{
-		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Keys.Where((string string_1) => (!bool_0) ? (string_0 == string_1) : string_1.StartsWith(string_0)).ToList().ForEach(delegate(string string_0)
+		Flags.Keys.Where((string string_1) => (!bool_0) ? (string_0 == string_1) : string_1.StartsWith(string_0)).ToList().ForEach(delegate(string string_0)
 		{
-			_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
+			Flags.Remove(string_0);
 		});
-	}
-
-	[CompilerGenerated]
-	private void _9LTSGBRKjRMGmdraxA6vqm3u3Uc(string string_0)
-	{
-		_Cs2b43EFDtJdhoWWSmCcssGUmHZA.Remove(string_0);
 	}
 }

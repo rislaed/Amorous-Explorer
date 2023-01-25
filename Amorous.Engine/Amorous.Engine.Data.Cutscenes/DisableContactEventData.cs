@@ -4,8 +4,8 @@ using Newtonsoft.Json;
 namespace Amorous.Engine.Data.Cutscenes;
 
 [Serializable]
-public class DisableContactEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class DisableContactEventData : EventData
 {
 	[JsonProperty("Contact")]
-	public string _A5GfNJXqRoYNfziIY4iJDirt1y { get; set; }
+	public string Contact { get; set; }
 }

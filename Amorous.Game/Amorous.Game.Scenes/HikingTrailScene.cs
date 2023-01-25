@@ -1,6 +1,6 @@
 namespace Amorous.Game.Scenes;
 
-public class HikingTrailScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class HikingTrailScene : AbstractScene
 {
 	public const string _GVrFhyughFuZbNz1GllPUz8qFRC = "Night";
 
@@ -10,8 +10,8 @@ public class HikingTrailScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _bYgAJ7foDqpxOElDOYhOkQFMzrz;
 
-	public HikingTrailScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public HikingTrailScene(IAmorous game)
+		: base(Game)
 	{
 		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
 		_bYgAJ7foDqpxOElDOYhOkQFMzrz = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
@@ -24,13 +24,13 @@ public class HikingTrailScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
 		if (!(string_0 == "Night"))
 		{
-			_bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = 0;
-			_4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = byte.MaxValue;
+			_bYgAJ7foDqpxOElDOYhOkQFMzrz.Color.A = 0;
+			_4Hew2VldDt2hPLjc5fBPbqIVUEQ.Color.A = byte.MaxValue;
 		}
 		else
 		{
-			_bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = byte.MaxValue;
-			_4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = 0;
+			_bYgAJ7foDqpxOElDOYhOkQFMzrz.Color.A = byte.MaxValue;
+			_4Hew2VldDt2hPLjc5fBPbqIVUEQ.Color.A = 0;
 		}
 	}
 }

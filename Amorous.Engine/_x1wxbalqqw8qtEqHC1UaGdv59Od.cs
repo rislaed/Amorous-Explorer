@@ -39,17 +39,17 @@ public class _x1wxbalqqw8qtEqHC1UaGdv59Od : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		}
 	}
 
-	public _x1wxbalqqw8qtEqHC1UaGdv59Od(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, string string_0, Texture2D texture2D_0, Texture2D texture2D_1, string string_1)
-		: base(_7UlnfykmEmZDFt3BmCKZekI43Ih_0, string_0)
+	public _x1wxbalqqw8qtEqHC1UaGdv59Od(AbstractScene AbstractScene_0, string string_0, Texture2D texture2D_0, Texture2D texture2D_1, string string_1)
+		: base(AbstractScene_0, string_0)
 	{
 		_Ko8EyRGBPblyaAEHREGGfcgE0A7 = texture2D_0;
-		base._je8rVfyg4zywmqSi4Ozx1z7wJ4b = texture2D_0.Width;
-		base._WJfGWBzn4wgdGBnMWRH2pcJ3AqH = texture2D_0.Height;
+		base.Width = texture2D_0.Width;
+		base.Height = texture2D_0.Height;
 		_SKaBgAqgC6qHTij3x2KayGSk2CN = texture2D_1;
 		_3aoBdJvXEwMLqtoffOySYmetk8t = string_1;
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public override void Update(GameTime gameTime_0)
 	{
 		if (_82ZLcfxgln4iQYRfbAsVmIq3FRh && _nkzqFdEfDyLcyGikIKGcHjklI4y._xJZUPxDatEzfPQc0nRHR2D1Vwke)
 		{
@@ -57,11 +57,11 @@ public class _x1wxbalqqw8qtEqHC1UaGdv59Od : _ujAkjlfN5TywwbLAUDzPvtab6uJ
 		}
 	}
 
-	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
+	public override void Draw(SpriteBatch spriteBatch_0)
 	{
-		if (_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A != 0)
+		if (Color.A != 0)
 		{
-			Color color = (_3pSkuXQLrbxfnmDHjLbcxrYNIfk ? Color.Red : _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA);
+			Color color = (_3pSkuXQLrbxfnmDHjLbcxrYNIfk ? Color.Red : Color);
 			if (_82ZLcfxgln4iQYRfbAsVmIq3FRh && _SKaBgAqgC6qHTij3x2KayGSk2CN != null)
 			{
 				spriteBatch_0.Draw(_SKaBgAqgC6qHTij3x2KayGSk2CN, _kz5s2TRb1G53tpCw2bp3WVpMCiJ, null, color, 0f, Vector2.Zero, _fO7gSlrDDNMoHR4FO5QXAq8fUyA, SpriteEffects.None, 0f);

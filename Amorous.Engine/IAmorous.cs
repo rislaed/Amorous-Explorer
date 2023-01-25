@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-public interface _JbeCmOie0phb2cbgG6DdGZrbs3pB
+public interface IAmorous
 {
 	GameWindow _8k7Do3TGW5NrB22zl8QzInP2j7k { get; }
 
@@ -16,9 +16,9 @@ public interface _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	_wRd4nHuQQlAPEwrHOGkBfut6Uip _vsceSzSIjBy2nZrCxAzKZbUiwLq { get; }
 
-	_7UlnfykmEmZDFt3BmCKZekI43Ih _XbOXR6AypLIdJ3gBMGseGi3Wi2i { get; }
+	AbstractScene Scene { get; }
 
-	_TwlwMC1hhdSzamwGWEBxuUkz1gH _KVSwpLj0RvURRswHn7ogRy4BRfd { get; }
+	_TwlwMC1hhdSzamwGWEBxuUkz1gH Sexscene { get; }
 
 	_nR8eroJOHehP0ZGyyTveo6aMTHg _5zNdOw7qHmuCAPJFMr3SsZdBlCr { get; }
 
@@ -26,7 +26,7 @@ public interface _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	_8lVOgkauaSHbAkAqHzI1K7mIyOI _o2QVQfIAsuLcmPxn14llGoZA52y { get; }
 
-	_691ooXdgg17CWFkMkjedKBBBfYw _aJh9CibG5YKhkExxgRyVopdfSeJ { get; }
+	IAchievements _aJh9CibG5YKhkExxgRyVopdfSeJ { get; }
 
 	bool _kSReo0whY1pgfTnFOSc44ppANOe { get; }
 
@@ -36,15 +36,15 @@ public interface _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	bool _ezjxb7tsh6Db1xblB74OYX4vVK { get; }
 
-	void _oD87G7SXjsTukw7IVWxVlVFEgvA();
+	void Initialize();
 
-	void _eW1Nkl8VqFHVExM8l3IqxgSbMBg();
+	void LoadContent();
 
-	void _wm1aB8mBRRffPWUAA0o5Xar2w5p();
+	void UnloadContent();
 
-	void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0);
+	void Update(GameTime gameTime_0);
 
-	void _f5ctqAmdNsZ889UjM4LxDm8WGxA(GameTime gameTime_0);
+	void Draw(GameTime gameTime_0);
 
 	void _qGU55VUfbqFJ4l6ArNW4JRcLekg();
 
@@ -58,25 +58,25 @@ public interface _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	void _udfEpcIRn7lWl5Lvjdyu0aG0A7G();
 
-	void _k9wUPeU1Ga7cygiuGP8TT6aPLWF<T>() where T : _7UlnfykmEmZDFt3BmCKZekI43Ih;
+	void StartScene<T>() where T : AbstractScene;
 
-	void _k9wUPeU1Ga7cygiuGP8TT6aPLWF(string string_0);
+	void StartScene(string string_0);
 
-	void _k9wUPeU1Ga7cygiuGP8TT6aPLWF(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0);
+	void StartScene(AbstractScene AbstractScene_0);
 
-	void _OxLRmpxixplTKChiTPUKAx4uTLG<T>(Action action_0 = null) where T : _7UlnfykmEmZDFt3BmCKZekI43Ih;
+	void _OxLRmpxixplTKChiTPUKAx4uTLG<T>(Action action_0 = null) where T : AbstractScene;
 
 	void _OxLRmpxixplTKChiTPUKAx4uTLG(string string_0, Action action_0 = null);
 
-	void _OxLRmpxixplTKChiTPUKAx4uTLG(_7UlnfykmEmZDFt3BmCKZekI43Ih _7UlnfykmEmZDFt3BmCKZekI43Ih_0, Action action_0 = null);
+	void _OxLRmpxixplTKChiTPUKAx4uTLG(AbstractScene AbstractScene_0, Action action_0 = null);
 
 	void _gYGB98heFqsLp9tgJbdCP01IKV2(string string_0);
 
 	void _Ec0fhBrUGmjaIKjUfJioigVc65x();
 
-	void _xyl3Tv5KdR5eezDgagxbBcS3cwt(string string_0);
+	void RequestScene(string string_0);
 
-	void _xyl3Tv5KdR5eezDgagxbBcS3cwt(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0);
+	void RequestScene(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0);
 
 	void _bHdVKtqP3Eb3DSJmuVTbkY8RtHP();
 
@@ -90,9 +90,9 @@ public interface _JbeCmOie0phb2cbgG6DdGZrbs3pB
 
 	_QGGOTxZ8aNWGh0hc26wcmx8wmwT _VvFE2zgy4FbDjvaEvb67tXJ7aRm(NPCLocation npclocation_0);
 
-	_QGGOTxZ8aNWGh0hc26wcmx8wmwT _TwQHHdbdRFRy2ctTZabNfz1Htrg(string string_0, _a2qVgWDIm3fBp49WubttSTPsx8K _a2qVgWDIm3fBp49WubttSTPsx8K_0);
+	_QGGOTxZ8aNWGh0hc26wcmx8wmwT _TwQHHdbdRFRy2ctTZabNfz1Htrg(string string_0, LayerOrder LayerOrder_0);
 
-	T _TwQHHdbdRFRy2ctTZabNfz1Htrg<T>(_a2qVgWDIm3fBp49WubttSTPsx8K _a2qVgWDIm3fBp49WubttSTPsx8K_0) where T : _QGGOTxZ8aNWGh0hc26wcmx8wmwT;
+	T _TwQHHdbdRFRy2ctTZabNfz1Htrg<T>(LayerOrder LayerOrder_0) where T : _QGGOTxZ8aNWGh0hc26wcmx8wmwT;
 
 	void _yh2DwZs16cvRtvGayeYZrMWlrbj(int int_0);
 

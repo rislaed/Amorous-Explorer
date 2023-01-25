@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class _EZ0kOLXoEoEfWGQDdTbNqaPzDUh : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 {
-	public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; private set; }
+	public string Name { get; private set; }
 
 	public List<string> _CjFYKEH7Vq8U6urMqr8ixn5Z8li { get; private set; }
 
@@ -22,7 +22,7 @@ public class _EZ0kOLXoEoEfWGQDdTbNqaPzDUh : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 
 	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh(string string_0, params string[] string_1)
 	{
-		_RB8fRXeQvK5vs7JEA0XfVCEpg1i = string_0;
+		Name = string_0;
 		_CjFYKEH7Vq8U6urMqr8ixn5Z8li = new List<string>(string_1);
 		_k6wM5wdPLS8b9QWZ30CqiepJHCd = true;
 	}

@@ -5,31 +5,31 @@ using Newtonsoft.Json;
 namespace Amorous.Engine.Data.Cutscenes;
 
 [Serializable]
-public class SpawnNPCEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class SpawnNPCEventData : EventData
 {
 	[JsonProperty("NPC")]
-	public string _4QLHHCk23T1BjK7acKxASbkCefG { get; set; }
+	public string NPC { get; set; }
 
 	[JsonProperty("Location")]
-	public string _qZXN2SXhpGdh4T5ZXzgMA9gjYZE { get; set; }
+	public string Location { get; set; }
 
 	[JsonProperty("Layer")]
-	public string _dPmC8tBC0iph2YBAFmztEsmwUdSA { get; set; }
+	public string Layer { get; set; }
 
 	[JsonProperty("Voice")]
-	public string _oYBxqDGzxQL6JWNoPfdeHzWGPRp { get; set; }
+	public string Voice { get; set; }
 
 	[JsonProperty("Head")]
-	public string _kni1uFw1BPElsVA74myj9H1jAKh { get; set; }
+	public string Head { get; set; }
 
 	[JsonProperty("Pose")]
-	public string _UjXB7oNK1WnbtEn6d4PkoGLaYEE { get; set; }
+	public string Pose { get; set; }
 
 	[JsonProperty("Clothes")]
-	public List<string> _wUcbLpwYJ1T1bI8GaQwj9Jxx4YX { get; set; }
+	public List<string> Clothes { get; set; }
 
 	public SpawnNPCEventData()
 	{
-		_wUcbLpwYJ1T1bI8GaQwj9Jxx4YX = new List<string>();
+		Clothes = new List<string>();
 	}
 }

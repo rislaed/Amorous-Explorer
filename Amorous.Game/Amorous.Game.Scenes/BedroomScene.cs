@@ -7,12 +7,12 @@ public class BedroomScene : TimeOfDayScene
 {
 	private readonly _dvyBDFOZwoBLf9qqHSfHYLLXVwP _phoneNag;
 
-	public BedroomScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public BedroomScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
 		_2CHUZ5vSi5NbJYJ4gGtr3C2VVEo("Background", "Assets/Scenes/Bedroom/Door", 1008, 186, OnDoorClick);
-		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") >= 40)
+		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().GetDecimal("Prologue") >= 40)
 		{
 			_2CHUZ5vSi5NbJYJ4gGtr3C2VVEo("Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, OnClosetClick);
 		}
@@ -31,17 +31,17 @@ public class BedroomScene : TimeOfDayScene
 		}
 		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Kangaroo Plush", 359, 159, null, 0, 0, "A little something my brother bought as a reminder of his long-distance boyfriend. It must be a pretty open relationship.");
 		_2VwdavpaoNVxohFKsz1eYBmnxyh("Background", "Assets/Scenes/Bedroom/Laptop", 1153, 662, null, 0, 0, "My entertainment centre for the last few weeks.");
-		_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-458, 458, 0, 0);
+		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-458, 458, 0, 0);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
-		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
+		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(Game);
 		Reset();
 	}
 
 	private void Reset()
 	{
-		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") == 40)
+		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().GetDecimal("Prologue") == 40)
 		{
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._0Y1BTbSbP9IopfJXfeA4x02PifL("MessageTutorial1");
+			base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._0Y1BTbSbP9IopfJXfeA4x02PifL("MessageTutorial1");
 		}
 		ResetFailedDates();
 		ResetDeletedContacts();
@@ -54,129 +54,129 @@ public class BedroomScene : TimeOfDayScene
 
 	public void ResetFailedDates()
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") == 30 && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("LexDate") == 40)
+		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("Prologue") == 30 && opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("LexDate") == 40)
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._modEEaw3I1w8Mt0usyRNoa4Ri0H(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("Prologue", 40);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._4Fscz8ryB3hm0NmL5xw39HHiPd1("CobyLeftClub", bool_0: true);
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._rGMDL1kMYXSwaZiIoINCo5AqZuM(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric4");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.AddContact(PlayerData.EPhoneContacts.Coby);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("Prologue", 40);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetBit("CobyLeftClub", bool_0: true);
+			base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._rGMDL1kMYXSwaZiIoINCo5AqZuM(PlayerData.EPhoneContacts.Coby);
+			base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric4");
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("LexLeftClub") && (opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("LexPreDate") == 20 || opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("LexDate") == 40))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("LexLeftClub") && (opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("LexPreDate") == 20 || opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("LexDate") == 40))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.ResetContact(PlayerData.EPhoneContacts.Lex);
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("RemyLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("RemyPreDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("RemyLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("RemyPreDate") == 10)
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.ResetContact(PlayerData.EPhoneContacts.Remy);
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SethLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("SethPreDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("SethLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("SethPreDate") == 10)
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.ResetContact(PlayerData.EPhoneContacts.Seth);
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("SkyeLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("SkyePreDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("SkyeLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("SkyePreDate") == 10)
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.ResetContact(PlayerData.EPhoneContacts.Skye);
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._Oms9lumBodLGrGZ09YJaEuzmlAf("ZenithLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG._fvTKDuNATrUxfXZVvltePz3vYkK("ZenithDate") == 10)
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("ZenithLeftClub") && opIJo2jLUqdOL5yAFP4yzXce0DG.GetDecimal("ZenithDate") == 10)
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._Qd7anWdHpZ5AgaUbbEv07BnnI6Q(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.ResetContact(PlayerData.EPhoneContacts.Zenith);
 		}
 	}
 
 	private void ResetDeletedContacts()
 	{
-		_opIJo2jLUqdOL5yAFP4yzXce0DG opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby))
+		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Coby))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("CobyDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Coby");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._modEEaw3I1w8Mt0usyRNoa4Ri0H(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Coby);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("CobyDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Coby");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.AddContact(PlayerData.EPhoneContacts.Coby);
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Dustin))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Dustin))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("DustinDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Dustin");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Club_Dustin_");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("First_Dustin_");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("DustinDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Dustin");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Club_Dustin_");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("First_Dustin_");
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Jax))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Jax))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("JaxPreDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("JaxDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Jax");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("SimpleOrder", bool_0: false);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("JaxPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("JaxDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Jax");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("SimpleOrder", bool_0: false);
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Lex))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Lex))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("LexPreDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("LexDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Lex");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Player.Dork", bool_0: false);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("LexPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("LexDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Lex");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Player.Dork", bool_0: false);
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Mercy))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Mercy))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("MercyPreDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("MercyDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Mercy");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("MercyPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("MercyDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Mercy");
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Remy))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Remy))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("RemyPreDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("RemyDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Remy");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Rip.");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Chef.");
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Strip.");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("RemyPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("RemyDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Remy");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Rip.");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Chef.");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Strip.");
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Seth))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Seth))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SethPreDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SethDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Seth");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("SethPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("SethDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Seth");
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Skye))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Skye))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SkyePreDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("SkyeDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Skye");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("SkyePreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("SkyeDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Skye");
 		}
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG._uVBbxOT5AbKoffINIsfdTnEGd3xA.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.Zenith))
+		if (opIJo2jLUqdOL5yAFP4yzXce0DG.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Zenith))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("ZenithPreDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._fPyIv5zbbSj5sjZlbAwQTFXnJ5G("ZenithDate", 10);
-			opIJo2jLUqdOL5yAFP4yzXce0DG._aedbmRW9PZZduyLA3PVVHtafNAGA("Zenith");
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("ZenithPreDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.SetDecimal("ZenithDate", 10);
+			opIJo2jLUqdOL5yAFP4yzXce0DG.Remove("Zenith");
 		}
-		opIJo2jLUqdOL5yAFP4yzXce0DG._Xwcp3PcmrSeqc3MSVH0tfLbcwXA();
+		opIJo2jLUqdOL5yAFP4yzXce0DG.ResetDeletedContacts();
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		_tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
-		_phoneNag._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
+		Update(gameTime);
+		_phoneNag.Update(gameTime);
 	}
 
 	public override void End()
 	{
-		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
-		_phoneNag._tO46aYSBLFIuhFNlhbrAeWbFDSf();
+		base.End();
+		_phoneNag.End();
 	}
 
 	private void OnClosetClick()
 	{
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Clothes");
+		base.Game.RequestScene("Clothes");
 	}
 
 	private void OnDoorClick()
 	{
-		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._fvTKDuNATrUxfXZVvltePz3vYkK("Prologue") >= 40)
+		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().GetDecimal("Prologue") >= 40)
 		{
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._k9wUPeU1Ga7cygiuGP8TT6aPLWF<LivingRoomScene>();
+			base.Game.StartScene<LivingRoomScene>();
 		}
 		else
 		{
-			base._ZzBuoSDMWwerejOO9Goyv2OCKgE._xyl3Tv5KdR5eezDgagxbBcS3cwt("Prologue");
+			base.Game.RequestScene("Prologue");
 		}
 	}
 }

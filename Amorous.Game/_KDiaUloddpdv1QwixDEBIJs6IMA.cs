@@ -6,7 +6,7 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 {
 	private Client _f9R8NSqY1uzRQ0MIHLS7AsTyi7F;
 
-	public bool _oD87G7SXjsTukw7IVWxVlVFEgvA(uint uint_0, _JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public bool Initialize(uint uint_0, IAmorous game)
 	{
 		try
 		{
@@ -17,18 +17,18 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 			}
 			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.CustomInitialize();
 			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.HookScreenshots(hook: true);
-			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.ScreenshotRequest += _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._VN2LxjGLZldLNfiJ1OniiaXfYBg;
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._JmIDYFXDf2wcAGArwRlNg4WYoUEA("Successfully loaded Steamworks, welcome {0}!", _f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Username);
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.ScreenshotRequest += Game._VN2LxjGLZldLNfiJ1OniiaXfYBg;
+			Logger.Success("Successfully loaded Steamworks, welcome {0}!", _f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Username);
 			return true;
 		}
 		catch (Exception)
 		{
-			_ETHljYp3aQy9GQ1ZAzhfOYDI1sO._IGmWy5uYuv50rXGtBNbMPGzJhWh("Failed to load Steamworks, falling back to non-Steam version.");
+			Logger.Warning("Failed to load Steamworks, falling back to non-Steam version.");
 		}
 		return false;
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo()
+	public void Update()
 	{
 		_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Update();
 	}

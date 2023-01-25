@@ -1,9 +1,9 @@
 namespace Amorous.Game.Scenes;
 
-public class FlowerShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class FlowerShopScene : AbstractScene
 {
-	public FlowerShopScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public FlowerShopScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/FlowerShop/Background", 0, 0);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Warhector - Free Floating", 0.4f);

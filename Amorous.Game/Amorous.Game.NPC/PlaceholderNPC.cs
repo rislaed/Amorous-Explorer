@@ -21,12 +21,12 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 		None
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Placeholder";
+	public static string Name = "Placeholder";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(255, 0, 255);
+	public static Color Color = new Color(255, 0, 255);
 
-	public PlaceholderNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Placeholder", 1f)
+	public PlaceholderNPC(IAmorous game)
+		: base(Game, "Assets/NPC/Placeholder", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Placeholder, "Placeholder");
 	}
@@ -38,18 +38,18 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 685f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 685f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 100f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 100f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 100f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1270f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1270f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 100f;
 			break;
 		}
 	}

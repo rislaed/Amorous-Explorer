@@ -20,12 +20,12 @@ public class DonnaNPC : LayerNPC<DonnaNPC.EHeads, DonnaNPC.EPoses, DonnaNPC.EClo
 		None
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Donna";
+	public static string Name = "Donna";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(255, 0, 255);
+	public static Color Color = new Color(255, 0, 255);
 
-	public DonnaNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string.Empty, 1f)
+	public DonnaNPC(IAmorous game)
+		: base(Game, string.Empty, 1f)
 	{
 	}
 }

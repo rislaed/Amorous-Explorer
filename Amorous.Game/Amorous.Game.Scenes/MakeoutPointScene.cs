@@ -8,8 +8,8 @@ public class MakeoutPointScene : TimeOfDayScene
 
 	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _bYgAJ7foDqpxOElDOYhOkQFMzrz;
 
-	public MakeoutPointScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public MakeoutPointScene(IAmorous game)
+		: base(Game)
 	{
 		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
 		_bYgAJ7foDqpxOElDOYhOkQFMzrz = _0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
@@ -21,21 +21,21 @@ public class MakeoutPointScene : TimeOfDayScene
 		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
 		if (string_0 == "Night")
 		{
-			_bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = byte.MaxValue;
-			_4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = 0;
+			_bYgAJ7foDqpxOElDOYhOkQFMzrz.Color.A = byte.MaxValue;
+			_4Hew2VldDt2hPLjc5fBPbqIVUEQ.Color.A = 0;
 		}
 		else
 		{
-			_bYgAJ7foDqpxOElDOYhOkQFMzrz._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = 0;
-			_4Hew2VldDt2hPLjc5fBPbqIVUEQ._9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA.A = byte.MaxValue;
+			_bYgAJ7foDqpxOElDOYhOkQFMzrz.Color.A = 0;
+			_4Hew2VldDt2hPLjc5fBPbqIVUEQ.Color.A = byte.MaxValue;
 		}
 	}
 
-	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
+	public override void Render(SpriteBatch spriteBatch_0)
 	{
-		if (_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q != _RRECH42isVc35MkZPyLEGkp0hjs.Night)
+		if (_5Anqe6GAAkzemoAXYpJmgMlk1yz.time != TimeOfDay.Night)
 		{
-			base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
+			base.Render(spriteBatch_0);
 		}
 	}
 }

@@ -5,11 +5,11 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 {
 	public Vector2 _Jh6AK28sBy2bS8ZCoKHP3LX45Uk;
 
-	public Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA;
+	public Color Color;
 
 	public Rectangle _2psWLw4AI8EIjQzaXnhGg8M1FnaA;
 
-	public int _7Xn1C5tjYnmIif1iZKV8AWsEEbL
+	public int X
 	{
 		get
 		{
@@ -22,7 +22,7 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		}
 	}
 
-	public int _bCjZ3VSXGKyhmykd2zCnQBiSpDf
+	public int Y
 	{
 		get
 		{
@@ -41,7 +41,7 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 
 	protected _1dTaaW9MQWoHm2Pqblg0u9bPhpe()
 	{
-		_9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = Color.White;
+		Color = Color.White;
 		_Fxy2SlgceW90FloFw6a1AEJODYA = true;
 	}
 
@@ -57,5 +57,5 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		_NUP8Fs8I7oMuI6vfg25DFKFlQqE = false;
 	}
 
-	public abstract void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0);
+	public abstract void Draw(SpriteBatch spriteBatch_0);
 }

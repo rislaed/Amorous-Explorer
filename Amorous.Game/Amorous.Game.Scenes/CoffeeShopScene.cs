@@ -1,6 +1,6 @@
 namespace Amorous.Game.Scenes;
 
-public class CoffeeShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class CoffeeShopScene : AbstractScene
 {
 	public const string _vLvbLLrZzgMrRgmxcYHzDgEDnpt = "Jax";
 
@@ -14,8 +14,8 @@ public class CoffeeShopScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _Fcr13ys9cm66KFhUCRnmKKCOHQA;
 
-	public CoffeeShopScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public CoffeeShopScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/CoffeeShop/Background", 0, 0);
 		_f2oPpgipLb2rTkpm5SVN7YrkJvd = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);

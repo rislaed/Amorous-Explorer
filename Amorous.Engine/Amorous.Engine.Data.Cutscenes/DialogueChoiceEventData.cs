@@ -5,13 +5,13 @@ using Newtonsoft.Json;
 namespace Amorous.Engine.Data.Cutscenes;
 
 [Serializable]
-public class DialogueChoiceEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class DialogueChoiceEventData : EventData
 {
 	[JsonProperty("Choices")]
-	public List<DialogueChoiceItem> _UGE50ZJkpUKKpV0XQkhALS58JSJ { get; set; }
+	public List<DialogueChoiceItem> Choices { get; set; }
 
 	public DialogueChoiceEventData()
 	{
-		_UGE50ZJkpUKKpV0XQkhALS58JSJ = new List<DialogueChoiceItem>();
+		Choices = new List<DialogueChoiceItem>();
 	}
 }

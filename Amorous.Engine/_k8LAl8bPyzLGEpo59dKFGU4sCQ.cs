@@ -16,7 +16,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	private readonly Dictionary<string, int> _Al96gNPtV1ulU681NMxd1IeQxQq = new Dictionary<string, int>();
 
-	private readonly Game _4L7hfXrWoDdArQiscG4ukHCV46B;
+	private readonly Game Amorous;
 
 	private readonly SpriteBatch _OaIpAM8LUMZnUHberg4zeLNyWCd;
 
@@ -34,9 +34,9 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public _k8LAl8bPyzLGEpo59dKFGU4sCQ(Game game_0)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B = game_0;
+		Amorous = game_0;
 		_OaIpAM8LUMZnUHberg4zeLNyWCd = new SpriteBatch(game_0.GraphicsDevice);
-		_5YcBaRKou3OVWCywHF9K49yk2u9 = new Texture2D(_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice, 1, 1);
+		_5YcBaRKou3OVWCywHF9K49yk2u9 = new Texture2D(Amorous.GraphicsDevice, 1, 1);
 		_5YcBaRKou3OVWCywHF9K49yk2u9.SetData(new Color[1]
 		{
 			new Color(255, 255, 255, 255)
@@ -61,7 +61,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		{
 			return _SfJPevkmlfWx0UJQBD7GNI1bOPA;
 		}
-		Texture2D value = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<Texture2D>(Path.GetDirectoryName(name) + "/" + Path.GetFileNameWithoutExtension(name));
+		Texture2D value = Amorous.Content.Load<Texture2D>(Path.GetDirectoryName(name) + "/" + Path.GetFileNameWithoutExtension(name));
 		int count = _Al96gNPtV1ulU681NMxd1IeQxQq.Count;
 		_Al96gNPtV1ulU681NMxd1IeQxQq.Add(name, count);
 		_48Ia4uIlwwllIw0MIzPjdWOBDqx.Add(count, value);
@@ -88,7 +88,7 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		}
 		if (!_ludG33HqMIBuda5aoAUm6woMHdh.TryGetValue(name, out _SfJPevkmlfWx0UJQBD7GNI1bOPA))
 		{
-			SpriteFont value = _4L7hfXrWoDdArQiscG4ukHCV46B.Content.Load<SpriteFont>(name);
+			SpriteFont value = Amorous.Content.Load<SpriteFont>(name);
 			int count = _ludG33HqMIBuda5aoAUm6woMHdh.Count;
 			_ludG33HqMIBuda5aoAUm6woMHdh.Add(name, count);
 			_Ks5fhSCbnJp6pmRDanq4sn9DlRF.Add(count, value);
@@ -125,15 +125,15 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 		_OaIpAM8LUMZnUHberg4zeLNyWCd.Draw(_5YcBaRKou3OVWCywHF9K49yk2u9, new Microsoft.Xna.Framework.Rectangle(x, y, w, h), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
 	}
 
-	public void DrawText(string text, int x, int y, int font, int color)
+	public void DrawString(string text, int x, int y, int font, int color)
 	{
 		if (_Ks5fhSCbnJp6pmRDanq4sn9DlRF.TryGetValue(font, out _YWublsgGSMYGc5V0KPieIYbXfdl))
 		{
-			_OaIpAM8LUMZnUHberg4zeLNyWCd._FY70IFLoBond3ORPe0ndCLvIeVcA(_YWublsgGSMYGc5V0KPieIYbXfdl, text, new Vector2(x, y), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
+			_OaIpAM8LUMZnUHberg4zeLNyWCd.DrawString(_YWublsgGSMYGc5V0KPieIYbXfdl, text, new Vector2(x, y), _TmKnNO76rW7a4nj5ivlAGl4rlrd(color));
 		}
 	}
 
-	public void DrawTexture(int texture, int x, int y, int w, int h, Squid.Rectangle rect, int color)
+	public void DrawStringure(int texture, int x, int y, int w, int h, Squid.Rectangle rect, int color)
 	{
 		if (_48Ia4uIlwwllIw0MIzPjdWOBDqx.TryGetValue(texture, out _lruDd2bffYslbTUZZOo7HsfbTFA))
 		{
@@ -143,12 +143,12 @@ public class _k8LAl8bPyzLGEpo59dKFGU4sCQ : IDisposable, ISquidRenderer
 
 	public void Scissor(int x, int y, int w, int h)
 	{
-		_4L7hfXrWoDdArQiscG4ukHCV46B.GraphicsDevice.ScissorRectangle = new Microsoft.Xna.Framework.Rectangle(x, y, w, h);
+		Amorous.GraphicsDevice.ScissorRectangle = new Microsoft.Xna.Framework.Rectangle(x, y, w, h);
 	}
 
 	public void StartBatch()
 	{
-		_OaIpAM8LUMZnUHberg4zeLNyWCd._g9Sx54kMPiHz5jrqWh4Kb1pTijH(SpriteSortMode.Deferred, null, null, null, _T3zdQhKBBD6DNUg8RQ7EupUHIoE);
+		_OaIpAM8LUMZnUHberg4zeLNyWCd.Begin(SpriteSortMode.Deferred, null, null, null, _T3zdQhKBBD6DNUg8RQ7EupUHIoE);
 	}
 
 	public void EndBatch(bool final)

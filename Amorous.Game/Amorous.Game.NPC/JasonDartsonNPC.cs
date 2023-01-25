@@ -23,12 +23,12 @@ public class JasonDartsonNPC : LayerNPC<JasonDartsonNPC.EHeads, JasonDartsonNPC.
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Jason Dartson";
+	public static string Name = "Jason Dartson";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(122, 53, 54);
+	public static Color Color = new Color(122, 53, 54);
 
-	public JasonDartsonNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/JasonDartson", 0.9f)
+	public JasonDartsonNPC(IAmorous game)
+		: base(Game, "Assets/NPC/JasonDartson", 0.9f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Jason Body")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Jason Cock");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Jason Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
@@ -44,18 +44,18 @@ public class JasonDartsonNPC : LayerNPC<JasonDartsonNPC.EHeads, JasonDartsonNPC.
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 685f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 50f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 685f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 50f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 100f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 50f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 50f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1270f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 50f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1270f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 50f;
 			break;
 		}
 	}

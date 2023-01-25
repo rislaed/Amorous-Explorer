@@ -6,23 +6,23 @@ public class LivingRoomScene : TimeOfDayScene
 {
 	private readonly _dvyBDFOZwoBLf9qqHSfHYLLXVwP _phoneNag;
 
-	public LivingRoomScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public LivingRoomScene(IAmorous game)
+		: base(Game)
 	{
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/LivingRoom/Foyer", 0, 0);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
-		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
+		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(Game);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		_tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
-		_phoneNag._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime);
+		Update(gameTime);
+		_phoneNag.Update(gameTime);
 	}
 
 	public override void End()
 	{
-		base._tO46aYSBLFIuhFNlhbrAeWbFDSf();
-		_phoneNag._tO46aYSBLFIuhFNlhbrAeWbFDSf();
+		base.End();
+		_phoneNag.End();
 	}
 }

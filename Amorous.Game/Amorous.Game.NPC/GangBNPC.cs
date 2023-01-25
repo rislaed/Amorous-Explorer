@@ -20,12 +20,12 @@ public class GangBNPC : LayerNPC<GangBNPC.EHeads, GangBNPC.EPoses, GangBNPC.EClo
 		None
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Taylor";
+	public static string Name = "Taylor";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(103, 23, 183);
+	public static Color Color = new Color(103, 23, 183);
 
-	public GangBNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string.Empty, 1f)
+	public GangBNPC(IAmorous game)
+		: base(Game, string.Empty, 1f)
 	{
 	}
 }

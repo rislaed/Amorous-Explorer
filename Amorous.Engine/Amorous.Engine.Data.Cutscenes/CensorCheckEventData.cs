@@ -4,11 +4,11 @@ using Newtonsoft.Json;
 namespace Amorous.Engine.Data.Cutscenes;
 
 [Serializable]
-public class CensorCheckEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class CensorCheckEventData : EventData
 {
 	[JsonProperty("SFWID")]
-	public int _naeCnFmw7HNeXrvZ4bcN3445tEE { get; set; }
+	public int SFWID { get; set; }
 
 	[JsonProperty("NSFWID")]
-	public int _fgW8D3AekMvcLFaeEg5XlCDEJAk { get; set; }
+	public int NSFWID { get; set; }
 }

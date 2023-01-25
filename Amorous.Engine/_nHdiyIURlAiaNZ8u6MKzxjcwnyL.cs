@@ -24,7 +24,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 
 	public bool _Ssp18W0I7HLX3YToPSudCzKuDjF { get; set; }
 
-	public float _7Xn1C5tjYnmIif1iZKV8AWsEEbL
+	public float X
 	{
 		get
 		{
@@ -37,7 +37,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 		}
 	}
 
-	public float _bCjZ3VSXGKyhmykd2zCnQBiSpDf
+	public float Y
 	{
 		get
 		{
@@ -234,7 +234,7 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 		return false;
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0, float float_0 = 1000f)
+	public void Update(GameTime gameTime_0, float float_0 = 1000f)
 	{
 		_ZVtUyMscIM54gezcLdBBhUCeVAv.Update((float)gameTime_0.ElapsedGameTime.Milliseconds / float_0);
 		_ZVtUyMscIM54gezcLdBBhUCeVAv.Apply(_Q9MbCV832IUbkbrMWYaOkMJU5BhA);
@@ -260,10 +260,10 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 		}
 	}
 
-	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SkeletonMeshRenderer skeletonMeshRenderer_0, Texture2D texture2D_0 = null, Func<int, string, bool> func_0 = null, Color? nullable_0 = null, float float_0 = 1f)
+	public void Draw(SkeletonMeshRenderer skeletonMeshRenderer_0, Texture2D texture2D_0 = null, Func<int, string, bool> func_0 = null, Color? nullable_0 = null, float float_0 = 1f)
 	{
 		skeletonMeshRenderer_0.PremultipliedAlpha = _Ssp18W0I7HLX3YToPSudCzKuDjF;
-		skeletonMeshRenderer_0.Begin(_7Xn1C5tjYnmIif1iZKV8AWsEEbL, _bCjZ3VSXGKyhmykd2zCnQBiSpDf, float_0);
+		skeletonMeshRenderer_0.Begin(X, Y, float_0);
 		skeletonMeshRenderer_0.Draw(_Q9MbCV832IUbkbrMWYaOkMJU5BhA, texture2D_0, func_0, nullable_0);
 		skeletonMeshRenderer_0.End();
 	}
@@ -320,14 +320,5 @@ public class _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	public void _49JXjKJqaPZw5nEmhHdAENuBtLJ(string string_0, float float_0)
 	{
 		_Q9MbCV832IUbkbrMWYaOkMJU5BhA.Data.FindAnimation(string_0).Duration += float_0;
-	}
-
-	[CompilerGenerated]
-	private void _rOz7ZihvFmMpUcDtcmRWkVEY4ye(AnimationState animationState_0, int int_0, Event event_0)
-	{
-		if (_iUyagF1KTeSUlg0raFfzuot3CwC != null)
-		{
-			_iUyagF1KTeSUlg0raFfzuot3CwC(event_0.Data.Name);
-		}
 	}
 }

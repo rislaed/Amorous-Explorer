@@ -8,7 +8,7 @@ public static class _KZ7hNP1K5E99Xfup1lTZ9UDrxPE
 
 		public string _ynar3ZAutlIbbTWMBGvo1mdRNYz { get; set; }
 
-		public string _D5QiLGGNtfoCEnZIUPvH4OKqUabA { get; set; }
+		public string Title { get; set; }
 	}
 
 	public static readonly List<_vNekDVpW2fr7UkjA16E9ifFmD9s> _LUJAgYjQ8oEpFgPKC5CzY9Ne5ju = new List<_vNekDVpW2fr7UkjA16E9ifFmD9s>
@@ -17,169 +17,169 @@ public static class _KZ7hNP1K5E99Xfup1lTZ9UDrxPE
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/4U - Long Gone",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "4U",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Long Gone"
+			Title = "Long Gone"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/AudioDriver - Detective's Scoop",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "AudioDriver",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Detective's Scoop"
+			Title = "Detective's Scoop"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Biggyzoom - The Night Sky",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Biggyzoom",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "The Night Sky"
+			Title = "The Night Sky"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Blazing Dragon - Midnight Sizzle",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Blazing Dragon",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Midnight Sizzle"
+			Title = "Midnight Sizzle"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/CrimsonSkies455 - Somewhere in Florida",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "CrimsonSkies455",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Somewhere in Florida"
+			Title = "Somewhere in Florida"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/DanMasterFlash - Sun Funk",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "DanMasterFlash",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Sun Funk"
+			Title = "Sun Funk"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Father-of-Death - Happy Jazz Shit",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Father-of-Death",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Happy Jazz Shit"
+			Title = "Happy Jazz Shit"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/DJ-ZEK - Heated",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "DJ-ZEK",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Heated"
+			Title = "Heated"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/DJ-ZEK - Simulate",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "DJ-ZEK",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Simulate"
+			Title = "Simulate"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Hopeku - In A Finger Blink",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Hopeku",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "In A Finger Blink"
+			Title = "In A Finger Blink"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Rekuiem - Flyin",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Rekuiem",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Flyin"
+			Title = "Flyin"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/RyeGuyHead - Outdated",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "RyeGuyHead",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Outdated"
+			Title = "Outdated"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Steampianist - O Morro Nao Tem Vez",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Steampianist",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "O Morro Nao Tem Vez"
+			Title = "O Morro Nao Tem Vez"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Warhector - Free Floating",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Warhector",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Free Floating"
+			Title = "Free Floating"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/WarmanSteve - Giant Robots",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "WarmanSteve",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Giant Robots"
+			Title = "Giant Robots"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Vagus",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Vagus"
+			Title = "Vagus"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Drift",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Drift"
+			Title = "Drift"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Fragment",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Fragment"
+			Title = "Fragment"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Gravity (Original Mix)",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Gravity (Original Mix)"
+			Title = "Gravity (Original Mix)"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Lustrum",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Lustrum"
+			Title = "Lustrum"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Mech",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Mech"
+			Title = "Mech"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Nox",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Nox"
+			Title = "Nox"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Ritual",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Ritual"
+			Title = "Ritual"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Rouz",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Rouz"
+			Title = "Rouz"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Sixtenzu",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Sixtenzu"
+			Title = "Sixtenzu"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Stratum (Filthy House Remix)",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Stratum (Filthy House Remix)"
+			Title = "Stratum (Filthy House Remix)"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Tower",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Tower"
+			Title = "Tower"
 		},
 		new _vNekDVpW2fr7UkjA16E9ifFmD9s
 		{
 			_XAtd16WmK4L37sBtMsLCIvJzIS1 = "Assets/Music/Mittsies - Ventus",
 			_ynar3ZAutlIbbTWMBGvo1mdRNYz = "Mittsies",
-			_D5QiLGGNtfoCEnZIUPvH4OKqUabA = "Ventus"
+			Title = "Ventus"
 		}
 	};
 

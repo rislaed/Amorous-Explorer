@@ -22,8 +22,8 @@ public class ClubLoungeEFNPC : LayerNPC<ClubLoungeEFNPC.EHeads, ClubLoungeEFNPC.
 		Pants
 	}
 
-	public ClubLoungeEFNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubLoungeStatic", 1f)
+	public ClubLoungeEFNPC(IAmorous game)
+		: base(Game, "Assets/NPC/ClubLoungeStatic", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Sitting, "E F club nude")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("E F club nude cock");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Sitting, EClothes.Shirt, "E F club shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();

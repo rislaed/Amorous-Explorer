@@ -8,7 +8,7 @@ using Spine;
 
 namespace Amorous.Game.Scenes;
 
-public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public class CookingMiniGameScene : AbstractScene
 {
 	private class GUI : _8lVOgkauaSHbAkAqHzI1K7mIyOI
 	{
@@ -22,8 +22,8 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			}
 		}
 
-		public GUI(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, Action action_0)
-			: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+		public GUI(IAmorous game, Action action_0)
+			: base(game)
 		{
 			_wmL1cFR5CsMqZS9jOXyCnmqveCG = _QVqIVxBeF2SAQh6HDFwwp2RFmXB("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/Gui/Fonts/Bold-26", "Stop cooking!", Color.White, 832, 970, new Rectangle(832, 970, 256, 102), action_0);
 			_wmL1cFR5CsMqZS9jOXyCnmqveCG._Fxy2SlgceW90FloFw6a1AEJODYA = false;
@@ -117,11 +117,11 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	public bool _T81AMuUIGw7sZkYmJkIpiDPosrD { get; set; }
 
-	public CookingMiniGameScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	public CookingMiniGameScene(IAmorous game)
+		: base(game)
 	{
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = new GUI(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, _Ee9VcMQIfuD0ElqFdXVvMHxofkf);
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._lXEQJcXKxsjtZp00Y9aPe0ymGue(_fp8jsuSnELXqf2yy2JQDaXDCBVQ);
+		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = new GUI(game, _Ee9VcMQIfuD0ElqFdXVvMHxofkf);
+		base.Game._lXEQJcXKxsjtZp00Y9aPe0ymGue(_fp8jsuSnELXqf2yy2JQDaXDCBVQ);
 		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Cooking/Background", 0, 0);
 		_urxVZoSWXCtbeM9oQmVXW0Fb7co = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/Cooking/Bad", 0, 0);
 		_urxVZoSWXCtbeM9oQmVXW0Fb7co._Fxy2SlgceW90FloFw6a1AEJODYA = false;
@@ -130,41 +130,41 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		_9cxzh98qcLMOVst3Rlmc4AaYoBp = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/Cooking/Excellent", 0, 0);
 		_9cxzh98qcLMOVst3Rlmc4AaYoBp._Fxy2SlgceW90FloFw6a1AEJODYA = false;
 		_WBXNT6eIVGk6ZKExRBJ6JxXE6zb wBXNT6eIVGk6ZKExRBJ6JxXE6zb = new _WBXNT6eIVGk6ZKExRBJ6JxXE6zb(this, "Cooking");
-		_bFjOLB3sqVGFgwwMENJRlZ5vouC = _JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/Cooking/Cooking");
-		_bFjOLB3sqVGFgwwMENJRlZ5vouC._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 960f;
-		_bFjOLB3sqVGFgwwMENJRlZ5vouC._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 540f;
-		_WwmWk5kaVSyVGOqHYV9xCL01Mmq = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_bFjOLB3sqVGFgwwMENJRlZ5vouC = game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/Cooking/Cooking");
+		_bFjOLB3sqVGFgwwMENJRlZ5vouC.X = 960f;
+		_bFjOLB3sqVGFgwwMENJRlZ5vouC.Y = 540f;
+		_WwmWk5kaVSyVGOqHYV9xCL01Mmq = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_WwmWk5kaVSyVGOqHYV9xCL01Mmq._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Pan spawn");
-		_Yl6cx6lo29nhZhAYCwYNXftaePb = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_Yl6cx6lo29nhZhAYCwYNXftaePb = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_Yl6cx6lo29nhZhAYCwYNXftaePb._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Add ingrediant");
-		_R1mDpxg72ZTKnMeOQ0sH8szndlG = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_R1mDpxg72ZTKnMeOQ0sH8szndlG = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_R1mDpxg72ZTKnMeOQ0sH8szndlG._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Onion");
-		_E5COS2Wew1BQS9CZNJcDAnV99Y = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_E5COS2Wew1BQS9CZNJcDAnV99Y = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_E5COS2Wew1BQS9CZNJcDAnV99Y._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Beef");
-		_NCyPsw4quyw64ZmYLMqlIaQaclA = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_NCyPsw4quyw64ZmYLMqlIaQaclA = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_NCyPsw4quyw64ZmYLMqlIaQaclA._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Carrots");
-		_gDkX1mAt76eLA8P3gGXs2wM5wTE = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_gDkX1mAt76eLA8P3gGXs2wM5wTE = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_gDkX1mAt76eLA8P3gGXs2wM5wTE._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Tomatoe");
-		_7f8HjbO7kyXkAQLb2mIqPJKHcLb = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_7f8HjbO7kyXkAQLb2mIqPJKHcLb = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_7f8HjbO7kyXkAQLb2mIqPJKHcLb._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Bay leaves");
-		_vdz7lnEalvPxBPYYcR15bPICZOc = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_vdz7lnEalvPxBPYYcR15bPICZOc = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_vdz7lnEalvPxBPYYcR15bPICZOc._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Burning");
-		_3h9I4xBs98PF8vAbLXJAdpmHA8dA = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_3h9I4xBs98PF8vAbLXJAdpmHA8dA = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_3h9I4xBs98PF8vAbLXJAdpmHA8dA._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Drum roll");
-		_QQrPUpwIvHnFnZeHb0cfL7CPSHh = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_QQrPUpwIvHnFnZeHb0cfL7CPSHh = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_QQrPUpwIvHnFnZeHb0cfL7CPSHh._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Bad food");
-		_8CTAuE7kLwrQAWKi1EOgTa2AKEx = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_8CTAuE7kLwrQAWKi1EOgTa2AKEx = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_8CTAuE7kLwrQAWKi1EOgTa2AKEx._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Ok food");
-		_MHlWAOoiEHfmdM0FqWO6WSRbC1hA = new _hqmu3NsKXqziXGfVh3dt79G0fye(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_MHlWAOoiEHfmdM0FqWO6WSRbC1hA = new _hqmu3NsKXqziXGfVh3dt79G0fye(game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
 		_MHlWAOoiEHfmdM0FqWO6WSRbC1hA._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Great food");
 		_coudx6g9HL4THj8r5aYCDxaHH0I();
 		wBXNT6eIVGk6ZKExRBJ6JxXE6zb._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime_0)
 		{
-			_bFjOLB3sqVGFgwwMENJRlZ5vouC._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+			_bFjOLB3sqVGFgwwMENJRlZ5vouC.Update(gameTime_0);
 		};
 		wBXNT6eIVGk6ZKExRBJ6JxXE6zb._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 		{
-			_bFjOLB3sqVGFgwwMENJRlZ5vouC._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, _YwAdHC5A5VB16lereNxJLkAP3Z9A);
+			_bFjOLB3sqVGFgwwMENJRlZ5vouC.Draw(skeletonMeshRenderer_0, null, _YwAdHC5A5VB16lereNxJLkAP3Z9A);
 		};
 		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(wBXNT6eIVGk6ZKExRBJ6JxXE6zb, 0);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Warhector - Free Floating", 0.1f);
@@ -235,9 +235,9 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		_tJRouny7ZhgCxrAgyXFLsqSeAMT = EIngrediants.None;
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public override void Update(GameTime gameTime_0)
 	{
-		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		base.Update(gameTime_0);
 		if (_Iqfa1mamDp2busajsE8iPWnCKbDA)
 		{
 			_eRokloBwt8FsjBWpKBDmNKscCLH += (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
@@ -259,7 +259,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 			return;
 		}
-		Point point = base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		Point point = base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
 		if (_HXs79I5YAlnCxHxJS0JxD7jccyt || !_bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Onions bowl glow", point.X, point.Y))
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC._aAoZaDNczeScsMfLlGSfAzey9SQ("Onions bowl glow", 0f);
@@ -267,7 +267,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("OnionsGarlic highlight", EIngrediants.OnionsGarlic, _R1mDpxg72ZTKnMeOQ0sH8szndlG);
-			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 			{
 				_7UQ7J6jOjw0vBiKHgcli5eXatrN();
 			}
@@ -279,7 +279,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Ground beef highlight", EIngrediants.GroundBeef, _E5COS2Wew1BQS9CZNJcDAnV99Y);
-			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 			{
 				_KS0Vtg4XWGmpAsqFy5tYlJXLKLA();
 			}
@@ -291,7 +291,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Carrot highlight", EIngrediants.Carrots, _NCyPsw4quyw64ZmYLMqlIaQaclA);
-			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 			{
 				_VcZyHKzhoXLGNA1DIp006kBhiDN();
 			}
@@ -299,7 +299,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		if (!_g0GLDf9i20jtYweGI1DAr0f9WON && _bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Tomatoe bowl gold", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Tomatoe highlight", EIngrediants.TinnedTomatoes, _gDkX1mAt76eLA8P3gGXs2wM5wTE);
-			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 			{
 				_FJRq83fBqGFaoHbsYpaAVoouvFQ();
 			}
@@ -311,7 +311,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		if (!_ylWBqGZTor7PB0HyMRwAuoV4hvH && _bFjOLB3sqVGFgwwMENJRlZ5vouC._3nKd9Dk3YeX87QB5dROwYUzczsN("Bayleaves bowl glow", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Bay highlight", EIngrediants.Herbs, _7f8HjbO7kyXkAQLb2mIqPJKHcLb);
-			if (base._ZzBuoSDMWwerejOO9Goyv2OCKgE._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
 			{
 				_hHMvLMSFiOFnDNkhUnBcQpsEN9T();
 			}
@@ -464,7 +464,7 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 	{
 		_T81AMuUIGw7sZkYmJkIpiDPosrD = false;
 		_UmxbIbk7pgaod0bD7pS309P3Lns._E7yBM68AWt7OGHJ5D6xYA8RK8tAA(0f);
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+		base.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
 		{
 			_3h9I4xBs98PF8vAbLXJAdpmHA8dA._xDFlaclLtJxSUU63JEJALvRLdfe();
 			_Iqfa1mamDp2busajsE8iPWnCKbDA = true;
@@ -514,16 +514,16 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			_Y8SewnxQuAuHOtMeTeuRSJlpbGJ = true;
 			_YVtICgpvRZU0ZRqniFuAVlkSOFM = false;
 		}
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._4Fscz8ryB3hm0NmL5xw39HHiPd1("Pasta.Poor", _Y8SewnxQuAuHOtMeTeuRSJlpbGJ);
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t()._4Fscz8ryB3hm0NmL5xw39HHiPd1("Pasta.Perfect", _YVtICgpvRZU0ZRqniFuAVlkSOFM);
+		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().SetBit("Pasta.Poor", _Y8SewnxQuAuHOtMeTeuRSJlpbGJ);
+		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().SetBit("Pasta.Perfect", _YVtICgpvRZU0ZRqniFuAVlkSOFM);
 		_urxVZoSWXCtbeM9oQmVXW0Fb7co._Fxy2SlgceW90FloFw6a1AEJODYA = _Y8SewnxQuAuHOtMeTeuRSJlpbGJ;
 		_RZsDgwVY7R44E6mMbUF7YWYyBjK._Fxy2SlgceW90FloFw6a1AEJODYA = !_Y8SewnxQuAuHOtMeTeuRSJlpbGJ && !_YVtICgpvRZU0ZRqniFuAVlkSOFM;
 		_9cxzh98qcLMOVst3Rlmc4AaYoBp._Fxy2SlgceW90FloFw6a1AEJODYA = _YVtICgpvRZU0ZRqniFuAVlkSOFM;
-		base._ZzBuoSDMWwerejOO9Goyv2OCKgE._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._FegL010tc92iskjjyD0T33dDwNE(delegate
+		base.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._FegL010tc92iskjjyD0T33dDwNE(delegate
 		{
 			if (_YVtICgpvRZU0ZRqniFuAVlkSOFM)
 			{
-				base._ZzBuoSDMWwerejOO9Goyv2OCKgE._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric11");
+				base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric11");
 				_MHlWAOoiEHfmdM0FqWO6WSRbC1hA._xDFlaclLtJxSUU63JEJALvRLdfe();
 			}
 			else if (_Y8SewnxQuAuHOtMeTeuRSJlpbGJ)
@@ -536,72 +536,5 @@ public class CookingMiniGameScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 			}
 			_T81AMuUIGw7sZkYmJkIpiDPosrD = true;
 		});
-	}
-
-	[CompilerGenerated]
-	private void _NmaekdAD1gSPP5yCLnbnL1WAeD0A(GameTime gameTime_0)
-	{
-		_bFjOLB3sqVGFgwwMENJRlZ5vouC._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-	}
-
-	[CompilerGenerated]
-	private void _fWa6DjrbaEPK1WLNZk8EF0EhF4k(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
-	{
-		_bFjOLB3sqVGFgwwMENJRlZ5vouC._f5ctqAmdNsZ889UjM4LxDm8WGxA(skeletonMeshRenderer_0, null, _YwAdHC5A5VB16lereNxJLkAP3Z9A);
-	}
-
-	[CompilerGenerated]
-	private void _C56Cr5G9WfXcGImyT8QeFsD2Uxj()
-	{
-		_K8aZsmpWRImwc2JedT7KcW3wdYQ = false;
-	}
-
-	[CompilerGenerated]
-	private void _jsScVfnvxUDbq9nDCErcPAgZDRCA()
-	{
-		_HXs79I5YAlnCxHxJS0JxD7jccyt = true;
-		_n5dqiyQaiIqiC4wtWicCzzA8coG(EIngrediants.OnionsGarlic);
-	}
-
-	[CompilerGenerated]
-	private void _u1A8tlH4Pva4lsBCuCBgmdztTXG()
-	{
-		_HylCIZnie9TY7iCNyKurgxQFFji = true;
-		_n5dqiyQaiIqiC4wtWicCzzA8coG(EIngrediants.GroundBeef);
-	}
-
-	[CompilerGenerated]
-	private void _WtG9pBnQz1VMaCkOOLs8yDzfQ3G()
-	{
-		_mOljPVTpQkVD6dwmmr9m28l6fc = true;
-		_n5dqiyQaiIqiC4wtWicCzzA8coG(EIngrediants.Carrots);
-	}
-
-	[CompilerGenerated]
-	private void _mXM4ENlz9PvfKHf9jFBpDxs3vEB()
-	{
-		_g0GLDf9i20jtYweGI1DAr0f9WON = true;
-		_n5dqiyQaiIqiC4wtWicCzzA8coG(EIngrediants.TinnedTomatoes);
-	}
-
-	[CompilerGenerated]
-	private void _QBP2TNnNrr1iMrHFFGqet7ABSO()
-	{
-		_ylWBqGZTor7PB0HyMRwAuoV4hvH = true;
-		_n5dqiyQaiIqiC4wtWicCzzA8coG(EIngrediants.Herbs);
-	}
-
-	[CompilerGenerated]
-	private void _9NAQTxnipbPGv6LRIkqhUgKuPRh()
-	{
-		_MOR64YNiUTpJJkXDvGxkr2BYs4n();
-		_bFjOLB3sqVGFgwwMENJRlZ5vouC._SPUoP3ABwpgQinJfKUM5qBbYSvr("Shits burning", _Ee9VcMQIfuD0ElqFdXVvMHxofkf);
-	}
-
-	[CompilerGenerated]
-	private void _XB6neda1fTKa21CjFeAGR8iHx7Y()
-	{
-		_3h9I4xBs98PF8vAbLXJAdpmHA8dA._xDFlaclLtJxSUU63JEJALvRLdfe();
-		_Iqfa1mamDp2busajsE8iPWnCKbDA = true;
 	}
 }

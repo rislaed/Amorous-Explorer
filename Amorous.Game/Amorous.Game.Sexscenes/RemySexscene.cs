@@ -37,18 +37,18 @@ public class RemySexscene : CensoredSexscene
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 200f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1600f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 200f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1600f;
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._7Xn1C5tjYnmIif1iZKV8AWsEEbL = 900f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1050f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 900f;
+			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1050f;
 			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._49JXjKJqaPZw5nEmhHdAENuBtLJ("animation", -0.2f);
 		}
 	}
 
-	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(_opIJo2jLUqdOL5yAFP4yzXce0DG _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
 		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
@@ -76,33 +76,33 @@ public class RemySexscene : CensoredSexscene
 			return;
 		}
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player arm", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player arm marking sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.LongForearm) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player arm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player arm marking sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player arm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player legs", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player legs marking inner thighs", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underthigh) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player legs stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Stripes) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player legs marking inner thighs", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player legs stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Cock Knotted", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._rtyJgfViJdXL2Ela5APpDlk99dI == _opIJo2jLUqdOL5yAFP4yzXce0DG.ECockType.Knotted) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Cock Knotted", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Mz7LwHZqoGBscApFXmff1kEQnGY.HasFlag(_opIJo2jLUqdOL5yAFP4yzXce0DG._VzIdKOJ1Gq1YccwwHcwhrVV5V4U.Underbelly) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Boobs small", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.ACup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.BCup) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Nipples small", ((_opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.ACup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.BCup) && _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Q2AbpMWcrhtCW9MLTtT5gwoleu7) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Boobs medium", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.CCup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.DCup) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Nipples medium", ((_opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.CCup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0._BCncLn6BIYiBX6NdFByAquBYGpH == _opIJo2jLUqdOL5yAFP4yzXce0DG.EBreastsType.DCup) && _opIJo2jLUqdOL5yAFP4yzXce0DG_0._Q2AbpMWcrhtCW9MLTtT5gwoleu7) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm marking sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._1ZKGQXLRAHEJR8v7jhlDsyOVLcz);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player legs", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player legs marking inner thighs", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._zBv1cYqPRU7uDCALpBlBSgObUcbA);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player legs stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._TxfCqloeyiHpsXka6B46iqCZNsZ);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Cock Knotted", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._XnNREK59QnV1onFFWfSUaS9WK0E);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._6f1rvTENt5XWmHTE22zxBIwbH9G);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._PeK36AvFxEQCvX3fS62hNV7rpuJ);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Boobs small", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._pigzqi6DgcSToQkL9g7Ns2QrLfp);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Nipples small", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._2yydfEIrSiLPTti2dT8JXGoIaM3);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Boobs medium", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._pigzqi6DgcSToQkL9g7Ns2QrLfp);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Nipples medium", _opIJo2jLUqdOL5yAFP4yzXce0DG_0._2yydfEIrSiLPTti2dT8JXGoIaM3);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Boobs small", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.ACup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.BCup) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Nipples small", ((_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.ACup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.BCup) && _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShowNipples) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Boobs medium", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.CCup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.DCup) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Nipples medium", ((_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.CCup || _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsType == PlayerData.EBreastsType.DCup) && _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShowNipples) ? 1f : 0f);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm marking sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.LongForearmColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player legs", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player legs marking inner thighs", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player legs stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Cock Knotted", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Boobs small", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Nipples small", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.NipplesColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Boobs medium", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BreastsColor);
+		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Nipples medium", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.NipplesColor);
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Remy Back Arm", 1f);
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Remy Back Leg", 1f);
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Remy Arm right", 1f);

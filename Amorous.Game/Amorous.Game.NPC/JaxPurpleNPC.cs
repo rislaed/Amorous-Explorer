@@ -4,8 +4,8 @@ namespace Amorous.Game.NPC;
 
 public class JaxPurpleNPC : JaxNPC
 {
-	public JaxPurpleNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/JaxPurple/Jax")
+	public JaxPurpleNPC(IAmorous game)
+		: base(Game, "Assets/NPC/JaxPurple/Jax")
 	{
 		base._rAt6TRbgK04lvrs5QPjcd0n26pk = new Type[2]
 		{

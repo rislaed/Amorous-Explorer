@@ -36,20 +36,20 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 		CasualPants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Jax";
+	public static string Name = "Jax";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(113, 227, 255);
+	public static Color Color = new Color(113, 227, 255);
 
-	public JaxNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: this(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/Jax/Jax")
+	public JaxNPC(IAmorous game)
+		: this(Game, "Assets/NPC/Jax/Jax")
 	{
 	}
 
-	public JaxNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string_0, 1f, bool_0: true)
+	public JaxNPC(IAmorous game, string string_0)
+		: base(game, string_0, 1f, bool_0: true)
 	{
-		_je8rVfyg4zywmqSi4Ozx1z7wJ4b = 904;
-		_WJfGWBzn4wgdGBnMWRH2pcJ3AqH = 1008;
+		Width = 904;
+		Height = 1008;
 		base._rAt6TRbgK04lvrs5QPjcd0n26pk = new Type[2]
 		{
 			typeof(JaxPurpleNPC),
@@ -94,18 +94,18 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 960f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 960f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 400f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 400f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1520f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 1100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1520f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
 			break;
 		}
 	}

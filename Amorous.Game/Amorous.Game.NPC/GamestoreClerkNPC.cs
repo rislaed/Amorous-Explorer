@@ -23,12 +23,12 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 		Pants
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Game Store Clerk";
+	public static string Name = "Game Store Clerk";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(252, 137, 76);
+	public static Color Color = new Color(252, 137, 76);
 
-	public GamestoreClerkNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/GamestoreClerk", 1f)
+	public GamestoreClerkNPC(IAmorous game)
+		: base(Game, "Assets/NPC/GamestoreClerk", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Kula Game Store Clerk (nude)");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Kula Game Store Clerk (pants)")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
@@ -44,18 +44,18 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 545f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 545f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = -80f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -80f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1166f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 0f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1166f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
 			break;
 		}
 	}

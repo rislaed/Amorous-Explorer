@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Amorous.Game.Scenes;
 
-public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
+public abstract class TimeOfDayScene : AbstractScene
 {
 	protected const string _GVrFhyughFuZbNz1GllPUz8qFRC = "Night";
 
@@ -15,10 +15,10 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 
 	private readonly _G2GbwTTqXkVDMUL6fDmljsAPB4s _TyX29AlEBF2URt0abU6bc2VBQvm;
 
-	protected TimeOfDayScene(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
+	protected TimeOfDayScene(IAmorous game)
+		: base(Game)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm = new _G2GbwTTqXkVDMUL6fDmljsAPB4s(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0);
+		_TyX29AlEBF2URt0abU6bc2VBQvm = new _G2GbwTTqXkVDMUL6fDmljsAPB4s(Game);
 	}
 
 	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
@@ -33,32 +33,32 @@ public abstract class TimeOfDayScene : _7UlnfykmEmZDFt3BmCKZekI43Ih
 		{
 		case "Sunset":
 			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Sunset;
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Sunset;
 			break;
 		case "Day":
 			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Day;
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Day;
 			break;
 		case "Morning":
 			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Morning;
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Morning;
 			break;
 		case "Night":
 			_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-			_5Anqe6GAAkzemoAXYpJmgMlk1yz._rf41M6fa6MhAPBvvUvQseEZTt9Q = _RRECH42isVc35MkZPyLEGkp0hjs.Night;
+			_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Night;
 			break;
 		}
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public override void Update(GameTime gameTime_0)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
-		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		_TyX29AlEBF2URt0abU6bc2VBQvm.Update(gameTime_0);
+		base.Update(gameTime_0);
 	}
 
-	public override void _Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(SpriteBatch spriteBatch_0)
+	public override void Render(SpriteBatch spriteBatch_0)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, base._ZzBuoSDMWwerejOO9Goyv2OCKgE._vsceSzSIjBy2nZrCxAzKZbUiwLq);
-		base._Z70nK2EA1n5FNJxjWP0TzHQ0Lzb(spriteBatch_0);
+		_TyX29AlEBF2URt0abU6bc2VBQvm.Draw(spriteBatch_0, base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq);
+		base.Render(spriteBatch_0);
 	}
 }

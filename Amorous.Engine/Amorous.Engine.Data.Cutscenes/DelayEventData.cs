@@ -4,8 +4,8 @@ using Newtonsoft.Json;
 namespace Amorous.Engine.Data.Cutscenes;
 
 [Serializable]
-public class DelayEventData : _3GMZuOfG1tyI9A65sJfkkPLAGdr
+public class DelayEventData : EventData
 {
 	[JsonProperty("Delay")]
-	public int _F5UOCZEYoZ6vR0bYiGdjxZQ8tA { get; set; }
+	public int Delay { get; set; }
 }

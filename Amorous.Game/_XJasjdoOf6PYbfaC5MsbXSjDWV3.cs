@@ -14,20 +14,6 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		public float _AmIUCcrmrrQiiirja7DoiZSjXuv;
 	}
 
-	[Serializable]
-	[CompilerGenerated]
-	private sealed class _vN19JHyTSJSMIASfvKqLRkYnwlf
-	{
-		public static readonly _vN19JHyTSJSMIASfvKqLRkYnwlf _003C_003E9 = new _vN19JHyTSJSMIASfvKqLRkYnwlf();
-
-		public static Predicate<_RQQdLVHyZm4GNvRCeQfcIx1OlwJ> _003C_003E9__8_0;
-
-		internal bool _EAgngek5ntSCgpX7Z1x5XZShpJg(_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0)
-		{
-			return _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f;
-		}
-	}
-
 	private const float _c8P7clKqCyeAfypCea6vVId1tdN = 5f;
 
 	private readonly Desktop _9GQBAH2pi8Sm6ph1s6InjyQGe6R;
@@ -45,7 +31,7 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 			Skin = Gui.GenerateStandardSkin(),
 			Size = new Squid.Point(1920, 1080)
 		};
-		_9GQBAH2pi8Sm6ph1s6InjyQGe6R._EMnZAXxoqoahiGOiNjffRycLtDE("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
+		_9GQBAH2pi8Sm6ph1s6InjyQGe6R.SetSkin("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 		ControlStyle value = new ControlStyle
 		{
 			Font = "Assets/Gui/Fonts/Bold-16"
@@ -108,7 +94,7 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		});
 	}
 
-	public void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public void Update(GameTime gameTime_0)
 	{
 		_9GQBAH2pi8Sm6ph1s6InjyQGe6R.Update();
 		float num = (float)(gameTime_0.ElapsedGameTime.TotalMilliseconds / 1000.0);
@@ -124,11 +110,11 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		if (_0WBDNE6IV1uJhHzUHzdiNj5c9bcA)
 		{
 			_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = false;
-			_IRRZMMioeCJC8zGoIaJiRaRSSiM.RemoveAll((_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0) => _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f);
+			_IRRZMMioeCJC8zGoIaJiRaRSSiM.Remove((_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0) => _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f);
 		}
 	}
 
-	public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0)
+	public void Draw(SpriteBatch spriteBatch_0)
 	{
 		try
 		{

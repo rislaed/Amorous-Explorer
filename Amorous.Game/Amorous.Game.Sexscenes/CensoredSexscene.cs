@@ -37,10 +37,10 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 
 		public Particle()
 		{
-			_haICL4qkfkOLhPhofWQH1GmjZx5();
+			ResetProgression();
 		}
 
-		private void _haICL4qkfkOLhPhofWQH1GmjZx5()
+		private void ResetProgression()
 		{
 			_nD28BmrDaEzCHelTAa14TKyuSyG = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(64, 1856);
 			_LkckKdvuh9GaAwn7XojfbJBd91r = 1144f;
@@ -54,7 +54,7 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 			_rGcC4uzFv31JwubJhcgwuiNZiMh = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(0f, 1080f);
 		}
 
-		public void _tiBFUHPEkedkbgvuX3whdeyjhKo(float float_0)
+		public void Update(float float_0)
 		{
 			_nD28BmrDaEzCHelTAa14TKyuSyG += (float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv * _fEoXp8v9qmXyfxzaUZzMonygxpN) * (_SJ8FQp8xbJuebaQOrgLvEJN49JI * float_0);
 			_LkckKdvuh9GaAwn7XojfbJBd91r -= _vS7dI6rh0z8HEXKEL7oHBGUMNb4 * float_0;
@@ -65,11 +65,11 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 			}
 			if (_LkckKdvuh9GaAwn7XojfbJBd91r + 64f < 0f || _AQwQu1ldCtpbkD5F9oEByJdCnWaA <= 0f)
 			{
-				_haICL4qkfkOLhPhofWQH1GmjZx5();
+				ResetProgression();
 			}
 		}
 
-		public void _f5ctqAmdNsZ889UjM4LxDm8WGxA(Texture2D texture2D_0, SpriteBatch spriteBatch_0)
+		public void Draw(Texture2D texture2D_0, SpriteBatch spriteBatch_0)
 		{
 			spriteBatch_0.Draw(texture2D_0, new Rectangle((int)_nD28BmrDaEzCHelTAa14TKyuSyG, (int)_LkckKdvuh9GaAwn7XojfbJBd91r, 128, 128), null, Color.White * _AQwQu1ldCtpbkD5F9oEByJdCnWaA, MathHelper.ToRadians(_u8pBof2EYEcHCEDxEtA27OOeLmVb), new Vector2(64f, 64f), SpriteEffects.None, 0f);
 		}
@@ -143,9 +143,9 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		}
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime_0)
+	public override void Update(GameTime gameTime_0)
 	{
-		base._tiBFUHPEkedkbgvuX3whdeyjhKo(gameTime_0);
+		base.Update(gameTime_0);
 		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
 			return;
@@ -162,13 +162,13 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		}
 		foreach (Particle item in _lpzETYXyRHxYihXrkJactMysoTi)
 		{
-			item._tiBFUHPEkedkbgvuX3whdeyjhKo(num);
+			item.Update(num);
 		}
 	}
 
-	public override void _f5ctqAmdNsZ889UjM4LxDm8WGxA(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
+	public override void Draw(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
 	{
-		base._f5ctqAmdNsZ889UjM4LxDm8WGxA(spriteBatch_0, skeletonMeshRenderer_0);
+		base.Draw(spriteBatch_0, skeletonMeshRenderer_0);
 		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
 		{
 			return;
@@ -176,7 +176,7 @@ public class CensoredSexscene : _TwlwMC1hhdSzamwGWEBxuUkz1gH
 		spriteBatch_0.Begin();
 		foreach (Particle item in _lpzETYXyRHxYihXrkJactMysoTi)
 		{
-			item._f5ctqAmdNsZ889UjM4LxDm8WGxA(_tt9eBN54CTaryoKDBFZI2D44oni, spriteBatch_0);
+			item.Draw(_tt9eBN54CTaryoKDBFZI2D44oni, spriteBatch_0);
 		}
 		spriteBatch_0.End();
 	}

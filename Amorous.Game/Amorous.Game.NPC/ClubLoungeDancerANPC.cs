@@ -24,8 +24,8 @@ public class ClubLoungeDancerANPC : SpineNPC<ClubLoungeDancerANPC.EHeads, ClubLo
 		Shorts
 	}
 
-	public ClubLoungeDancerANPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/ClubLoungeStatic/Dancer A", 1f, bool_0: true)
+	public ClubLoungeDancerANPC(IAmorous game)
+		: base(Game, "Assets/NPC/ClubLoungeStatic/Dancer A", 1f, bool_0: true)
 	{
 		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Ear", "Eye back", "Fringe", "Head", "Pupil");

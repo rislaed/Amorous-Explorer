@@ -23,8 +23,8 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 		Pants
 	}
 
-	protected ClubStaticSpineNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string string_0, string[] string_1, string[] string_2 = null, string[] string_3 = null)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, string_0, 1f, bool_0: true)
+	protected ClubStaticSpineNPC(IAmorous game, string string_0, string[] string_1, string[] string_2 = null, string[] string_3 = null)
+		: base(game, string_0, 1f, bool_0: true)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Nude, string_1);
 		if (string_2 != null)
@@ -37,9 +37,9 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 		}
 	}
 
-	public override void _g9Sx54kMPiHz5jrqWh4Kb1pTijH()
+	public override void Begin()
 	{
-		base._g9Sx54kMPiHz5jrqWh4Kb1pTijH();
+		base.Begin();
 		_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
 		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
 		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);

@@ -2,22 +2,22 @@ using System;
 using Amorous.Engine.Data.Cutscenes;
 using Microsoft.Xna.Framework;
 
-public abstract class _0feLylFvn7NOajSXvkEDMJIATof<T> : _5EDaN9V3lc2jRRTcL6GvzBbV7kU<T> where T : UnlockContactEventData
+public abstract class _0feLylFvn7NOajSXvkEDMJIATof<T> : AbstractEvent<T> where T : UnlockContactEventData
 {
-	protected _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts _A5GfNJXqRoYNfziIY4iJDirt1y;
+	protected PlayerData.EPhoneContacts Contact;
 
 	protected _0feLylFvn7NOajSXvkEDMJIATof(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
 
-	public override void _dCiaLpIow7UQ0MLMp2O4J0yeVfF(T gparam_0)
+	public override void SetData(T gparam_0)
 	{
-		base._dCiaLpIow7UQ0MLMp2O4J0yeVfF(gparam_0);
-		_A5GfNJXqRoYNfziIY4iJDirt1y = (Enum.TryParse<_opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts>(((UnlockContactEventData)gparam_0)._A5GfNJXqRoYNfziIY4iJDirt1y, out var result) ? result : _opIJo2jLUqdOL5yAFP4yzXce0DG.EPhoneContacts.None);
+		base.SetData(gparam_0);
+		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(((UnlockContactEventData)gparam_0).Contact, out var result) ? result : PlayerData.EPhoneContacts.None);
 	}
 
-	public override void _tiBFUHPEkedkbgvuX3whdeyjhKo(GameTime gameTime)
+	public override void Update(GameTime gameTime)
 	{
 		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 	}

@@ -23,12 +23,12 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 		Shorts
 	}
 
-	public static string _RB8fRXeQvK5vs7JEA0XfVCEpg1i = "Rose Wood";
+	public static string Name = "Rose Wood";
 
-	public static Color _9IjeHaRd3Ej5BEi3CTsJ7Rzh39AA = new Color(195, 69, 81);
+	public static Color Color = new Color(195, 69, 81);
 
-	public RoseWoodNPC(_JbeCmOie0phb2cbgG6DdGZrbs3pB _JbeCmOie0phb2cbgG6DdGZrbs3pB_0)
-		: base(_JbeCmOie0phb2cbgG6DdGZrbs3pB_0, "Assets/NPC/RoseWood", 1f)
+	public RoseWoodNPC(IAmorous game)
+		: base(Game, "Assets/NPC/RoseWood", 1f)
 	{
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Rose Wood Body");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
@@ -44,18 +44,18 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 		{
 		case NPCLocation.Middle:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 725f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 130f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 725f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 130f;
 			break;
 		case NPCLocation.Left:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 100f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 130f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 100f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 130f;
 			break;
 		case NPCLocation.Right:
 			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_7Xn1C5tjYnmIif1iZKV8AWsEEbL = 1351f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_bCjZ3VSXGKyhmykd2zCnQBiSpDf = 130f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1351f;
+			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 130f;
 			break;
 		}
 	}

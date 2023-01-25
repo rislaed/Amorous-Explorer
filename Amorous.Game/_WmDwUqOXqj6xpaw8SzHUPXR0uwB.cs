@@ -6,13 +6,13 @@ using Newtonsoft.Json;
 public class _WmDwUqOXqj6xpaw8SzHUPXR0uwB
 {
 	[JsonProperty("Name")]
-	public string _RB8fRXeQvK5vs7JEA0XfVCEpg1i { get; set; }
+	public string Name { get; set; }
 
 	[JsonProperty("Layers")]
-	public List<_Qzndj0TwqO8yTQMbRwL4FFwlTbv> _lstlI8qzZ4KErYKnufdOlj1xVZF { get; set; }
+	public List<_Qzndj0TwqO8yTQMbRwL4FFwlTbv> Layers { get; set; }
 
 	public _WmDwUqOXqj6xpaw8SzHUPXR0uwB()
 	{
-		_lstlI8qzZ4KErYKnufdOlj1xVZF = new List<_Qzndj0TwqO8yTQMbRwL4FFwlTbv>();
+		Layers = new List<_Qzndj0TwqO8yTQMbRwL4FFwlTbv>();
 	}
 }
