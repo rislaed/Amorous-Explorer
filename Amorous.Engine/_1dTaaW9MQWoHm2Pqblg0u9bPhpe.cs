@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 {
-	public Vector2 _Jh6AK28sBy2bS8ZCoKHP3LX45Uk;
+	public Vector2 Location;
 
 	public Color Color;
 
@@ -13,11 +13,11 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 	{
 		get
 		{
-			return (int)_Jh6AK28sBy2bS8ZCoKHP3LX45Uk.X;
+			return (int)Location.X;
 		}
 		set
 		{
-			_Jh6AK28sBy2bS8ZCoKHP3LX45Uk.X = value;
+			Location.X = value;
 			_2psWLw4AI8EIjQzaXnhGg8M1FnaA.X = value;
 		}
 	}
@@ -26,23 +26,23 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 	{
 		get
 		{
-			return (int)_Jh6AK28sBy2bS8ZCoKHP3LX45Uk.Y;
+			return (int)Location.Y;
 		}
 		set
 		{
-			_Jh6AK28sBy2bS8ZCoKHP3LX45Uk.Y = value;
+			Location.Y = value;
 			_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Y = value;
 		}
 	}
 
 	public bool _NUP8Fs8I7oMuI6vfg25DFKFlQqE { get; private set; }
 
-	public bool _Fxy2SlgceW90FloFw6a1AEJODYA { get; set; }
+	public bool Visible { get; set; }
 
 	protected _1dTaaW9MQWoHm2Pqblg0u9bPhpe()
 	{
 		Color = Color.White;
-		_Fxy2SlgceW90FloFw6a1AEJODYA = true;
+		Visible = true;
 	}
 
 	public abstract void _eJedLbGgSejIX7Xyx6RoIYD1soJA();
@@ -57,5 +57,5 @@ public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		_NUP8Fs8I7oMuI6vfg25DFKFlQqE = false;
 	}
 
-	public abstract void Draw(SpriteBatch spriteBatch_0);
+	public abstract void Draw(SpriteBatch spriteBatch);
 }

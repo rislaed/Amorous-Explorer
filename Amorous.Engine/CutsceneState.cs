@@ -4,9 +4,9 @@ using System.Reflection;
 using Amorous.Engine.NPC;
 using Newtonsoft.Json;
 
-public class _zkUeZhJDizkmvvRfp4S0G7aap8J
+public class CutsceneState
 {
-	public class _CIFXVF6lKl3nSrVOhqjcFXDVlXc
+	public class NPCState
 	{
 		[JsonProperty("Name")]
 		public string Name { get; set; }
@@ -49,7 +49,7 @@ public class _zkUeZhJDizkmvvRfp4S0G7aap8J
 	public string Sexscene { get; set; }
 
 	[JsonProperty("SexscenePhase")]
-	public _TwlwMC1hhdSzamwGWEBxuUkz1gH._qokIrmaaT3Lq6znW10HdrPUO9Fq SexscenePhase { get; set; }
+	public AbstractSexscene.Phase SexscenePhase { get; set; }
 
 	[JsonProperty("SexsceneFinished")]
 	public bool SexsceneFinished { get; set; }
@@ -58,27 +58,27 @@ public class _zkUeZhJDizkmvvRfp4S0G7aap8J
 	public bool FadedOut { get; set; }
 
 	[JsonProperty("NPCs")]
-	public List<_CIFXVF6lKl3nSrVOhqjcFXDVlXc> NPCs { get; }
+	public List<NPCState> NPCs { get; }
 
-	public _zkUeZhJDizkmvvRfp4S0G7aap8J()
+	public CutsceneState()
 	{
-		_SZxz649StJJuwIKZu1G5dtyjwAB = new List<_CIFXVF6lKl3nSrVOhqjcFXDVlXc>();
+		NPCs = new List<NPCState>();
 	}
 
-	public void _gWHVDvr9GDtRXP2zf2Md18MgZ4b(_3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve_0)
+	public void SaveNPCLayer(NPCLayer layer)
 	{
-		if (_3IHp43rpkJgOBcY9lrIrwMuwWve_0 != null)
+		if (layer != null)
 		{
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT NPC = _3IHp43rpkJgOBcY9lrIrwMuwWve_0.NPC;
-			NPCs.Add(new _CIFXVF6lKl3nSrVOhqjcFXDVlXc
+			AbstractNPC NPC = layer.NPC;
+			NPCs.Add(new NPCState
 			{
 				Name = NPC.GetType().Name,
-				Location = NPC._9m9LEAgaqaeXydYhykSBmf9BrDG,
-				Head = NPC._mdS7Bu4eiPPwoFWUcGEOTzh73TJ,
-				Pose = NPC._vzNADWxcLucI3DyP1CebcfYXRut,
-				Clothes = NPC._QeyVQAHb3TegEFsv9IPdYmxNkGZ,
-				Layer = _3IHp43rpkJgOBcY9lrIrwMuwWve_0.Layer,
-				LayerOrder = _3IHp43rpkJgOBcY9lrIrwMuwWve_0.LayerOrder
+				Location = NPC.Location,
+				Head = NPC.Head,
+				Pose = NPC.Pose,
+				Clothes = NPC.Clothes,
+				Layer = layer.Layer,
+				LayerOrder = layer.LayerOrder
 			});
 		}
 	}

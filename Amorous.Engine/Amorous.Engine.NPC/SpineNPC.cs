@@ -26,18 +26,18 @@ public abstract class SpineNPC<THead, TPose, TClothes> : _tfDAeR6npiqJMLRSXPO1Dx
 		return _ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(Enum.GetName(typeof(TPose), (object)gparam_0), Enum.GetName(typeof(TClothes), (object)gparam_1), string_0);
 	}
 
-	public void _g3oEqGBkN3YHUPosRq2nIP2sX0D(THead gparam_0)
+	public void SetEmotion(THead gparam_0)
 	{
-		_g3oEqGBkN3YHUPosRq2nIP2sX0D(Enum.GetName(typeof(THead), (object)gparam_0));
+		SetEmotion(Enum.GetName(typeof(THead), (object)gparam_0));
 	}
 
-	public void _tDFvus0ZCanjp81eOiDzoMXJiuf(TPose gparam_0)
+	public void SetPose(TPose gparam_0)
 	{
-		_tDFvus0ZCanjp81eOiDzoMXJiuf(Enum.GetName(typeof(TPose), (object)gparam_0));
+		SetPose(Enum.GetName(typeof(TPose), (object)gparam_0));
 	}
 
-	public void _09vxUzgOn7J7DFZEwsTh7lgEIhB(params TClothes[] gparam_0)
+	public void SetClothes(params TClothes[] gparam_0)
 	{
-		_09vxUzgOn7J7DFZEwsTh7lgEIhB(gparam_0.Select((TClothes gparam_0) => Enum.GetName(typeof(TClothes), (object)gparam_0)).ToArray());
+		SetClothes(gparam_0.Select((TClothes gparam_0) => Enum.GetName(typeof(TClothes), (object)gparam_0)).ToArray());
 	}
 }

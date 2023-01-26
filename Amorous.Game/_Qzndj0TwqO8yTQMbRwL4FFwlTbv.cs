@@ -7,7 +7,7 @@ public class _Qzndj0TwqO8yTQMbRwL4FFwlTbv
 {
 	[NonSerialized]
 	[JsonIgnore]
-	public _uqydQVaCmCvK7zzWs5W4gZFpKBu Layer;
+	public TexturedLayer Layer;
 
 	[JsonProperty("AssetName")]
 	public string AssetName { get; set; }

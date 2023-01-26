@@ -9,7 +9,7 @@ namespace Amorous.Game.Sexscenes;
 
 public class DustinSexscene : CensoredSexscene
 {
-	private static readonly List<SkeletonJson.SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = new List<SkeletonJson.SpineEvent>
+	private static readonly List<SkeletonJson.SpineEvent> Events = new List<SkeletonJson.SpineEvent>
 	{
 		new SkeletonJson.SpineEvent
 		{
@@ -31,85 +31,85 @@ public class DustinSexscene : CensoredSexscene
 		}
 	};
 
-	public DustinSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.5f : 1f, bool_0: true, float_1: 3000f)
+	public DustinSexscene(ContentManager content)
+		: base(content, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, float_1: 3000f)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
-		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.StartAnimationWithLooping("animation");
+		if (Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 1000f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1700f;
+			base.Spine.X = 1000f;
+			base.Spine.Y = 1700f;
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 900f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1050f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._49JXjKJqaPZw5nEmhHdAENuBtLJ("animation", -0.3f);
+			base.Spine.X = 900f;
+			base.Spine.Y = 1050f;
+			base.Spine.IncreaseDuration("animation", -0.3f);
 		}
 	}
 
-	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	protected override void RefreshScene(PlayerData data)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
-		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.SetVisibility(0f);
+		if (!Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Back", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Eyes", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin pupil", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin head", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Hair", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin ear", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin eyelid", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin muzzle", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin fringe", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Upper Body", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin shoulder top", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin forearm top", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin tail", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin tail tip", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin thigh back", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Cock", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh bot", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh bot stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh bot underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player taint", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player taint underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Balls", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player balls underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh top", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh top stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin top", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin balls", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin thigh right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin shin right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Back", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh bot", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh bot stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh bot underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player taint", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player taint underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Balls", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BallsColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player balls underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh top", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh top stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin top", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum");
+			base.Spine.SetAlpha("Player Back", 1f);
+			base.Spine.SetAlpha("Dustin Eyes", 1f);
+			base.Spine.SetAlpha("Dustin pupil", 1f);
+			base.Spine.SetAlpha("Dustin head", 1f);
+			base.Spine.SetAlpha("Dustin Hair", 1f);
+			base.Spine.SetAlpha("Dustin ear", 1f);
+			base.Spine.SetAlpha("Dustin eyelid", 1f);
+			base.Spine.SetAlpha("Dustin muzzle", 1f);
+			base.Spine.SetAlpha("Dustin fringe", 1f);
+			base.Spine.SetAlpha("Dustin Upper Body", 1f);
+			base.Spine.SetAlpha("Dustin shoulder top", 1f);
+			base.Spine.SetAlpha("Dustin forearm top", 1f);
+			base.Spine.SetAlpha("Dustin tail", 1f);
+			base.Spine.SetAlpha("Dustin tail tip", 1f);
+			base.Spine.SetAlpha("Dustin thigh back", 1f);
+			base.Spine.SetAlpha("Dustin Cock", 1f);
+			base.Spine.SetAlpha("Player thigh bot", 1f);
+			base.Spine.SetAlpha("Player thigh bot stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base.Spine.SetAlpha("Player thigh bot underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+			base.Spine.SetAlpha("Player taint", 1f);
+			base.Spine.SetAlpha("Player taint underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+			base.Spine.SetAlpha("Player Balls", 1f);
+			base.Spine.SetAlpha("Player balls underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+			base.Spine.SetAlpha("Player thigh top", 1f);
+			base.Spine.SetAlpha("Player thigh top stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base.Spine.SetAlpha("Player thigh top underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+			base.Spine.SetAlpha("Player shin top", 1f);
+			base.Spine.SetAlpha("Dustin balls", 1f);
+			base.Spine.SetAlpha("Dustin thigh right", 1f);
+			base.Spine.SetAlpha("Dustin shin right", 1f);
+			base.Spine.SetColor("Player Back", data.GenitaliaColor);
+			base.Spine.SetColor("Player thigh bot", data.BodyColor);
+			base.Spine.SetColor("Player thigh bot stripes", data.StripesColor);
+			base.Spine.SetColor("Player thigh bot underbelly", data.UnderbellyColor);
+			base.Spine.SetColor("Player taint", data.BodyColor);
+			base.Spine.SetColor("Player taint underbelly", data.UnderbellyColor);
+			base.Spine.SetColor("Player Balls", data.BallsColor);
+			base.Spine.SetColor("Player balls underbelly", data.UnderbellyColor);
+			base.Spine.SetColor("Player thigh top", data.BodyColor);
+			base.Spine.SetColor("Player thigh top stripes", data.StripesColor);
+			base.Spine.SetColor("Player thigh top underbelly", data.UnderbellyColor);
+			base.Spine.SetColor("Player shin top", data.BodyColor);
+			base.Overlays.Add("Cum");
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Eyes", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin pupil", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin head", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Hair", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin ear", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin eyelid", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin muzzle", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin fringe", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin Upper Body", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin shoulder top", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Dustin forearm top", 1f);
+			base.Spine.SetAlpha("Dustin Eyes", 1f);
+			base.Spine.SetAlpha("Dustin pupil", 1f);
+			base.Spine.SetAlpha("Dustin head", 1f);
+			base.Spine.SetAlpha("Dustin Hair", 1f);
+			base.Spine.SetAlpha("Dustin ear", 1f);
+			base.Spine.SetAlpha("Dustin eyelid", 1f);
+			base.Spine.SetAlpha("Dustin muzzle", 1f);
+			base.Spine.SetAlpha("Dustin fringe", 1f);
+			base.Spine.SetAlpha("Dustin Upper Body", 1f);
+			base.Spine.SetAlpha("Dustin shoulder top", 1f);
+			base.Spine.SetAlpha("Dustin forearm top", 1f);
 		}
 	}
 }

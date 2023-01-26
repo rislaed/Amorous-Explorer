@@ -19,10 +19,10 @@ public class _HNKZHPtLme6iaFiaVC67QqNpYAi : AbstractEvent<DialogueChoiceEventDat
 		Choices = dialogueChoiceEventData_0.Choices.ToArray();
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		_nkzqFdEfDyLcyGikIKGcHjklI4y._MRzbkwglCADk2fFjoxcsdCSJfKu(Choices.Select((DialogueChoiceItem dialogueChoiceItem_0) => dialogueChoiceItem_0.Text).ToArray());
+		base.ResetVariation();
+		_nkzqFdEfDyLcyGikIKGcHjklI4y.DiplayOptions(Choices.Select((DialogueChoiceItem dialogueChoiceItem_0) => dialogueChoiceItem_0.Text).ToArray());
 	}
 
 	public override void Update(GameTime gameTime)

@@ -28,7 +28,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		private Rectangle _jqsWTJ89RIZpjBr65dNZzmpJJKE;
 
-		private readonly Vector2 _QBwNjQE21bfJ9yRo7CynjeYaHRg;
+		private readonly Vector2 Center;
 
 		private readonly float _q2YaOk0V93J3GMeWTOtcGdh9kEA;
 
@@ -38,19 +38,19 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		private float _MZBGPP8CHYYeh1lAhvANLxmu8KVA;
 
-		private float _Q7Kx7ErHf3u1QIUDKfFCKSXbznG;
+		private float Stopwatch;
 
 		public bool _aeQckZZROopp0BqagEZE32fzkyr { get; private set; }
 
-		public FrameAnimation(AbstractScene AbstractScene_0, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
+		public FrameAnimation(AbstractScene scene, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
 		{
-			_uZYA4qnOfbVDFtZ6Ih3HawZgErP = AbstractScene_0.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
+			_uZYA4qnOfbVDFtZ6Ih3HawZgErP = scene.Game.Content.Load<Texture2D>(string_0);
 			_q2YaOk0V93J3GMeWTOtcGdh9kEA = float_0 / (float)int_0;
 			_hUTZltYwRfIdEri4M059hyQus5H = int_0;
 			_Lb7cMVSwXw3dYaQEnyADfQZoUedb = 0;
 			_jqsWTJ89RIZpjBr65dNZzmpJJKE = new Rectangle(0, 0, (int)((float)_uZYA4qnOfbVDFtZ6Ih3HawZgErP.Width / 12f), _uZYA4qnOfbVDFtZ6Ih3HawZgErP.Height);
 			_NbYrjABARmnikNXQHmmbM8k62UE = new Rectangle(0, 0, (int)((float)_jqsWTJ89RIZpjBr65dNZzmpJJKE.Width * float_1), (int)((float)_jqsWTJ89RIZpjBr65dNZzmpJJKE.Height * float_1));
-			_QBwNjQE21bfJ9yRo7CynjeYaHRg = new Vector2(int_1, int_2);
+			Center = new Vector2(int_1, int_2);
 		}
 
 		public void _QrgbXEg7MMeD9Ybz12fFVsbmAd9(int int_0, int int_1, float float_0)
@@ -64,10 +64,10 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		{
 			if (_Lb7cMVSwXw3dYaQEnyADfQZoUedb >= 0)
 			{
-				_Q7Kx7ErHf3u1QIUDKfFCKSXbznG += float_0;
-				while (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG > _q2YaOk0V93J3GMeWTOtcGdh9kEA)
+				Stopwatch += float_0;
+				while (Stopwatch > _q2YaOk0V93J3GMeWTOtcGdh9kEA)
 				{
-					_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= _q2YaOk0V93J3GMeWTOtcGdh9kEA;
+					Stopwatch -= _q2YaOk0V93J3GMeWTOtcGdh9kEA;
 					_Lb7cMVSwXw3dYaQEnyADfQZoUedb++;
 				}
 				if (_Lb7cMVSwXw3dYaQEnyADfQZoUedb < _hUTZltYwRfIdEri4M059hyQus5H)
@@ -76,20 +76,20 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 				}
 				else
 				{
-					_ymyneWF6dfrtfUI08wyb3KExq0D();
+					Remove();
 				}
 			}
 		}
 
-		public void Draw(SpriteBatch spriteBatch_0)
+		public void Draw(SpriteBatch spriteBatch)
 		{
 			if (_Lb7cMVSwXw3dYaQEnyADfQZoUedb >= 0)
 			{
-				spriteBatch_0.Draw(_uZYA4qnOfbVDFtZ6Ih3HawZgErP, _NbYrjABARmnikNXQHmmbM8k62UE, _jqsWTJ89RIZpjBr65dNZzmpJJKE, Color.White, _MZBGPP8CHYYeh1lAhvANLxmu8KVA, _QBwNjQE21bfJ9yRo7CynjeYaHRg, SpriteEffects.None, 0f);
+				spriteBatch.Draw(_uZYA4qnOfbVDFtZ6Ih3HawZgErP, _NbYrjABARmnikNXQHmmbM8k62UE, _jqsWTJ89RIZpjBr65dNZzmpJJKE, Color.White, _MZBGPP8CHYYeh1lAhvANLxmu8KVA, Center, SpriteEffects.None, 0f);
 			}
 		}
 
-		public void _ymyneWF6dfrtfUI08wyb3KExq0D()
+		public void Remove()
 		{
 			_Lb7cMVSwXw3dYaQEnyADfQZoUedb = -1;
 			_aeQckZZROopp0BqagEZE32fzkyr = true;
@@ -123,24 +123,24 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		private int _XD9uURBVAJTsK2DKyuCockNh07A;
 
-		private readonly _nHdiyIURlAiaNZ8u6MKzxjcwnyL _pO4d7wyWlp6cYLHahUVYplpUWxw;
+		private readonly SpineRenderer _pO4d7wyWlp6cYLHahUVYplpUWxw;
 
 		public bool _kf3EbE0B70xGe1szklqAZyCqoLj { get; set; }
 
-		public new float _fO7gSlrDDNMoHR4FO5QXAq8fUyA => _i8C0PwO83NRzGvNoyMhHwLV9HeC;
+		public new float Scale => _i8C0PwO83NRzGvNoyMhHwLV9HeC;
 
-		public TargetModel(AbstractScene AbstractScene_0, int int_0, int int_1, float float_0 = 1f)
-			: base(AbstractScene_0, "Target")
+		public TargetModel(AbstractScene scene, int int_0, int int_1, float float_0 = 1f)
+			: base(scene, "Target")
 		{
-			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime_0)
+			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime)
 			{
-				_pO4d7wyWlp6cYLHahUVYplpUWxw.Update(gameTime_0);
+				_pO4d7wyWlp6cYLHahUVYplpUWxw.Update(gameTime);
 			};
-			base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
+			base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 			{
-				_pO4d7wyWlp6cYLHahUVYplpUWxw.Draw(skeletonMeshRenderer_0, null, null, null, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
+				_pO4d7wyWlp6cYLHahUVYplpUWxw.Draw(skeletonMeshRenderer, null, null, null, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
 			};
-			_pO4d7wyWlp6cYLHahUVYplpUWxw = AbstractScene_0.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/ShootingRange/Target");
+			_pO4d7wyWlp6cYLHahUVYplpUWxw = scene.Game.Content._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/ShootingRange/Target");
 			_q83Vj1dGmn3NFhPIkk7tO7tyxb(int_0, int_1, float_0);
 		}
 
@@ -158,17 +158,17 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		public void _edcakvTOp2fd2J9ZHAu9GKjDaN7(Action action_0 = null)
 		{
-			_pO4d7wyWlp6cYLHahUVYplpUWxw._SPUoP3ABwpgQinJfKUM5qBbYSvr("Rise", action_0);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw.StartAnimation("Rise", action_0);
 		}
 
 		public void _DcBCpcEfsjl4zP1zbrOrd1bwNReb(Action action_0 = null)
 		{
-			_pO4d7wyWlp6cYLHahUVYplpUWxw._SPUoP3ABwpgQinJfKUM5qBbYSvr("Headshot", action_0);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw.StartAnimation("Headshot", action_0);
 		}
 
 		public void _u1yq8F9lG8oMcA9vZO9c7Qbh8vj(Action action_0 = null)
 		{
-			_pO4d7wyWlp6cYLHahUVYplpUWxw._SPUoP3ABwpgQinJfKUM5qBbYSvr("Bodyshot", action_0);
+			_pO4d7wyWlp6cYLHahUVYplpUWxw.StartAnimation("Bodyshot", action_0);
 		}
 
 		public bool _ZCfNJ0nxXx3YppgLl5SvS2LkQ5B(Point point_0, out CollisionType collisionType_0)
@@ -200,7 +200,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private class GunModel : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 	{
-		private readonly _nHdiyIURlAiaNZ8u6MKzxjcwnyL _XcQKV7iP9Sk10poAFYuakLJaltL;
+		private readonly SpineRenderer _XcQKV7iP9Sk10poAFYuakLJaltL;
 
 		public new float X
 		{
@@ -218,88 +218,88 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			}
 		}
 
-		public bool _PXBbI2AED2MyzkuXicgwalICf26
+		public bool Flip
 		{
 			set
 			{
-				_XcQKV7iP9Sk10poAFYuakLJaltL._Hwt6L2NJfXmAfG6UOH8NVlNfGCR = value;
+				_XcQKV7iP9Sk10poAFYuakLJaltL.FlipX = value;
 			}
 		}
 
-		public GunModel(AbstractScene AbstractScene_0)
-			: base(AbstractScene_0, "GunModel")
+		public GunModel(AbstractScene scene)
+			: base(scene, "GunModel")
 		{
-			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime_0)
+			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime)
 			{
-				_XcQKV7iP9Sk10poAFYuakLJaltL.Update(gameTime_0);
+				_XcQKV7iP9Sk10poAFYuakLJaltL.Update(gameTime);
 			};
-			base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
+			base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 			{
-				_XcQKV7iP9Sk10poAFYuakLJaltL.Draw(skeletonMeshRenderer_0, null, null, null, _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+				_XcQKV7iP9Sk10poAFYuakLJaltL.Draw(skeletonMeshRenderer, null, null, null, Scale);
 			};
-			_XcQKV7iP9Sk10poAFYuakLJaltL = AbstractScene_0.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/GUI/Phone/Phone");
-			_XcQKV7iP9Sk10poAFYuakLJaltL._WPy6ICx3LVoejBaexyOoKGnX9jD("Arm rise", 0f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL = scene.Game.Content._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/GUI/Phone/Phone");
+			_XcQKV7iP9Sk10poAFYuakLJaltL.ApplyFrame("Arm rise", 0f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetVisibility(0f);
 			_XcQKV7iP9Sk10poAFYuakLJaltL.X = 0f;
 			_XcQKV7iP9Sk10poAFYuakLJaltL.Y = 1080f;
-			PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-			bool flag = opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
+			PlayerData data = PlayerPreferences.GetPlayerData();
+			bool flag = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
 			bool flag2;
-			Color color_ = ((flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm)) ? opIJo2jLUqdOL5yAFP4yzXce0DG.ShortForearmColor : (flag ? opIJo2jLUqdOL5yAFP4yzXce0DG.LongForearmColor : Color.White));
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Hoody Sleeve", 0f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Default Forearm", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Default Forearm", opIJo2jLUqdOL5yAFP4yzXce0DG.BodyColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Marking Forearm", (flag2 || flag) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Marking Forearm", color_);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Striped forearm", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Striped forearm", opIJo2jLUqdOL5yAFP4yzXce0DG.StripesColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Forearm", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Forearm", opIJo2jLUqdOL5yAFP4yzXce0DG.AvianForearmColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Hand", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Hand", opIJo2jLUqdOL5yAFP4yzXce0DG.BodyColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Marking Hand", (flag2 || flag) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Marking Hand", color_);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Hand", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Hand", opIJo2jLUqdOL5yAFP4yzXce0DG.AvianForearmColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Index", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Index", opIJo2jLUqdOL5yAFP4yzXce0DG.BodyColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian index", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian index", opIJo2jLUqdOL5yAFP4yzXce0DG.AvianForearmColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Pinky", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Pinky", opIJo2jLUqdOL5yAFP4yzXce0DG.BodyColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Pinky", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Pinky", opIJo2jLUqdOL5yAFP4yzXce0DG.AvianForearmColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Ring", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Ring", opIJo2jLUqdOL5yAFP4yzXce0DG.BodyColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian ring", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian ring", opIJo2jLUqdOL5yAFP4yzXce0DG.AvianForearmColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Rude", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Rude", opIJo2jLUqdOL5yAFP4yzXce0DG.BodyColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Rude", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Rude", opIJo2jLUqdOL5yAFP4yzXce0DG.AvianForearmColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Thumb", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Thumb", opIJo2jLUqdOL5yAFP4yzXce0DG.BodyColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Avian Thumb", opIJo2jLUqdOL5yAFP4yzXce0DG.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Avian Thumb", opIJo2jLUqdOL5yAFP4yzXce0DG.AvianForearmColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Pinky Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.ShowNails ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Pinky Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.NailColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Ring Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.ShowNails ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Ring Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.NailColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Rude Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.ShowNails ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Rude Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.NailColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Index Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.ShowNails ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Index Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.NailColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Thumb Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.ShowNails ? 1 : 0);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._VoeevpFh2kLKfHtpPDXWt0TFbuH("Thumb Nail", opIJo2jLUqdOL5yAFP4yzXce0DG.NailColor);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Muzzle flash", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Gun casing", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Gun", 1f);
-			_XcQKV7iP9Sk10poAFYuakLJaltL._aAoZaDNczeScsMfLlGSfAzey9SQ("Gun Slide", 1f);
+			Color color_ = ((flag2 = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm)) ? data.ShortForearmColor : (flag ? data.LongForearmColor : Color.White));
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Hoody Sleeve", 0f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Default Forearm", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Default Forearm", data.BodyColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Marking Forearm", (flag2 || flag) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Marking Forearm", color_);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Striped forearm", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Striped forearm", data.StripesColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Avian Forearm", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Avian Forearm", data.AvianForearmColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Hand", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Hand", data.BodyColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Marking Hand", (flag2 || flag) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Marking Hand", color_);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Avian Hand", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Avian Hand", data.AvianForearmColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Index", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Index", data.BodyColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Avian index", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Avian index", data.AvianForearmColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Pinky", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Pinky", data.BodyColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Avian Pinky", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Avian Pinky", data.AvianForearmColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Ring", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Ring", data.BodyColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Avian ring", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Avian ring", data.AvianForearmColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Rude", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Rude", data.BodyColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Avian Rude", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Avian Rude", data.AvianForearmColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Thumb", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Thumb", data.BodyColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Avian Thumb", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Avian Thumb", data.AvianForearmColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Pinky Nail", data.ShowNails ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Pinky Nail", data.NailColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Ring Nail", data.ShowNails ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Ring Nail", data.NailColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Rude Nail", data.ShowNails ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Rude Nail", data.NailColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Index Nail", data.ShowNails ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Index Nail", data.NailColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Thumb Nail", data.ShowNails ? 1 : 0);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetColor("Thumb Nail", data.NailColor);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Muzzle flash", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Gun casing", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Gun", 1f);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.SetAlpha("Gun Slide", 1f);
 		}
 
 		public void _edcakvTOp2fd2J9ZHAu9GKjDaN7(Action action_0 = null)
 		{
-			_XcQKV7iP9Sk10poAFYuakLJaltL._SPUoP3ABwpgQinJfKUM5qBbYSvr("Gun rise", delegate
+			_XcQKV7iP9Sk10poAFYuakLJaltL.StartAnimation("Gun rise", delegate
 			{
 				_3AjdlsblH9b6FNnDEW7N5sQ8iHs();
 				action_0?.Invoke();
@@ -308,17 +308,17 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		private void _3AjdlsblH9b6FNnDEW7N5sQ8iHs()
 		{
-			_XcQKV7iP9Sk10poAFYuakLJaltL._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Gun Idle");
+			_XcQKV7iP9Sk10poAFYuakLJaltL.StartAnimationWithLooping("Gun Idle");
 		}
 
 		public void _e2DHCcfpFNWn5NTzMOw3FBUkwzA()
 		{
-			_XcQKV7iP9Sk10poAFYuakLJaltL._SPUoP3ABwpgQinJfKUM5qBbYSvr("Gun Shoot", _3AjdlsblH9b6FNnDEW7N5sQ8iHs);
+			_XcQKV7iP9Sk10poAFYuakLJaltL.StartAnimation("Gun Shoot", _3AjdlsblH9b6FNnDEW7N5sQ8iHs);
 		}
 
 		public void _hAt3H7isKECkVrQjY4L0hESiqLF(Action action_0 = null)
 		{
-			_XcQKV7iP9Sk10poAFYuakLJaltL._SPUoP3ABwpgQinJfKUM5qBbYSvr("Gun reload", delegate
+			_XcQKV7iP9Sk10poAFYuakLJaltL.StartAnimation("Gun reload", delegate
 			{
 				_3AjdlsblH9b6FNnDEW7N5sQ8iHs();
 				action_0?.Invoke();
@@ -332,9 +332,9 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		void Update(float float_0);
 
-		void Draw(SpriteBatch spriteBatch_0);
+		void Draw(SpriteBatch spriteBatch);
 
-		void _ymyneWF6dfrtfUI08wyb3KExq0D();
+		void Remove();
 	}
 
 	private class FloatingFeedbackDrawable : IDrawable
@@ -357,9 +357,9 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		public bool _aeQckZZROopp0BqagEZE32fzkyr { get; private set; }
 
-		public FloatingFeedbackDrawable(AbstractScene AbstractScene_0, int int_0, int int_1, string string_0, Color color_0)
+		public FloatingFeedbackDrawable(AbstractScene scene, int int_0, int int_1, string string_0, Color color_0)
 		{
-			_xnYepZuegigJCU2jcbZsfVIakzF = AbstractScene_0.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+			_xnYepZuegigJCU2jcbZsfVIakzF = scene.Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 			_nD28BmrDaEzCHelTAa14TKyuSyG = int_0;
 			_LkckKdvuh9GaAwn7XojfbJBd91r = int_1;
 			Text = string_0;
@@ -383,19 +383,19 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			}
 		}
 
-		public void Draw(SpriteBatch spriteBatch_0)
+		public void Draw(SpriteBatch spriteBatch)
 		{
-			spriteBatch_0.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, Text, new Vector2(_nD28BmrDaEzCHelTAa14TKyuSyG, _LkckKdvuh9GaAwn7XojfbJBd91r), _JbGNnZhaeWyNm0aWm7TtSamww4C * _AQwQu1ldCtpbkD5F9oEByJdCnWaA);
+			spriteBatch.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, Text, new Vector2(_nD28BmrDaEzCHelTAa14TKyuSyG, _LkckKdvuh9GaAwn7XojfbJBd91r), _JbGNnZhaeWyNm0aWm7TtSamww4C * _AQwQu1ldCtpbkD5F9oEByJdCnWaA);
 		}
 
-		public void _ymyneWF6dfrtfUI08wyb3KExq0D()
+		public void Remove()
 		{
 		}
 	}
 
 	private class TimedDrawable : IDrawable
 	{
-		private float _3wk7bXUbhNqSQ9kMD9hieEubOhG;
+		private float Value;
 
 		private readonly float _x2m0UxhUAD6cdIEszjrShiRmPfx;
 
@@ -413,19 +413,19 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		{
 			if (!_aeQckZZROopp0BqagEZE32fzkyr)
 			{
-				_3wk7bXUbhNqSQ9kMD9hieEubOhG += float_0;
-				if (_3wk7bXUbhNqSQ9kMD9hieEubOhG > _x2m0UxhUAD6cdIEszjrShiRmPfx)
+				Value += float_0;
+				if (Value > _x2m0UxhUAD6cdIEszjrShiRmPfx)
 				{
-					_ymyneWF6dfrtfUI08wyb3KExq0D();
+					Remove();
 				}
 			}
 		}
 
-		public void Draw(SpriteBatch spriteBatch_0)
+		public void Draw(SpriteBatch spriteBatch)
 		{
 		}
 
-		public void _ymyneWF6dfrtfUI08wyb3KExq0D()
+		public void Remove()
 		{
 			_aeQckZZROopp0BqagEZE32fzkyr = true;
 			_jokchmUtu5NAXtJsjLfIUXz2XXP?.Invoke();
@@ -440,7 +440,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		public readonly int Y;
 
-		public readonly float _fO7gSlrDDNMoHR4FO5QXAq8fUyA;
+		public readonly float Scale;
 
 		public readonly int Layer;
 
@@ -449,7 +449,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			_SjhHztt8d5kOtb7Z2BJKnZZxEKh = int_0;
 			_nVnyJkkce6HsdRrKSpRrzUDElg0 = int_1;
 			Y = int_2;
-			_fO7gSlrDDNMoHR4FO5QXAq8fUyA = float_0;
+			Scale = float_0;
 			Layer = int_3;
 		}
 	}
@@ -514,7 +514,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private List<TargetModel> _u8GaIYUzQ65BoFU3NzXBzyvujjbA;
 
-	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _tvM0bxD4ITME03hjc6seyYclzxf;
+	private readonly TexturedLayer _tvM0bxD4ITME03hjc6seyYclzxf;
 
 	private Point _TcTPQp3KE5mO2mYA6sSQDbHnhAw;
 
@@ -557,43 +557,43 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	protected bool _F2ao1gdMb4UciyKC7Zly4by95Mn { get; set; }
 
 	protected ShootingRangeMiniGameScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
 		_WD4Plg5m1AwZ5mVyjQCADcW1ZTk = Game._LWcoDwIWvf8DT3nQmNe5z8fkUvI;
 		Game._LWcoDwIWvf8DT3nQmNe5z8fkUvI = false;
 		_U8eNAZVBW15ZflhG4fel0hK3Juu = _poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj;
 		_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
 		_UmxbIbk7pgaod0bD7pS309P3Lns._h0KfaNiikKlJV2KkRPIdVDKVJnC();
-		_vCjkdRWXT5mvEu0c22Hgh93luLg = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_vCjkdRWXT5mvEu0c22Hgh93luLg = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
 		_vCjkdRWXT5mvEu0c22Hgh93luLg._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Fire");
-		_RiMZpLLSGIesSXF8vhSlVQ8SrDg = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_RiMZpLLSGIesSXF8vhSlVQ8SrDg = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
 		_RiMZpLLSGIesSXF8vhSlVQ8SrDg._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Dry");
-		_ykeARom1bl7r01BeRXMOSqoJU6o = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_ykeARom1bl7r01BeRXMOSqoJU6o = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
 		_ykeARom1bl7r01BeRXMOSqoJU6o._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Reload");
-		_gabFSY9HcJdPu830plKx8W936qG = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_gabFSY9HcJdPu830plKx8W936qG = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
 		_gabFSY9HcJdPu830plKx8W936qG._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Headshot 1", "Assets/Sounds/MiniGames/ShootingRange/Headshot 2");
-		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
 		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Impact 1", "Assets/Sounds/MiniGames/ShootingRange/Impact 2", "Assets/Sounds/MiniGames/ShootingRange/Impact 3");
-		_Oeqego17TDqmByfLbOEB1isMXzJ = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8);
+		_Oeqego17TDqmByfLbOEB1isMXzJ = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
 		_Oeqego17TDqmByfLbOEB1isMXzJ._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Ricochete 1", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 2", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 3");
-		_m1dNhD2jwJ6iTVUgUzMJUvnQFS = base.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>("Assets/Scenes/ShootingRange/Bullet");
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180), 0);
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Background", "Assets/Scenes/ShootingRange/Background", 0, 0), 2);
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Countertop", "Assets/Scenes/ShootingRange/Countertop", 0, 0), 6);
-		_6YCQhlMaqcDds8uGX1g8fjBKqV4A = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
-		_MnMUFBDfrGZBHvrJ30IAQilqivI = Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		_AWLddj1Rm2sqiBwYcJDngG0QaQI = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().PhoneColor;
-		_tvM0bxD4ITME03hjc6seyYclzxf = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Crosshair", "Assets/Scenes/ShootingRange/Crosshair", 0, 0);
+		_m1dNhD2jwJ6iTVUgUzMJUvnQFS = base.Game.Content.Load<Texture2D>("Assets/Scenes/ShootingRange/Bullet");
+		AddLayer(NewTexturedLayer("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180), 0);
+		AddLayer(NewTexturedLayer("Background", "Assets/Scenes/ShootingRange/Background", 0, 0), 2);
+		AddLayer(NewTexturedLayer("Countertop", "Assets/Scenes/ShootingRange/Countertop", 0, 0), 6);
+		_6YCQhlMaqcDds8uGX1g8fjBKqV4A = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
+		_MnMUFBDfrGZBHvrJ30IAQilqivI = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		_AWLddj1Rm2sqiBwYcJDngG0QaQI = PlayerPreferences.GetPlayerData().PhoneColor;
+		_tvM0bxD4ITME03hjc6seyYclzxf = NewTexturedLayer("Crosshair", "Assets/Scenes/ShootingRange/Crosshair", 0, 0);
 		_tvM0bxD4ITME03hjc6seyYclzxf.Color = _AWLddj1Rm2sqiBwYcJDngG0QaQI;
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_tvM0bxD4ITME03hjc6seyYclzxf, 7);
+		AddLayer(_tvM0bxD4ITME03hjc6seyYclzxf, 7);
 		_85WqOX8OcxbI6g74CaBZtHiHK2m = new GunModel(this)
 		{
 			X = 1820f,
 			Y = 1080f,
-			_fO7gSlrDDNMoHR4FO5QXAq8fUyA = 0.5f,
-			_PXBbI2AED2MyzkuXicgwalICf26 = true
+			Scale = 0.5f,
+			Flip = true
 		};
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_85WqOX8OcxbI6g74CaBZtHiHK2m, 8);
+		AddLayer(_85WqOX8OcxbI6g74CaBZtHiHK2m, 8);
 		_85WqOX8OcxbI6g74CaBZtHiHK2m._edcakvTOp2fd2J9ZHAu9GKjDaN7();
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA = new List<TargetModel>();
 		_xEG3axnWkco0Erk0PdjakXDULcA = new List<IDrawable>();
@@ -606,9 +606,9 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.NotStarted;
 	}
 
-	public override void Update(GameTime gameTime_0)
+	public override void Update(GameTime gameTime)
 	{
-		float float_ = (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
+		float float_ = (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
 		if (_F2ao1gdMb4UciyKC7Zly4by95Mn && base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.Escape))
 		{
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.None;
@@ -652,7 +652,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			_g0eYquQ8BcifsIs5UMyAIkXM5paA(float_);
 			break;
 		}
-		base.Update(gameTime_0);
+		base.Update(gameTime);
 	}
 
 	private void _fFSom2DrN3XLCdgmD5vZaJmWP7G(float float_0)
@@ -695,7 +695,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 					{
 						continue;
 					}
-					_Vu9iV57zUVa3p8WMfOsDaoqv7wL(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, _OJbyketBmeLlVtChfay03TIx5KM._fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+					_Vu9iV57zUVa3p8WMfOsDaoqv7wL(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, _OJbyketBmeLlVtChfay03TIx5KM.Scale);
 					if (_0U2R42Dbf2ddmyfQBv0z7zBWwJm == TargetModel.CollisionType.Headshot)
 					{
 						_C6cjmtLovCejw2N3OZYswcoYxsd++;
@@ -734,7 +734,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 				if (!flag)
 				{
 					RailInfo railInfo = _HYME5rEMzi5Cag9e7DCXk5lrXwX.FirstOrDefault((RailInfo railInfo_0) => _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y < railInfo_0.Y);
-					_Kp1esj4V82aePkZwvlresNSkHsC(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, railInfo?._fO7gSlrDDNMoHR4FO5QXAq8fUyA ?? 1f);
+					_Kp1esj4V82aePkZwvlresNSkHsC(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, railInfo?.Scale ?? 1f);
 					_dH7hlTzeJboGa5rfpgerBfCmyKO++;
 					_Oeqego17TDqmByfLbOEB1isMXzJ._xDFlaclLtJxSUU63JEJALvRLdfe();
 				}
@@ -774,14 +774,14 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	{
 		RailInfo railInfo = _HYME5rEMzi5Cag9e7DCXk5lrXwX[_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, _HYME5rEMzi5Cag9e7DCXk5lrXwX.Length)];
 		int int_ = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(railInfo._SjhHztt8d5kOtb7Z2BJKnZZxEKh, railInfo._nVnyJkkce6HsdRrKSpRrzUDElg0);
-		TargetModel _OJbyketBmeLlVtChfay03TIx5KM = new TargetModel(this, int_, railInfo.Y, railInfo._fO7gSlrDDNMoHR4FO5QXAq8fUyA)
+		TargetModel _OJbyketBmeLlVtChfay03TIx5KM = new TargetModel(this, int_, railInfo.Y, railInfo.Scale)
 		{
 			_kf3EbE0B70xGe1szklqAZyCqoLj = true
 		};
 		_OJbyketBmeLlVtChfay03TIx5KM._edcakvTOp2fd2J9ZHAu9GKjDaN7();
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA.Add(_OJbyketBmeLlVtChfay03TIx5KM);
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(_OJbyketBmeLlVtChfay03TIx5KM, railInfo.Layer);
-		_u8GaIYUzQ65BoFU3NzXBzyvujjbA = _u8GaIYUzQ65BoFU3NzXBzyvujjbA.OrderByDescending((TargetModel targetModel_0) => targetModel_0._ac2H6kMdrgPhXXxabsikjji4SiT).ToList();
+		AddLayer(_OJbyketBmeLlVtChfay03TIx5KM, railInfo.Layer);
+		_u8GaIYUzQ65BoFU3NzXBzyvujjbA = _u8GaIYUzQ65BoFU3NzXBzyvujjbA.OrderByDescending((TargetModel targetModel_0) => targetModel_0.ZOrder).ToList();
 		_5b1aUCG2FfD5yQCBUDAoLZYMu7A(3.5f, delegate
 		{
 			if (_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj && _dxhbACq6BB89IAMy6ZOALWJgv7L != GameState.GameOver)
@@ -840,51 +840,51 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.NotStarted;
 	}
 
-	public override void Draw(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0, Matrix matrix_0)
+	public override void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix_0)
 	{
-		base.Draw(spriteBatch_0, skeletonMeshRenderer_0, matrix_0);
-		spriteBatch_0.Begin();
-		_LSweOA3cIPq1IjLzplF4mDludQf(spriteBatch_0);
-		spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Score: " + _G0GwJ5OWQOA4BjacW3XmFsyMFjz, new Vector2(10f, 10f), Color.White);
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Targets missed: " + _JvgphfrWtBncPfgb6ERRVKKtlQG, new Vector2(10f, 60f), Color.White);
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Shots missed: " + _dH7hlTzeJboGa5rfpgerBfCmyKO, new Vector2(10f, 80f), Color.White);
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Bodyshots: " + _pL6aoe4HLq4X3yQACLFyUH3xwBp, new Vector2(10f, 100f), Color.White);
-		spriteBatch_0.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Headshots: " + _C6cjmtLovCejw2N3OZYswcoYxsd, new Vector2(10f, 120f), Color.White);
+		base.Draw(spriteBatch, skeletonMeshRenderer, matrix_0);
+		spriteBatch.Begin();
+		_LSweOA3cIPq1IjLzplF4mDludQf(spriteBatch);
+		spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Score: " + _G0GwJ5OWQOA4BjacW3XmFsyMFjz, new Vector2(10f, 10f), Color.White);
+		spriteBatch.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Targets missed: " + _JvgphfrWtBncPfgb6ERRVKKtlQG, new Vector2(10f, 60f), Color.White);
+		spriteBatch.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Shots missed: " + _dH7hlTzeJboGa5rfpgerBfCmyKO, new Vector2(10f, 80f), Color.White);
+		spriteBatch.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Bodyshots: " + _pL6aoe4HLq4X3yQACLFyUH3xwBp, new Vector2(10f, 100f), Color.White);
+		spriteBatch.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, "Headshots: " + _C6cjmtLovCejw2N3OZYswcoYxsd, new Vector2(10f, 120f), Color.White);
 		int num = 5;
 		int num2 = 0;
 		while (num >= 0)
 		{
-			spriteBatch_0.Draw(_m1dNhD2jwJ6iTVUgUzMJUvnQFS, new Rectangle(1875 - 35 * num, 10, 30, 55), (num2 < _YFr89aAV3UzO9kf7kPKQJilRWED) ? _AWLddj1Rm2sqiBwYcJDngG0QaQI : (_AWLddj1Rm2sqiBwYcJDngG0QaQI * 0.5f));
+			spriteBatch.Draw(_m1dNhD2jwJ6iTVUgUzMJUvnQFS, new Rectangle(1875 - 35 * num, 10, 30, 55), (num2 < _YFr89aAV3UzO9kf7kPKQJilRWED) ? _AWLddj1Rm2sqiBwYcJDngG0QaQI : (_AWLddj1Rm2sqiBwYcJDngG0QaQI * 0.5f));
 			num--;
 			num2++;
 		}
 		if (_YFr89aAV3UzO9kf7kPKQJilRWED == 0)
 		{
-			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Reload!", new Vector2(1750f, 70f), Color.Red);
+			spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Reload!", new Vector2(1750f, 70f), Color.Red);
 		}
 		switch (_dxhbACq6BB89IAMy6ZOALWJgv7L)
 		{
 		case GameState.NotStarted:
-			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.", new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.Red);
+			spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.", new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.Red);
 			break;
 		case GameState.Started:
 			if (_0zKXRrSXqoTAuTYQNrJIgtt7Emq >= 0f)
 			{
 				if (_0zKXRrSXqoTAuTYQNrJIgtt7Emq > 10f)
 				{
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F0"), new Vector2(960f, 10f), Color.White);
+					spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F0"), new Vector2(960f, 10f), Color.White);
 				}
 				else
 				{
-					spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F1"), new Vector2(960f, 10f), Color.Red);
+					spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, _0zKXRrSXqoTAuTYQNrJIgtt7Emq.ToString("F1"), new Vector2(960f, 10f), Color.Red);
 				}
 			}
 			break;
 		case GameState.GameOver:
-			spriteBatch_0.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Time up, Game over! Press <Enter> to retry or <Escape> to continue.", new Vector2((1920f - _MZh3nVRuDktDpIu8X149SF90ZjO) / 2f, 10f), Color.Red);
+			spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Time up, Game over! Press <Enter> to retry or <Escape> to continue.", new Vector2((1920f - _MZh3nVRuDktDpIu8X149SF90ZjO) / 2f, 10f), Color.Red);
 			break;
 		}
-		spriteBatch_0.End();
+		spriteBatch.End();
 	}
 
 	public override void End()
@@ -917,13 +917,13 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		}
 	}
 
-	private void _LSweOA3cIPq1IjLzplF4mDludQf(SpriteBatch spriteBatch_0)
+	private void _LSweOA3cIPq1IjLzplF4mDludQf(SpriteBatch spriteBatch)
 	{
 		using List<IDrawable>.Enumerator enumerator = _xEG3axnWkco0Erk0PdjakXDULcA.GetEnumerator();
 		if (enumerator.MoveNext())
 		{
 			IDrawable current = enumerator.Current;
-			current.Draw(spriteBatch_0);
+			current.Draw(spriteBatch);
 		}
 	}
 

@@ -9,7 +9,7 @@ public class _lRHDfpOTd4PxClZkjMpoakPEA9d
 	public PlayerData PlayerData { get; set; }
 
 	[JsonProperty("CutsceneState")]
-	public _zkUeZhJDizkmvvRfp4S0G7aap8J CutsceneState { get; set; }
+	public CutsceneState CutsceneState { get; set; }
 
 	[JsonProperty("SceneName")]
 	public string SceneName { get; set; }

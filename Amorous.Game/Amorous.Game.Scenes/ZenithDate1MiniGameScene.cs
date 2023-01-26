@@ -3,7 +3,7 @@ namespace Amorous.Game.Scenes;
 public class ZenithDate1MiniGameScene : ShootingRangeMiniGameScene
 {
 	public ZenithDate1MiniGameScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
 	}
 

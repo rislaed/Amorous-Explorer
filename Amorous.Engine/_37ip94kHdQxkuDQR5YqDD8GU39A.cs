@@ -9,9 +9,9 @@ public class _37ip94kHdQxkuDQR5YqDD8GU39A : AbstractEvent<FadeOutEventData>
 	{
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
 		{
 			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;

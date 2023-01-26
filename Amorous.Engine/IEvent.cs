@@ -8,7 +8,7 @@ public interface IEvent
 
 	int NextID { get; }
 
-	void _4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+	void ResetVariation();
 
 	bool _NeIQsy78kWqF9jXLl8vb2lOyZgO();
 

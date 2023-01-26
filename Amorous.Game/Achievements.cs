@@ -365,12 +365,12 @@ public class Achievements : IAchievements
 
 	public void _vVZVLriSGPExpn1KeobglMabsoi(string string_0)
 	{
-		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		if (opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit(string_0))
+		PlayerData data = PlayerPreferences.GetPlayerData();
+		if (data.GetBit(string_0))
 		{
 			return;
 		}
-		opIJo2jLUqdOL5yAFP4yzXce0DG.SetBit(string_0, bool_0: true);
+		data.SetBit(string_0, bool_0: true);
 		if (_f6JnaqJEhaBQyPQ8hoUgwIj9WcQ.TryGetValue(string_0, out var value))
 		{
 			if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
@@ -400,10 +400,10 @@ public class Achievements : IAchievements
 
 	public void _0Y1BTbSbP9IopfJXfeA4x02PifL(string string_0)
 	{
-		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		if (!opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit(string_0))
+		PlayerData data = PlayerPreferences.GetPlayerData();
+		if (!data.GetBit(string_0))
 		{
-			opIJo2jLUqdOL5yAFP4yzXce0DG.SetBit(string_0, bool_0: true);
+			data.SetBit(string_0, bool_0: true);
 			if (string_0 == "MessageTutorial1")
 			{
 				Amorous._EXfoFnp1OKxeZbd4GcVZMCO2urH("MessageIconGeneric", "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");

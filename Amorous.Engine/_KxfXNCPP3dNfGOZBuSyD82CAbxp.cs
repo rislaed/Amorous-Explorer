@@ -19,10 +19,10 @@ public class _KxfXNCPP3dNfGOZBuSyD82CAbxp : AbstractEvent<SetFlagEventData>
 		Value = setFlagEventData_0.Value;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().SetBit(Flag, Value);
+		base.ResetVariation();
+		PlayerPreferences.GetPlayerData().SetBit(Flag, Value);
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._aJh9CibG5YKhkExxgRyVopdfSeJ.SetBit(Flag, Value);
 	}
 

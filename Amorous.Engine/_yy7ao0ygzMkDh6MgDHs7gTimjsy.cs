@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 
 public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : AbstractEvent<DelayEventData>
 {
-	private int _Q7Kx7ErHf3u1QIUDKfFCKSXbznG;
+	private int Stopwatch;
 
 	public int Delay { get; private set; }
 
@@ -19,16 +19,16 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : AbstractEvent<DelayEventData>
 		Delay = delayEventData_0.Delay;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG = Delay;
+		base.ResetVariation();
+		Stopwatch = Delay;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		_Q7Kx7ErHf3u1QIUDKfFCKSXbznG -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_Q7Kx7ErHf3u1QIUDKfFCKSXbznG <= 0)
+		Stopwatch -= gameTime.ElapsedGameTime.Milliseconds;
+		if (Stopwatch <= 0)
 		{
 			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
 		}

@@ -2,8 +2,8 @@ using Microsoft.Xna.Framework.Content;
 
 public class _ecVLwNBaQAiybVyX9cgWCvnbkWe : _Sx3k5xXMK0bV8Wvr1xdM6HgVnYG
 {
-	public _ecVLwNBaQAiybVyX9cgWCvnbkWe(ContentManager contentManager_0)
-		: base(contentManager_0)
+	public _ecVLwNBaQAiybVyX9cgWCvnbkWe(ContentManager content)
+		: base(content)
 	{
 		_xk8tKI57uoSCbu9iZAwV41JAmAAA._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow1", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow2", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow3", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow4", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow5");
 		_BwqdE4SEYHPh05gSHa62KyXObx2._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed1", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed2", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed3", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed4", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed5");
@@ -11,8 +11,8 @@ public class _ecVLwNBaQAiybVyX9cgWCvnbkWe : _Sx3k5xXMK0bV8Wvr1xdM6HgVnYG
 		_qNXThpU44xZknZwFt3xQG8NpINc._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid1", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid2", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid3", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid4", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid5");
 	}
 
-	public static _ecVLwNBaQAiybVyX9cgWCvnbkWe _AZrO8MxMUE7cKsFYTQ4k9O3q7yC(ContentManager contentManager_0)
+	public static _ecVLwNBaQAiybVyX9cgWCvnbkWe _AZrO8MxMUE7cKsFYTQ4k9O3q7yC(ContentManager content)
 	{
-		return new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0);
+		return new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content);
 	}
 }

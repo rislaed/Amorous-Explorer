@@ -12,77 +12,73 @@ namespace Amorous.Game.Scenes;
 
 public class MainMenuScene : TimeOfDayScene
 {
-	private const int _mSId4q6YMjIv6JDktud9oXTl98M = 750;
+	private const int TickingDelay = 750;
 
-	private int _BR9uYwHtclf8uWEyxJ20ADY6mpg;
-
-	private readonly _ujAkjlfN5TywwbLAUDzPvtab6uJ _dNKOpSAr033bMQm76I1LEv39GTm;
-
-	private readonly List<_Yu3OngEjZbsgelWEySu6GE7aoYg> _3QdafDZxM3h1i8B990AwwFqleds = new List<_Yu3OngEjZbsgelWEySu6GE7aoYg>();
-
-	private readonly _SsogwGgurAXPoDRtNVTCVKq9yRE _zBw0aG4VRggByEYsHPjIPCYfoQJ;
-
-	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _CD732c1llp0dkEnK6CI9WZR70Ap;
+	private int Blinking;
+	private readonly AbstractLayer Separator;
+	private readonly List<TexturedSequenceLayer> Indicators = new List<TexturedSequenceLayer>();
+	private readonly CopyrightGUI Copyright;
+	private readonly TexturedLayer Logotype;
 
 	public MainMenuScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "Custom")
+		AddTexturedLayer("Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
+		AddTexturedLayer("Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
+		AddTexturedLayer("Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
+		AddTexturedLayer("Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
+		AddTexturedLayer("LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
+		AddLayer(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "Custom")
 		{
 			_B6VrMlmWofCGqEzjzgFJiAliCge = _KkwafXXLVg1QfQgqqCAojg2ySyZ
 		}, 0);
-		_NC5VT77x8y2iH2pW56TBN1eyomA("Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
-		_CD732c1llp0dkEnK6CI9WZR70Ap = _Iz47swAAB7d2iX6PQ1xTIJIv8MJ("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
-		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 1", "Assets/Scenes/MainMenu/{0}", 1090, 330);
-		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 2", "Assets/Scenes/MainMenu/{0}", 1215, 330);
-		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 3", "Assets/Scenes/MainMenu/{0}", 1395, 330);
-		_mdGACc5Q6BQjhranQdPI7V5unWx("LCD 4", "Assets/Scenes/MainMenu/{0}", 1520, 330);
-		_BR9uYwHtclf8uWEyxJ20ADY6mpg = 750;
-		_dNKOpSAr033bMQm76I1LEv39GTm = _0c5TjZklJbu1wzYG2FIcvf3SIdh("LCD Separator");
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._Wrz1IORok7yBtsQA3czQUmnP6Yl(new _hiwkgwXJpRLUFatcgZFfH6ECNfm(Game));
+		AddForegroundTexturedLayer("Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
+		Logotype = NewTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
+		AddIndicatorLayer("LCD 1", "Assets/Scenes/MainMenu/{0}", 1090, 330);
+		AddIndicatorLayer("LCD 2", "Assets/Scenes/MainMenu/{0}", 1215, 330);
+		AddIndicatorLayer("LCD 3", "Assets/Scenes/MainMenu/{0}", 1395, 330);
+		AddIndicatorLayer("LCD 4", "Assets/Scenes/MainMenu/{0}", 1520, 330);
+		Blinking = TickingDelay;
+		Separator = GetLayer("LCD Separator");
+		PlayerPreferences.SetPlayerSkin(new MainMenuPlayerSkin(game));
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
-		Game._lXEQJcXKxsjtZp00Y9aPe0ymGue(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(Game)
+		Game._lXEQJcXKxsjtZp00Y9aPe0ymGue(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(game)
 		{
 			_uIOOxdCbSvCxXvjNgoXh2qYj0hr = delegate
 			{
 				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowSelection("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int int_0)
+				base.Squid.ShowSelection("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int answer)
 				{
-					PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-					switch (int_0)
+					PlayerData data = PlayerPreferences.GetPlayerData();
+					switch (answer)
 					{
-					default:
-						base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
-						break;
-					case 0:
-						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-						opIJo2jLUqdOL5yAFP4yzXce0DG.Reset();
-						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = Options.Data.DialogueTextSpeed;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
-						base.Game.RequestScene("Prologue");
-						break;
-					case 1:
-						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-						opIJo2jLUqdOL5yAFP4yzXce0DG.Reset();
-						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = Options.Data.DialogueTextSpeed;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
-						base.Game.StartScene<SkipProloguePlayerCustomizationScene>();
-						break;
-					case 2:
-						_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
-						opIJo2jLUqdOL5yAFP4yzXce0DG.Reset();
-						_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = Options.Data.DialogueTextSpeed;
-						_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
-						base.Game.StartScene<PlayerCustomizationScene>();
-						break;
+						default:
+							base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+							break;
+						case 0:
+							_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+							data.Reset();
+							_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
+							_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							base.Game.RequestScene("Prologue");
+							break;
+						case 1:
+							_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+							data.Reset();
+							_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
+							_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							base.Game.StartScene<SkipProloguePlayerCustomizationScene>();
+							break;
+						case 2:
+							_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+							data.Reset();
+							_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
+							_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							base.Game.StartScene<PlayerCustomizationScene>();
+							break;
 					}
 				});
 			},
@@ -92,20 +88,20 @@ public class MainMenuScene : TimeOfDayScene
 				List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = _DW9IcpdMEINZmuzfrqmwsduBGih._25D1ZH2er0EbpKmvFksAbFjP2OX(bool_0: false);
 				List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0.Name).ToList();
 				_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowSelection("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int int_0)
+				base.Squid.ShowSelection("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int answer)
 				{
-					if (int_0 == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
+					if (answer == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
 					{
 						base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 					}
 					else
 					{
-						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _rQhndDODcLCmH9PKjwXRNz0AcU8[int_0];
+						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _rQhndDODcLCmH9PKjwXRNz0AcU8[answer];
 						if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
 						{
 							if (!((!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE) ? base.Game._Ut0dhlh4JTZBMNJPNxxI9f9VqTp(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : base.Game._1yDW5GeZ2MCcssz8ohrF9CK913i(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO)))
 							{
-								base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
+								base.Squid.ShowConfirm("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
 								{
 									base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 								});
@@ -117,7 +113,7 @@ public class MainMenuScene : TimeOfDayScene
 						}
 						else
 						{
-							base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, int_0 + 1), 250, "OK", delegate
+							base.Squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, answer + 1), 250, "OK", delegate
 							{
 								base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
 							});
@@ -128,9 +124,9 @@ public class MainMenuScene : TimeOfDayScene
 			_vE5Pvwth7cQFh82bMTB5u59Ju4o = delegate
 			{
 				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowSelection("Are you sure you wish to quit the Game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int int_0)
+				base.Squid.ShowSelection("Are you sure you wish to quit the Game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int answer)
 				{
-					if (int_0 == 1)
+					if (answer == 1)
 					{
 						base.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
 						{
@@ -141,83 +137,81 @@ public class MainMenuScene : TimeOfDayScene
 				});
 			}
 		});
-		_zBw0aG4VRggByEYsHPjIPCYfoQJ = new _SsogwGgurAXPoDRtNVTCVKq9yRE(Game)
+		Copyright = new CopyrightGUI(game)
 		{
-			_a6EfzLkl5vzR053eenrcOponhUA = _MRzbkwglCADk2fFjoxcsdCSJfKu
+			Configure = DiplayOptions
 		};
 		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = true;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
-	{
-	}
+	public override void ResetVariation() {}
 
-	public _Yu3OngEjZbsgelWEySu6GE7aoYg _mdGACc5Q6BQjhranQdPI7V5unWx(string string_0, string string_1, int int_0, int int_1)
+	public TexturedSequenceLayer AddIndicatorLayer(string name, string textureFormat, int x, int y)
 	{
 		Texture2D[] array = new Texture2D[10];
 		for (int i = 0; i < array.Length; i++)
 		{
-			array[i] = base.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string.Format(string_1, i));
+			array[i] = base.Game.Content.Load<Texture2D>(string.Format(textureFormat, i));
 		}
-		_Yu3OngEjZbsgelWEySu6GE7aoYg yu3OngEjZbsgelWEySu6GE7aoYg = new _Yu3OngEjZbsgelWEySu6GE7aoYg(this, string_0, array)
+		TexturedSequenceLayer layer = new TexturedSequenceLayer(this, name, array)
 		{
-			_C6GAq9XPMC9PQPnaaRqYWpv4V6S = true,
-			X = int_0,
-			Y = int_1
+			Removable = true,
+			X = x,
+			Y = y
 		};
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(yu3OngEjZbsgelWEySu6GE7aoYg, 2);
-		_3QdafDZxM3h1i8B990AwwFqleds.Add(yu3OngEjZbsgelWEySu6GE7aoYg);
-		return yu3OngEjZbsgelWEySu6GE7aoYg;
+		AddLayer(layer, OrderForeground);
+		Indicators.Add(layer);
+		return layer;
 	}
 
-	public override void Update(GameTime gameTime_0)
+	public override void Update(GameTime gameTime)
 	{
-		base.Update(gameTime_0);
-		_BR9uYwHtclf8uWEyxJ20ADY6mpg -= gameTime_0.ElapsedGameTime.Milliseconds;
-		if (_BR9uYwHtclf8uWEyxJ20ADY6mpg < 0)
+		base.Update(gameTime);
+		Blinking -= gameTime.ElapsedGameTime.Milliseconds;
+		if (Blinking < 0)
 		{
-			_dNKOpSAr033bMQm76I1LEv39GTm._Fxy2SlgceW90FloFw6a1AEJODYA = !_dNKOpSAr033bMQm76I1LEv39GTm._Fxy2SlgceW90FloFw6a1AEJODYA;
-			_BR9uYwHtclf8uWEyxJ20ADY6mpg = 750;
+			Separator.Visible = !Separator.Visible;
+			Blinking = TickingDelay;
 		}
-		_3QdafDZxM3h1i8B990AwwFqleds[0]._SWODlbUkQEqfwrtprjLPOeGF7HO = DateTime.Now.Hour / 10;
-		_3QdafDZxM3h1i8B990AwwFqleds[1]._SWODlbUkQEqfwrtprjLPOeGF7HO = DateTime.Now.Hour % 10;
-		_3QdafDZxM3h1i8B990AwwFqleds[2]._SWODlbUkQEqfwrtprjLPOeGF7HO = DateTime.Now.Minute / 10;
-		_3QdafDZxM3h1i8B990AwwFqleds[3]._SWODlbUkQEqfwrtprjLPOeGF7HO = DateTime.Now.Minute % 10;
+		Indicators[0].State = DateTime.Now.Hour / 10;
+		Indicators[1].State = DateTime.Now.Hour % 10;
+		Indicators[2].State = DateTime.Now.Minute / 10;
+		Indicators[3].State = DateTime.Now.Minute % 10;
 		if (base.Game._o2QVQfIAsuLcmPxn14llGoZA52y != null)
 		{
-			_zBw0aG4VRggByEYsHPjIPCYfoQJ._nJKYvZJ57vjjlQwmoeBmKihtS0b = base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b;
-			_zBw0aG4VRggByEYsHPjIPCYfoQJ.Update(gameTime_0);
+			Copyright._nJKYvZJ57vjjlQwmoeBmKihtS0b = base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b;
+			Copyright.Update(gameTime);
 		}
 	}
 
-	public void _KkwafXXLVg1QfQgqqCAojg2ySyZ(SpriteBatch spriteBatch_0)
+	public void _KkwafXXLVg1QfQgqqCAojg2ySyZ(SpriteBatch spriteBatch)
 	{
-		if (_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._mW1Z69pRB1eedGT3FSmdItJre5Y != null)
+		if (PlayerPreferences.Self.PlayerSkin != null)
 		{
-			spriteBatch_0.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
-			_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._yuFBJdi7mxrwMFQ57BjLjSq6ESj._mW1Z69pRB1eedGT3FSmdItJre5Y.Draw(spriteBatch_0);
-			spriteBatch_0.End();
+			spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
+			PlayerPreferences.Self.PlayerSkin.Draw(spriteBatch);
+			spriteBatch.End();
 		}
 	}
 
-	public override void Render(SpriteBatch spriteBatch_0)
+	public override void Render(SpriteBatch spriteBatch)
 	{
-		base.Render(spriteBatch_0);
-		spriteBatch_0.Begin();
-		_CD732c1llp0dkEnK6CI9WZR70Ap.Draw(spriteBatch_0);
-		spriteBatch_0.End();
-		_zBw0aG4VRggByEYsHPjIPCYfoQJ.Draw(spriteBatch_0);
+		base.Render(spriteBatch);
+		spriteBatch.Begin();
+		Logotype.Draw(spriteBatch);
+		spriteBatch.End();
+		Copyright.Draw(spriteBatch);
 	}
 
-	private void _MRzbkwglCADk2fFjoxcsdCSJfKu()
+	private void DiplayOptions()
 	{
 		base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
 		int num = 0;
-		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._X41qA9hgcgXH0Q1aFKWFWpg8UuM)
+		if (Censorship.Booties)
 		{
 			num += 60;
 		}
-		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		if (!Censorship.Censored)
 		{
 			num += 60;
 		}
@@ -370,7 +364,7 @@ public class MainMenuScene : TimeOfDayScene
 		_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
 		{
 			Options.Data.DialogueTextSpeed = (DialogueSpeed)int_0;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._NhL238TaCbkDiY6HXlWXZzzUYkm = (DialogueSpeed)int_0;
+			_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = (DialogueSpeed)int_0;
 		});
 		CheckBox _feL3soNn6ZWaJqYfjYJUyH118tF = new CheckBox
 		{
@@ -384,7 +378,7 @@ public class MainMenuScene : TimeOfDayScene
 			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
 		};
 		panel.Content.Controls.Add(_feL3soNn6ZWaJqYfjYJUyH118tF);
-		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._X41qA9hgcgXH0Q1aFKWFWpg8UuM)
+		if (Censorship.Booties)
 		{
 			Label item8 = new Label
 			{
@@ -396,38 +390,38 @@ public class MainMenuScene : TimeOfDayScene
 			{
 				Dock = DockStyle.Top,
 				Text = "Enable SFW-mode",
-				Checked = _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF
+				Checked = Censorship.Censored
 			};
 			_LFRG0GY4VuOaiC2XHbpUmFoVDAj.CheckedChanged += delegate
 			{
-				_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF = _LFRG0GY4VuOaiC2XHbpUmFoVDAj.Checked;
+				Censorship.Censored = _LFRG0GY4VuOaiC2XHbpUmFoVDAj.Checked;
 				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-				_MRzbkwglCADk2fFjoxcsdCSJfKu();
+				DiplayOptions();
 			};
 			panel.Content.Controls.Add(item8);
 			panel.Content.Controls.Add(_LFRG0GY4VuOaiC2XHbpUmFoVDAj);
 		}
-		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		if (!Censorship.Censored)
 		{
 			CheckBox _PBgLcZr7dRzS97rFn3FU6lDw8ZE = new CheckBox
 			{
 				Dock = DockStyle.Top,
 				Text = "Enable Topless",
-				Checked = _iExD93IWLlzVfXsU9wyrEvWgJsg._b52DDz3MN1kD8sgdQhCNO1tJRNn
+				Checked = Censorship.Topless
 			};
 			_PBgLcZr7dRzS97rFn3FU6lDw8ZE.CheckedChanged += delegate
 			{
-				_iExD93IWLlzVfXsU9wyrEvWgJsg._b52DDz3MN1kD8sgdQhCNO1tJRNn = _PBgLcZr7dRzS97rFn3FU6lDw8ZE.Checked;
+				Censorship.Topless = _PBgLcZr7dRzS97rFn3FU6lDw8ZE.Checked;
 			};
 			CheckBox _qWiPLfzctHo3AqPevD7VV4qTuDy = new CheckBox
 			{
 				Dock = DockStyle.Top,
 				Text = "Enable Bottomless",
-				Checked = _iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj
+				Checked = Censorship.Bottomless
 			};
 			_qWiPLfzctHo3AqPevD7VV4qTuDy.CheckedChanged += delegate
 			{
-				_iExD93IWLlzVfXsU9wyrEvWgJsg._pKBiGAgDu5WqoykkGBaEGnP7oMj = _qWiPLfzctHo3AqPevD7VV4qTuDy.Checked;
+				Censorship.Bottomless = _qWiPLfzctHo3AqPevD7VV4qTuDy.Checked;
 			};
 			panel.Content.Controls.Add(_PBgLcZr7dRzS97rFn3FU6lDw8ZE);
 			panel.Content.Controls.Add(_qWiPLfzctHo3AqPevD7VV4qTuDy);
@@ -444,7 +438,7 @@ public class MainMenuScene : TimeOfDayScene
 			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 		};
 		panel.Content.Controls.Add(button);
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(base._PnkAlVnMv0SZvRBFexqzE5DF9tp);
+		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(base.Squid);
 	}
 
 	public override void End()

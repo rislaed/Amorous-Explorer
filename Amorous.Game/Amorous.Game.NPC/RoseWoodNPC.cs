@@ -37,25 +37,25 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 725f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 130f;
+			FlipX = false;
+			X = 725f;
+			Y = 130f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 100f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 130f;
+			FlipX = false;
+			X = 100f;
+			Y = 130f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1351f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 130f;
+			FlipX = true;
+			X = 1351f;
+			Y = 130f;
 			break;
 		}
 	}

@@ -10,9 +10,9 @@ public class _NaKchYC4I4GjWR34SfBLAktysCE : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 
 	public List<_EZ0kOLXoEoEfWGQDdTbNqaPzDUh> Clothes { get; private set; }
 
-	public _NaKchYC4I4GjWR34SfBLAktysCE(string string_0, params string[] string_1)
+	public _NaKchYC4I4GjWR34SfBLAktysCE(string name, params string[] string_1)
 	{
-		Name = string_0;
+		Name = name;
 		_CjFYKEH7Vq8U6urMqr8ixn5Z8li = new List<string>(string_1);
 		_l11eB5s4oGaWqILnwn3dX83PzrN = new List<string>();
 		Clothes = new List<_EZ0kOLXoEoEfWGQDdTbNqaPzDUh>();
@@ -31,7 +31,7 @@ public class _NaKchYC4I4GjWR34SfBLAktysCE : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 		bool flag2 = false;
 		foreach (_EZ0kOLXoEoEfWGQDdTbNqaPzDUh item in Clothes)
 		{
-			if (item._3ZeCDXqcWHY4XJDBGyav3UzxYaHA)
+			if (item.Updatable)
 			{
 				list.AddRange(item._YJmTJgv7TfeWJelscsKB1PI6D4m());
 				flag |= item._fxFbduTFL2OWpMcAqBEqYDlIrWG;
@@ -42,7 +42,7 @@ public class _NaKchYC4I4GjWR34SfBLAktysCE : _N8bBL1xcL0zn0y2AJaH2UHKhLLz
 		{
 			list.AddRange(_CjFYKEH7Vq8U6urMqr8ixn5Z8li);
 		}
-		if (!flag2 && !_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		if (!flag2 && !Censorship.Censored)
 		{
 			list.AddRange(_l11eB5s4oGaWqILnwn3dX83PzrN);
 		}

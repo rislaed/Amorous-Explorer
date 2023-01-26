@@ -5,18 +5,18 @@ namespace Amorous.Game.Scenes;
 
 internal class PlayerDataProxy : IPlayerData
 {
-	private readonly PlayerData _3t4w2BwPGr8GQDmJlQU929IFD8f;
+	private readonly PlayerData Data;
 
 	public string Name
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.Name;
+			return Data.Name;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.Name = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.Name = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -24,12 +24,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BodyType;
+			return Data.BodyType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BodyType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BodyType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -37,12 +37,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BodyColor;
+			return Data.BodyColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BodyColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BodyColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -50,12 +50,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShowNails;
+			return Data.ShowNails;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShowNails = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShowNails = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -63,12 +63,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.NailColor;
+			return Data.NailColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.NailColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.NailColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -76,12 +76,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadType;
+			return Data.HeadType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -89,12 +89,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadColor;
+			return Data.HeadColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -102,12 +102,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.PaperBagColor;
+			return Data.PaperBagColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.PaperBagColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.PaperBagColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -115,12 +115,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.PaperBagEyesColor;
+			return Data.PaperBagEyesColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.PaperBagEyesColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.PaperBagEyesColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -128,12 +128,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadMarkingsType;
+			return Data.HeadMarkingsType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadMarkingsType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadMarkingsType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -141,12 +141,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadGauntColor;
+			return Data.HeadGauntColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadGauntColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadGauntColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -154,12 +154,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadScruffyColor;
+			return Data.HeadScruffyColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadScruffyColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadScruffyColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -167,12 +167,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadSnoutColor;
+			return Data.HeadSnoutColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadSnoutColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadSnoutColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -180,12 +180,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadStripesColor;
+			return Data.HeadStripesColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadStripesColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadStripesColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -193,12 +193,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadAccessoriesType;
+			return Data.HeadAccessoriesType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadAccessoriesType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadAccessoriesType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -206,12 +206,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HeadHornsColor;
+			return Data.HeadHornsColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HeadHornsColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HeadHornsColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -219,12 +219,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.EarColor;
+			return Data.EarColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.EarColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.EarColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -232,12 +232,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.EarInnerColor;
+			return Data.EarInnerColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.EarInnerColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.EarInnerColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -245,12 +245,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.EyesType;
+			return Data.EyesType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.EyesType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.EyesType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -258,12 +258,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.EyesBackColor;
+			return Data.EyesBackColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.EyesBackColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.EyesBackColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -271,12 +271,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.EyesFrontColor;
+			return Data.EyesFrontColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.EyesFrontColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.EyesFrontColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -284,12 +284,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BrowType;
+			return Data.BrowType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BrowType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BrowType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -297,12 +297,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BrowColor;
+			return Data.BrowColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BrowColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BrowColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -310,12 +310,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleType;
+			return Data.MuzzleType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.MuzzleType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -323,12 +323,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleColor;
+			return Data.MuzzleColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.MuzzleColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -336,12 +336,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.NoseColor;
+			return Data.NoseColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.NoseColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.NoseColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -349,12 +349,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.TeethColor;
+			return Data.TeethColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.TeethColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.TeethColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -362,12 +362,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShowMuzzleHorn;
+			return Data.ShowMuzzleHorn;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShowMuzzleHorn = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShowMuzzleHorn = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -375,12 +375,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleHornColor;
+			return Data.MuzzleHornColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleHornColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.MuzzleHornColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -388,12 +388,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShowMuzzleMask;
+			return Data.ShowMuzzleMask;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShowMuzzleMask = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShowMuzzleMask = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -401,12 +401,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleMaskColor;
+			return Data.MuzzleMaskColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.MuzzleMaskColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.MuzzleMaskColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -414,12 +414,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HairstyleType;
+			return Data.HairstyleType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HairstyleType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HairstyleType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -427,12 +427,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.HairColor;
+			return Data.HairColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.HairColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.HairColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -440,12 +440,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.FringeType;
+			return Data.FringeType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.FringeType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.FringeType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -453,12 +453,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.FringeColor;
+			return Data.FringeColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.FringeColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.FringeColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -466,12 +466,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.FeetType;
+			return Data.FeetType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.FeetType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.FeetType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -479,12 +479,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.FeetColor;
+			return Data.FeetColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.FeetColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.FeetColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -492,12 +492,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.TailType;
+			return Data.TailType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.TailType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.TailType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -505,12 +505,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.TailColor;
+			return Data.TailColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.TailColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.TailColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -518,12 +518,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShowTailPartOne;
+			return Data.ShowTailPartOne;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShowTailPartOne = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShowTailPartOne = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -531,12 +531,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.TailPartOneColor;
+			return Data.TailPartOneColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.TailPartOneColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.TailPartOneColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -544,12 +544,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShowTailPartTwo;
+			return Data.ShowTailPartTwo;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShowTailPartTwo = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShowTailPartTwo = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -557,12 +557,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.TailPartTwoColor;
+			return Data.TailPartTwoColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.TailPartTwoColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.TailPartTwoColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -570,12 +570,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.MarkingsType;
+			return Data.MarkingsType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.MarkingsType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.MarkingsType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -583,12 +583,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.UnderbellyColor;
+			return Data.UnderbellyColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.UnderbellyColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.UnderbellyColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -596,12 +596,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.UnderthighColor;
+			return Data.UnderthighColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.UnderthighColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.UnderthighColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -609,12 +609,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.StripesColor;
+			return Data.StripesColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.StripesColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.StripesColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -622,12 +622,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.LongForearmColor;
+			return Data.LongForearmColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.LongForearmColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.LongForearmColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -635,12 +635,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShortForearmColor;
+			return Data.ShortForearmColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShortForearmColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShortForearmColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -648,12 +648,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.AvianForearmColor;
+			return Data.AvianForearmColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.AvianForearmColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.AvianForearmColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -661,12 +661,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.LongShinColor;
+			return Data.LongShinColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.LongShinColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.LongShinColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -674,12 +674,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShortShinColor;
+			return Data.ShortShinColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShortShinColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShortShinColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -687,12 +687,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.AvianShinColor;
+			return Data.AvianShinColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.AvianShinColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.AvianShinColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -700,12 +700,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.CockType;
+			return Data.CockType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.CockType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.CockType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -713,12 +713,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.GenitaliaColor;
+			return Data.GenitaliaColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.GenitaliaColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.GenitaliaColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -726,12 +726,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.GenitaliaFleshColor;
+			return Data.GenitaliaFleshColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.GenitaliaFleshColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.GenitaliaFleshColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -739,12 +739,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BallsType;
+			return Data.BallsType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BallsType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BallsType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -752,12 +752,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BallsColor;
+			return Data.BallsColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BallsColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BallsColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -765,12 +765,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BreastsType;
+			return Data.BreastsType;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BreastsType = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BreastsType = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -778,12 +778,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.BreastsColor;
+			return Data.BreastsColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.BreastsColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.BreastsColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -791,12 +791,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.ShowNipples;
+			return Data.ShowNipples;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.ShowNipples = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.ShowNipples = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -804,12 +804,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.NipplesColor;
+			return Data.NipplesColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.NipplesColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.NipplesColor = value;
+			InvokeOnChange();
 		}
 	}
 
@@ -817,34 +817,34 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _3t4w2BwPGr8GQDmJlQU929IFD8f.PhoneColor;
+			return Data.PhoneColor;
 		}
 		set
 		{
-			_3t4w2BwPGr8GQDmJlQU929IFD8f.PhoneColor = value;
-			_7yyRtlIeSBVqd0xwBdqjZmDaMSi();
+			Data.PhoneColor = value;
+			InvokeOnChange();
 		}
 	}
 
-	public event Action _jCsrJ38OEkr542qwd48oa3BLDIB;
+	public event Action OnChange;
 
-	public PlayerDataProxy(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	public PlayerDataProxy(PlayerData data)
 	{
-		_3t4w2BwPGr8GQDmJlQU929IFD8f = _opIJo2jLUqdOL5yAFP4yzXce0DG_0;
+		Data = data;
 	}
 
 	public bool GetBit(string string_0)
 	{
-		return _3t4w2BwPGr8GQDmJlQU929IFD8f.GetBit(string_0);
+		return Data.GetBit(string_0);
 	}
 
-	public PlayerData _dxo6sBOpjEUiw2JBMikbutXK44t()
+	public PlayerData GetPlayerData()
 	{
-		return _3t4w2BwPGr8GQDmJlQU929IFD8f;
+		return Data;
 	}
 
-	private void _7yyRtlIeSBVqd0xwBdqjZmDaMSi()
+	private void InvokeOnChange()
 	{
-		this._jCsrJ38OEkr542qwd48oa3BLDIB?.Invoke();
+		this.OnChange?.Invoke();
 	}
 }

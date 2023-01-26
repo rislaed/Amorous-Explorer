@@ -16,9 +16,9 @@ public class _noCtOrWje2WCEbkCre6cfHiMXh5 : AbstractEvent<PlaySexsceneEventData>
 		SceneName = playSexsceneEventData_0.SceneName;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._gYGB98heFqsLp9tgJbdCP01IKV2(SceneName);
 	}
 

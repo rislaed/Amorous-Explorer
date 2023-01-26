@@ -10,19 +10,15 @@ namespace Amorous.Game.Sexscenes;
 
 public class SkyeSexscene : CensoredSexscene
 {
-	public const string _SIHadD6cwfqQgHEvKqYhLp1ptN0 = "Gray";
+	public const string VariantGray = "Gray";
+	public const string VariantYellow = "Yellow";
+	public const string VariantBlue = "Blue";
 
-	public const string _8WiBHk4ojcKXNJ8Iq6MFEuNQ4gT = "Yellow";
+	private Texture2D SkinGray;
+	private Texture2D SkinYellow;
+	private Texture2D SkinBlue;
 
-	public const string _KDxkn5aSvEobDXVkoiuQmEphQ6J = "Blue";
-
-	private Texture2D _p65Ex7slWkEu44TWzMfnrHkavQb;
-
-	private Texture2D _a2vuTNBvRtI0ysFdoyLqbnVKmKb;
-
-	private Texture2D _8Wpyx8UxfA2ieouQH6qdonhcCok;
-
-	private static readonly List<SkeletonJson.SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = new List<SkeletonJson.SpineEvent>
+	private static readonly List<SkeletonJson.SpineEvent> Events = new List<SkeletonJson.SpineEvent>
 	{
 		new SkeletonJson.SpineEvent
 		{
@@ -44,134 +40,134 @@ public class SkyeSexscene : CensoredSexscene
 		}
 	};
 
-	public SkyeSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Skye/Skye Sex", "Assets/SexScenes/Skye/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 2f : 1f, bool_0: true, float_1: 3000f)
+	public SkyeSexscene(ContentManager content)
+		: base(content, "Assets/SexScenes/Skye/Skye Sex", "Assets/SexScenes/Skye/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(content), float_0: Censorship.Censored ? 2f : 1f, bool_0: true, float_1: 3000f)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Sex");
-		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.StartAnimationWithLooping("Sex");
+		if (Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 1500f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 2000f;
+			base.Spine.X = 1500f;
+			base.Spine.Y = 2000f;
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 950f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1100f;
+			base.Spine.X = 950f;
+			base.Spine.Y = 1100f;
 		}
-		_p65Ex7slWkEu44TWzMfnrHkavQb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex");
-		_a2vuTNBvRtI0ysFdoyLqbnVKmKb = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
-		_8Wpyx8UxfA2ieouQH6qdonhcCok = contentManager_0.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
-		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		bool flag = opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("SkyeSkinYellow");
-		bool flag2 = opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("SkyeSkinBlue");
-		if (!(flag && flag2))
+		SkinGray = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex");
+		SkinYellow = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
+		SkinBlue = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
+		PlayerData data = PlayerPreferences.GetPlayerData();
+		bool isYellow = data.GetBit("SkyeSkinYellow");
+		bool isBlue = data.GetBit("SkyeSkinBlue");
+		if (!(isYellow && isBlue))
 		{
-			if (flag)
+			if (isYellow)
 			{
-				_GGyEXu1JJKcG2X3txvtCwyZAylK("Yellow");
+				SetSkin(VariantYellow);
 			}
-			else if (flag2)
+			else if (isBlue)
 			{
-				_GGyEXu1JJKcG2X3txvtCwyZAylK("Blue");
+				SetSkin(VariantBlue);
 			}
 			else
 			{
-				_GGyEXu1JJKcG2X3txvtCwyZAylK("Gray");
+				SetSkin(VariantGray);
 			}
 		}
 		else
 		{
-			_GGyEXu1JJKcG2X3txvtCwyZAylK("Gray");
+			SetSkin(VariantGray);
 		}
 	}
 
-	public override string[] _tCw3HO9jqoEm2Ad1hqdKsA8vS7b()
+	public override string[] GetSkins()
 	{
 		return new string[3] { "Gray", "Yellow", "Blue" };
 	}
 
-	public override void _GGyEXu1JJKcG2X3txvtCwyZAylK(string string_0)
+	public override void SetSkin(string variant)
 	{
-		base._GGyEXu1JJKcG2X3txvtCwyZAylK(string_0);
-		switch (string_0)
+		base.SetSkin(variant);
+		switch (variant)
 		{
-		case "Gray":
-			base._1AqpgY4vB6ly5vxOay6j86rcIEo = _p65Ex7slWkEu44TWzMfnrHkavQb;
-			break;
-		case "Yellow":
-			base._1AqpgY4vB6ly5vxOay6j86rcIEo = _a2vuTNBvRtI0ysFdoyLqbnVKmKb;
-			break;
-		case "Blue":
-			base._1AqpgY4vB6ly5vxOay6j86rcIEo = _8Wpyx8UxfA2ieouQH6qdonhcCok;
-			break;
+			case VariantGray
+				base.Skin = SkinGray;
+				break;
+			case VariantYellow:
+				base.Skin = SkinYellow;
+				break;
+			case VariantBlue:
+				base.Skin = SkinBlue;
+				break;
 		}
 	}
 
-	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	protected override void RefreshScene(PlayerData data)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
-		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.SetVisibility(0f);
+		if (!Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye shin back", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player stripe left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underthigh left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player belly stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player knot", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye tail", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye thigh left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye body", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye foot right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye shin right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye thigh right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye boob left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye chest", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyes", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye pupil", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye jaw", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head back", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelids", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelash", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underbelly", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player underthigh left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe right", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player stripe left", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player belly stripes", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.B / 255f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player knot", (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.R / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.G / 255f, (float)(int)_opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor.B / 255f);
-			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Player wetness");
+			base.Spine.SetAlpha("Skye shin back", 1f);
+			base.Spine.SetAlpha("Player thigh right", 1f);
+			base.Spine.SetAlpha("Player stripe right", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base.Spine.SetAlpha("Player underthigh right", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
+			base.Spine.SetAlpha("Player thigh left", 1f);
+			base.Spine.SetAlpha("Player stripe left", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base.Spine.SetAlpha("Player underthigh left", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
+			base.Spine.SetAlpha("Player cock", 1f);
+			base.Spine.SetAlpha("Player body", 1f);
+			base.Spine.SetAlpha("Player belly stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+			base.Spine.SetAlpha("Player underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+			base.Spine.SetAlpha("Player knot", (data.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
+			base.Spine.SetAlpha("Skye tail", 1f);
+			base.Spine.SetAlpha("Skye thigh left", 1f);
+			base.Spine.SetAlpha("Skye body", 1f);
+			base.Spine.SetAlpha("Skye foot right", 1f);
+			base.Spine.SetAlpha("Skye shin right", 1f);
+			base.Spine.SetAlpha("Skye thigh right", 1f);
+			base.Spine.SetAlpha("Skye arm left", 1f);
+			base.Spine.SetAlpha("Skye arm right", 1f);
+			base.Spine.SetAlpha("Skye boob left", 1f);
+			base.Spine.SetAlpha("Skye chest", 1f);
+			base.Spine.SetAlpha("Skye eyes", 1f);
+			base.Spine.SetAlpha("Skye pupil", 1f);
+			base.Spine.SetAlpha("Skye jaw", 1f);
+			base.Spine.SetAlpha("Skye ear left", 1f);
+			base.Spine.SetAlpha("Skye head back", 1f);
+			base.Spine.SetAlpha("Skye ear right", 1f);
+			base.Spine.SetAlpha("Skye eyelids", 1f);
+			base.Spine.SetAlpha("Skye head", 1f);
+			base.Spine.SetAlpha("Skye eyelash", 1f);
+			base.Spine.SetColor("Player thigh right", (float)(int)data.BodyColor.R / 255f, (float)(int)data.BodyColor.G / 255f, (float)(int)data.BodyColor.B / 255f);
+			base.Spine.SetColor("Player thigh left", (float)(int)data.BodyColor.R / 255f, (float)(int)data.BodyColor.G / 255f, (float)(int)data.BodyColor.B / 255f);
+			base.Spine.SetColor("Player body", (float)(int)data.BodyColor.R / 255f, (float)(int)data.BodyColor.G / 255f, (float)(int)data.BodyColor.B / 255f);
+			base.Spine.SetColor("Player underbelly", (float)(int)data.UnderbellyColor.R / 255f, (float)(int)data.UnderbellyColor.G / 255f, (float)(int)data.UnderbellyColor.B / 255f);
+			base.Spine.SetColor("Player underthigh right", (float)(int)data.UnderthighColor.R / 255f, (float)(int)data.UnderthighColor.G / 255f, (float)(int)data.UnderthighColor.B / 255f);
+			base.Spine.SetColor("Player underthigh left", (float)(int)data.UnderthighColor.R / 255f, (float)(int)data.UnderthighColor.G / 255f, (float)(int)data.UnderthighColor.B / 255f);
+			base.Spine.SetColor("Player stripe right", (float)(int)data.StripesColor.R / 255f, (float)(int)data.StripesColor.G / 255f, (float)(int)data.StripesColor.B / 255f);
+			base.Spine.SetColor("Player stripe left", (float)(int)data.StripesColor.R / 255f, (float)(int)data.StripesColor.G / 255f, (float)(int)data.StripesColor.B / 255f);
+			base.Spine.SetColor("Player belly stripes", (float)(int)data.StripesColor.R / 255f, (float)(int)data.StripesColor.G / 255f, (float)(int)data.StripesColor.B / 255f);
+			base.Spine.SetColor("Player cock", (float)(int)data.GenitaliaColor.R / 255f, (float)(int)data.GenitaliaColor.G / 255f, (float)(int)data.GenitaliaColor.B / 255f);
+			base.Spine.SetColor("Player knot", (float)(int)data.GenitaliaColor.R / 255f, (float)(int)data.GenitaliaColor.G / 255f, (float)(int)data.GenitaliaColor.B / 255f);
+			base.Overlays.Add("Player wetness");
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye tail", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye arm right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye boob left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye chest", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyes", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye pupil", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye jaw", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head back", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye ear right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelids", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye head", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Skye eyelash", 1f);
+			base.Spine.SetAlpha("Skye tail", 1f);
+			base.Spine.SetAlpha("Skye arm left", 1f);
+			base.Spine.SetAlpha("Skye arm right", 1f);
+			base.Spine.SetAlpha("Skye boob left", 1f);
+			base.Spine.SetAlpha("Skye chest", 1f);
+			base.Spine.SetAlpha("Skye eyes", 1f);
+			base.Spine.SetAlpha("Skye pupil", 1f);
+			base.Spine.SetAlpha("Skye jaw", 1f);
+			base.Spine.SetAlpha("Skye ear left", 1f);
+			base.Spine.SetAlpha("Skye head back", 1f);
+			base.Spine.SetAlpha("Skye ear right", 1f);
+			base.Spine.SetAlpha("Skye eyelids", 1f);
+			base.Spine.SetAlpha("Skye head", 1f);
+			base.Spine.SetAlpha("Skye eyelash", 1f);
 		}
 	}
 }

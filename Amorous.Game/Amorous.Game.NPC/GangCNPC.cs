@@ -44,28 +44,28 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 		return new string[3] { "Jade Nude", "Jade Pants", "Jade Shirt" };
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 655f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 78f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = false;
+			X = 655f;
+			Y = 78f;
+			base.Scale = 1f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 100f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 78f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = true;
+			X = 100f;
+			Y = 78f;
+			base.Scale = 1f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1210f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 78f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = false;
+			X = 1210f;
+			Y = 78f;
+			base.Scale = 1f;
 			break;
 		}
 	}

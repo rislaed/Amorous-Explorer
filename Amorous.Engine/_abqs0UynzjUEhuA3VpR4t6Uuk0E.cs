@@ -8,7 +8,7 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 
 	private Vector2 Overlap;
 
-	private Vector2 Location;
+	private Vector2 AbsoluteLocation;
 
 	public SpriteFont Font { get; private set; }
 
@@ -45,26 +45,26 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 	{
 	}
 
-	public override void Draw(SpriteBatch spriteBatch_0)
+	public override void Draw(SpriteBatch spriteBatch)
 	{
 		if (!string.IsNullOrEmpty(Text))
 		{
 			switch (Gravity)
 			{
 			case Alignment.MiddleRight:
-				Location.X = (float)base.X - Overlap.X;
-				Location.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
+				AbsoluteLocation.X = (float)base.X - Overlap.X;
+				AbsoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
 				break;
 			default:
-				Location.X = (float)base.X + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width - Overlap.X) / 2f;
-				Location.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
+				AbsoluteLocation.X = (float)base.X + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width - Overlap.X) / 2f;
+				AbsoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
 				break;
 			case Alignment.MiddleLeft:
-				Location.X = base.X;
-				Location.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
+				AbsoluteLocation.X = base.X;
+				AbsoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
 				break;
 			}
-			spriteBatch_0.DrawString(Font, Text, Location, Color);
+			spriteBatch.DrawString(Font, Text, AbsoluteLocation, Color);
 		}
 	}
 }

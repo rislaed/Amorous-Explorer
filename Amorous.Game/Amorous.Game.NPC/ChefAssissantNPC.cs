@@ -37,25 +37,25 @@ public class ChefAssissantNPC : LayerNPC<ChefAssissantNPC.EHeads, ChefAssissantN
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 636f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 117f;
+			FlipX = false;
+			X = 636f;
+			Y = 117f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 0f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 117f;
+			FlipX = true;
+			X = 0f;
+			Y = 117f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1272f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 117f;
+			FlipX = false;
+			X = 1272f;
+			Y = 117f;
 			break;
 		}
 	}

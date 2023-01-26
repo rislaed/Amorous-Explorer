@@ -10,7 +10,7 @@ public interface IAmorous
 
 	GraphicsDevice _2yepMkVENnecIsduggABaU2qhXW { get; }
 
-	ContentManager _uwNDZuqdFb9tyQtlQMxiz1DQ7x8 { get; }
+	ContentManager Content { get; }
 
 	_3FFZvGWTAe7rsviKkDPTXEVjxWf _RbWJ7YGnYHCSoD44MRW1h5X6E7E { get; }
 
@@ -18,7 +18,7 @@ public interface IAmorous
 
 	AbstractScene Scene { get; }
 
-	_TwlwMC1hhdSzamwGWEBxuUkz1gH Sexscene { get; }
+	AbstractSexscene Sexscene { get; }
 
 	_nR8eroJOHehP0ZGyyTveo6aMTHg _5zNdOw7qHmuCAPJFMr3SsZdBlCr { get; }
 
@@ -42,9 +42,9 @@ public interface IAmorous
 
 	void UnloadContent();
 
-	void Update(GameTime gameTime_0);
+	void Update(GameTime gameTime);
 
-	void Draw(GameTime gameTime_0);
+	void Draw(GameTime gameTime);
 
 	void _qGU55VUfbqFJ4l6ArNW4JRcLekg();
 
@@ -62,13 +62,13 @@ public interface IAmorous
 
 	void StartScene(string string_0);
 
-	void StartScene(AbstractScene AbstractScene_0);
+	void StartScene(AbstractScene scene);
 
 	void _OxLRmpxixplTKChiTPUKAx4uTLG<T>(Action action_0 = null) where T : AbstractScene;
 
 	void _OxLRmpxixplTKChiTPUKAx4uTLG(string string_0, Action action_0 = null);
 
-	void _OxLRmpxixplTKChiTPUKAx4uTLG(AbstractScene AbstractScene_0, Action action_0 = null);
+	void _OxLRmpxixplTKChiTPUKAx4uTLG(AbstractScene scene, Action action_0 = null);
 
 	void _gYGB98heFqsLp9tgJbdCP01IKV2(string string_0);
 
@@ -78,7 +78,7 @@ public interface IAmorous
 
 	void RequestScene(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0);
 
-	void _bHdVKtqP3Eb3DSJmuVTbkY8RtHP();
+	void RefreshStorage();
 
 	void _lXEQJcXKxsjtZp00Y9aPe0ymGue<T>() where T : _8lVOgkauaSHbAkAqHzI1K7mIyOI;
 
@@ -86,13 +86,13 @@ public interface IAmorous
 
 	void _gYufry4VnA6Ur59PtBsOHrUA8SD();
 
-	_QGGOTxZ8aNWGh0hc26wcmx8wmwT _VvFE2zgy4FbDjvaEvb67tXJ7aRm(string string_0);
+	AbstractNPC GetNPCLayer(string string_0);
 
-	_QGGOTxZ8aNWGh0hc26wcmx8wmwT _VvFE2zgy4FbDjvaEvb67tXJ7aRm(NPCLocation npclocation_0);
+	AbstractNPC GetNPCLayer(NPCLocation npclocation_0);
 
-	_QGGOTxZ8aNWGh0hc26wcmx8wmwT _TwQHHdbdRFRy2ctTZabNfz1Htrg(string string_0, LayerOrder LayerOrder_0);
+	AbstractNPC _TwQHHdbdRFRy2ctTZabNfz1Htrg(string string_0, LayerOrder LayerOrder_0);
 
-	T _TwQHHdbdRFRy2ctTZabNfz1Htrg<T>(LayerOrder LayerOrder_0) where T : _QGGOTxZ8aNWGh0hc26wcmx8wmwT;
+	T _TwQHHdbdRFRy2ctTZabNfz1Htrg<T>(LayerOrder LayerOrder_0) where T : AbstractNPC;
 
 	void _yh2DwZs16cvRtvGayeYZrMWlrbj(int int_0);
 

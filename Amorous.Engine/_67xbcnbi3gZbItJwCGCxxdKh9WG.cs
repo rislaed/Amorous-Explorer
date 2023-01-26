@@ -22,6 +22,6 @@ public class _67xbcnbi3gZbItJwCGCxxdKh9WG : AbstractEvent<CensorCheckEventData>
 	public override void Update(GameTime gameTime)
 	{
 		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
-		base.NextID = (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? SFWID : NSFWID);
+		base.NextID = (Censorship.Censored ? SFWID : NSFWID);
 	}
 }

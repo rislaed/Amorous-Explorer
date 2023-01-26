@@ -3,9 +3,9 @@ namespace Amorous.Game.Scenes;
 public class JaxApartmentScene : TimeOfDayScene
 {
 	public JaxApartmentScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/JaxApartment/jax background apartment", 0, 0);
+		AddTexturedLayer("Background", "Assets/Scenes/JaxApartment/jax background apartment", 0, 0);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 	}
 }

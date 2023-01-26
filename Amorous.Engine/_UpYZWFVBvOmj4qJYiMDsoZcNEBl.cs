@@ -19,10 +19,10 @@ public class _UpYZWFVBvOmj4qJYiMDsoZcNEBl : AbstractEvent<SetStageEventData>
 		Stage = setStageEventData_0.Stage;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().SetDecimal(Quest, Stage);
+		base.ResetVariation();
+		PlayerPreferences.GetPlayerData().SetDecimal(Quest, Stage);
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._aJh9CibG5YKhkExxgRyVopdfSeJ.SetDecimal(Quest, Stage);
 	}
 

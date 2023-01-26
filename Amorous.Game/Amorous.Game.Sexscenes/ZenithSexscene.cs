@@ -9,7 +9,7 @@ namespace Amorous.Game.Sexscenes;
 
 public class ZenithSexscene : CensoredSexscene
 {
-	private static readonly List<SkeletonJson.SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = new List<SkeletonJson.SpineEvent>
+	private static readonly List<SkeletonJson.SpineEvent> Events = new List<SkeletonJson.SpineEvent>
 	{
 		new SkeletonJson.SpineEvent
 		{
@@ -31,125 +31,125 @@ public class ZenithSexscene : CensoredSexscene
 		}
 	};
 
-	public ZenithSexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.3f : 1f, bool_0: true, float_1: 3000f)
+	public ZenithSexscene(ContentManager content)
+		: base(content, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.3f : 1f, bool_0: true, float_1: 3000f)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
-		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.StartAnimationWithLooping("animation");
+		if (!Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 960f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1090f;
+			base.Spine.X = 960f;
+			base.Spine.Y = 1090f;
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 300f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1350f;
+			base.Spine.X = 300f;
+			base.Spine.Y = 1350f;
 		}
 	}
 
-	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	protected override void RefreshScene(PlayerData data)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
-		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.SetVisibility(0f);
+		if (Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith body", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith shoulder left", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing right", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith jaw", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eye", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith pupil", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid back", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid front", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith head", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing left", 1f);
+			base.Spine.SetAlpha("Zenith body", 1f);
+			base.Spine.SetAlpha("Zenith shoulder left", 1f);
+			base.Spine.SetAlpha("Zenith wing right", 1f);
+			base.Spine.SetAlpha("Zenith jaw", 1f);
+			base.Spine.SetAlpha("Zenith eye", 1f);
+			base.Spine.SetAlpha("Zenith pupil", 1f);
+			base.Spine.SetAlpha("Zenith eyelid back", 1f);
+			base.Spine.SetAlpha("Zenith eyelid front", 1f);
+			base.Spine.SetAlpha("Zenith head", 1f);
+			base.Spine.SetAlpha("Zenith wing left", 1f);
 			return;
 		}
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith thigh right", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith forearm right", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right marking inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh right stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith hand right", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith body", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith cock", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith shin left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith thigh left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player body stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player fit belly", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyType == PlayerData.EBodyType.Muscular) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player chubby belly", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyType == PlayerData.EBodyType.Chubby) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player Balls", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.BallsType != 0) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot left avian", 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot short markings", 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player foot long markings", 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left", 1f);
-		bool flag = _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianShin);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left avian", flag ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin long markings", (flag || !_opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongShin)) ? 0f : 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player shin left short markings", (flag || !_opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortShin)) ? 0f : 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player thigh left stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith hand left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith forearm left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith shoulder left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith elbow left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing right", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith jaw", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eye", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith pupil", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid back", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith eyelid front", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith head", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock horse", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Thor) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType != PlayerData.ECockType.Thor) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock uncut", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Cut) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock knot lines", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Foot cover", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Zenith wing left", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Pillows", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right marking inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh right stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player body stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player fit belly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor : _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player chubby belly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor : _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player Balls", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BallsColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.FeetColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot left avian", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.FeetColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot short markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.FeetColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player foot long markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.FeetColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left avian", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.AvianShinColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin long markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.LongShinColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player shin left short markings", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShortShinColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left markings inner thigh", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player thigh left stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock horse", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Cut)
+		base.Spine.SetAlpha("Zenith thigh right", 1f);
+		base.Spine.SetAlpha("Zenith forearm right", 1f);
+		base.Spine.SetAlpha("Player thigh right", 1f);
+		base.Spine.SetAlpha("Player thigh right marking inner thigh", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
+		base.Spine.SetAlpha("Player thigh right stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+		base.Spine.SetAlpha("Zenith hand right", 1f);
+		base.Spine.SetAlpha("Zenith body", 1f);
+		base.Spine.SetAlpha("Zenith cock", 1f);
+		base.Spine.SetAlpha("Zenith shin left", 1f);
+		base.Spine.SetAlpha("Zenith thigh left", 1f);
+		base.Spine.SetAlpha("Player body", 1f);
+		base.Spine.SetAlpha("Player body underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+		base.Spine.SetAlpha("Player body stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+		base.Spine.SetAlpha("Player fit belly", (data.BodyType == PlayerData.EBodyType.Muscular) ? 1f : 0f);
+		base.Spine.SetAlpha("Player chubby belly", (data.BodyType == PlayerData.EBodyType.Chubby) ? 1f : 0f);
+		base.Spine.SetAlpha("Player Balls", (data.BallsType != 0) ? 1f : 0f);
+		base.Spine.SetAlpha("Player foot left", 1f);
+		base.Spine.SetAlpha("Player foot left avian", 0f);
+		base.Spine.SetAlpha("Player foot short markings", 0f);
+		base.Spine.SetAlpha("Player foot long markings", 0f);
+		base.Spine.SetAlpha("Player shin left", 1f);
+		bool flag = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianShin);
+		base.Spine.SetAlpha("Player shin left avian", flag ? 1f : 0f);
+		base.Spine.SetAlpha("Player shin long markings", (flag || !data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongShin)) ? 0f : 1f);
+		base.Spine.SetAlpha("Player shin left short markings", (flag || !data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortShin)) ? 0f : 1f);
+		base.Spine.SetAlpha("Player thigh left", 1f);
+		base.Spine.SetAlpha("Player thigh left markings inner thigh", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
+		base.Spine.SetAlpha("Player thigh left stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+		base.Spine.SetAlpha("Zenith hand left", 1f);
+		base.Spine.SetAlpha("Zenith forearm left", 1f);
+		base.Spine.SetAlpha("Zenith shoulder left", 1f);
+		base.Spine.SetAlpha("Zenith elbow left", 1f);
+		base.Spine.SetAlpha("Zenith wing right", 1f);
+		base.Spine.SetAlpha("Zenith jaw", 1f);
+		base.Spine.SetAlpha("Zenith eye", 1f);
+		base.Spine.SetAlpha("Zenith pupil", 1f);
+		base.Spine.SetAlpha("Zenith eyelid back", 1f);
+		base.Spine.SetAlpha("Zenith eyelid front", 1f);
+		base.Spine.SetAlpha("Zenith head", 1f);
+		base.Spine.SetAlpha("Player cock horse", (data.CockType == PlayerData.ECockType.Thor) ? 1f : 0f);
+		base.Spine.SetAlpha("Player cock", (data.CockType != PlayerData.ECockType.Thor) ? 1f : 0f);
+		base.Spine.SetAlpha("Player cock uncut", (data.CockType == PlayerData.ECockType.Cut) ? 1f : 0f);
+		base.Spine.SetAlpha("Player cock knot lines", (data.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
+		base.Spine.SetAlpha("Foot cover", 1f);
+		base.Spine.SetAlpha("Zenith wing left", 1f);
+		base.Spine.SetAlpha("Pillows", 1f);
+		base.Spine.SetColor("Player thigh right", data.BodyColor);
+		base.Spine.SetColor("Player thigh right marking inner thigh", data.UnderthighColor);
+		base.Spine.SetColor("Player thigh right stripes", data.StripesColor);
+		base.Spine.SetColor("Player body", data.BodyColor);
+		base.Spine.SetColor("Player body underbelly", data.UnderbellyColor);
+		base.Spine.SetColor("Player body stripes", data.StripesColor);
+		base.Spine.SetColor("Player fit belly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? data.UnderbellyColor : data.BodyColor);
+		base.Spine.SetColor("Player chubby belly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? data.UnderbellyColor : data.BodyColor);
+		base.Spine.SetColor("Player Balls", data.BallsColor);
+		base.Spine.SetColor("Player foot left", data.FeetColor);
+		base.Spine.SetColor("Player foot left avian", data.FeetColor);
+		base.Spine.SetColor("Player foot short markings", data.FeetColor);
+		base.Spine.SetColor("Player foot long markings", data.FeetColor);
+		base.Spine.SetColor("Player shin left", data.BodyColor);
+		base.Spine.SetColor("Player shin left avian", data.AvianShinColor);
+		base.Spine.SetColor("Player shin long markings", data.LongShinColor);
+		base.Spine.SetColor("Player shin left short markings", data.ShortShinColor);
+		base.Spine.SetColor("Player thigh left", data.BodyColor);
+		base.Spine.SetColor("Player thigh left markings inner thigh", data.UnderthighColor);
+		base.Spine.SetColor("Player thigh left stripes", data.StripesColor);
+		base.Spine.SetColor("Player cock horse", data.GenitaliaColor);
+		if (data.CockType == PlayerData.ECockType.Cut)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaFleshColor);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock uncut", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
+			base.Spine.SetColor("Player cock", data.GenitaliaFleshColor);
+			base.Spine.SetColor("Player cock uncut", data.GenitaliaColor);
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
+			base.Spine.SetColor("Player cock", data.GenitaliaColor);
 		}
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock knot lines", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
-		if (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType != PlayerData.ECockType.Thor)
+		base.Spine.SetColor("Player cock knot lines", data.GenitaliaColor);
+		if (data.CockType != PlayerData.ECockType.Thor)
 		{
-			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Player cock cum");
+			base.Overlays.Add("Player cock cum");
 		}
 		else
 		{
-			base._DUynKBx2CM4riE68wCCfknspxeg.Add("Player cock horse cum");
+			base.Overlays.Add("Player cock horse cum");
 		}
-		base._DUynKBx2CM4riE68wCCfknspxeg.Add("Zenith cock cum");
-		base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum belly");
+		base.Overlays.Add("Zenith cock cum");
+		base.Overlays.Add("Cum belly");
 	}
 }

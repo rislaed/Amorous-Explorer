@@ -37,25 +37,25 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 413f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 22f;
+			FlipX = false;
+			X = 413f;
+			Y = 22f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -190f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 22f;
+			FlipX = true;
+			X = -190f;
+			Y = 22f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1016f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 22f;
+			FlipX = false;
+			X = 1016f;
+			Y = 22f;
 			break;
 		}
 	}

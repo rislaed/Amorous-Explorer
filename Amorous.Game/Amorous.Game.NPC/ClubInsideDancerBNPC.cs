@@ -27,7 +27,7 @@ public class ClubInsideDancerBNPC : SpineNPC<ClubInsideDancerBNPC.EHeads, ClubIn
 	public ClubInsideDancerBNPC(IAmorous game)
 		: base(Game, "Assets/NPC/ClubInsideStatic/Dancer B", 0.7f, bool_0: true)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Dance A");
+		base.Spine.StartAnimationWithLooping("Dance A");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Hair", "Head", "Jaw");
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Body", "Chest", "Tail");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();

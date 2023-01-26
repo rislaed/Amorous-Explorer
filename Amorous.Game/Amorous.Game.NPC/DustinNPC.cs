@@ -36,7 +36,7 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 	public DustinNPC(IAmorous game)
 		: base(Game, "Assets/NPC/Dustin/Dustin", 1f, bool_0: true)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Idle");
+		base.Spine.StartAnimationWithLooping("Idle");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Neutral, "Neutral Mane", "Neutral eye back", "Neutral pupil", "Neutral jaw", "Neutral head")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Neutral blink");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Angry mane", "Angry eyeback", "Angry pupil", "Angry head")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Angry blink");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Blush mane", "Blush eye back", "Blush pupil", "Blush head")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blush blink");
@@ -51,25 +51,25 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 960f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
+			FlipX = false;
+			X = 960f;
+			Y = 1100f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 400f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
+			FlipX = false;
+			X = 400f;
+			Y = 1100f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1520f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1100f;
+			FlipX = false;
+			X = 1520f;
+			Y = 1100f;
 			break;
 		}
 	}

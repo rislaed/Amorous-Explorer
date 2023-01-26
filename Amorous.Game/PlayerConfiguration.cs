@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 
 [Serializable]
-public class _xJL9E6vKdg1LYZtKQU5RQKikpvE
+public class PlayerConfiguration
 {
 	[JsonProperty("Name")]
 	public string Name { get; set; }

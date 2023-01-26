@@ -8,9 +8,9 @@ public class _4oLylSYIsuljNZSlkquQd6azTzG : AbstractEvent<ShowGameBoxEventData>
 	{
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._2q4ULWZHQg4Aboj4mYnu05b6gpq();
 	}
 

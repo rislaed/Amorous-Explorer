@@ -39,7 +39,7 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 	public CobyNPC(IAmorous game)
 		: base(Game, "Assets/NPC/Coby/Coby", 1f, bool_0: true)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Breathing");
+		base.Spine.StartAnimationWithLooping("Breathing");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad Head", "Sad Pupils", "Sad Eye back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Sad Blink");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Cocky, "Cocky Head", "Cocky Pupils", "Cocky Black eye back", "Cocky Jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Cocky Blink");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Flirty, "Flirty Head", "Flirty Pupils", "Flirty Black eye back", "Flirty Jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Flirty Blink");
@@ -63,25 +63,25 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 960f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1120f;
+			FlipX = false;
+			X = 960f;
+			Y = 1120f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 400f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1120f;
+			FlipX = false;
+			X = 400f;
+			Y = 1120f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1520f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1120f;
+			FlipX = true;
+			X = 1520f;
+			Y = 1120f;
 			break;
 		}
 	}

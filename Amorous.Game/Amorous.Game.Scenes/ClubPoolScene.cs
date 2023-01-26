@@ -30,10 +30,10 @@ public class ClubPoolScene : AbstractScene
 
 		private float _time;
 
-		public FrameAnimationLayer(AbstractScene AbstractScene_0, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
-			: base(AbstractScene_0, "FrameAnimationLayer")
+		public FrameAnimationLayer(AbstractScene scene, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
+			: base(scene, "FrameAnimationLayer")
 		{
-			_animationTexture = AbstractScene_0.Game._uwNDZuqdFb9tyQtlQMxiz1DQ7x8.Load<Texture2D>(string_0);
+			_animationTexture = scene.Game.Content.Load<Texture2D>(string_0);
 			_timePerFrame = float_0 / (float)int_0;
 			_numberOfFrames = int_0;
 			_currentFrame = 0;
@@ -92,113 +92,113 @@ public class ClubPoolScene : AbstractScene
 	private readonly bool _showRemy;
 
 	public ClubPoolScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
-		_2CHUZ5vSi5NbJYJ4gGtr3C2VVEo("Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, OnDoorClick);
+		AddTexturedLayer("Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
+		AddClickableLayer("Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, OnDoorClick);
 		_lnXs1JfCeIBNCpFYs8XVRorc0h4 gparam_ = new _lnXs1JfCeIBNCpFYs8XVRorc0h4(this)
 		{
 			_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc = 1525f,
 			_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY = 890f
 		};
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(gparam_, 2);
+		AddLayer(gparam_, 2);
 		FrameAnimationLayer frameAnimationLayer = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
 		frameAnimationLayer.Play(-1420, 200, 0, 10f);
 		FrameAnimationLayer frameAnimationLayer2 = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
 		frameAnimationLayer2.Play(-1170, 200, 2, 10f);
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(frameAnimationLayer, 2);
-		_7oYtfGpL7UyAQrZxew7Ahbvj6Sv(frameAnimationLayer2, 2);
-		_NC5VT77x8y2iH2pW56TBN1eyomA("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
-		_NC5VT77x8y2iH2pW56TBN1eyomA("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
+		AddLayer(frameAnimationLayer, 2);
+		AddLayer(frameAnimationLayer2, 2);
+		AddForegroundTexturedLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
+		AddForegroundTexturedLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
 		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-1677, 1677, 0, 0);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
-		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		_showRemy = !opIJo2jLUqdOL5yAFP4yzXce0DG.GetBit("RemyLeftClub");
+		PlayerData data = PlayerPreferences.GetPlayerData();
+		_showRemy = !data.GetBit("RemyLeftClub");
 		if (_showRemy)
 		{
-			_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
+			AddTexturedLayer("Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
 		}
 	}
 
 	public override void Start()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		ClubPoolStaticANPC clubPoolStaticANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticANPC>(LayerOrder.Background);
-		clubPoolStaticANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -1400f;
-		clubPoolStaticANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 910f;
+		clubPoolStaticANPC.X = -1400f;
+		clubPoolStaticANPC.Y = 910f;
 		ClubPoolStaticBNPC clubPoolStaticBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticBNPC>(LayerOrder.Background);
-		clubPoolStaticBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -1401f;
-		clubPoolStaticBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 230f;
+		clubPoolStaticBNPC.X = -1401f;
+		clubPoolStaticBNPC.Y = 230f;
 		ClubPoolStaticENPC clubPoolStaticENPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticENPC>(LayerOrder.Background);
-		clubPoolStaticENPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 106f;
-		clubPoolStaticENPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 397f;
+		clubPoolStaticENPC.X = 106f;
+		clubPoolStaticENPC.Y = 397f;
 		ClubPoolStaticCNPC clubPoolStaticCNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC>(LayerOrder.Foreground);
-		clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -180f;
-		clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 450f;
+		clubPoolStaticCNPC.X = -180f;
+		clubPoolStaticCNPC.Y = 450f;
 		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC2>(LayerOrder.Background);
 		clubPoolStaticCNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticCNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		clubPoolStaticCNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX;
-		clubPoolStaticCNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = clubPoolStaticCNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY;
+		clubPoolStaticCNPC2.X = clubPoolStaticCNPC.X;
+		clubPoolStaticCNPC2.Y = clubPoolStaticCNPC.Y;
 		ClubPoolStaticFNPC clubPoolStaticFNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticFNPC>(LayerOrder.Foreground);
-		clubPoolStaticFNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 500f;
-		clubPoolStaticFNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 180f;
+		clubPoolStaticFNPC.X = 500f;
+		clubPoolStaticFNPC.Y = 180f;
 		ClubPoolStaticGHINPC clubPoolStaticGHINPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC>(LayerOrder.Foreground);
-		clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 370f;
-		clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 450f;
+		clubPoolStaticGHINPC.X = 370f;
+		clubPoolStaticGHINPC.Y = 450f;
 		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC2>(LayerOrder.Background);
 		clubPoolStaticGHINPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticGHINPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		clubPoolStaticGHINPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX;
-		clubPoolStaticGHINPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = clubPoolStaticGHINPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY;
+		clubPoolStaticGHINPC2.X = clubPoolStaticGHINPC.X;
+		clubPoolStaticGHINPC2.Y = clubPoolStaticGHINPC.Y;
 		ClubPoolStaticDNPC clubPoolStaticDNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC>(LayerOrder.Foreground);
-		clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 50f;
-		clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 690f;
+		clubPoolStaticDNPC.X = 50f;
+		clubPoolStaticDNPC.Y = 690f;
 		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC2>(LayerOrder.Background);
 		clubPoolStaticDNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticDNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		clubPoolStaticDNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX;
-		clubPoolStaticDNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = clubPoolStaticDNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY;
+		clubPoolStaticDNPC2.X = clubPoolStaticDNPC.X;
+		clubPoolStaticDNPC2.Y = clubPoolStaticDNPC.Y;
 		if (_showRemy)
 		{
 			_remy = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticRemyNPC>(LayerOrder.Foreground);
-			_remy._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1010f;
-			_remy._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 150f;
-			_remy._ZVpZ5Oing5kbbVhbmbOHyrofGH7 = OnRemyClick;
+			_remy.X = 1010f;
+			_remy.Y = 150f;
+			_remy.Click = OnRemyClick;
 		}
 		ClubPoolStaticJKNPC clubPoolStaticJKNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC>(LayerOrder.Foreground);
-		clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1269f;
-		clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 383f;
+		clubPoolStaticJKNPC.X = 1269f;
+		clubPoolStaticJKNPC.Y = 383f;
 		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC2>(LayerOrder.Background);
 		clubPoolStaticJKNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticJKNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		clubPoolStaticJKNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX;
-		clubPoolStaticJKNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = clubPoolStaticJKNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY;
+		clubPoolStaticJKNPC2.X = clubPoolStaticJKNPC.X;
+		clubPoolStaticJKNPC2.Y = clubPoolStaticJKNPC.Y;
 		ClubPoolStaticLNPC clubPoolStaticLNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticLNPC>(LayerOrder.Background);
-		clubPoolStaticLNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1630f;
-		clubPoolStaticLNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 106f;
+		clubPoolStaticLNPC.X = 1630f;
+		clubPoolStaticLNPC.Y = 106f;
 		ClubPoolStaticMNPC clubPoolStaticMNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticMNPC>(LayerOrder.Background);
-		clubPoolStaticMNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1879f;
-		clubPoolStaticMNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 106f;
+		clubPoolStaticMNPC.X = 1879f;
+		clubPoolStaticMNPC.Y = 106f;
 		ClubPoolStaticNNPC clubPoolStaticNNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticNNPC>(LayerOrder.Background);
-		clubPoolStaticNNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 2039f;
-		clubPoolStaticNNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 106f;
+		clubPoolStaticNNPC.X = 2039f;
+		clubPoolStaticNNPC.Y = 106f;
 		ClubPoolStaticOPNPC clubPoolStaticOPNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC>(LayerOrder.Foreground);
-		clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 2223f;
-		clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 442f;
+		clubPoolStaticOPNPC.X = 2223f;
+		clubPoolStaticOPNPC.Y = 442f;
 		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC2>(LayerOrder.Background);
 		clubPoolStaticOPNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticOPNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
-		clubPoolStaticOPNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX;
-		clubPoolStaticOPNPC2._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = clubPoolStaticOPNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY;
+		clubPoolStaticOPNPC2.X = clubPoolStaticOPNPC.X;
+		clubPoolStaticOPNPC2.Y = clubPoolStaticOPNPC.Y;
 		ClubPoolStaticQRNPC clubPoolStaticQRNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticQRNPC>(LayerOrder.Foreground);
-		clubPoolStaticQRNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 2694f;
-		clubPoolStaticQRNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 97f;
+		clubPoolStaticQRNPC.X = 2694f;
+		clubPoolStaticQRNPC.Y = 97f;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		if (_Bj3jScuqBJCFV58AWBDg8HofpqY)
+		if (IsOrderingChanged)
 		{
-			List<_ujAkjlfN5TywwbLAUDzPvtab6uJ> list = base.Layers.Where((_ujAkjlfN5TywwbLAUDzPvtab6uJ x) => x is _3IHp43rpkJgOBcY9lrIrwMuwWve _3IHp43rpkJgOBcY9lrIrwMuwWve && (!(_3IHp43rpkJgOBcY9lrIrwMuwWve.NPC is ClubStaticNPC) || !(_3IHp43rpkJgOBcY9lrIrwMuwWve.NPC is ClubStaticSpineNPC))).ToList();
-			list.ForEach(delegate(_ujAkjlfN5TywwbLAUDzPvtab6uJ x)
+			List<AbstractLayer> list = base.Layers.Where((AbstractLayer x) => x is NPCLayer NPCLayer && (!(NPCLayer.NPC is ClubStaticNPC) || !(NPCLayer.NPC is ClubStaticSpineNPC))).ToList();
+			list.ForEach(delegate(AbstractLayer x)
 			{
-				x._ac2H6kMdrgPhXXxabsikjji4SiT = 3;
+				x.ZOrder = 3;
 			});
 		}
 		base.Update(gameTime);

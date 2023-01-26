@@ -7,9 +7,9 @@ public class _UAk3prPEJY0oR9vawY870oFAXs : _0feLylFvn7NOajSXvkEDMJIATof<Incoming
 	{
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._zm6vAchd6YcmYOAA7H1gpRDyQ3f(Contact);
 	}
 }

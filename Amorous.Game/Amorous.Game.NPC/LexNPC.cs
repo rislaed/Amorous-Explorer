@@ -41,9 +41,9 @@ public class LexNPC : SpineNPC<LexNPC.EHeads, LexNPC.EPoses, LexNPC.EClothes>
 	public static Color Color = new Color(255, 128, 0);
 
 	public LexNPC(IAmorous game)
-		: base(Game, "Assets/NPC/Lex/Lex", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Lex/Lex", 1f, bool_0: true)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
+		base.Spine.StartAnimationWithLooping("animation");
 		string[] first = new string[5] { "Fringe", "Hair back", "Pupils", "Eyes back", "Ear" };
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, first.Union(new string[1] { "Head happy" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, first.Union(new string[1] { "Head angry" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
@@ -77,32 +77,32 @@ public class LexNPC : SpineNPC<LexNPC.EHeads, LexNPC.EPoses, LexNPC.EClothes>
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Gesture, EClothes.DickHard, "Male balls", "Male dick hard");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.GestureDrink, EClothes.DickHard, "Male balls", "Male dick hard");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.GestureSigaret, EClothes.DickHard, "Male balls", "Male dick hard");
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._eCEWplYE5FdfYPYTrwfyRlIfd6i("Male dick soft", "Jacket");
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._eCEWplYE5FdfYPYTrwfyRlIfd6i("Male dick hard", "Male dick soft");
+		base.Spine.OverlayWith("Male dick soft", "Jacket");
+		base.Spine.OverlayWith("Male dick hard", "Male dick soft");
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
-		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 960f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
-			break;
-		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 400f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
-			break;
-		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1520f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 960f;
+				Y = 1090f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = 400f;
+				Y = 1090f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1520f;
+				Y = 1090f;
+				break;
 		}
 	}
 }

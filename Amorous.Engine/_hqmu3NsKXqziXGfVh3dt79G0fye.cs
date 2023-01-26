@@ -9,9 +9,9 @@ public class _hqmu3NsKXqziXGfVh3dt79G0fye
 
 	private readonly ContentManager _kyNMbF8EBji1HoeA7mnul2Xsd1P;
 
-	public _hqmu3NsKXqziXGfVh3dt79G0fye(ContentManager contentManager_0)
+	public _hqmu3NsKXqziXGfVh3dt79G0fye(ContentManager content)
 	{
-		_kyNMbF8EBji1HoeA7mnul2Xsd1P = contentManager_0;
+		_kyNMbF8EBji1HoeA7mnul2Xsd1P = content;
 		_G6ytq2szip28Pty4dJdow3N4n7H = new Dictionary<string, SoundEffect>();
 	}
 

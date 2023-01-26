@@ -13,20 +13,20 @@ public static class _b3D8sFDNBNbyBUDmxg2f9XSWJKd
 
 	private static bool _2VS8GRacHIBPAQggjTbCw7Ocxni;
 
-	private static void Initialize(ContentManager contentManager_0)
+	private static void Initialize(ContentManager content)
 	{
 		FieldInfo field = typeof(ContentManager).GetField("loadedAssets", BindingFlags.Instance | BindingFlags.NonPublic);
-		_vFlf6NbDv32TsNiHZpYwZhv1lRo = (Dictionary<string, object>)field.GetValue(contentManager_0);
+		_vFlf6NbDv32TsNiHZpYwZhv1lRo = (Dictionary<string, object>)field.GetValue(content);
 		FieldInfo field2 = typeof(ContentManager).GetField("disposableAssets", BindingFlags.Instance | BindingFlags.NonPublic);
-		_gtSa6GVF63EHA9kPi3x0tr1inFL = (List<IDisposable>)field2.GetValue(contentManager_0);
+		_gtSa6GVF63EHA9kPi3x0tr1inFL = (List<IDisposable>)field2.GetValue(content);
 	}
 
-	public static void _HXLRmt9GqcmA9GTG5xzRKNu3QpF(this ContentManager contentManager_0, object object_0)
+	public static void _HXLRmt9GqcmA9GTG5xzRKNu3QpF(this ContentManager content, object object_0)
 	{
 		if (!_2VS8GRacHIBPAQggjTbCw7Ocxni)
 		{
 			_2VS8GRacHIBPAQggjTbCw7Ocxni = true;
-			Initialize(contentManager_0);
+			Initialize(content);
 		}
 		KeyValuePair<string, object> keyValuePair = _vFlf6NbDv32TsNiHZpYwZhv1lRo.FirstOrDefault((KeyValuePair<string, object> keyValuePair_0) => keyValuePair_0.Value == object_0);
 		if (keyValuePair.Key != null)

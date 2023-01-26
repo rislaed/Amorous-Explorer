@@ -44,11 +44,11 @@ public class StartupScene : AbstractScene
 	private readonly CheckBox _9nCiJkYgPYczxXJNlo8Z7BbfdsB;
 
 	public StartupScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Intro/Background", 0, -540);
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
-		_NC5VT77x8y2iH2pW56TBN1eyomA("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
+		AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
+		AddTexturedLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
+		AddForegroundTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
 		Window window = new Window
 		{
@@ -127,17 +127,17 @@ public class StartupScene : AbstractScene
 					}
 					else
 					{
-						base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm("Sorry, please try again!", 250);
+						base.Squid.ShowConfirm("Sorry, please try again!", 250);
 					}
 				}
 				else
 				{
-					base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm(apiReponse.message, 500);
+					base.Squid.ShowConfirm(apiReponse.message, 500);
 				}
 			}
 			catch (Exception)
 			{
-				base._PnkAlVnMv0SZvRBFexqzE5DF9tp.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", 500);
+				base.Squid.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", 500);
 			}
 		};
 		Button button2 = new Button
@@ -158,21 +158,21 @@ public class StartupScene : AbstractScene
 		window.Controls.Add(_9nCiJkYgPYczxXJNlo8Z7BbfdsB);
 		window.Controls.Add(button);
 		window.Controls.Add(button2);
-		base._PnkAlVnMv0SZvRBFexqzE5DF9tp.Controls.Add(window);
+		base.Squid.Controls.Add(window);
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
 		CoupleANPC coupleANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(LayerOrder.Background);
-		coupleANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 350f;
-		coupleANPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
-		coupleANPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleANPC.EPoses.Waving);
-		coupleANPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
+		coupleANPC.X = 350f;
+		coupleANPC.Y = 1090f;
+		coupleANPC.SetPose(CoupleANPC.EPoses.Waving);
+		coupleANPC.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
 		CoupleBNPC coupleBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(LayerOrder.Background);
-		coupleBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 550f;
-		coupleBNPC._QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 1090f;
-		coupleBNPC._tDFvus0ZCanjp81eOiDzoMXJiuf(CoupleBNPC.EPoses.Waving);
-		coupleBNPC._09vxUzgOn7J7DFZEwsTh7lgEIhB(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
+		coupleBNPC.X = 550f;
+		coupleBNPC.Y = 1090f;
+		coupleBNPC.SetPose(CoupleBNPC.EPoses.Waving);
+		coupleBNPC.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
 	}
 
 	private void _x8adRt6rvrXniPFYijbzqvPFr4j()

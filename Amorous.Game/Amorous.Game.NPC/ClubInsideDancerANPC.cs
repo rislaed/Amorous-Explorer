@@ -34,7 +34,7 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 	public ClubInsideDancerANPC(IAmorous game)
 		: base(Game, "Assets/NPC/ClubInsideStatic/Dancer A", 0.8f, bool_0: true)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("Dance_B");
+		base.Spine.StartAnimationWithLooping("Dance_B");
 		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Eye", "Head", "Jaw", "Pupil")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
 		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arm left", "Character", "Forearm right", "Leg left", "Leg right", "Tail", "shoulder right")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
 		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
@@ -47,15 +47,15 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 	{
 		_MRHxrmqa7mb7D9woehQMcBaVzSfA = int_0;
 		_CuajPz31r9WOAgF3NIMwGAOneYc = int_1;
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._zqRttWc6EZHjk1LAoNrCy0Qamk2("Dance_A", "Dance_B", 0.5f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._zqRttWc6EZHjk1LAoNrCy0Qamk2("Dance_B", "Dance_A", 0.5f);
+		base.Spine.SetMix("Dance_A", "Dance_B", 0.5f);
+		base.Spine.SetMix("Dance_B", "Dance_A", 0.5f);
 		_ujQoS5Vtc4de0wSOTrBu7W9PbRc = _MRHxrmqa7mb7D9woehQMcBaVzSfA;
 		_W59CJD6wYGEUk3hOFlZnc3R24Ct();
 	}
 
 	public void _W59CJD6wYGEUk3hOFlZnc3R24Ct()
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._a2lgCWeMj1Hr65gQZxslDkqeUdd("Dance_A", bool_0: true, 0f, delegate
+		base.Spine.AddAnimation("Dance_A", bool_0: true, 0f, delegate
 		{
 			_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
 			if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)
@@ -68,7 +68,7 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 
 	public void _QxrbucYEdHM0AE1Mfd0LKZp28pv()
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._a2lgCWeMj1Hr65gQZxslDkqeUdd("Dance_B", bool_0: true, 0f, delegate
+		base.Spine.AddAnimation("Dance_B", bool_0: true, 0f, delegate
 		{
 			_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
 			if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)

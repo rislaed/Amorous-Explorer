@@ -18,7 +18,7 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 		Amorous = game;
 	}
 
-	public void Update(GameTime gameTime_0)
+	public void Update(GameTime gameTime)
 	{
 		if (!_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj || Amorous._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
@@ -34,7 +34,7 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 			{
 				if (_ozrhTFHF7sXDU6ysB7cHxLveAAS && _znKl2SuVqjuhuU4ZYVKzq6zGvfb < 6f)
 				{
-					_znKl2SuVqjuhuU4ZYVKzq6zGvfb += (float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f;
+					_znKl2SuVqjuhuU4ZYVKzq6zGvfb += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
 				}
 				else if (_ozrhTFHF7sXDU6ysB7cHxLveAAS && _znKl2SuVqjuhuU4ZYVKzq6zGvfb >= 6f)
 				{

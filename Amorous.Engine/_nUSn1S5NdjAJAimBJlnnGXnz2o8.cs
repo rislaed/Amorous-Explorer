@@ -25,7 +25,7 @@ public class _nUSn1S5NdjAJAimBJlnnGXnz2o8 : AbstractEvent<ConditionalBranchEvent
 	public override void Update(GameTime gameTime)
 	{
 		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
-		bool flag = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().GetBit(Flag);
+		bool flag = PlayerPreferences.GetPlayerData().GetBit(Flag);
 		base.NextID = (flag ? TrueID : FalseID);
 	}
 }

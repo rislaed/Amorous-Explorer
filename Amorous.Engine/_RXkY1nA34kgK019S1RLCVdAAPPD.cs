@@ -17,10 +17,10 @@ public class _RXkY1nA34kgK019S1RLCVdAAPPD : AbstractEvent<DisableContactEventDat
 		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(disableContactEventData_0.Contact, out var result) ? result : PlayerData.EPhoneContacts.None);
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().ResetContact(Contact);
+		base.ResetVariation();
+		PlayerPreferences.GetPlayerData().ResetContact(Contact);
 	}
 
 	public override void Update(GameTime gameTime)

@@ -16,10 +16,10 @@ public class _ZXdfBmHEapkc67visJnDe1hgtuz : AbstractEvent<SwitchToSubsceneEventD
 		SubsceneName = switchToSubsceneEventData_0.SubsceneName;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene._6hE3geqxrB1vCirtSWHxIJjlTQB(SubsceneName);
+		base.ResetVariation();
+		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene.SetVariant(SubsceneName);
 	}
 
 	public override void Update(GameTime gameTime)

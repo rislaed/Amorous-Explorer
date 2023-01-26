@@ -24,8 +24,8 @@ public class _ruYqFXOuzASxQLRDZQH6mm7soaA : AbstractEvent<JaxContactsCheckEventD
 
 	public override void Update(GameTime gameTime)
 	{
-		PlayerData opIJo2jLUqdOL5yAFP4yzXce0DG = _Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t();
-		int num = opIJo2jLUqdOL5yAFP4yzXce0DG._X1b0dyIzsSyKwqWd3usrbDfKJAk();
+		PlayerData data = PlayerPreferences.GetPlayerData();
+		int num = data._X1b0dyIzsSyKwqWd3usrbDfKJAk();
 		if (num > 1)
 		{
 			if (num >= 1 && num <= 2)

@@ -25,9 +25,9 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : AbstractEvent<CommandEventData>
 		_Eq0ZSbjV3AWfNe2m5mpykEVrjtD = commandEventData_0;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		if (!(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command == typeof(Commands.CookingSelectIngredient).Name))
 		{
 			if (_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command == typeof(Commands.CookingShowResult).Name)

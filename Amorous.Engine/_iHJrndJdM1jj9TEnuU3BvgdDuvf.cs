@@ -5,11 +5,8 @@ using Microsoft.Xna.Framework.Graphics;
 public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 {
 	private string Text;
-
 	private Vector2 Overlap;
-
-	private Vector2 Location;
-
+	private Vector2 AbsoluteLocation;
 	public SpriteFont Font { get; private set; }
 
 	public string Text
@@ -40,14 +37,14 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 		Color = color_0;
 	}
 
-	public override void Draw(SpriteBatch spriteBatch_0)
+	public override void Draw(SpriteBatch spriteBatch)
 	{
-		base.Draw(spriteBatch_0);
+		base.Draw(spriteBatch);
 		if (!string.IsNullOrEmpty(Text))
 		{
-			Location.X = (float)base.X + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width - Overlap.X) / 2f;
-			Location.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
-			spriteBatch_0.DrawString(Font, Text, Location, Color);
+			AbsoluteLocation.X = (float)base.X + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width - Overlap.X) / 2f;
+			AbsoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
+			spriteBatch.DrawString(Font, Text, AbsoluteLocation, Color);
 		}
 	}
 }

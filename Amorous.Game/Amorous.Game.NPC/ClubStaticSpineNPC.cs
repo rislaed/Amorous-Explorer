@@ -40,9 +40,9 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 	public override void Begin()
 	{
 		base.Begin();
-		_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
-		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
-		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
+		SetEmotion(EHeads.None);
+		SetPose(EPoses.Nude);
+		SetClothes(EClothes.Shirt, EClothes.Pants);
+		base.Spine.StartAnimationWithLooping("animation");
 	}
 }

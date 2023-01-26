@@ -39,8 +39,8 @@ public abstract class ClubStaticNPC : LayerNPC<ClubStaticNPC.EHeads, ClubStaticN
 	public override void Begin()
 	{
 		base.Begin();
-		_g3oEqGBkN3YHUPosRq2nIP2sX0D(EHeads.None);
-		_tDFvus0ZCanjp81eOiDzoMXJiuf(EPoses.Nude);
-		_09vxUzgOn7J7DFZEwsTh7lgEIhB(EClothes.Shirt, EClothes.Pants);
+		SetEmotion(EHeads.None);
+		SetPose(EPoses.Nude);
+		SetClothes(EClothes.Shirt, EClothes.Pants);
 	}
 }

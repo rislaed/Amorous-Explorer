@@ -44,28 +44,28 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 		return new string[3] { "Varryance Body", "Varryance Shirt", "Varryance Pants" };
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 735f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = false;
+			X = 735f;
+			Y = 0f;
+			base.Scale = 1f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = -300f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = true;
+			X = -300f;
+			Y = 0f;
+			base.Scale = 1f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1370f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 0f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = false;
+			X = 1370f;
+			Y = 0f;
+			base.Scale = 1f;
 			break;
 		}
 	}

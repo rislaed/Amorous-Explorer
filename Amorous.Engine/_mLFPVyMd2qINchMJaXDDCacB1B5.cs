@@ -16,9 +16,9 @@ public class _mLFPVyMd2qINchMJaXDDCacB1B5 : AbstractEvent<SwitchToSceneEventData
 		SceneName = switchToSceneEventData_0.SceneName;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._OxLRmpxixplTKChiTPUKAx4uTLG(SceneName);
 	}
 

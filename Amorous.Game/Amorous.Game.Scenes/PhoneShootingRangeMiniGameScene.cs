@@ -3,7 +3,7 @@ namespace Amorous.Game.Scenes;
 public class PhoneShootingRangeMiniGameScene : ShootingRangeMiniGameScene
 {
 	public PhoneShootingRangeMiniGameScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
 		base._F2ao1gdMb4UciyKC7Zly4by95Mn = true;
 	}

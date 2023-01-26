@@ -44,28 +44,28 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 		return new string[4] { "Alexis Nude", "Alexis Tufts", "Alexis Pants", "Alexis Shirt" };
 	}
 
-	public override void _nGGBtYpZ8pI1BmE2c2ke63UjGDP(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation npclocation_0)
 	{
-		base._nGGBtYpZ8pI1BmE2c2ke63UjGDP(npclocation_0);
+		base.SetLocation(npclocation_0);
 		switch (npclocation_0)
 		{
 		case NPCLocation.Middle:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 734f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 135f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = false;
+			X = 734f;
+			Y = 135f;
+			base.Scale = 1f;
 			break;
 		case NPCLocation.Left:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = true;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 100f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 135f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = true;
+			X = 100f;
+			Y = 135f;
+			base.Scale = 1f;
 			break;
 		case NPCLocation.Right:
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002E_Pv8G2bIbjHmJYrVXhNyr64NSPXn = false;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EX = 1368f;
-			_QGGOTxZ8aNWGh0hc26wcmx8wmwT_002EY = 135f;
-			base._fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1f;
+			FlipX = false;
+			X = 1368f;
+			Y = 135f;
+			base.Scale = 1f;
 			break;
 		}
 	}

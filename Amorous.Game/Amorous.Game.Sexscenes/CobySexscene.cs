@@ -9,7 +9,7 @@ namespace Amorous.Game.Sexscenes;
 
 public class CobySexscene : CensoredSexscene
 {
-	private static readonly List<SkeletonJson.SpineEvent> _zAqFZFiaBbpl6Gf6nSX9UC3cSh6 = new List<SkeletonJson.SpineEvent>
+	private static readonly List<SkeletonJson.SpineEvent> Events = new List<SkeletonJson.SpineEvent>
 	{
 		new SkeletonJson.SpineEvent
 		{
@@ -31,98 +31,98 @@ public class CobySexscene : CensoredSexscene
 		}
 	};
 
-	public CobySexscene(ContentManager contentManager_0)
-		: base(contentManager_0, "Assets/SexScenes/Coby/Coby Sex", "Assets/SexScenes/Coby/Background", null, list_0: _zAqFZFiaBbpl6Gf6nSX9UC3cSh6, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(contentManager_0), float_0: _iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF ? 1.5f : 1f, bool_0: true, float_1: 3000f)
+	public CobySexscene(ContentManager content)
+		: base(content, "Assets/SexScenes/Coby/Coby Sex", "Assets/SexScenes/Coby/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, float_1: 3000f)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._C5vPbZ72rpVMDWGuHxZuR5FNpAH("animation");
-		if (!_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.StartAnimationWithLooping("animation");
+		if (!Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 900f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1050f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._49JXjKJqaPZw5nEmhHdAENuBtLJ("animation", -0.3f);
+			base.Spine.X = 900f;
+			base.Spine.Y = 1050f;
+			base.Spine.IncreaseDuration("animation", -0.3f);
 		}
 		else
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.X = 1700f;
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB.Y = 1700f;
+			base.Spine.X = 1700f;
+			base.Spine.Y = 1700f;
 		}
 	}
 
-	protected override void _coudx6g9HL4THj8r5aYCDxaHH0I(PlayerData _opIJo2jLUqdOL5yAFP4yzXce0DG_0)
+	protected override void RefreshScene(PlayerData data)
 	{
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._c4iC7y9v6xg7LpvjKIeUkOdZ3UF(0f);
-		if (_iExD93IWLlzVfXsU9wyrEvWgJsg._4xsgdTzAotLBDxTjCbQBCY4YtpF)
+		base.Spine.SetVisibility(0f);
+		if (Censorship.Censored)
 		{
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby Body", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby jaw", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby eye", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby pupil", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby head", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby eyelid", 1f);
-			base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby Shoulder", 1f);
+			base.Spine.SetAlpha("Coby Body", 1f);
+			base.Spine.SetAlpha("Coby jaw", 1f);
+			base.Spine.SetAlpha("Coby eye", 1f);
+			base.Spine.SetAlpha("Coby pupil", 1f);
+			base.Spine.SetAlpha("Coby head", 1f);
+			base.Spine.SetAlpha("Coby eyelid", 1f);
+			base.Spine.SetAlpha("Coby Shoulder", 1f);
 			return;
 		}
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby Body", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby leg back", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player leg back", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player leg back underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player leg back high sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player leg back stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player taint", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player taint underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby jaw", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby eye", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby pupil", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby head", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby eyelid", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player arm", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player arm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby Shoulder", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player forearm", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player forearm shortlong sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player forearm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby balls", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player balls back", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player balls back underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player cock knot", (_opIJo2jLUqdOL5yAFP4yzXce0DG_0.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player balls top", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player balls top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby taint", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby tail", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby leg top", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Coby thigh top", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player leg top", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player leg top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player leg top stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player hand", 1f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player hand shortlong sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm) ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._aAoZaDNczeScsMfLlGSfAzey9SQ("Player nails", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShowNails ? 1f : 0f);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player leg back", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player leg back underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player leg back high sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderthighColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player leg back stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player taint", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player taint underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player arm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player forearm", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player forearm shortlong sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShortForearmColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player forearm stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player balls back", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BallsColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player balls back underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player cock knot", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.GenitaliaColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player balls top", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BallsColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player balls top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player leg top", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player leg top underbelly", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.UnderbellyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player leg top stripes", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.StripesColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player hand", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.BodyColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player hand shortlong sleeve", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.ShortForearmColor);
-		base._1BgOJ3z4ZUXNS2L4JWf24pr41hB._VoeevpFh2kLKfHtpPDXWt0TFbuH("Player nails", _opIJo2jLUqdOL5yAFP4yzXce0DG_0.NailColor);
-		base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum butt back");
-		base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum cock");
-		base._DUynKBx2CM4riE68wCCfknspxeg.Add("Cum butt top");
+		base.Spine.SetAlpha("Coby Body", 1f);
+		base.Spine.SetAlpha("Coby leg back", 1f);
+		base.Spine.SetAlpha("Player leg back", 1f);
+		base.Spine.SetAlpha("Player leg back underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+		base.Spine.SetAlpha("Player leg back high sleeve", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
+		base.Spine.SetAlpha("Player leg back stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+		base.Spine.SetAlpha("Player taint", 1f);
+		base.Spine.SetAlpha("Player taint underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+		base.Spine.SetAlpha("Coby jaw", 1f);
+		base.Spine.SetAlpha("Coby eye", 1f);
+		base.Spine.SetAlpha("Coby pupil", 1f);
+		base.Spine.SetAlpha("Coby head", 1f);
+		base.Spine.SetAlpha("Coby eyelid", 1f);
+		base.Spine.SetAlpha("Player arm", 1f);
+		base.Spine.SetAlpha("Player arm stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+		base.Spine.SetAlpha("Coby Shoulder", 1f);
+		base.Spine.SetAlpha("Player forearm", 1f);
+		base.Spine.SetAlpha("Player forearm shortlong sleeve", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm) ? 1f : 0f);
+		base.Spine.SetAlpha("Player forearm stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+		base.Spine.SetAlpha("Coby balls", 1f);
+		base.Spine.SetAlpha("Player balls back", 1f);
+		base.Spine.SetAlpha("Player balls back underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+		base.Spine.SetAlpha("Player cock", 1f);
+		base.Spine.SetAlpha("Player cock knot", (data.CockType == PlayerData.ECockType.Knotted) ? 1f : 0f);
+		base.Spine.SetAlpha("Player balls top", 1f);
+		base.Spine.SetAlpha("Player balls top underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+		base.Spine.SetAlpha("Coby taint", 1f);
+		base.Spine.SetAlpha("Coby tail", 1f);
+		base.Spine.SetAlpha("Coby leg top", 1f);
+		base.Spine.SetAlpha("Coby thigh top", 1f);
+		base.Spine.SetAlpha("Player leg top", 1f);
+		base.Spine.SetAlpha("Player leg top underbelly", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly) ? 1f : 0f);
+		base.Spine.SetAlpha("Player leg top stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
+		base.Spine.SetAlpha("Player hand", 1f);
+		base.Spine.SetAlpha("Player hand shortlong sleeve", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm) ? 1f : 0f);
+		base.Spine.SetAlpha("Player nails", data.ShowNails ? 1f : 0f);
+		base.Spine.SetColor("Player leg back", data.BodyColor);
+		base.Spine.SetColor("Player leg back underbelly", data.UnderbellyColor);
+		base.Spine.SetColor("Player leg back high sleeve", data.UnderthighColor);
+		base.Spine.SetColor("Player leg back stripes", data.StripesColor);
+		base.Spine.SetColor("Player taint", data.BodyColor);
+		base.Spine.SetColor("Player taint underbelly", data.UnderbellyColor);
+		base.Spine.SetColor("Player arm", data.BodyColor);
+		base.Spine.SetColor("Player arm stripes", data.StripesColor);
+		base.Spine.SetColor("Player forearm", data.BodyColor);
+		base.Spine.SetColor("Player forearm shortlong sleeve", data.ShortForearmColor);
+		base.Spine.SetColor("Player forearm stripes", data.StripesColor);
+		base.Spine.SetColor("Player balls back", data.BallsColor);
+		base.Spine.SetColor("Player balls back underbelly", data.UnderbellyColor);
+		base.Spine.SetColor("Player cock", data.GenitaliaColor);
+		base.Spine.SetColor("Player cock knot", data.GenitaliaColor);
+		base.Spine.SetColor("Player balls top", data.BallsColor);
+		base.Spine.SetColor("Player balls top underbelly", data.UnderbellyColor);
+		base.Spine.SetColor("Player leg top", data.BodyColor);
+		base.Spine.SetColor("Player leg top underbelly", data.UnderbellyColor);
+		base.Spine.SetColor("Player leg top stripes", data.StripesColor);
+		base.Spine.SetColor("Player hand", data.BodyColor);
+		base.Spine.SetColor("Player hand shortlong sleeve", data.ShortForearmColor);
+		base.Spine.SetColor("Player nails", data.NailColor);
+		base.Overlays.Add("Cum butt back");
+		base.Overlays.Add("Cum cock");
+		base.Overlays.Add("Cum butt top");
 	}
 }

@@ -15,7 +15,7 @@ public abstract class AbstractEvent<T> : IEvent where T : EventData
 		_5zNdOw7qHmuCAPJFMr3SsZdBlCr = _nR8eroJOHehP0ZGyyTveo6aMTHg_0;
 	}
 
-	public virtual void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public virtual void ResetVariation()
 	{
 		_xJZUPxDatEzfPQc0nRHR2D1Vwke = false;
 	}

@@ -94,10 +94,10 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		});
 	}
 
-	public void Update(GameTime gameTime_0)
+	public void Update(GameTime gameTime)
 	{
 		_9GQBAH2pi8Sm6ph1s6InjyQGe6R.Update();
-		float num = (float)(gameTime_0.ElapsedGameTime.TotalMilliseconds / 1000.0);
+		float num = (float)(gameTime.ElapsedGameTime.TotalMilliseconds / 1000.0);
 		foreach (_RQQdLVHyZm4GNvRCeQfcIx1OlwJ item in _IRRZMMioeCJC8zGoIaJiRaRSSiM)
 		{
 			item._AmIUCcrmrrQiiirja7DoiZSjXuv += num;
@@ -114,7 +114,7 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		}
 	}
 
-	public void Draw(SpriteBatch spriteBatch_0)
+	public void Draw(SpriteBatch spriteBatch)
 	{
 		try
 		{

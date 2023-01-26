@@ -33,7 +33,7 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	public int _ypqaDJqrkQlUKOrdZIXld5qQQ4x { get; private set; }
 
-	public float _fO7gSlrDDNMoHR4FO5QXAq8fUyA { get; private set; }
+	public float Scale { get; private set; }
 
 	public int _jDxCg7GJnIKcLXDcUVSdbEIQL3Yb { get; private set; }
 
@@ -95,32 +95,32 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 		float num2 = (float)int_1 / (float)_omy3Cp1IbOKtE3eoz7lAP5DqhT9;
 		if (num < num2)
 		{
-			_fO7gSlrDDNMoHR4FO5QXAq8fUyA = num;
+			Scale = num;
 			_HZrLDiX4EPtS6jM8Odd9yJAatHq = int_0;
-			_ypqaDJqrkQlUKOrdZIXld5qQQ4x = (int)((float)_omy3Cp1IbOKtE3eoz7lAP5DqhT9 * _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+			_ypqaDJqrkQlUKOrdZIXld5qQQ4x = (int)((float)_omy3Cp1IbOKtE3eoz7lAP5DqhT9 * Scale);
 		}
 		else
 		{
-			_fO7gSlrDDNMoHR4FO5QXAq8fUyA = num2;
-			_HZrLDiX4EPtS6jM8Odd9yJAatHq = (int)((float)_L7Fbjq2u4uL5uJIyoRAHpKNXmDI * _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+			Scale = num2;
+			_HZrLDiX4EPtS6jM8Odd9yJAatHq = (int)((float)_L7Fbjq2u4uL5uJIyoRAHpKNXmDI * Scale);
 			_ypqaDJqrkQlUKOrdZIXld5qQQ4x = int_1;
 		}
 		_jDxCg7GJnIKcLXDcUVSdbEIQL3Yb = (int)((float)(int_2 - _HZrLDiX4EPtS6jM8Odd9yJAatHq) / 2f);
 		_ILCBrSipj1Qk4CsYzkEELxHvkkY = (int)((float)(int_3 - _ypqaDJqrkQlUKOrdZIXld5qQQ4x) / 2f);
-		_kqhatCC8tmVLA7vYHWyCBRmPace = Matrix.CreateScale(_fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+		_kqhatCC8tmVLA7vYHWyCBRmPace = Matrix.CreateScale(Scale);
 	}
 
 	public Point _u7uCdK9i8FnWhiaPn2bO2wIgUUuA(Point point_0)
 	{
-		point_0.X = (int)((float)(point_0.X - _jDxCg7GJnIKcLXDcUVSdbEIQL3Yb) / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
-		point_0.Y = (int)((float)(point_0.Y - _ILCBrSipj1Qk4CsYzkEELxHvkkY) / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+		point_0.X = (int)((float)(point_0.X - _jDxCg7GJnIKcLXDcUVSdbEIQL3Yb) / Scale);
+		point_0.Y = (int)((float)(point_0.Y - _ILCBrSipj1Qk4CsYzkEELxHvkkY) / Scale);
 		return point_0;
 	}
 
 	public Point _2j5HjqIBNOwD2br7yBprKdzVhAK(Point point_0)
 	{
-		point_0.X = (int)((float)point_0.X / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
-		point_0.Y = (int)((float)point_0.Y / _fO7gSlrDDNMoHR4FO5QXAq8fUyA);
+		point_0.X = (int)((float)point_0.X / Scale);
+		point_0.Y = (int)((float)point_0.Y / Scale);
 		return point_0;
 	}
 
@@ -142,8 +142,8 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 
 	public void _u7uCdK9i8FnWhiaPn2bO2wIgUUuA(float float_0, float float_1, out float float_2, out float float_3)
 	{
-		float_2 = (float_0 - (float)_jDxCg7GJnIKcLXDcUVSdbEIQL3Yb) / _fO7gSlrDDNMoHR4FO5QXAq8fUyA;
-		float_3 = (float_1 - (float)_ILCBrSipj1Qk4CsYzkEELxHvkkY) / _fO7gSlrDDNMoHR4FO5QXAq8fUyA;
+		float_2 = (float_0 - (float)_jDxCg7GJnIKcLXDcUVSdbEIQL3Yb) / Scale;
+		float_3 = (float_1 - (float)_ILCBrSipj1Qk4CsYzkEELxHvkkY) / Scale;
 	}
 
 	public void _wFfc7xL7eKxed7i9gWtao7pgsnm(int int_0, int int_1, int int_2, int int_3)
@@ -172,7 +172,7 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 		_Pxvux7dVnNcKQc1YbJ5ItGoHgfB = 0f;
 	}
 
-	public void Update(GameTime gameTime_0)
+	public void Update(GameTime gameTime)
 	{
 		if (_1LQOhiUdxWk8bRA1sYnQMSYcjVm || Amorous._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
 		{
@@ -183,11 +183,11 @@ public class _wRd4nHuQQlAPEwrHOGkBfut6Uip
 		{
 			if (_EKoVuulhFH2bvqZKateoyZN7Ink)
 			{
-				_YA8VIEiPdA3mZIXmotOA93bAdR1((float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f, ref point_);
+				_YA8VIEiPdA3mZIXmotOA93bAdR1((float)gameTime.ElapsedGameTime.Milliseconds / 1000f, ref point_);
 			}
 			if (_qazbvc9K4STcPjV9jPSO0qIDsOJA)
 			{
-				_FRs0cZ9KolFCNcNbMdmUMMCEVQ7((float)gameTime_0.ElapsedGameTime.Milliseconds / 1000f, ref point_);
+				_FRs0cZ9KolFCNcNbMdmUMMCEVQ7((float)gameTime.ElapsedGameTime.Milliseconds / 1000f, ref point_);
 			}
 		}
 	}

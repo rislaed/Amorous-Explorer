@@ -2,49 +2,45 @@ namespace Amorous.Game.Scenes;
 
 public class CoffeeShopScene : AbstractScene
 {
-	public const string _vLvbLLrZzgMrRgmxcYHzDgEDnpt = "Jax";
+	public const string VariantJax = "Jax";
+	public const string VariantSeth = "Seth";
+	public const string VariantNone = "Default";
 
-	public const string _sE7NN5MXeclpNhlb9x1hC61G2sQ = "Seth";
-
-	public const string _x8Ym16HTsmyDDdsJK37LoYtDAli = "Default";
-
-	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _f2oPpgipLb2rTkpm5SVN7YrkJvd;
-
-	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _pewCVYjuuHIu8ihhqBs4FHREuPB;
-
-	private readonly _uqydQVaCmCvK7zzWs5W4gZFpKBu _Fcr13ys9cm66KFhUCRnmKKCOHQA;
+	private readonly TexturedLayer BackgroundJax;
+	private readonly TexturedLayer BackgroundSeth;
+	private readonly TexturedLayer BackgroundNone;
 
 	public CoffeeShopScene(IAmorous game)
-		: base(Game)
+		: base(game)
 	{
-		_0O8D0mBgmrh0sLOGcLVvGNOHKLCA("Background", "Assets/Scenes/CoffeeShop/Background", 0, 0);
-		_f2oPpgipLb2rTkpm5SVN7YrkJvd = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
-		_pewCVYjuuHIu8ihhqBs4FHREuPB = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
-		_Fcr13ys9cm66KFhUCRnmKKCOHQA = _NC5VT77x8y2iH2pW56TBN1eyomA("Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
-		_6hE3geqxrB1vCirtSWHxIJjlTQB("Default");
+		AddTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Background", 0, 0);
+		BackgroundJax = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
+		BackgroundSeth = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
+		BackgroundNone = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
+		SetVariant(VariantNone);
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 	}
 
-	public override void _6hE3geqxrB1vCirtSWHxIJjlTQB(string string_0)
+	public override void SetVariant(string variant)
 	{
-		base._6hE3geqxrB1vCirtSWHxIJjlTQB(string_0);
-		_f2oPpgipLb2rTkpm5SVN7YrkJvd._Fxy2SlgceW90FloFw6a1AEJODYA = false;
-		_pewCVYjuuHIu8ihhqBs4FHREuPB._Fxy2SlgceW90FloFw6a1AEJODYA = false;
-		_Fcr13ys9cm66KFhUCRnmKKCOHQA._Fxy2SlgceW90FloFw6a1AEJODYA = false;
-		if (!(string_0 == "Jax"))
+		base.SetVariant(variant);
+		BackgroundJax.Visible = false;
+		BackgroundSeth.Visible = false;
+		BackgroundNone.Visible = false;
+		if (!(variant == VariantJax))
 		{
-			if (!(string_0 == "Seth"))
+			if (!(variant == VariantSeth))
 			{
-				_Fcr13ys9cm66KFhUCRnmKKCOHQA._Fxy2SlgceW90FloFw6a1AEJODYA = true;
+				BackgroundNone.Visible = true;
 			}
 			else
 			{
-				_pewCVYjuuHIu8ihhqBs4FHREuPB._Fxy2SlgceW90FloFw6a1AEJODYA = true;
+				BackgroundSeth.Visible = true;
 			}
 		}
 		else
 		{
-			_f2oPpgipLb2rTkpm5SVN7YrkJvd._Fxy2SlgceW90FloFw6a1AEJODYA = true;
+			BackgroundJax.Visible = true;
 		}
 	}
 }

@@ -17,11 +17,11 @@ public class _gJR4g7ak0hsZAUWX1vJbMqG2P5I : _RlrsL89bialFQa9mzWurgsdr6FK<Color>
 		return Color.Lerp(color_0, color_1, float_0);
 	}
 
-	public void Draw(SpriteBatch spriteBatch_0, _wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
+	public void Draw(SpriteBatch spriteBatch, _wRd4nHuQQlAPEwrHOGkBfut6Uip _wRd4nHuQQlAPEwrHOGkBfut6Uip_0)
 	{
-		spriteBatch_0.Begin();
-		spriteBatch_0.Draw(_OzFEGvZu5tqLcitcWhX3j9pIBZM, new Rectangle(0, 0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._L7Fbjq2u4uL5uJIyoRAHpKNXmDI, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._omy3Cp1IbOKtE3eoz7lAP5DqhT9), base._SWODlbUkQEqfwrtprjLPOeGF7HO);
-		spriteBatch_0.End();
+		spriteBatch.Begin();
+		spriteBatch.Draw(_OzFEGvZu5tqLcitcWhX3j9pIBZM, new Rectangle(0, 0, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._L7Fbjq2u4uL5uJIyoRAHpKNXmDI, _wRd4nHuQQlAPEwrHOGkBfut6Uip_0._omy3Cp1IbOKtE3eoz7lAP5DqhT9), base.State);
+		spriteBatch.End();
 	}
 
 	public void _PYAXEqRAOkDRRNqm1k71R7GJTJK(Action action_0 = null)

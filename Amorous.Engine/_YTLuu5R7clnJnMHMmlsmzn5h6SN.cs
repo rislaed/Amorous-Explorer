@@ -17,10 +17,10 @@ public class _YTLuu5R7clnJnMHMmlsmzn5h6SN : AbstractEvent<UnlockContactEventData
 		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(unlockContactEventData_0.Contact, out var result) ? result : PlayerData.EPhoneContacts.None);
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
-		_Z6EKIW3ycAwV2npYuxbFLcnCTrJ._dxo6sBOpjEUiw2JBMikbutXK44t().AddContact(Contact);
+		base.ResetVariation();
+		PlayerPreferences.GetPlayerData().AddContact(Contact);
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._rGMDL1kMYXSwaZiIoINCo5AqZuM(Contact);
 	}
 

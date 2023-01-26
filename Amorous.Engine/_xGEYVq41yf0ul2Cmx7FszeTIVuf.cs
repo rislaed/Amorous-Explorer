@@ -25,9 +25,9 @@ public class _xGEYVq41yf0ul2Cmx7FszeTIVuf : AbstractEvent<PlayDialogueEventData>
 		_sYTI9KQ6wWFbqvMDTbLkrgpPx6E = false;
 	}
 
-	public override void _4hlxzMzKSbVTbZUrEsP3dfw4x0h()
+	public override void ResetVariation()
 	{
-		base._4hlxzMzKSbVTbZUrEsP3dfw4x0h();
+		base.ResetVariation();
 		_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq(Text, Title, Color);
 	}
 

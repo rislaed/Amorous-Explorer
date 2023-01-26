@@ -12,14 +12,14 @@ public class _WBXNT6eIVGk6ZKExRBJ6JxXE6zb : _fAUddQEKfZyemRb327NhM3GGlmzA
 
 	public bool _zkHMlDFkja4TqmjdlHuZRCj8FCB { get; set; }
 
-	public _WBXNT6eIVGk6ZKExRBJ6JxXE6zb(AbstractScene AbstractScene_0, string string_0)
-		: base(AbstractScene_0, string_0)
+	public _WBXNT6eIVGk6ZKExRBJ6JxXE6zb(AbstractScene scene, string string_0)
+		: base(scene, string_0)
 	{
 	}
 
-	public void Draw(SpriteBatch spriteBatch_0, SkeletonMeshRenderer skeletonMeshRenderer_0)
+	public void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 	{
-		Draw(spriteBatch_0);
-		_Wb2e00OWt8kBwGWEXtOGMVScRPm?.Invoke(spriteBatch_0, skeletonMeshRenderer_0);
+		Draw(spriteBatch);
+		_Wb2e00OWt8kBwGWEXtOGMVScRPm?.Invoke(spriteBatch, skeletonMeshRenderer);
 	}
 }

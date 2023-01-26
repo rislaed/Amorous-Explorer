@@ -5,16 +5,16 @@ using Spine;
 
 public class _AUtA43NfhBNYDqRrVB1t9VQxe1v : TextureLoader
 {
-	private static _AUtA43NfhBNYDqRrVB1t9VQxe1v _6T55wit7MiGfAWRkPwjNbJ8N8lG;
+	private static _AUtA43NfhBNYDqRrVB1t9VQxe1v Singleton;
 
 	private readonly ContentManager _7FoDc5IeOhkrJIekU2AAQQKZqefA;
 
-	public static _AUtA43NfhBNYDqRrVB1t9VQxe1v _yuFBJdi7mxrwMFQ57BjLjSq6ESj => _6T55wit7MiGfAWRkPwjNbJ8N8lG;
+	public static _AUtA43NfhBNYDqRrVB1t9VQxe1v Self => Singleton;
 
-	public _AUtA43NfhBNYDqRrVB1t9VQxe1v(ContentManager contentManager_0)
+	public _AUtA43NfhBNYDqRrVB1t9VQxe1v(ContentManager content)
 	{
-		_6T55wit7MiGfAWRkPwjNbJ8N8lG = this;
-		_7FoDc5IeOhkrJIekU2AAQQKZqefA = contentManager_0;
+		Singleton = this;
+		_7FoDc5IeOhkrJIekU2AAQQKZqefA = content;
 	}
 
 	public void Load(AtlasPage page, string path)
