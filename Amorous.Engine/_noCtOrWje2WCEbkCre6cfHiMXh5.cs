@@ -16,9 +16,9 @@ public class _noCtOrWje2WCEbkCre6cfHiMXh5 : AbstractEvent<PlaySexsceneEventData>
 		SceneName = playSexsceneEventData_0.SceneName;
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._gYGB98heFqsLp9tgJbdCP01IKV2(SceneName);
 	}
 

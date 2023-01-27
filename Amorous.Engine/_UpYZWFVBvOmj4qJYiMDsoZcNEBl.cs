@@ -19,9 +19,9 @@ public class _UpYZWFVBvOmj4qJYiMDsoZcNEBl : AbstractEvent<SetStageEventData>
 		Stage = setStageEventData_0.Stage;
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		PlayerPreferences.GetPlayerData().SetDecimal(Quest, Stage);
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._aJh9CibG5YKhkExxgRyVopdfSeJ.SetDecimal(Quest, Stage);
 	}

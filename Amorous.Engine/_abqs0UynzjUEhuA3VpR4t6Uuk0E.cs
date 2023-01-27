@@ -4,7 +4,7 @@ using Squid;
 
 public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 {
-	private string Text;
+	private string _text;
 
 	private Vector2 Overlap;
 
@@ -16,18 +16,18 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 	{
 		get
 		{
-			return Text;
+			return _text;
 		}
 		set
 		{
-			Text = value;
-			if (string.IsNullOrEmpty(Text))
+			_text = value;
+			if (string.IsNullOrEmpty(_text))
 			{
 				Overlap = Vector2.Zero;
 			}
 			else
 			{
-				Overlap = Font.MeasureString(Text);
+				Overlap = Font.MeasureString(_text);
 			}
 		}
 	}
@@ -41,9 +41,7 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		Color = color_0;
 	}
 
-	public override void _eJedLbGgSejIX7Xyx6RoIYD1soJA()
-	{
-	}
+	public override void _eJedLbGgSejIX7Xyx6RoIYD1soJA() {}
 
 	public override void Draw(SpriteBatch spriteBatch)
 	{

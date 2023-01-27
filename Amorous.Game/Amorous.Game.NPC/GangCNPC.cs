@@ -28,13 +28,13 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 	public static Color Color = new Color(98, 178, 17);
 
 	public GangCNPC(IAmorous game)
-		: base(Game, "Assets/NPC/GangC", 1f)
+		: base(game, "Assets/NPC/GangC", 1f)
 	{
 		Width = 610;
 		Height = 1002;
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Jade Nude");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Jade Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Jade Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetPose(EPoses.Neutral, "Jade Nude");
+		GetClothes(EPoses.Neutral, EClothes.Shirt, "Jade Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Neutral, EClothes.Pants, "Jade Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

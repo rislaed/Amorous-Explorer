@@ -3,7 +3,7 @@ namespace Amorous.Game.NPC;
 public class ClubInsideCNPC : ClubStaticNPC
 {
 	public ClubInsideCNPC(IAmorous game)
-		: base(Game, "Assets/NPC/ClubInsideStatic", "C", bool_0: true, bool_1: true)
+		: base(game, "Assets/NPC/ClubInsideStatic", "C", bool_0: true, bool_1: true)
 	{
 		base.Scale = 0.4f;
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;

@@ -39,7 +39,7 @@ public abstract class AbstractScene
 		Squid.SetSkin("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 	}
 
-	public virtual void ResetVariation() {}
+	public virtual void StopCutscene() {}
 	public virtual void End() {}
 
 	public AbstractLayer GetLayer(string name)
@@ -369,7 +369,7 @@ public abstract class AbstractScene
 					{
 						if (!flag)
 						{
-							spriteBatch.Begin(SpriteSortMode.Deferred, nullable_0: matrix, blendState_0: Blending);
+							spriteBatch.Begin(SpriteSortMode.Deferred, transformationMatrix: matrix, blendState: Blending);
 							flag = true;
 						}
 						item.Draw(spriteBatch);
@@ -442,7 +442,7 @@ public abstract class AbstractScene
 
 	public NPCLayer GetNPCLayer(string name)
 	{
-		return GetLayer(NPCLayer.Prefix name) as NPCLayer;
+		return GetLayer(NPCLayer.Prefix + name) as NPCLayer;
 	}
 
 	public NPCLayer GetNPCLayer(NPCLocation npclocation)
@@ -476,5 +476,5 @@ public abstract class AbstractScene
 		IsOrderingChanged = true;
 	}
 
-	public virtual void RefreshStorage() {}
+	public virtual void Start() {}
 }

@@ -76,7 +76,7 @@ public abstract class AbstractNPC
 
 	protected AbstractNPC(IAmorous amorous)
 	{
-		_Rx2wNR2enRtLcTLuHC6H9bGAUgq = 1f;
+		Scale = 1f;
 		_clothes = new List<string>();
 		Game = amorous;
 		_uZyXmbTsZVxXsadCzSsIs0z4xdb = new List<_xmfdPa5IagU3cXbLL61gyoXAV7gA>();
@@ -89,21 +89,21 @@ public abstract class AbstractNPC
 
 	public virtual void Begin() {}
 
-	public _xmfdPa5IagU3cXbLL61gyoXAV7gA _aRXZ6kQYnlqRUMIC19x1vIPD62D(string string_0, params string[] string_1)
+	public _xmfdPa5IagU3cXbLL61gyoXAV7gA GetEmotion(string string_0, params string[] string_1)
 	{
 		_xmfdPa5IagU3cXbLL61gyoXAV7gA emotion = new _xmfdPa5IagU3cXbLL61gyoXAV7gA(string_0, string_1);
 		_uZyXmbTsZVxXsadCzSsIs0z4xdb.Add(emotion);
 		return emotion;
 	}
 
-	public _NaKchYC4I4GjWR34SfBLAktysCE _zDmJ8ztQTMoRvRw2LsNKu5foPpF(string string_0, params string[] string_1)
+	public _NaKchYC4I4GjWR34SfBLAktysCE GetPose(string string_0, params string[] string_1)
 	{
 		_NaKchYC4I4GjWR34SfBLAktysCE pose = new _NaKchYC4I4GjWR34SfBLAktysCE(string_0, string_1);
 		_EcxlglhukYZdLVkSogxZZE3XdVj.Add(pose);
 		return pose;
 	}
 
-	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh _ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(string string_0, string string_1, params string[] string_2)
+	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh GetClothes(string string_0, string string_1, params string[] string_2)
 	{
 		_EZ0kOLXoEoEfWGQDdTbNqaPzDUh shirt = new _EZ0kOLXoEoEfWGQDdTbNqaPzDUh(string_1, string_2);
 		_NaKchYC4I4GjWR34SfBLAktysCE pose = _EcxlglhukYZdLVkSogxZZE3XdVj.First((_NaKchYC4I4GjWR34SfBLAktysCE _NaKchYC4I4GjWR34SfBLAktysCE_0) => _NaKchYC4I4GjWR34SfBLAktysCE_0.Name == string_0);

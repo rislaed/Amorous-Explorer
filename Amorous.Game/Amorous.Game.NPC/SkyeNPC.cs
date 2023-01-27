@@ -36,7 +36,7 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 	public static Color Color = new Color(248, 255, 167);
 
 	public SkyeNPC(IAmorous game)
-		: base(Game, "Assets/NPC/Skye/Skye", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Skye/Skye", 1f, bool_0: true)
 	{
 		base._rAt6TRbgK04lvrs5QPjcd0n26pk = new Type[2]
 		{
@@ -44,19 +44,19 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 			typeof(SkyeGrayNPC)
 		};
 		base.Spine.StartAnimationWithLooping("Idle");
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Angry, "Angry Head", "Angry pupil", "Angry eyeback");
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Blush, "Blush head", "Blush pupils", "Blush eye back");
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Sad, "Sad Head", "Sad pupil", "Sad eye back");
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Happy, "Happy head", "Happy pupil", "Happy eye back", "Happy jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Happy blink");
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Neutral, "Neutral head", "Neutral pupil", "Neutral eye back", "Neutral jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Neutral blink");
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Suggestive, "Suggestive Body", "Suggestive boobs", "Suggestive Tail");
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Guarded, "Guarded body", "Guarded boobs", "Guarded boob cover", "Guarded tail");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Hoodie, "Suggestive hoodie")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._KCZzL8xtjbw97bTOV0k8JDz3olE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Shirt, "Suggestive shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Suggestive, EClothes.Shorts, "Suggestive shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Hoodie, "Guarded hoodie")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._KCZzL8xtjbw97bTOV0k8JDz3olE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Shirt, "Guarded shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Guarded, EClothes.Shorts, "Guarded shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetEmotion(EHeads.Angry, "Angry Head", "Angry pupil", "Angry eyeback");
+		GetEmotion(EHeads.Blush, "Blush head", "Blush pupils", "Blush eye back");
+		GetEmotion(EHeads.Sad, "Sad Head", "Sad pupil", "Sad eye back");
+		GetEmotion(EHeads.Happy, "Happy head", "Happy pupil", "Happy eye back", "Happy jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Happy blink");
+		GetEmotion(EHeads.Neutral, "Neutral head", "Neutral pupil", "Neutral eye back", "Neutral jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Neutral blink");
+		GetPose(EPoses.Suggestive, "Suggestive Body", "Suggestive boobs", "Suggestive Tail");
+		GetPose(EPoses.Guarded, "Guarded body", "Guarded boobs", "Guarded boob cover", "Guarded tail");
+		GetClothes(EPoses.Suggestive, EClothes.Hoodie, "Suggestive hoodie")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._KCZzL8xtjbw97bTOV0k8JDz3olE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Suggestive, EClothes.Shirt, "Suggestive shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Suggestive, EClothes.Shorts, "Suggestive shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetClothes(EPoses.Guarded, EClothes.Hoodie, "Guarded hoodie")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._KCZzL8xtjbw97bTOV0k8JDz3olE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Guarded, EClothes.Shirt, "Guarded shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Guarded, EClothes.Shorts, "Guarded shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

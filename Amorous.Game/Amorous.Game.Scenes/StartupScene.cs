@@ -161,7 +161,7 @@ public class StartupScene : AbstractScene
 		base.Squid.Controls.Add(window);
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
 		CoupleANPC coupleANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(LayerOrder.Background);
 		coupleANPC.X = 350f;

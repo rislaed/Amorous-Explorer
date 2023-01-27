@@ -15,7 +15,7 @@ public abstract class AbstractEvent<T> : IEvent where T : EventData
 		_5zNdOw7qHmuCAPJFMr3SsZdBlCr = _nR8eroJOHehP0ZGyyTveo6aMTHg_0;
 	}
 
-	public virtual void ResetVariation()
+	public virtual void StopCutscene()
 	{
 		_xJZUPxDatEzfPQc0nRHR2D1Vwke = false;
 	}

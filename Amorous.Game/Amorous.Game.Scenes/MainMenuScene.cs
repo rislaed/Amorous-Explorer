@@ -144,7 +144,7 @@ public class MainMenuScene : TimeOfDayScene
 		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = true;
 	}
 
-	public override void ResetVariation() {}
+	public override void StopCutscene() {}
 
 	public TexturedSequenceLayer AddIndicatorLayer(string name, string textureFormat, int x, int y)
 	{

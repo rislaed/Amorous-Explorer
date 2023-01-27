@@ -28,11 +28,11 @@ public class ExBoyfriendNPC : LayerNPC<ExBoyfriendNPC.EHeads, ExBoyfriendNPC.EPo
 	public static Color Color = new Color(139, 215, 125);
 
 	public ExBoyfriendNPC(IAmorous game)
-		: base(Game, "Assets/NPC/ExBoyfriend", 1f)
+		: base(game, "Assets/NPC/ExBoyfriend", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Dustin's Ex Boyfriend Expressions");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Dustin's Ex Boyfriend Expressions - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Dustin's Ex Boyfriend Expressions - Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetPose(EPoses.Standing, "Dustin's Ex Boyfriend Expressions");
+		GetClothes(EPoses.Standing, EClothes.Pants, "Dustin's Ex Boyfriend Expressions - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetClothes(EPoses.Standing, EClothes.Shirt, "Dustin's Ex Boyfriend Expressions - Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

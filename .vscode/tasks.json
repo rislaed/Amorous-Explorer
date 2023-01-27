@@ -4,18 +4,59 @@
 		{
 			"label": "build",
 			"command": "dotnet",
-			"type": "shell",
+			"type": "process",
 			"args": [
 				"build",
-				// Ask dotnet build to generate full paths for file names.
+				"${workspaceFolder}/Amorous.sln",
 				"/property:GenerateFullPaths=true",
-				// Do not generate summary otherwise it leads to duplicate errors in Problems panel
 				"/consoleloggerparameters:NoSummary"
 			],
-			"group": "build",
-			"presentation": {
-				"reveal": "always"
-			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "publish (Windows)",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"publish",
+				"${workspaceFolder}/Amorous.sln",
+				"--runtime",
+				"win-x64",
+				"--framework",
+				"net40",
+				"--self-contained",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "publish (Linux)",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"publish",
+				"${workspaceFolder}/Amorous.sln",
+				"--runtime",
+				"linux-x64",
+				"--framework",
+				"net6.0",
+				"--self-contained",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "watch",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"watch",
+				"run",
+				"--project",
+				"${workspaceFolder}/Amorous.sln",
+			],
 			"problemMatcher": "$msCompile"
 		}
 	]

@@ -28,13 +28,13 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 	public static Color Color = new Color(162, 65, 159);
 
 	public VarryanceNPC(IAmorous game)
-		: base(Game, "Assets/NPC/Varryance", 1f)
+		: base(game, "Assets/NPC/Varryance", 1f)
 	{
 		Width = 850;
 		Height = 1649;
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Varryance Body");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Varryance Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Varryance Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetPose(EPoses.Standing, "Varryance Body");
+		GetClothes(EPoses.Standing, EClothes.Shirt, "Varryance Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetClothes(EPoses.Standing, EClothes.Pants, "Varryance Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

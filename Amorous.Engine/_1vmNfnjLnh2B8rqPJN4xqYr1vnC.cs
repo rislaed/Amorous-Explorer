@@ -39,9 +39,9 @@ public class _1vmNfnjLnh2B8rqPJN4xqYr1vnC : AbstractEvent<SpawnNPCEventData>
 		Clothes = ((spawnNPCEventData_0.Clothes == null) ? null : spawnNPCEventData_0.Clothes.ToArray());
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		LayerOrder result = ((!Enum.TryParse<LayerOrder>(Layer, out result)) ? LayerOrder.Background : result);
 		_v5mBBzOHST4Ij2jetldrF2beJtbA = base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg(NPC, result);
 		if (_v5mBBzOHST4Ij2jetldrF2beJtbA == null)

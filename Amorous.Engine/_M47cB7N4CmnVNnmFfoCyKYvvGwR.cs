@@ -9,9 +9,9 @@ public class _M47cB7N4CmnVNnmFfoCyKYvvGwR : AbstractEvent<FadeInEventData>
 	{
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._FegL010tc92iskjjyD0T33dDwNE(delegate
 		{
 			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;

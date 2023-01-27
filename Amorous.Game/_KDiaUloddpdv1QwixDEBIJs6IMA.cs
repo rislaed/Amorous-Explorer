@@ -17,7 +17,7 @@ public class _KDiaUloddpdv1QwixDEBIJs6IMA
 			}
 			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.CustomInitialize();
 			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.HookScreenshots(hook: true);
-			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.ScreenshotRequest += Game._VN2LxjGLZldLNfiJ1OniiaXfYBg;
+			_f9R8NSqY1uzRQ0MIHLS7AsTyi7F.ScreenshotRequest += game._VN2LxjGLZldLNfiJ1OniiaXfYBg;
 			Logger.Success("Successfully loaded Steamworks, welcome {0}!", _f9R8NSqY1uzRQ0MIHLS7AsTyi7F.Username);
 			return true;
 		}

@@ -19,9 +19,9 @@ public class _KxfXNCPP3dNfGOZBuSyD82CAbxp : AbstractEvent<SetFlagEventData>
 		Value = setFlagEventData_0.Value;
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		PlayerPreferences.GetPlayerData().SetBit(Flag, Value);
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._aJh9CibG5YKhkExxgRyVopdfSeJ.SetBit(Flag, Value);
 	}

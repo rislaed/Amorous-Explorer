@@ -7,7 +7,7 @@ public class AmorousGame : Game
 	public AmorousGame(bool safemode)
 	{
 		base.Window.Title = string.Format("Amorous v{0} (Windows)", "1.0.4");
-		Amorous = new Amorous(this, safemode);
+		Amorous = new AmorousSingleton(this, safemode);
 	}
 
 	protected override void Initialize()

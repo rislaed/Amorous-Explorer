@@ -8,9 +8,9 @@ public class _aCLXRSujZOZcjoJX4ql0VFhmLJq : AbstractEvent<HideGameBoxEventData>
 	{
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._TfR4rAxaOpP26NUkiRO1hT0Q3Ib();
 	}
 

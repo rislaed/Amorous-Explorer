@@ -25,7 +25,7 @@ public class TeamAmorousNPC : LayerNPC<TeamAmorousNPC.EHeads, TeamAmorousNPC.EPo
 	public static Color Color = new Color(255, 160, 255);
 
 	public TeamAmorousNPC(IAmorous game)
-		: base(Game, string.Empty, 1f)
+		: base(game, string.Empty, 1f)
 	{
 	}
 }

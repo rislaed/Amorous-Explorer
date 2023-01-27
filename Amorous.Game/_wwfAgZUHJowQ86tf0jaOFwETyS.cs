@@ -7,9 +7,9 @@ public class _wwfAgZUHJowQ86tf0jaOFwETyS : _0feLylFvn7NOajSXvkEDMJIATof<Incoming
 	{
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._lMCk2LRgUr0BxjjkcGh4aHIw2kf(Contact);
 	}
 }

@@ -2,7 +2,10 @@
 	<PropertyGroup>
 		<AssemblyName>Amorous.Engine</AssemblyName>
 		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-		<TargetFramework>net40</TargetFramework>
+		<TargetFrameworks>net40;net6.0</TargetFrameworks>
+	</PropertyGroup>
+	<PropertyGroup>
+		<GeneratedAssemblyInfoFile>Properties/AssemblyInfo.cs</GeneratedAssemblyInfoFile>
 	</PropertyGroup>
 	<PropertyGroup>
 		<LangVersion>Preview</LangVersion>
@@ -22,12 +25,6 @@
 		</Reference>
 		<Reference Include="Squid">
 			<HintPath>../Squid.dll</HintPath>
-		</Reference>
-		<Reference Include="System.Xml">
-			<HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Xml.dll</HintPath>
-		</Reference>
-		<Reference Include="System.Core">
-			<HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Core.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>

@@ -27,7 +27,7 @@ public class IntroScene : AbstractScene
 		_PbBEddQtI9iZg1ocIlBafUuVdrO = 1f;
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
 		_ZCUbMPsnW0SgjlADsYyZVasibXM = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(LayerOrder.Foreground);
 		_ZCUbMPsnW0SgjlADsYyZVasibXM.X = 1280f;

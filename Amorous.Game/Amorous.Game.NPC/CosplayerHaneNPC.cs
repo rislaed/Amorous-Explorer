@@ -27,10 +27,10 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 	public static Color Color = new Color(186, 78, 60);
 
 	public CosplayerHaneNPC(IAmorous game)
-		: base(Game, "Assets/NPC/CosplayerHane", 1f)
+		: base(game, "Assets/NPC/CosplayerHane", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Hane Maxwell Cosplayer (nude)");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetPose(EPoses.Standing, "Hane Maxwell Cosplayer (nude)");
+		GetClothes(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

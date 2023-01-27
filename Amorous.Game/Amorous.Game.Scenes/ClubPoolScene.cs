@@ -122,7 +122,7 @@ public class ClubPoolScene : AbstractScene
 
 	public override void Start()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		ClubPoolStaticANPC clubPoolStaticANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticANPC>(LayerOrder.Background);
 		clubPoolStaticANPC.X = -1400f;
 		clubPoolStaticANPC.Y = 910f;

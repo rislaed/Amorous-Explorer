@@ -8,9 +8,9 @@ public class _ca2ECa4c2Ix3gwR2CqVdbvPB4AC : AbstractEvent<ProgressSexsceneEventD
 	{
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Sexscene._VandJrNHr65bKmzzmFYTOwD1icL();
 	}
 

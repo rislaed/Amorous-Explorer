@@ -22,7 +22,7 @@ public class SaveMigrationScene : AbstractScene
 		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
 		CoupleANPC coupleANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(LayerOrder.Background);
 		coupleANPC.X = 350f;

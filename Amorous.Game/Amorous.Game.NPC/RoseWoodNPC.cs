@@ -28,11 +28,11 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 	public static Color Color = new Color(195, 69, 81);
 
 	public RoseWoodNPC(IAmorous game)
-		: base(Game, "Assets/NPC/RoseWood", 1f)
+		: base(game, "Assets/NPC/RoseWood", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Rose Wood Body");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Rose Wood Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetPose(EPoses.Standing, "Rose Wood Body");
+		GetClothes(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetClothes(EPoses.Standing, EClothes.Shirt, "Rose Wood Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

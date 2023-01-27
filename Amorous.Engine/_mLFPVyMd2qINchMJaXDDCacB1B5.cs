@@ -16,9 +16,9 @@ public class _mLFPVyMd2qINchMJaXDDCacB1B5 : AbstractEvent<SwitchToSceneEventData
 		SceneName = switchToSceneEventData_0.SceneName;
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._OxLRmpxixplTKChiTPUKAx4uTLG(SceneName);
 	}
 

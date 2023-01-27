@@ -31,29 +31,25 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 	private class _oDZZ0F7Qg08utTIjAaoyIbeDuFG
 	{
 		private readonly List<_W4jOxbRDzppFv0IAFpA5Blo7CjUA> _Fcqa4Lsbrq6zW3KyJnkvEumd0f4;
-
 		private int Value;
 
 		public bool _xJZUPxDatEzfPQc0nRHR2D1Vwke => Value >= _Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Count;
-
 		public string Text { get; }
-
 		public string Title { get; }
-
 		public Color Color { get; }
 
-		public _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string string_0, string string_1, Color color_0)
+		public _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string title, string text, Color color)
 		{
-			_KD80MJMEbQska5mSqJiPthulqeB = string_0.Replace("%playername%", PlayerPreferences.GetPlayerData().Name).Trim();
-			if (!(string_1 == "%playername%"))
+			Title = title.Replace("%playername%", PlayerPreferences.GetPlayerData().Name).Trim();
+			if (!(text == "%playername%"))
 			{
-				_fHbF0r78UBMiyDseUhbwAvEaqmp = string_1;
+				Text = text;
 			}
 			else
 			{
-				_fHbF0r78UBMiyDseUhbwAvEaqmp = PlayerPreferences.GetPlayerData().Name;
+				Text = PlayerPreferences.GetPlayerData().Name;
 			}
-			_ChpobZzN69pA08rlAmpiuCeOPQv = color_0;
+			Color = color;
 			_Fcqa4Lsbrq6zW3KyJnkvEumd0f4 = new List<_W4jOxbRDzppFv0IAFpA5Blo7CjUA>();
 		}
 
@@ -247,25 +243,20 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 	private class _W4jOxbRDzppFv0IAFpA5Blo7CjUA
 	{
 		private int Value;
-
 		private readonly Vector2 _BK3BSdlEv4xSjAlS93TtxbrrjjA;
 
 		public bool _xJZUPxDatEzfPQc0nRHR2D1Vwke => Value >= _Si5dw38ImuGLFJvc8DC1FoIc0PG.Length;
-
 		public string _Si5dw38ImuGLFJvc8DC1FoIc0PG { get; }
-
 		public bool _YqQMYa7eF6BsHAixrYycR8apI6F { get; set; }
-
 		public bool _m2fqFdYkda0gaCnRfu9lTOJ9CAi { get; }
-
 		public bool _ADnm4p5lVjBKkT3NkUtyGVE6UyC { get; }
 
 		public _W4jOxbRDzppFv0IAFpA5Blo7CjUA(string string_0, bool bool_0, bool bool_1, bool bool_2, int int_0)
 		{
-			_jKleQiKbVdoC6cAZMyVb5qJD13Q = ((int_0 == 0) ? string_0.Trim() : string_0);
+			_Si5dw38ImuGLFJvc8DC1FoIc0PG = ((int_0 == 0) ? string_0.Trim() : string_0);
 			_YqQMYa7eF6BsHAixrYycR8apI6F = bool_0;
-			_Ca56HTa6e3zxZSlfkrIB2telVdG = bool_1;
-			_on9cwi6oxCjZzbho9Maz5KlOLPp = bool_2;
+			_m2fqFdYkda0gaCnRfu9lTOJ9CAi = bool_1;
+			_ADnm4p5lVjBKkT3NkUtyGVE6UyC = bool_2;
 			_BK3BSdlEv4xSjAlS93TtxbrrjjA = new Vector2(int_0, 0f);
 		}
 
@@ -412,24 +403,19 @@ public class _nkzqFdEfDyLcyGikIKGcHjklI4y
 	private struct _DVKVvNZmeqGXSzmpcRmcXttpiKC
 	{
 		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _LPPPQ033UFYBL4fz3qUtSfOD75I = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(100, 750, 2000);
-
 		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _e6GzQtekajGAokkayN1IPGIhCKx = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(60, 450, 1500);
-
 		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _NN1aVVAo1wwjW67j2cNcdp7rWET = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(30, 300, 1000);
-
 		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _4d4FmftbqsXGnBhU8JorfUifjoo = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(0, 0, 1000);
 
 		public int _aFbxCmyEb7GMPT5kU3P9NvcWQgK { get; }
-
 		public int _a5fUssbr0SWbg9Sv48tHvMxW2ic { get; }
-
 		public int _TDuCcAGW0lPdvxvfHyDM3aP4i84 { get; }
 
 		private _DVKVvNZmeqGXSzmpcRmcXttpiKC(int int_0, int int_1, int int_2)
 		{
-			_Z0PczRXoob7ELJ9tv4wCi8ZZKmJ = int_0;
-			_i6vGYRDs82JalRkikuHhVIpANsf = int_1;
-			_cNHarziciuhFNrgu75Fpww06cAy = int_2;
+			_aFbxCmyEb7GMPT5kU3P9NvcWQgK = int_0;
+			_a5fUssbr0SWbg9Sv48tHvMxW2ic = int_1;
+			_TDuCcAGW0lPdvxvfHyDM3aP4i84 = int_2;
 		}
 	}
 

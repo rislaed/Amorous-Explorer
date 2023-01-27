@@ -33,7 +33,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 	private readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO = new JsonSerializerSettings
 	{
 		TypeNameHandling = TypeNameHandling.Auto,
-		Converters = { (JsonConverter)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA() }
+		Converters = { (JsonConverter)new ColorJsonConverter() }
 	};
 
 	private int _wO2k8QO0Jb1ECTFpHuFC2wQFtRB;

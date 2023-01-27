@@ -11,19 +11,19 @@ public abstract class LayerNPC<THead, TPose, TClothes> : _xZgbANe7gi6i2DAhBEkKpR
 	{
 	}
 
-	public _xmfdPa5IagU3cXbLL61gyoXAV7gA _aRXZ6kQYnlqRUMIC19x1vIPD62D(THead gparam_0, params string[] string_0)
+	public _xmfdPa5IagU3cXbLL61gyoXAV7gA GetEmotion(THead gparam_0, params string[] string_0)
 	{
-		return _aRXZ6kQYnlqRUMIC19x1vIPD62D(Enum.GetName(typeof(THead), (object)gparam_0), string_0);
+		return GetEmotion(Enum.GetName(typeof(THead), (object)gparam_0), string_0);
 	}
 
-	public _NaKchYC4I4GjWR34SfBLAktysCE _zDmJ8ztQTMoRvRw2LsNKu5foPpF(TPose gparam_0, params string[] string_0)
+	public _NaKchYC4I4GjWR34SfBLAktysCE GetPose(TPose gparam_0, params string[] string_0)
 	{
-		return _zDmJ8ztQTMoRvRw2LsNKu5foPpF(Enum.GetName(typeof(TPose), (object)gparam_0), string_0);
+		return GetPose(Enum.GetName(typeof(TPose), (object)gparam_0), string_0);
 	}
 
-	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh _ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(TPose gparam_0, TClothes gparam_1, params string[] string_0)
+	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh GetClothes(TPose gparam_0, TClothes gparam_1, params string[] string_0)
 	{
-		return _ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(Enum.GetName(typeof(TPose), (object)gparam_0), Enum.GetName(typeof(TClothes), (object)gparam_1), string_0);
+		return GetClothes(Enum.GetName(typeof(TPose), (object)gparam_0), Enum.GetName(typeof(TClothes), (object)gparam_1), string_0);
 	}
 
 	public void SetEmotion(THead gparam_0)

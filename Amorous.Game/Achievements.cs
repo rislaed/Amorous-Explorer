@@ -14,113 +14,65 @@ public class Achievements : IAchievements
 	public class _eT2GJReQj8Acaq2A0H0eUir97Qf
 	{
 		public string _qXE0hlPdNyl0lTUyddbAS1PZhVV { get; }
-
 		public string _OEBUKIcFNUq5lvHUCwgeAJT3Orq { get; }
-
 		public _UARKn0z34q7eyfLAgMhaieKBn33 _hEIssNuRoEdRDJFan5fSkzWu4Kj { get; }
-
 		public string Icon { get; }
-
 		public string Title { get; }
 
 		public _eT2GJReQj8Acaq2A0H0eUir97Qf(string string_0, string string_1, string string_2, string string_3 = "MessageIconGeneric", _UARKn0z34q7eyfLAgMhaieKBn33 _UARKn0z34q7eyfLAgMhaieKBn33_0 = _UARKn0z34q7eyfLAgMhaieKBn33.Generic)
 		{
-			_dGBdaEdAV5aJgHDENNyvloF5BlBA = string_0;
-			_DfBMTv7hkAONT7WobFWboWUEvdL = string_1;
-			_EMZ4CoDjMCDwqSRTQd7miSitflF = _UARKn0z34q7eyfLAgMhaieKBn33_0;
-			_jmAZYxwCQcYOplIbeFsAtU6Dz8 = string_3;
-			_fHbF0r78UBMiyDseUhbwAvEaqmp = string_2;
+			_qXE0hlPdNyl0lTUyddbAS1PZhVV = string_0;
+			_OEBUKIcFNUq5lvHUCwgeAJT3Orq = string_1;
+			_hEIssNuRoEdRDJFan5fSkzWu4Kj = _UARKn0z34q7eyfLAgMhaieKBn33_0;
+			Icon = string_3;
+			Title = string_2;
 		}
 	}
 
 	public const string _S6B7VzJFVP7Y3Fi3St7kcxqag8M = "AchievementPhonenumberCoby";
-
 	public const string _a7CDUyKAE2qiM9WqKnErmpVt3qw = "AchievementPhonenumberJax";
-
 	public const string _s2TWKpGxsuvOCV8eQ4BdCQiOw33 = "AchievementPhonenumberSeth";
-
 	public const string _RDcA0LCNIPLuBRnRKAsmUM694gI = "AchievementPhonenumberSkye";
-
 	public const string _kYg4FSSrZbgdY6bh0jE4bGI0qQE = "AchievementPhonenumberDustin";
-
 	public const string _6ykyoXFCCRzz8UBYhfQiBrnadCQ = "AchievementPhonenumberZenith";
-
 	public const string _4qlaVYdXBqZfFT9lSjSnMODqnROA = "AchievementPhonenumberMercy";
-
 	public const string _nrkoRmTAsLTDcZoNRqGjDhKaNsC = "AchievementPhonenumberRemy";
-
 	public const string _CrfRoN6e4o2aa4SJDKqK8dlNKMBA = "AchievementPhonenumberLex";
-
 	public const string _JwfJfK8JkOyYmyt2iPnsHGN4WUh = "AchievementDate1Coby";
-
 	public const string _iVbFBMcUJUr9paWKCMQz5ImvJbH = "AchievementDate1Jax";
-
 	public const string _6czc0aBTVCrgOYc7SHLrvJSlIEl = "AchievementDate2Jax";
-
 	public const string _IeoFXQl6FGNPoCkOumWywDQBdKJ = "AchievementDate3Jax";
-
 	public const string _VUaaRWPpPgrz66FVHDwRv8867mC = "AchievementDate1Seth";
-
 	public const string _lrFjphz9SCia3AMACLiIBJapGCk = "AchievementDate2Seth";
-
 	public const string _t1uzlCassGWFILSvpmyIkHgbT0N = "AchievementDate3Seth";
-
 	public const string _koeYNIkIf6nvKyIbBmBEa5Sh5Bc = "AchievementDate1Skye";
-
 	public const string _uiahhqLpqd4vmnKKIxY8mZnVnC = "AchievementDate2Skye";
-
 	public const string _FsAams8NESdZVKOOEvTxIRoUtzG = "AchievementDate3Skye";
-
 	public const string _Hyu9Eq6jYTv8Q0DkDJal4220z0A = "AchievementDate1Dustin";
-
 	public const string _Ozu37lpbHX5NoJBe9Irmb6vP4wW = "AchievementDate2Dustin";
-
 	public const string _DwuDkg4M9Adc7YHZxMzePdVkppb = "AchievementDate3Dustin";
-
 	public const string _lndav6Ztwa8MLX2fGfUlqpc4ZbO = "AchievementDate1Zenith";
-
 	public const string _GGogvhoVJkRaPFMSgpDjpeFppTC = "AchievementDate2Zenith";
-
 	public const string _fGNzdgmzdJ5Q3lT3OLJQwKkD7XF = "AchievementDate3Zenith";
-
 	public const string _plxF5m6bcc3vScC4bb4OYg69o4D = "AchievementDate1Mercy";
-
 	public const string _6HAHYglTo5SqJYS9UplGIVmEu6G = "AchievementDate2Mercy";
-
 	public const string _TFKzJtFMyBlkAwLHXPaqB4ZrG8f = "AchievementDate3Mercy";
-
 	public const string _99w5EIwQNOEecCOI5uS6vH5jvS0 = "AchievementDate1Remy";
-
 	public const string _3S91EwIHX5QdX8wlw6MWhJdCjem = "AchievementDate2Remy";
-
 	public const string _QsCz97tpcTrjDFPoV94tLwoTbyg = "AchievementDate3Remy";
-
 	public const string _OzA6crWN48yMnZd5KRXUWL3jyjb = "AchievementDate1Lex";
-
 	public const string _vAMOpgkNpNIGNVD3PDbP7vXtAxE = "AchievementDate2Lex";
-
 	public const string _MytZ8AS1SJuYc7s3RBSba2RoG3o = "AchievementDate3Lex";
-
 	public const string _zBHR34SJT99YQA1CisdanRIHK1w = "AchievementGeneric1";
-
 	public const string _bqiAeC2AJeU99WjZa5vDovaaviv = "AchievementGeneric2";
-
 	public const string _PMIaFU7pgzDiSIeqsJeOfFhSiPI = "AchievementGeneric3";
-
 	public const string _AKYwFx3D2lv2fP8RWjLBqTDM8TF = "AchievementGeneric4";
-
 	public const string _0y4DgdoabgH5rTGDM3UY5Gcc0Uf = "AchievementGeneric5";
-
 	public const string _0Pl3qCdgmZ6QXYAjw9wBgyI1UII = "AchievementGeneric6";
-
 	public const string _iLwqFhDw3O1PLa7vhQ9YWLyObii = "AchievementGeneric7";
-
 	public const string _rh6fSZZTx2NOMbWi1qy5spzBCbh = "AchievementGeneric8";
-
 	public const string _xCIsWl4Kr0BAJdR8gDuFnEIALEO = "AchievementGeneric9";
-
 	public const string _phtNQP6zcdMbTmRGiFNs0ZehoUL = "AchievementGeneric10";
-
 	public const string _L5Ps4riQGZIOB3u0xDU3RUIbDTh = "AchievementGeneric11";
 
 	private static readonly List<_eT2GJReQj8Acaq2A0H0eUir97Qf> _bUtL25YVF26t7moyja8EyHgA85q = new List<_eT2GJReQj8Acaq2A0H0eUir97Qf>

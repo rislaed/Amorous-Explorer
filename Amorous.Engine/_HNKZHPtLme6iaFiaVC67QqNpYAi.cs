@@ -19,9 +19,9 @@ public class _HNKZHPtLme6iaFiaVC67QqNpYAi : AbstractEvent<DialogueChoiceEventDat
 		Choices = dialogueChoiceEventData_0.Choices.ToArray();
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		_nkzqFdEfDyLcyGikIKGcHjklI4y.DiplayOptions(Choices.Select((DialogueChoiceItem dialogueChoiceItem_0) => dialogueChoiceItem_0.Text).ToArray());
 	}
 

@@ -17,7 +17,7 @@ using SDL2;
 using Spine;
 using Squid;
 
-public class Amorous : IAmorous
+public class AmorousSingleton : IAmorous
 {
 	private readonly Game Amorous;
 	private readonly GraphicsDeviceManager _ARAAkijJ1FF23wI2rNDaw7mTOeJ;
@@ -81,7 +81,7 @@ public class Amorous : IAmorous
 	public bool _LWcoDwIWvf8DT3nQmNe5z8fkUvI { get; set; }
 	public bool _ezjxb7tsh6Db1xblB74OYX4vVK => _DNbNFzOKO7vtoVmjI32p1Snwmpe;
 
-	public Amorous(Game game, bool safemode)
+	public AmorousSingleton(Game game, bool safemode)
 	{
 		Amorous = game;
 		Options.Read();
@@ -117,7 +117,7 @@ public class Amorous : IAmorous
 			};
 		}
 		Content.RootDirectory = "Content-Release";
-		Amorous.Content = new _xM5N1Fg3VZCSTaBWtPXoS6nJ82E(Content.ServiceProvider, Content.RootDirectory);
+		Amorous.Content = new ExtendedContentManager(Content.ServiceProvider, Content.RootDirectory);
 	}
 
 	public void Initialize()
@@ -212,9 +212,7 @@ public class Amorous : IAmorous
 		});
 	}
 
-	public void UnloadContent()
-	{
-	}
+	public void UnloadContent() {}
 
 	public void Update(GameTime gameTime)
 	{
@@ -257,7 +255,7 @@ public class Amorous : IAmorous
 			}
 			_xfiKuXXh5LQA9CUQiex6tutzFKQ = _Z8BClcChRJrlB6tR1VPJcycVpHN;
 			_Z8BClcChRJrlB6tR1VPJcycVpHN = null;
-			_xfiKuXXh5LQA9CUQiex6tutzFKQ.ResetVariation();
+			_xfiKuXXh5LQA9CUQiex6tutzFKQ.StopCutscene();
 		}
 		_xfiKuXXh5LQA9CUQiex6tutzFKQ.Update(gameTime);
 		_CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Update(gameTime);
@@ -303,7 +301,7 @@ public class Amorous : IAmorous
 				}
 			}
 		}
-		Gui.SetDecimalboard(list.ToArray());
+		Gui.SetKeyboard(list.ToArray());
 		Gui.SetButtons(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton), _RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton));
 		Gui.SetMouse(point.X, point.Y, _RbWJ7YGnYHCSoD44MRW1h5X6E7E._xFrCcVNAYrShLz07HqDph01nGwX);
 		Gui.TimeElapsed = gameTime.ElapsedGameTime.Milliseconds;
@@ -584,7 +582,7 @@ public class Amorous : IAmorous
 			colBlKEOYSqQMmmj719vN58K9aN();
 		}
 		_ColBlKEOYSqQMmmj719vN58K9aN = action_0;
-		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(Amorous))!.GetTypes()
+		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 			where typeof(AbstractScene).IsAssignableFrom(type_0)
 			select type_0;
 		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == string_0);
@@ -622,7 +620,7 @@ public class Amorous : IAmorous
 
 	public void _gYGB98heFqsLp9tgJbdCP01IKV2(string string_0)
 	{
-		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(Amorous))!.GetTypes()
+		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 			where typeof(AbstractSexscene).IsAssignableFrom(type_0)
 			select type_0;
 		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == string_0);
@@ -654,7 +652,7 @@ public class Amorous : IAmorous
 			_Ta8oiGRfjrRGtgUaA5S061UepZb = _nR8eroJOHehP0ZGyyTveo6aMTHg_0;
 			int int_ = _CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Data.GetDecimal(_nR8eroJOHehP0ZGyyTveo6aMTHg_0.Data.Name);
 			_poenyHBGUusBcnNcTFB9MQBV72R._RiDuYMeg3EHnBUteUcAb8VlfQVl();
-			_Ta8oiGRfjrRGtgUaA5S061UepZb.ResetVariation(int_);
+			_Ta8oiGRfjrRGtgUaA5S061UepZb.StopCutscene(int_);
 		}
 	}
 
@@ -680,7 +678,7 @@ public class Amorous : IAmorous
 		JsonSerializerSettings settings = new JsonSerializerSettings
 		{
 			TypeNameHandling = TypeNameHandling.Auto,
-			Converters = { (JsonConverter)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA() }
+			Converters = { (JsonConverter)new ColorJsonConverter() }
 		};
 		Cutscene Cutscene = JsonConvert.DeserializeObject<Cutscene>(value, settings);
 		if (Cutscene != null)
@@ -742,14 +740,14 @@ public class Amorous : IAmorous
 					if (CutsceneState_0.FadedOut)
 					{
 						_Ta8oiGRfjrRGtgUaA5S061UepZb = _hvKKVpHsQ6yw7YBy97lS8UDtil;
-						_Ta8oiGRfjrRGtgUaA5S061UepZb.ResetVariation(CutsceneState_0.Stage, CutsceneState_0.ID);
+						_Ta8oiGRfjrRGtgUaA5S061UepZb.StopCutscene(CutsceneState_0.Stage, CutsceneState_0.ID);
 					}
 					else
 					{
 						_Qj2G6fpAF4mGsATgkV8DPBF3aA1A._FegL010tc92iskjjyD0T33dDwNE(delegate
 						{
 							_Ta8oiGRfjrRGtgUaA5S061UepZb = _hvKKVpHsQ6yw7YBy97lS8UDtil;
-							_Ta8oiGRfjrRGtgUaA5S061UepZb.ResetVariation(CutsceneState_0.Stage, CutsceneState_0.ID);
+							_Ta8oiGRfjrRGtgUaA5S061UepZb.StopCutscene(CutsceneState_0.Stage, CutsceneState_0.ID);
 						});
 					}
 				});
@@ -757,11 +755,11 @@ public class Amorous : IAmorous
 		});
 	}
 
-	public void RefreshStorage()
+	public void Start()
 	{
 		_CYyzfcX8IclN1GnWsApBFWBpush(0);
 		_nvTYmpWmxq2DhO8ubfi3j5rZdLA();
-		_xfiKuXXh5LQA9CUQiex6tutzFKQ.RefreshStorage();
+		_xfiKuXXh5LQA9CUQiex6tutzFKQ.Start();
 	}
 
 	public void _lXEQJcXKxsjtZp00Y9aPe0ymGue<T>() where T : _8lVOgkauaSHbAkAqHzI1K7mIyOI
@@ -804,7 +802,7 @@ public class Amorous : IAmorous
 			NPCLayer NPCLayer = _xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(string_0);
 			if (NPCLayer == null)
 			{
-				IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(Amorous))!.GetTypes()
+				IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 					where typeof(AbstractNPC).IsAssignableFrom(type_0) && !type_0.IsAbstract
 					select type_0;
 				Type type = source.FirstOrDefault((Type type_0) => type_0.Name == string_0);

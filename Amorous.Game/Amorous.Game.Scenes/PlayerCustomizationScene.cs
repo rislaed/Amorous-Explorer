@@ -17,10 +17,10 @@ public class PlayerCustomizationScene : AbstractScene
 		public string Name { get; }
 		public string Scene { get; }
 
-		public SexsceneData(string string_0, string string_1)
+		public SexsceneData(string name, string scene)
 		{
-			_WJT1PtSst4BMDPVrhqxz2VnJrOC = string_0;
-			_lToB8ouR2ppZvt0Yb49qzPAAZJS = string_1;
+			Name = name;
+			Scene = scene;
 		}
 	}
 
@@ -52,7 +52,7 @@ public class PlayerCustomizationScene : AbstractScene
 	private int _3yqpoxOljKnrj7mGlnrA0eOUMAk;
 	private int _QjFuG8JMGq8rGnavgUdgnBEKBfD;
 
-	protected virtual string Amorous_002EGame_002EScenes_002EPlayerCustomizationScene_002E_l3SUNsFudHnZpYO0ErWgbTaz1DF => "Exit";
+	protected virtual string ReturnToGameText => "Exit";
 
 	public PlayerCustomizationScene(IAmorous game)
 		: base(game)
@@ -75,7 +75,7 @@ public class PlayerCustomizationScene : AbstractScene
 		_9jklVVcQQYcyqOYrkPiht2VP0IG = Game.Content.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
 		CustomizableSkin = new CustomizablePlayerSkin(base.Game);
 		_hI8MfcRDpV9Q45afjBJe8lA5sbr();
@@ -365,7 +365,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			Margin = new Margin(0, 10, 0, 0),
 			Dock = DockStyle.Top,
-			Text = Amorous_002EGame_002EScenes_002EPlayerCustomizationScene_002E_l3SUNsFudHnZpYO0ErWgbTaz1DF,
+			Text = ReturnToGameText,
 			Style = "button2"
 		};
 		button6.MouseClick += delegate

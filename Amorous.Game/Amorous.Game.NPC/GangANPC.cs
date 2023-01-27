@@ -28,13 +28,13 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 	public static Color Color = new Color(220, 0, 0);
 
 	public GangANPC(IAmorous game)
-		: base(Game, "Assets/NPC/GangA", 1f)
+		: base(game, "Assets/NPC/GangA", 1f)
 	{
 		Width = 1182;
 		Height = 966;
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Kazee and Taylor Nude");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Kazee and Taylor Shirts")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Kazee and Taylor Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetPose(EPoses.Neutral, "Kazee and Taylor Nude");
+		GetClothes(EPoses.Neutral, EClothes.Shirt, "Kazee and Taylor Shirts")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Neutral, EClothes.Pants, "Kazee and Taylor Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

@@ -28,11 +28,11 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 	public static Color Color = new Color(244, 146, 66);
 
 	public LifeguardNPC(IAmorous game)
-		: base(Game, "Assets/NPC/Lifeguard", 1f)
+		: base(game, "Assets/NPC/Lifeguard", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Riptide - Nude");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Riptide - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Riptide - Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetPose(EPoses.Standing, "Riptide - Nude");
+		GetClothes(EPoses.Standing, EClothes.Pants, "Riptide - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetClothes(EPoses.Standing, EClothes.Shirt, "Riptide - Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

@@ -28,11 +28,11 @@ public class JasonDartsonNPC : LayerNPC<JasonDartsonNPC.EHeads, JasonDartsonNPC.
 	public static Color Color = new Color(122, 53, 54);
 
 	public JasonDartsonNPC(IAmorous game)
-		: base(Game, "Assets/NPC/JasonDartson", 0.9f)
+		: base(game, "Assets/NPC/JasonDartson", 0.9f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Standing, "Jason Body")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Jason Cock");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Pants, "Jason Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Standing, EClothes.Shirt, "Jason Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetPose(EPoses.Standing, "Jason Body")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Jason Cock");
+		GetClothes(EPoses.Standing, EClothes.Pants, "Jason Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetClothes(EPoses.Standing, EClothes.Shirt, "Jason Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

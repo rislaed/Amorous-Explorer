@@ -8,8 +8,7 @@ namespace Amorous.Game.Scenes;
 public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 {
 	private bool _e1Kru66UIN1SkWkBreRDCF5RsWA;
-
-	string PlayerCustomizationScene._l3SUNsFudHnZpYO0ErWgbTaz1DF => "Back to Club";
+	override protected string ReturnToGameText => "Back to Club";
 
 	public SkipProloguePlayerCustomizationScene(IAmorous game)
 		: base(game)

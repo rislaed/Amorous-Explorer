@@ -91,7 +91,7 @@ public class SkyeSexscene : CensoredSexscene
 		base.SetSkin(variant);
 		switch (variant)
 		{
-			case VariantGray
+			case VariantGray:
 				base.Skin = SkinGray;
 				break;
 			case VariantYellow:

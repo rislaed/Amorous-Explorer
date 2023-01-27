@@ -18,7 +18,7 @@ public abstract class TimeOfDayScene : AbstractScene
 		_TyX29AlEBF2URt0abU6bc2VBQvm = new _G2GbwTTqXkVDMUL6fDmljsAPB4s(game);
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
 		SetVariant(VariantDay);
 	}

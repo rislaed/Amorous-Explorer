@@ -6,7 +6,7 @@ namespace Amorous.Game.Scenes;
 
 public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 {
-	string PlayerCustomizationScene._l3SUNsFudHnZpYO0ErWgbTaz1DF => "Back to Prologue";
+	override protected string ReturnToGameText => "Back to Prologue";
 
 	public ProloguePlayerCustomizationScene(IAmorous game)
 		: base(game)

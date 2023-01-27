@@ -49,12 +49,12 @@ public class DrivingScene : AbstractScene
 	public override void SetVariant(string daytime)
 	{
 		base.SetVariant(daytime);
-		_2WuocFtGsvuqlLRNzg1JvWYdCPu = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + string_0 + " Background", 0, 0);
-		_keMqzR2MH8pk2eRBjpmBvvHsKkH = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + string_0 + " Background 2", 0, 680);
-		_NtI6JcCZUIU6eqmZEqieFBtS51g = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + string_0 + " Foreground", 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + string_0 + " Tree A", 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + string_0 + " Tree B", 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + string_0 + " Tree C", 0, 0);
+		_2WuocFtGsvuqlLRNzg1JvWYdCPu = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background", 0, 0);
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background 2", 0, 680);
+		_NtI6JcCZUIU6eqmZEqieFBtS51g = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Foreground", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree A", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree B", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree C", 0, 0);
 		_HuRva9O1Dird7HCHNvEYAhbEXEx = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, _cmNp2s95voDHTlRfEo0WKjoNC5D.Length - 1);
 		_jLqsVc7ZjWokEg8zjm4aue7Vfwr();
 		_rn1x58VMBD9DAD7YIR46LqTEfMP = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(-1920, 0);

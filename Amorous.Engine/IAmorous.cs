@@ -78,7 +78,7 @@ public interface IAmorous
 
 	void RequestScene(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0);
 
-	void RefreshStorage();
+	void Start();
 
 	void _lXEQJcXKxsjtZp00Y9aPe0ymGue<T>() where T : _8lVOgkauaSHbAkAqHzI1K7mIyOI;
 

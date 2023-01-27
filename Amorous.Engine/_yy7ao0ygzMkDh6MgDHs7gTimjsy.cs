@@ -19,9 +19,9 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : AbstractEvent<DelayEventData>
 		Delay = delayEventData_0.Delay;
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		Stopwatch = Delay;
 	}
 

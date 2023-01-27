@@ -8,7 +8,7 @@ public interface IEvent
 
 	int NextID { get; }
 
-	void ResetVariation();
+	void StopCutscene();
 
 	bool _NeIQsy78kWqF9jXLl8vb2lOyZgO();
 

@@ -25,7 +25,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 			_3ITTZcgkF3r3Sr09GXF6V8n6iDH = null;
 		}
 
-		public void ResetVariation(int? nullable_0 = null)
+		public void StopCutscene(int? nullable_0 = null)
 		{
 			int _Enec98mrCn8lf4R9d5oYrOaqFsd = nullable_0 ?? Data.StartID;
 			State = Data.Events.FirstOrDefault((EventData EventData_0) => EventData_0.ID == _Enec98mrCn8lf4R9d5oYrOaqFsd);
@@ -65,7 +65,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 			if (_3ITTZcgkF3r3Sr09GXF6V8n6iDH != null)
 			{
 				_3ITTZcgkF3r3Sr09GXF6V8n6iDH.SetData(EventData_0);
-				_3ITTZcgkF3r3Sr09GXF6V8n6iDH.ResetVariation();
+				_3ITTZcgkF3r3Sr09GXF6V8n6iDH.StopCutscene();
 			}
 		}
 
@@ -142,7 +142,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 		return _92OAmtDtjVuY31kQhwNYVqhfbiL[type_0];
 	}
 
-	public void ResetVariation(int int_0, int? nullable_0 = null)
+	public void StopCutscene(int int_0, int? nullable_0 = null)
 	{
 		if (!_5PWaXifOOaIVN34JQsXRmvxXtqK)
 		{
@@ -150,7 +150,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 			if (fMuxd8PX5exXCoRNDVuFFbnirof != null)
 			{
 				Value = new _2MhByyFij8YJN7lWVuu8gpYhGCy(this, fMuxd8PX5exXCoRNDVuFFbnirof);
-				Value.ResetVariation(nullable_0);
+				Value.StopCutscene(nullable_0);
 			}
 			else
 			{
@@ -162,7 +162,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 	public void _h0KfaNiikKlJV2KkRPIdVDKVJnC()
 	{
 		Game._aJh9CibG5YKhkExxgRyVopdfSeJ._NtDfAf24kD2Korbc5hoME725A7d(Data.Name, _VQZivNSvg2tVi52cTTAQKYhamQK.Data.Stage);
-		Game.RefreshStorage();
+		Game.Start();
 	}
 
 	public void ResetProgression()
@@ -175,7 +175,7 @@ public class _nR8eroJOHehP0ZGyyTveo6aMTHg
 	{
 		if (_5PWaXifOOaIVN34JQsXRmvxXtqK && Value.Update(gameTime))
 		{
-			((IAmorous)this).RefreshStorage();
+			((IAmorous)this).Start();
 		}
 	}
 

@@ -17,9 +17,9 @@ public class _RXkY1nA34kgK019S1RLCVdAAPPD : AbstractEvent<DisableContactEventDat
 		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(disableContactEventData_0.Contact, out var result) ? result : PlayerData.EPhoneContacts.None);
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		PlayerPreferences.GetPlayerData().ResetContact(Contact);
 	}
 

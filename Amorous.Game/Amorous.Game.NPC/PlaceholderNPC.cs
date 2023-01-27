@@ -26,9 +26,9 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 	public static Color Color = new Color(255, 0, 255);
 
 	public PlaceholderNPC(IAmorous game)
-		: base(Game, "Assets/NPC/Placeholder", 1f)
+		: base(game, "Assets/NPC/Placeholder", 1f)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Placeholder, "Placeholder");
+		GetPose(EPoses.Placeholder, "Placeholder");
 	}
 
 	public override void SetLocation(NPCLocation npclocation_0)

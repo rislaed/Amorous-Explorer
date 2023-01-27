@@ -28,13 +28,13 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 	public static Color Color = new Color(17, 178, 105);
 
 	public SecurityGuardNPC(IAmorous game)
-		: base(Game, "Assets/NPC/SecurityGuard", 1f)
+		: base(game, "Assets/NPC/SecurityGuard", 1f)
 	{
 		Width = 452;
 		Height = 945;
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Neutral, "Alexis Nude", "Alexis Tufts");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Shirt, "Alexis Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Neutral, EClothes.Pants, "Alexis Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetPose(EPoses.Neutral, "Alexis Nude", "Alexis Tufts");
+		GetClothes(EPoses.Neutral, EClothes.Shirt, "Alexis Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Neutral, EClothes.Pants, "Alexis Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}

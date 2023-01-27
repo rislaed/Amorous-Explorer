@@ -7,7 +7,7 @@ public class ZenithDate3ABScene : AbstractScene
 	{
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
 		base.Game.RequestScene("ZenithDate");
 	}

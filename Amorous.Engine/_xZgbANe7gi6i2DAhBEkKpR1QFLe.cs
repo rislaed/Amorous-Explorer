@@ -12,11 +12,8 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 	private class _e6Sul13xByZYV3zUae0HX9fjnS
 	{
 		private readonly _xZgbANe7gi6i2DAhBEkKpR1QFLe _v5mBBzOHST4Ij2jetldrF2beJtbA;
-
 		private Color _JbGNnZhaeWyNm0aWm7TtSamww4C = Color.White;
-
 		private float _AQwQu1ldCtpbkD5F9oEByJdCnWaA;
-
 		private readonly Texture2D _OzFEGvZu5tqLcitcWhX3j9pIBZM;
 
 		public string Name { get; private set; }
@@ -60,17 +57,13 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 	}
 
 	private readonly string _cBXbsynpanoywEAm2hd5ysuf78l;
-
 	private List<_e6Sul13xByZYV3zUae0HX9fjnS> _uCN0rAUpYyEIvrweCRehrSN3Vsm;
-
 	private Vector2 _8unc6IeMzWr21kLsfewGCwXMejbA = Vector2.Zero;
 
 	public bool _YyDeMNgCbNCOMTBX2QLUb4ruMp9A = true;
 
 	protected readonly float _jSsdHgef86oxWXEOENwyht1nIvn = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(0f, (float)Math.PI * 2f);
-
 	protected float _ZSm5WiT2IPnq6W1i4QmcxHACwQh = 1f;
-
 	private readonly Effect _9jklVVcQQYcyqOYrkPiht2VP0IG;
 
 	public override float X
@@ -171,7 +164,7 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 
 	public virtual void Draw(SpriteBatch spriteBatch)
 	{
-		base._gytsCM4ef57F54AqmuiBr238JE0();
+		base.Draw();
 		if (_YyDeMNgCbNCOMTBX2QLUb4ruMp9A)
 		{
 			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
@@ -206,11 +199,6 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 		return true;
 	}
 
-	protected override void _PdRLTpsImBScBFQhILtCHJpcsllA(float float_0)
-	{
-	}
-
-	protected override void _Hx7zLXU6nbxudxFgMuYbyRXeEPB()
-	{
-	}
+	protected override void _PdRLTpsImBScBFQhILtCHJpcsllA(float float_0) {}
+	protected override void _Hx7zLXU6nbxudxFgMuYbyRXeEPB() {}
 }

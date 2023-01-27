@@ -22,8 +22,10 @@ public static class AmorousLifecycle
 	[return: MarshalAs(UnmanagedType.Bool)]
 	private static extern bool SetDllDirectory(string string_0);
 
+	public static bool IsUnix => (int) Environment.OSVersion.Platform is 4 or 6 or 128;
+
 	[STAThread]
-	public static void _PijxDMohBfV8yAM5NbVyQM599kM(string[] args)
+	public static void Main(string[] args)
 	{
 		AppDomain.CurrentDomain.UnhandledException += delegate(object sender, UnhandledExceptionEventArgs e)
 		{
@@ -33,14 +35,16 @@ public static class AmorousLifecycle
 		Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 		Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
 		Logger.Initialize();
-		try
-		{
-			SetDefaultDllDirectories(_e2Ucgs0TphHTAenda7BAmHbfNPD);
-			AddDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
-		}
-		catch
-		{
-			SetDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
+		if (!IsUnix) {
+			try
+			{
+				SetDefaultDllDirectories(_e2Ucgs0TphHTAenda7BAmHbfNPD);
+				AddDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
+			}
+			catch
+			{
+				SetDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
+			}
 		}
 		FNALoggerEXT.LogInfo = delegate(string string_0)
 		{
@@ -57,18 +61,18 @@ public static class AmorousLifecycle
 		Environment.SetEnvironmentVariable("FNA_OPENGL_DISABLE_LATESWAPTEAR", "1");
 		try
 		{
-			bool safemode = Array.Exists(args, (self) => self == "-safemode");
-			if (Array.Exists(args, (self) => self == "-disablesound"))
+			bool safemode = args.Contains("-safemode");
+			if (args.Contains("-disablesound"))
 			{
 				Environment.SetEnvironmentVariable("FNA_AUDIO_DISABLE_SOUND", "1");
 			}
-			if (Array.Exists(args, (self) => self == "-d3d11"))
+			if (args.Contains("-d3d11"))
 			{
 				Environment.SetEnvironmentVariable("FNA_OPENGL_FORCE_ES3", "1");
 				Environment.SetEnvironmentVariable("SDL_OPENGL_ES_DRIVER", "1");
 			}
-			using AmorousGame skYjfUaaNhTySNgoGUeFZ46X4dM = new AmorousGame(safemode);
-			skYjfUaaNhTySNgoGUeFZ46X4dM.Run();
+			using AmorousGame game = new AmorousGame(safemode);
+			game.Run();
 		}
 		catch (Exception exception_)
 		{

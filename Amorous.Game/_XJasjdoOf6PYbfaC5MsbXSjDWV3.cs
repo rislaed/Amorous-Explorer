@@ -10,18 +10,13 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 	private class _RQQdLVHyZm4GNvRCeQfcIx1OlwJ
 	{
 		public Frame _kvuzph4c9LD4fDAaURHVjkfJKwk;
-
 		public float _AmIUCcrmrrQiiirja7DoiZSjXuv;
 	}
 
 	private const float _c8P7clKqCyeAfypCea6vVId1tdN = 5f;
-
 	private readonly Desktop _9GQBAH2pi8Sm6ph1s6InjyQGe6R;
-
 	private readonly Frame _g1jCwh8QFyZkbnduUiAjCzKbLWF;
-
 	private readonly List<_RQQdLVHyZm4GNvRCeQfcIx1OlwJ> _IRRZMMioeCJC8zGoIaJiRaRSSiM;
-
 	private bool _0WBDNE6IV1uJhHzUHzdiNj5c9bcA;
 
 	public _XJasjdoOf6PYbfaC5MsbXSjDWV3()
@@ -110,7 +105,7 @@ public class _XJasjdoOf6PYbfaC5MsbXSjDWV3
 		if (_0WBDNE6IV1uJhHzUHzdiNj5c9bcA)
 		{
 			_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = false;
-			_IRRZMMioeCJC8zGoIaJiRaRSSiM.Remove((_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0) => _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f);
+			_IRRZMMioeCJC8zGoIaJiRaRSSiM.RemoveAll((_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0) => _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0._AmIUCcrmrrQiiirja7DoiZSjXuv >= 5f);
 		}
 	}
 

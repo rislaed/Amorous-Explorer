@@ -26,14 +26,14 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 	protected ClubStaticSpineNPC(IAmorous game, string string_0, string[] string_1, string[] string_2 = null, string[] string_3 = null)
 		: base(game, string_0, 1f, bool_0: true)
 	{
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Nude, string_1);
+		GetPose(EPoses.Nude, string_1);
 		if (string_2 != null)
 		{
-			_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Shirt, string_2)._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+			GetClothes(EPoses.Nude, EClothes.Shirt, string_2)._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		}
 		if (string_3 != null)
 		{
-			_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Nude, EClothes.Pants, string_3)._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+			GetClothes(EPoses.Nude, EClothes.Pants, string_3)._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		}
 	}
 

@@ -25,7 +25,7 @@ public class _DW9IcpdMEINZmuzfrqmwsduBGih
 	private static readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO = new JsonSerializerSettings
 	{
 		TypeNameHandling = TypeNameHandling.Auto,
-		Converters = { (JsonConverter)new _VSQz6uDf5A6KqE8xqKxxcrkhZkA() }
+		Converters = { (JsonConverter)new ColorJsonConverter() }
 	};
 
 	private static string _AiegX5a7OwPp1LYkClPD8o1ULsK;

@@ -16,9 +16,9 @@ public class _ZXdfBmHEapkc67visJnDe1hgtuz : AbstractEvent<SwitchToSubsceneEventD
 		SubsceneName = switchToSubsceneEventData_0.SubsceneName;
 	}
 
-	public override void ResetVariation()
+	public override void StopCutscene()
 	{
-		base.ResetVariation();
+		base.StopCutscene();
 		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene.SetVariant(SubsceneName);
 	}
 

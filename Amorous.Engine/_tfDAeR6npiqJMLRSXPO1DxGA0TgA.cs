@@ -60,7 +60,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 
 	public void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 	{
-		base._gytsCM4ef57F54AqmuiBr238JE0();
+		base.Draw();
 		if (_7sgRQPgr8EJYjFmEXCYagaObJd0)
 		{
 			_4nhWi4RWJVAsAaRiBUYVgLfEiCz(skeletonMeshRenderer);
@@ -80,7 +80,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 		{
 			Spine.X = X;
 			Spine.Y = Y;
-			Spine.Draw(skeletonMeshRenderer, float_0: base.Scale, texture2D_0: Skin, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A, nullable_0: _IvIFs0Tl6RHdTn3daJXsNCXCNyO ? new Color?(new Color(1, 0, 0, 1)) : null);
+			Spine.Draw(skeletonMeshRenderer, float_0: base.Scale, texture2D: Skin, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A, nullable_0: _IvIFs0Tl6RHdTn3daJXsNCXCNyO ? new Color?(new Color(1, 0, 0, 1)) : null);
 		}
 	}
 
@@ -99,7 +99,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 			base.Game._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.Transparent);
 			Spine.X = eBuDnRXeABWf8uwfsN15PfKEHw.Location.X;
 			Spine.Y = eBuDnRXeABWf8uwfsN15PfKEHw.Location.Y;
-			Spine.Draw(skeletonMeshRenderer, float_0: base.Scale, texture2D_0: Skin, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A);
+			Spine.Draw(skeletonMeshRenderer, float_0: base.Scale, texture2D: Skin, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A);
 			base.Game._2yepMkVENnecIsduggABaU2qhXW.SetRenderTargets(renderTargets);
 		}
 	}

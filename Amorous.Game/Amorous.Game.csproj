@@ -2,18 +2,20 @@
 	<PropertyGroup>
 		<AssemblyName>Amorous.Game</AssemblyName>
 		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-		<TargetFramework>net40</TargetFramework>
+		<TargetFrameworks>net40;net6.0</TargetFrameworks>
+	</PropertyGroup>
+	<PropertyGroup>
+		<GeneratedAssemblyInfoFile>Properties/AssemblyInfo.cs</GeneratedAssemblyInfoFile>
 	</PropertyGroup>
 	<PropertyGroup>
 		<LangVersion>Preview</LangVersion>
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 	</PropertyGroup>
 	<PropertyGroup />
-	<ItemGroup />
 	<ItemGroup>
-		<Reference Include="Amorous.Engine">
-			<HintPath>../Amorous.Engine.dll</HintPath>
-		</Reference>
+	  <ProjectReference Include="..\Amorous.Engine\Amorous.Engine.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 		<Reference Include="FNA">
 			<HintPath>../FNA.dll</HintPath>
 		</Reference>
@@ -28,9 +30,6 @@
 		</Reference>
 		<Reference Include="Facepunch.Steamworks">
 			<HintPath>../Facepunch.Steamworks.dll</HintPath>
-		</Reference>
-		<Reference Include="System.Core">
-			<HintPath>/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.13/System.Core.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>

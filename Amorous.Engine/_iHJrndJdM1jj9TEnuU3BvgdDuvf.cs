@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 {
-	private string Text;
+	private string _text;
 	private Vector2 Overlap;
 	private Vector2 AbsoluteLocation;
 	public SpriteFont Font { get; private set; }
@@ -13,14 +13,14 @@ public class _iHJrndJdM1jj9TEnuU3BvgdDuvf : _d4ad1i8rcZMvfN9iaxggA1KtVgx
 	{
 		get
 		{
-			return Text;
+			return _text;
 		}
 		set
 		{
-			Text = value;
-			if (!string.IsNullOrEmpty(Text))
+			_text = value;
+			if (!string.IsNullOrEmpty(_text))
 			{
-				Overlap = Font.MeasureString(Text);
+				Overlap = Font.MeasureString(_text);
 			}
 			else
 			{

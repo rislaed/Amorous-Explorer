@@ -25,13 +25,13 @@ public class ClubInsideDancerDNPC : SpineNPC<ClubInsideDancerDNPC.EHeads, ClubIn
 	}
 
 	public ClubInsideDancerDNPC(IAmorous game)
-		: base(Game, "Assets/NPC/ClubInsideStatic/Dancer D", 0.8f, bool_0: true)
+		: base(game, "Assets/NPC/ClubInsideStatic/Dancer D", 0.8f, bool_0: true)
 	{
 		base.Spine.StartAnimationWithLooping("Dancing");
-		_aRXZ6kQYnlqRUMIC19x1vIPD62D(EHeads.Smirk, "Head");
-		_zDmJ8ztQTMoRvRw2LsNKu5foPpF(EPoses.Dancing, "Arm right", "Body", "Left forearm", "Tail")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Shirt, "Shirt", "Shirt arm right", "Shirt left forearm")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_ccFOL4TZ4tCLpGUyk1Z9D4UfzEh(EPoses.Dancing, EClothes.Pants, "Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+		GetEmotion(EHeads.Smirk, "Head");
+		GetPose(EPoses.Dancing, "Arm right", "Body", "Left forearm", "Tail")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
+		GetClothes(EPoses.Dancing, EClothes.Shirt, "Shirt", "Shirt arm right", "Shirt left forearm")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+		GetClothes(EPoses.Dancing, EClothes.Pants, "Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
 		_upl1k7yzBzlU7vErvbydGmXROfA = true;
 	}
