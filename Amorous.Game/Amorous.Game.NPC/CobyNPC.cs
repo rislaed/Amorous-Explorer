@@ -33,11 +33,10 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 	}
 
 	public static string Name = "Coby";
-
 	public static Color Color = new Color(104, 193, 255);
 
 	public CobyNPC(IAmorous game)
-		: base(game, "Assets/NPC/Coby/Coby", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Coby/Coby", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Breathing");
 		GetEmotion(EHeads.Sad, "Sad Head", "Sad Pupils", "Sad Eye back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Sad Blink");

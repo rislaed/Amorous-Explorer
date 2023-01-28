@@ -49,7 +49,7 @@ public class StartupScene : AbstractScene
 		AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
 		AddTexturedLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
 		AddForegroundTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
 		Window window = new Window
 		{
 			Position = new Point(704, 412),
@@ -120,7 +120,7 @@ public class StartupScene : AbstractScene
 				ApiReponse apiReponse = JsonConvert.DeserializeObject<ApiReponse>(streamReader.ReadToEnd());
 				if (!apiReponse.error)
 				{
-					string text = _boyt8NIMtKsAGSTcjHeL0WMbFxs._mCgIgZp06WD70u8PXcTcCcl6zfe(_njC7ZfEM6PTCffwkw18LisM3W9E.Text + _mzwWNbSlBetGnbEr0j6IpMenjkp.Text + apiReponse.message + apiReponse.timestamp);
+					string text = Randoms.GetMD5(_njC7ZfEM6PTCffwkw18LisM3W9E.Text + _mzwWNbSlBetGnbEr0j6IpMenjkp.Text + apiReponse.message + apiReponse.timestamp);
 					if (text == apiReponse.hash)
 					{
 						_x8adRt6rvrXniPFYijbzqvPFr4j();
@@ -148,7 +148,7 @@ public class StartupScene : AbstractScene
 		};
 		button2.MouseClick += delegate
 		{
-			base.Game._fDSidqggP063WGf2vzkdlA1UDkn("https://forums.amorousgame.com/lost-password/");
+			base.Game.OpenUrl("https://forums.amorousgame.com/lost-password/");
 		};
 		window.Controls.Add(item);
 		window.Controls.Add(item2);
@@ -161,14 +161,14 @@ public class StartupScene : AbstractScene
 		base.Squid.Controls.Add(window);
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		CoupleANPC coupleANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(LayerOrder.Background);
+		CoupleANPC coupleANPC = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Background);
 		coupleANPC.X = 350f;
 		coupleANPC.Y = 1090f;
 		coupleANPC.SetPose(CoupleANPC.EPoses.Waving);
 		coupleANPC.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
-		CoupleBNPC coupleBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(LayerOrder.Background);
+		CoupleBNPC coupleBNPC = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Background);
 		coupleBNPC.X = 550f;
 		coupleBNPC.Y = 1090f;
 		coupleBNPC.SetPose(CoupleBNPC.EPoses.Waving);

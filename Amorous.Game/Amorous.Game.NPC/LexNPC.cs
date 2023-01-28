@@ -37,11 +37,10 @@ public class LexNPC : SpineNPC<LexNPC.EHeads, LexNPC.EPoses, LexNPC.EClothes>
 	}
 
 	public static string Name = "Lex";
-
 	public static Color Color = new Color(255, 128, 0);
 
 	public LexNPC(IAmorous game)
-		: base(game, "Assets/NPC/Lex/Lex", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Lex/Lex", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		string[] first = new string[5] { "Fringe", "Hair back", "Pupils", "Eyes back", "Ear" };

@@ -31,8 +31,8 @@ public class BedroomScene : TimeOfDayScene
 		}
 		AddInteractableLayer("Background", "Assets/Scenes/Bedroom/Kangaroo Plush", 359, 159, null, 0, 0, "A little something my brother bought as a reminder of his long-distance boyfriend. It must be a pretty open relationship.");
 		AddInteractableLayer("Background", "Assets/Scenes/Bedroom/Laptop", 1153, 662, null, 0, 0, "My entertainment centre for the last few weeks.");
-		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-458, 458, 0, 0);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
+		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-458, 458, 0, 0);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(Game);
 		Reset();
 	}
@@ -41,13 +41,13 @@ public class BedroomScene : TimeOfDayScene
 	{
 		if (PlayerPreferences.GetPlayerData().GetDecimal("Prologue") == 40)
 		{
-			base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._0Y1BTbSbP9IopfJXfeA4x02PifL("MessageTutorial1");
+			base.Game.Achievements.GainTutorial("MessageTutorial1");
 		}
 		ResetFailedDates();
 		ResetDeletedContacts();
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
 		Reset();
 	}
@@ -60,8 +60,8 @@ public class BedroomScene : TimeOfDayScene
 			data.AddContact(PlayerData.EPhoneContacts.Coby);
 			data.SetDecimal("Prologue", 40);
 			data.SetBit("CobyLeftClub", bool_0: true);
-			base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._rGMDL1kMYXSwaZiIoINCo5AqZuM(PlayerData.EPhoneContacts.Coby);
-			base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric4");
+			base.Game.Achievements.GainContact(PlayerData.EPhoneContacts.Coby);
+			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric4);
 		}
 		if (data.GetBit("LexLeftClub") && (data.GetDecimal("LexPreDate") == 20 || data.GetDecimal("LexDate") == 40))
 		{
@@ -165,7 +165,7 @@ public class BedroomScene : TimeOfDayScene
 
 	private void OnClosetClick()
 	{
-		base.Game.RequestScene("Clothes");
+		base.Game.StartCutscene("Clothes");
 	}
 
 	private void OnDoorClick()
@@ -176,7 +176,7 @@ public class BedroomScene : TimeOfDayScene
 		}
 		else
 		{
-			base.Game.RequestScene("Prologue");
+			base.Game.StartCutscene("Prologue");
 		}
 	}
 }

@@ -4,8 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
-using Amorous.Engine.GUI;
+// using Amorous.Engine.GUI;
 using Amorous.Engine.NPC;
 using Amorous.Game.Scenes;
 using Microsoft.Xna.Framework;
@@ -19,37 +18,37 @@ using Squid;
 
 public class AmorousSingleton : IAmorous
 {
-	private readonly Game Amorous;
-	private readonly GraphicsDeviceManager _ARAAkijJ1FF23wI2rNDaw7mTOeJ;
-	private SpriteBatch _ZXUztyGtStF4WzGVig7wu43cfnf;
-	private SkeletonMeshRenderer _BuJyoOT5ylWcIMxjcKRnxVmYvBd;
-	private _wRd4nHuQQlAPEwrHOGkBfut6Uip _chds2l0ZCMMghly7dv4eik3iSH5;
-	private RenderTarget2D _j2ynkEUaNLywHdchuAYJWHF3l9DA;
-	private Microsoft.Xna.Framework.Rectangle _CCbe95wREA1VhjgpntSpzsQ19He;
-	private _gJR4g7ak0hsZAUWX1vJbMqG2P5I _RA1aFlOff0jGfI2cKUGhYI1MRLBA;
-	private _UmxbIbk7pgaod0bD7pS309P3Lns _6M30VBCyHzfi1RYZYx7uJAHl1EC;
-	private _AUtA43NfhBNYDqRrVB1t9VQxe1v _PxO28nve6nqbBLBJKrzHMRbOasHA;
-	private _3FFZvGWTAe7rsviKkDPTXEVjxWf _YNCmHGUHBydamu5BEECMWoB65VfA;
-	private _XJasjdoOf6PYbfaC5MsbXSjDWV3 _9rxbJ7LsE3DhACUHVlPZaixc5Jp;
-	private Achievements _db5uuwyBnUwxthW14pfDBlBoqUp;
-	private _KDiaUloddpdv1QwixDEBIJs6IMA _p3BLtW5bCDzTS86VFihe1pfwDoP;
-	private Action _ColBlKEOYSqQMmmj719vN58K9aN;
-	private AbstractScene _xfiKuXXh5LQA9CUQiex6tutzFKQ;
-	private AbstractScene _Z8BClcChRJrlB6tR1VPJcycVpHN;
-	private PlayerPreferences _CCtbrNWS4Gi5hRSEsXYI5VzS7gI;
-	private _poenyHBGUusBcnNcTFB9MQBV72R _SUHe9KzfAd477MCCYxTvqFf3efl;
-	private _nkzqFdEfDyLcyGikIKGcHjklI4y _P62DygY6CKZG8s5wqDu0uAFksjs;
-	private _nR8eroJOHehP0ZGyyTveo6aMTHg _Ta8oiGRfjrRGtgUaA5S061UepZb;
-	private AbstractSexscene _ieTMbMiu3eGRdmzTMofKoJopZAf;
-	private _8lVOgkauaSHbAkAqHzI1K7mIyOI _fp8jsuSnELXqf2yy2JQDaXDCBVQ;
-	private Texture2D _0SvmBhkBX8SImQwyvuy5xVObqLn;
-	private SpriteFont _xnYepZuegigJCU2jcbZsfVIakzF;
+	private readonly Game _game;
+	private readonly GraphicsDeviceManager _display;
+	private SpriteBatch _batch;
+	private SkeletonMeshRenderer _spines;
+	private MouseObserver _mouse;
+	private RenderTarget2D _canvas;
+	private Microsoft.Xna.Framework.Rectangle _destinationRectangle;
+	private ScreenFader _fader;
+	private FadingMediaPlayer _media;
+	private ExtendedTextureLoader _resources;
+	private ControllerObserver _controller;
+	private Notifications _notifier;
+	private Achievements _achievements;
+	private SteamObserver _steam;
+	private Action _pendingSceneThen;
+	private AbstractScene _scene;
+	private AbstractScene _pendingScene;
+	private PlayerPreferences _player;
+	private PhoneOverlay _phone;
+	private TypingDialogue _writer;
+	private Cutscene _cutscene;
+	private AbstractSexscene _sexscene;
+	private InteractableOverlay _overlay;
+	private Texture2D _cursorTexture;
+	private SpriteFont _font;
 
-	private bool _DNbNFzOKO7vtoVmjI32p1Snwmpe;
-	private bool _Fs6y8qquj1mRHLz6xw6KoI4SAvH;
-	private bool _qZ4p0zzU9dj7bhTFunYbFjSNY6D;
+	private bool _hasControls;
+	private bool _debugger;
+	private bool _pendingScreenshot;
 
-	private static readonly string[] _dKSAtbg8U4PX1oOcOJ2BFewVtcI = new string[8]
+	private static readonly string[] _nonContextualPlaces = new string[8]
 	{
 		typeof(BedroomScene).Name,
 		typeof(LivingRoomScene).Name,
@@ -61,33 +60,33 @@ public class AmorousSingleton : IAmorous
 		typeof(ClubUpstairsScene).Name
 	};
 
-	private Microsoft.Xna.Framework.Input.Keys[] _gylJZYyc3mVB0fbHPCctDIg4UAE;
-	private string[] _sUwMzXXmi9PdDQ0bFQhbGQJUPTe;
-	private Vector2 _Vh2qdN4Ha62herl19def6PyuanQ;
+	private Microsoft.Xna.Framework.Input.Keys[] _keyboard;
+	private string[] _debuggerCutsceneStates;
+	private Vector2 _debuggerPoint;
 
-	public GameWindow _8k7Do3TGW5NrB22zl8QzInP2j7k => Amorous.Window;
-	public GraphicsDevice _2yepMkVENnecIsduggABaU2qhXW => Amorous.GraphicsDevice;
-	public ContentManager Content => Amorous.Content;
-	public _3FFZvGWTAe7rsviKkDPTXEVjxWf _RbWJ7YGnYHCSoD44MRW1h5X6E7E => _YNCmHGUHBydamu5BEECMWoB65VfA;
-	public _wRd4nHuQQlAPEwrHOGkBfut6Uip _vsceSzSIjBy2nZrCxAzKZbUiwLq => _chds2l0ZCMMghly7dv4eik3iSH5;
-	public AbstractScene Scene => _xfiKuXXh5LQA9CUQiex6tutzFKQ;
-	public AbstractSexscene Sexscene => _ieTMbMiu3eGRdmzTMofKoJopZAf;
-	public _nR8eroJOHehP0ZGyyTveo6aMTHg _5zNdOw7qHmuCAPJFMr3SsZdBlCr => _Ta8oiGRfjrRGtgUaA5S061UepZb;
-	public _gJR4g7ak0hsZAUWX1vJbMqG2P5I _Qj2G6fpAF4mGsATgkV8DPBF3aA1A => _RA1aFlOff0jGfI2cKUGhYI1MRLBA;
-	public _8lVOgkauaSHbAkAqHzI1K7mIyOI _o2QVQfIAsuLcmPxn14llGoZA52y => _fp8jsuSnELXqf2yy2JQDaXDCBVQ;
-	public IAchievements _aJh9CibG5YKhkExxgRyVopdfSeJ => _db5uuwyBnUwxthW14pfDBlBoqUp;
-	public bool _kSReo0whY1pgfTnFOSc44ppANOe => _ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen;
-	public bool _NdzU0m9x8QDKpVv3DrQmzY5KduB { get; set; }
-	public bool _LWcoDwIWvf8DT3nQmNe5z8fkUvI { get; set; }
-	public bool _ezjxb7tsh6Db1xblB74OYX4vVK => _DNbNFzOKO7vtoVmjI32p1Snwmpe;
+	public GameWindow Window => _game.Window;
+	public GraphicsDevice GLES => _game.GraphicsDevice;
+	public ContentManager Content => _game.Content;
+	public ControllerObserver Controller => _controller;
+	public MouseObserver Mouse => _mouse;
+	public AbstractScene Scene => _scene;
+	public AbstractSexscene Sexscene => _sexscene;
+	public Cutscene Cutscene => _cutscene;
+	public ScreenFader Fading => _fader;
+	public InteractableOverlay Overlay => _overlay;
+	public IAchievements Achievements => _achievements;
+	public bool IsFullscreen => _display.IsFullScreen;
+	public bool InScenePending { get; set; }
+	public bool IsRenderingCursor { get; set; }
+	public bool IsControlsOnScreen => _hasControls;
 
 	public AmorousSingleton(Game game, bool safemode)
 	{
-		Amorous = game;
+		_game = game;
 		Options.Read();
 		if (safemode)
 		{
-			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = new GraphicsDeviceManager(game)
+			_display = new GraphicsDeviceManager(game)
 			{
 				IsFullScreen = false,
 				PreferredBackBufferWidth = 1024,
@@ -98,7 +97,7 @@ public class AmorousSingleton : IAmorous
 		else if (!Options.ContainsResolution())
 		{
 			DisplayMode currentDisplayMode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
-			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = new GraphicsDeviceManager(game)
+			_display = new GraphicsDeviceManager(game)
 			{
 				IsFullScreen = true,
 				PreferredBackBufferWidth = currentDisplayMode.Width,
@@ -108,7 +107,7 @@ public class AmorousSingleton : IAmorous
 		}
 		else
 		{
-			_ARAAkijJ1FF23wI2rNDaw7mTOeJ = new GraphicsDeviceManager(game)
+			_display = new GraphicsDeviceManager(game)
 			{
 				IsFullScreen = Options.Data.Fullscreen,
 				PreferredBackBufferWidth = Options.Data.ResolutionWidth,
@@ -117,12 +116,12 @@ public class AmorousSingleton : IAmorous
 			};
 		}
 		Content.RootDirectory = "Content-Release";
-		Amorous.Content = new ExtendedContentManager(Content.ServiceProvider, Content.RootDirectory);
+		_game.Content = new ExtendedContentManager(Content.ServiceProvider, Content.RootDirectory);
 	}
 
 	public void Initialize()
 	{
-		Amorous.Disposed += delegate
+		_game.Disposed += delegate
 		{
 			Options.Save();
 		};
@@ -131,61 +130,61 @@ public class AmorousSingleton : IAmorous
 		{
 			SDL.SDL_SetClipboardText(string_0);
 		});
-		string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NonSteam");
-		if (!File.Exists(text) && !File.Exists(text + ".txt"))
+		string pathNonSteam = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NonSteam");
+		if (!File.Exists(pathNonSteam) && !File.Exists(pathNonSteam + ".txt"))
 		{
-			_p3BLtW5bCDzTS86VFihe1pfwDoP = new _KDiaUloddpdv1QwixDEBIJs6IMA();
-			if (!_p3BLtW5bCDzTS86VFihe1pfwDoP.Initialize(778700u, this))
+			_steam = new SteamObserver();
+			if (!_steam.Initialize(778700u, this))
 			{
-				_p3BLtW5bCDzTS86VFihe1pfwDoP = null;
+				_steam = null;
 			}
 		}
-		_db5uuwyBnUwxthW14pfDBlBoqUp = new Achievements(this, _p3BLtW5bCDzTS86VFihe1pfwDoP);
+		_achievements = new Achievements(this, _steam);
 	}
 
 	public void LoadContent()
 	{
-		string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ShowMeSomeBooty");
-		Censorship.SetBooties(File.Exists(text) || File.Exists(text + ".txt"));
-		_YNCmHGUHBydamu5BEECMWoB65VfA = new _3FFZvGWTAe7rsviKkDPTXEVjxWf(this);
-		_gylJZYyc3mVB0fbHPCctDIg4UAE = (Microsoft.Xna.Framework.Input.Keys[])Enum.GetValues(typeof(Microsoft.Xna.Framework.Input.Keys));
-		_RbWJ7YGnYHCSoD44MRW1h5X6E7E._tZI6Co0uB31aGK7Qk4qvEImgcnO = true;
-		_ZXUztyGtStF4WzGVig7wu43cfnf = new SpriteBatch(Amorous.GraphicsDevice);
-		_BuJyoOT5ylWcIMxjcKRnxVmYvBd = new SkeletonMeshRenderer(Amorous.GraphicsDevice);
-		_chds2l0ZCMMghly7dv4eik3iSH5 = new _wRd4nHuQQlAPEwrHOGkBfut6Uip(this, 1920, 1080);
-		_chds2l0ZCMMghly7dv4eik3iSH5._2lMgp1KOzK9I6kd7CHrDq2A2CHm(_ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight);
-		_j2ynkEUaNLywHdchuAYJWHF3l9DA = new RenderTarget2D(Amorous.GraphicsDevice, 1920, 1080);
-		_j2ynkEUaNLywHdchuAYJWHF3l9DA._w2YD42TXOY22EP4Mpp7wzDUO4xv(RenderTargetUsage.PreserveContents);
-		_CCbe95wREA1VhjgpntSpzsQ19He = new Microsoft.Xna.Framework.Rectangle(_chds2l0ZCMMghly7dv4eik3iSH5._jDxCg7GJnIKcLXDcUVSdbEIQL3Yb, _chds2l0ZCMMghly7dv4eik3iSH5._ILCBrSipj1Qk4CsYzkEELxHvkkY, _chds2l0ZCMMghly7dv4eik3iSH5._HZrLDiX4EPtS6jM8Odd9yJAatHq, _chds2l0ZCMMghly7dv4eik3iSH5._ypqaDJqrkQlUKOrdZIXld5qQQ4x);
-		Gui.Renderer = new _k8LAl8bPyzLGEpo59dKFGU4sCQ(Amorous);
-		Gui.Renderer.SetTexture("PhoneScreen", Amorous.Content.Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
-		Gui.Renderer.SetTexture("Contact_DJ", Amorous.Content.Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
-		_KyKsjBAROeUAsKraBIxtuHTSPwg._Uh2GhEF2pLNc3a7l5WMdPGP2bZd = _pql4s9X0U3svdBghGax6VsdF2Gq;
-		_CCtbrNWS4Gi5hRSEsXYI5VzS7gI = new PlayerPreferences();
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA = new _gJR4g7ak0hsZAUWX1vJbMqG2P5I(Amorous.GraphicsDevice);
-		_6M30VBCyHzfi1RYZYx7uJAHl1EC = new _UmxbIbk7pgaod0bD7pS309P3Lns(Amorous.Content);
-		_PxO28nve6nqbBLBJKrzHMRbOasHA = new _AUtA43NfhBNYDqRrVB1t9VQxe1v(Amorous.Content);
-		_9rxbJ7LsE3DhACUHVlPZaixc5Jp = new _XJasjdoOf6PYbfaC5MsbXSjDWV3();
-		Texture2D texture2D_ = Amorous.Content.Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
-		Texture2D texture2D_2 = Amorous.Content.Load<Texture2D>("Assets/GUI/Dialogue/button");
-		_0SvmBhkBX8SImQwyvuy5xVObqLn = Amorous.Content.Load<Texture2D>("Assets/GUI/Squid/DefaultCursor");
-		_LWcoDwIWvf8DT3nQmNe5z8fkUvI = true;
-		_xnYepZuegigJCU2jcbZsfVIakzF = Amorous.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		SpriteFont spriteFont_ = Amorous.Content.Load<SpriteFont>("Assets/GUI/Fonts/BoldItalic-26");
-		_P62DygY6CKZG8s5wqDu0uAFksjs = new _nkzqFdEfDyLcyGikIKGcHjklI4y(this, texture2D_, texture2D_2, _xnYepZuegigJCU2jcbZsfVIakzF, spriteFont_);
-		_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _DW9IcpdMEINZmuzfrqmwsduBGih._jVNnsNFMjoGC9t7v83qLI8vEZSH();
-		if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
+		string bootiesPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ShowMeSomeBooty");
+		Censorship.SetBooties(File.Exists(bootiesPath) || File.Exists(bootiesPath + ".txt"));
+		_controller = new ControllerObserver(this);
+		_keyboard = (Microsoft.Xna.Framework.Input.Keys[])Enum.GetValues(typeof(Microsoft.Xna.Framework.Input.Keys));
+		Controller.Grabbed = true;
+		_batch = new SpriteBatch(_game.GraphicsDevice);
+		_spines = new SkeletonMeshRenderer(_game.GraphicsDevice);
+		_mouse = new MouseObserver(this, 1920, 1080);
+		_mouse.SetResolution(_display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
+		_canvas = new RenderTarget2D(_game.GraphicsDevice, 1920, 1080);
+		_canvas.SetUsage(RenderTargetUsage.PreserveContents);
+		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_mouse.RelativeX, _mouse.RelativeY, _mouse.RelativeWidth, _mouse.RelativeHeight);
+		Gui.Renderer = new SquidRenderer(_game);
+		Gui.Renderer.SetTexture("PhoneScreen", _game.Content.Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
+		Gui.Renderer.SetTexture("Contact_DJ", _game.Content.Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
+		Confirmations.WhenReturnToMenu = ReturnToMenu;
+		_player = new PlayerPreferences();
+		_fader = new ScreenFader(_game.GraphicsDevice);
+		_media = new FadingMediaPlayer(_game.Content);
+		_resources = new ExtendedTextureLoader(_game.Content);
+		_notifier = new Notifications();
+		Texture2D dialogueTexture = _game.Content.Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
+		Texture2D buttonTexture = _game.Content.Load<Texture2D>("Assets/GUI/Dialogue/button");
+		_cursorTexture = _game.Content.Load<Texture2D>("Assets/GUI/Squid/DefaultCursor");
+		IsRenderingCursor = true;
+		_font = _game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		SpriteFont italicFont = _game.Content.Load<SpriteFont>("Assets/GUI/Fonts/BoldItalic-26");
+		_writer = new TypingDialogue(this, dialogueTexture, buttonTexture, _font, italicFont);
+		Saves.Pointer pointer = Saves.GetLastPointer();
+		if (!pointer.IsEmpty)
 		{
-			_lRHDfpOTd4PxClZkjMpoakPEA9d lRHDfpOTd4PxClZkjMpoakPEA9d = (_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? _DW9IcpdMEINZmuzfrqmwsduBGih._NyR9YmfkeF4CXGOi1ENApzh6B5V(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : _DW9IcpdMEINZmuzfrqmwsduBGih.Read(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO));
-			if (lRHDfpOTd4PxClZkjMpoakPEA9d != null)
+			SaveData save = (pointer.IsAutosave ? Saves.ReadAutosave(pointer.Index) : Saves.Read(pointer.Index));
+			if (save != null)
 			{
-				PlayerPreferences.Self.Data = lRHDfpOTd4PxClZkjMpoakPEA9d.PlayerData;
+				PlayerPreferences.Singleton.Data = save.PlayerData;
 			}
 		}
-		_SUHe9KzfAd477MCCYxTvqFf3efl = new _poenyHBGUusBcnNcTFB9MQBV72R(this, Amorous.Content);
-		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = true;
-		_5Anqe6GAAkzemoAXYpJmgMlk1yz._LsIdcBLhaqZr03JCpCYZrI9ztVF();
-		_DNbNFzOKO7vtoVmjI32p1Snwmpe = true;
+		_phone = new PhoneOverlay(this, _game.Content);
+		Clocks.InRealTime = true;
+		Clocks.UpdateTime();
+		_hasControls = true;
 		Gui.Renderer.SetTexture("MessageIconCoby", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Coby"));
 		Gui.Renderer.SetTexture("MessageIconDustin", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Dustin"));
 		Gui.Renderer.SetTexture("MessageIconJax", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Jax"));
@@ -204,11 +203,11 @@ public class AmorousSingleton : IAmorous
 
 	protected virtual void Begin()
 	{
-		_xfiKuXXh5LQA9CUQiex6tutzFKQ = new EmptyScene(this);
-		_Qj2G6fpAF4mGsATgkV8DPBF3aA1A._E7yBM68AWt7OGHJ5D6xYA8RK8tAA(new Color(0, 0, 0, 255));
-		_OxLRmpxixplTKChiTPUKAx4uTLG<MainMenuScene>(delegate
+		_scene = new EmptyScene(this);
+		Fading.ApplyNow(new Color(0, 0, 0, 255));
+		SwitchScene<MainMenuScene>(delegate
 		{
-			_Qj2G6fpAF4mGsATgkV8DPBF3aA1A._FegL010tc92iskjjyD0T33dDwNE();
+			Fading.Hide();
 		});
 	}
 
@@ -216,158 +215,157 @@ public class AmorousSingleton : IAmorous
 
 	public void Update(GameTime gameTime)
 	{
-		if (_NdzU0m9x8QDKpVv3DrQmzY5KduB && _Z8BClcChRJrlB6tR1VPJcycVpHN == null)
+		if (InScenePending && _pendingScene == null)
 		{
-			_NdzU0m9x8QDKpVv3DrQmzY5KduB = false;
-			if (_ColBlKEOYSqQMmmj719vN58K9aN != null)
+			InScenePending = false;
+			if (_pendingSceneThen != null)
 			{
-				Action colBlKEOYSqQMmmj719vN58K9aN = _ColBlKEOYSqQMmmj719vN58K9aN;
-				_ColBlKEOYSqQMmmj719vN58K9aN = null;
-				colBlKEOYSqQMmmj719vN58K9aN();
+				Action action = _pendingSceneThen;
+				_pendingSceneThen = null;
+				action();
 			}
 		}
-		_YNCmHGUHBydamu5BEECMWoB65VfA.Update();
-		if (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.F1))
+		_controller.Update();
+		if (Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.F1))
 		{
-			_DNbNFzOKO7vtoVmjI32p1Snwmpe = !_DNbNFzOKO7vtoVmjI32p1Snwmpe;
+			_hasControls = !_hasControls;
 		}
-		if ((_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.Enter)) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.F2))
+		if ((Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) || Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.F2))
 		{
-			_qGU55VUfbqFJ4l6ArNW4JRcLekg();
+			RefreshDisplay();
 		}
-		if (_p3BLtW5bCDzTS86VFihe1pfwDoP == null && (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.F12) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.PrintScreen)))
+		if (_steam == null && (Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.F12) || Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.PrintScreen)))
 		{
-			_VN2LxjGLZldLNfiJ1OniiaXfYBg();
+			RequestScreenshot();
 		}
-		if (_RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.Tab))
+		if (Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.Tab))
 		{
-			_Fs6y8qquj1mRHLz6xw6KoI4SAvH = !_Fs6y8qquj1mRHLz6xw6KoI4SAvH;
+			_debugger = !_debugger;
 		}
-		_chds2l0ZCMMghly7dv4eik3iSH5.Update(gameTime);
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA.Update(gameTime);
-		_6M30VBCyHzfi1RYZYx7uJAHl1EC.Update(gameTime);
-		_6M30VBCyHzfi1RYZYx7uJAHl1EC._LcX2y4hMIzQST4uGT2Q5Ce7vaGg();
-		if (_Z8BClcChRJrlB6tR1VPJcycVpHN != null)
+		_mouse.Update(gameTime);
+		_fader.Update(gameTime);
+		_media.Update(gameTime);
+		_media._LcX2y4hMIzQST4uGT2Q5Ce7vaGg();
+		if (_pendingScene != null)
 		{
-			if (_xfiKuXXh5LQA9CUQiex6tutzFKQ != null)
+			if (_scene != null)
 			{
-				_xfiKuXXh5LQA9CUQiex6tutzFKQ.End();
+				Logger.Log(ConsoleColor.White, "Debug", "Changing to pending scene '{0}' -> '{1}'", _scene.GetType().Name, _pendingScene.GetType().Name);
+				_scene.End();
+			} else {
+				Logger.Log(ConsoleColor.White, "Debug", "Starting pending scene '{0}'", _pendingScene.GetType().Name);
 			}
-			_xfiKuXXh5LQA9CUQiex6tutzFKQ = _Z8BClcChRJrlB6tR1VPJcycVpHN;
-			_Z8BClcChRJrlB6tR1VPJcycVpHN = null;
-			_xfiKuXXh5LQA9CUQiex6tutzFKQ.StopCutscene();
+			_scene = _pendingScene;
+			_pendingScene = null;
+			_scene.Begin();
 		}
-		_xfiKuXXh5LQA9CUQiex6tutzFKQ.Update(gameTime);
-		_CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Update(gameTime);
-		_SUHe9KzfAd477MCCYxTvqFf3efl.Update(gameTime, _chds2l0ZCMMghly7dv4eik3iSH5);
-		_P62DygY6CKZG8s5wqDu0uAFksjs.Update(gameTime);
-		if (_Ta8oiGRfjrRGtgUaA5S061UepZb != null)
+		_scene.Update(gameTime);
+		_player.Update(gameTime);
+		_phone.Update(gameTime, _mouse);
+		_writer.Update(gameTime);
+		if (_cutscene != null)
 		{
-			_Ta8oiGRfjrRGtgUaA5S061UepZb.Update(gameTime);
-			if (!_Ta8oiGRfjrRGtgUaA5S061UepZb._5PWaXifOOaIVN34JQsXRmvxXtqK)
+			_cutscene.Update(gameTime);
+			if (!_cutscene.Active)
 			{
-				_sUwMzXXmi9PdDQ0bFQhbGQJUPTe = _Ta8oiGRfjrRGtgUaA5S061UepZb._YYH5zlVZSFq4tPfc1vfadAxnqhV(5);
-				_Ta8oiGRfjrRGtgUaA5S061UepZb = null;
+				_debuggerCutsceneStates = _cutscene.ToString(5);
+				Logger.Log(ConsoleColor.White, "Debug", "Finishing cutscene '{0}' ({1})", _cutscene.Data.Name, string.Join(", ", _debuggerCutsceneStates).Trim(new char[] { ' ', ',' }));
+				_cutscene = null;
 			}
 		}
-		if (_ieTMbMiu3eGRdmzTMofKoJopZAf != null)
+		if (_sexscene != null)
 		{
-			_ieTMbMiu3eGRdmzTMofKoJopZAf.Update(gameTime);
+			_sexscene.Update(gameTime);
 		}
-		if (_fp8jsuSnELXqf2yy2JQDaXDCBVQ != null)
+		if (_overlay != null)
 		{
-			_fp8jsuSnELXqf2yy2JQDaXDCBVQ.Update(gameTime);
+			_overlay.Update(gameTime);
 		}
-		_9rxbJ7LsE3DhACUHVlPZaixc5Jp.Update(gameTime);
-		Microsoft.Xna.Framework.Point point = _chds2l0ZCMMghly7dv4eik3iSH5._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		_notifier.Update(gameTime);
+		Microsoft.Xna.Framework.Point point = _mouse.Rescale(Controller.Cursor);
 		List<KeyData> list = new List<KeyData>();
-		Microsoft.Xna.Framework.Input.Keys[] gylJZYyc3mVB0fbHPCctDIg4UAE = _gylJZYyc3mVB0fbHPCctDIg4UAE;
-		foreach (Microsoft.Xna.Framework.Input.Keys keys in gylJZYyc3mVB0fbHPCctDIg4UAE)
+		foreach (Microsoft.Xna.Framework.Input.Keys keys in _keyboard)
 		{
-			bool flag = _RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(keys);
-			bool flag2 = _RbWJ7YGnYHCSoD44MRW1h5X6E7E._KGCwEHf8akeXdkHLKFg1caFxXUJ(keys);
-			if (flag || flag2)
+			bool pressed = Controller.JustPressed(keys);
+			bool released = Controller.JustReleased(keys);
+			if (pressed || released)
 			{
-				Squid.Keys? keys2 = SquidUtils._HSj1lr89AFIB9adVhSrAeWjS1xC[Keyboard.GetKeyFromScancodeEXT(keys)];
-				if (keys2.HasValue)
+				Squid.Keys? availables = SquidUtils._HSj1lr89AFIB9adVhSrAeWjS1xC[Keyboard.GetKeyFromScancodeEXT(keys)];
+				if (availables.HasValue)
 				{
 					list.Add(new KeyData
 					{
-						Scancode = (int)keys2.Value,
-						Char = keys.ChangeKeyboard(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.LeftShift) || _RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Microsoft.Xna.Framework.Input.Keys.RightShift)),
-						Pressed = flag,
-						Released = flag2
+						Scancode = (int)availables.Value,
+						Char = keys.ChangeKeyboard(Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift) || Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)),
+						Pressed = pressed,
+						Released = released
 					});
 				}
 			}
 		}
 		Gui.SetKeyboard(list.ToArray());
-		Gui.SetButtons(_RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton), _RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.RightButton));
-		Gui.SetMouse(point.X, point.Y, _RbWJ7YGnYHCSoD44MRW1h5X6E7E._xFrCcVNAYrShLz07HqDph01nGwX);
+		Gui.SetButtons(Controller.IsPressed(ControllerButtonType.LeftButton), Controller.IsPressed(ControllerButtonType.RightButton));
+		Gui.SetMouse(point.X, point.Y, Controller.Scroll);
 		Gui.TimeElapsed = gameTime.ElapsedGameTime.Milliseconds;
-		if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
+		if (_steam != null)
 		{
-			_p3BLtW5bCDzTS86VFihe1pfwDoP.Update();
+			_steam.Update();
 		}
 	}
 
 	public void Draw(GameTime gameTime)
 	{
-		_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv = (float)gameTime.TotalGameTime.TotalSeconds;
-		Amorous.GraphicsDevice.SetRenderTarget(_j2ynkEUaNLywHdchuAYJWHF3l9DA);
-		Amorous.GraphicsDevice.Clear(Color.Black);
-		_xfiKuXXh5LQA9CUQiex6tutzFKQ.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf, _BuJyoOT5ylWcIMxjcKRnxVmYvBd, _chds2l0ZCMMghly7dv4eik3iSH5._oLRK3f26Sw9AKBKi0iR44APDZEt);
-		if (_chds2l0ZCMMghly7dv4eik3iSH5._q1DGEI79OguKnK8dCIgPvfGc9Bi)
+		Randoms.Time = (float)gameTime.TotalGameTime.TotalSeconds;
+		_game.GraphicsDevice.SetRenderTarget(_canvas);
+		_game.GraphicsDevice.Clear(Color.Black);
+		_scene.Draw(_batch, _spines, _mouse._oLRK3f26Sw9AKBKi0iR44APDZEt);
+		if (_mouse._q1DGEI79OguKnK8dCIgPvfGc9Bi)
 		{
-			_xfiKuXXh5LQA9CUQiex6tutzFKQ.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf, _BuJyoOT5ylWcIMxjcKRnxVmYvBd, _chds2l0ZCMMghly7dv4eik3iSH5._00mMjYnrMXUVj1aA8AYlqz1bdTI);
+			_scene.Draw(_batch, _spines, _mouse._00mMjYnrMXUVj1aA8AYlqz1bdTI);
 		}
-		else if (_chds2l0ZCMMghly7dv4eik3iSH5._c3CMfxjIJAFFcSeEIluZOLANXnE)
+		else if (_mouse._c3CMfxjIJAFFcSeEIluZOLANXnE)
 		{
-			_xfiKuXXh5LQA9CUQiex6tutzFKQ.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf, _BuJyoOT5ylWcIMxjcKRnxVmYvBd, _chds2l0ZCMMghly7dv4eik3iSH5._MPYpHIXdfUjJipVgAvBCGASJZiZ);
+			_scene.Draw(_batch, _spines, _mouse._MPYpHIXdfUjJipVgAvBCGASJZiZ);
 		}
-		if (_ieTMbMiu3eGRdmzTMofKoJopZAf != null)
+		if (_sexscene != null)
 		{
-			_ieTMbMiu3eGRdmzTMofKoJopZAf.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf, _BuJyoOT5ylWcIMxjcKRnxVmYvBd);
+			_sexscene.Draw(_batch, _spines);
 		}
-		if (_DNbNFzOKO7vtoVmjI32p1Snwmpe)
+		if (_hasControls)
 		{
-			_SUHe9KzfAd477MCCYxTvqFf3efl.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf, _BuJyoOT5ylWcIMxjcKRnxVmYvBd);
+			_phone.Draw(_batch, _spines);
 		}
-		if (_fp8jsuSnELXqf2yy2JQDaXDCBVQ != null)
+		if (_overlay != null)
 		{
-			_fp8jsuSnELXqf2yy2JQDaXDCBVQ.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf);
+			_overlay.Draw(_batch);
 		}
-		_xfiKuXXh5LQA9CUQiex6tutzFKQ.Render(_ZXUztyGtStF4WzGVig7wu43cfnf);
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf, _chds2l0ZCMMghly7dv4eik3iSH5);
-		if (_DNbNFzOKO7vtoVmjI32p1Snwmpe)
+		_scene.DrawOverlay(_batch);
+		_fader.Draw(_batch, _mouse);
+		if (_hasControls)
 		{
-			_P62DygY6CKZG8s5wqDu0uAFksjs.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf);
+			_writer.Draw(_batch);
 		}
-		_9rxbJ7LsE3DhACUHVlPZaixc5Jp.Draw(_ZXUztyGtStF4WzGVig7wu43cfnf);
-		SpriteBatch zXUztyGtStF4WzGVig7wu43cfnf;
-		SpriteFont xnYepZuegigJCU2jcbZsfVIakzF;
+		_notifier.Draw(_batch);
 		object obj;
-		if (_Fs6y8qquj1mRHLz6xw6KoI4SAvH)
+		if (_debugger)
 		{
-			if (_Ta8oiGRfjrRGtgUaA5S061UepZb != null)
+			if (_cutscene != null)
 			{
-				_sUwMzXXmi9PdDQ0bFQhbGQJUPTe = _Ta8oiGRfjrRGtgUaA5S061UepZb._YYH5zlVZSFq4tPfc1vfadAxnqhV(5);
+				_debuggerCutsceneStates = _cutscene.ToString(5);
 			}
-			_Vh2qdN4Ha62herl19def6PyuanQ.X = 10f;
-			_Vh2qdN4Ha62herl19def6PyuanQ.Y = 10f;
-			_ZXUztyGtStF4WzGVig7wu43cfnf.Begin();
-			_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "[Generic]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-			zXUztyGtStF4WzGVig7wu43cfnf = _ZXUztyGtStF4WzGVig7wu43cfnf;
-			xnYepZuegigJCU2jcbZsfVIakzF = _xnYepZuegigJCU2jcbZsfVIakzF;
-			AbstractScene xfiKuXXh5LQA9CUQiex6tutzFKQ = _xfiKuXXh5LQA9CUQiex6tutzFKQ;
-			if (xfiKuXXh5LQA9CUQiex6tutzFKQ == null)
+			_debuggerPoint.X = 10f;
+			_debuggerPoint.Y = 10f;
+			_batch.Begin();
+			_batch.DrawString(_font, "[Generic]", _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			AbstractScene scene = _scene;
+			if (scene == null)
 			{
 				obj = null;
 			}
 			else
 			{
-				obj = xfiKuXXh5LQA9CUQiex6tutzFKQ.GetType().Name;
+				obj = scene.GetType().Name;
 				if (obj != null)
 				{
 					goto IL_0220;
@@ -379,55 +377,55 @@ public class AmorousSingleton : IAmorous
 		goto IL_04d3;
 		IL_0220:
 		#nullable enable
-		zXUztyGtStF4WzGVig7wu43cfnf.DrawString(xnYepZuegigJCU2jcbZsfVIakzF, "Scene: " + (string?)obj, _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
+		_batch.DrawString(_font, "Scene: " + (string?)obj, _debuggerPoint, Color.White);
 		#nullable restore
-		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "ScreenFader: " + _RA1aFlOff0jGfI2cKUGhYI1MRLBA.State.A, _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "[Cutscenes]", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, string.Format("Cutscene in progress: {0}", (_Ta8oiGRfjrRGtgUaA5S061UepZb == null) ? "No" : "Yes"), _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		if (_sUwMzXXmi9PdDQ0bFQhbGQJUPTe != null)
+		_debuggerPoint.Y += 40f;
+		_batch.DrawString(_font, "ScreenFader: " + _fader.State.A, _debuggerPoint, Color.White);
+		_debuggerPoint.Y += 40f;
+		_debuggerPoint.Y += 40f;
+		_batch.DrawString(_font, "[Cutscenes]", _debuggerPoint, Color.White);
+		_debuggerPoint.Y += 40f;
+		_batch.DrawString(_font, string.Format("Cutscene in progress: {0}", (_cutscene == null) ? "No" : "Yes"), _debuggerPoint, Color.White);
+		_debuggerPoint.Y += 40f;
+		if (_debuggerCutsceneStates != null)
 		{
-			_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[0], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-			_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "Stage: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[1], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-			_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "Path: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[2], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-			_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "Current: " + _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[3], _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
+			_batch.DrawString(_font, "Cutscene: " + _debuggerCutsceneStates[0], _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			_batch.DrawString(_font, "Stage: " + _debuggerCutsceneStates[1], _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			_batch.DrawString(_font, "Path: " + _debuggerCutsceneStates[2], _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			_batch.DrawString(_font, "Current: " + _debuggerCutsceneStates[3], _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
 		}
 		else
 		{
-			_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "Cutscene: None", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-			_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
+			_batch.DrawString(_font, "Cutscene: None", _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
 		}
-		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf.DrawString(_xnYepZuegigJCU2jcbZsfVIakzF, "Press Tab to toggle", _Vh2qdN4Ha62herl19def6PyuanQ, Color.White);
-		_Vh2qdN4Ha62herl19def6PyuanQ.Y += 40f;
-		_ZXUztyGtStF4WzGVig7wu43cfnf.End();
+		_debuggerPoint.Y += 40f;
+		_batch.DrawString(_font, "Press Tab to toggle", _debuggerPoint, Color.White);
+		_debuggerPoint.Y += 40f;
+		_batch.End();
 		goto IL_04d3;
 		IL_065c:
-		Amorous.GraphicsDevice.SetRenderTarget(null);
-		Amorous.GraphicsDevice.Clear(Color.Black);
-		_ZXUztyGtStF4WzGVig7wu43cfnf.Begin();
-		_ZXUztyGtStF4WzGVig7wu43cfnf.Draw(_j2ynkEUaNLywHdchuAYJWHF3l9DA, _CCbe95wREA1VhjgpntSpzsQ19He, Color.White);
-		if (_LWcoDwIWvf8DT3nQmNe5z8fkUvI)
+		_game.GraphicsDevice.SetRenderTarget(null);
+		_game.GraphicsDevice.Clear(Color.Black);
+		_batch.Begin();
+		_batch.Draw(_canvas, _destinationRectangle, Color.White);
+		if (IsRenderingCursor)
 		{
-			_ZXUztyGtStF4WzGVig7wu43cfnf.Draw(_0SvmBhkBX8SImQwyvuy5xVObqLn, _RbWJ7YGnYHCSoD44MRW1h5X6E7E._6M9HDt28e1QHBuYsAXgqiY8jVlA, _CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Data.PhoneColor);
+			_batch.Draw(_cursorTexture, Controller.CursorVector, _player.Data.PhoneColor);
 		}
-		_ZXUztyGtStF4WzGVig7wu43cfnf.End();
+		_batch.End();
 		return;
 		IL_04d3:
 		string path2;
 		object[] array;
 		object obj2;
-		if (_qZ4p0zzU9dj7bhTFunYbFjSNY6D)
+		if (_pendingScreenshot)
 		{
-			_qZ4p0zzU9dj7bhTFunYbFjSNY6D = false;
+			_pendingScreenshot = false;
 			if (!Directory.Exists("Screenshots"))
 			{
 				Directory.CreateDirectory("Screenshots");
@@ -436,24 +434,24 @@ public class AmorousSingleton : IAmorous
 			string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
 			using (Stream stream = File.OpenWrite(text))
 			{
-				_j2ynkEUaNLywHdchuAYJWHF3l9DA.SaveAsPng(stream, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Width, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Height);
+				_canvas.SaveAsPng(stream, _canvas.Width, _canvas.Height);
 			}
-			if (_p3BLtW5bCDzTS86VFihe1pfwDoP != null)
+			if (_steam != null)
 			{
-				_p3BLtW5bCDzTS86VFihe1pfwDoP._9K6cA2OPGJaecqk3spsceT9ilNI(text, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Width, _j2ynkEUaNLywHdchuAYJWHF3l9DA.Height);
+				_steam.AddScreenshotToLibrary(text, _canvas.Width, _canvas.Height);
 			}
-			if (_Fs6y8qquj1mRHLz6xw6KoI4SAvH && _sUwMzXXmi9PdDQ0bFQhbGQJUPTe != null)
+			if (_debugger && _debuggerCutsceneStates != null)
 			{
 				path2 = $"{text}.txt";
 				array = new object[5];
-				AbstractScene xfiKuXXh5LQA9CUQiex6tutzFKQ2 = _xfiKuXXh5LQA9CUQiex6tutzFKQ;
-				if (xfiKuXXh5LQA9CUQiex6tutzFKQ2 == null)
+				AbstractScene scene = _scene;
+				if (scene == null)
 				{
 					obj2 = null;
 				}
 				else
 				{
-					obj2 = xfiKuXXh5LQA9CUQiex6tutzFKQ2.GetType().Name;
+					obj2 = scene.GetType().Name;
 					if (obj2 != null)
 					{
 						goto IL_0625;
@@ -466,31 +464,31 @@ public class AmorousSingleton : IAmorous
 		goto IL_065c;
 		IL_0625:
 		array[0] = obj2;
-		array[1] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[0];
-		array[2] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[1];
-		array[3] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[2];
-		array[4] = _sUwMzXXmi9PdDQ0bFQhbGQJUPTe[3];
+		array[1] = _debuggerCutsceneStates[0];
+		array[2] = _debuggerCutsceneStates[1];
+		array[3] = _debuggerCutsceneStates[2];
+		array[4] = _debuggerCutsceneStates[3];
 		File.WriteAllText(path2, string.Format("Scene: {0}\r\nCutscene: {1}\r\nStage: {2}\r\nPath: {3}\r\nCurrent: {4}", array));
 		goto IL_065c;
 	}
 
-	public void _qGU55VUfbqFJ4l6ArNW4JRcLekg()
+	public void RefreshDisplay()
 	{
-		_fSRUnXzLhUs3DfJ1lzl9dGCEmCf(_chds2l0ZCMMghly7dv4eik3iSH5._KOuUew34v1oSMnWlHSFJuRBiu1c, _chds2l0ZCMMghly7dv4eik3iSH5._dh9yjUXG1mhcfgwAWkWfggbGEIc, !_ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen);
+		SetDisplay(_mouse.CanvasWidth, _mouse.CanvasHeight, !_display.IsFullScreen);
 	}
 
-	public void _VN2LxjGLZldLNfiJ1OniiaXfYBg()
+	public void RequestScreenshot()
 	{
-		_qZ4p0zzU9dj7bhTFunYbFjSNY6D = true;
+		_pendingScreenshot = true;
 	}
 
-	public bool _fDSidqggP063WGf2vzkdlA1UDkn(string string_0)
+	public bool OpenUrl(string url)
 	{
-		if (_p3BLtW5bCDzTS86VFihe1pfwDoP == null)
+		if (_steam == null)
 		{
 			try
 			{
-				Process.Start(string_0);
+				Process.Start(url);
 				return true;
 			}
 			catch (Exception)
@@ -498,256 +496,266 @@ public class AmorousSingleton : IAmorous
 				return false;
 			}
 		}
-		_p3BLtW5bCDzTS86VFihe1pfwDoP._fDSidqggP063WGf2vzkdlA1UDkn(string_0);
+		_steam.OpenUrl(url);
 		return true;
 	}
 
-	public void _fSRUnXzLhUs3DfJ1lzl9dGCEmCf(int int_0, int int_1)
+	public void SetDisplay(int width, int height)
 	{
-		_fSRUnXzLhUs3DfJ1lzl9dGCEmCf(int_0, int_1, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen);
+		SetDisplay(width, height, _display.IsFullScreen);
 	}
 
-	public void _fSRUnXzLhUs3DfJ1lzl9dGCEmCf(int int_0, int int_1, bool bool_0)
+	public void SetDisplay(int width, int height, bool fullscreen)
 	{
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.IsFullScreen = bool_0;
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth = (bool_0 ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width : int_0);
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight = (bool_0 ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height : int_1);
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.GraphicsDevice.Viewport = new Viewport(0, 0, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight);
-		_chds2l0ZCMMghly7dv4eik3iSH5._2lMgp1KOzK9I6kd7CHrDq2A2CHm(int_0, int_1, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferWidth, _ARAAkijJ1FF23wI2rNDaw7mTOeJ.PreferredBackBufferHeight);
-		_CCbe95wREA1VhjgpntSpzsQ19He = new Microsoft.Xna.Framework.Rectangle(_chds2l0ZCMMghly7dv4eik3iSH5._jDxCg7GJnIKcLXDcUVSdbEIQL3Yb, _chds2l0ZCMMghly7dv4eik3iSH5._ILCBrSipj1Qk4CsYzkEELxHvkkY, _chds2l0ZCMMghly7dv4eik3iSH5._HZrLDiX4EPtS6jM8Odd9yJAatHq, _chds2l0ZCMMghly7dv4eik3iSH5._ypqaDJqrkQlUKOrdZIXld5qQQ4x);
-		_ARAAkijJ1FF23wI2rNDaw7mTOeJ.ApplyChanges();
+		_display.IsFullScreen = fullscreen;
+		_display.PreferredBackBufferWidth = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width : width);
+		_display.PreferredBackBufferHeight = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height : height);
+		_display.GraphicsDevice.Viewport = new Viewport(0, 0, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
+		_mouse.SetResolution(width, height, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
+		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_mouse.RelativeX, _mouse.RelativeY, _mouse.RelativeWidth, _mouse.RelativeHeight);
+		_display.ApplyChanges();
 	}
 
-	public void _udfEpcIRn7lWl5Lvjdyu0aG0A7G()
+	public void Exit()
 	{
-		Amorous.Exit();
+		_game.Exit();
 	}
 
 	public void StartScene<T>() where T : AbstractScene
 	{
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+		_fader.Show(delegate
 		{
-			_OxLRmpxixplTKChiTPUKAx4uTLG<T>(delegate
+			SwitchScene<T>(delegate
 			{
-				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._FegL010tc92iskjjyD0T33dDwNE();
+				_fader.Hide();
 			});
 		});
 	}
 
-	public void StartScene(string string_0)
+	public void StartScene(string name)
 	{
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+		_fader.Show(delegate
 		{
-			_OxLRmpxixplTKChiTPUKAx4uTLG(string_0, delegate
+			SwitchScene(name, delegate
 			{
-				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._FegL010tc92iskjjyD0T33dDwNE();
+				_fader.Hide();
 			});
 		});
 	}
 
 	public void StartScene(AbstractScene scene)
 	{
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+		_fader.Show(delegate
 		{
-			_OxLRmpxixplTKChiTPUKAx4uTLG(scene, delegate
+			SwitchScene(scene, delegate
 			{
-				_RA1aFlOff0jGfI2cKUGhYI1MRLBA._FegL010tc92iskjjyD0T33dDwNE();
+				_fader.Hide();
 			});
 		});
 	}
 
-	public void _OxLRmpxixplTKChiTPUKAx4uTLG<T>(Action action_0 = null) where T : AbstractScene
+	public void SwitchScene<T>(Action then = null) where T : AbstractScene
 	{
-		if (_ColBlKEOYSqQMmmj719vN58K9aN != null)
+		if (_pendingSceneThen != null)
 		{
-			Action colBlKEOYSqQMmmj719vN58K9aN = _ColBlKEOYSqQMmmj719vN58K9aN;
-			_ColBlKEOYSqQMmmj719vN58K9aN = null;
-			colBlKEOYSqQMmmj719vN58K9aN();
+			Action action = _pendingSceneThen;
+			_pendingSceneThen = null;
+			action();
 		}
-		_ColBlKEOYSqQMmmj719vN58K9aN = action_0;
-		_chds2l0ZCMMghly7dv4eik3iSH5._n4NdRK3l14j7hHgGSJS4dI9LeYR();
+		_pendingSceneThen = then;
+		_mouse._n4NdRK3l14j7hHgGSJS4dI9LeYR();
 		PlayerPreferences.SetPlayerSkin(null);
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = null;
-		_ieTMbMiu3eGRdmzTMofKoJopZAf = null;
-		_Z8BClcChRJrlB6tR1VPJcycVpHN = Activator.CreateInstance(typeof(T), this) as AbstractScene;
-		_NdzU0m9x8QDKpVv3DrQmzY5KduB = true;
+		_overlay = null;
+		_sexscene = null;
+		_pendingScene = Activator.CreateInstance(typeof(T), this) as AbstractScene;
+		InScenePending = true;
 	}
 
-	public void _OxLRmpxixplTKChiTPUKAx4uTLG(string string_0, Action action_0 = null)
+	public void SwitchScene(string name, Action then = null)
 	{
-		if (_ColBlKEOYSqQMmmj719vN58K9aN != null)
+		if (_pendingSceneThen != null)
 		{
-			Action colBlKEOYSqQMmmj719vN58K9aN = _ColBlKEOYSqQMmmj719vN58K9aN;
-			_ColBlKEOYSqQMmmj719vN58K9aN = null;
-			colBlKEOYSqQMmmj719vN58K9aN();
+			Action action = _pendingSceneThen;
+			_pendingSceneThen = null;
+			action();
 		}
-		_ColBlKEOYSqQMmmj719vN58K9aN = action_0;
+		_pendingSceneThen = then;
 		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 			where typeof(AbstractScene).IsAssignableFrom(type_0)
 			select type_0;
-		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == string_0);
+		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
 		if (!(type == null))
 		{
-			_chds2l0ZCMMghly7dv4eik3iSH5._n4NdRK3l14j7hHgGSJS4dI9LeYR();
+			_mouse._n4NdRK3l14j7hHgGSJS4dI9LeYR();
 			PlayerPreferences.SetPlayerSkin(null);
-			_fp8jsuSnELXqf2yy2JQDaXDCBVQ = null;
-			_ieTMbMiu3eGRdmzTMofKoJopZAf = null;
-			_Z8BClcChRJrlB6tR1VPJcycVpHN = Activator.CreateInstance(type, this) as AbstractScene;
-			_NdzU0m9x8QDKpVv3DrQmzY5KduB = true;
+			_overlay = null;
+			_sexscene = null;
+			_pendingScene = Activator.CreateInstance(type, this) as AbstractScene;
+			InScenePending = true;
 		}
 		else
 		{
-			Logger.Error("Failed to load scene '{0}'", string_0);
+			Logger.Error("Failed to load scene '{0}'", name);
 		}
 	}
 
-	public void _OxLRmpxixplTKChiTPUKAx4uTLG(AbstractScene scene, Action action_0 = null)
+	public void SwitchScene(AbstractScene scene, Action then = null)
 	{
-		if (_ColBlKEOYSqQMmmj719vN58K9aN != null)
+		if (_pendingSceneThen != null)
 		{
-			Action colBlKEOYSqQMmmj719vN58K9aN = _ColBlKEOYSqQMmmj719vN58K9aN;
-			_ColBlKEOYSqQMmmj719vN58K9aN = null;
-			colBlKEOYSqQMmmj719vN58K9aN();
+			Action action = _pendingSceneThen;
+			_pendingSceneThen = null;
+			action();
 		}
-		_ColBlKEOYSqQMmmj719vN58K9aN = action_0;
-		_chds2l0ZCMMghly7dv4eik3iSH5._n4NdRK3l14j7hHgGSJS4dI9LeYR();
+		_pendingSceneThen = then;
+		_mouse._n4NdRK3l14j7hHgGSJS4dI9LeYR();
 		PlayerPreferences.SetPlayerSkin(null);
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = null;
-		_ieTMbMiu3eGRdmzTMofKoJopZAf = null;
-		_Z8BClcChRJrlB6tR1VPJcycVpHN = scene;
-		_NdzU0m9x8QDKpVv3DrQmzY5KduB = true;
+		_overlay = null;
+		_sexscene = null;
+		_pendingScene = scene;
+		InScenePending = true;
 	}
 
-	public void _gYGB98heFqsLp9tgJbdCP01IKV2(string string_0)
+	public void StartSexscene(string name)
 	{
 		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 			where typeof(AbstractSexscene).IsAssignableFrom(type_0)
 			select type_0;
-		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == string_0);
+		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
 		if (!(type == null))
 		{
-			_ieTMbMiu3eGRdmzTMofKoJopZAf = Activator.CreateInstance(type, Amorous.Content) as AbstractSexscene;
+			if (_sexscene != null) {
+				Logger.Log(ConsoleColor.White, "Debug", "Changing to sexscene '{0}' -> '{1}'", _sexscene.GetType().Name, type.Name);
+			} else {
+				Logger.Log(ConsoleColor.White, "Debug", "Starting sexscene '{0}'", type.Name);
+			}
+			_sexscene = Activator.CreateInstance(type, _game.Content) as AbstractSexscene;
 		}
 		else
 		{
-			Logger.Error("Failed to load sexscene '{0}'", string_0);
+			Logger.Error("Failed to load sexscene '{0}'", name);
 		}
 	}
 
-	public void _Ec0fhBrUGmjaIKjUfJioigVc65x()
+	public void ResetSexscene()
 	{
-		_ieTMbMiu3eGRdmzTMofKoJopZAf = null;
+		_sexscene = null;
 	}
 
-	public void RequestScene(string string_0)
+	public void StartCutscene(string name)
 	{
-		_nR8eroJOHehP0ZGyyTveo6aMTHg nR8eroJOHehP0ZGyyTveo6aMTHg_ = _5yVCuTv9lVSCCxs7cUlv79ysuRh(string_0);
-		RequestScene(nR8eroJOHehP0ZGyyTveo6aMTHg_);
+		Cutscene cutscene = ReadCutscene(name);
+		StartCutscene(cutscene);
 	}
 
-	public void RequestScene(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public void StartCutscene(Cutscene cutscene)
 	{
-		if (_nR8eroJOHehP0ZGyyTveo6aMTHg_0 != null)
+		if (cutscene != null)
 		{
-			_Ta8oiGRfjrRGtgUaA5S061UepZb = _nR8eroJOHehP0ZGyyTveo6aMTHg_0;
-			int int_ = _CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Data.GetDecimal(_nR8eroJOHehP0ZGyyTveo6aMTHg_0.Data.Name);
-			_poenyHBGUusBcnNcTFB9MQBV72R._RiDuYMeg3EHnBUteUcAb8VlfQVl();
-			_Ta8oiGRfjrRGtgUaA5S061UepZb.StopCutscene(int_);
+			if (_cutscene != null) {
+				Logger.Log(ConsoleColor.White, "Debug", "Changing to cutscene '{0}' -> '{1}'", _cutscene.Data.Name, cutscene.Data.Name);
+			} else {
+				Logger.Log(ConsoleColor.White, "Debug", "Starting cutscene '{0}'", cutscene.Data.Name);
+			}
+			_cutscene = cutscene;
+			int stage = _player.Data.GetDecimal(cutscene.Data.Name);
+			PhoneOverlay.Hide();
+			_cutscene.Begin(stage);
 		}
 	}
 
-	private _nR8eroJOHehP0ZGyyTveo6aMTHg _5yVCuTv9lVSCCxs7cUlv79ysuRh(string string_0)
+	private Cutscene ReadCutscene(string name)
 	{
-		string text = Path.Combine(Content.RootDirectory, $"Content-Mods/Data/Quests/{string_0}.json");
-		string text2 = Path.Combine(Content.RootDirectory, $"Data/Quests/{string_0}.json");
-		string value;
-		if (File.Exists(text))
+		// TODO: Such as ModLoader thing implementation
+		string path = Path.Combine(Content.RootDirectory, $"Content-Mods/Data/Quests/{name}.json");
+		string json;
+		if (File.Exists(path))
 		{
-			Logger.Warning("Loaded modded cutscene '{0}'", string_0);
-			value = _K2047A8SCJdaw0LZKStEHOiH110._mDCA4AzhICQie5tejcL2uH7mcwf(text);
+			json = Compressions.ReadStreamAsText(path);
 		}
 		else
 		{
-			if (!File.Exists(text2))
+			path = Path.Combine(Content.RootDirectory, $"Data/Quests/{name}.json");
+			if (!File.Exists(path))
 			{
-				Logger.Error("Failed to load cutscene '{0}'", string_0);
+				Logger.Error("Failed to load cutscene '{0}'", name);
 				return null;
 			}
-			value = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(text2);
+			json = Compressions.ReadStreamAsText(path);
 		}
 		JsonSerializerSettings settings = new JsonSerializerSettings
 		{
 			TypeNameHandling = TypeNameHandling.Auto,
 			Converters = { (JsonConverter)new ColorJsonConverter() }
 		};
-		Cutscene Cutscene = JsonConvert.DeserializeObject<Cutscene>(value, settings);
-		if (Cutscene != null)
+		CutsceneData data = JsonConvert.DeserializeObject<CutsceneData>(json, settings);
+		if (data != null)
 		{
-			return new _nR8eroJOHehP0ZGyyTveo6aMTHg(this, Cutscene, Assembly.Load("Amorous.Game"));
+			return new Cutscene(this, data, Assembly.Load("Amorous.Game"));
 		}
 		return null;
 	}
 
-	private CutsceneState _PSROht9Hy1Ik63UUdnKDUGBA0yQ()
+	private CutsceneState GetCutsceneState()
 	{
-		if (_5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
+		if (Cutscene != null)
 		{
-			CutsceneState zkUeZhJDizkmvvRfp4S0G7aap8J = new CutsceneState
+			CutsceneState state = new CutsceneState
 			{
-				Name = _5zNdOw7qHmuCAPJFMr3SsZdBlCr.Data.Name,
-				Stage = _5zNdOw7qHmuCAPJFMr3SsZdBlCr._VQZivNSvg2tVi52cTTAQKYhamQK.Data.Stage,
-				ID = _5zNdOw7qHmuCAPJFMr3SsZdBlCr._VQZivNSvg2tVi52cTTAQKYhamQK.State.ID,
+				Name = Cutscene.Data.Name,
+				Stage = Cutscene.State.Data.Stage,
+				ID = Cutscene.State.State.ID,
 				Scene = Scene.GetType().Name,
 				Subscene = Scene.Variant,
 				Sexscene = Sexscene?.GetType().Name,
-				SexscenePhase = (Sexscene?._rNGHguvWdrugQVL2AI6bMMKSORN ?? AbstractSexscene.Phase.Idle),
-				SexsceneFinished = (Sexscene?._p3lU5oxIaFTVHUNFxJRnaHkXdsA ?? false),
-				FadedOut = (_Qj2G6fpAF4mGsATgkV8DPBF3aA1A.State.A > 0)
+				SexscenePhase = (Sexscene?.State ?? AbstractSexscene.Phase.Idle),
+				SexsceneFinished = (Sexscene?.Cumming ?? false),
+				FadedOut = (Fading.State.A > 0)
 			};
-			zkUeZhJDizkmvvRfp4S0G7aap8J.SaveNPCLayer(_xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(NPCLocation.Left));
-			zkUeZhJDizkmvvRfp4S0G7aap8J.SaveNPCLayer(_xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(NPCLocation.Middle));
-			zkUeZhJDizkmvvRfp4S0G7aap8J.SaveNPCLayer(_xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(NPCLocation.Right));
-			return zkUeZhJDizkmvvRfp4S0G7aap8J;
+			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Left));
+			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Middle));
+			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Right));
+			return state;
 		}
 		return null;
 	}
 
-	private void _dmwpjPj0QtK7OW2M486hHkm5FKH(CutsceneState CutsceneState_0)
+	private void LoadCutscene(CutsceneState state)
 	{
-		_Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+		Fading.Show(delegate
 		{
-			_nR8eroJOHehP0ZGyyTveo6aMTHg _hvKKVpHsQ6yw7YBy97lS8UDtil = _5yVCuTv9lVSCCxs7cUlv79ysuRh(CutsceneState_0.Name);
-			if (_hvKKVpHsQ6yw7YBy97lS8UDtil != null)
+			Cutscene cutscene = ReadCutscene(state.Name);
+			if (cutscene != null)
 			{
-				_OxLRmpxixplTKChiTPUKAx4uTLG(CutsceneState_0.Scene, delegate
+				SwitchScene(state.Scene, delegate
 				{
-					if (CutsceneState_0.Subscene != null)
+					if (state.Subscene != null)
 					{
-						Scene.SetVariant(CutsceneState_0.Subscene);
+						Scene.SetVariant(state.Subscene);
 					}
-					if (CutsceneState_0.Sexscene != null)
+					if (state.Sexscene != null)
 					{
-						_gYGB98heFqsLp9tgJbdCP01IKV2(CutsceneState_0.Sexscene);
-						Sexscene._eXH4tq2J0DADXDLofA8G8Yw8fau(CutsceneState_0.SexscenePhase, CutsceneState_0.SexsceneFinished);
+						StartSexscene(state.Sexscene);
+						Sexscene._eXH4tq2J0DADXDLofA8G8Yw8fau(state.SexscenePhase, state.SexsceneFinished);
 					}
-					foreach (CutsceneState.NPCState item in CutsceneState_0.NPCs)
+					foreach (CutsceneState.NPCState item in state.NPCs)
 					{
-						AbstractNPC npc = _TwQHHdbdRFRy2ctTZabNfz1Htrg(item.Name, LayerOrder.Background);
-						npc._7d2DAwjp6FutkJY09U0Mlk43Nmn(item.Location, item.Head, item.Pose, item.Clothes);
-						NPCLayer NPCLayer = _xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(item.Name);
+						AbstractNPC npc = GetNPCLayerAt(item.Name, LayerOrder.Background);
+						npc.Apply(item.Location, item.Head, item.Pose, item.Clothes);
+						NPCLayer NPCLayer = _scene.GetNPCLayer(item.Name);
 						NPCLayer.LayerOrder = item.LayerOrder;
 					}
-					if (CutsceneState_0.FadedOut)
+					if (state.FadedOut)
 					{
-						_Ta8oiGRfjrRGtgUaA5S061UepZb = _hvKKVpHsQ6yw7YBy97lS8UDtil;
-						_Ta8oiGRfjrRGtgUaA5S061UepZb.StopCutscene(CutsceneState_0.Stage, CutsceneState_0.ID);
+						_cutscene = cutscene;
+						_cutscene.Begin(state.Stage, state.ID);
 					}
 					else
 					{
-						_Qj2G6fpAF4mGsATgkV8DPBF3aA1A._FegL010tc92iskjjyD0T33dDwNE(delegate
+						Fading.Hide(delegate
 						{
-							_Ta8oiGRfjrRGtgUaA5S061UepZb = _hvKKVpHsQ6yw7YBy97lS8UDtil;
-							_Ta8oiGRfjrRGtgUaA5S061UepZb.StopCutscene(CutsceneState_0.Stage, CutsceneState_0.ID);
+							_cutscene = cutscene;
+							_cutscene.Begin(state.Stage, state.ID);
 						});
 					}
 				});
@@ -757,68 +765,68 @@ public class AmorousSingleton : IAmorous
 
 	public void Start()
 	{
-		_CYyzfcX8IclN1GnWsApBFWBpush(0);
-		_nvTYmpWmxq2DhO8ubfi3j5rZdLA();
-		_xfiKuXXh5LQA9CUQiex6tutzFKQ.Start();
+		AutosaveAtSlot(0);
+		ResetInGameDrawing();
+		_scene.Start();
 	}
 
-	public void _lXEQJcXKxsjtZp00Y9aPe0ymGue<T>() where T : _8lVOgkauaSHbAkAqHzI1K7mIyOI
+	public void SetOverlay<T>() where T : InteractableOverlay
 	{
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = Activator.CreateInstance(typeof(T), this) as _8lVOgkauaSHbAkAqHzI1K7mIyOI;
+		_overlay = Activator.CreateInstance(typeof(T), this) as InteractableOverlay;
 	}
 
-	public void _lXEQJcXKxsjtZp00Y9aPe0ymGue<T>(T gparam_0) where T : _8lVOgkauaSHbAkAqHzI1K7mIyOI
+	public void SetOverlay<T>(T overlay) where T : InteractableOverlay
 	{
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = gparam_0;
+		_overlay = overlay;
 	}
 
-	public void _gYufry4VnA6Ur59PtBsOHrUA8SD()
+	public void ResetOverlay()
 	{
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = null;
+		_overlay = null;
 	}
 
-	public AbstractNPC GetNPCLayer(string string_0)
+	public AbstractNPC GetNPCLayer(string name)
 	{
-		if (_xfiKuXXh5LQA9CUQiex6tutzFKQ == null)
+		if (_scene == null)
 		{
 			return null;
 		}
-		return _xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(string_0)?.NPC;
+		return _scene.GetNPCLayer(name)?.NPC;
 	}
 
-	public AbstractNPC GetNPCLayer(NPCLocation npclocation_0)
+	public AbstractNPC GetNPCLayer(NPCLocation location)
 	{
-		if (_xfiKuXXh5LQA9CUQiex6tutzFKQ == null)
+		if (_scene == null)
 		{
 			return null;
 		}
-		return _xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(npclocation_0)?.NPC;
+		return _scene.GetNPCLayer(location)?.NPC;
 	}
 
-	public AbstractNPC _TwQHHdbdRFRy2ctTZabNfz1Htrg(string string_0, LayerOrder LayerOrder_0)
+	public AbstractNPC GetNPCLayerAt(string name, LayerOrder order)
 	{
-		if (_xfiKuXXh5LQA9CUQiex6tutzFKQ != null)
+		if (_scene != null)
 		{
-			NPCLayer NPCLayer = _xfiKuXXh5LQA9CUQiex6tutzFKQ.GetNPCLayer(string_0);
+			NPCLayer NPCLayer = _scene.GetNPCLayer(name);
 			if (NPCLayer == null)
 			{
 				IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 					where typeof(AbstractNPC).IsAssignableFrom(type_0) && !type_0.IsAbstract
 					select type_0;
-				Type type = source.FirstOrDefault((Type type_0) => type_0.Name == string_0);
+				Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
 				if (!(type == null))
 				{
 					if (Activator.CreateInstance(type, this) is AbstractNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT)
 					{
 						qGGOTxZ8aNWGh0hc26wcmx8wmwT.Game = this;
 						qGGOTxZ8aNWGh0hc26wcmx8wmwT.Begin();
-						_xfiKuXXh5LQA9CUQiex6tutzFKQ.AddNPC(qGGOTxZ8aNWGh0hc26wcmx8wmwT, (LayerOrder_0 == LayerOrder.None) ? LayerOrder.Background : LayerOrder_0);
+						_scene.AddNPC(qGGOTxZ8aNWGh0hc26wcmx8wmwT, (order == LayerOrder.None) ? LayerOrder.Background : order);
 						return qGGOTxZ8aNWGh0hc26wcmx8wmwT;
 					}
-					Logger.Error("Failed to instance npc '{0}'", string_0);
+					Logger.Error("Failed to instance npc '{0}'", name);
 					return null;
 				}
-				Logger.Error("Failed to load npc '{0}'", string_0);
+				Logger.Error("Failed to load npc '{0}'", name);
 				return null;
 			}
 			AbstractNPC NPC = NPCLayer.NPC;
@@ -826,67 +834,67 @@ public class AmorousSingleton : IAmorous
 			{
 				return null;
 			}
-			NPCLayer.Layer = ((LayerOrder_0 == LayerOrder.None) ? NPCLayer.Layer : LayerOrder_0);
+			NPCLayer.Layer = ((order == LayerOrder.None) ? NPCLayer.Layer : order);
 			NPCLayer.ZOrder = ((NPCLayer.Layer == LayerOrder.Background) ? 1 : 3);
-			_xfiKuXXh5LQA9CUQiex6tutzFKQ.RefreshLayerOrdering();
+			_scene.RefreshLayerOrdering();
 			return NPCLayer.NPC;
 		}
 		return null;
 	}
 
-	public T _TwQHHdbdRFRy2ctTZabNfz1Htrg<T>(LayerOrder LayerOrder_0) where T : AbstractNPC
+	public T GetNPCLayerAt<T>(LayerOrder order) where T : AbstractNPC
 	{
-		return _TwQHHdbdRFRy2ctTZabNfz1Htrg(typeof(T).Name, LayerOrder_0) as T;
+		return GetNPCLayerAt(typeof(T).Name, order) as T;
 	}
 
-	public void _yh2DwZs16cvRtvGayeYZrMWlrbj(int int_0)
+	public void SaveAtSlot(int slot)
 	{
-		_DW9IcpdMEINZmuzfrqmwsduBGih.Save(int_0, new _lRHDfpOTd4PxClZkjMpoakPEA9d
+		Saves.Save(slot, new SaveData
 		{
 			Version = 5,
-			PlayerData = _CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Data,
-			CutsceneState = _PSROht9Hy1Ik63UUdnKDUGBA0yQ(),
-			SceneName = _xfiKuXXh5LQA9CUQiex6tutzFKQ.GetType().Name,
-			PhoneEnabled = _poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj
+			PlayerData = _player.Data,
+			CutsceneState = GetCutsceneState(),
+			SceneName = _scene.GetType().Name,
+			PhoneEnabled = PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj
 		});
 	}
 
-	public void _CYyzfcX8IclN1GnWsApBFWBpush(int int_0)
+	public void AutosaveAtSlot(int slot)
 	{
-		_DW9IcpdMEINZmuzfrqmwsduBGih._3y7m8OGVjMe7WGIhZ66YOw3ITUE(int_0, new _lRHDfpOTd4PxClZkjMpoakPEA9d
+		Saves.Autosave(slot, new SaveData
 		{
 			Version = 5,
-			PlayerData = _CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Data,
-			SceneName = _xfiKuXXh5LQA9CUQiex6tutzFKQ.GetType().Name,
-			PhoneEnabled = _poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj
+			PlayerData = _player.Data,
+			SceneName = _scene.GetType().Name,
+			PhoneEnabled = PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj
 		});
 	}
 
-	public bool _Ut0dhlh4JTZBMNJPNxxI9f9VqTp(int int_0)
+	public bool ReadFromSlot(int slot)
 	{
-		_nvTYmpWmxq2DhO8ubfi3j5rZdLA();
-		_lRHDfpOTd4PxClZkjMpoakPEA9d lRHDfpOTd4PxClZkjMpoakPEA9d = _DW9IcpdMEINZmuzfrqmwsduBGih.Read(int_0);
-		if (lRHDfpOTd4PxClZkjMpoakPEA9d != null)
+		ResetInGameDrawing();
+		SaveData save = Saves.Read(slot);
+		if (save != null)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._NG0eIZcXsX6Fp38GhuED0LKeWHf(lRHDfpOTd4PxClZkjMpoakPEA9d);
-			_CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Data = lRHDfpOTd4PxClZkjMpoakPEA9d.PlayerData;
-			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = lRHDfpOTd4PxClZkjMpoakPEA9d.PhoneEnabled;
-			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
-			if (lRHDfpOTd4PxClZkjMpoakPEA9d.CutsceneState != null)
+			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._NG0eIZcXsX6Fp38GhuED0LKeWHf(save);
+			_player.Data = save.PlayerData;
+			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = save.PhoneEnabled;
+			PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
+			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+			if (save.CutsceneState != null)
 			{
-				_dmwpjPj0QtK7OW2M486hHkm5FKH(lRHDfpOTd4PxClZkjMpoakPEA9d.CutsceneState);
+				LoadCutscene(save.CutsceneState);
 			}
 			else
 			{
-				if (!_dKSAtbg8U4PX1oOcOJ2BFewVtcI.Contains(lRHDfpOTd4PxClZkjMpoakPEA9d.SceneName))
+				if (!_nonContextualPlaces.Contains(save.SceneName))
 				{
-					lRHDfpOTd4PxClZkjMpoakPEA9d.SceneName = typeof(ClubInsideScene).Name;
+					save.SceneName = typeof(ClubInsideScene).Name;
 				}
-				if (!_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._RUw8RieezXPoVSmbk3eROtfKXVi(this, lRHDfpOTd4PxClZkjMpoakPEA9d))
+				if (!_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._RUw8RieezXPoVSmbk3eROtfKXVi(this, save))
 				{
-					StartScene(lRHDfpOTd4PxClZkjMpoakPEA9d.SceneName);
+					StartScene(save.SceneName);
 				}
 			}
 			return true;
@@ -894,59 +902,59 @@ public class AmorousSingleton : IAmorous
 		return false;
 	}
 
-	public bool _1yDW5GeZ2MCcssz8ohrF9CK913i(int int_0)
+	public bool ReadFromAutosaveSlot(int slot)
 	{
-		_nvTYmpWmxq2DhO8ubfi3j5rZdLA();
-		_lRHDfpOTd4PxClZkjMpoakPEA9d lRHDfpOTd4PxClZkjMpoakPEA9d = _DW9IcpdMEINZmuzfrqmwsduBGih._NyR9YmfkeF4CXGOi1ENApzh6B5V(int_0);
-		if (lRHDfpOTd4PxClZkjMpoakPEA9d != null)
+		ResetInGameDrawing();
+		SaveData save = Saves.ReadAutosave(slot);
+		if (save != null)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._NG0eIZcXsX6Fp38GhuED0LKeWHf(lRHDfpOTd4PxClZkjMpoakPEA9d);
-			_CCtbrNWS4Gi5hRSEsXYI5VzS7gI.Data = lRHDfpOTd4PxClZkjMpoakPEA9d.PlayerData;
-			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = lRHDfpOTd4PxClZkjMpoakPEA9d.PhoneEnabled;
-			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
-			if (!_dKSAtbg8U4PX1oOcOJ2BFewVtcI.Contains(lRHDfpOTd4PxClZkjMpoakPEA9d.SceneName))
+			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._NG0eIZcXsX6Fp38GhuED0LKeWHf(save);
+			_player.Data = save.PlayerData;
+			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = save.PhoneEnabled;
+			PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
+			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+			if (!_nonContextualPlaces.Contains(save.SceneName))
 			{
-				lRHDfpOTd4PxClZkjMpoakPEA9d.SceneName = typeof(ClubInsideScene).Name;
+				save.SceneName = typeof(ClubInsideScene).Name;
 			}
-			if (!_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._RUw8RieezXPoVSmbk3eROtfKXVi(this, lRHDfpOTd4PxClZkjMpoakPEA9d))
+			if (!_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._RUw8RieezXPoVSmbk3eROtfKXVi(this, save))
 			{
-				StartScene(lRHDfpOTd4PxClZkjMpoakPEA9d.SceneName);
+				StartScene(save.SceneName);
 			}
 			return true;
 		}
 		return false;
 	}
 
-	public void _EXfoFnp1OKxeZbd4GcVZMCO2urH(string string_0, string string_1, string string_2)
+	public void ShowMessage(string icon, string title, string message)
 	{
 		PlayerPreferences.GetPlayerData().Messages.Add(new PhoneMessage
 		{
-			Icon = string_0,
-			Title = string_1,
-			Message = string_2,
+			Icon = icon,
+			Title = title,
+			Message = message,
 			Date = DateTime.Now
 		});
-		_9rxbJ7LsE3DhACUHVlPZaixc5Jp._EXfoFnp1OKxeZbd4GcVZMCO2urH(string_0, string_1, string_2);
+		_notifier.ShowMessage(icon, title, message);
 	}
 
-	private void _pql4s9X0U3svdBghGax6VsdF2Gq()
+	private void ReturnToMenu()
 	{
-		_nvTYmpWmxq2DhO8ubfi3j5rZdLA();
+		ResetInGameDrawing();
 		StartScene<MainMenuScene>();
 	}
 
-	private void _nvTYmpWmxq2DhO8ubfi3j5rZdLA()
+	private void ResetInGameDrawing()
 	{
-		if (_5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
+		if (Cutscene != null)
 		{
-			_5zNdOw7qHmuCAPJFMr3SsZdBlCr.ResetProgression();
+			Cutscene.ResetProgression();
 		}
-		_poenyHBGUusBcnNcTFB9MQBV72R._RiDuYMeg3EHnBUteUcAb8VlfQVl();
-		_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC().ResetProgression();
-		_nkzqFdEfDyLcyGikIKGcHjklI4y._gVRGC9VAGHCLvP8p5Q4mqLPvFCm();
-		_nkzqFdEfDyLcyGikIKGcHjklI4y._h0KfaNiikKlJV2KkRPIdVDKVJnC();
-		_RA1aFlOff0jGfI2cKUGhYI1MRLBA._E7yBM68AWt7OGHJ5D6xYA8RK8tAA(new Color(0, 0, 0, 0));
+		PhoneOverlay.Hide();
+		PhoneOverlay.Get().ResetProgression();
+		TypingDialogue._gVRGC9VAGHCLvP8p5Q4mqLPvFCm();
+		TypingDialogue.BeginCutscene();
+		_fader.ApplyNow(new Color(0, 0, 0, 0));
 	}
 }

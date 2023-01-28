@@ -5,7 +5,7 @@ public class _ZXdfBmHEapkc67visJnDe1hgtuz : AbstractEvent<SwitchToSubsceneEventD
 {
 	public string SubsceneName { get; private set; }
 
-	public _ZXdfBmHEapkc67visJnDe1hgtuz(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _ZXdfBmHEapkc67visJnDe1hgtuz(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -16,14 +16,14 @@ public class _ZXdfBmHEapkc67visJnDe1hgtuz : AbstractEvent<SwitchToSubsceneEventD
 		SubsceneName = switchToSubsceneEventData_0.SubsceneName;
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
-		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene.SetVariant(SubsceneName);
+		base.Begin();
+		base.Cutscene.Game.Scene.SetVariant(SubsceneName);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 	}
 }

@@ -25,8 +25,8 @@ public class ClubLoungeScene : AbstractScene
 		AddClickableLayer("Door", "Assets/Scenes/ClubLounge/Exit door selectable", 235, 0, OnDoorClick);
 		AddAnimatedClickableLayer("Club", 2588, 0, OnClubClick, 1200, "Assets/Scenes/ClubLounge/Main Room Blue", "Assets/Scenes/ClubLounge/Main Room Green");
 		AddForegroundTexturedLayer("Couches", "Assets/Scenes/ClubLounge/Foreground couches", -1295, 758);
-		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-1295, 1295, 0, 0);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
+		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-1295, 1295, 0, 0);
+		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showDustin = !data.GetBit("DustinLeftClub");
 		_showMercy = !data.GetBit("MercyLeftClub");
@@ -42,28 +42,28 @@ public class ClubLoungeScene : AbstractScene
 
 	public override void Start()
 	{
-		ClubLoungeBNPC clubLoungeBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeBNPC>(LayerOrder.Background);
+		ClubLoungeBNPC clubLoungeBNPC = base.Game.GetNPCLayerAt<ClubLoungeBNPC>(LayerOrder.Background);
 		clubLoungeBNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubLoungeBNPC.SetClothes(ClubStaticNPC.EClothes.Shirt, ClubStaticNPC.EClothes.Pants);
 		clubLoungeBNPC.X = 700f;
 		clubLoungeBNPC.Y = 275f;
-		ClubLoungeCNPC clubLoungeCNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeCNPC>(LayerOrder.Background);
+		ClubLoungeCNPC clubLoungeCNPC = base.Game.GetNPCLayerAt<ClubLoungeCNPC>(LayerOrder.Background);
 		clubLoungeCNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubLoungeCNPC.SetClothes(ClubStaticNPC.EClothes.Shirt, ClubStaticNPC.EClothes.Pants);
 		clubLoungeCNPC.X = 1000f;
 		clubLoungeCNPC.Y = 275f;
-		ClubLoungeEFNPC clubLoungeEFNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeEFNPC>(LayerOrder.Background);
+		ClubLoungeEFNPC clubLoungeEFNPC = base.Game.GetNPCLayerAt<ClubLoungeEFNPC>(LayerOrder.Background);
 		clubLoungeEFNPC.SetPose(ClubLoungeEFNPC.EPoses.Sitting);
 		clubLoungeEFNPC.SetClothes(ClubLoungeEFNPC.EClothes.Shirt, ClubLoungeEFNPC.EClothes.Pants);
 		clubLoungeEFNPC.X = 1600f;
 		clubLoungeEFNPC.Y = 250f;
-		ClubLoungeANPC clubLoungeANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeANPC>(LayerOrder.Foreground);
+		ClubLoungeANPC clubLoungeANPC = base.Game.GetNPCLayerAt<ClubLoungeANPC>(LayerOrder.Foreground);
 		clubLoungeANPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubLoungeANPC.SetClothes(ClubStaticNPC.EClothes.Shirt);
 		clubLoungeANPC.X = 40f;
 		clubLoungeANPC.Y = 55f;
 		clubLoungeANPC._YyDeMNgCbNCOMTBX2QLUb4ruMp9A = false;
-		ClubLoungeDancerANPC clubLoungeDancerANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubLoungeDancerANPC>(LayerOrder.Foreground);
+		ClubLoungeDancerANPC clubLoungeDancerANPC = base.Game.GetNPCLayerAt<ClubLoungeDancerANPC>(LayerOrder.Foreground);
 		clubLoungeDancerANPC.SetEmotion(ClubLoungeDancerANPC.EHeads.Smirk);
 		clubLoungeDancerANPC.SetPose(ClubLoungeDancerANPC.EPoses.Dancing);
 		clubLoungeDancerANPC.SetClothes(ClubLoungeDancerANPC.EClothes.Shirt, ClubLoungeDancerANPC.EClothes.Shorts);
@@ -71,14 +71,14 @@ public class ClubLoungeScene : AbstractScene
 		clubLoungeDancerANPC.Y = 1000f;
 		if (_showDustin)
 		{
-			_dustin = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticDustinNPC>(LayerOrder.Foreground);
+			_dustin = base.Game.GetNPCLayerAt<ClubStaticDustinNPC>(LayerOrder.Foreground);
 			_dustin.X = -370f;
 			_dustin.Y = 246f;
 			_dustin.Click = OnDustinClick;
 		}
 		if (_showMercy)
 		{
-			_mercy = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticMercyNPC>(LayerOrder.Foreground);
+			_mercy = base.Game.GetNPCLayerAt<ClubStaticMercyNPC>(LayerOrder.Foreground);
 			_mercy.X = 2300f;
 			_mercy.Y = 225f;
 			_mercy.Click = OnMercyClick;
@@ -102,11 +102,11 @@ public class ClubLoungeScene : AbstractScene
 
 	private void OnDustinClick()
 	{
-		base.Game.RequestScene("DustinDate");
+		base.Game.StartCutscene("DustinDate");
 	}
 
 	private void OnMercyClick()
 	{
-		base.Game.RequestScene("MercyPreDate");
+		base.Game.StartCutscene("MercyPreDate");
 	}
 }

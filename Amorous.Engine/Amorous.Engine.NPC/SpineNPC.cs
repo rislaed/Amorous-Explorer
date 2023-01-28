@@ -1,15 +1,12 @@
 using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Amorous.Engine.NPC;
 
-public abstract class SpineNPC<THead, TPose, TClothes> : _tfDAeR6npiqJMLRSXPO1DxGA0TgA where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
+public abstract class SpineNPC<THead, TPose, TClothes> : AbstractSpineNPC where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
 {
-	protected SpineNPC(IAmorous game, string string_0, float float_0 = 1f, bool bool_0 = true)
-		: base(game, string_0, float_0, bool_0)
-	{
-	}
+	protected SpineNPC(IAmorous game, string path, float scale = 1f, bool premultipliedAlpha = true)
+		: base(game, path, scale, premultipliedAlpha) {}
 
 	public _xmfdPa5IagU3cXbLL61gyoXAV7gA GetEmotion(THead emotion, params string[] self)
 	{

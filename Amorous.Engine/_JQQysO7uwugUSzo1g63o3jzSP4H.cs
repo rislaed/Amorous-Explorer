@@ -8,7 +8,6 @@ using Squid;
 public class _JQQysO7uwugUSzo1g63o3jzSP4H
 {
 	private _s8LmEXaxHFzAKzGEfeuncG6iAkc<string, Rectangle> _KyRTfqdr2zZtsEAgkvOlUoQoB5j;
-
 	private readonly Rectangle _Q11h3GSbLiWGbJHulJsbJOnFyVB = new Rectangle(0, 0, 1, 1);
 
 	public _JQQysO7uwugUSzo1g63o3jzSP4H()

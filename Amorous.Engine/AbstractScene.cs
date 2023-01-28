@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -39,7 +36,7 @@ public abstract class AbstractScene
 		Squid.SetSkin("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 	}
 
-	public virtual void StopCutscene() {}
+	public virtual void Begin() {}
 	public virtual void End() {}
 
 	public AbstractLayer GetLayer(string name)
@@ -234,19 +231,19 @@ public abstract class AbstractScene
 			IsOrderingChanged = false;
 		}
 		UpdateLayers(gameTime, Layers);
-		if (Game._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
+		if (Game.Cutscene != null)
 		{
 			return;
 		}
 		if (!CapturedByOverlay)
 		{
 			bool bool_;
-			if ((bool_ = Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton)) && CapturedLayer != null)
+			if ((bool_ = Game.Controller.JustPressed(ControllerButtonType.LeftButton)) && CapturedLayer != null)
 			{
 				CapturedLayer.Continue();
 				CapturedLayer = null;
 			}
-			Microsoft.Xna.Framework.Point point = Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._e6KgAy4CTN1JFYwA88grvAEmDxX(Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+			Microsoft.Xna.Framework.Point point = Game.Mouse._e6KgAy4CTN1JFYwA88grvAEmDxX(Game.Controller.Cursor);
 			Touch(point, bool_, Layers);
 		}
 		Squid.Update();
@@ -291,21 +288,21 @@ public abstract class AbstractScene
 				else
 				{
 					AbstractNPC NPC = ((NPCLayer)next).NPC;
-					NPC._IvIFs0Tl6RHdTn3daJXsNCXCNyO = false;
+					NPC.IsHovered = false;
 					if (layer == null)
 					{
 						rectangle.X = (int)NPC.X;
 						rectangle.Y = (int)NPC.Y;
 						rectangle.Width = (int)((float)NPC.Width * NPC.Scale);
 						rectangle.Height = (int)((float)NPC.Height * NPC.Scale);
-						if (NPC is _tfDAeR6npiqJMLRSXPO1DxGA0TgA)
+						if (NPC is AbstractSpineNPC)
 						{
 							rectangle.X -= rectangle.Width / 2;
 							rectangle.Y -= rectangle.Height;
 						}
 						if (NPC.Click != null && rectangle.Contains(point))
 						{
-							NPC._IvIFs0Tl6RHdTn3daJXsNCXCNyO = true;
+							NPC.IsHovered = true;
 							layer = next;
 						}
 					}
@@ -337,7 +334,7 @@ public abstract class AbstractScene
 		DrawLayers(spriteBatch, skeletonMeshRenderer, matrix, Layers);
 	}
 
-	public virtual void Render(SpriteBatch spriteBatch)
+	public virtual void DrawOverlay(SpriteBatch spriteBatch)
 	{
 		Squid.Draw();
 	}
@@ -353,16 +350,16 @@ public abstract class AbstractScene
 			}
 			if (!(item is NPCLayer))
 			{
-				if (!(item is _WBXNT6eIVGk6ZKExRBJ6JxXE6zb))
+				if (!(item is SpineDrawableLayer))
 				{
-					if (item is _fAUddQEKfZyemRb327NhM3GGlmzA)
+					if (item is DrawableLayer)
 					{
 						if (flag)
 						{
 							spriteBatch.End();
 							flag = false;
 						}
-						((_fAUddQEKfZyemRb327NhM3GGlmzA)item)._3TrGrUra7cqeIXkbZOrfaoQaD5F = matrix;
+						((DrawableLayer)item).AdditionalMatrix = matrix;
 						item.Draw(spriteBatch);
 					}
 					else
@@ -381,17 +378,17 @@ public abstract class AbstractScene
 					spriteBatch.End();
 					flag = false;
 				}
-				_WBXNT6eIVGk6ZKExRBJ6JxXE6zb wBXNT6eIVGk6ZKExRBJ6JxXE6zb = (_WBXNT6eIVGk6ZKExRBJ6JxXE6zb)item;
-				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb._zkHMlDFkja4TqmjdlHuZRCj8FCB)
+				SpineDrawableLayer wBXNT6eIVGk6ZKExRBJ6JxXE6zb = (SpineDrawableLayer)item;
+				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb.InTalking)
 				{
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc += matrix.M41;
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY += matrix.M42;
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetX += matrix.M41;
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetY += matrix.M42;
 				}
 				wBXNT6eIVGk6ZKExRBJ6JxXE6zb.Draw(spriteBatch, skeletonMeshRenderer);
-				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb._zkHMlDFkja4TqmjdlHuZRCj8FCB)
+				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb.InTalking)
 				{
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc -= matrix.M41;
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb._WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY -= matrix.M42;
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetX -= matrix.M41;
+					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetY -= matrix.M42;
 				}
 			}
 			else
@@ -413,23 +410,23 @@ public abstract class AbstractScene
 	private void DrawNPC(NPCLayer npclayer, SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix)
 	{
 		AbstractNPC NPC = npclayer.NPC;
-		if (NPC is _tfDAeR6npiqJMLRSXPO1DxGA0TgA)
+		if (NPC is AbstractSpineNPC)
 		{
-			if (!NPC._zkHMlDFkja4TqmjdlHuZRCj8FCB)
+			if (!NPC.InTalking)
 			{
-				((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)NPC).X += matrix.M41;
-				((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)NPC).Y += matrix.M42;
+				((AbstractSpineNPC)NPC).X += matrix.M41;
+				((AbstractSpineNPC)NPC).Y += matrix.M42;
 			}
-			((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)NPC).Draw(spriteBatch, skeletonMeshRenderer);
-			if (!NPC._zkHMlDFkja4TqmjdlHuZRCj8FCB)
+			((AbstractSpineNPC)NPC).Draw(spriteBatch, skeletonMeshRenderer);
+			if (!NPC.InTalking)
 			{
-				((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)NPC).X -= matrix.M41;
-				((_tfDAeR6npiqJMLRSXPO1DxGA0TgA)NPC).Y -= matrix.M42;
+				((AbstractSpineNPC)NPC).X -= matrix.M41;
+				((AbstractSpineNPC)NPC).Y -= matrix.M42;
 			}
 		}
 		else if (NPC is _xZgbANe7gi6i2DAhBEkKpR1QFLe)
 		{
-			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, null, null, null, null, (!NPC._zkHMlDFkja4TqmjdlHuZRCj8FCB) ? matrix : Matrix.Identity);
+			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, null, null, null, null, (!NPC.InTalking) ? matrix : Matrix.Identity);
 			((_xZgbANe7gi6i2DAhBEkKpR1QFLe)NPC).Draw(spriteBatch);
 			spriteBatch.End();
 		}

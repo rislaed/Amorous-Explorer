@@ -7,7 +7,7 @@ public class _KxfXNCPP3dNfGOZBuSyD82CAbxp : AbstractEvent<SetFlagEventData>
 
 	public bool Value { get; private set; }
 
-	public _KxfXNCPP3dNfGOZBuSyD82CAbxp(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _KxfXNCPP3dNfGOZBuSyD82CAbxp(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -19,15 +19,15 @@ public class _KxfXNCPP3dNfGOZBuSyD82CAbxp : AbstractEvent<SetFlagEventData>
 		Value = setFlagEventData_0.Value;
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
+		base.Begin();
 		PlayerPreferences.GetPlayerData().SetBit(Flag, Value);
-		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._aJh9CibG5YKhkExxgRyVopdfSeJ.SetBit(Flag, Value);
+		base.Cutscene.Game.Achievements.SetBit(Flag, Value);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 	}
 }

@@ -9,7 +9,7 @@ public class NPCLayer : AbstractLayer
 
 	public AbstractNPC NPC;
 	public LayerOrder Layer;
-	private _nR8eroJOHehP0ZGyyTveo6aMTHg _sVephzY32oTa3X109UReGPT9rd;
+	private Cutscene _sVephzY32oTa3X109UReGPT9rd;
 	private Action _U1ntvSBQ11Vut0Wd1Vmb115ghn;
 
 	public Action _64JjsghBPDjZ1OxZwhO8Y6dFE5t
@@ -32,11 +32,11 @@ public class NPCLayer : AbstractLayer
 	{
 		if (_U1ntvSBQ11Vut0Wd1Vmb115ghn != null)
 		{
-			if (_sVephzY32oTa3X109UReGPT9rd != null && base.Scene.Game._5zNdOw7qHmuCAPJFMr3SsZdBlCr == null)
+			if (_sVephzY32oTa3X109UReGPT9rd != null && base.Scene.Game.Cutscene == null)
 			{
 				_U1ntvSBQ11Vut0Wd1Vmb115ghn();
 			}
-			_sVephzY32oTa3X109UReGPT9rd = base.Scene.Game._5zNdOw7qHmuCAPJFMr3SsZdBlCr;
+			_sVephzY32oTa3X109UReGPT9rd = base.Scene.Game.Cutscene;
 		}
 		NPC.Update(gameTime);
 	}

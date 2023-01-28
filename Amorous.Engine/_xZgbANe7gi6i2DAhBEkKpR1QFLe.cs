@@ -11,10 +11,10 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 {
 	private class _e6Sul13xByZYV3zUae0HX9fjnS
 	{
-		private readonly _xZgbANe7gi6i2DAhBEkKpR1QFLe _v5mBBzOHST4Ij2jetldrF2beJtbA;
+		private readonly _xZgbANe7gi6i2DAhBEkKpR1QFLe _npc;
 		private Color _JbGNnZhaeWyNm0aWm7TtSamww4C = Color.White;
 		private float _AQwQu1ldCtpbkD5F9oEByJdCnWaA;
-		private readonly Texture2D _OzFEGvZu5tqLcitcWhX3j9pIBZM;
+		private readonly Texture2D _foreground;
 
 		public string Name { get; private set; }
 
@@ -40,9 +40,9 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 
 		public _e6Sul13xByZYV3zUae0HX9fjnS(_xZgbANe7gi6i2DAhBEkKpR1QFLe _xZgbANe7gi6i2DAhBEkKpR1QFLe_0, string string_0, Texture2D texture2D_0)
 		{
-			_v5mBBzOHST4Ij2jetldrF2beJtbA = _xZgbANe7gi6i2DAhBEkKpR1QFLe_0;
+			_npc = _xZgbANe7gi6i2DAhBEkKpR1QFLe_0;
 			Name = string_0;
-			_OzFEGvZu5tqLcitcWhX3j9pIBZM = texture2D_0;
+			_foreground = texture2D_0;
 			_WxTaPaOE8qb7d7anVlwwqCzugAo = 0f;
 		}
 
@@ -62,7 +62,7 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 
 	public bool _YyDeMNgCbNCOMTBX2QLUb4ruMp9A = true;
 
-	protected readonly float _jSsdHgef86oxWXEOENwyht1nIvn = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(0f, (float)Math.PI * 2f);
+	protected readonly float _jSsdHgef86oxWXEOENwyht1nIvn = Randoms.NextDouble(0f, (float)Math.PI * 2f);
 	protected float _ZSm5WiT2IPnq6W1i4QmcxHACwQh = 1f;
 	private readonly Effect _9jklVVcQQYcyqOYrkPiht2VP0IG;
 
@@ -167,7 +167,7 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 		base.Draw();
 		if (_YyDeMNgCbNCOMTBX2QLUb4ruMp9A)
 		{
-			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["Time"].SetValue(Randoms.Time);
 			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["BreathingOffset"].SetValue(_jSsdHgef86oxWXEOENwyht1nIvn);
 			_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["BreathingSpeed"].SetValue(_ZSm5WiT2IPnq6W1i4QmcxHACwQh);
 			_9jklVVcQQYcyqOYrkPiht2VP0IG.CurrentTechnique.Passes[0].Apply();
@@ -181,7 +181,7 @@ public abstract class _xZgbANe7gi6i2DAhBEkKpR1QFLe : AbstractNPC
 		if (enumerator.MoveNext())
 		{
 			_e6Sul13xByZYV3zUae0HX9fjnS current = enumerator.Current;
-			current.Draw(spriteBatch, base.Scale, _IvIFs0Tl6RHdTn3daJXsNCXCNyO);
+			current.Draw(spriteBatch, base.Scale, IsHovered);
 		}
 	}
 

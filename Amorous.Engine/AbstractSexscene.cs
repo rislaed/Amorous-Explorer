@@ -20,54 +20,38 @@ public abstract class AbstractSexscene
 	public const string _NlwZaoHP1dlYYsTAbtkciLmBUXz = "Moan";
 
 	public const float IdlePhase = 2000f;
-
 	public const float SlowPhase = 1000f;
-
 	public const float MediumPhase = 500f;
-
 	public const float FastPhase = 300f;
 
-	protected float _YDmx0efYtcyg4olWGsr0rBMkyjD = 1000f;
-
-	protected float _aElCqTEKQdwgSGVsOO7nt14UEsn = 1000f;
+	protected float CycleTicks = 1000f;
+	protected float Cycle = 1000f;
 
 	private float _OnzebJryHIHB0leF5LxtbJwFXjr;
-
 	private float _D5nVuTc7M3CvlN5bC8IzrFoWiPh;
-
 	private int _sEncbVBa6dUb3TaptvXHIvnhfcT;
-
 	private int _OzssjIfhUN4zR5TqbxpZGLEeF9B;
-
 	private bool _DPxTb3eioTU27n7cqNVeQibO5FDb;
 
 	public bool _7BfTap1TnZXk1aaAXnFODowTQCp { get; set; }
-
 	public SpineRenderer Spine { get; private set; }
-
 	public Texture2D _h29gtnqEWLAa5qsliRXuXiPwY2o { get; private set; }
-
 	public Texture2D _XqJSGCmxFB8nW6I8Mf5NEZBQ0gG { get; protected set; }
 
 	protected List<string> Overlays { get; private set; }
-
 	protected _sa8EsNgk4VDRaASdXE7VprdlNlg _wQSC6rD8bbXFvRxba0kr1RqxlOV { get; set; }
-
 	protected ContentManager Content { get; set; }
 
-	public Phase _rNGHguvWdrugQVL2AI6bMMKSORN { get; private set; }
-
-	public bool _p3lU5oxIaFTVHUNFxJRnaHkXdsA { get; private set; }
-
-	public string _jztzokSobPJKyleCHypP9HS4OhbA { get; set; }
-
+	public Phase State { get; private set; }
+	public bool Cumming { get; private set; }
+	public string Variant { get; set; }
 	public Texture2D Skin { get; set; }
 
 	protected AbstractSexscene(ContentManager contentManager, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SkeletonJson.SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null)
 	{
 		Content = contentManager;
 		Overlays = new List<string>();
-		Spine = contentManager._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0, list_0);
+		Spine = contentManager.LoadSkeleton(string_0, float_0, bool_0, list_0);
 		_wQSC6rD8bbXFvRxba0kr1RqxlOV = _sa8EsNgk4VDRaASdXE7VprdlNlg_0;
 		if (list_0 != null)
 		{
@@ -86,8 +70,8 @@ public abstract class AbstractSexscene
 
 	public void _0cFb48aKbcbREkHm9Jwptl6r6Vi()
 	{
-		PlayerData data_ = PlayerPreferences.GetPlayerData();
-		RefreshScene(data_);
+		PlayerData data = PlayerPreferences.GetPlayerData();
+		RefreshScene(data);
 	}
 
 	private void _11Hsh7iMhdhIoawBk6ueRsmCarI(string string_0)
@@ -102,7 +86,7 @@ public abstract class AbstractSexscene
 				_wQSC6rD8bbXFvRxba0kr1RqxlOV._VIy3F8sVuq5i8ygZ1laOvKez7fh._xDFlaclLtJxSUU63JEJALvRLdfe();
 				break;
 			case "ThrustEnd":
-				switch (_rNGHguvWdrugQVL2AI6bMMKSORN)
+				switch (State)
 				{
 				case Phase.Slow:
 					_wQSC6rD8bbXFvRxba0kr1RqxlOV._dsZlhJEYpq0xkgv0NEULe6dkmAe._xDFlaclLtJxSUU63JEJALvRLdfe();
@@ -115,7 +99,7 @@ public abstract class AbstractSexscene
 				break;
 			case "Moan":
 			{
-				Phase qokIrmaaT3Lq6znW10HdrPUO9Fq = _rNGHguvWdrugQVL2AI6bMMKSORN;
+				Phase qokIrmaaT3Lq6znW10HdrPUO9Fq = State;
 				if (_DPxTb3eioTU27n7cqNVeQibO5FDb)
 				{
 					qokIrmaaT3Lq6znW10HdrPUO9Fq = Phase.Fast;
@@ -123,7 +107,7 @@ public abstract class AbstractSexscene
 				_sEncbVBa6dUb3TaptvXHIvnhfcT++;
 				if (_sEncbVBa6dUb3TaptvXHIvnhfcT > _OzssjIfhUN4zR5TqbxpZGLEeF9B)
 				{
-					_OzssjIfhUN4zR5TqbxpZGLEeF9B = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(1, 3);
+					_OzssjIfhUN4zR5TqbxpZGLEeF9B = Randoms.Next(1, 3);
 					_sEncbVBa6dUb3TaptvXHIvnhfcT = 0;
 					switch (qokIrmaaT3Lq6znW10HdrPUO9Fq)
 					{
@@ -151,24 +135,25 @@ public abstract class AbstractSexscene
 		return new string[0];
 	}
 
-	public virtual void SetSkin(string string_0)
+	public virtual void SetSkin(string variant)
 	{
-		_jztzokSobPJKyleCHypP9HS4OhbA = string_0;
+		Variant = variant;
 	}
 
 	protected virtual void RefreshScene(PlayerData data)
 	{
+		// ?
 	}
 
 	public virtual void Update(GameTime gameTime)
 	{
-		if (_YDmx0efYtcyg4olWGsr0rBMkyjD < _aElCqTEKQdwgSGVsOO7nt14UEsn)
+		if (CycleTicks < Cycle)
 		{
-			_YDmx0efYtcyg4olWGsr0rBMkyjD += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+			CycleTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 		}
-		else if (_YDmx0efYtcyg4olWGsr0rBMkyjD > _aElCqTEKQdwgSGVsOO7nt14UEsn)
+		else if (CycleTicks > Cycle)
 		{
-			_YDmx0efYtcyg4olWGsr0rBMkyjD -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+			CycleTicks -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 		}
 		if (_OnzebJryHIHB0leF5LxtbJwFXjr < _D5nVuTc7M3CvlN5bC8IzrFoWiPh)
 		{
@@ -194,7 +179,7 @@ public abstract class AbstractSexscene
 				_OnzebJryHIHB0leF5LxtbJwFXjr = _D5nVuTc7M3CvlN5bC8IzrFoWiPh;
 			}
 		}
-		Spine.Update(gameTime, _YDmx0efYtcyg4olWGsr0rBMkyjD);
+		Spine.Update(gameTime, CycleTicks);
 	}
 
 	public virtual void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
@@ -222,7 +207,7 @@ public abstract class AbstractSexscene
 
 	public virtual void _VandJrNHr65bKmzzmFYTOwD1icL()
 	{
-		if (_rNGHguvWdrugQVL2AI6bMMKSORN == Phase.Fast)
+		if (State == Phase.Fast)
 		{
 			_oHE0dGUBNplXQia6K85vMaNc8jp();
 		}
@@ -234,27 +219,27 @@ public abstract class AbstractSexscene
 
 	public virtual void _4XV5xPzQUH5ABIwpxH3yf5EIAyL(int int_0, bool bool_0 = false)
 	{
-		_rNGHguvWdrugQVL2AI6bMMKSORN = (Phase)(bool_0 ? int_0 : Math.Max(0, Math.Min((int)(_rNGHguvWdrugQVL2AI6bMMKSORN + int_0), 3)));
-		switch (_rNGHguvWdrugQVL2AI6bMMKSORN)
+		State = (Phase)(bool_0 ? int_0 : Math.Max(0, Math.Min((int)(State + int_0), 3)));
+		switch (State)
 		{
-		case Phase.Idle:
-			_aElCqTEKQdwgSGVsOO7nt14UEsn = IdlePhase;
-			break;
-		case Phase.Slow:
-			_aElCqTEKQdwgSGVsOO7nt14UEsn = SlowPhase;
-			break;
-		case Phase.Medium:
-			_aElCqTEKQdwgSGVsOO7nt14UEsn = MediumPhase;
-			break;
-		case Phase.Fast:
-			_aElCqTEKQdwgSGVsOO7nt14UEsn = FastPhase;
-			break;
+			case Phase.Idle:
+				Cycle = IdlePhase;
+				break;
+			case Phase.Slow:
+				Cycle = SlowPhase;
+				break;
+			case Phase.Medium:
+				Cycle = MediumPhase;
+				break;
+			case Phase.Fast:
+				Cycle = FastPhase;
+				break;
 		}
 	}
 
 	public virtual void _JHfBnmyItvKJDQtdUPp2yLsm4yR()
 	{
-		_p3lU5oxIaFTVHUNFxJRnaHkXdsA = true;
+		Cumming = true;
 		_D5nVuTc7M3CvlN5bC8IzrFoWiPh = 1f;
 		_DPxTb3eioTU27n7cqNVeQibO5FDb = true;
 		_sEncbVBa6dUb3TaptvXHIvnhfcT = _OzssjIfhUN4zR5TqbxpZGLEeF9B;
@@ -262,7 +247,7 @@ public abstract class AbstractSexscene
 
 	public virtual void _oHE0dGUBNplXQia6K85vMaNc8jp()
 	{
-		_p3lU5oxIaFTVHUNFxJRnaHkXdsA = true;
+		Cumming = true;
 		_D5nVuTc7M3CvlN5bC8IzrFoWiPh = 1f;
 		_DPxTb3eioTU27n7cqNVeQibO5FDb = true;
 		_sEncbVBa6dUb3TaptvXHIvnhfcT = _OzssjIfhUN4zR5TqbxpZGLEeF9B;
@@ -271,7 +256,7 @@ public abstract class AbstractSexscene
 
 	public virtual void _paoLItUYkFWaGSDnCAvBagJ1F5T()
 	{
-		_p3lU5oxIaFTVHUNFxJRnaHkXdsA = false;
+		Cumming = false;
 		_D5nVuTc7M3CvlN5bC8IzrFoWiPh = 0f;
 		_DPxTb3eioTU27n7cqNVeQibO5FDb = false;
 	}

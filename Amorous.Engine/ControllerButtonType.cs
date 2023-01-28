@@ -1,4 +1,4 @@
-public enum _PMeRYZJaBCqgB9uADJFP3c14lxq
+public enum ControllerButtonType
 {
 	LeftButton,
 	MiddleButton,

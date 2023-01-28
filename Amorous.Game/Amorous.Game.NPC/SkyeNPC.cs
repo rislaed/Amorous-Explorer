@@ -32,13 +32,12 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 	}
 
 	public static string Name = "Skye";
-
 	public static Color Color = new Color(248, 255, 167);
 
 	public SkyeNPC(IAmorous game)
-		: base(game, "Assets/NPC/Skye/Skye", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Skye/Skye", 1f, premultipliedAlpha: true)
 	{
-		base._rAt6TRbgK04lvrs5QPjcd0n26pk = new Type[2]
+		base.Variations = new Type[2]
 		{
 			typeof(SkyeBlueNPC),
 			typeof(SkyeGrayNPC)

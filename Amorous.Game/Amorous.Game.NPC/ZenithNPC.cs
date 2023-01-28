@@ -31,11 +31,10 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 	}
 
 	public static string Name = "Zenith";
-
 	public static Color Color = new Color(155, 213, 154);
 
 	public ZenithNPC(IAmorous game)
-		: base(game, "Assets/NPC/Zenith/Zenith", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Zenith/Zenith", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		GetEmotion(EHeads.Angry, "Head angry", "Eye Back", "Pupils")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");

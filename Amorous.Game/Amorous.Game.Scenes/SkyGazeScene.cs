@@ -21,26 +21,26 @@ public class SkyGazeScene : AbstractScene
 		AddTexturedLayer("Background", "Assets/Scenes/SkyGaze/Background", 0, 0);
 		List<int> list = new List<int>
 		{
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, 320),
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(640, 960),
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(1280, 1600)
-		}.OrderBy((int int_0) => _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G()).ToList();
+			Randoms.Next(0, 320),
+			Randoms.Next(640, 960),
+			Randoms.Next(1280, 1600)
+		}.OrderBy((int int_0) => Randoms.Next()).ToList();
 		List<int> list2 = new List<int>
 		{
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, 20),
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(140, 160),
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(280, 300)
-		}.OrderBy((int int_0) => _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G()).ToList();
+			Randoms.Next(0, 20),
+			Randoms.Next(140, 160),
+			Randoms.Next(280, 300)
+		}.OrderBy((int int_0) => Randoms.Next()).ToList();
 		_9E0R2wzMPmvJcqYjxpEg08yWHxM = new List<int>
 		{
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(5, 25),
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(5, 25),
-			_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(5, 25)
+			Randoms.Next(5, 25),
+			Randoms.Next(5, 25),
+			Randoms.Next(5, 25)
 		};
 		_NGOOUGHxCQRJ95YqBGvCZoDVi1K = AddTexturedLayer("Cloud1", "Assets/Scenes/SkyGaze/Cloud1", list[0], list2[0]);
 		_5ucKPpTFNOSSSAiQwUdMbhUYRPC = AddTexturedLayer("Cloud2", "Assets/Scenes/SkyGaze/Cloud2", list[1], list2[1]);
 		_6pX8CiiBs3G2EaPqh95VdNHT3tu = AddTexturedLayer("Cloud3", "Assets/Scenes/SkyGaze/Cloud3", list[2], list2[2]);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 	}
 
 	public override void Update(GameTime gameTime)

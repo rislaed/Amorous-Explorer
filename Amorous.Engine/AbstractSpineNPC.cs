@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
-public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
+public abstract class AbstractSpineNPC : AbstractNPC
 {
 	private class _eBuDnRXeABWf8uwfsN15PfKEHw
 	{
@@ -18,7 +18,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 	private int? _xm9p2W8AbxEBdrI3wbC7knvB06R;
 	private bool _FdDzmVlp0fgTsGUxfkRfLr0dxtF;
 	private readonly _eBuDnRXeABWf8uwfsN15PfKEHw[] _smM3y5A19la8hNpeOINXXDeitDH;
-	private NPCLocation _KouBKjmDwRJIjRK4fKJ8PzNn9uV;
+	private NPCLocation _location;
 	public SpineRenderer Spine { get; private set; }
 	public override float X { get; set; }
 	public override float Y { get; set; }
@@ -38,12 +38,12 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 	public Texture2D Skin { get; set; }
 	public Func<int, string, bool> _YwAdHC5A5VB16lereNxJLkAP3Z9A { get; set; }
 
-	protected _tfDAeR6npiqJMLRSXPO1DxGA0TgA(IAmorous game, string string_0, float float_0 = 1f, bool bool_0 = true)
+	protected AbstractSpineNPC(IAmorous game, string path, float scale = 1f, bool premultipliedAlpha = true)
 		: base(game)
 	{
-		Spine = base.Game.Content._7BVREQXEcBCieHb0qgaVDpUj1ni(string_0, float_0, bool_0);
+		Spine = base.Game.Content.LoadSkeleton(path, scale, premultipliedAlpha);
 		Spine.SetVisibility(0f);
-		base.Scale = float_0;
+		base.Scale = scale;
 		_YWKqVMq3bCWDIv73VmJykYuZBKN = new _NxPDyghimJKCwBg53DaNTazjQ5k();
 		_smM3y5A19la8hNpeOINXXDeitDH = new _eBuDnRXeABWf8uwfsN15PfKEHw[2];
 		_FdDzmVlp0fgTsGUxfkRfLr0dxtF = true;
@@ -65,7 +65,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 		{
 			_4nhWi4RWJVAsAaRiBUYVgLfEiCz(skeletonMeshRenderer);
 			spriteBatch.Begin();
-			Color color = (_IvIFs0Tl6RHdTn3daJXsNCXCNyO ? Color.Red : Color.White);
+			Color color = (IsHovered ? Color.Red : Color.White);
 			_eBuDnRXeABWf8uwfsN15PfKEHw[] smM3y5A19la8hNpeOINXXDeitDH = _smM3y5A19la8hNpeOINXXDeitDH;
 			foreach (_eBuDnRXeABWf8uwfsN15PfKEHw eBuDnRXeABWf8uwfsN15PfKEHw in smM3y5A19la8hNpeOINXXDeitDH)
 			{
@@ -80,13 +80,13 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 		{
 			Spine.X = X;
 			Spine.Y = Y;
-			Spine.Draw(skeletonMeshRenderer, float_0: base.Scale, texture2D: Skin, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A, nullable_0: _IvIFs0Tl6RHdTn3daJXsNCXCNyO ? new Color?(new Color(1, 0, 0, 1)) : null);
+			Spine.Draw(skeletonMeshRenderer, float_0: base.Scale, texture2D: Skin, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A, nullable_0: IsHovered ? new Color?(new Color(1, 0, 0, 1)) : null);
 		}
 	}
 
-	protected override void SetAlpha(string string_0, float float_0)
+	protected override void SetAlpha(string bone, float alpha)
 	{
-		Spine.SetAlpha(string_0, float_0);
+		Spine.SetAlpha(bone, alpha);
 	}
 
 	private void _4nhWi4RWJVAsAaRiBUYVgLfEiCz(SkeletonMeshRenderer skeletonMeshRenderer)
@@ -94,13 +94,13 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 		if (_xm9p2W8AbxEBdrI3wbC7knvB06R.HasValue && _smM3y5A19la8hNpeOINXXDeitDH[_xm9p2W8AbxEBdrI3wbC7knvB06R.Value] != null)
 		{
 			_eBuDnRXeABWf8uwfsN15PfKEHw eBuDnRXeABWf8uwfsN15PfKEHw = _smM3y5A19la8hNpeOINXXDeitDH[_xm9p2W8AbxEBdrI3wbC7knvB06R.Value];
-			RenderTargetBinding[] renderTargets = base.Game._2yepMkVENnecIsduggABaU2qhXW.GetRenderTargets();
-			base.Game._2yepMkVENnecIsduggABaU2qhXW.SetRenderTarget(eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK);
-			base.Game._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.Transparent);
+			RenderTargetBinding[] renderTargets = base.Game.GLES.GetRenderTargets();
+			base.Game.GLES.SetRenderTarget(eBuDnRXeABWf8uwfsN15PfKEHw._Z5JOwYZpe1u3WDYizFmDS7dmAcK);
+			base.Game.GLES.Clear(Color.Transparent);
 			Spine.X = eBuDnRXeABWf8uwfsN15PfKEHw.Location.X;
 			Spine.Y = eBuDnRXeABWf8uwfsN15PfKEHw.Location.Y;
 			Spine.Draw(skeletonMeshRenderer, float_0: base.Scale, texture2D: Skin, func_0: _YwAdHC5A5VB16lereNxJLkAP3Z9A);
-			base.Game._2yepMkVENnecIsduggABaU2qhXW.SetRenderTargets(renderTargets);
+			base.Game.GLES.SetRenderTargets(renderTargets);
 		}
 	}
 
@@ -108,7 +108,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 	{
 		if (int_0 == 0)
 		{
-			_KouBKjmDwRJIjRK4fKJ8PzNn9uV = base.Location;
+			_location = base.Location;
 		}
 		else if (int_0 != 1)
 		{
@@ -118,7 +118,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 				return false;
 			}
 		}
-		else if (_KouBKjmDwRJIjRK4fKJ8PzNn9uV == base.Location)
+		else if (_location == base.Location)
 		{
 			return false;
 		}
@@ -134,7 +134,7 @@ public abstract class _tfDAeR6npiqJMLRSXPO1DxGA0TgA : AbstractNPC
 			_smM3y5A19la8hNpeOINXXDeitDH[int_0] = new _eBuDnRXeABWf8uwfsN15PfKEHw
 			{
 				Location = new Vector2(Spine.Spine.RootBone.WorldX - _YWKqVMq3bCWDIv73VmJykYuZBKN._SjhHztt8d5kOtb7Z2BJKnZZxEKh, Spine.Spine.RootBone.WorldY - _YWKqVMq3bCWDIv73VmJykYuZBKN._xqxFKfudZYzf8RtrC7EB1Ya6FPT),
-				_Z5JOwYZpe1u3WDYizFmDS7dmAcK = new RenderTarget2D(base.Game._2yepMkVENnecIsduggABaU2qhXW, (int)vector.X, (int)vector.Y),
+				_Z5JOwYZpe1u3WDYizFmDS7dmAcK = new RenderTarget2D(base.Game.GLES, (int)vector.X, (int)vector.Y),
 				_WxTaPaOE8qb7d7anVlwwqCzugAo = ((int_0 == 0) ? 1f : 0f)
 			};
 		}

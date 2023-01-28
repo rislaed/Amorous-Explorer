@@ -5,25 +5,25 @@ public class _noCtOrWje2WCEbkCre6cfHiMXh5 : AbstractEvent<PlaySexsceneEventData>
 {
 	public string SceneName { get; private set; }
 
-	public _noCtOrWje2WCEbkCre6cfHiMXh5(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _noCtOrWje2WCEbkCre6cfHiMXh5(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
 
-	public override void SetData(PlaySexsceneEventData playSexsceneEventData_0)
+	public override void SetData(PlaySexsceneEventData eventData)
 	{
-		base.SetData(playSexsceneEventData_0);
-		SceneName = playSexsceneEventData_0.SceneName;
+		base.SetData(eventData);
+		SceneName = eventData.SceneName;
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
-		base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game._gYGB98heFqsLp9tgJbdCP01IKV2(SceneName);
+		base.Begin();
+		base.Cutscene.Game.StartSexscene(SceneName);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 	}
 }

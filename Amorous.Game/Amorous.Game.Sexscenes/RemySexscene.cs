@@ -32,7 +32,7 @@ public class RemySexscene : CensoredSexscene
 	};
 
 	public RemySexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Jax/Jax Sex", "Assets/SexScenes/Remy/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, float_1: 3000f)
+		: base(content, "Assets/SexScenes/Jax/Jax Sex", "Assets/SexScenes/Remy/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT.Get(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (Censorship.Censored)

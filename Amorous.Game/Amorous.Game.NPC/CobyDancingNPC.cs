@@ -29,7 +29,7 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 	public static Color Color = new Color(104, 193, 255);
 
 	public CobyDancingNPC(IAmorous game)
-		: base(game, "Assets/NPC/CobyDancing/Coby", 0.8f, bool_0: true)
+		: base(game, "Assets/NPC/CobyDancing/Coby", 0.8f, premultipliedAlpha: true)
 	{
 		Width = 600;
 		Height = 800;

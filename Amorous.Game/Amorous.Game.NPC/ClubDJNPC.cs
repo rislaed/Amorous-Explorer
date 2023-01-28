@@ -26,11 +26,10 @@ public class ClubDJNPC : SpineNPC<ClubDJNPC.EHeads, ClubDJNPC.EPoses, ClubDJNPC.
 	}
 
 	public static string Name = "Club Amorous DJ";
-
 	public static Color Color = new Color(40, 122, 255);
 
 	public ClubDJNPC(IAmorous game)
-		: base(game, "Assets/NPC/ClubDJ/DJ", 0.6f, bool_0: true)
+		: base(game, "Assets/NPC/ClubDJ/DJ", 0.6f, premultipliedAlpha: true)
 	{
 		Width = 400;
 		Height = 600;

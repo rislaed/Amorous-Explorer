@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Xna.Framework;
 
-public class _BlUQCbX8YXbBc38I7iPEHyF1rUQ : _8lVOgkauaSHbAkAqHzI1K7mIyOI
+public class _BlUQCbX8YXbBc38I7iPEHyF1rUQ : InteractableOverlay
 {
 	public Action _uIOOxdCbSvCxXvjNgoXh2qYj0hr { get; set; }
 

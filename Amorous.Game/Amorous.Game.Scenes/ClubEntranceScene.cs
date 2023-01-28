@@ -18,24 +18,24 @@ public class ClubEntranceScene : AbstractScene
 		AddClickableLayer("Entrance", "Assets/Scenes/ClubEntrance/Club Entrance Door Selectable", 410, 96, OnDoorClick);
 		AddClickableLayer("Club Back", "Assets/Scenes/ClubEntrance/Back of Club Selectable", -535, 0, OnClubBackClick);
 		AddTexturedLayer("Rope Front", "Assets/Scenes/ClubEntrance/Club Front Ropes (infront)", -535, 0);
-		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-535, 535, 0, 0);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
+		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-535, 535, 0, 0);
+		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		if (data.GetDecimal("Prologue") >= 20)
 		{
-			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
+			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = true;
 		}
 	}
 
 	public override void Start()
 	{
-		_kane = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<KaneNPC>(LayerOrder.Background);
+		_kane = base.Game.GetNPCLayerAt<KaneNPC>(LayerOrder.Background);
 		_kaneLayer = GetNPCLayer<KaneNPC>();
 		_kaneLayer._64JjsghBPDjZ1OxZwhO8Y6dFE5t = delegate
 		{
 			_kaneLayer.ZOrder = 1;
 			_kaneLayer.LayerOrder = 0;
-			_kane._zkHMlDFkja4TqmjdlHuZRCj8FCB = false;
+			_kane.InTalking = false;
 			_kane.SetEmotion(KaneNPC.EHeads.Angry);
 			_kane.SetPose(KaneNPC.EPoses.Stern);
 			_kane.SetClothes(KaneNPC.EClothes.Shirt, KaneNPC.EClothes.Shorts);
@@ -45,19 +45,19 @@ public class ClubEntranceScene : AbstractScene
 			_kane.Click = OnKaneClick;
 			RefreshLayerOrdering();
 		};
-		ClubEntranceABNPC clubEntranceABNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceABNPC>(LayerOrder.Background);
+		ClubEntranceABNPC clubEntranceABNPC = base.Game.GetNPCLayerAt<ClubEntranceABNPC>(LayerOrder.Background);
 		clubEntranceABNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubEntranceABNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubEntranceABNPC.X = -325f;
 		clubEntranceABNPC.Y = 300f;
 		NPCLayer NPCLayer = GetNPCLayer<ClubEntranceABNPC>();
 		NPCLayer.LayerOrder = 1;
-		ClubEntranceCNPC clubEntranceCNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceCNPC>(LayerOrder.Background);
+		ClubEntranceCNPC clubEntranceCNPC = base.Game.GetNPCLayerAt<ClubEntranceCNPC>(LayerOrder.Background);
 		clubEntranceCNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubEntranceCNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubEntranceCNPC.X = 1630f;
 		clubEntranceCNPC.Y = 205f;
-		ClubEntranceDNPC clubEntranceDNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubEntranceDNPC>(LayerOrder.Background);
+		ClubEntranceDNPC clubEntranceDNPC = base.Game.GetNPCLayerAt<ClubEntranceDNPC>(LayerOrder.Background);
 		clubEntranceDNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubEntranceDNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubEntranceDNPC.X = 1930f;
@@ -83,8 +83,8 @@ public class ClubEntranceScene : AbstractScene
 		_kaneLayer.ZOrder = 3;
 		_kaneLayer.LayerOrder = 0;
 		_kane.Click = null;
-		_kane._IvIFs0Tl6RHdTn3daJXsNCXCNyO = false;
+		_kane.IsHovered = false;
 		RefreshLayerOrdering();
-		base.Game.RequestScene("Kane");
+		base.Game.StartCutscene("Kane");
 	}
 }

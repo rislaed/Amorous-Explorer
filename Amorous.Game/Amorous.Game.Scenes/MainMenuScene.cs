@@ -28,9 +28,9 @@ public class MainMenuScene : TimeOfDayScene
 		AddTexturedLayer("Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
 		AddTexturedLayer("Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
 		AddTexturedLayer("LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
-		AddLayer(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "Custom")
+		AddLayer(new DrawableLayer(this, "Custom")
 		{
-			_B6VrMlmWofCGqEzjzgFJiAliCge = _KkwafXXLVg1QfQgqqCAojg2ySyZ
+			OnDraw = DrawPlayer
 		}, 0);
 		AddForegroundTexturedLayer("Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
 		Logotype = NewTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
@@ -41,42 +41,42 @@ public class MainMenuScene : TimeOfDayScene
 		Blinking = TickingDelay;
 		Separator = GetLayer("LCD Separator");
 		PlayerPreferences.SetPlayerSkin(new MainMenuPlayerSkin(game));
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
-		Game._lXEQJcXKxsjtZp00Y9aPe0ymGue(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(game)
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
+		Game.SetOverlay(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(game)
 		{
 			_uIOOxdCbSvCxXvjNgoXh2qYj0hr = delegate
 			{
-				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				base.Game.Overlay.Touchable = false;
 				base.Squid.ShowSelection("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int answer)
 				{
 					PlayerData data = PlayerPreferences.GetPlayerData();
 					switch (answer)
 					{
 						default:
-							base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+							base.Game.Overlay.Touchable = true;
 							break;
 						case 0:
-							_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+							FadingMediaPlayer.Show();
 							data.Reset();
-							_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-							_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
-							_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
-							base.Game.RequestScene("Prologue");
+							PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
+							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							base.Game.StartCutscene("Prologue");
 							break;
 						case 1:
-							_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+							FadingMediaPlayer.Show();
 							data.Reset();
-							_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-							_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
-							_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
+							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
 							base.Game.StartScene<SkipProloguePlayerCustomizationScene>();
 							break;
 						case 2:
-							_UmxbIbk7pgaod0bD7pS309P3Lns._PYAXEqRAOkDRRNqm1k71R7GJTJK();
+							FadingMediaPlayer.Show();
 							data.Reset();
-							_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
-							_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = Options.Data.DialogueTextSpeed;
-							_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
+							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
 							base.Game.StartScene<PlayerCustomizationScene>();
 							break;
 					}
@@ -84,38 +84,38 @@ public class MainMenuScene : TimeOfDayScene
 			},
 			_HmpXEsA3mxR8eI4MZmgIPCtSGQb = delegate
 			{
-				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
-				List<_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p> _rQhndDODcLCmH9PKjwXRNz0AcU8 = _DW9IcpdMEINZmuzfrqmwsduBGih._25D1ZH2er0EbpKmvFksAbFjP2OX(bool_0: false);
-				List<string> _ILFAnNbgAYkKwOVs9Pn9012gw1w = _rQhndDODcLCmH9PKjwXRNz0AcU8.Select((_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0) => _3CCr8Bt1rkuzt0M6gYLbceJGV0p_0.Name).ToList();
-				_ILFAnNbgAYkKwOVs9Pn9012gw1w.Add("Oops, I've changed my mind!");
-				base.Squid.ShowSelection("Which save do you wish to load?", _ILFAnNbgAYkKwOVs9Pn9012gw1w.ToArray(), 500, delegate(int answer)
+				base.Game.Overlay.Touchable = false;
+				List<Saves.Pointer> saves = Saves.GetPointers(excludeAutosaves: false);
+				List<string> saveNames = saves.Select((Saves.Pointer pointer) => pointer.Name).ToList();
+				saveNames.Add("Oops, I've changed my mind!");
+				base.Squid.ShowSelection("Which save do you wish to load?", saveNames.ToArray(), 500, delegate(int answer)
 				{
-					if (answer == _ILFAnNbgAYkKwOVs9Pn9012gw1w.Count - 1)
+					if (answer == saveNames.Count - 1)
 					{
-						base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+						base.Game.Overlay.Touchable = true;
 					}
 					else
 					{
-						_DW9IcpdMEINZmuzfrqmwsduBGih._3CCr8Bt1rkuzt0M6gYLbceJGV0p _3CCr8Bt1rkuzt0M6gYLbceJGV0p = _rQhndDODcLCmH9PKjwXRNz0AcU8[answer];
-						if (!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._r4LqoJiAr5K9UiLsUzUDbcJDQqo)
+						Saves.Pointer Pointer = saves[answer];
+						if (!Pointer.IsEmpty)
 						{
-							if (!((!_3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE) ? base.Game._Ut0dhlh4JTZBMNJPNxxI9f9VqTp(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO) : base.Game._1yDW5GeZ2MCcssz8ohrF9CK913i(_3CCr8Bt1rkuzt0M6gYLbceJGV0p._B3FsRMcQWBXzFf3nLOBKzncessO)))
+							if (!((!Pointer.IsAutosave) ? base.Game.ReadFromSlot(Pointer.Index) : base.Game.ReadFromAutosaveSlot(Pointer.Index)))
 							{
 								base.Squid.ShowConfirm("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
 								{
-									base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+									base.Game.Overlay.Touchable = true;
 								});
 							}
 							else
 							{
-								base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+								base.Game.Overlay.Touchable = true;
 							}
 						}
 						else
 						{
-							base.Squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", _3CCr8Bt1rkuzt0M6gYLbceJGV0p._3y7m8OGVjMe7WGIhZ66YOw3ITUE ? "autosave " : string.Empty, answer + 1), 250, "OK", delegate
+							base.Squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", Pointer.IsAutosave ? "autosave " : string.Empty, answer + 1), 250, "OK", delegate
 							{
-								base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+								base.Game.Overlay.Touchable = true;
 							});
 						}
 					}
@@ -123,17 +123,17 @@ public class MainMenuScene : TimeOfDayScene
 			},
 			_vE5Pvwth7cQFh82bMTB5u59Ju4o = delegate
 			{
-				base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+				base.Game.Overlay.Touchable = false;
 				base.Squid.ShowSelection("Are you sure you wish to quit the Game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int answer)
 				{
 					if (answer == 1)
 					{
-						base.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+						base.Game.Fading.Show(delegate
 						{
-							base.Game._udfEpcIRn7lWl5Lvjdyu0aG0A7G();
+							base.Game.Exit();
 						});
 					}
-					base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+					base.Game.Overlay.Touchable = true;
 				});
 			}
 		});
@@ -141,10 +141,10 @@ public class MainMenuScene : TimeOfDayScene
 		{
 			Configure = DiplayOptions
 		};
-		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = true;
+		Clocks.InRealTime = true;
 	}
 
-	public override void StopCutscene() {}
+	public override void Begin() {}
 
 	public TexturedSequenceLayer AddIndicatorLayer(string name, string textureFormat, int x, int y)
 	{
@@ -177,26 +177,26 @@ public class MainMenuScene : TimeOfDayScene
 		Indicators[1].State = DateTime.Now.Hour % 10;
 		Indicators[2].State = DateTime.Now.Minute / 10;
 		Indicators[3].State = DateTime.Now.Minute % 10;
-		if (base.Game._o2QVQfIAsuLcmPxn14llGoZA52y != null)
+		if (base.Game.Overlay != null)
 		{
-			Copyright._nJKYvZJ57vjjlQwmoeBmKihtS0b = base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b;
+			Copyright.Touchable = base.Game.Overlay.Touchable;
 			Copyright.Update(gameTime);
 		}
 	}
 
-	public void _KkwafXXLVg1QfQgqqCAojg2ySyZ(SpriteBatch spriteBatch)
+	public void DrawPlayer(SpriteBatch spriteBatch)
 	{
-		if (PlayerPreferences.Self.PlayerSkin != null)
+		if (PlayerPreferences.Singleton.PlayerSkin != null)
 		{
-			spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
-			PlayerPreferences.Self.PlayerSkin.Draw(spriteBatch);
+			spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(Randoms.Time) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
+			PlayerPreferences.Singleton.PlayerSkin.Draw(spriteBatch);
 			spriteBatch.End();
 		}
 	}
 
-	public override void Render(SpriteBatch spriteBatch)
+	public override void DrawOverlay(SpriteBatch spriteBatch)
 	{
-		base.Render(spriteBatch);
+		base.DrawOverlay(spriteBatch);
 		spriteBatch.Begin();
 		Logotype.Draw(spriteBatch);
 		spriteBatch.End();
@@ -205,7 +205,7 @@ public class MainMenuScene : TimeOfDayScene
 
 	private void DiplayOptions()
 	{
-		base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = false;
+		base.Game.Overlay.Touchable = false;
 		int num = 0;
 		if (Censorship.Booties)
 		{
@@ -248,9 +248,9 @@ public class MainMenuScene : TimeOfDayScene
 		DropDownList dropDownList2 = dropDownList;
 		dropDownList2.Listbox.Scrollbar.ButtonUp.Visible = false;
 		dropDownList2.Listbox.Scrollbar.ButtonDown.Visible = false;
-		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._KOuUew34v1oSMnWlHSFJuRBiu1c;
-		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._dh9yjUXG1mhcfgwAWkWfggbGEIc;
-		foreach (DisplayMode supportedDisplayMode in base.Game._2yepMkVENnecIsduggABaU2qhXW.Adapter.SupportedDisplayModes)
+		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base.Game.Mouse.CanvasWidth;
+		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base.Game.Mouse.CanvasHeight;
+		foreach (DisplayMode supportedDisplayMode in base.Game.GLES.Adapter.SupportedDisplayModes)
 		{
 			dropDownList2.Items.Add(new ListBoxItem
 			{
@@ -265,7 +265,7 @@ public class MainMenuScene : TimeOfDayScene
 			if (listBoxItem_0.Value is DisplayMode)
 			{
 				DisplayMode displayMode = listBoxItem_0.Value as DisplayMode;
-				base.Game._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(displayMode.Width, displayMode.Height);
+				base.Game.SetDisplay(displayMode.Width, displayMode.Height);
 				Options.Data.ResolutionWidth = displayMode.Width;
 				Options.Data.ResolutionHeight = displayMode.Height;
 				_ExpbREeE97oXaFMwg5UwE6MpAAQ = displayMode.Width;
@@ -276,12 +276,12 @@ public class MainMenuScene : TimeOfDayScene
 		{
 			Dock = DockStyle.Top,
 			Text = "Fullscreen",
-			Checked = base.Game._kSReo0whY1pgfTnFOSc44ppANOe
+			Checked = base.Game.IsFullscreen
 		};
 		checkBox.CheckedChanged += delegate
 		{
-			base.Game._fSRUnXzLhUs3DfJ1lzl9dGCEmCf(_ExpbREeE97oXaFMwg5UwE6MpAAQ, _P2eFcUFiRYQgRf4ICqeX3kVcA2m, !base.Game._kSReo0whY1pgfTnFOSc44ppANOe);
-			Options.Data.Fullscreen = base.Game._kSReo0whY1pgfTnFOSc44ppANOe;
+			base.Game.SetDisplay(_ExpbREeE97oXaFMwg5UwE6MpAAQ, _P2eFcUFiRYQgRf4ICqeX3kVcA2m, !base.Game.IsFullscreen);
+			Options.Data.Fullscreen = base.Game.IsFullscreen;
 		};
 		panel.Content.Controls.Add(item);
 		panel.Content.Controls.Add(item2);
@@ -361,10 +361,10 @@ public class MainMenuScene : TimeOfDayScene
 			Text = "Dialogue"
 		};
 		panel.Content.Controls.Add(item7);
-		_poenyHBGUusBcnNcTFB9MQBV72R._YemBTJprwfbd3mpg5Gy9uyEJWwI(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
+		PhoneOverlay._YemBTJprwfbd3mpg5Gy9uyEJWwI(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
 		{
 			Options.Data.DialogueTextSpeed = (DialogueSpeed)int_0;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y.Speed = (DialogueSpeed)int_0;
+			TypingDialogue.Speed = (DialogueSpeed)int_0;
 		});
 		CheckBox _feL3soNn6ZWaJqYfjYJUyH118tF = new CheckBox
 		{
@@ -375,7 +375,7 @@ public class MainMenuScene : TimeOfDayScene
 		_feL3soNn6ZWaJqYfjYJUyH118tF.CheckedChanged += delegate
 		{
 			Options.Data.DialogueAutoSkip = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
+			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
 		};
 		panel.Content.Controls.Add(_feL3soNn6ZWaJqYfjYJUyH118tF);
 		if (Censorship.Booties)
@@ -433,7 +433,7 @@ public class MainMenuScene : TimeOfDayScene
 		};
 		button.MouseClick += delegate
 		{
-			base.Game._o2QVQfIAsuLcmPxn14llGoZA52y._nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+			base.Game.Overlay.Touchable = true;
 			Options.Save();
 			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
 		};
@@ -444,6 +444,6 @@ public class MainMenuScene : TimeOfDayScene
 	public override void End()
 	{
 		base.End();
-		_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
+		Clocks.InRealTime = false;
 	}
 }

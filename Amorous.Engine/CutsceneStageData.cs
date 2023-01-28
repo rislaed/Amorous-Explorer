@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 [Serializable]
-public class CutsceneStage
+public class CutsceneStageData
 {
 	[JsonProperty("Stage")]
 	public int Stage { get; set; }
@@ -14,7 +14,7 @@ public class CutsceneStage
 	[JsonProperty("Events")]
 	public List<EventData> Events { get; set; }
 
-	public CutsceneStage()
+	public CutsceneStageData()
 	{
 		Events = new List<EventData>();
 	}

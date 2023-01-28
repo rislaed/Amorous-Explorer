@@ -2,25 +2,22 @@ using Microsoft.Xna.Framework;
 
 public abstract class AbstractEvent<T> : IEvent where T : EventData
 {
-	public _nR8eroJOHehP0ZGyyTveo6aMTHg _5zNdOw7qHmuCAPJFMr3SsZdBlCr { get; private set; }
-
-	public bool _xJZUPxDatEzfPQc0nRHR2D1Vwke { get; protected set; }
-
+	public Cutscene Cutscene { get; private set; }
+	public bool Completable { get; protected set; }
 	public int ID { get; private set; }
-
 	public int NextID { get; protected set; }
 
-	protected AbstractEvent(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	protected AbstractEvent(Cutscene cutscene)
 	{
-		_5zNdOw7qHmuCAPJFMr3SsZdBlCr = _nR8eroJOHehP0ZGyyTveo6aMTHg_0;
+		Cutscene = cutscene;
 	}
 
-	public virtual void StopCutscene()
+	public virtual void Begin()
 	{
-		_xJZUPxDatEzfPQc0nRHR2D1Vwke = false;
+		Completable = false;
 	}
 
-	public virtual bool _NeIQsy78kWqF9jXLl8vb2lOyZgO()
+	public virtual bool Next()
 	{
 		return false;
 	}
@@ -30,10 +27,10 @@ public abstract class AbstractEvent<T> : IEvent where T : EventData
 		SetData((T)EventData_0);
 	}
 
-	public virtual void SetData(T gparam_0)
+	public virtual void SetData(T eventData)
 	{
-		ID = gparam_0.ID;
-		NextID = gparam_0.NextID;
+		ID = eventData.ID;
+		NextID = eventData.NextID;
 	}
 
 	public abstract void Update(GameTime gameTime);

@@ -8,7 +8,7 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : AbstractEvent<DelayEventData>
 
 	public int Delay { get; private set; }
 
-	public _yy7ao0ygzMkDh6MgDHs7gTimjsy(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _yy7ao0ygzMkDh6MgDHs7gTimjsy(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -19,9 +19,9 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : AbstractEvent<DelayEventData>
 		Delay = delayEventData_0.Delay;
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
+		base.Begin();
 		Stopwatch = Delay;
 	}
 
@@ -30,7 +30,7 @@ public class _yy7ao0ygzMkDh6MgDHs7gTimjsy : AbstractEvent<DelayEventData>
 		Stopwatch -= gameTime.ElapsedGameTime.Milliseconds;
 		if (Stopwatch <= 0)
 		{
-			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+			base.Completable = true;
 		}
 	}
 }

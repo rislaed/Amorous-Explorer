@@ -10,7 +10,7 @@ namespace Amorous.Game.Scenes;
 
 public class CookingMiniGameScene : AbstractScene
 {
-	private class GUI : _8lVOgkauaSHbAkAqHzI1K7mIyOI
+	private class GUI : InteractableOverlay
 	{
 		private readonly _iHJrndJdM1jj9TEnuU3BvgdDuvf _wmL1cFR5CsMqZS9jOXyCnmqveCG;
 
@@ -47,7 +47,7 @@ public class CookingMiniGameScene : AbstractScene
 
 	private const float _IOkmdPXdqA5XP7KDGaAleOrsdYs = 4.5f;
 
-	private readonly GUI _fp8jsuSnELXqf2yy2JQDaXDCBVQ;
+	private readonly GUI _overlay;
 
 	private readonly SpineRenderer _bFjOLB3sqVGFgwwMENJRlZ5vouC;
 
@@ -113,15 +113,15 @@ public class CookingMiniGameScene : AbstractScene
 
 	public bool _c9i4Rbj8ENw5b6aqNq271voBctc { get; set; }
 
-	public bool _xJZUPxDatEzfPQc0nRHR2D1Vwke { get; set; }
+	public bool Completable { get; set; }
 
 	public bool _T81AMuUIGw7sZkYmJkIpiDPosrD { get; set; }
 
 	public CookingMiniGameScene(IAmorous game)
 		: base(game)
 	{
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ = new GUI(game, _Ee9VcMQIfuD0ElqFdXVvMHxofkf);
-		base.Game._lXEQJcXKxsjtZp00Y9aPe0ymGue(_fp8jsuSnELXqf2yy2JQDaXDCBVQ);
+		_overlay = new GUI(game, _Ee9VcMQIfuD0ElqFdXVvMHxofkf);
+		base.Game.SetOverlay(_overlay);
 		AddTexturedLayer("Background", "Assets/Scenes/Cooking/Background", 0, 0);
 		_urxVZoSWXCtbeM9oQmVXW0Fb7co = AddForegroundTexturedLayer("Background", "Assets/Scenes/Cooking/Bad", 0, 0);
 		_urxVZoSWXCtbeM9oQmVXW0Fb7co.Visible = false;
@@ -129,8 +129,8 @@ public class CookingMiniGameScene : AbstractScene
 		_RZsDgwVY7R44E6mMbUF7YWYyBjK.Visible = false;
 		_9cxzh98qcLMOVst3Rlmc4AaYoBp = AddForegroundTexturedLayer("Background", "Assets/Scenes/Cooking/Excellent", 0, 0);
 		_9cxzh98qcLMOVst3Rlmc4AaYoBp.Visible = false;
-		_WBXNT6eIVGk6ZKExRBJ6JxXE6zb wBXNT6eIVGk6ZKExRBJ6JxXE6zb = new _WBXNT6eIVGk6ZKExRBJ6JxXE6zb(this, "Cooking");
-		_bFjOLB3sqVGFgwwMENJRlZ5vouC = game.Content._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/Cooking/Cooking");
+		SpineDrawableLayer wBXNT6eIVGk6ZKExRBJ6JxXE6zb = new SpineDrawableLayer(this, "Cooking");
+		_bFjOLB3sqVGFgwwMENJRlZ5vouC = game.Content.LoadSkeleton("Assets/Scenes/Cooking/Cooking");
 		_bFjOLB3sqVGFgwwMENJRlZ5vouC.X = 960f;
 		_bFjOLB3sqVGFgwwMENJRlZ5vouC.Y = 540f;
 		_WwmWk5kaVSyVGOqHYV9xCL01Mmq = new _hqmu3NsKXqziXGfVh3dt79G0fye(game.Content);
@@ -158,16 +158,16 @@ public class CookingMiniGameScene : AbstractScene
 		_MHlWAOoiEHfmdM0FqWO6WSRbC1hA = new _hqmu3NsKXqziXGfVh3dt79G0fye(game.Content);
 		_MHlWAOoiEHfmdM0FqWO6WSRbC1hA._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/Cooking/Great food");
 		RefreshScene();
-		wBXNT6eIVGk6ZKExRBJ6JxXE6zb._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime)
+		wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OnUpdate = delegate(GameTime gameTime)
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC.Update(gameTime);
 		};
-		wBXNT6eIVGk6ZKExRBJ6JxXE6zb._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
+		wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OnSpineDraw = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC.Draw(skeletonMeshRenderer, null, _YwAdHC5A5VB16lereNxJLkAP3Z9A);
 		};
 		AddLayer(wBXNT6eIVGk6ZKExRBJ6JxXE6zb, 0);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Warhector - Free Floating", 0.1f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Warhector - Free Floating", 0.1f);
 	}
 
 	private bool _YwAdHC5A5VB16lereNxJLkAP3Z9A(int int_0, string string_0)
@@ -247,7 +247,7 @@ public class CookingMiniGameScene : AbstractScene
 				_vXYwDfsbbgNVJzdeudgo8WR1maV();
 			}
 		}
-		if (_xJZUPxDatEzfPQc0nRHR2D1Vwke || !_c9i4Rbj8ENw5b6aqNq271voBctc)
+		if (Completable || !_c9i4Rbj8ENw5b6aqNq271voBctc)
 		{
 			return;
 		}
@@ -259,7 +259,7 @@ public class CookingMiniGameScene : AbstractScene
 		{
 			return;
 		}
-		Point point = base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		Point point = base.Game.Mouse.Rescale(base.Game.Controller.Cursor);
 		if (_HXs79I5YAlnCxHxJS0JxD7jccyt || !_bFjOLB3sqVGFgwwMENJRlZ5vouC.InAttachment("Onions bowl glow", point.X, point.Y))
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC.SetAlpha("Onions bowl glow", 0f);
@@ -267,7 +267,7 @@ public class CookingMiniGameScene : AbstractScene
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("OnionsGarlic highlight", EIngrediants.OnionsGarlic, _R1mDpxg72ZTKnMeOQ0sH8szndlG);
-			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 			{
 				_7UQ7J6jOjw0vBiKHgcli5eXatrN();
 			}
@@ -279,7 +279,7 @@ public class CookingMiniGameScene : AbstractScene
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Ground beef highlight", EIngrediants.GroundBeef, _E5COS2Wew1BQS9CZNJcDAnV99Y);
-			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 			{
 				_KS0Vtg4XWGmpAsqFy5tYlJXLKLA();
 			}
@@ -291,7 +291,7 @@ public class CookingMiniGameScene : AbstractScene
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Carrot highlight", EIngrediants.Carrots, _NCyPsw4quyw64ZmYLMqlIaQaclA);
-			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 			{
 				_VcZyHKzhoXLGNA1DIp006kBhiDN();
 			}
@@ -299,7 +299,7 @@ public class CookingMiniGameScene : AbstractScene
 		if (!_g0GLDf9i20jtYweGI1DAr0f9WON && _bFjOLB3sqVGFgwwMENJRlZ5vouC.InAttachment("Tomatoe bowl gold", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Tomatoe highlight", EIngrediants.TinnedTomatoes, _gDkX1mAt76eLA8P3gGXs2wM5wTE);
-			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 			{
 				_FJRq83fBqGFaoHbsYpaAVoouvFQ();
 			}
@@ -311,7 +311,7 @@ public class CookingMiniGameScene : AbstractScene
 		if (!_ylWBqGZTor7PB0HyMRwAuoV4hvH && _bFjOLB3sqVGFgwwMENJRlZ5vouC.InAttachment("Bayleaves bowl glow", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Bay highlight", EIngrediants.Herbs, _7f8HjbO7kyXkAQLb2mIqPJKHcLb);
-			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 			{
 				_hHMvLMSFiOFnDNkhUnBcQpsEN9T();
 			}
@@ -425,13 +425,13 @@ public class CookingMiniGameScene : AbstractScene
 		_vdz7lnEalvPxBPYYcR15bPICZOc._xDFlaclLtJxSUU63JEJALvRLdfe();
 		_oadA2EQp5TIkaydfB8B5lpw5Cmu = true;
 		_2Kg9JelDMoLPl78Uv5Lb5ygQff = 0f;
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ._k8HavJ0P5yWjzHBpsDOOGVNY8MM = true;
+		_overlay._k8HavJ0P5yWjzHBpsDOOGVNY8MM = true;
 	}
 
 	private void _Ee9VcMQIfuD0ElqFdXVvMHxofkf()
 	{
 		_oadA2EQp5TIkaydfB8B5lpw5Cmu = false;
-		_fp8jsuSnELXqf2yy2JQDaXDCBVQ._k8HavJ0P5yWjzHBpsDOOGVNY8MM = false;
+		_overlay._k8HavJ0P5yWjzHBpsDOOGVNY8MM = false;
 		_JuZlzgvacKG5z0tmPuFzmPPGDog = _2Kg9JelDMoLPl78Uv5Lb5ygQff;
 		_bFjOLB3sqVGFgwwMENJRlZ5vouC.ResetAnimation();
 		_N6dXvS7twg0NRk66JAgWjTvfMRC();
@@ -441,7 +441,7 @@ public class CookingMiniGameScene : AbstractScene
 	{
 		if (_h5v8MyOj54KK9SVZpYnagzRPLMP)
 		{
-			_xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+			Completable = true;
 		}
 		else if (_NDwc6JiCbSmdqmQRU3taXzILgTBb.Count >= 5)
 		{
@@ -463,8 +463,8 @@ public class CookingMiniGameScene : AbstractScene
 	public void _NvWWx67tvkIBmEn9fgXJ9ZzWJMS()
 	{
 		_T81AMuUIGw7sZkYmJkIpiDPosrD = false;
-		_UmxbIbk7pgaod0bD7pS309P3Lns._E7yBM68AWt7OGHJ5D6xYA8RK8tAA(0f);
-		base.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._PYAXEqRAOkDRRNqm1k71R7GJTJK(delegate
+		FadingMediaPlayer.ApplyNow(0f);
+		base.Game.Fading.Show(delegate
 		{
 			_3h9I4xBs98PF8vAbLXJAdpmHA8dA._xDFlaclLtJxSUU63JEJALvRLdfe();
 			_Iqfa1mamDp2busajsE8iPWnCKbDA = true;
@@ -519,11 +519,11 @@ public class CookingMiniGameScene : AbstractScene
 		_urxVZoSWXCtbeM9oQmVXW0Fb7co.Visible = _Y8SewnxQuAuHOtMeTeuRSJlpbGJ;
 		_RZsDgwVY7R44E6mMbUF7YWYyBjK.Visible = !_Y8SewnxQuAuHOtMeTeuRSJlpbGJ && !_YVtICgpvRZU0ZRqniFuAVlkSOFM;
 		_9cxzh98qcLMOVst3Rlmc4AaYoBp.Visible = _YVtICgpvRZU0ZRqniFuAVlkSOFM;
-		base.Game._Qj2G6fpAF4mGsATgkV8DPBF3aA1A._FegL010tc92iskjjyD0T33dDwNE(delegate
+		base.Game.Fading.Hide(delegate
 		{
 			if (_YVtICgpvRZU0ZRqniFuAVlkSOFM)
 			{
-				base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric11");
+				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric11);
 				_MHlWAOoiEHfmdM0FqWO6WSRbC1hA._xDFlaclLtJxSUU63JEJALvRLdfe();
 			}
 			else if (_Y8SewnxQuAuHOtMeTeuRSJlpbGJ)

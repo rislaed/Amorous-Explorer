@@ -43,7 +43,7 @@ public class DrivingScene : AbstractScene
 		: base(game)
 	{
 		SetVariant("Day");
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/AudioDriver - Detective's Scoop", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/AudioDriver - Detective's Scoop", 0.4f);
 	}
 
 	public override void SetVariant(string daytime)
@@ -55,11 +55,11 @@ public class DrivingScene : AbstractScene
 		_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree A", 0, 0);
 		_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree B", 0, 0);
 		_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree C", 0, 0);
-		_HuRva9O1Dird7HCHNvEYAhbEXEx = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, _cmNp2s95voDHTlRfEo0WKjoNC5D.Length - 1);
+		_HuRva9O1Dird7HCHNvEYAhbEXEx = Randoms.Next(0, _cmNp2s95voDHTlRfEo0WKjoNC5D.Length - 1);
 		_jLqsVc7ZjWokEg8zjm4aue7Vfwr();
-		_rn1x58VMBD9DAD7YIR46LqTEfMP = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(-1920, 0);
-		_DEdZRCjltS13jKpC2YJkZY838ZK = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(-1920, 0);
-		_5F3aFNnUdPR4Jd8EFDxoRL2ITlV = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(-1920, 0);
+		_rn1x58VMBD9DAD7YIR46LqTEfMP = Randoms.Next(-1920, 0);
+		_DEdZRCjltS13jKpC2YJkZY838ZK = Randoms.Next(-1920, 0);
+		_5F3aFNnUdPR4Jd8EFDxoRL2ITlV = Randoms.Next(-1920, 0);
 	}
 
 	public override void Update(GameTime gameTime)
@@ -93,7 +93,7 @@ public class DrivingScene : AbstractScene
 			_HuRva9O1Dird7HCHNvEYAhbEXEx = 0;
 		}
 		_ywjql7DttUMPriZ95ycoakuivHF = _cmNp2s95voDHTlRfEo0WKjoNC5D[_HuRva9O1Dird7HCHNvEYAhbEXEx];
-		_ywjql7DttUMPriZ95ycoakuivHF.Flip = _boyt8NIMtKsAGSTcjHeL0WMbFxs._gbHIDTfALwKhXkamYJbKsAUKL2E();
+		_ywjql7DttUMPriZ95ycoakuivHF.Flip = Randoms.NextBool();
 	}
 
 	public override void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix_0)

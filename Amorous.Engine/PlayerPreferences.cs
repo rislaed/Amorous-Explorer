@@ -3,14 +3,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class PlayerPreferences
 {
-	private static PlayerPreferences Singleton;
-	public static PlayerPreferences Self => Singleton;
+	private static PlayerPreferences _singleton;
+	public static PlayerPreferences Singleton => _singleton;
 	public AbstractPlayerSkin PlayerSkin { get; private set; }
 	public PlayerData Data { get; set; }
 
 	public PlayerPreferences()
 	{
-		Singleton = this;
+		_singleton = this;
 		Data = new PlayerData();
 	}
 
@@ -35,12 +35,12 @@ public class PlayerPreferences
 
 	public static void SetPlayerSkin(AbstractPlayerSkin skin)
 	{
-		Singleton.PlayerSkin = skin;
-		skin?.Initialize(Singleton.Data);
+		_singleton.PlayerSkin = skin;
+		skin?.Initialize(_singleton.Data);
 	}
 
 	public static PlayerData GetPlayerData()
 	{
-		return Singleton.Data;
+		return _singleton.Data;
 	}
 }

@@ -60,7 +60,7 @@ public abstract class AbstractNPC
 	}
 
 	public string[] Clothes => _clothes.ToArray();
-	public bool _fsCqU0Uh34vrMEsAqlf2BqbTz5B { get; private set; }
+	public bool IsAnimating { get; private set; }
 	public List<_xmfdPa5IagU3cXbLL61gyoXAV7gA> _uZyXmbTsZVxXsadCzSsIs0z4xdb { get; private set; }
 	public List<_NaKchYC4I4GjWR34SfBLAktysCE> _EcxlglhukYZdLVkSogxZZE3XdVj { get; private set; }
 	public virtual float X { get; set; }
@@ -69,10 +69,10 @@ public abstract class AbstractNPC
 	public virtual int Height { get; protected set; }
 	public float Scale { get; set; }
 	public virtual bool FlipX { get; set; }
-	public virtual bool _zkHMlDFkja4TqmjdlHuZRCj8FCB { get; set; }
-	public virtual bool _IvIFs0Tl6RHdTn3daJXsNCXCNyO { get; set; }
+	public virtual bool InTalking { get; set; }
+	public virtual bool IsHovered { get; set; }
 	public virtual Action Click { get; set; }
-	public Type[] _rAt6TRbgK04lvrs5QPjcd0n26pk { get; set; }
+	public Type[] Variations { get; set; }
 
 	protected AbstractNPC(IAmorous amorous)
 	{
@@ -285,14 +285,14 @@ public abstract class AbstractNPC
 		Show(_pose);
 	}
 
-	public void _7d2DAwjp6FutkJY09U0Mlk43Nmn(NPCLocation location, string head, string pose, params string[] clothes)
+	public void Apply(NPCLocation location, string head, string pose, params string[] clothes)
 	{
 		if (_XTvGE1JB69E9GLYnSRCwUVGb5PR > 0)
 		{
 			_hzYGOuA9Z2IzKGHdfIk6l5BgWNV();
 			_Hx7zLXU6nbxudxFgMuYbyRXeEPB();
 		}
-		_fsCqU0Uh34vrMEsAqlf2BqbTz5B = true;
+		IsAnimating = true;
 		_t4JsGFBOTJyNXqWLeAvYMj8Tnlf = delegate
 		{
 			_t4JsGFBOTJyNXqWLeAvYMj8Tnlf = null;
@@ -308,7 +308,7 @@ public abstract class AbstractNPC
 			_hzYGOuA9Z2IzKGHdfIk6l5BgWNV();
 			_Hx7zLXU6nbxudxFgMuYbyRXeEPB();
 		}
-		_fsCqU0Uh34vrMEsAqlf2BqbTz5B = true;
+		IsAnimating = true;
 		_t4JsGFBOTJyNXqWLeAvYMj8Tnlf = delegate
 		{
 			_t4JsGFBOTJyNXqWLeAvYMj8Tnlf = null;
@@ -324,7 +324,7 @@ public abstract class AbstractNPC
 			_BbDRof5yB0Qn864T1KJxUzMy8di(0);
 			_a1rJL2nK5APgc52Z8xdiZnlTdLf = delegate
 			{
-				_fsCqU0Uh34vrMEsAqlf2BqbTz5B = false;
+				IsAnimating = false;
 				SetLocation(location);
 				SetEmotion(head);
 				SetPose(pose);

@@ -14,7 +14,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : AbstractEvent<CommandEventData>
 
 	private Action _YY04FeZbOVc47HHNN5R0M1nZYpc;
 
-	public _ReclSEGHYgrEBUgjU95b2v5sTCe(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _ReclSEGHYgrEBUgjU95b2v5sTCe(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -25,40 +25,40 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : AbstractEvent<CommandEventData>
 		_Eq0ZSbjV3AWfNe2m5mpykEVrjtD = commandEventData_0;
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
+		base.Begin();
 		if (!(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command == typeof(Commands.CookingSelectIngredient).Name))
 		{
 			if (_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command == typeof(Commands.CookingShowResult).Name)
 			{
-				if (!(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene is CookingMiniGameScene))
+				if (!(base.Cutscene.Game.Scene is CookingMiniGameScene))
 				{
 					throw new Exception("Current scene is not CookingScene!");
 				}
-				CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF = base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene as CookingMiniGameScene;
+				CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF = base.Cutscene.Game.Scene as CookingMiniGameScene;
 				_RJTGWz7KqClGKVJa614391g5XSF._NvWWx67tvkIBmEn9fgXJ9ZzWJMS();
 				_7TpbhhncTYU8N40kUaAahODEjQT = null;
 				_YY04FeZbOVc47HHNN5R0M1nZYpc = delegate
 				{
-					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _RJTGWz7KqClGKVJa614391g5XSF._T81AMuUIGw7sZkYmJkIpiDPosrD;
+					base.Completable = _RJTGWz7KqClGKVJa614391g5XSF._T81AMuUIGw7sZkYmJkIpiDPosrD;
 				};
 			}
 			else if (!(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command == typeof(Commands.RemyShowNudes).Name))
 			{
 				if (_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command == typeof(Commands.RemyHideNudes).Name)
 				{
-					_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._zFlBtKgcAb6cv77WHC6dI3lO8EwA();
-					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+					PhoneOverlay.Get()._zFlBtKgcAb6cv77WHC6dI3lO8EwA();
+					base.Completable = true;
 				}
 				else if (_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command == typeof(Commands.PlayCutscene).Name)
 				{
-					base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.RequestScene(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Parameters["Cutscene"]);
-					base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+					base.Cutscene.Game.StartCutscene(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Parameters["Cutscene"]);
+					base.Completable = true;
 				}
 				else
 				{
-					_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq("A unknown command is triggered: " + _Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command, "[Command]", Color.Green);
+					TypingDialogue._zunSyHn4DekdA6CngP10dXcR1kq("A unknown command is triggered: " + _Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Command, "[Command]", Color.Green);
 					_7TpbhhncTYU8N40kUaAahODEjQT = _NjQNLofcM2wbpSVJX5f9ltGMCNg;
 					_YY04FeZbOVc47HHNN5R0M1nZYpc = _T09IZIRhbGpjZWBAffDLYRnGVST;
 				}
@@ -66,28 +66,28 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : AbstractEvent<CommandEventData>
 			else
 			{
 				int.TryParse(_Eq0ZSbjV3AWfNe2m5mpykEVrjtD.Parameters["Nude"], out var result);
-				_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._f2CdPIvAGYavrZlA3VXyxB0B8Jh(result);
-				base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+				PhoneOverlay.Get()._f2CdPIvAGYavrZlA3VXyxB0B8Jh(result);
+				base.Completable = true;
 			}
 		}
 		else
 		{
-			if (!(base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene is CookingMiniGameScene))
+			if (!(base.Cutscene.Game.Scene is CookingMiniGameScene))
 			{
 				throw new Exception("Current scene is not CookingScene!");
 			}
-			CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF2 = base._5zNdOw7qHmuCAPJFMr3SsZdBlCr.Game.Scene as CookingMiniGameScene;
+			CookingMiniGameScene _RJTGWz7KqClGKVJa614391g5XSF2 = base.Cutscene.Game.Scene as CookingMiniGameScene;
 			_RJTGWz7KqClGKVJa614391g5XSF2._c9i4Rbj8ENw5b6aqNq271voBctc = true;
-			_RJTGWz7KqClGKVJa614391g5XSF2._xJZUPxDatEzfPQc0nRHR2D1Vwke = false;
+			_RJTGWz7KqClGKVJa614391g5XSF2.Completable = false;
 			_7TpbhhncTYU8N40kUaAahODEjQT = null;
 			_YY04FeZbOVc47HHNN5R0M1nZYpc = delegate
 			{
-				base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _RJTGWz7KqClGKVJa614391g5XSF2._xJZUPxDatEzfPQc0nRHR2D1Vwke;
+				base.Completable = _RJTGWz7KqClGKVJa614391g5XSF2.Completable;
 			};
 		}
 	}
 
-	public override bool _NeIQsy78kWqF9jXLl8vb2lOyZgO()
+	public override bool Next()
 	{
 		if (_7TpbhhncTYU8N40kUaAahODEjQT == null)
 		{
@@ -98,7 +98,7 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : AbstractEvent<CommandEventData>
 
 	private bool _NjQNLofcM2wbpSVJX5f9ltGMCNg()
 	{
-		return base._NeIQsy78kWqF9jXLl8vb2lOyZgO();
+		return base.Next();
 	}
 
 	public override void Update(GameTime gameTime)
@@ -111,6 +111,6 @@ public class _ReclSEGHYgrEBUgjU95b2v5sTCe : AbstractEvent<CommandEventData>
 
 	private void _T09IZIRhbGpjZWBAffDLYRnGVST()
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _nkzqFdEfDyLcyGikIKGcHjklI4y._xJZUPxDatEzfPQc0nRHR2D1Vwke;
+		base.Completable = TypingDialogue.Completable;
 	}
 }

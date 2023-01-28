@@ -14,9 +14,7 @@ public class TexturedLayer : AbstractLayer
 		base.Height = texture2D.Height;
 	}
 
-	public override void Update(GameTime gameTime)
-	{
-	}
+	public override void Update(GameTime gameTime) {}
 
 	public override void Draw(SpriteBatch spriteBatch)
 	{

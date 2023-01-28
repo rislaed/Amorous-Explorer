@@ -12,6 +12,6 @@ public class ExtendedContentManager : ContentManager
 
 	protected override Stream OpenStream(string assetName)
 	{
-		return _K2047A8SCJdaw0LZKStEHOiH110._E0f25tLwwg9zgWpaN9mFdnGg2My(base.OpenStream(assetName));
+		return Compressions.ReadStream(base.OpenStream(assetName));
 	}
 }

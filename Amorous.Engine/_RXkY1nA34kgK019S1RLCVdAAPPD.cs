@@ -6,7 +6,7 @@ public class _RXkY1nA34kgK019S1RLCVdAAPPD : AbstractEvent<DisableContactEventDat
 {
 	public PlayerData.EPhoneContacts Contact { get; private set; }
 
-	public _RXkY1nA34kgK019S1RLCVdAAPPD(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _RXkY1nA34kgK019S1RLCVdAAPPD(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -17,14 +17,14 @@ public class _RXkY1nA34kgK019S1RLCVdAAPPD : AbstractEvent<DisableContactEventDat
 		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(disableContactEventData_0.Contact, out var result) ? result : PlayerData.EPhoneContacts.None);
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
+		base.Begin();
 		PlayerPreferences.GetPlayerData().ResetContact(Contact);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 	}
 }

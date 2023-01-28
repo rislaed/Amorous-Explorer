@@ -7,8 +7,8 @@ public class ZenithDate1PostMiniGameScene : AbstractScene
 	{
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.Game.RequestScene("ZenithDate");
+		base.Game.StartCutscene("ZenithDate");
 	}
 }

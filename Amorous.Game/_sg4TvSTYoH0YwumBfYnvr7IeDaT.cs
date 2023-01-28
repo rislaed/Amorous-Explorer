@@ -13,7 +13,7 @@ public class _sg4TvSTYoH0YwumBfYnvr7IeDaT : _Sx3k5xXMK0bV8Wvr1xdM6HgVnYG
 		_qNXThpU44xZknZwFt3xQG8NpINc._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/SexScenes/Moaning/Female/Rapid/krokcum1_1", "Assets/Sounds/SexScenes/Moaning/Female/Rapid/krokcum2_1", "Assets/Sounds/SexScenes/Moaning/Female/Rapid/krokcum3_1", "Assets/Sounds/SexScenes/Moaning/Female/Rapid/krokcum4_1", "Assets/Sounds/SexScenes/Moaning/Female/Rapid/krokcum5_1");
 	}
 
-	public static _sg4TvSTYoH0YwumBfYnvr7IeDaT _AZrO8MxMUE7cKsFYTQ4k9O3q7yC(ContentManager content)
+	public static _sg4TvSTYoH0YwumBfYnvr7IeDaT Get(ContentManager content)
 	{
 		return _U1Zf2C23VFJCtPepNgC1001Q83e ?? (_U1Zf2C23VFJCtPepNgC1001Q83e = new _sg4TvSTYoH0YwumBfYnvr7IeDaT(content));
 	}

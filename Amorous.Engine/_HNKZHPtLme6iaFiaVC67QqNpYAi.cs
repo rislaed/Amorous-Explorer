@@ -8,7 +8,7 @@ public class _HNKZHPtLme6iaFiaVC67QqNpYAi : AbstractEvent<DialogueChoiceEventDat
 {
 	public DialogueChoiceItem[] Choices { get; private set; }
 
-	public _HNKZHPtLme6iaFiaVC67QqNpYAi(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _HNKZHPtLme6iaFiaVC67QqNpYAi(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -19,18 +19,18 @@ public class _HNKZHPtLme6iaFiaVC67QqNpYAi : AbstractEvent<DialogueChoiceEventDat
 		Choices = dialogueChoiceEventData_0.Choices.ToArray();
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
-		_nkzqFdEfDyLcyGikIKGcHjklI4y.DiplayOptions(Choices.Select((DialogueChoiceItem dialogueChoiceItem_0) => dialogueChoiceItem_0.Text).ToArray());
+		base.Begin();
+		TypingDialogue.DiplayOptions(Choices.Select((DialogueChoiceItem dialogueChoiceItem_0) => dialogueChoiceItem_0.Text).ToArray());
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = !_nkzqFdEfDyLcyGikIKGcHjklI4y._zatbtX2c8i2hGOTptNymBxA8kVI;
-		if (base._xJZUPxDatEzfPQc0nRHR2D1Vwke)
+		base.Completable = !TypingDialogue._zatbtX2c8i2hGOTptNymBxA8kVI;
+		if (base.Completable)
 		{
-			int num = _nkzqFdEfDyLcyGikIKGcHjklI4y._rVWIUtPzqmWcZbPclkfMRcIkeGR - 1;
+			int num = TypingDialogue._rVWIUtPzqmWcZbPclkfMRcIkeGR - 1;
 			if (num >= 0 && num < Choices.Length)
 			{
 				base.NextID = Choices[num].NextID;

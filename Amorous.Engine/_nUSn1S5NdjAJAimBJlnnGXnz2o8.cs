@@ -9,7 +9,7 @@ public class _nUSn1S5NdjAJAimBJlnnGXnz2o8 : AbstractEvent<ConditionalBranchEvent
 
 	public int FalseID { get; private set; }
 
-	public _nUSn1S5NdjAJAimBJlnnGXnz2o8(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _nUSn1S5NdjAJAimBJlnnGXnz2o8(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -24,7 +24,7 @@ public class _nUSn1S5NdjAJAimBJlnnGXnz2o8 : AbstractEvent<ConditionalBranchEvent
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 		bool flag = PlayerPreferences.GetPlayerData().GetBit(Flag);
 		base.NextID = (flag ? TrueID : FalseID);
 	}

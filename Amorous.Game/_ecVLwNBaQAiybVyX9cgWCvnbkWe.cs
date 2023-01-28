@@ -11,7 +11,7 @@ public class _ecVLwNBaQAiybVyX9cgWCvnbkWe : _Sx3k5xXMK0bV8Wvr1xdM6HgVnYG
 		_qNXThpU44xZknZwFt3xQG8NpINc._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid1", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid2", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid3", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid4", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid5");
 	}
 
-	public static _ecVLwNBaQAiybVyX9cgWCvnbkWe _AZrO8MxMUE7cKsFYTQ4k9O3q7yC(ContentManager content)
+	public static _ecVLwNBaQAiybVyX9cgWCvnbkWe Get(ContentManager content)
 	{
 		return new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content);
 	}

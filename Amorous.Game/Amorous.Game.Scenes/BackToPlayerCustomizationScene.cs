@@ -13,25 +13,25 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 	public BackToPlayerCustomizationScene(IAmorous game)
 		: base(game)
 	{
-		_jIGpzoYLVPw8SPxmJcha832nCXR = true;
-		_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+		MightConfigurateEverything = true;
+		PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
 	}
 
 	protected override void _hI8MfcRDpV9Q45afjBJe8lA5sbr()
 	{
 	}
 
-	protected override void _n3b8BstkorCsu4TW0U2YVdFbdGp()
+	protected override void ConfirmEverything()
 	{
 		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
-				base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric1");
+				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric1);
 				PlayerPreferences.GetPlayerData().SetDecimal("Gender", 10);
 				PlayerPreferences.GetPlayerData().Remove("Player.Gender");
 				PlayerPreferences.GetPlayerData().Remove("Player.No");
-				base.Game.RequestScene("Gender");
+				base.Game.StartCutscene("Gender");
 				_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 			}
 		});
@@ -40,11 +40,11 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		if (_e1Kru66UIN1SkWkBreRDCF5RsWA && !base.Game._NdzU0m9x8QDKpVv3DrQmzY5KduB && base.Game._5zNdOw7qHmuCAPJFMr3SsZdBlCr == null)
+		if (_e1Kru66UIN1SkWkBreRDCF5RsWA && !base.Game.InScenePending && base.Game.Cutscene == null)
 		{
 			_e1Kru66UIN1SkWkBreRDCF5RsWA = false;
-			_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj = true;
-			_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = true;
+			PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
 			base.Game.StartScene<ClubEntranceScene>();
 		}
 	}

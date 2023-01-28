@@ -5,7 +5,7 @@ namespace Amorous.Game.NPC;
 
 public abstract class ClubPoolStaticNPC : ClubStaticNPC
 {
-	public float _qFVIvzuvIuKKG5vOrovLtn4NplA = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(-1f, 1f);
+	public float _qFVIvzuvIuKKG5vOrovLtn4NplA = Randoms.NextDouble(-1f, 1f);
 
 	public float _rlJEdnItzlU5efWtBjMCaC5Nizb;
 
@@ -25,7 +25,7 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 	public override void Draw(SpriteBatch spriteBatch)
 	{
 		float num = _rlJEdnItzlU5efWtBjMCaC5Nizb + (float)_za9QLzJUpOFmy4hIqyTdGh34IpD.Height;
-		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["Time"].SetValue(Randoms.Time);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["PoolSpeed"].SetValue(0.1f);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["PoolOffset"].SetValue(_qFVIvzuvIuKKG5vOrovLtn4NplA);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["MaskTexture"].SetValue(_za9QLzJUpOFmy4hIqyTdGh34IpD);

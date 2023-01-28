@@ -27,7 +27,7 @@ public class _hqmu3NsKXqziXGfVh3dt79G0fye
 	{
 		if (_G6ytq2szip28Pty4dJdow3N4n7H.Count != 0)
 		{
-			string text = _G6ytq2szip28Pty4dJdow3N4n7H.Keys.ElementAt(_boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(0, _G6ytq2szip28Pty4dJdow3N4n7H.Count));
+			string text = _G6ytq2szip28Pty4dJdow3N4n7H.Keys.ElementAt(Randoms.Next(0, _G6ytq2szip28Pty4dJdow3N4n7H.Count));
 			if (_G6ytq2szip28Pty4dJdow3N4n7H[text] == null)
 			{
 				_G6ytq2szip28Pty4dJdow3N4n7H[text] = _kyNMbF8EBji1HoeA7mnul2Xsd1P.Load<SoundEffect>(text);

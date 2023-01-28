@@ -10,7 +10,7 @@ public class SkyeBlueNPC : SkyeNPC
 		: base(game)
 	{
 		base.Skin = base.Game.Content.Load<Texture2D>("Assets/NPC/Skye/skye expressions (Blue)");
-		base._rAt6TRbgK04lvrs5QPjcd0n26pk = new Type[2]
+		base.Variations = new Type[2]
 		{
 			typeof(SkyeNPC),
 			typeof(SkyeGrayNPC)

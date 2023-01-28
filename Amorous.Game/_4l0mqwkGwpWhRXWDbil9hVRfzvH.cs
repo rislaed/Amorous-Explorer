@@ -3,17 +3,17 @@ using Microsoft.Xna.Framework;
 
 public class _4l0mqwkGwpWhRXWDbil9hVRfzvH : AbstractEvent<HidePhoneEventData>
 {
-	public _4l0mqwkGwpWhRXWDbil9hVRfzvH(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _4l0mqwkGwpWhRXWDbil9hVRfzvH(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		if (_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._j2OEvLQtM2lODSmH3ZFP6wWCWpF == _poenyHBGUusBcnNcTFB9MQBV72R._fFGgY4gvWNcTLSlsfe9k99ctumb.ArmUp)
+		if (PhoneOverlay.Get().Phase == PhoneOverlay.PhonePhase.ArmUp)
 		{
-			_poenyHBGUusBcnNcTFB9MQBV72R._RiDuYMeg3EHnBUteUcAb8VlfQVl();
+			PhoneOverlay.Hide();
 		}
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._j2OEvLQtM2lODSmH3ZFP6wWCWpF == _poenyHBGUusBcnNcTFB9MQBV72R._fFGgY4gvWNcTLSlsfe9k99ctumb.ArmDown;
+		base.Completable = PhoneOverlay.Get().Phase == PhoneOverlay.PhonePhase.ArmDown;
 	}
 }

@@ -47,7 +47,7 @@ public class InteractableLayer : AbstractLayer
 
 	public override void Update(GameTime gameTime)
 	{
-		if (Captured && _nkzqFdEfDyLcyGikIKGcHjklI4y._xJZUPxDatEzfPQc0nRHR2D1Vwke)
+		if (Captured && TypingDialogue.Completable)
 		{
 			Captured = false;
 		}
@@ -71,7 +71,7 @@ public class InteractableLayer : AbstractLayer
 
 	public override bool Click()
 	{
-		_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq(Text, string.Empty, Color.White);
+		TypingDialogue._zunSyHn4DekdA6CngP10dXcR1kq(Text, string.Empty, Color.White);
 		Captured = true;
 		Hovered = false;
 		return true;
@@ -79,7 +79,7 @@ public class InteractableLayer : AbstractLayer
 
 	public override void Continue()
 	{
-		_nkzqFdEfDyLcyGikIKGcHjklI4y._h0KfaNiikKlJV2KkRPIdVDKVJnC();
+		TypingDialogue.BeginCutscene();
 		Captured = false;
 	}
 

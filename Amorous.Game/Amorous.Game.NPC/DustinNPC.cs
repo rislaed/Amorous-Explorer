@@ -30,11 +30,10 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 	}
 
 	public static string Name = "Dustin";
-
 	public static Color Color = new Color(242, 208, 150);
 
 	public DustinNPC(IAmorous game)
-		: base(game, "Assets/NPC/Dustin/Dustin", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Dustin/Dustin", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Idle");
 		GetEmotion(EHeads.Neutral, "Neutral Mane", "Neutral eye back", "Neutral pupil", "Neutral jaw", "Neutral head")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Neutral blink");

@@ -20,11 +20,11 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 
 	public void Update(GameTime gameTime)
 	{
-		if (!_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj || Amorous._5zNdOw7qHmuCAPJFMr3SsZdBlCr != null)
+		if (!PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj || Amorous.Cutscene != null)
 		{
 			return;
 		}
-		if (_poenyHBGUusBcnNcTFB9MQBV72R._AZrO8MxMUE7cKsFYTQ4k9O3q7yC()._j2OEvLQtM2lODSmH3ZFP6wWCWpF != _poenyHBGUusBcnNcTFB9MQBV72R._fFGgY4gvWNcTLSlsfe9k99ctumb.ArmUp)
+		if (PhoneOverlay.Get().Phase != PhoneOverlay.PhonePhase.ArmUp)
 		{
 			if (_VFsmChWIb7RoYgotfAQskmL1dY7)
 			{
@@ -41,29 +41,29 @@ public class _dvyBDFOZwoBLf9qqHSfHYLLXVwP
 					_ozrhTFHF7sXDU6ysB7cHxLveAAS = false;
 					_znKl2SuVqjuhuU4ZYVKzq6zGvfb = 0f;
 					_VFsmChWIb7RoYgotfAQskmL1dY7 = true;
-					_poenyHBGUusBcnNcTFB9MQBV72R._f2smFxmYyFJyj81xWGaGLB2G7ef = _poenyHBGUusBcnNcTFB9MQBV72R._wlQdV74JhqkBVxNonpbfqZEmjIbA.MessageUrgent;
+					PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.MessageUrgent;
 				}
 			}
 			else
 			{
 				_ozrhTFHF7sXDU6ysB7cHxLveAAS = true;
-				_poenyHBGUusBcnNcTFB9MQBV72R._f2smFxmYyFJyj81xWGaGLB2G7ef = _poenyHBGUusBcnNcTFB9MQBV72R._wlQdV74JhqkBVxNonpbfqZEmjIbA.MessageNew;
+				PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.MessageNew;
 			}
 		}
-		else if (_poenyHBGUusBcnNcTFB9MQBV72R._f2smFxmYyFJyj81xWGaGLB2G7ef != _poenyHBGUusBcnNcTFB9MQBV72R._wlQdV74JhqkBVxNonpbfqZEmjIbA.NoMessage)
+		else if (PhoneOverlay.Indication != PhoneOverlay.PhoneIndication.NoMessage)
 		{
 			_ozrhTFHF7sXDU6ysB7cHxLveAAS = false;
 			_znKl2SuVqjuhuU4ZYVKzq6zGvfb = 0f;
 			_VFsmChWIb7RoYgotfAQskmL1dY7 = false;
-			_poenyHBGUusBcnNcTFB9MQBV72R._f2smFxmYyFJyj81xWGaGLB2G7ef = _poenyHBGUusBcnNcTFB9MQBV72R._wlQdV74JhqkBVxNonpbfqZEmjIbA.NoMessage;
+			PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.NoMessage;
 		}
 	}
 
 	public void End()
 	{
-		if (_poenyHBGUusBcnNcTFB9MQBV72R._kf3EbE0B70xGe1szklqAZyCqoLj)
+		if (PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj)
 		{
-			_poenyHBGUusBcnNcTFB9MQBV72R._f2smFxmYyFJyj81xWGaGLB2G7ef = _poenyHBGUusBcnNcTFB9MQBV72R._wlQdV74JhqkBVxNonpbfqZEmjIbA.NoMessage;
+			PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.NoMessage;
 		}
 	}
 }

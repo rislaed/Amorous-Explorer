@@ -40,16 +40,14 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 	public static Color Color = new Color(113, 227, 255);
 
 	public JaxNPC(IAmorous game)
-		: this(game, "Assets/NPC/Jax/Jax")
-	{
-	}
+		: this(game, "Assets/NPC/Jax/Jax") {}
 
-	public JaxNPC(IAmorous game, string string_0)
-		: base(game, string_0, 1f, bool_0: true)
+	public JaxNPC(IAmorous game, string path)
+		: base(game, path, 1f, premultipliedAlpha: true)
 	{
 		Width = 904;
 		Height = 1008;
-		base._rAt6TRbgK04lvrs5QPjcd0n26pk = new Type[2]
+		base.Variations = new Type[2]
 		{
 			typeof(JaxPurpleNPC),
 			typeof(JaxRedNPC)

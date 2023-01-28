@@ -24,7 +24,7 @@ public class CoupleBNPC : SpineNPC<CoupleBNPC.EHeads, CoupleBNPC.EPoses, CoupleB
 	}
 
 	public CoupleBNPC(IAmorous game)
-		: base(game, "Assets/Scenes/Intro/Couple B", 1f, bool_0: true)
+		: base(game, "Assets/Scenes/Intro/Couple B", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Waving");
 		GetPose(EPoses.Waving, "Dark arm", "Characters right", "fem arms");

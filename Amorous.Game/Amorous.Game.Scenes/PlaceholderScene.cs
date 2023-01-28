@@ -6,6 +6,6 @@ public class PlaceholderScene : AbstractScene
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/Placeholder/Background", 0, 0);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._h0KfaNiikKlJV2KkRPIdVDKVJnC();
+		FadingMediaPlayer.BeginCutscene();
 	}
 }

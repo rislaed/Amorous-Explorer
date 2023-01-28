@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 
@@ -541,7 +539,7 @@ public class PlayerData : IPlayerData
 		DisabledContacts = EPhoneContacts.None;
 	}
 
-	public int _X1b0dyIzsSyKwqWd3usrbDfKJAk()
+	public int GetContactCount()
 	{
 		int num = 0;
 		foreach (object value in Enum.GetValues(typeof(EPhoneContacts)))

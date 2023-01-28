@@ -25,7 +25,7 @@ public class ClubInsideDancerBNPC : SpineNPC<ClubInsideDancerBNPC.EHeads, ClubIn
 	}
 
 	public ClubInsideDancerBNPC(IAmorous game)
-		: base(game, "Assets/NPC/ClubInsideStatic/Dancer B", 0.7f, bool_0: true)
+		: base(game, "Assets/NPC/ClubInsideStatic/Dancer B", 0.7f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Dance A");
 		GetEmotion(EHeads.Happy, "Hair", "Head", "Jaw");

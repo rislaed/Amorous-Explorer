@@ -7,7 +7,7 @@ public class _67xbcnbi3gZbItJwCGCxxdKh9WG : AbstractEvent<CensorCheckEventData>
 
 	public int NSFWID { get; private set; }
 
-	public _67xbcnbi3gZbItJwCGCxxdKh9WG(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _67xbcnbi3gZbItJwCGCxxdKh9WG(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -21,7 +21,7 @@ public class _67xbcnbi3gZbItJwCGCxxdKh9WG : AbstractEvent<CensorCheckEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 		base.NextID = (Censorship.Censored ? SFWID : NSFWID);
 	}
 }

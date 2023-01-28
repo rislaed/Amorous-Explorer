@@ -32,7 +32,7 @@ public class DustinSexscene : CensoredSexscene
 	};
 
 	public DustinSexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, float_1: 3000f)
+		: base(content, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (Censorship.Censored)

@@ -149,14 +149,14 @@ public class SpineRenderer
 		IsAnimationEnded = false;
 	}
 
-	public void SetAlpha(string bone, float a)
+	public void SetAlpha(string bone, float alpha)
 	{
 		if (!string.IsNullOrEmpty(bone))
 		{
 			Slot slot = Skeleton.FindSlot(bone);
 			if (slot != null)
 			{
-				slot.A = a;
+				slot.A = alpha;
 			}
 		}
 	}

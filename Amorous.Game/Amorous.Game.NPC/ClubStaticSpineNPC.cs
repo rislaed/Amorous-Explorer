@@ -23,17 +23,17 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 		Pants
 	}
 
-	protected ClubStaticSpineNPC(IAmorous game, string string_0, string[] string_1, string[] string_2 = null, string[] string_3 = null)
-		: base(game, string_0, 1f, bool_0: true)
+	protected ClubStaticSpineNPC(IAmorous game, string path, string[] poses, string[] shirts = null, string[] pants = null)
+		: base(game, path, 1f, premultipliedAlpha: true)
 	{
-		GetPose(EPoses.Nude, string_1);
-		if (string_2 != null)
+		GetPose(EPoses.Nude, poses);
+		if (shirts != null)
 		{
-			GetClothes(EPoses.Nude, EClothes.Shirt, string_2)._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
+			GetClothes(EPoses.Nude, EClothes.Shirt, shirts)._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
 		}
-		if (string_3 != null)
+		if (pants != null)
 		{
-			GetClothes(EPoses.Nude, EClothes.Pants, string_3)._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
+			GetClothes(EPoses.Nude, EClothes.Pants, pants)._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
 		}
 	}
 

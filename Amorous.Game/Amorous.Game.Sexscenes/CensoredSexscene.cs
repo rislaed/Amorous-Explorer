@@ -42,21 +42,21 @@ public class CensoredSexscene : AbstractSexscene
 
 		private void ResetProgression()
 		{
-			_nD28BmrDaEzCHelTAa14TKyuSyG = _boyt8NIMtKsAGSTcjHeL0WMbFxs._07xTWbIEgzxJYsYwFKDbbKNvu4G(64, 1856);
+			_nD28BmrDaEzCHelTAa14TKyuSyG = Randoms.Next(64, 1856);
 			_LkckKdvuh9GaAwn7XojfbJBd91r = 1144f;
 			_MnKzCyEExhWnbYODXLISlC7P0D9 = 0f;
 			_AQwQu1ldCtpbkD5F9oEByJdCnWaA = 1f;
-			Deviation = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(-10f, 10f);
-			_vS7dI6rh0z8HEXKEL7oHBGUMNb4 = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(128f, 256f);
-			_fEoXp8v9qmXyfxzaUZzMonygxpN = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(1f, 5f);
-			_SJ8FQp8xbJuebaQOrgLvEJN49JI = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(10f, 100f);
-			_eJdobumzbRJtj3Df3Y2IgIJQb0c = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(1f, 3f);
-			_rGcC4uzFv31JwubJhcgwuiNZiMh = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(0f, 1080f);
+			Deviation = Randoms.NextDouble(-10f, 10f);
+			_vS7dI6rh0z8HEXKEL7oHBGUMNb4 = Randoms.NextDouble(128f, 256f);
+			_fEoXp8v9qmXyfxzaUZzMonygxpN = Randoms.NextDouble(1f, 5f);
+			_SJ8FQp8xbJuebaQOrgLvEJN49JI = Randoms.NextDouble(10f, 100f);
+			_eJdobumzbRJtj3Df3Y2IgIJQb0c = Randoms.NextDouble(1f, 3f);
+			_rGcC4uzFv31JwubJhcgwuiNZiMh = Randoms.NextDouble(0f, 1080f);
 		}
 
 		public void Update(float float_0)
 		{
-			_nD28BmrDaEzCHelTAa14TKyuSyG += (float)Math.Sin(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv * _fEoXp8v9qmXyfxzaUZzMonygxpN) * (_SJ8FQp8xbJuebaQOrgLvEJN49JI * float_0);
+			_nD28BmrDaEzCHelTAa14TKyuSyG += (float)Math.Sin(Randoms.Time * _fEoXp8v9qmXyfxzaUZzMonygxpN) * (_SJ8FQp8xbJuebaQOrgLvEJN49JI * float_0);
 			_LkckKdvuh9GaAwn7XojfbJBd91r -= _vS7dI6rh0z8HEXKEL7oHBGUMNb4 * float_0;
 			if (_LkckKdvuh9GaAwn7XojfbJBd91r < _rGcC4uzFv31JwubJhcgwuiNZiMh)
 			{
@@ -81,15 +81,15 @@ public class CensoredSexscene : AbstractSexscene
 	private readonly Texture2D _tt9eBN54CTaryoKDBFZI2D44oni;
 	private float _Ja1biX4ByqpjkgcLg9SPPz8y4itA;
 
-	public CensoredSexscene(ContentManager content, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SkeletonJson.SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null, float float_1 = 1000f)
+	public CensoredSexscene(ContentManager content, string string_0, string string_1, string string_2 = null, float float_0 = 1f, bool bool_0 = true, List<SkeletonJson.SpineEvent> list_0 = null, _sa8EsNgk4VDRaASdXE7VprdlNlg _sa8EsNgk4VDRaASdXE7VprdlNlg_0 = null, float cycle = 1000f)
 		: base(content, string_0, string_1, Censorship.Censored ? "Assets/SexScenes/Generic/Overlay" : string_2, float_0, bool_0, Censorship.Censored ? null : list_0, _sa8EsNgk4VDRaASdXE7VprdlNlg_0)
 	{
 		if (Censorship.Censored)
 		{
-			_YDmx0efYtcyg4olWGsr0rBMkyjD = (_aElCqTEKQdwgSGVsOO7nt14UEsn = float_1);
+			CycleTicks = (Cycle = cycle);
 			_lpzETYXyRHxYihXrkJactMysoTi = new List<Particle>();
 			_tt9eBN54CTaryoKDBFZI2D44oni = content.Load<Texture2D>("Assets/SexScenes/Generic/Heart");
-			_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
+			FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 		}
 	}
 
@@ -154,7 +154,7 @@ public class CensoredSexscene : AbstractSexscene
 			_Ja1biX4ByqpjkgcLg9SPPz8y4itA -= num;
 			if (_Ja1biX4ByqpjkgcLg9SPPz8y4itA < 0f)
 			{
-				_Ja1biX4ByqpjkgcLg9SPPz8y4itA = _boyt8NIMtKsAGSTcjHeL0WMbFxs._S7DdtNZASTkc9riB27h5Ktq5VjDA(0f, 1f);
+				_Ja1biX4ByqpjkgcLg9SPPz8y4itA = Randoms.NextDouble(0f, 1f);
 				_lpzETYXyRHxYihXrkJactMysoTi.Add(new Particle());
 			}
 		}

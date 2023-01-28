@@ -57,26 +57,26 @@ public class CreditsMenuScene : AbstractScene
 		_lHXUPUciX33biAqfQQ8Yx79nzNB = _tYZIsh9jywDMNNUVaAxLdrUBPIS.MeasureString("Test").Y;
 		_3STGOMMEQo4zHKNnz9z7ftUA5Df = _6YCQhlMaqcDds8uGX1g8fjBKqV4A.MeasureString("Test").Y;
 		Vector2 _AjA452JzkbwnCTtbITN5kOEaNrR = new Vector2(50f, 1080f - _2MfIKVtD2AO6rfNH8r9gBa9ABgc - 40f);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Father-of-Death - Happy Jazz Shit", 0.4f);
-		_Otv0Xepue9AcysEmioBbEWTisDaA = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(Game.Content.RootDirectory, "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
-		_fAUddQEKfZyemRb327NhM3GGlmzA gparam_ = new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "Credits")
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Father-of-Death - Happy Jazz Shit", 0.4f);
+		_Otv0Xepue9AcysEmioBbEWTisDaA = Compressions.ReadStreamAsText(Path.Combine(Game.Content.RootDirectory, "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
+		DrawableLayer gparam_ = new DrawableLayer(this, "Credits")
 		{
-			_NC5P3SKqKPpcAYG1mqquUEcUzTg = _y3e1BQlF0D44DVRCJQTcKxaeNOb,
-			_B6VrMlmWofCGqEzjzgFJiAliCge = _R35LFMCpqnW2Zsm1xJon3qf0UAg
+			OnUpdate = _y3e1BQlF0D44DVRCJQTcKxaeNOb,
+			OnDraw = _R35LFMCpqnW2Zsm1xJon3qf0UAg
 		};
 		AddLayer(gparam_, 0);
 		bool _vfz3itarR7RfYdT3BqrAmb1qElP = false;
 		Vector2 vector = _6YCQhlMaqcDds8uGX1g8fjBKqV4A.MeasureString(_ICAb9QUE8hnbl0uKD8fBpEB1kSV);
-		Point _LWpJMkbSZ0LnBJGJqKcICxgdLwq = base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._2j5HjqIBNOwD2br7yBprKdzVhAK(new Point((int)vector.X, (int)vector.Y));
-		AddLayer(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "GoBackText")
+		Point _LWpJMkbSZ0LnBJGJqKcICxgdLwq = base.Game.Mouse._2j5HjqIBNOwD2br7yBprKdzVhAK(new Point((int)vector.X, (int)vector.Y));
+		AddLayer(new DrawableLayer(this, "GoBackText")
 		{
-			_NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate
+			OnUpdate = delegate
 			{
-				Point point = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+				Point point = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.Mouse.Rescale(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.Controller.Cursor);
 				if ((float)point.X >= _AjA452JzkbwnCTtbITN5kOEaNrR.X && (float)point.X <= _AjA452JzkbwnCTtbITN5kOEaNrR.X + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.X && (float)point.Y >= _AjA452JzkbwnCTtbITN5kOEaNrR.Y && (float)point.Y <= _AjA452JzkbwnCTtbITN5kOEaNrR.Y + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.Y)
 				{
 					_vfz3itarR7RfYdT3BqrAmb1qElP = true;
-					if (_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+					if (_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 					{
 						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.StartScene(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._t76cjDKppsRdw5nUq3tnNw3ypAv.Name);
 					}
@@ -86,7 +86,7 @@ public class CreditsMenuScene : AbstractScene
 					_vfz3itarR7RfYdT3BqrAmb1qElP = false;
 				}
 			},
-			_B6VrMlmWofCGqEzjzgFJiAliCge = delegate(SpriteBatch spriteBatch)
+			OnDraw = delegate(SpriteBatch spriteBatch)
 			{
 				spriteBatch.Begin();
 				spriteBatch.DrawString(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._nQK443boDHTZ4Jfc3W1VhQkMCcX, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._ICAb9QUE8hnbl0uKD8fBpEB1kSV, _AjA452JzkbwnCTtbITN5kOEaNrR, _vfz3itarR7RfYdT3BqrAmb1qElP ? Color.Red : Color.White);
@@ -171,9 +171,9 @@ public class CreditsMenuScene : AbstractScene
 
 	public override void Update(GameTime gameTime)
 	{
-		if (!base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Keys.Escape))
+		if (!base.Game.Controller.JustPressed(Keys.Escape))
 		{
-			_lmBaEmzKj1Yvgl07XZnnBeMGYov = ((!base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(Keys.Space)) ? 100f : 300f);
+			_lmBaEmzKj1Yvgl07XZnnBeMGYov = ((!base.Game.Controller.IsPressed(Keys.Space)) ? 100f : 300f);
 			base.Update(gameTime);
 		}
 		else

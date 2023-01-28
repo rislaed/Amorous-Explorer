@@ -6,19 +6,19 @@ public abstract class _0feLylFvn7NOajSXvkEDMJIATof<T> : AbstractEvent<T> where T
 {
 	protected PlayerData.EPhoneContacts Contact;
 
-	protected _0feLylFvn7NOajSXvkEDMJIATof(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	protected _0feLylFvn7NOajSXvkEDMJIATof(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
 
-	public override void SetData(T gparam_0)
+	public override void SetData(T eventData)
 	{
-		base.SetData(gparam_0);
-		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(((UnlockContactEventData)gparam_0).Contact, out var result) ? result : PlayerData.EPhoneContacts.None);
+		base.SetData(eventData);
+		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(((UnlockContactEventData)eventData).Contact, out var result) ? result : PlayerData.EPhoneContacts.None);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 	}
 }

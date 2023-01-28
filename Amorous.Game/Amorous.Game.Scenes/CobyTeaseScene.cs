@@ -18,13 +18,13 @@ public class CobyTeaseScene : AbstractScene
 	public CobyTeaseScene(IAmorous game)
 		: base(game)
 	{
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ = Game.Content._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/CobyTease/Coby buttshake Teasel");
+		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ = Game.Content.LoadSkeleton("Assets/Scenes/CobyTease/Coby buttshake Teasel");
 		SetVariant("Panties");
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.SetVisibility(1f);
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.StartAnimationWithLooping("animation");
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.X = 985f;
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.Y = 1081f;
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
 	}
 
 	public override void SetVariant(string string_0)

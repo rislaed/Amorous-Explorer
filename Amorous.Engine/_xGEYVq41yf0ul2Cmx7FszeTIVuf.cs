@@ -11,7 +11,7 @@ public class _xGEYVq41yf0ul2Cmx7FszeTIVuf : AbstractEvent<PlayDialogueEventData>
 
 	public Color Color { get; private set; }
 
-	public _xGEYVq41yf0ul2Cmx7FszeTIVuf(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _xGEYVq41yf0ul2Cmx7FszeTIVuf(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -25,28 +25,28 @@ public class _xGEYVq41yf0ul2Cmx7FszeTIVuf : AbstractEvent<PlayDialogueEventData>
 		_sYTI9KQ6wWFbqvMDTbLkrgpPx6E = false;
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		base.StopCutscene();
-		_nkzqFdEfDyLcyGikIKGcHjklI4y._zunSyHn4DekdA6CngP10dXcR1kq(Text, Title, Color);
+		base.Begin();
+		TypingDialogue._zunSyHn4DekdA6CngP10dXcR1kq(Text, Title, Color);
 	}
 
-	public override bool _NeIQsy78kWqF9jXLl8vb2lOyZgO()
+	public override bool Next()
 	{
 		if (_sYTI9KQ6wWFbqvMDTbLkrgpPx6E)
 		{
-			base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+			base.Completable = true;
 		}
 		else
 		{
 			_sYTI9KQ6wWFbqvMDTbLkrgpPx6E = true;
-			_nkzqFdEfDyLcyGikIKGcHjklI4y._NeIQsy78kWqF9jXLl8vb2lOyZgO();
+			TypingDialogue.Next();
 		}
 		return false;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = _nkzqFdEfDyLcyGikIKGcHjklI4y._xJZUPxDatEzfPQc0nRHR2D1Vwke;
+		base.Completable = TypingDialogue.Completable;
 	}
 }

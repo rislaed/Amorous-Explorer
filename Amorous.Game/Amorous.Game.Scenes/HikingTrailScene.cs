@@ -14,7 +14,7 @@ public class HikingTrailScene : AbstractScene
 		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = AddTexturedLayer("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
 		_bYgAJ7foDqpxOElDOYhOkQFMzrz = AddTexturedLayer("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
 		SetVariant(VariantDay);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
 	}
 
 	public override void SetVariant(string daytime)

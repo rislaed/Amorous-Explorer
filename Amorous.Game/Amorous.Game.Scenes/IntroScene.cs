@@ -23,18 +23,18 @@ public class IntroScene : AbstractScene
 	{
 		_h29gtnqEWLAa5qsliRXuXiPwY2o = AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, 0);
 		_agB6DEyENfHFg1x2I4KsJqoQUpg = AddTexturedLayer("Scenery", "Assets/Scenes/Intro/Scenery", 0, 1250);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
 		_PbBEddQtI9iZg1ocIlBafUuVdrO = 1f;
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		_ZCUbMPsnW0SgjlADsYyZVasibXM = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleBNPC>(LayerOrder.Foreground);
+		_ZCUbMPsnW0SgjlADsYyZVasibXM = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Foreground);
 		_ZCUbMPsnW0SgjlADsYyZVasibXM.X = 1280f;
 		_ZCUbMPsnW0SgjlADsYyZVasibXM.Y = 1090f;
 		_ZCUbMPsnW0SgjlADsYyZVasibXM.SetPose(CoupleBNPC.EPoses.Waving);
 		_ZCUbMPsnW0SgjlADsYyZVasibXM.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
-		_4BkRUyoqu3iKk7SRvIVoP35EcKA = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CoupleANPC>(LayerOrder.Foreground);
+		_4BkRUyoqu3iKk7SRvIVoP35EcKA = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Foreground);
 		_4BkRUyoqu3iKk7SRvIVoP35EcKA.X = -800f;
 		_4BkRUyoqu3iKk7SRvIVoP35EcKA.Y = 1090f;
 		_4BkRUyoqu3iKk7SRvIVoP35EcKA.SetPose(CoupleANPC.EPoses.Waving);
@@ -61,7 +61,7 @@ public class IntroScene : AbstractScene
 		}
 	}
 
-	private void _nuSr558RHFkx9d2QBs2DeGUB1wX(_tfDAeR6npiqJMLRSXPO1DxGA0TgA _tfDAeR6npiqJMLRSXPO1DxGA0TgA_0, float float_0, float float_1, int int_0, int int_1, int int_2, int int_3)
+	private void _nuSr558RHFkx9d2QBs2DeGUB1wX(AbstractSpineNPC _tfDAeR6npiqJMLRSXPO1DxGA0TgA_0, float float_0, float float_1, int int_0, int int_1, int int_2, int int_3)
 	{
 		if (!((float)Stopwatch < float_0) && (float)Stopwatch < float_0 + float_1)
 		{

@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Squid;
 
 namespace Amorous.Game.Scenes;
@@ -24,16 +21,17 @@ public class PlayerCustomizationScene : AbstractScene
 		}
 	}
 
-	protected bool _jIGpzoYLVPw8SPxmJcha832nCXR;
-	private CustomizablePlayerSkin CustomizableSkin;
-	private Panel _0jH3FoV36utxuSLivmD6IZNwppA;
-	private List<Button> _kG9DrP49ggNdZOvVMMUPjfqdzZ4;
-	private Panel _TbkP67ntBpYJu1M27pBfsYAHmgJ;
-	private readonly PlayerDataProxy Data;
-	private Window _hSPLyBveOIKpCKgimgpgcMUDdRz;
-	private readonly Effect _9jklVVcQQYcyqOYrkPiht2VP0IG;
+	protected bool MightConfigurateEverything;
 
-	private readonly List<SexsceneData> Sexscenes = new List<SexsceneData>
+	private CustomizablePlayerSkin _skin;
+	private Panel _backgroundPanel;
+	private List<Button> _categories;
+	private Panel _foregroundPanel;
+	private readonly PlayerDataProxy _data;
+	private Window _colorPicker;
+	private readonly Effect _shader;
+
+	private readonly List<SexsceneData> _sexscenes = new List<SexsceneData>
 	{
 		new SexsceneData("None", null),
 		new SexsceneData("Coby", "CobySexscene"),
@@ -47,10 +45,10 @@ public class PlayerCustomizationScene : AbstractScene
 		new SexsceneData("Zenith", "ZenithSexscene")
 	};
 
-	private readonly string[] _LTwaEzSn23m9dquR3WwhTVRbJiG;
-	private int _IyCJr9wgsrQgOUaXQco1I00YF7B;
-	private int _3yqpoxOljKnrj7mGlnrA0eOUMAk;
-	private int _QjFuG8JMGq8rGnavgUdgnBEKBfD;
+	private readonly string[] _sexsceneNames;
+	private int _sexsceneIndex;
+	private int _templateStockIndex;
+	private int _templatePlayerIndex;
 
 	protected virtual string ReturnToGameText => "Exit";
 
@@ -58,48 +56,48 @@ public class PlayerCustomizationScene : AbstractScene
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
-		AddLayer(new _fAUddQEKfZyemRb327NhM3GGlmzA(this, "Custom")
+		AddLayer(new DrawableLayer(this, "Custom")
 		{
-			_B6VrMlmWofCGqEzjzgFJiAliCge = _KkwafXXLVg1QfQgqqCAojg2ySyZ
+			OnDraw = DrawPlayer
 		}, 0);
-		_LTwaEzSn23m9dquR3WwhTVRbJiG = Sexscenes.Select((SexsceneData sexsceneData_0) => sexsceneData_0.Name).ToArray();
-		Data = new PlayerDataProxy(PlayerPreferences.GetPlayerData());
-		Data.OnChange += delegate
+		_sexsceneNames = _sexscenes.Select((SexsceneData sexscene) => sexscene.Name).ToArray();
+		_data = new PlayerDataProxy(PlayerPreferences.GetPlayerData());
+		_data.OnChange += delegate
 		{
 			if (base.Game.Sexscene != null)
 			{
 				base.Game.Sexscene._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 			}
 		};
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Blazing Dragon - Midnight Sizzle", 0.4f);
-		_9jklVVcQQYcyqOYrkPiht2VP0IG = Game.Content.Load<Effect>("Assets/Shaders/Breathing");
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Blazing Dragon - Midnight Sizzle", 0.4f);
+		_shader = Game.Content.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
-		CustomizableSkin = new CustomizablePlayerSkin(base.Game);
+		_skin = new CustomizablePlayerSkin(base.Game);
 		_hI8MfcRDpV9Q45afjBJe8lA5sbr();
-		PlayerPreferences.SetPlayerSkin(CustomizableSkin);
-		_dJMkrCEG7sVmAlGOM9PfNSkFZZC();
+		PlayerPreferences.SetPlayerSkin(_skin);
+		DisplayCreator();
 	}
 
 	protected virtual void _hI8MfcRDpV9Q45afjBJe8lA5sbr()
 	{
-		if (CustomizableSkin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Any())
+		if (_skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Any())
 		{
-			CustomizableSkin._BCRMBb9uhQZrQlfdXPidu27yb8C(0);
-			Data.Name = CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(0);
-			_QjFuG8JMGq8rGnavgUdgnBEKBfD = 0;
+			_skin._BCRMBb9uhQZrQlfdXPidu27yb8C(0);
+			_data.Name = _skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(0);
+			_templatePlayerIndex = 0;
 		}
 		else
 		{
-			CustomizableSkin._BwV21jdCpo4YpIp6x74bJ0H7hut(0);
-			Data.Name = "Player";
-			_QjFuG8JMGq8rGnavgUdgnBEKBfD = -1;
+			_skin._BwV21jdCpo4YpIp6x74bJ0H7hut(0);
+			_data.Name = "Player";
+			_templatePlayerIndex = -1;
 		}
 	}
 
-	private void _dJMkrCEG7sVmAlGOM9PfNSkFZZC()
+	private void DisplayCreator()
 	{
 		Window window = new Window
 		{
@@ -108,71 +106,71 @@ public class PlayerCustomizationScene : AbstractScene
 			Margin = new Margin(8),
 			Padding = new Margin(8)
 		};
-		_0jH3FoV36utxuSLivmD6IZNwppA = new Panel
+		_backgroundPanel = new Panel
 		{
 			Dock = DockStyle.Fill
 		};
-		window.Controls.Add(_0jH3FoV36utxuSLivmD6IZNwppA);
+		window.Controls.Add(_backgroundPanel);
 		Panel panel = new Panel();
 		panel.Dock = DockStyle.Fill;
 		panel.ClipFrame.Margin = new Margin(8);
-		_TbkP67ntBpYJu1M27pBfsYAHmgJ = panel;
-		_kG9DrP49ggNdZOvVMMUPjfqdzZ4 = new List<Button>
+		_foregroundPanel = panel;
+		_categories = new List<Button>
 		{
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Fursona", delegate
+			NewCategory("Fursona", delegate
 			{
-				_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Body", delegate
+			NewCategory("Body", delegate
 			{
-				_jiNxMIzuA8Rrc2ULsrob5A7UNDe(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_jiNxMIzuA8Rrc2ULsrob5A7UNDe(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Arms", delegate
+			NewCategory("Arms", delegate
 			{
-				_1qIQUjhrbk5WA7C7mYs93gXLOIe(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_1qIQUjhrbk5WA7C7mYs93gXLOIe(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Legs", delegate
+			NewCategory("Legs", delegate
 			{
-				_VCrdQDifkN8NHlzPICTmtbgWFwp(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_VCrdQDifkN8NHlzPICTmtbgWFwp(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Head", delegate
+			NewCategory("Head", delegate
 			{
-				_vXrWU56trsuFNc9CNcHuctfkI2S(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_vXrWU56trsuFNc9CNcHuctfkI2S(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Muzzle", delegate
+			NewCategory("Muzzle", delegate
 			{
-				_vg6ASaP7xNqc0jerF3mcrXv4dn7(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_vg6ASaP7xNqc0jerF3mcrXv4dn7(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Ears and Horns", delegate
+			NewCategory("Ears and Horns", delegate
 			{
-				_Xhurp3mVVoR5kNlnxgLoDDkeQxM(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_Xhurp3mVVoR5kNlnxgLoDDkeQxM(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Hair and Fringes", delegate
+			NewCategory("Hair and Fringes", delegate
 			{
-				_gHA9C0CRN2NaRMtfTrvlotJOd0T(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_gHA9C0CRN2NaRMtfTrvlotJOd0T(_foregroundPanel.Content.Controls);
 			}),
-			_cvldkRXLM8Toadgv6nPx5QH1EES("Eyes and Brows", delegate
+			NewCategory("Eyes and Brows", delegate
 			{
-				_hNo7o9fG9jvwcKyMq1nYl4q7cXc(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_hNo7o9fG9jvwcKyMq1nYl4q7cXc(_foregroundPanel.Content.Controls);
 			})
 		};
 		if (!Censorship.Censored)
 		{
-			_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES("Breasts, Cock and Balls", delegate
+			_categories.Add(NewCategory("Breasts, Cock and Balls", delegate
 			{
-				_mWS8UuA4xcT1bSdjDObiubOE0wH(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+				_mWS8UuA4xcT1bSdjDObiubOE0wH(_foregroundPanel.Content.Controls);
 			}));
 		}
-		_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES("Tail", delegate
+		_categories.Add(NewCategory("Tail", delegate
 		{
-			_7JR6eL4D0qdIJNOwfInnlg2HEgZ(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+			_7JR6eL4D0qdIJNOwfInnlg2HEgZ(_foregroundPanel.Content.Controls);
 		}));
-		_kG9DrP49ggNdZOvVMMUPjfqdzZ4.Add(_cvldkRXLM8Toadgv6nPx5QH1EES("Feet", delegate
+		_categories.Add(NewCategory("Feet", delegate
 		{
-			_PBEdYyzYEWcXAodjVf58ocOQ3Jf(_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls);
+			_PBEdYyzYEWcXAodjVf58ocOQ3Jf(_foregroundPanel.Content.Controls);
 		}));
 		window.Show(base.Squid);
-		_kG9DrP49ggNdZOvVMMUPjfqdzZ4[0].Click(0);
+		_categories[0].Click(0);
 	}
 
 	private void _OBIbaNO8X49ahEZ5n3Ta8HUK7mO(ControlCollection controlCollection_0)
@@ -182,43 +180,43 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Top,
 			Text = "Name"
 		});
-		TextBox _Z0ib1EsNAOHar3w2AfvKgeb8s2BA = new TextBox
+		TextBox templateName = new TextBox
 		{
 			Dock = DockStyle.Top,
-			Text = Data.Name,
+			Text = _data.Name,
 			Margin = new Margin(0, 0, 0, 5)
 		};
-		_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.TextChanged += delegate
+		templateName.TextChanged += delegate
 		{
-			Data.Name = _Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text;
+			_data.Name = templateName.Text;
 		};
-		controlCollection_0.Add(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA);
-		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Stock Templates", CustomizableSkin._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((PlayerConfiguration configuration) => configuration.Name).ToArray(), _3yqpoxOljKnrj7mGlnrA0eOUMAk, delegate(int int_0)
+		controlCollection_0.Add(templateName);
+		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Stock Templates", _skin._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((PlayerConfiguration configuration) => configuration.Name).ToArray(), _templateStockIndex, delegate(int int_0)
 		{
-			_3yqpoxOljKnrj7mGlnrA0eOUMAk = int_0;
-			CustomizableSkin._BwV21jdCpo4YpIp6x74bJ0H7hut(int_0);
-			_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
+			_templateStockIndex = int_0;
+			_skin._BwV21jdCpo4YpIp6x74bJ0H7hut(int_0);
+			_foregroundPanel.Content.Controls.Clear();
 			_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 			if (base.Game.Sexscene != null)
 			{
 				base.Game.Sexscene._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 			}
 		});
-		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Your Templates", CustomizableSkin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((PlayerConfiguration configuration) => configuration.Name).ToArray(), _QjFuG8JMGq8rGnavgUdgnBEKBfD, delegate(int int_0)
+		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Your Templates", _skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((PlayerConfiguration configuration) => configuration.Name).ToArray(), _templatePlayerIndex, delegate(int index)
 		{
-			_QjFuG8JMGq8rGnavgUdgnBEKBfD = int_0;
-			CustomizableSkin._BCRMBb9uhQZrQlfdXPidu27yb8C(int_0);
-			Data.Name = CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(int_0);
-			_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
+			_templatePlayerIndex = index;
+			_skin._BCRMBb9uhQZrQlfdXPidu27yb8C(index);
+			_data.Name = _skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(index);
+			_foregroundPanel.Content.Controls.Clear();
 			_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 			if (base.Game.Sexscene != null)
 			{
 				base.Game.Sexscene._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 			}
 		});
-		Control control = _z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Phone", Data.PhoneColor, delegate(Color color_0)
+		Control control = _z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Phone", _data.PhoneColor, delegate(Color color)
 		{
-			Data.PhoneColor = color_0;
+			_data.PhoneColor = color;
 		});
 		control.Margin = new Margin(0, 5, 0, 0);
 		Button button = new Button
@@ -229,19 +227,19 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button.MouseClick += delegate
 		{
-			if (string.IsNullOrWhiteSpace(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text))
+			if (string.IsNullOrWhiteSpace(templateName.Text))
 			{
 				base.Squid.ShowConfirm("You did not enter a name!", 500);
 			}
 			else
 			{
-				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to create a new template with the name '{_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text}', based on the current character?", delegate
+				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to create a new template with the name '{templateName.Text}', based on the current character?", delegate
 				{
-					CustomizableSkin._0S3oMrwxDtOTcbzkglSllPfRq53(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text, Data.GetPlayerData());
-					_QjFuG8JMGq8rGnavgUdgnBEKBfD = CustomizableSkin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Count() - 1;
-					CustomizableSkin._BCRMBb9uhQZrQlfdXPidu27yb8C(_QjFuG8JMGq8rGnavgUdgnBEKBfD);
-					Data.Name = CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_QjFuG8JMGq8rGnavgUdgnBEKBfD);
-					_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
+					_skin._0S3oMrwxDtOTcbzkglSllPfRq53(templateName.Text, _data.GetPlayerData());
+					_templatePlayerIndex = _skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Count() - 1;
+					_skin._BCRMBb9uhQZrQlfdXPidu27yb8C(_templatePlayerIndex);
+					_data.Name = _skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_templatePlayerIndex);
+					_foregroundPanel.Content.Controls.Clear();
 					_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 				});
 			}
@@ -254,28 +252,28 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button2.MouseClick += delegate
 		{
-			if (string.IsNullOrWhiteSpace(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text))
+			if (string.IsNullOrWhiteSpace(templateName.Text))
 			{
 				base.Squid.ShowConfirm("You did not enter a name!", 500);
 			}
-			else if (_QjFuG8JMGq8rGnavgUdgnBEKBfD >= 0)
+			else if (_templatePlayerIndex >= 0)
 			{
-				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to save the currect character to the selected template '{CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_QjFuG8JMGq8rGnavgUdgnBEKBfD)}'?", delegate
+				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to save the currect character to the selected template '{_skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_templatePlayerIndex)}'?", delegate
 				{
-					CustomizableSkin._WfRAwdaNcmrDEhMe1AHPq7egPcw(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text, _QjFuG8JMGq8rGnavgUdgnBEKBfD, Data.GetPlayerData());
-					_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
+					_skin._WfRAwdaNcmrDEhMe1AHPq7egPcw(templateName.Text, _templatePlayerIndex, _data.GetPlayerData());
+					_foregroundPanel.Content.Controls.Clear();
 					_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 				});
 			}
 			else
 			{
-				_yA2ISabBQiVKBxMt5AXSybmkG5o($"No template has been selected yet, do you wish to create a new template with the name '{_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text}', based on the current character?", delegate
+				_yA2ISabBQiVKBxMt5AXSybmkG5o($"No template has been selected yet, do you wish to create a new template with the name '{templateName.Text}', based on the current character?", delegate
 				{
-					CustomizableSkin._0S3oMrwxDtOTcbzkglSllPfRq53(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text, Data.GetPlayerData());
-					_QjFuG8JMGq8rGnavgUdgnBEKBfD = CustomizableSkin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Count() - 1;
-					CustomizableSkin._BCRMBb9uhQZrQlfdXPidu27yb8C(_QjFuG8JMGq8rGnavgUdgnBEKBfD);
-					Data.Name = CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_QjFuG8JMGq8rGnavgUdgnBEKBfD);
-					_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
+					_skin._0S3oMrwxDtOTcbzkglSllPfRq53(templateName.Text, _data.GetPlayerData());
+					_templatePlayerIndex = _skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Count() - 1;
+					_skin._BCRMBb9uhQZrQlfdXPidu27yb8C(_templatePlayerIndex);
+					_data.Name = _skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_templatePlayerIndex);
+					_foregroundPanel.Content.Controls.Clear();
 					_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 				});
 			}
@@ -288,13 +286,13 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button3.MouseClick += delegate
 		{
-			if (_QjFuG8JMGq8rGnavgUdgnBEKBfD >= 0)
+			if (_templatePlayerIndex >= 0)
 			{
-				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to reset the current character back to selected template '{CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_QjFuG8JMGq8rGnavgUdgnBEKBfD)}'? All changes will be lost!", delegate
+				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to reset the current character back to selected template '{_skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_templatePlayerIndex)}'? All changes will be lost!", delegate
 				{
-					CustomizableSkin._JC60lfB4LT6VifObN1Ynm6iARlc(_QjFuG8JMGq8rGnavgUdgnBEKBfD);
-					Data.Name = CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_QjFuG8JMGq8rGnavgUdgnBEKBfD);
-					_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
+					_skin._JC60lfB4LT6VifObN1Ynm6iARlc(_templatePlayerIndex);
+					_data.Name = _skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_templatePlayerIndex);
+					_foregroundPanel.Content.Controls.Clear();
 					_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 				});
 			}
@@ -311,13 +309,13 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button4.MouseClick += delegate
 		{
-			if (_QjFuG8JMGq8rGnavgUdgnBEKBfD >= 0)
+			if (_templatePlayerIndex >= 0)
 			{
-				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to delete the selected template '{CustomizableSkin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_QjFuG8JMGq8rGnavgUdgnBEKBfD)}'?", delegate
+				_yA2ISabBQiVKBxMt5AXSybmkG5o($"Are you sure you wish to delete the selected template '{_skin._6qwooGF3jWmbG9887Y5IKZ8fJ0E(_templatePlayerIndex)}'?", delegate
 				{
-					CustomizableSkin._FzyCgzYhOXEADaijk8VbcLulpcBA(_QjFuG8JMGq8rGnavgUdgnBEKBfD);
-					_QjFuG8JMGq8rGnavgUdgnBEKBfD = -1;
-					_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
+					_skin._FzyCgzYhOXEADaijk8VbcLulpcBA(_templatePlayerIndex);
+					_templatePlayerIndex = -1;
+					_foregroundPanel.Content.Controls.Clear();
 					_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 				});
 			}
@@ -335,21 +333,21 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button5.MouseClick += delegate
 		{
-			CustomizableSkin._BlScjiyHDsZk3jkAZbAbjUxn87sA();
+			_skin._BlScjiyHDsZk3jkAZbAbjUxn87sA();
 		};
 		controlCollection_0.Add(button5);
 		if (!Censorship.Censored)
 		{
-			_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Preview Sexscene", _LTwaEzSn23m9dquR3WwhTVRbJiG, _IyCJr9wgsrQgOUaXQco1I00YF7B, delegate(int int_0)
+			_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Preview Sexscene", _sexsceneNames, _sexsceneIndex, delegate(int index)
 			{
-				_IyCJr9wgsrQgOUaXQco1I00YF7B = int_0;
-				if (int_0 == 0)
+				_sexsceneIndex = index;
+				if (index == 0)
 				{
-					base.Game._Ec0fhBrUGmjaIKjUfJioigVc65x();
+					base.Game.ResetSexscene();
 				}
 				else
 				{
-					base.Game._gYGB98heFqsLp9tgJbdCP01IKV2(Sexscenes[int_0].Scene);
+					base.Game.StartSexscene(_sexscenes[index].Scene);
 					base.Game.Sexscene._7BfTap1TnZXk1aaAXnFODowTQCp = true;
 				}
 			});
@@ -370,13 +368,13 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button6.MouseClick += delegate
 		{
-			if (_jIGpzoYLVPw8SPxmJcha832nCXR && string.IsNullOrWhiteSpace(_Z0ib1EsNAOHar3w2AfvKgeb8s2BA.Text))
+			if (MightConfigurateEverything && string.IsNullOrWhiteSpace(templateName.Text))
 			{
 				base.Squid.ShowConfirm("You did not enter a name!", 500);
 			}
 			else
 			{
-				_n3b8BstkorCsu4TW0U2YVdFbdGp();
+				ConfirmEverything();
 			}
 		};
 		controlCollection_0.Add(button6);
@@ -393,7 +391,7 @@ public class PlayerCustomizationScene : AbstractScene
 		});
 	}
 
-	protected virtual void _n3b8BstkorCsu4TW0U2YVdFbdGp()
+	protected virtual void ConfirmEverything()
 	{
 		base.Squid.ShowSelection("Are you sure you wish to exit? All unsaved changes will be lost!", new string[2] { "Oops, my bad!", "Yes please!" }, 500, delegate(int int_0)
 		{
@@ -406,225 +404,225 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void _jiNxMIzuA8Rrc2ULsrob5A7UNDe(ControlCollection controlCollection_0)
 	{
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Body", Data.BodyType, delegate(PlayerData.EBodyType ebodyType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Body", _data.BodyType, delegate(PlayerData.EBodyType ebodyType_0)
 		{
-			Data.BodyType = ebodyType_0;
+			_data.BodyType = ebodyType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Body Color", Data.BodyColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Body Color", _data.BodyColor, delegate(Color color_0)
 		{
-			Data.BodyColor = color_0;
+			_data.BodyColor = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Underbelly Marking", PlayerData.EMarkingsType.Underbelly, Data.UnderbellyColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Underbelly Marking", PlayerData.EMarkingsType.Underbelly, _data.UnderbellyColor, delegate(Color color_0)
 		{
-			Data.UnderbellyColor = color_0;
+			_data.UnderbellyColor = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Underthigh Marking", PlayerData.EMarkingsType.Underthigh, Data.UnderthighColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Underthigh Marking", PlayerData.EMarkingsType.Underthigh, _data.UnderthighColor, delegate(Color color_0)
 		{
-			Data.UnderthighColor = color_0;
+			_data.UnderthighColor = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Stripes Marking", PlayerData.EMarkingsType.Stripes, Data.StripesColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Stripes Marking", PlayerData.EMarkingsType.Stripes, _data.StripesColor, delegate(Color color_0)
 		{
-			Data.StripesColor = color_0;
+			_data.StripesColor = color_0;
 		});
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Nails", Data.ShowNails, Data.NailColor, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Nails", _data.ShowNails, _data.NailColor, delegate(bool bool_0)
 		{
-			Data.ShowNails = bool_0;
+			_data.ShowNails = bool_0;
 		}, delegate(Color color_0)
 		{
-			Data.NailColor = color_0;
+			_data.NailColor = color_0;
 		});
 	}
 
 	private void _1qIQUjhrbk5WA7C7mYs93gXLOIe(ControlCollection controlCollection_0)
 	{
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Long Forearm Marking", PlayerData.EMarkingsType.LongForearm, Data.LongForearmColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Long Forearm Marking", PlayerData.EMarkingsType.LongForearm, _data.LongForearmColor, delegate(Color color_0)
 		{
-			Data.LongForearmColor = color_0;
+			_data.LongForearmColor = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Short Forearm Marking", PlayerData.EMarkingsType.ShortForearm, Data.ShortForearmColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Short Forearm Marking", PlayerData.EMarkingsType.ShortForearm, _data.ShortForearmColor, delegate(Color color_0)
 		{
-			Data.ShortForearmColor = color_0;
+			_data.ShortForearmColor = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Avian Forearm Marking", PlayerData.EMarkingsType.AvianForearm, Data.AvianForearmColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Avian Forearm Marking", PlayerData.EMarkingsType.AvianForearm, _data.AvianForearmColor, delegate(Color color_0)
 		{
-			Data.AvianForearmColor = color_0;
+			_data.AvianForearmColor = color_0;
 		});
 	}
 
 	private void _VCrdQDifkN8NHlzPICTmtbgWFwp(ControlCollection controlCollection_0)
 	{
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Long Shin Marking", PlayerData.EMarkingsType.LongShin, Data.LongShinColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Long Shin Marking", PlayerData.EMarkingsType.LongShin, _data.LongShinColor, delegate(Color color_0)
 		{
-			Data.LongShinColor = color_0;
+			_data.LongShinColor = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Short Shin Marking", PlayerData.EMarkingsType.ShortShin, Data.ShortShinColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Short Shin Marking", PlayerData.EMarkingsType.ShortShin, _data.ShortShinColor, delegate(Color color_0)
 		{
-			Data.ShortShinColor = color_0;
+			_data.ShortShinColor = color_0;
 		});
-		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Avian Shin Marking", PlayerData.EMarkingsType.AvianShin, Data.AvianShinColor, delegate(Color color_0)
+		_9x3XvoSKr9dMOykq9pl8AKFzwJ(controlCollection_0, "Avian Shin Marking", PlayerData.EMarkingsType.AvianShin, _data.AvianShinColor, delegate(Color color_0)
 		{
-			Data.AvianShinColor = color_0;
+			_data.AvianShinColor = color_0;
 		});
 	}
 
 	private void _vXrWU56trsuFNc9CNcHuctfkI2S(ControlCollection controlCollection_0)
 	{
-		Panel _5DnedRtrhRxc4WXg7XVOkddr43f = new Panel
+		Panel defaultHeadPanel = new Panel
 		{
 			Dock = DockStyle.Fill,
-			Visible = (Data.HeadType == PlayerData.EHeadType.Default)
+			Visible = (_data.HeadType == PlayerData.EHeadType.Default)
 		};
-		Panel _KH5vstJZR49J3eWlwNclJbU5SDe = new Panel
+		Panel extraHeadPanel = new Panel
 		{
 			Dock = DockStyle.Fill,
-			Visible = (Data.HeadType == PlayerData.EHeadType.PaperBag)
+			Visible = (_data.HeadType == PlayerData.EHeadType.PaperBag)
 		};
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Head", Data.HeadType, delegate(PlayerData.EHeadType eheadType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Head", _data.HeadType, delegate(PlayerData.EHeadType eheadType_0)
 		{
-			Data.HeadType = eheadType_0;
+			_data.HeadType = eheadType_0;
 			switch (eheadType_0)
 			{
 			case PlayerData.EHeadType.Default:
-				_5DnedRtrhRxc4WXg7XVOkddr43f.Visible = true;
-				_KH5vstJZR49J3eWlwNclJbU5SDe.Visible = false;
+				defaultHeadPanel.Visible = true;
+				extraHeadPanel.Visible = false;
 				break;
 			case PlayerData.EHeadType.Humanoid:
-				_5DnedRtrhRxc4WXg7XVOkddr43f.Visible = false;
-				_KH5vstJZR49J3eWlwNclJbU5SDe.Visible = false;
+				defaultHeadPanel.Visible = false;
+				extraHeadPanel.Visible = false;
 				break;
 			case PlayerData.EHeadType.PaperBag:
-				_5DnedRtrhRxc4WXg7XVOkddr43f.Visible = false;
-				_KH5vstJZR49J3eWlwNclJbU5SDe.Visible = true;
+				defaultHeadPanel.Visible = false;
+				extraHeadPanel.Visible = true;
 				break;
 			}
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Head Color", Data.HeadColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Head Color", _data.HeadColor, delegate(Color color_0)
 		{
-			Data.HeadColor = color_0;
+			_data.HeadColor = color_0;
 		});
-		_h7MUbT306Ju5xwvamN8SatTR2Mo(_5DnedRtrhRxc4WXg7XVOkddr43f.Content.Controls, "Gaunt Marking", PlayerData.EHeadMarkingsType.Gaunt, Data.HeadGauntColor, delegate(Color color_0)
+		_h7MUbT306Ju5xwvamN8SatTR2Mo(defaultHeadPanel.Content.Controls, "Gaunt Marking", PlayerData.EHeadMarkingsType.Gaunt, _data.HeadGauntColor, delegate(Color color_0)
 		{
-			Data.HeadGauntColor = color_0;
+			_data.HeadGauntColor = color_0;
 		});
-		_h7MUbT306Ju5xwvamN8SatTR2Mo(_5DnedRtrhRxc4WXg7XVOkddr43f.Content.Controls, "Scruffy Marking", PlayerData.EHeadMarkingsType.Scruffy, Data.HeadScruffyColor, delegate(Color color_0)
+		_h7MUbT306Ju5xwvamN8SatTR2Mo(defaultHeadPanel.Content.Controls, "Scruffy Marking", PlayerData.EHeadMarkingsType.Scruffy, _data.HeadScruffyColor, delegate(Color color_0)
 		{
-			Data.HeadScruffyColor = color_0;
+			_data.HeadScruffyColor = color_0;
 		});
-		_h7MUbT306Ju5xwvamN8SatTR2Mo(_5DnedRtrhRxc4WXg7XVOkddr43f.Content.Controls, "Snout Marking", PlayerData.EHeadMarkingsType.Snout, Data.HeadSnoutColor, delegate(Color color_0)
+		_h7MUbT306Ju5xwvamN8SatTR2Mo(defaultHeadPanel.Content.Controls, "Snout Marking", PlayerData.EHeadMarkingsType.Snout, _data.HeadSnoutColor, delegate(Color color_0)
 		{
-			Data.HeadSnoutColor = color_0;
+			_data.HeadSnoutColor = color_0;
 		});
-		_h7MUbT306Ju5xwvamN8SatTR2Mo(_5DnedRtrhRxc4WXg7XVOkddr43f.Content.Controls, "Stripes Marking", PlayerData.EHeadMarkingsType.Stripes, Data.HeadStripesColor, delegate(Color color_0)
+		_h7MUbT306Ju5xwvamN8SatTR2Mo(defaultHeadPanel.Content.Controls, "Stripes Marking", PlayerData.EHeadMarkingsType.Stripes, _data.HeadStripesColor, delegate(Color color_0)
 		{
-			Data.HeadStripesColor = color_0;
+			_data.HeadStripesColor = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_KH5vstJZR49J3eWlwNclJbU5SDe.Content.Controls, "Paper Bag Color", Data.PaperBagColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(extraHeadPanel.Content.Controls, "Paper Bag Color", _data.PaperBagColor, delegate(Color color_0)
 		{
-			Data.PaperBagColor = color_0;
+			_data.PaperBagColor = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_KH5vstJZR49J3eWlwNclJbU5SDe.Content.Controls, "Eyesholes Color", Data.PaperBagEyesColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(extraHeadPanel.Content.Controls, "Eyesholes Color", _data.PaperBagEyesColor, delegate(Color color_0)
 		{
-			Data.PaperBagEyesColor = color_0;
+			_data.PaperBagEyesColor = color_0;
 		});
-		controlCollection_0.Add(_5DnedRtrhRxc4WXg7XVOkddr43f);
-		controlCollection_0.Add(_KH5vstJZR49J3eWlwNclJbU5SDe);
+		controlCollection_0.Add(defaultHeadPanel);
+		controlCollection_0.Add(extraHeadPanel);
 	}
 
 	private void _vg6ASaP7xNqc0jerF3mcrXv4dn7(ControlCollection controlCollection_0)
 	{
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Muzzle", Data.MuzzleType, delegate(PlayerData.EMuzzleType emuzzleType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Muzzle", _data.MuzzleType, delegate(PlayerData.EMuzzleType emuzzleType_0)
 		{
-			Data.MuzzleType = emuzzleType_0;
+			_data.MuzzleType = emuzzleType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Muzzle Color", Data.MuzzleColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Muzzle Color", _data.MuzzleColor, delegate(Color color_0)
 		{
-			Data.MuzzleColor = color_0;
+			_data.MuzzleColor = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Nose Color", Data.NoseColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Nose Color", _data.NoseColor, delegate(Color color_0)
 		{
-			Data.NoseColor = color_0;
+			_data.NoseColor = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Teeth Color", Data.TeethColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Teeth Color", _data.TeethColor, delegate(Color color_0)
 		{
-			Data.TeethColor = color_0;
+			_data.TeethColor = color_0;
 		});
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Muzzle Horn", Data.ShowMuzzleHorn, Data.MuzzleHornColor, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Muzzle Horn", _data.ShowMuzzleHorn, _data.MuzzleHornColor, delegate(bool bool_0)
 		{
-			Data.ShowMuzzleHorn = bool_0;
+			_data.ShowMuzzleHorn = bool_0;
 		}, delegate(Color color_0)
 		{
-			Data.MuzzleHornColor = color_0;
+			_data.MuzzleHornColor = color_0;
 		});
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Muzzle Mask", Data.ShowMuzzleMask, Data.MuzzleMaskColor, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Muzzle Mask", _data.ShowMuzzleMask, _data.MuzzleMaskColor, delegate(bool bool_0)
 		{
-			Data.ShowMuzzleMask = bool_0;
+			_data.ShowMuzzleMask = bool_0;
 		}, delegate(Color color_0)
 		{
-			Data.MuzzleMaskColor = color_0;
+			_data.MuzzleMaskColor = color_0;
 		});
 	}
 
 	private void _Xhurp3mVVoR5kNlnxgLoDDkeQxM(ControlCollection controlCollection_0)
 	{
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Ears and Horns", Data.HeadAccessoriesType, delegate(PlayerData.EHeadAccessoriesType eheadAccessoriesType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Ears and Horns", _data.HeadAccessoriesType, delegate(PlayerData.EHeadAccessoriesType eheadAccessoriesType_0)
 		{
-			Data.HeadAccessoriesType = eheadAccessoriesType_0;
+			_data.HeadAccessoriesType = eheadAccessoriesType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Horns Color", Data.HeadHornsColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Horns Color", _data.HeadHornsColor, delegate(Color color_0)
 		{
-			Data.HeadHornsColor = color_0;
+			_data.HeadHornsColor = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Ear Color", Data.EarColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Ear Color", _data.EarColor, delegate(Color color_0)
 		{
-			Data.EarColor = color_0;
+			_data.EarColor = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Ear Inner Color", Data.EarInnerColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Ear Inner Color", _data.EarInnerColor, delegate(Color color_0)
 		{
-			Data.EarInnerColor = color_0;
+			_data.EarInnerColor = color_0;
 		});
 	}
 
 	private void _gHA9C0CRN2NaRMtfTrvlotJOd0T(ControlCollection controlCollection_0)
 	{
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Hair", Data.HairstyleType, delegate(PlayerData.EHairstyleType ehairstyleType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Hair", _data.HairstyleType, delegate(PlayerData.EHairstyleType ehairstyleType_0)
 		{
-			Data.HairstyleType = ehairstyleType_0;
+			_data.HairstyleType = ehairstyleType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Hair Color", Data.HairColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Hair Color", _data.HairColor, delegate(Color color_0)
 		{
-			Data.HairColor = color_0;
+			_data.HairColor = color_0;
 		});
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Fringe", Data.FringeType, delegate(PlayerData.EFringeType efringeType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Fringe", _data.FringeType, delegate(PlayerData.EFringeType efringeType_0)
 		{
-			Data.FringeType = efringeType_0;
+			_data.FringeType = efringeType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Fringe Color", Data.FringeColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Fringe Color", _data.FringeColor, delegate(Color color_0)
 		{
-			Data.FringeColor = color_0;
+			_data.FringeColor = color_0;
 		});
 	}
 
 	private void _hNo7o9fG9jvwcKyMq1nYl4q7cXc(ControlCollection controlCollection_0)
 	{
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Eyes", Data.EyesType, delegate(PlayerData.EEyesType eeyesType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Eyes", _data.EyesType, delegate(PlayerData.EEyesType eeyesType_0)
 		{
-			Data.EyesType = eeyesType_0;
+			_data.EyesType = eeyesType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Eyes Back Color", Data.EyesBackColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Eyes Back Color", _data.EyesBackColor, delegate(Color color_0)
 		{
-			Data.EyesBackColor = color_0;
+			_data.EyesBackColor = color_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Eyes Front Color", Data.EyesFrontColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Eyes Front Color", _data.EyesFrontColor, delegate(Color color_0)
 		{
-			Data.EyesFrontColor = color_0;
+			_data.EyesFrontColor = color_0;
 		});
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Brows", Data.BrowType, delegate(PlayerData.EBrowType ebrowType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Brows", _data.BrowType, delegate(PlayerData.EBrowType ebrowType_0)
 		{
-			Data.BrowType = ebrowType_0;
+			_data.BrowType = ebrowType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Brows Color", Data.BrowColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Brows Color", _data.BrowColor, delegate(Color color_0)
 		{
-			Data.BrowColor = color_0;
+			_data.BrowColor = color_0;
 		});
 	}
 
@@ -633,143 +631,143 @@ public class PlayerCustomizationScene : AbstractScene
 		Panel _63PX0QXRoq6jeUvG5xheRABNwsg = new Panel
 		{
 			Dock = DockStyle.Top,
-			Visible = (Data.BreastsType != PlayerData.EBreastsType.None)
+			Visible = (_data.BreastsType != PlayerData.EBreastsType.None)
 		};
 		Panel _TLsIePSD9UbEwlT0HwKiF2xZX87 = new Panel
 		{
 			Dock = DockStyle.Top,
-			Visible = (Data.CockType != PlayerData.ECockType.None)
+			Visible = (_data.CockType != PlayerData.ECockType.None)
 		};
 		Panel _s9TeQxnG80yYnmcOHHr4bw9fWCh = new Panel
 		{
 			Dock = DockStyle.Top,
-			Visible = (Data.BallsType != PlayerData.EBallsType.None)
+			Visible = (_data.BallsType != PlayerData.EBallsType.None)
 		};
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Breasts", Data.BreastsType, delegate(PlayerData.EBreastsType ebreastsType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Breasts", _data.BreastsType, delegate(PlayerData.EBreastsType ebreastsType_0)
 		{
-			Data.BreastsType = ebreastsType_0;
-			_63PX0QXRoq6jeUvG5xheRABNwsg.Visible = Data.BreastsType != PlayerData.EBreastsType.None;
+			_data.BreastsType = ebreastsType_0;
+			_63PX0QXRoq6jeUvG5xheRABNwsg.Visible = _data.BreastsType != PlayerData.EBreastsType.None;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_63PX0QXRoq6jeUvG5xheRABNwsg.Content.Controls, "Breasts Color", Data.BreastsColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_63PX0QXRoq6jeUvG5xheRABNwsg.Content.Controls, "Breasts Color", _data.BreastsColor, delegate(Color color_0)
 		{
-			Data.BreastsColor = color_0;
+			_data.BreastsColor = color_0;
 		});
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(_63PX0QXRoq6jeUvG5xheRABNwsg.Content.Controls, "Nipples", Data.ShowNipples, Data.NipplesColor, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(_63PX0QXRoq6jeUvG5xheRABNwsg.Content.Controls, "Nipples", _data.ShowNipples, _data.NipplesColor, delegate(bool bool_0)
 		{
-			Data.ShowNipples = bool_0;
+			_data.ShowNipples = bool_0;
 		}, delegate(Color color_0)
 		{
-			Data.NipplesColor = color_0;
+			_data.NipplesColor = color_0;
 		});
 		controlCollection_0.Add(_63PX0QXRoq6jeUvG5xheRABNwsg);
 		Control _Jhlc8lMI1rq07omae9xc6uig5tv = null;
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Cock", Data.CockType, delegate(PlayerData.ECockType ecockType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Cock", _data.CockType, delegate(PlayerData.ECockType ecockType_0)
 		{
-			Data.CockType = ecockType_0;
-			_TLsIePSD9UbEwlT0HwKiF2xZX87.Visible = Data.CockType != PlayerData.ECockType.None;
-			_Jhlc8lMI1rq07omae9xc6uig5tv.Visible = Data.CockType == PlayerData.ECockType.Cut || Data.CockType == PlayerData.ECockType.Uncut;
+			_data.CockType = ecockType_0;
+			_TLsIePSD9UbEwlT0HwKiF2xZX87.Visible = _data.CockType != PlayerData.ECockType.None;
+			_Jhlc8lMI1rq07omae9xc6uig5tv.Visible = _data.CockType == PlayerData.ECockType.Cut || _data.CockType == PlayerData.ECockType.Uncut;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_TLsIePSD9UbEwlT0HwKiF2xZX87.Content.Controls, "Cock Color", Data.GenitaliaColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_TLsIePSD9UbEwlT0HwKiF2xZX87.Content.Controls, "Cock Color", _data.GenitaliaColor, delegate(Color color_0)
 		{
-			Data.GenitaliaColor = color_0;
+			_data.GenitaliaColor = color_0;
 		});
-		_Jhlc8lMI1rq07omae9xc6uig5tv = _z5npzs7mj5H3zJ1PF64BFNsXBmm(_TLsIePSD9UbEwlT0HwKiF2xZX87.Content.Controls, "Cock Tip Color", Data.GenitaliaFleshColor, delegate(Color color_0)
+		_Jhlc8lMI1rq07omae9xc6uig5tv = _z5npzs7mj5H3zJ1PF64BFNsXBmm(_TLsIePSD9UbEwlT0HwKiF2xZX87.Content.Controls, "Cock Tip Color", _data.GenitaliaFleshColor, delegate(Color color_0)
 		{
-			Data.GenitaliaFleshColor = color_0;
+			_data.GenitaliaFleshColor = color_0;
 		});
-		_Jhlc8lMI1rq07omae9xc6uig5tv.Visible = Data.CockType == PlayerData.ECockType.Cut || Data.CockType == PlayerData.ECockType.Uncut;
+		_Jhlc8lMI1rq07omae9xc6uig5tv.Visible = _data.CockType == PlayerData.ECockType.Cut || _data.CockType == PlayerData.ECockType.Uncut;
 		controlCollection_0.Add(_TLsIePSD9UbEwlT0HwKiF2xZX87);
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Balls", Data.BallsType, delegate(PlayerData.EBallsType eballsType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Balls", _data.BallsType, delegate(PlayerData.EBallsType eballsType_0)
 		{
-			Data.BallsType = eballsType_0;
-			_s9TeQxnG80yYnmcOHHr4bw9fWCh.Visible = Data.BallsType != PlayerData.EBallsType.None;
+			_data.BallsType = eballsType_0;
+			_s9TeQxnG80yYnmcOHHr4bw9fWCh.Visible = _data.BallsType != PlayerData.EBallsType.None;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_s9TeQxnG80yYnmcOHHr4bw9fWCh.Content.Controls, "Balls Color", Data.BallsColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(_s9TeQxnG80yYnmcOHHr4bw9fWCh.Content.Controls, "Balls Color", _data.BallsColor, delegate(Color color_0)
 		{
-			Data.BallsColor = color_0;
+			_data.BallsColor = color_0;
 		});
 		controlCollection_0.Add(_s9TeQxnG80yYnmcOHHr4bw9fWCh);
 	}
 
 	private void _7JR6eL4D0qdIJNOwfInnlg2HEgZ(ControlCollection controlCollection_0)
 	{
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Tail", Data.TailType, delegate(PlayerData.ETailType etailType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Tail", _data.TailType, delegate(PlayerData.ETailType etailType_0)
 		{
-			Data.TailType = etailType_0;
+			_data.TailType = etailType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Tail Color", Data.TailColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Tail Color", _data.TailColor, delegate(Color color_0)
 		{
-			Data.TailColor = color_0;
+			_data.TailColor = color_0;
 		});
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Tail Part A", Data.ShowTailPartOne, Data.TailPartOneColor, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Tail Part A", _data.ShowTailPartOne, _data.TailPartOneColor, delegate(bool bool_0)
 		{
-			Data.ShowTailPartOne = bool_0;
+			_data.ShowTailPartOne = bool_0;
 		}, delegate(Color color_0)
 		{
-			Data.TailPartOneColor = color_0;
+			_data.TailPartOneColor = color_0;
 		});
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Tail Part B", Data.ShowTailPartTwo, Data.TailPartTwoColor, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, "Tail Part B", _data.ShowTailPartTwo, _data.TailPartTwoColor, delegate(bool bool_0)
 		{
-			Data.ShowTailPartTwo = bool_0;
+			_data.ShowTailPartTwo = bool_0;
 		}, delegate(Color color_0)
 		{
-			Data.TailPartTwoColor = color_0;
+			_data.TailPartTwoColor = color_0;
 		});
 	}
 
 	private void _PBEdYyzYEWcXAodjVf58ocOQ3Jf(ControlCollection controlCollection_0)
 	{
-		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Feet", Data.FeetType, delegate(PlayerData.EFeetType efeetType_0)
+		_bABf372CnRI0x85NIaTEbIUNZ10(controlCollection_0, "Feet", _data.FeetType, delegate(PlayerData.EFeetType efeetType_0)
 		{
-			Data.FeetType = efeetType_0;
+			_data.FeetType = efeetType_0;
 		});
-		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Feet Color", Data.FeetColor, delegate(Color color_0)
+		_z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Feet Color", _data.FeetColor, delegate(Color color_0)
 		{
-			Data.FeetColor = color_0;
+			_data.FeetColor = color_0;
 		});
 	}
 
-	public void _KkwafXXLVg1QfQgqqCAojg2ySyZ(SpriteBatch spriteBatch)
+	public void DrawPlayer(SpriteBatch spriteBatch)
 	{
-		_9jklVVcQQYcyqOYrkPiht2VP0IG.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
-		PlayerPreferences.Self.Draw(spriteBatch, _9jklVVcQQYcyqOYrkPiht2VP0IG);
+		_shader.Parameters["Time"].SetValue(Randoms.Time);
+		PlayerPreferences.Singleton.Draw(spriteBatch, _shader);
 	}
 
 	private void _9x3XvoSKr9dMOykq9pl8AKFzwJ(ControlCollection controlCollection_0, string string_0, PlayerData.EMarkingsType EMarkingsType_0, Color color_0, Action<Color> action_0)
 	{
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, string_0, Data.MarkingsType.HasFlag(EMarkingsType_0), color_0, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, string_0, _data.MarkingsType.HasFlag(EMarkingsType_0), color_0, delegate(bool bool_0)
 		{
 			if (bool_0)
 			{
-				Data.MarkingsType |= EMarkingsType_0;
+				_data.MarkingsType |= EMarkingsType_0;
 			}
 			else
 			{
-				Data.MarkingsType &= ~EMarkingsType_0;
+				_data.MarkingsType &= ~EMarkingsType_0;
 			}
 		}, delegate(Color color_0)
 		{
 			action_0(color_0);
-			CustomizableSkin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 		});
 	}
 
 	private void _h7MUbT306Ju5xwvamN8SatTR2Mo(ControlCollection controlCollection_0, string string_0, PlayerData.EHeadMarkingsType _iDe3W6qb7jKTPuJV79yf2i7UoIq_0, Color color_0, Action<Color> action_0)
 	{
-		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, string_0, Data.HeadMarkingsType.HasFlag(_iDe3W6qb7jKTPuJV79yf2i7UoIq_0), color_0, delegate(bool bool_0)
+		_HdTJZZGoOMNi89T0yAdBraCZMjc(controlCollection_0, string_0, _data.HeadMarkingsType.HasFlag(_iDe3W6qb7jKTPuJV79yf2i7UoIq_0), color_0, delegate(bool bool_0)
 		{
 			if (bool_0)
 			{
-				Data.HeadMarkingsType |= _iDe3W6qb7jKTPuJV79yf2i7UoIq_0;
+				_data.HeadMarkingsType |= _iDe3W6qb7jKTPuJV79yf2i7UoIq_0;
 			}
 			else
 			{
-				Data.HeadMarkingsType &= ~_iDe3W6qb7jKTPuJV79yf2i7UoIq_0;
+				_data.HeadMarkingsType &= ~_iDe3W6qb7jKTPuJV79yf2i7UoIq_0;
 			}
 		}, delegate(Color color_0)
 		{
 			action_0(color_0);
-			CustomizableSkin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 		});
 	}
 
@@ -790,7 +788,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			_XXaN99sI8FddBJPpuffIrCZZ49q.Visible = _SbG09NUiMRUtR5nySpplBTa1qug.Checked;
 			action_0(_SbG09NUiMRUtR5nySpplBTa1qug.Checked);
-			CustomizableSkin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 		};
 	}
 
@@ -808,7 +806,7 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Top,
 			Margin = new Margin(0, 0, 0, 5)
 		};
-		ImageControl _UI1mLnvMX5jk5cl6WgxFoVZi1ne = new ImageControl
+		ImageControl image = new ImageControl
 		{
 			Dock = DockStyle.Left,
 			Size = new Squid.Point(29, 30),
@@ -820,40 +818,40 @@ public class PlayerCustomizationScene : AbstractScene
 			Text = string_0,
 			Margin = new Margin(5, 0, 0, 0)
 		};
-		_UI1mLnvMX5jk5cl6WgxFoVZi1ne.MouseClick += delegate
+		image.MouseClick += delegate
 		{
 			_gaKeabKyjzz2jeJCEYxHW9Gc8CGA(string_0, color_0, delegate(Color color_0)
 			{
-				_UI1mLnvMX5jk5cl6WgxFoVZi1ne.Color = ColorInt.ARGB(color_0.A, color_0.R, color_0.G, color_0.B);
+				image.Color = ColorInt.ARGB(color_0.A, color_0.R, color_0.G, color_0.B);
 				action_0(color_0);
-				CustomizableSkin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+				_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 			});
 		};
-		control.GetElements().Add(_UI1mLnvMX5jk5cl6WgxFoVZi1ne);
+		control.GetElements().Add(image);
 		control.GetElements().Add(item);
 		return control;
 	}
 
 	private void _WPOv8yATDl2g7nDSf8itt8V399K(Button button_0)
 	{
-		_0jH3FoV36utxuSLivmD6IZNwppA.Content.Controls.Clear();
-		int num = _kG9DrP49ggNdZOvVMMUPjfqdzZ4.FindIndex((Button button_0) => object.Equals(button_0, button_0));
+		_backgroundPanel.Content.Controls.Clear();
+		int num = _categories.FindIndex((Button button_0) => object.Equals(button_0, button_0));
 		for (int i = 0; i <= num; i++)
 		{
-			_kG9DrP49ggNdZOvVMMUPjfqdzZ4[i].Dock = DockStyle.Top;
-			_0jH3FoV36utxuSLivmD6IZNwppA.Content.Controls.Add(_kG9DrP49ggNdZOvVMMUPjfqdzZ4[i]);
+			_categories[i].Dock = DockStyle.Top;
+			_backgroundPanel.Content.Controls.Add(_categories[i]);
 		}
-		for (int num2 = _kG9DrP49ggNdZOvVMMUPjfqdzZ4.Count - 1; num2 > num; num2--)
+		for (int num2 = _categories.Count - 1; num2 > num; num2--)
 		{
-			_kG9DrP49ggNdZOvVMMUPjfqdzZ4[num2].Dock = DockStyle.Bottom;
-			_0jH3FoV36utxuSLivmD6IZNwppA.Content.Controls.Add(_kG9DrP49ggNdZOvVMMUPjfqdzZ4[num2]);
+			_categories[num2].Dock = DockStyle.Bottom;
+			_backgroundPanel.Content.Controls.Add(_categories[num2]);
 		}
-		_0jH3FoV36utxuSLivmD6IZNwppA.Content.Controls.Add(_TbkP67ntBpYJu1M27pBfsYAHmgJ);
+		_backgroundPanel.Content.Controls.Add(_foregroundPanel);
 	}
 
-	private Button _cvldkRXLM8Toadgv6nPx5QH1EES(string string_0, Action action_0)
+	private Button NewCategory(string string_0, Action action_0)
 	{
-		Button _u0Xt0uZRA6nEpUColLBccMdwezW = new Button
+		Button button = new Button
 		{
 			Dock = DockStyle.Top,
 			TextAlign = Alignment.MiddleCenter,
@@ -862,16 +860,16 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		if (action_0 != null)
 		{
-			_u0Xt0uZRA6nEpUColLBccMdwezW.MouseClick += delegate
+			button.MouseClick += delegate
 			{
-				_TbkP67ntBpYJu1M27pBfsYAHmgJ.Content.Controls.Clear();
-				_TbkP67ntBpYJu1M27pBfsYAHmgJ.VScroll.Value = 0f;
-				_WPOv8yATDl2g7nDSf8itt8V399K(_u0Xt0uZRA6nEpUColLBccMdwezW);
+				_foregroundPanel.Content.Controls.Clear();
+				_foregroundPanel.VScroll.Value = 0f;
+				_WPOv8yATDl2g7nDSf8itt8V399K(button);
 				action_0();
 			};
 		}
-		_0jH3FoV36utxuSLivmD6IZNwppA.Content.Controls.Add(_u0Xt0uZRA6nEpUColLBccMdwezW);
-		return _u0Xt0uZRA6nEpUColLBccMdwezW;
+		_backgroundPanel.Content.Controls.Add(button);
+		return button;
 	}
 
 	private void _YemBTJprwfbd3mpg5Gy9uyEJWwI(ControlCollection controlCollection_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
@@ -903,7 +901,7 @@ public class PlayerCustomizationScene : AbstractScene
 		dropDownList2.SelectedItemChanged += delegate(Control control_0, ListBoxItem listBoxItem_0)
 		{
 			action_0((int)listBoxItem_0.Value);
-			CustomizableSkin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 		};
 		controlCollection_0.Add(item);
 		controlCollection_0.Add(dropDownList2);
@@ -943,7 +941,7 @@ public class PlayerCustomizationScene : AbstractScene
 		dropDownList2.SelectedItemChanged += delegate(Control control_0, ListBoxItem listBoxItem_0)
 		{
 			action_0((T)listBoxItem_0.Value);
-			CustomizableSkin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
 		};
 		controlCollection_0.Add(item);
 		controlCollection_0.Add(dropDownList2);
@@ -951,22 +949,22 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void _gaKeabKyjzz2jeJCEYxHW9Gc8CGA(string string_0, Color color_0, Action<Color> action_0)
 	{
-		if (_hSPLyBveOIKpCKgimgpgcMUDdRz != null)
+		if (_colorPicker != null)
 		{
-			_hSPLyBveOIKpCKgimgpgcMUDdRz.Close();
+			_colorPicker.Close();
 		}
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
+		Window pickerWindow = new Window
 		{
 			Dock = DockStyle.Right,
 			AutoSize = AutoSize.HorizontalVertical,
 			Margin = new Margin(8, 8, 0, 8)
 		};
-		_hSPLyBveOIKpCKgimgpgcMUDdRz = _L7VColD35B3sDgJdUnjTeXGa7pv;
+		_colorPicker = pickerWindow;
 		Panel panel = new Panel();
 		panel.Size = new Squid.Point(307, 519);
 		panel.ClipFrame.Margin = new Margin(16, 8, 16, 16);
 		Panel panel2 = panel;
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(panel2);
+		pickerWindow.Controls.Add(panel2);
 		Label item = new Label
 		{
 			Dock = DockStyle.Top,
@@ -978,21 +976,21 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Top,
 			Size = new Squid.Point(275, 250)
 		};
-		ImageControl _UI1mLnvMX5jk5cl6WgxFoVZi1ne = new ImageControl
+		ImageControl image = new ImageControl
 		{
 			Dock = DockStyle.Left,
 			Texture = "ColorPickerBox",
 			Size = new Squid.Point(250, 250)
 		};
-		ImageControl _nTvWggfVqVEF25GV4NOsfpNhR4C = new ImageControl
+		ImageControl image2 = new ImageControl
 		{
 			Dock = DockStyle.Fill,
 			Texture = "ColorPickerSlider",
 			Size = new Squid.Point(25, 250)
 		};
-		panel3.Content.Controls.Add(_UI1mLnvMX5jk5cl6WgxFoVZi1ne);
-		panel3.Content.Controls.Add(_nTvWggfVqVEF25GV4NOsfpNhR4C);
-		ImageControl _G6zJYvyBSALAHUJm6qCEvtL6WRp = new ImageControl
+		panel3.Content.Controls.Add(image);
+		panel3.Content.Controls.Add(image2);
+		ImageControl image3 = new ImageControl
 		{
 			Dock = DockStyle.Top,
 			Size = new Squid.Point(275, 25),
@@ -1012,7 +1010,7 @@ public class PlayerCustomizationScene : AbstractScene
 			TextAlign = Alignment.MiddleCenter,
 			Size = new Squid.Point(30, 30)
 		};
-		TextBox _8vFoRw3vIHPno8g3WIeCBRRueVP = new TextBox
+		TextBox text = new TextBox
 		{
 			Dock = DockStyle.Left,
 			Size = new Squid.Point(107, 30),
@@ -1025,15 +1023,15 @@ public class PlayerCustomizationScene : AbstractScene
 			TextAlign = Alignment.MiddleCenter,
 			Size = new Squid.Point(30, 30)
 		};
-		TextBox _qCKGqUjXlMolAESPmB7a59OrelQ = new TextBox
+		TextBox text2 = new TextBox
 		{
 			Dock = DockStyle.Fill,
 			TabIndex = 4
 		};
 		panel4.Content.Controls.Add(item2);
-		panel4.Content.Controls.Add(_8vFoRw3vIHPno8g3WIeCBRRueVP);
+		panel4.Content.Controls.Add(text);
 		panel4.Content.Controls.Add(item3);
-		panel4.Content.Controls.Add(_qCKGqUjXlMolAESPmB7a59OrelQ);
+		panel4.Content.Controls.Add(text2);
 		Panel panel5 = new Panel
 		{
 			Dock = DockStyle.Top,
@@ -1047,7 +1045,7 @@ public class PlayerCustomizationScene : AbstractScene
 			TextAlign = Alignment.MiddleCenter,
 			Size = new Squid.Point(30, 30)
 		};
-		TextBox _hOIb3XNfIEDsngLrYzmNfLTPVAS = new TextBox
+		TextBox text3 = new TextBox
 		{
 			Dock = DockStyle.Left,
 			Size = new Squid.Point(107, 30),
@@ -1060,15 +1058,15 @@ public class PlayerCustomizationScene : AbstractScene
 			TextAlign = Alignment.MiddleCenter,
 			Size = new Squid.Point(30, 30)
 		};
-		TextBox _ZP3psbb9CVMMjGn5SgszZo0zGpF = new TextBox
+		TextBox text4 = new TextBox
 		{
 			Dock = DockStyle.Fill,
 			TabIndex = 5
 		};
 		panel5.Content.Controls.Add(item4);
-		panel5.Content.Controls.Add(_hOIb3XNfIEDsngLrYzmNfLTPVAS);
+		panel5.Content.Controls.Add(text3);
 		panel5.Content.Controls.Add(item5);
-		panel5.Content.Controls.Add(_ZP3psbb9CVMMjGn5SgszZo0zGpF);
+		panel5.Content.Controls.Add(text4);
 		Panel panel6 = new Panel
 		{
 			Dock = DockStyle.Top,
@@ -1082,7 +1080,7 @@ public class PlayerCustomizationScene : AbstractScene
 			TextAlign = Alignment.MiddleCenter,
 			Size = new Squid.Point(30, 30)
 		};
-		TextBox _gY2uTDE0FADy52ltQdJ1AO9nRcf = new TextBox
+		TextBox text5 = new TextBox
 		{
 			Dock = DockStyle.Left,
 			Size = new Squid.Point(107, 30),
@@ -1095,15 +1093,15 @@ public class PlayerCustomizationScene : AbstractScene
 			TextAlign = Alignment.MiddleCenter,
 			Size = new Squid.Point(30, 30)
 		};
-		TextBox _E3KHmDW9haZynE9ZamZBVdveWgk = new TextBox
+		TextBox text6 = new TextBox
 		{
 			Dock = DockStyle.Fill,
 			TabIndex = 6
 		};
 		panel6.Content.Controls.Add(item6);
-		panel6.Content.Controls.Add(_gY2uTDE0FADy52ltQdJ1AO9nRcf);
+		panel6.Content.Controls.Add(text5);
 		panel6.Content.Controls.Add(item7);
-		panel6.Content.Controls.Add(_E3KHmDW9haZynE9ZamZBVdveWgk);
+		panel6.Content.Controls.Add(text6);
 		Panel panel7 = new Panel
 		{
 			Dock = DockStyle.Top,
@@ -1117,25 +1115,25 @@ public class PlayerCustomizationScene : AbstractScene
 			TextAlign = Alignment.MiddleCenter,
 			Size = new Squid.Point(45, 30)
 		};
-		TextBox _8lboaaRLcpJoVxfwF1kBCisgrjL = new TextBox
+		TextBox text7 = new TextBox
 		{
 			Dock = DockStyle.Fill,
 			TabIndex = 7
 		};
 		panel7.Content.Controls.Add(item8);
-		panel7.Content.Controls.Add(_8lboaaRLcpJoVxfwF1kBCisgrjL);
-		ImageControl _OWUGVcx9djtc19hjFfxkac019iL = new ImageControl
+		panel7.Content.Controls.Add(text7);
+		ImageControl image4 = new ImageControl
 		{
 			Size = new Squid.Point(6, 6),
 			Color = ColorInt.ARGB(0.9f, 1f, 1f, 1f)
 		};
-		ImageControl _wbSWz1LplcReMBnbKlnmd0UzxRP = new ImageControl
+		ImageControl image5 = new ImageControl
 		{
 			Size = new Squid.Point(25, 6),
 			Color = ColorInt.ARGB(0.9f, 1f, 1f, 1f)
 		};
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(_OWUGVcx9djtc19hjFfxkac019iL);
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(_wbSWz1LplcReMBnbKlnmd0UzxRP);
+		pickerWindow.Controls.Add(image4);
+		pickerWindow.Controls.Add(image5);
 		Button button = new Button
 		{
 			Dock = DockStyle.Fill,
@@ -1144,21 +1142,21 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button.MouseClick += delegate
 		{
-			_hSPLyBveOIKpCKgimgpgcMUDdRz.Close();
+			_colorPicker.Close();
 		};
 		panel2.Content.Controls.Add(item);
 		panel2.Content.Controls.Add(panel3);
-		panel2.Content.Controls.Add(_G6zJYvyBSALAHUJm6qCEvtL6WRp);
+		panel2.Content.Controls.Add(image3);
 		panel2.Content.Controls.Add(panel4);
 		panel2.Content.Controls.Add(panel5);
 		panel2.Content.Controls.Add(panel6);
 		panel2.Content.Controls.Add(panel7);
 		panel2.Content.Controls.Add(panel7);
 		panel2.Content.Controls.Add(button);
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(base.Squid);
-		Color _9ycmcfwZ9EbmXanrFe7pEfGAAUi = color_0;
+		pickerWindow.Show(base.Squid);
+		Color color3 = color_0;
 		_fA3AcauqZZ0ncWKv9QA3iklruOI(color_0, out var _kyexzK2VL0y9etRuX79HInHIsIb, out var _46o2iZ9juR1nNURyrP41h9vxpGA, out var _xX4CfdHl6arem4v3fUgbDUIK2gM);
-		Texture2D _3PAjrCP0TE07YQ22X6EIpPwOlib = new Texture2D(base.Game._2yepMkVENnecIsduggABaU2qhXW, 250, 250, mipMap: false, SurfaceFormat.Color);
+		Texture2D _3PAjrCP0TE07YQ22X6EIpPwOlib = new Texture2D(base.Game.GLES, 250, 250, mipMap: false, SurfaceFormat.Color);
 		int[] _Vo3fFvvroxYzfCOI5F4PqiMr0Gb = new int[_3PAjrCP0TE07YQ22X6EIpPwOlib.Width * _3PAjrCP0TE07YQ22X6EIpPwOlib.Height];
 		for (int i = 0; i < _3PAjrCP0TE07YQ22X6EIpPwOlib.Height; i++)
 		{
@@ -1169,7 +1167,7 @@ public class PlayerCustomizationScene : AbstractScene
 			}
 		}
 		_3PAjrCP0TE07YQ22X6EIpPwOlib.SetData(_Vo3fFvvroxYzfCOI5F4PqiMr0Gb);
-		Texture2D texture2D = new Texture2D(base.Game._2yepMkVENnecIsduggABaU2qhXW, 25, 250, mipMap: false, SurfaceFormat.Color);
+		Texture2D texture2D = new Texture2D(base.Game.GLES, 25, 250, mipMap: false, SurfaceFormat.Color);
 		int[] array = new int[texture2D.Width * texture2D.Height];
 		for (int k = 0; k < texture2D.Height; k++)
 		{
@@ -1184,40 +1182,40 @@ public class PlayerCustomizationScene : AbstractScene
 		Gui.Renderer.SetTexture("ColorPickerSlider", texture2D);
 		Action _XDKgJpkUD4lIN2K7ysMOtqO5gMA = delegate
 		{
-			_OWUGVcx9djtc19hjFfxkac019iL.Position = new Squid.Point(13 + (int)(_46o2iZ9juR1nNURyrP41h9vxpGA * 250f), 35 + (int)(250f - _xX4CfdHl6arem4v3fUgbDUIK2gM * 250f));
-			_wbSWz1LplcReMBnbKlnmd0UzxRP.Position = new Squid.Point(266, 35 + (int)(250f - 250f * (_kyexzK2VL0y9etRuX79HInHIsIb / 360f)));
-			_G6zJYvyBSALAHUJm6qCEvtL6WRp.Color = ColorInt.ARGB(_9ycmcfwZ9EbmXanrFe7pEfGAAUi.A, _9ycmcfwZ9EbmXanrFe7pEfGAAUi.R, _9ycmcfwZ9EbmXanrFe7pEfGAAUi.G, _9ycmcfwZ9EbmXanrFe7pEfGAAUi.B);
-			_8vFoRw3vIHPno8g3WIeCBRRueVP.Text = ((int)_kyexzK2VL0y9etRuX79HInHIsIb).ToString();
-			_hOIb3XNfIEDsngLrYzmNfLTPVAS.Text = ((int)(_46o2iZ9juR1nNURyrP41h9vxpGA * 100f)).ToString();
-			_gY2uTDE0FADy52ltQdJ1AO9nRcf.Text = ((int)(_xX4CfdHl6arem4v3fUgbDUIK2gM * 100f)).ToString();
-			_qCKGqUjXlMolAESPmB7a59OrelQ.Text = _9ycmcfwZ9EbmXanrFe7pEfGAAUi.R.ToString();
-			_ZP3psbb9CVMMjGn5SgszZo0zGpF.Text = _9ycmcfwZ9EbmXanrFe7pEfGAAUi.G.ToString();
-			_E3KHmDW9haZynE9ZamZBVdveWgk.Text = _9ycmcfwZ9EbmXanrFe7pEfGAAUi.B.ToString();
-			_8lboaaRLcpJoVxfwF1kBCisgrjL.Text = $"#{_9ycmcfwZ9EbmXanrFe7pEfGAAUi.R:X2}{_9ycmcfwZ9EbmXanrFe7pEfGAAUi.G:X2}{_9ycmcfwZ9EbmXanrFe7pEfGAAUi.B:X2}";
+			image4.Position = new Squid.Point(13 + (int)(_46o2iZ9juR1nNURyrP41h9vxpGA * 250f), 35 + (int)(250f - _xX4CfdHl6arem4v3fUgbDUIK2gM * 250f));
+			image5.Position = new Squid.Point(266, 35 + (int)(250f - 250f * (_kyexzK2VL0y9etRuX79HInHIsIb / 360f)));
+			image3.Color = ColorInt.ARGB(color3.A, color3.R, color3.G, color3.B);
+			text.Text = ((int)_kyexzK2VL0y9etRuX79HInHIsIb).ToString();
+			text3.Text = ((int)(_46o2iZ9juR1nNURyrP41h9vxpGA * 100f)).ToString();
+			text5.Text = ((int)(_xX4CfdHl6arem4v3fUgbDUIK2gM * 100f)).ToString();
+			text2.Text = color3.R.ToString();
+			text4.Text = color3.G.ToString();
+			text6.Text = color3.B.ToString();
+			text7.Text = $"#{color3.R:X2}{color3.G:X2}{color3.B:X2}";
 		};
 		_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		bool _a7vdsaGCzLloXi7sntZm1rCdbZK = false;
 		bool _FxCuMzbCIAsYKlL8DmmchjsMpir = false;
-		_UI1mLnvMX5jk5cl6WgxFoVZi1ne.Update += delegate
+		image.Update += delegate
 		{
 			if (!_FxCuMzbCIAsYKlL8DmmchjsMpir)
 			{
-				if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+				if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 				{
-					if (!_a7vdsaGCzLloXi7sntZm1rCdbZK && Gui.MousePosition.x >= _UI1mLnvMX5jk5cl6WgxFoVZi1ne.Location.x && Gui.MousePosition.x <= _UI1mLnvMX5jk5cl6WgxFoVZi1ne.Location.x + _UI1mLnvMX5jk5cl6WgxFoVZi1ne.Size.x && Gui.MousePosition.y >= _UI1mLnvMX5jk5cl6WgxFoVZi1ne.Location.y && Gui.MousePosition.y <= _UI1mLnvMX5jk5cl6WgxFoVZi1ne.Location.y + _UI1mLnvMX5jk5cl6WgxFoVZi1ne.Size.y)
+					if (!_a7vdsaGCzLloXi7sntZm1rCdbZK && Gui.MousePosition.x >= image.Location.x && Gui.MousePosition.x <= image.Location.x + image.Size.x && Gui.MousePosition.y >= image.Location.y && Gui.MousePosition.y <= image.Location.y + image.Size.y)
 					{
 						_a7vdsaGCzLloXi7sntZm1rCdbZK = true;
 					}
 					if (_a7vdsaGCzLloXi7sntZm1rCdbZK)
 					{
-						Squid.Point point2 = Gui.MousePosition - _UI1mLnvMX5jk5cl6WgxFoVZi1ne.Location;
+						Squid.Point point2 = Gui.MousePosition - image.Location;
 						point2.x = (int)MathHelper.Clamp(point2.x, 0f, 250f);
 						point2.y = (int)MathHelper.Clamp(point2.y, 0f, 250f);
 						_46o2iZ9juR1nNURyrP41h9vxpGA = (float)point2.x / 250f;
 						_xX4CfdHl6arem4v3fUgbDUIK2gM = (250f - (float)point2.y) / 250f;
-						_9ycmcfwZ9EbmXanrFe7pEfGAAUi = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
+						color3 = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
 						_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
-						action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+						action_0(color3);
 					}
 				}
 				else
@@ -1226,19 +1224,19 @@ public class PlayerCustomizationScene : AbstractScene
 				}
 			}
 		};
-		_nTvWggfVqVEF25GV4NOsfpNhR4C.Update += delegate
+		image2.Update += delegate
 		{
 			if (!_a7vdsaGCzLloXi7sntZm1rCdbZK)
 			{
-				if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+				if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 				{
-					if (!_FxCuMzbCIAsYKlL8DmmchjsMpir && Gui.MousePosition.x >= _nTvWggfVqVEF25GV4NOsfpNhR4C.Location.x && Gui.MousePosition.x <= _nTvWggfVqVEF25GV4NOsfpNhR4C.Location.x + _nTvWggfVqVEF25GV4NOsfpNhR4C.Size.x && Gui.MousePosition.y >= _nTvWggfVqVEF25GV4NOsfpNhR4C.Location.y && Gui.MousePosition.y <= _nTvWggfVqVEF25GV4NOsfpNhR4C.Location.y + _nTvWggfVqVEF25GV4NOsfpNhR4C.Size.y)
+					if (!_FxCuMzbCIAsYKlL8DmmchjsMpir && Gui.MousePosition.x >= image2.Location.x && Gui.MousePosition.x <= image2.Location.x + image2.Size.x && Gui.MousePosition.y >= image2.Location.y && Gui.MousePosition.y <= image2.Location.y + image2.Size.y)
 					{
 						_FxCuMzbCIAsYKlL8DmmchjsMpir = true;
 					}
 					if (_FxCuMzbCIAsYKlL8DmmchjsMpir)
 					{
-						Squid.Point point = Gui.MousePosition - _nTvWggfVqVEF25GV4NOsfpNhR4C.Location;
+						Squid.Point point = Gui.MousePosition - image2.Location;
 						point.y = (int)MathHelper.Clamp(point.y, 0f, 250f);
 						_kyexzK2VL0y9etRuX79HInHIsIb = 360f - (float)point.y / 250f * 360f;
 						for (int m = 0; m < _3PAjrCP0TE07YQ22X6EIpPwOlib.Height; m++)
@@ -1250,9 +1248,9 @@ public class PlayerCustomizationScene : AbstractScene
 							}
 						}
 						_3PAjrCP0TE07YQ22X6EIpPwOlib.SetData(_Vo3fFvvroxYzfCOI5F4PqiMr0Gb);
-						_9ycmcfwZ9EbmXanrFe7pEfGAAUi = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
+						color3 = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
 						_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
-						action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+						action_0(color3);
 					}
 				}
 				else
@@ -1261,78 +1259,78 @@ public class PlayerCustomizationScene : AbstractScene
 				}
 			}
 		};
-		_8vFoRw3vIHPno8g3WIeCBRRueVP.TextCommit += delegate
+		text.TextCommit += delegate
 		{
-			if (int.TryParse(_8vFoRw3vIHPno8g3WIeCBRRueVP.Text, out var result6))
+			if (int.TryParse(text.Text, out var result6))
 			{
 				_kyexzK2VL0y9etRuX79HInHIsIb = Math.Max(0, Math.Min(result6, 360));
-				_9ycmcfwZ9EbmXanrFe7pEfGAAUi = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
-				action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+				color3 = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
+				action_0(color3);
 			}
 			_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		};
-		_hOIb3XNfIEDsngLrYzmNfLTPVAS.TextCommit += delegate
+		text3.TextCommit += delegate
 		{
-			if (int.TryParse(_hOIb3XNfIEDsngLrYzmNfLTPVAS.Text, out var result5))
+			if (int.TryParse(text3.Text, out var result5))
 			{
 				_46o2iZ9juR1nNURyrP41h9vxpGA = (float)Math.Max(0, Math.Min(result5, 100)) / 100f;
-				_9ycmcfwZ9EbmXanrFe7pEfGAAUi = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
-				action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+				color3 = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
+				action_0(color3);
 			}
 			_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		};
-		_gY2uTDE0FADy52ltQdJ1AO9nRcf.TextCommit += delegate
+		text5.TextCommit += delegate
 		{
-			if (int.TryParse(_gY2uTDE0FADy52ltQdJ1AO9nRcf.Text, out var result4))
+			if (int.TryParse(text5.Text, out var result4))
 			{
 				_xX4CfdHl6arem4v3fUgbDUIK2gM = (float)Math.Max(0, Math.Min(result4, 100)) / 100f;
-				_9ycmcfwZ9EbmXanrFe7pEfGAAUi = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
-				action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+				color3 = _lAdyiyyWQrRKWYduTPacHqdzOmj(_kyexzK2VL0y9etRuX79HInHIsIb, _46o2iZ9juR1nNURyrP41h9vxpGA, _xX4CfdHl6arem4v3fUgbDUIK2gM, 1f);
+				action_0(color3);
 			}
 			_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		};
-		_qCKGqUjXlMolAESPmB7a59OrelQ.TextCommit += delegate
+		text2.TextCommit += delegate
 		{
-			if (int.TryParse(_qCKGqUjXlMolAESPmB7a59OrelQ.Text, out var result3))
+			if (int.TryParse(text2.Text, out var result3))
 			{
-				_9ycmcfwZ9EbmXanrFe7pEfGAAUi.R = (byte)Math.Max(0, Math.Min(result3, 255));
-				_fA3AcauqZZ0ncWKv9QA3iklruOI(_9ycmcfwZ9EbmXanrFe7pEfGAAUi, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
-				action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+				color3.R = (byte)Math.Max(0, Math.Min(result3, 255));
+				_fA3AcauqZZ0ncWKv9QA3iklruOI(color3, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
+				action_0(color3);
 			}
 			_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		};
-		_ZP3psbb9CVMMjGn5SgszZo0zGpF.TextCommit += delegate
+		text4.TextCommit += delegate
 		{
-			if (int.TryParse(_ZP3psbb9CVMMjGn5SgszZo0zGpF.Text, out var result2))
+			if (int.TryParse(text4.Text, out var result2))
 			{
-				_9ycmcfwZ9EbmXanrFe7pEfGAAUi.G = (byte)Math.Max(0, Math.Min(result2, 255));
-				_fA3AcauqZZ0ncWKv9QA3iklruOI(_9ycmcfwZ9EbmXanrFe7pEfGAAUi, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
-				action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+				color3.G = (byte)Math.Max(0, Math.Min(result2, 255));
+				_fA3AcauqZZ0ncWKv9QA3iklruOI(color3, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
+				action_0(color3);
 			}
 			_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		};
-		_E3KHmDW9haZynE9ZamZBVdveWgk.TextCommit += delegate
+		text6.TextCommit += delegate
 		{
-			if (int.TryParse(_E3KHmDW9haZynE9ZamZBVdveWgk.Text, out var result))
+			if (int.TryParse(text6.Text, out var result))
 			{
-				_9ycmcfwZ9EbmXanrFe7pEfGAAUi.B = (byte)Math.Max(0, Math.Min(result, 255));
-				_fA3AcauqZZ0ncWKv9QA3iklruOI(_9ycmcfwZ9EbmXanrFe7pEfGAAUi, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
-				action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+				color3.B = (byte)Math.Max(0, Math.Min(result, 255));
+				_fA3AcauqZZ0ncWKv9QA3iklruOI(color3, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
+				action_0(color3);
 			}
 			_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		};
-		_8lboaaRLcpJoVxfwF1kBCisgrjL.TextCommit += delegate
+		text7.TextCommit += delegate
 		{
-			if (_8lboaaRLcpJoVxfwF1kBCisgrjL.Text.StartsWith("#") && _8lboaaRLcpJoVxfwF1kBCisgrjL.Text.Length <= 7)
+			if (text7.Text.StartsWith("#") && text7.Text.Length <= 7)
 			{
 				try
 				{
-					int num = Convert.ToInt32(_8lboaaRLcpJoVxfwF1kBCisgrjL.Text.Substring(1), 16);
-					_9ycmcfwZ9EbmXanrFe7pEfGAAUi.B = (byte)((uint)num & 0xFFu);
-					_9ycmcfwZ9EbmXanrFe7pEfGAAUi.G = (byte)((uint)(num >> 8) & 0xFFu);
-					_9ycmcfwZ9EbmXanrFe7pEfGAAUi.R = (byte)((uint)(num >> 16) & 0xFFu);
-					_fA3AcauqZZ0ncWKv9QA3iklruOI(_9ycmcfwZ9EbmXanrFe7pEfGAAUi, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
-					action_0(_9ycmcfwZ9EbmXanrFe7pEfGAAUi);
+					int num = Convert.ToInt32(text7.Text.Substring(1), 16);
+					color3.B = (byte)((uint)num & 0xFFu);
+					color3.G = (byte)((uint)(num >> 8) & 0xFFu);
+					color3.R = (byte)((uint)(num >> 16) & 0xFFu);
+					_fA3AcauqZZ0ncWKv9QA3iklruOI(color3, out _kyexzK2VL0y9etRuX79HInHIsIb, out _46o2iZ9juR1nNURyrP41h9vxpGA, out _xX4CfdHl6arem4v3fUgbDUIK2gM);
+					action_0(color3);
 				}
 				catch
 				{
@@ -1340,12 +1338,12 @@ public class PlayerCustomizationScene : AbstractScene
 			}
 			_XDKgJpkUD4lIN2K7ysMOtqO5gMA();
 		};
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Update += delegate
+		pickerWindow.Update += delegate
 		{
-			if (base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(Microsoft.Xna.Framework.Input.Keys.Escape))
+			if (base.Game.Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.Escape))
 			{
-				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-				_hSPLyBveOIKpCKgimgpgcMUDdRz = null;
+				pickerWindow.Close();
+				_colorPicker = null;
 			}
 		};
 	}
@@ -1386,16 +1384,16 @@ public class PlayerCustomizationScene : AbstractScene
 		float_2 = num3 / 255f;
 	}
 
-	private static Color _lAdyiyyWQrRKWYduTPacHqdzOmj(double double_0, double double_1, double double_2, float float_0)
+	private static Color _lAdyiyyWQrRKWYduTPacHqdzOmj(double double_0, double double_1, double double_2, float a)
 	{
-		double num;
-		double num2;
-		double num3;
+		double r;
+		double g;
+		double b;
 		if (double_1 <= 0.0)
 		{
-			num = double_2;
-			num2 = double_2;
-			num3 = double_2;
+			r = double_2;
+			g = double_2;
+			b = double_2;
 		}
 		else
 		{
@@ -1407,38 +1405,38 @@ public class PlayerCustomizationScene : AbstractScene
 			double num8 = double_2 * (1.0 - double_1 * (1.0 - num5));
 			switch (num4)
 			{
-			default:
-				num = double_2;
-				num2 = num6;
-				num3 = num7;
-				break;
-			case 0:
-				num = double_2;
-				num2 = num8;
-				num3 = num6;
-				break;
-			case 1:
-				num = num7;
-				num2 = double_2;
-				num3 = num6;
-				break;
-			case 2:
-				num = num6;
-				num2 = double_2;
-				num3 = num8;
-				break;
-			case 3:
-				num = num6;
-				num2 = num7;
-				num3 = double_2;
-				break;
-			case 4:
-				num = num8;
-				num2 = num6;
-				num3 = double_2;
-				break;
+				default:
+					r = double_2;
+					g = num6;
+					b = num7;
+					break;
+				case 0:
+					r = double_2;
+					g = num8;
+					b = num6;
+					break;
+				case 1:
+					r = num7;
+					g = double_2;
+					b = num6;
+					break;
+				case 2:
+					r = num6;
+					g = double_2;
+					b = num8;
+					break;
+				case 3:
+					r = num6;
+					g = num7;
+					b = double_2;
+					break;
+				case 4:
+					r = num8;
+					g = num6;
+					b = double_2;
+					break;
 			}
 		}
-		return new Color((float)num, (float)num2, (float)num3, float_0);
+		return new Color((float)r, (float)g, (float)b, a);
 	}
 }

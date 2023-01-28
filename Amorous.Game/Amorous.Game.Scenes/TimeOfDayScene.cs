@@ -18,7 +18,7 @@ public abstract class TimeOfDayScene : AbstractScene
 		_TyX29AlEBF2URt0abU6bc2VBQvm = new _G2GbwTTqXkVDMUL6fDmljsAPB4s(game);
 	}
 
-	public override void StopCutscene()
+	public override void Begin()
 	{
 		SetVariant(VariantDay);
 	}
@@ -29,20 +29,20 @@ public abstract class TimeOfDayScene : AbstractScene
 		switch (daytime)
 		{
 			case VariantSunset:
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Sunset;
+				Clocks.InRealTime = false;
+				Clocks.Time = TimeOfDay.Sunset;
 				break;
 			case VariantDay:
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Day;
+				Clocks.InRealTime = false;
+				Clocks.Time = TimeOfDay.Day;
 				break;
 			case VariantMorning:
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Morning;
+				Clocks.InRealTime = false;
+				Clocks.Time = TimeOfDay.Morning;
 				break;
 			case VariantNight:
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz._3DInasj5B11bCcV5BIRvLE1Ay7w = false;
-				_5Anqe6GAAkzemoAXYpJmgMlk1yz.time = TimeOfDay.Night;
+				Clocks.InRealTime = false;
+				Clocks.Time = TimeOfDay.Night;
 				break;
 		}
 	}
@@ -53,9 +53,9 @@ public abstract class TimeOfDayScene : AbstractScene
 		base.Update(gameTime);
 	}
 
-	public override void Render(SpriteBatch spriteBatch)
+	public override void DrawOverlay(SpriteBatch spriteBatch)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm.Draw(spriteBatch, base.Game._vsceSzSIjBy2nZrCxAzKZbUiwLq);
-		base.Render(spriteBatch);
+		_TyX29AlEBF2URt0abU6bc2VBQvm.Draw(spriteBatch, base.Game.Mouse);
+		base.DrawOverlay(spriteBatch);
 	}
 }

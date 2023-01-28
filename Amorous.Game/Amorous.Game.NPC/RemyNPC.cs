@@ -35,11 +35,10 @@ public class RemyNPC : SpineNPC<RemyNPC.EHeads, RemyNPC.EPoses, RemyNPC.EClothes
 	}
 
 	public static string Name = "Remy";
-
 	public static Color Color = new Color(255, 102, 51);
 
 	public RemyNPC(IAmorous game)
-		: base(game, "Assets/NPC/Remy/Remy", 0.75f, bool_0: true)
+		: base(game, "Assets/NPC/Remy/Remy", 0.75f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		string[] first = new string[5] { "Fringe", "Ponytail", "Ear left", "Ear right", "Eyes back" };

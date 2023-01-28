@@ -6,11 +6,11 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
-public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
+public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : SpineDrawableLayer
 {
 	private readonly SpineRenderer _9kpyWj69TJrEE13VPDWRIsYgsND;
 
-	public override float _WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc
+	public override float OffsetX
 	{
 		get
 		{
@@ -22,7 +22,7 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 		}
 	}
 
-	public override float _WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY
+	public override float OffsetY
 	{
 		get
 		{
@@ -38,23 +38,23 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 		: base(scene, "Pool Water")
 	{
 		_jOXcj4HBkU5j6LOJprpiXLCcLR0 _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = this;
-		RenderTarget2D _YazjYDLENT6HQ0JTluCcQMsqZaB = new RenderTarget2D(base.Scene.Game._2yepMkVENnecIsduggABaU2qhXW, rectangle_0.Width, rectangle_0.Height);
+		RenderTarget2D _YazjYDLENT6HQ0JTluCcQMsqZaB = new RenderTarget2D(base.Scene.Game.GLES, rectangle_0.Width, rectangle_0.Height);
 		Effect _2e92rEtSCXO9jXcjI77aTgE9ZBq = base.Scene.Game.Content.Load<Effect>("Assets/Shaders/SpinePool");
 		Texture2D _0NizriMRCkKJuXStgvnNKe6Lo4y = base.Scene.Game.Content.Load<Texture2D>("Assets/Scenes/ClubPool/Wave Mask");
-		base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime gameTime)
+		base.OnUpdate = delegate(GameTime gameTime)
 		{
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND.Update(gameTime);
 		};
-		base._Wb2e00OWt8kBwGWEXtOGMVScRPm = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
+		base.OnSpineDraw = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 		{
-			RenderTargetBinding[] renderTargets = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game._2yepMkVENnecIsduggABaU2qhXW.GetRenderTargets();
-			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game._2yepMkVENnecIsduggABaU2qhXW.SetRenderTarget(_YazjYDLENT6HQ0JTluCcQMsqZaB);
-			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game._2yepMkVENnecIsduggABaU2qhXW.Clear(Color.Transparent);
+			RenderTargetBinding[] renderTargets = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game.GLES.GetRenderTargets();
+			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game.GLES.SetRenderTarget(_YazjYDLENT6HQ0JTluCcQMsqZaB);
+			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game.GLES.Clear(Color.Transparent);
 			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._9kpyWj69TJrEE13VPDWRIsYgsND.Draw(skeletonMeshRenderer, null, null, null, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scale);
-			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game._2yepMkVENnecIsduggABaU2qhXW.SetRenderTargets(renderTargets);
+			_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Scene.Game.GLES.SetRenderTargets(renderTargets);
 			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
 			float num = float_0 + (float)_0NizriMRCkKJuXStgvnNKe6Lo4y.Height;
-			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["Time"].SetValue(_boyt8NIMtKsAGSTcjHeL0WMbFxs._AmIUCcrmrrQiiirja7DoiZSjXuv);
+			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["Time"].SetValue(Randoms.Time);
 			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["PoolSpeed"].SetValue(0.1f);
 			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["PoolOffset"].SetValue(0);
 			_2e92rEtSCXO9jXcjI77aTgE9ZBq.Parameters["MaskTexture"].SetValue(_0NizriMRCkKJuXStgvnNKe6Lo4y);
@@ -65,7 +65,7 @@ public class _jOXcj4HBkU5j6LOJprpiXLCcLR0 : _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 			spriteBatch.Draw(_YazjYDLENT6HQ0JTluCcQMsqZaB, new Vector2(rectangle_0.X, rectangle_0.Y), Color.White);
 			spriteBatch.End();
 		};
-		_9kpyWj69TJrEE13VPDWRIsYgsND = scene.Game.Content._7BVREQXEcBCieHb0qgaVDpUj1ni("Assets/Scenes/ClubPool/Club Pool water");
+		_9kpyWj69TJrEE13VPDWRIsYgsND = scene.Game.Content.LoadSkeleton("Assets/Scenes/ClubPool/Club Pool water");
 		_9kpyWj69TJrEE13VPDWRIsYgsND.X = 0f;
 		_9kpyWj69TJrEE13VPDWRIsYgsND.Y = 0f;
 		_9kpyWj69TJrEE13VPDWRIsYgsND.StartAnimationWithLooping("animation");

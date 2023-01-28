@@ -32,7 +32,7 @@ public class ZenithSexscene : CensoredSexscene
 	};
 
 	public ZenithSexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.3f : 1f, bool_0: true, float_1: 3000f)
+		: base(content, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.3f : 1f, bool_0: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (!Censorship.Censored)

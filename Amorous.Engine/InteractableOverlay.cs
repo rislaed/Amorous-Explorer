@@ -4,19 +4,17 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Squid;
 
-public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
+public class InteractableOverlay
 {
 	public IAmorous Game { get; private set; }
-
 	public List<_1dTaaW9MQWoHm2Pqblg0u9bPhpe> _6qfro4buoEQEXNMVAj08xANyjWf { get; private set; }
+	public bool Touchable { get; set; }
 
-	public bool _nJKYvZJ57vjjlQwmoeBmKihtS0b { get; set; }
-
-	public _8lVOgkauaSHbAkAqHzI1K7mIyOI(IAmorous amorous)
+	public InteractableOverlay(IAmorous amorous)
 	{
 		Game = amorous;
 		_6qfro4buoEQEXNMVAj08xANyjWf = new List<_1dTaaW9MQWoHm2Pqblg0u9bPhpe>();
-		_nJKYvZJ57vjjlQwmoeBmKihtS0b = true;
+		Touchable = true;
 	}
 
 	public _d4ad1i8rcZMvfN9iaxggA1KtVgx _aiunwWjasFcF9afjl2FnUxWXB0M(string string_0, string string_1, int int_0, int int_1, Microsoft.Xna.Framework.Rectangle rectangle_0, Action action_0)
@@ -81,11 +79,11 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 
 	public void Update(GameTime gameTime)
 	{
-		if (!_nJKYvZJ57vjjlQwmoeBmKihtS0b)
+		if (!Touchable)
 		{
 			return;
 		}
-		Microsoft.Xna.Framework.Point value = Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._u7uCdK9i8FnWhiaPn2bO2wIgUUuA(Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b);
+		Microsoft.Xna.Framework.Point value = Game.Mouse.Rescale(Game.Controller.Cursor);
 		foreach (_1dTaaW9MQWoHm2Pqblg0u9bPhpe item in _6qfro4buoEQEXNMVAj08xANyjWf)
 		{
 			if (item.Visible)
@@ -101,7 +99,7 @@ public class _8lVOgkauaSHbAkAqHzI1K7mIyOI
 				}
 			}
 		}
-		if (!Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._fy5ebLnmRsRXv9v7RKTFU5CGMaH(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+		if (!Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 		{
 			return;
 		}

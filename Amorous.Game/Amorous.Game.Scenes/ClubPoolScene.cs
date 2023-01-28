@@ -10,7 +10,7 @@ namespace Amorous.Game.Scenes;
 
 public class ClubPoolScene : AbstractScene
 {
-	private class FrameAnimationLayer : _fAUddQEKfZyemRb327NhM3GGlmzA
+	private class FrameAnimationLayer : DrawableLayer
 	{
 		private readonly Texture2D _animationTexture;
 
@@ -40,11 +40,11 @@ public class ClubPoolScene : AbstractScene
 			_sourceRectangle = new Rectangle(0, 0, (int)((float)_animationTexture.Width / (float)int_0), _animationTexture.Height);
 			_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * float_1), (int)((float)_sourceRectangle.Height * float_1));
 			_origin = new Vector2(int_1, int_2);
-			base._NC5P3SKqKPpcAYG1mqquUEcUzTg = delegate(GameTime time)
+			base.OnUpdate = delegate(GameTime time)
 			{
 				MyUpdate((float)time.ElapsedGameTime.Milliseconds / 1000f);
 			};
-			base._B6VrMlmWofCGqEzjzgFJiAliCge = MyDraw;
+			base.OnDraw = MyDraw;
 		}
 
 		public void Play(int x, int y, int startFrame, float angle)
@@ -80,7 +80,7 @@ public class ClubPoolScene : AbstractScene
 		{
 			if (_currentFrame >= 0)
 			{
-				spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, base._3TrGrUra7cqeIXkbZOrfaoQaD5F);
+				spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, base.AdditionalMatrix);
 				spriteBatch.Draw(_animationTexture, _destinationRectangle, _sourceRectangle, Color.White, _angle, _origin, SpriteEffects.None, 0f);
 				spriteBatch.End();
 			}
@@ -98,8 +98,8 @@ public class ClubPoolScene : AbstractScene
 		AddClickableLayer("Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, OnDoorClick);
 		_lnXs1JfCeIBNCpFYs8XVRorc0h4 gparam_ = new _lnXs1JfCeIBNCpFYs8XVRorc0h4(this)
 		{
-			_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_GDeKFFD8Rxnpsjzy36lUBxAEopc = 1525f,
-			_WBXNT6eIVGk6ZKExRBJ6JxXE6zb_002E_JpSvHH1W0gFCpaNEH5zB1qsDJXY = 890f
+			OffsetX = 1525f,
+			OffsetY = 890f
 		};
 		AddLayer(gparam_, 2);
 		FrameAnimationLayer frameAnimationLayer = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
@@ -110,8 +110,8 @@ public class ClubPoolScene : AbstractScene
 		AddLayer(frameAnimationLayer2, 2);
 		AddForegroundTexturedLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
 		AddForegroundTexturedLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
-		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-1677, 1677, 0, 0);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
+		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-1677, 1677, 0, 0);
+		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showRemy = !data.GetBit("RemyLeftClub");
 		if (_showRemy)
@@ -122,71 +122,71 @@ public class ClubPoolScene : AbstractScene
 
 	public override void Start()
 	{
-		base.StopCutscene();
-		ClubPoolStaticANPC clubPoolStaticANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticANPC>(LayerOrder.Background);
+		base.Begin();
+		ClubPoolStaticANPC clubPoolStaticANPC = base.Game.GetNPCLayerAt<ClubPoolStaticANPC>(LayerOrder.Background);
 		clubPoolStaticANPC.X = -1400f;
 		clubPoolStaticANPC.Y = 910f;
-		ClubPoolStaticBNPC clubPoolStaticBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticBNPC>(LayerOrder.Background);
+		ClubPoolStaticBNPC clubPoolStaticBNPC = base.Game.GetNPCLayerAt<ClubPoolStaticBNPC>(LayerOrder.Background);
 		clubPoolStaticBNPC.X = -1401f;
 		clubPoolStaticBNPC.Y = 230f;
-		ClubPoolStaticENPC clubPoolStaticENPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticENPC>(LayerOrder.Background);
+		ClubPoolStaticENPC clubPoolStaticENPC = base.Game.GetNPCLayerAt<ClubPoolStaticENPC>(LayerOrder.Background);
 		clubPoolStaticENPC.X = 106f;
 		clubPoolStaticENPC.Y = 397f;
-		ClubPoolStaticCNPC clubPoolStaticCNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC>(LayerOrder.Foreground);
+		ClubPoolStaticCNPC clubPoolStaticCNPC = base.Game.GetNPCLayerAt<ClubPoolStaticCNPC>(LayerOrder.Foreground);
 		clubPoolStaticCNPC.X = -180f;
 		clubPoolStaticCNPC.Y = 450f;
-		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticCNPC2>(LayerOrder.Background);
+		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticCNPC2>(LayerOrder.Background);
 		clubPoolStaticCNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticCNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
 		clubPoolStaticCNPC2.X = clubPoolStaticCNPC.X;
 		clubPoolStaticCNPC2.Y = clubPoolStaticCNPC.Y;
-		ClubPoolStaticFNPC clubPoolStaticFNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticFNPC>(LayerOrder.Foreground);
+		ClubPoolStaticFNPC clubPoolStaticFNPC = base.Game.GetNPCLayerAt<ClubPoolStaticFNPC>(LayerOrder.Foreground);
 		clubPoolStaticFNPC.X = 500f;
 		clubPoolStaticFNPC.Y = 180f;
-		ClubPoolStaticGHINPC clubPoolStaticGHINPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC>(LayerOrder.Foreground);
+		ClubPoolStaticGHINPC clubPoolStaticGHINPC = base.Game.GetNPCLayerAt<ClubPoolStaticGHINPC>(LayerOrder.Foreground);
 		clubPoolStaticGHINPC.X = 370f;
 		clubPoolStaticGHINPC.Y = 450f;
-		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticGHINPC2>(LayerOrder.Background);
+		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticGHINPC2>(LayerOrder.Background);
 		clubPoolStaticGHINPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticGHINPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
 		clubPoolStaticGHINPC2.X = clubPoolStaticGHINPC.X;
 		clubPoolStaticGHINPC2.Y = clubPoolStaticGHINPC.Y;
-		ClubPoolStaticDNPC clubPoolStaticDNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC>(LayerOrder.Foreground);
+		ClubPoolStaticDNPC clubPoolStaticDNPC = base.Game.GetNPCLayerAt<ClubPoolStaticDNPC>(LayerOrder.Foreground);
 		clubPoolStaticDNPC.X = 50f;
 		clubPoolStaticDNPC.Y = 690f;
-		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticDNPC2>(LayerOrder.Background);
+		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticDNPC2>(LayerOrder.Background);
 		clubPoolStaticDNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticDNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
 		clubPoolStaticDNPC2.X = clubPoolStaticDNPC.X;
 		clubPoolStaticDNPC2.Y = clubPoolStaticDNPC.Y;
 		if (_showRemy)
 		{
-			_remy = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticRemyNPC>(LayerOrder.Foreground);
+			_remy = base.Game.GetNPCLayerAt<ClubStaticRemyNPC>(LayerOrder.Foreground);
 			_remy.X = 1010f;
 			_remy.Y = 150f;
 			_remy.Click = OnRemyClick;
 		}
-		ClubPoolStaticJKNPC clubPoolStaticJKNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC>(LayerOrder.Foreground);
+		ClubPoolStaticJKNPC clubPoolStaticJKNPC = base.Game.GetNPCLayerAt<ClubPoolStaticJKNPC>(LayerOrder.Foreground);
 		clubPoolStaticJKNPC.X = 1269f;
 		clubPoolStaticJKNPC.Y = 383f;
-		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticJKNPC2>(LayerOrder.Background);
+		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticJKNPC2>(LayerOrder.Background);
 		clubPoolStaticJKNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticJKNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
 		clubPoolStaticJKNPC2.X = clubPoolStaticJKNPC.X;
 		clubPoolStaticJKNPC2.Y = clubPoolStaticJKNPC.Y;
-		ClubPoolStaticLNPC clubPoolStaticLNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticLNPC>(LayerOrder.Background);
+		ClubPoolStaticLNPC clubPoolStaticLNPC = base.Game.GetNPCLayerAt<ClubPoolStaticLNPC>(LayerOrder.Background);
 		clubPoolStaticLNPC.X = 1630f;
 		clubPoolStaticLNPC.Y = 106f;
-		ClubPoolStaticMNPC clubPoolStaticMNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticMNPC>(LayerOrder.Background);
+		ClubPoolStaticMNPC clubPoolStaticMNPC = base.Game.GetNPCLayerAt<ClubPoolStaticMNPC>(LayerOrder.Background);
 		clubPoolStaticMNPC.X = 1879f;
 		clubPoolStaticMNPC.Y = 106f;
-		ClubPoolStaticNNPC clubPoolStaticNNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticNNPC>(LayerOrder.Background);
+		ClubPoolStaticNNPC clubPoolStaticNNPC = base.Game.GetNPCLayerAt<ClubPoolStaticNNPC>(LayerOrder.Background);
 		clubPoolStaticNNPC.X = 2039f;
 		clubPoolStaticNNPC.Y = 106f;
-		ClubPoolStaticOPNPC clubPoolStaticOPNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC>(LayerOrder.Foreground);
+		ClubPoolStaticOPNPC clubPoolStaticOPNPC = base.Game.GetNPCLayerAt<ClubPoolStaticOPNPC>(LayerOrder.Foreground);
 		clubPoolStaticOPNPC.X = 2223f;
 		clubPoolStaticOPNPC.Y = 442f;
-		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC2 = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticOPNPC2>(LayerOrder.Background);
+		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticOPNPC2>(LayerOrder.Background);
 		clubPoolStaticOPNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticOPNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
 		clubPoolStaticOPNPC2.X = clubPoolStaticOPNPC.X;
 		clubPoolStaticOPNPC2.Y = clubPoolStaticOPNPC.Y;
-		ClubPoolStaticQRNPC clubPoolStaticQRNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubPoolStaticQRNPC>(LayerOrder.Foreground);
+		ClubPoolStaticQRNPC clubPoolStaticQRNPC = base.Game.GetNPCLayerAt<ClubPoolStaticQRNPC>(LayerOrder.Foreground);
 		clubPoolStaticQRNPC.X = 2694f;
 		clubPoolStaticQRNPC.Y = 97f;
 	}
@@ -211,6 +211,6 @@ public class ClubPoolScene : AbstractScene
 
 	private void OnRemyClick()
 	{
-		base.Game.RequestScene("RemyPreDate");
+		base.Game.StartCutscene("RemyPreDate");
 	}
 }

@@ -5,10 +5,8 @@ using Squid;
 public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 {
 	private string _text;
-
-	private Vector2 Overlap;
-
-	private Vector2 AbsoluteLocation;
+	private Vector2 _overlap;
+	private Vector2 _absoluteLocation;
 
 	public SpriteFont Font { get; private set; }
 
@@ -23,11 +21,11 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 			_text = value;
 			if (string.IsNullOrEmpty(_text))
 			{
-				Overlap = Vector2.Zero;
+				_overlap = Vector2.Zero;
 			}
 			else
 			{
-				Overlap = Font.MeasureString(_text);
+				_overlap = Font.MeasureString(_text);
 			}
 		}
 	}
@@ -49,20 +47,20 @@ public class _abqs0UynzjUEhuA3VpR4t6Uuk0E : _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 		{
 			switch (Gravity)
 			{
-			case Alignment.MiddleRight:
-				AbsoluteLocation.X = (float)base.X - Overlap.X;
-				AbsoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
-				break;
-			default:
-				AbsoluteLocation.X = (float)base.X + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width - Overlap.X) / 2f;
-				AbsoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
-				break;
-			case Alignment.MiddleLeft:
-				AbsoluteLocation.X = base.X;
-				AbsoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - Overlap.Y) / 2f;
-				break;
+				case Alignment.MiddleRight:
+					_absoluteLocation.X = (float)base.X - _overlap.X;
+					_absoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - _overlap.Y) / 2f;
+					break;
+				default:
+					_absoluteLocation.X = (float)base.X + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width - _overlap.X) / 2f;
+					_absoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - _overlap.Y) / 2f;
+					break;
+				case Alignment.MiddleLeft:
+					_absoluteLocation.X = base.X;
+					_absoluteLocation.Y = (float)base.Y + ((float)_2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - _overlap.Y) / 2f;
+					break;
 			}
-			spriteBatch.DrawString(Font, Text, AbsoluteLocation, Color);
+			spriteBatch.DrawString(Font, Text, _absoluteLocation, Color);
 		}
 	}
 }

@@ -742,7 +742,7 @@ public static class SquidUtils
 		}
 	}
 
-	public static void ShowConfirm(this Desktop desktop_0, string string_0, int int_0, string string_1 = "OK", Action action_0 = null)
+	public static void ShowConfirm(this Desktop desktop_0, string string_0, int int_0, string string_1 = "OK", Action confirm = null)
 	{
 		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
 		{
@@ -772,16 +772,16 @@ public static class SquidUtils
 		button.MouseClick += delegate
 		{
 			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-			if (action_0 != null)
+			if (confirm != null)
 			{
-				action_0();
+				confirm();
 			}
 		};
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(button);
 		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
 	}
 
-	public static void ShowSelection(this Desktop desktop_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
+	public static void ShowSelection(this Desktop desktop_0, string string_0, string[] string_1, int int_0, Action<int> select)
 	{
 		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
 		{
@@ -816,7 +816,7 @@ public static class SquidUtils
 			{
 				int obj = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
 				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-				action_0(obj);
+				select(obj);
 			};
 			_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(button);
 		}

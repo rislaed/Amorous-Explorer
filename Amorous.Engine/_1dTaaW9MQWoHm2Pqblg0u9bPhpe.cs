@@ -4,9 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 public abstract class _1dTaaW9MQWoHm2Pqblg0u9bPhpe
 {
 	public Vector2 Location;
-
 	public Color Color;
-
 	public Rectangle _2psWLw4AI8EIjQzaXnhGg8M1FnaA;
 
 	public int X

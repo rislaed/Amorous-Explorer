@@ -30,7 +30,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 	private int _wBWHhq9jY0K2NLTqM11LsE4yDM;
 	private int _kpLvTY6XXVX762n2WA2bxMWl8eL;
 
-	private readonly JsonSerializerSettings _ONuPEFW55mKuOlkBaBx5Jvmw3gO = new JsonSerializerSettings
+	private readonly JsonSerializerSettings ExtendedSerializers = new JsonSerializerSettings
 	{
 		TypeNameHandling = TypeNameHandling.Auto,
 		Converters = { (JsonConverter)new ColorJsonConverter() }
@@ -79,10 +79,10 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 	public CustomizablePlayerSkin(IAmorous game)
 		: base(game)
 	{
-		string value = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/Customization.json"));
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<_oVHccpskJmMcOYan50N52Esmi8k>(value, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
-		value = _K2047A8SCJdaw0LZKStEHOiH110._GxOfTBefEUfWKWaWgxVRKsjugxE(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/DefaultTemplates.json"));
-		_Q0ZahtTsyov6ogSphMEhTo0NJfz q0ZahtTsyov6ogSphMEhTo0NJfz = JsonConvert.DeserializeObject<_Q0ZahtTsyov6ogSphMEhTo0NJfz>(value, _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+		string value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/Customization.json"));
+		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<_oVHccpskJmMcOYan50N52Esmi8k>(value, ExtendedSerializers);
+		value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/DefaultTemplates.json"));
+		_Q0ZahtTsyov6ogSphMEhTo0NJfz q0ZahtTsyov6ogSphMEhTo0NJfz = JsonConvert.DeserializeObject<_Q0ZahtTsyov6ogSphMEhTo0NJfz>(value, ExtendedSerializers);
 		_HnbIDkSG3bmzUQyE7hhFdFKUaCcA.AddRange(q0ZahtTsyov6ogSphMEhTo0NJfz.Templates);
 		_NTp4LybfIeImwrI3gGcIHmtkkDF();
 		_i8C0PwO83NRzGvNoyMhHwLV9HeC = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
@@ -102,7 +102,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 
 	public PlayerConfiguration _aeTnyiKZSEemnK3AXL8to8blcUj(PlayerConfiguration _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
 	{
-		return JsonConvert.DeserializeObject<PlayerConfiguration>(JsonConvert.SerializeObject(_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, _ONuPEFW55mKuOlkBaBx5Jvmw3gO), _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+		return JsonConvert.DeserializeObject<PlayerConfiguration>(JsonConvert.SerializeObject(_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, ExtendedSerializers), ExtendedSerializers);
 	}
 
 	public void _0S3oMrwxDtOTcbzkglSllPfRq53(string string_0, PlayerData data)
@@ -171,14 +171,14 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		{
 			Directory.CreateDirectory(_U8RMOUb18ulpoDDaA6ORCGlTl9P);
 		}
-		File.WriteAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o, JsonConvert.SerializeObject(_hFBs7DhxsNnkc55oFfnyfMJ6PKb, _ONuPEFW55mKuOlkBaBx5Jvmw3gO));
+		File.WriteAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o, JsonConvert.SerializeObject(_hFBs7DhxsNnkc55oFfnyfMJ6PKb, ExtendedSerializers));
 	}
 
 	private void _NTp4LybfIeImwrI3gGcIHmtkkDF()
 	{
 		if (File.Exists(_yMVbZb1CBoa3bnnWLWCSnPFoK4o))
 		{
-			List<PlayerConfiguration> list = JsonConvert.DeserializeObject<List<PlayerConfiguration>>(File.ReadAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o), _ONuPEFW55mKuOlkBaBx5Jvmw3gO);
+			List<PlayerConfiguration> list = JsonConvert.DeserializeObject<List<PlayerConfiguration>>(File.ReadAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o), ExtendedSerializers);
 			if (list != null)
 			{
 				_hFBs7DhxsNnkc55oFfnyfMJ6PKb = list;
@@ -403,10 +403,10 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 
 	public override void Update(GameTime gameTime)
 	{
-		int y = base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._U7CeYBJ1v1SoUxpX8emsQ9mWl5b.Y;
+		int y = base.Game.Controller.Cursor.Y;
 		if (_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E <= 0)
 		{
-			if (_vZ6v4a6UcXrp8I7fOK5GurTGvwg && base.Game._RbWJ7YGnYHCSoD44MRW1h5X6E7E._WZ4xYI5Q3hoCNX9QFzE3jfDwZBJ(_PMeRYZJaBCqgB9uADJFP3c14lxq.LeftButton))
+			if (_vZ6v4a6UcXrp8I7fOK5GurTGvwg && base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				int num = y - _fqUhMheAq3WxPgLgXhgAKkZQOss;
 				if (num != 0)

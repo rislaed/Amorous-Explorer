@@ -18,7 +18,7 @@ public class CoffeeShopScene : AbstractScene
 		BackgroundSeth = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
 		BackgroundNone = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
 		SetVariant(VariantNone);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
 	}
 
 	public override void SetVariant(string variant)

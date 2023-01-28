@@ -25,8 +25,8 @@ public class ClubBackScene : AbstractScene
 		AddClickableLayer("Door", "Assets/Scenes/ClubBack/Door to lounge selectable", -217, 120, OnDoorClick);
 		AddClickableLayer("Side", "Assets/Scenes/ClubBack/Front of Club Selectable", 608, 0, OnClubFrontClick);
 		AddDeviationLayer("Fan", "Assets/Scenes/ClubBack/Fan", 524, 75, 10f, 68, 75);
-		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._wFfc7xL7eKxed7i9gWtao7pgsnm(-535, 535, 0, 0);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
+		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-535, 535, 0, 0);
+		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showLex = !data.GetBit("LexLeftClub");
 	}
@@ -35,7 +35,7 @@ public class ClubBackScene : AbstractScene
 	{
 		if (_showLex)
 		{
-			_lex = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticLexNPC>(LayerOrder.Foreground);
+			_lex = base.Game.GetNPCLayerAt<ClubStaticLexNPC>(LayerOrder.Foreground);
 			_lex.X = -535f;
 			_lex.Y = 250f;
 			_lex.Click = OnLexClick;
@@ -54,6 +54,6 @@ public class ClubBackScene : AbstractScene
 
 	private void OnLexClick()
 	{
-		base.Game.RequestScene("LexPreDate");
+		base.Game.StartCutscene("LexPreDate");
 	}
 }

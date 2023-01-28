@@ -35,11 +35,10 @@ public class MercyNPC : SpineNPC<MercyNPC.EHeads, MercyNPC.EPoses, MercyNPC.EClo
 	}
 
 	public static string Name = "Mercy";
-
 	public static Color Color = new Color(172, 135, 255);
 
 	public MercyNPC(IAmorous game)
-		: base(game, "Assets/NPC/Mercy/Mercy", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Mercy/Mercy", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		string[] first = new string[7] { "Pupils", "Eyeback", "Hair back", "Hairlock left", "Fringe", "Horn", "Horn tip" };

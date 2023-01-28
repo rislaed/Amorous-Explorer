@@ -30,11 +30,10 @@ public class SethNPC : SpineNPC<SethNPC.EHeads, SethNPC.EPoses, SethNPC.EClothes
 	}
 
 	public static string Name = "Seth";
-
 	public static Color Color = new Color(176, 255, 83);
 
 	public SethNPC(IAmorous game)
-		: base(game, "Assets/NPC/Seth/Seth", 1f, bool_0: true)
+		: base(game, "Assets/NPC/Seth/Seth", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Idle");
 		GetEmotion(EHeads.Blush, "Blush head", "Blush pupils", "Blush eyeback");

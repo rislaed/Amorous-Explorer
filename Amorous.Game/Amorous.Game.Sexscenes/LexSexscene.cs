@@ -36,7 +36,7 @@ public class LexSexscene : CensoredSexscene
 	};
 
 	public LexSexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Lex/Lex Sex", "Assets/SexScenes/Lex/Background", null, list_0: Events, float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: null, float_1: 5000f)
+		: base(content, "Assets/SexScenes/Lex/Lex Sex", "Assets/SexScenes/Lex/Background", null, list_0: Events, float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: null, cycle: 5000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (Censorship.Censored)
@@ -77,7 +77,7 @@ public class LexSexscene : CensoredSexscene
 		}
 		else if (string_0 == "Female")
 		{
-			base._wQSC6rD8bbXFvRxba0kr1RqxlOV = _sg4TvSTYoH0YwumBfYnvr7IeDaT._AZrO8MxMUE7cKsFYTQ4k9O3q7yC(base.Content);
+			base._wQSC6rD8bbXFvRxba0kr1RqxlOV = _sg4TvSTYoH0YwumBfYnvr7IeDaT.Get(base.Content);
 			base.Spine.SetAlpha("Alex balls", 0f);
 			base.Spine.SetAlpha("Alex knot", 0f);
 			base.Spine.SetAlpha("Alex dick tip", 0f);

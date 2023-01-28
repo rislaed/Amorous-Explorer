@@ -12,7 +12,7 @@ public class SkyeBedroomScene : AbstractScene
 		{
 			if (PlayerPreferences.GetPlayerData().GetDecimal("SkyeDate") == 55)
 			{
-				Game.RequestScene("SkyeDate");
+				Game.StartCutscene("SkyeDate");
 			}
 		});
 		AddInteractableLayer("Mirror", "Assets/Scenes/SkyeBedroom/interactable bedroom - Mirror", 1008, 289, null, 0, 0, "<i>That's me!</i>");
@@ -29,6 +29,6 @@ public class SkyeBedroomScene : AbstractScene
 		}
 		AddInteractableLayer("Frame", "Assets/Scenes/SkyeBedroom/interactable bedroom - Frame", 698, 214, null, 0, 0, "<i>A risqué poster of a popular video Game character laying nude in a field of grass.░ She must be very proud of this one, It's even framed!</i>");
 		AddInteractableLayer("Wallscroll", "Assets/Scenes/SkyeBedroom/interactable bedroom - Wallscroll", 450, 171, null, 0, 0, "<i>Looks like a cosplay poster,░ I don't recognise the character but the pose is very flamboyant.</i>");
-		_UmxbIbk7pgaod0bD7pS309P3Lns._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/4U - Long Gone", 0.4f);
+		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/4U - Long Gone", 0.4f);
 	}
 }

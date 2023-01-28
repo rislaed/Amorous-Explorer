@@ -2,25 +2,24 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Microsoft.Xna.Framework;
 
 public static class AmorousLifecycle
 {
-	private const int _e2Ucgs0TphHTAenda7BAmHbfNPD = 4096;
+	private const int AppDomainLibraries = 4096;
 
 	[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
 	[return: MarshalAs(UnmanagedType.Bool)]
-	private static extern bool SetDefaultDllDirectories(int int_0);
+	private static extern bool SetDefaultDllDirectories(int mode);
 
 	[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
-	private static extern void AddDllDirectory(string string_0);
+	private static extern void AddDllDirectory(string path);
 
 	[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
 	[return: MarshalAs(UnmanagedType.Bool)]
-	private static extern bool SetDllDirectory(string string_0);
+	private static extern bool SetDllDirectory(string path);
 
 	public static bool IsUnix => (int) Environment.OSVersion.Platform is 4 or 6 or 128;
 
@@ -29,7 +28,7 @@ public static class AmorousLifecycle
 	{
 		AppDomain.CurrentDomain.UnhandledException += delegate(object sender, UnhandledExceptionEventArgs e)
 		{
-			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(e.ExceptionObject as Exception);
+			Crash(e.ExceptionObject as Exception);
 			Environment.Exit(0);
 		};
 		Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
@@ -38,7 +37,7 @@ public static class AmorousLifecycle
 		if (!IsUnix) {
 			try
 			{
-				SetDefaultDllDirectories(_e2Ucgs0TphHTAenda7BAmHbfNPD);
+				SetDefaultDllDirectories(AppDomainLibraries);
 				AddDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
 			}
 			catch
@@ -74,14 +73,14 @@ public static class AmorousLifecycle
 			using AmorousGame game = new AmorousGame(safemode);
 			game.Run();
 		}
-		catch (Exception exception_)
+		catch (Exception exception)
 		{
-			_mxSbmCQQPRHc7t2A2pm8HsbyvqfA(exception_);
+			Crash(exception);
 		}
 	}
 
-	private static void _mxSbmCQQPRHc7t2A2pm8HsbyvqfA(Exception exception_0)
+	private static void Crash(Exception exception)
 	{
-		Logger.Error("Unhandled exception: {0}", exception_0);
+		Logger.Error("Unhandled exception: {0}", exception);
 	}
 }

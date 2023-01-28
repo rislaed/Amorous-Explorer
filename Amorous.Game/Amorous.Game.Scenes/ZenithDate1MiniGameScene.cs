@@ -9,6 +9,6 @@ public class ZenithDate1MiniGameScene : ShootingRangeMiniGameScene
 
 	protected override void _5Z9jaXDcRYm0wNlEm1aTutL9kSH()
 	{
-		base.Game._OxLRmpxixplTKChiTPUKAx4uTLG<ZenithDate1PostMiniGameScene>();
+		base.Game.SwitchScene<ZenithDate1PostMiniGameScene>();
 	}
 }

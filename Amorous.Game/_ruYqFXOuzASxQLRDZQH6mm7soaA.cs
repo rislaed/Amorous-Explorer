@@ -9,7 +9,7 @@ public class _ruYqFXOuzASxQLRDZQH6mm7soaA : AbstractEvent<JaxContactsCheckEventD
 
 	public int ThreeOrMoreID { get; set; }
 
-	public _ruYqFXOuzASxQLRDZQH6mm7soaA(_nR8eroJOHehP0ZGyyTveo6aMTHg _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
+	public _ruYqFXOuzASxQLRDZQH6mm7soaA(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0)
 	{
 	}
@@ -25,7 +25,7 @@ public class _ruYqFXOuzASxQLRDZQH6mm7soaA : AbstractEvent<JaxContactsCheckEventD
 	public override void Update(GameTime gameTime)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		int num = data._X1b0dyIzsSyKwqWd3usrbDfKJAk();
+		int num = data.GetContactCount();
 		if (num > 1)
 		{
 			if (num >= 1 && num <= 2)
@@ -41,6 +41,6 @@ public class _ruYqFXOuzASxQLRDZQH6mm7soaA : AbstractEvent<JaxContactsCheckEventD
 		{
 			base.NextID = OnlyJaxID;
 		}
-		base._xJZUPxDatEzfPQc0nRHR2D1Vwke = true;
+		base.Completable = true;
 	}
 }

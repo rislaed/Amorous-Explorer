@@ -36,8 +36,8 @@ public class ClubInsideScene : AbstractScene
 		AddForegroundFadingLayer("Strobe Blue", "Assets/Scenes/ClubInside/blue_strobe", -1425, 100, 1200, 0, 1200);
 		AddForegroundFadingLayer("Strobe Green", "Assets/Scenes/ClubInside/green_strobe", 708, 120, 1200, 600, 600);
 		AddForegroundFadingLayer("Strobe Pink", "Assets/Scenes/ClubInside/pink_strobe", 48, 130, 1200, 1200);
-		Game._vsceSzSIjBy2nZrCxAzKZbUiwLq._EPA0ilTeyu3r3U3sXajd13XXT1B(-1770, 1770);
-		_UmxbIbk7pgaod0bD7pS309P3Lns._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, bool_0: true, bool_1: true);
+		Game.Mouse._EPA0ilTeyu3r3U3sXajd13XXT1B(-1770, 1770);
+		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showCoby = true;
 		_showJax = !data.GetBit("JaxLeftClub");
@@ -47,14 +47,14 @@ public class ClubInsideScene : AbstractScene
 		{
 			data.SetDecimal("SkyeDate", 10);
 		}
-		base.Game._aJh9CibG5YKhkExxgRyVopdfSeJ._vVZVLriSGPExpn1KeobglMabsoi("AchievementGeneric2");
+		base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric2);
 	}
 
 	public override void Start()
 	{
 		if (_showJax)
 		{
-			_jax = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<JaxNPC>(LayerOrder.Background);
+			_jax = base.Game.GetNPCLayerAt<JaxNPC>(LayerOrder.Background);
 			_jax.SetEmotion(JaxNPC.EHeads.Happy);
 			_jax.SetPose(JaxNPC.EPoses.Chill);
 			_jax.SetClothes(JaxNPC.EClothes.TuxChest, JaxNPC.EClothes.TuxUnderwear);
@@ -68,7 +68,7 @@ public class ClubInsideScene : AbstractScene
 		}
 		else
 		{
-			_rou = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<BartenderNPC>(LayerOrder.Background);
+			_rou = base.Game.GetNPCLayerAt<BartenderNPC>(LayerOrder.Background);
 			_rou.SetEmotion(BartenderNPC.EHeads.None);
 			_rou.SetPose(BartenderNPC.EPoses.Standing);
 			_rou.SetClothes(BartenderNPC.EClothes.Shirt, BartenderNPC.EClothes.Pants);
@@ -80,44 +80,44 @@ public class ClubInsideScene : AbstractScene
 			NPCLayer2.ZOrder = 0;
 			NPCLayer2.LayerOrder = 0;
 		}
-		ClubInsideANPC clubInsideANPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideANPC>(LayerOrder.Background);
+		ClubInsideANPC clubInsideANPC = base.Game.GetNPCLayerAt<ClubInsideANPC>(LayerOrder.Background);
 		clubInsideANPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideANPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideANPC.X = -1700f;
 		clubInsideANPC.Y = 320f;
-		ClubInsideBNPC clubInsideBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideBNPC>(LayerOrder.Background);
+		ClubInsideBNPC clubInsideBNPC = base.Game.GetNPCLayerAt<ClubInsideBNPC>(LayerOrder.Background);
 		clubInsideBNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideBNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideBNPC.X = -1480f;
 		clubInsideBNPC.Y = 320f;
-		ClubInsideCNPC clubInsideCNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideCNPC>(LayerOrder.Background);
+		ClubInsideCNPC clubInsideCNPC = base.Game.GetNPCLayerAt<ClubInsideCNPC>(LayerOrder.Background);
 		clubInsideCNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideCNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideCNPC.X = -1230f;
 		clubInsideCNPC.Y = 360f;
-		ClubInsideDNPC clubInsideDNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideDNPC>(LayerOrder.Background);
+		ClubInsideDNPC clubInsideDNPC = base.Game.GetNPCLayerAt<ClubInsideDNPC>(LayerOrder.Background);
 		clubInsideDNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideDNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideDNPC.X = 950f;
 		clubInsideDNPC.Y = 500f;
-		ClubInsideENPC clubInsideENPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideENPC>(LayerOrder.Background);
+		ClubInsideENPC clubInsideENPC = base.Game.GetNPCLayerAt<ClubInsideENPC>(LayerOrder.Background);
 		clubInsideENPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideENPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideENPC.X = 1150f;
 		clubInsideENPC.Y = 420f;
 		NPCLayer NPCLayer3 = GetNPCLayer<ClubInsideENPC>();
 		NPCLayer3.LayerOrder = 2;
-		ClubInsideFNPC clubInsideFNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideFNPC>(LayerOrder.Background);
+		ClubInsideFNPC clubInsideFNPC = base.Game.GetNPCLayerAt<ClubInsideFNPC>(LayerOrder.Background);
 		clubInsideFNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideFNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideFNPC.X = 3275f;
 		clubInsideFNPC.Y = 360f;
-		ClubInsideGNPC clubInsideGNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideGNPC>(LayerOrder.Background);
+		ClubInsideGNPC clubInsideGNPC = base.Game.GetNPCLayerAt<ClubInsideGNPC>(LayerOrder.Background);
 		clubInsideGNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideGNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideGNPC.X = 3400f;
 		clubInsideGNPC.Y = 340f;
-		ClubDJNPC clubDJNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubDJNPC>(LayerOrder.Background);
+		ClubDJNPC clubDJNPC = base.Game.GetNPCLayerAt<ClubDJNPC>(LayerOrder.Background);
 		clubDJNPC.SetEmotion(ClubDJNPC.EHeads.Smirk);
 		clubDJNPC.SetPose(ClubDJNPC.EPoses.Dancing);
 		clubDJNPC.SetClothes(ClubDJNPC.EClothes.Shirt, ClubDJNPC.EClothes.Pants);
@@ -125,7 +125,7 @@ public class ClubInsideScene : AbstractScene
 		clubDJNPC.Y = 500f;
 		clubDJNPC._SC7QlorMIWTLSkD757wC7ybszpE = true;
 		clubDJNPC.Click = OnDJClick;
-		_dancerA = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideDancerANPC>(LayerOrder.Foreground);
+		_dancerA = base.Game.GetNPCLayerAt<ClubInsideDancerANPC>(LayerOrder.Foreground);
 		_dancerA.SetEmotion(ClubInsideDancerANPC.EHeads.Happy);
 		_dancerA.SetPose(ClubInsideDancerANPC.EPoses.Dancing);
 		_dancerA.SetClothes(ClubInsideDancerANPC.EClothes.Pants, ClubInsideDancerANPC.EClothes.Shirt);
@@ -134,7 +134,7 @@ public class ClubInsideScene : AbstractScene
 		_dancerA._KDimeEJ9On2dWcynEqeEZz9c8DE(4, 3);
 		if (_showCoby)
 		{
-			_coby = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<CobyDancingNPC>(LayerOrder.Foreground);
+			_coby = base.Game.GetNPCLayerAt<CobyDancingNPC>(LayerOrder.Foreground);
 			_coby.SetEmotion(CobyDancingNPC.EHeads.Happy);
 			_coby.SetPose(CobyDancingNPC.EPoses.Dancing);
 			_coby.SetClothes(CobyDancingNPC.EClothes.Shirt, CobyDancingNPC.EClothes.Shorts, CobyDancingNPC.EClothes.Sleeves);
@@ -142,19 +142,19 @@ public class ClubInsideScene : AbstractScene
 			_coby.Y = 1000f;
 			_coby.Click = OnCobyClick;
 		}
-		ClubInsideDancerCNPC clubInsideDancerCNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideDancerCNPC>(LayerOrder.Foreground);
+		ClubInsideDancerCNPC clubInsideDancerCNPC = base.Game.GetNPCLayerAt<ClubInsideDancerCNPC>(LayerOrder.Foreground);
 		clubInsideDancerCNPC.SetEmotion(ClubInsideDancerCNPC.EHeads.Smirk);
 		clubInsideDancerCNPC.SetPose(ClubInsideDancerCNPC.EPoses.Dancing);
 		clubInsideDancerCNPC.SetClothes(ClubInsideDancerCNPC.EClothes.Shorts);
 		clubInsideDancerCNPC.X = 50f;
 		clubInsideDancerCNPC.Y = 910f;
-		ClubInsideDancerBNPC clubInsideDancerBNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideDancerBNPC>(LayerOrder.Foreground);
+		ClubInsideDancerBNPC clubInsideDancerBNPC = base.Game.GetNPCLayerAt<ClubInsideDancerBNPC>(LayerOrder.Foreground);
 		clubInsideDancerBNPC.SetEmotion(ClubInsideDancerBNPC.EHeads.Happy);
 		clubInsideDancerBNPC.SetPose(ClubInsideDancerBNPC.EPoses.Dancing);
 		clubInsideDancerBNPC.SetClothes(ClubInsideDancerBNPC.EClothes.Skirt, ClubInsideDancerBNPC.EClothes.Shirt);
 		clubInsideDancerBNPC.X = 50f;
 		clubInsideDancerBNPC.Y = 910f;
-		ClubInsideDancerDNPC clubInsideDancerDNPC = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubInsideDancerDNPC>(LayerOrder.Foreground);
+		ClubInsideDancerDNPC clubInsideDancerDNPC = base.Game.GetNPCLayerAt<ClubInsideDancerDNPC>(LayerOrder.Foreground);
 		clubInsideDancerDNPC.SetEmotion(ClubInsideDancerDNPC.EHeads.Smirk);
 		clubInsideDancerDNPC.SetPose(ClubInsideDancerDNPC.EPoses.Dancing);
 		clubInsideDancerDNPC.SetClothes(ClubInsideDancerDNPC.EClothes.Shirt, ClubInsideDancerDNPC.EClothes.Pants);
@@ -162,14 +162,14 @@ public class ClubInsideScene : AbstractScene
 		clubInsideDancerDNPC.Y = 960f;
 		if (_showSeth)
 		{
-			_seth = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticSethNPC>(LayerOrder.Foreground);
+			_seth = base.Game.GetNPCLayerAt<ClubStaticSethNPC>(LayerOrder.Foreground);
 			_seth.X = 1612f;
 			_seth.Y = 420f;
 			_seth.Click = OnSethClick;
 		}
 		if (_showSkye)
 		{
-			_skye = base.Game._TwQHHdbdRFRy2ctTZabNfz1Htrg<ClubStaticSkyeNPC>(LayerOrder.Background);
+			_skye = base.Game.GetNPCLayerAt<ClubStaticSkyeNPC>(LayerOrder.Background);
 			_skye.X = 2212f;
 			_skye.Y = 438f;
 			_skye.Click = OnSkyeClick;
@@ -191,22 +191,22 @@ public class ClubInsideScene : AbstractScene
 
 	private void OnJaxClick()
 	{
-		base.Game.RequestScene("JaxPreDate");
+		base.Game.StartCutscene("JaxPreDate");
 	}
 
 	private void OnRouClick()
 	{
-		base.Game.RequestScene("Rou");
+		base.Game.StartCutscene("Rou");
 	}
 
 	private void OnSethClick()
 	{
-		base.Game.RequestScene("SethPreDate");
+		base.Game.StartCutscene("SethPreDate");
 	}
 
 	private void OnSkyeClick()
 	{
-		base.Game.RequestScene("SkyePreDate");
+		base.Game.StartCutscene("SkyePreDate");
 	}
 
 	private void OnCobyClick()
@@ -214,16 +214,16 @@ public class ClubInsideScene : AbstractScene
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		if (data.GetDecimal("Prologue") >= 40)
 		{
-			base.Game.RequestScene("CobyClub");
+			base.Game.StartCutscene("CobyClub");
 		}
 		else
 		{
-			base.Game.RequestScene("Prologue");
+			base.Game.StartCutscene("Prologue");
 		}
 	}
 
 	private void OnDJClick()
 	{
-		base.Game.RequestScene("DJ");
+		base.Game.StartCutscene("DJ");
 	}
 }
