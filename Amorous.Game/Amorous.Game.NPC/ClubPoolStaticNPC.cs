@@ -32,8 +32,8 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["MaskStart"].SetValue(_rlJEdnItzlU5efWtBjMCaC5Nizb / (float)Height);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["MaskEnd"].SetValue(num / (float)Height);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["Inverse"].SetValue(_vAix6GBEcVh3peB11tbKy7HJWwb);
-		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["BreathingOffset"].SetValue(_jSsdHgef86oxWXEOENwyht1nIvn);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["BreathingOffset"].SetValue(BreathingOffset);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.CurrentTechnique.Passes[0].Apply();
-		_DIJ98g9A80rhmS3Wk1l8KTVfV8x(spriteBatch);
+		DrawPieces(spriteBatch);
 	}
 }

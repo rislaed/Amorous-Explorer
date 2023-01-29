@@ -2,12 +2,12 @@ using Amorous.Engine.Data.Cutscenes;
 using Microsoft.Xna.Framework;
 
 public class SetStageEvent : AbstractEvent<SetStageEventData>
-{
+{ // _UpYZWFVBvOmj4qJYiMDsoZcNEBl
 	public string Quest { get; private set; }
 	public int Stage { get; private set; }
 
-	public SetStageEvent(Cutscene _nR8eroJOHehP0ZGyyTveo6aMTHg_0)
-		: base(_nR8eroJOHehP0ZGyyTveo6aMTHg_0) {}
+	public SetStageEvent(Cutscene cutscene)
+		: base(cutscene) {}
 
 	public override void SetData(SetStageEventData eventData)
 	{
@@ -19,8 +19,8 @@ public class SetStageEvent : AbstractEvent<SetStageEventData>
 	public override void Begin()
 	{
 		base.Begin();
-		PlayerPreferences.GetPlayerData().SetDecimal(Quest, Stage);
-		base.Cutscene.Game.Achievements.SetDecimal(Quest, Stage);
+		PlayerPreferences.GetPlayerData().SetStage(Quest, Stage);
+		base.Cutscene.Game.Achievements.SetStage(Quest, Stage);
 	}
 
 	public override void Update(GameTime gameTime)

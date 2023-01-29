@@ -14,25 +14,25 @@ public class CobySexscene : CensoredSexscene
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustStart",
+			EventName = EventThrustStart,
 			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustEnd",
+			EventName = EventThrustEnd,
 			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "Moan",
+			EventName = EventMoan,
 			FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f }
 		}
 	};
 
 	public CobySexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Coby/Coby Sex", "Assets/SexScenes/Coby/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, cycle: 3000f)
+		: base(content, "Assets/SexScenes/Coby/Coby Sex", "Assets/SexScenes/Coby/Background", null, events: Events, sounds: new MaleSexsceneSounds(content), scale: Censorship.Censored ? 1.5f : 1f, premultipliedAlpha: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (!Censorship.Censored)
@@ -48,7 +48,7 @@ public class CobySexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshScene(PlayerData data)
+	protected override void RefreshSubscene(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (Censorship.Censored)
@@ -121,8 +121,8 @@ public class CobySexscene : CensoredSexscene
 		base.Spine.SetColor("Player hand", data.BodyColor);
 		base.Spine.SetColor("Player hand shortlong sleeve", data.ShortForearmColor);
 		base.Spine.SetColor("Player nails", data.NailColor);
-		base.Overlays.Add("Cum butt back");
-		base.Overlays.Add("Cum cock");
-		base.Overlays.Add("Cum butt top");
+		base.ExplosionBones.Add("Cum butt back");
+		base.ExplosionBones.Add("Cum cock");
+		base.ExplosionBones.Add("Cum butt top");
 	}
 }

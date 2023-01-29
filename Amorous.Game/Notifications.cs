@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Squid;
 
 public class Notifications
-{
+{ // _XJasjdoOf6PYbfaC5MsbXSjDWV3
 	private class _RQQdLVHyZm4GNvRCeQfcIx1OlwJ
 	{
 		public Frame _kvuzph4c9LD4fDAaURHVjkfJKwk;
@@ -116,6 +116,7 @@ public class Notifications
 		}
 		catch (Exception)
 		{
+			// ?
 		}
 	}
 }

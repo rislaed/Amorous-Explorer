@@ -7,7 +7,7 @@ public class ClubStaticRemyNPC : ClubStaticNPC
 	{
 		Width = 128;
 		Height = 414;
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 }

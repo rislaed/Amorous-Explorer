@@ -6,6 +6,6 @@ public class BuildingOutsideScene : AbstractScene
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/BuildingOutside/Background", 0, 0);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 }

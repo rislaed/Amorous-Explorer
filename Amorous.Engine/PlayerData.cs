@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 
 public class PlayerData : IPlayerData
-{
+{ // _opIJo2jLUqdOL5yAFP4yzXce0DG
 	public enum EBodyType
 	{
 		Chubby,
@@ -412,13 +412,13 @@ public class PlayerData : IPlayerData
 		QuestStages = new Dictionary<string, int>();
 		Flags = new Dictionary<string, bool>();
 		Messages = new List<PhoneMessage>();
-		ResetProgression();
+		ResetState();
 	}
 
 	public void Reset()
 	{
 		ResetPlayer();
-		ResetProgression();
+		ResetState();
 	}
 
 	public void ResetPlayer()
@@ -488,7 +488,7 @@ public class PlayerData : IPlayerData
 		PhoneColor = Color.White;
 	}
 
-	public void ResetProgression()
+	public void ResetState()
 	{
 		QuestStages.Clear();
 		Contacts = EPhoneContacts.None;
@@ -496,17 +496,17 @@ public class PlayerData : IPlayerData
 		Flags.Clear();
 	}
 
-	public int GetDecimal(string string_0)
+	public int GetState(string string_0)
 	{
 		if (!QuestStages.ContainsKey(string_0))
 		{
-			SetDecimal(string_0, 10);
+			SetStage(string_0, 10);
 			return 10;
 		}
 		return QuestStages[string_0];
 	}
 
-	public void SetDecimal(string string_0, int int_0)
+	public void SetStage(string string_0, int int_0)
 	{
 		if (string_0 != null)
 		{
@@ -514,23 +514,23 @@ public class PlayerData : IPlayerData
 		}
 	}
 
-	public void AddContact(EPhoneContacts ephoneContacts_0)
+	public void UnlockContact(EPhoneContacts contact)
 	{
-		if (!Contacts.HasFlag(ephoneContacts_0))
+		if (!Contacts.HasFlag(contact))
 		{
-			Contacts |= ephoneContacts_0;
+			Contacts |= contact;
 		}
 	}
 
-	public void ResetContact(EPhoneContacts ephoneContacts_0)
+	public void DisableContact(EPhoneContacts contact)
 	{
-		if (Contacts.HasFlag(ephoneContacts_0))
+		if (Contacts.HasFlag(contact))
 		{
-			Contacts &= ~ephoneContacts_0;
+			Contacts &= ~contact;
 		}
-		if (!DisabledContacts.HasFlag(ephoneContacts_0))
+		if (!DisabledContacts.HasFlag(contact))
 		{
-			DisabledContacts |= ephoneContacts_0;
+			DisabledContacts |= contact;
 		}
 	}
 
@@ -552,7 +552,7 @@ public class PlayerData : IPlayerData
 		return num;
 	}
 
-	public bool GetBit(string string_0)
+	public bool GetFlag(string string_0)
 	{
 		if (!Flags.ContainsKey(string_0))
 		{
@@ -610,7 +610,7 @@ public class PlayerData : IPlayerData
 			string[] array2 = string_0.Split(new char[1] { '.' });
 			if (array2.Length > 2 && int.TryParse(array2[2], out var result5))
 			{
-				return GetDecimal(array2[1]) == result5;
+				return GetState(array2[1]) == result5;
 			}
 		}
 		return string_0 switch
@@ -624,7 +624,7 @@ public class PlayerData : IPlayerData
 		};
 	}
 
-	public void SetBit(string string_0, bool bool_0)
+	public void SetFlag(string string_0, bool bool_0)
 	{
 		if (string_0.StartsWith("Player."))
 		{

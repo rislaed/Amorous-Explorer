@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Squid;
 
 public class SquidRenderer : IDisposable, ISquidRenderer
-{
+{ // _k8LAl8bPyzLGEpo59dKFGU4sCQ
 	private readonly Dictionary<int, SpriteFont> _fonts = new Dictionary<int, SpriteFont>();
 	private readonly Dictionary<int, Texture2D> _textures = new Dictionary<int, Texture2D>();
 	private readonly Dictionary<string, int> _fontPathes = new Dictionary<string, int>();

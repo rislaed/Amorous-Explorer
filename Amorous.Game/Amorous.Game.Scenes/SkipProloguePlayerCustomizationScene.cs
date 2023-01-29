@@ -15,12 +15,12 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 
 	protected override void ConfirmEverything()
 	{
-		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, delegate(int index)
+		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.WideDialogueOffset, delegate(int index)
 		{
 			if (index == 1)
 			{
 				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric1);
-				base.Game.StartCutscene("Gender");
+				base.Game.StartCutscene(AmorousData.Gender);
 				_pendingEntering = true;
 			}
 		});
@@ -33,12 +33,12 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 		{
 			_pendingEntering = false;
 			PlayerData data = PlayerPreferences.GetPlayerData();
-			data.AddContact(PlayerData.EPhoneContacts.Coby);
-			data.SetDecimal("Prologue", 40);
-			data.SetBit("CobyLeftClub", bool_0: true);
-			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = true;
-			PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
-			base.Game.Achievements.GainContact(PlayerData.EPhoneContacts.Coby);
+			data.UnlockContact(PlayerData.EPhoneContacts.Coby);
+			data.SetStage(AmorousData.Prologue, AmorousData.PrologueStateCompleted);
+			data.SetFlag(AmorousData.CobyLeftClub, bool_0: true);
+			PhoneOverlay.Enabled = true;
+			PhoneOverlay.Get().RefreshSkin();
+			base.Game.Achievements.UnlockContact(PlayerData.EPhoneContacts.Coby);
 			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric4);
 			base.Game.StartScene<ClubEntranceScene>();
 		}

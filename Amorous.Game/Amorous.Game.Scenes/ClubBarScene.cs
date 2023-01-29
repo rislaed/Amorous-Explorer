@@ -7,6 +7,6 @@ public class ClubBarScene : AbstractScene
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/ClubBar/Base", 0, 0);
 		AddForegroundTexturedLayer("Bar", "Assets/Scenes/ClubBar/Bar", 0, 0);
-		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
+		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 	}
 }

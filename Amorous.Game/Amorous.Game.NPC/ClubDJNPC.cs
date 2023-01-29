@@ -34,11 +34,11 @@ public class ClubDJNPC : SpineNPC<ClubDJNPC.EHeads, ClubDJNPC.EPoses, ClubDJNPC.
 		Width = 400;
 		Height = 600;
 		base.Spine.StartAnimationWithLooping("Dance A");
-		GetEmotion(EHeads.Smirk, "Ears", "Head");
-		GetPose(EPoses.Dancing, "Arm right", "Body");
-		GetClothes(EPoses.Dancing, EClothes.Shirt, "Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Dancing, EClothes.Pants, "Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddEmotion(EHeads.Smirk, "Ears", "Head");
+		AddPose(EPoses.Dancing, "Arm right", "Body");
+		AddClothes(EPoses.Dancing, EClothes.Shirt, "Shirt").AsShirt().AsNudes();
+		AddClothes(EPoses.Dancing, EClothes.Pants, "Pants").AsPants().AsCloth();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

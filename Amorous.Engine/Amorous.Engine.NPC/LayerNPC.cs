@@ -1,43 +1,40 @@
 using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Amorous.Engine.NPC;
 
-public abstract class LayerNPC<THead, TPose, TClothes> : _xZgbANe7gi6i2DAhBEkKpR1QFLe where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
+public abstract class LayerNPC<THead, TPose, TClothes> : BreathingNPC where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
 {
-	protected LayerNPC(IAmorous game, string string_0, float float_0 = 1f)
-		: base(game, string_0, float_0)
+	protected LayerNPC(IAmorous game, string sprite, float scale = 1f)
+		: base(game, sprite, scale) {}
+
+	public FilterableEmotion AddEmotion(THead emotion, params string[] parts)
 	{
+		return AddEmotion(Enum.GetName(typeof(THead), (object)emotion), parts);
 	}
 
-	public _xmfdPa5IagU3cXbLL61gyoXAV7gA GetEmotion(THead value, params string[] string_0)
+	public FilterablePose AddPose(TPose pose, params string[] parts)
 	{
-		return GetEmotion(Enum.GetName(typeof(THead), (object)value), string_0);
+		return AddPose(Enum.GetName(typeof(TPose), (object)pose), parts);
 	}
 
-	public _NaKchYC4I4GjWR34SfBLAktysCE GetPose(TPose value, params string[] string_0)
+	public FilterableClothes AddClothes(TPose pose, TClothes clothes, params string[] parts)
 	{
-		return GetPose(Enum.GetName(typeof(TPose), (object)value), string_0);
+		return AddClothes(Enum.GetName(typeof(TPose), (object)pose), Enum.GetName(typeof(TClothes), (object)clothes), parts);
 	}
 
-	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh GetClothes(TPose value, TClothes gparam_1, params string[] string_0)
+	public void SetEmotion(THead emotion)
 	{
-		return GetClothes(Enum.GetName(typeof(TPose), (object)value), Enum.GetName(typeof(TClothes), (object)gparam_1), string_0);
+		SetEmotion(Enum.GetName(typeof(THead), (object)emotion));
 	}
 
-	public void SetEmotion(THead value)
+	public void SetPose(TPose pose)
 	{
-		SetEmotion(Enum.GetName(typeof(THead), (object)value));
+		SetPose(Enum.GetName(typeof(TPose), (object)pose));
 	}
 
-	public void SetPose(TPose value)
+	public void SetClothes(params TClothes[] clothes)
 	{
-		SetPose(Enum.GetName(typeof(TPose), (object)value));
-	}
-
-	public void SetClothes(params TClothes[] value)
-	{
-		SetClothes(value.Select((TClothes cloth) => Enum.GetName(typeof(TClothes), (object)cloth)).ToArray());
+		SetClothes(clothes.Select((TClothes cloth) => Enum.GetName(typeof(TClothes), (object)cloth)).ToArray());
 	}
 }

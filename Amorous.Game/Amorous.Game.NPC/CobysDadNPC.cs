@@ -31,18 +31,18 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 	public CobysDadNPC(IAmorous game)
 		: base(game, "Assets/NPC/CobysDad", 1f)
 	{
-		GetEmotion(EHeads.Stern, "Coby's Dad eye", "Coby's Dad Head");
-		GetPose(EPoses.Standing, "Coby's Dad Body");
-		GetClothes(EPoses.Standing, EClothes.Pants, "Coby's Dad Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Standing, EClothes.Shirt, "Coby's Dad Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddEmotion(EHeads.Stern, "Coby's Dad eye", "Coby's Dad Head");
+		AddPose(EPoses.Standing, "Coby's Dad Body");
+		AddClothes(EPoses.Standing, EClothes.Pants, "Coby's Dad Pants").AsPants().AsCloth();
+		AddClothes(EPoses.Standing, EClothes.Shirt, "Coby's Dad Shirt").AsShirt().AsNudes();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

@@ -7,7 +7,7 @@ using System.Threading;
 using Microsoft.Xna.Framework;
 
 public static class AmorousLifecycle
-{
+{ // _teqj4nlfsRIR7hafjKGQ9NYjEZe
 	private const int AppDomainLibraries = 4096;
 
 	[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]

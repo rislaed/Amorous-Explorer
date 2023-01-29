@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 public static class Randoms
-{
+{ // _boyt8NIMtKsAGSTcjHeL0WMbFxs
 	public static float Time;
 
 	private static readonly Random _random = new Random();

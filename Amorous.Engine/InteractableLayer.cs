@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class InteractableLayer : AbstractLayer
-{
+{ // _x1wxbalqqw8qtEqHC1UaGdv59Od
 	public Vector2 ActivePoint;
 	private bool Hovered;
 	private bool Captured;
@@ -71,7 +71,7 @@ public class InteractableLayer : AbstractLayer
 
 	public override bool Click()
 	{
-		TypingDialogue._zunSyHn4DekdA6CngP10dXcR1kq(Text, string.Empty, Color.White);
+		TypingDialogue.Play(Text, string.Empty, Color.White);
 		Captured = true;
 		Hovered = false;
 		return true;

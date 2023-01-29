@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 public interface IAmorous
-{
+{ // _JbeCmOie0phb2cbgG6DdGZrbs3pB
 	GameWindow Window { get; }
 	GraphicsDevice GLES { get; }
 	ContentManager Content { get; }
@@ -35,10 +35,10 @@ public interface IAmorous
 	void StartScene<T>() where T : AbstractScene;
 	void StartScene(string name);
 	void StartScene(AbstractScene scene);
-	void SwitchScene<T>(Action then = null) where T : AbstractScene;
-	void SwitchScene(string name, Action then = null);
-	void SwitchScene(AbstractScene scene, Action then = null);
-	void StartSexscene(string name);
+	void SwitchToScene<T>(Action then = null) where T : AbstractScene;
+	void SwitchToScene(string name, Action then = null);
+	void SwitchToScene(AbstractScene scene, Action then = null);
+	void PlaySexscene(string name);
 	void ResetSexscene();
 	void StartCutscene(string name);
 	void StartCutscene(Cutscene cutscene);

@@ -13,6 +13,6 @@ public class ArtGalleryScene : AbstractScene
 		{
 			AddTexturedLayer("Background", "Assets/Scenes/ArtGallery/Background", 0, 0);
 		}
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/RyeGuyHead - Outdated", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.OutdatedTrack, 0.4f);
 	}
 }

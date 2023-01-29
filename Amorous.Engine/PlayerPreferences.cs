@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class PlayerPreferences
-{
+{ // _Z6EKIW3ycAwV2npYuxbFLcnCTrJ
 	private static PlayerPreferences _singleton;
 	public static PlayerPreferences Singleton => _singleton;
 	public AbstractPlayerSkin PlayerSkin { get; private set; }

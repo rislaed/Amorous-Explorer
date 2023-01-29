@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class ScreenFader : AbstractInterpolator<Color>
-{
+{ // _gJR4g7ak0hsZAUWX1vJbMqG2P5I
 	private readonly Texture2D _foreground;
 
 	public ScreenFader(GraphicsDevice graphicsDevice)
@@ -24,12 +24,12 @@ public class ScreenFader : AbstractInterpolator<Color>
 		spriteBatch.End();
 	}
 
-	public void Show(Action then = null)
+	public void FadeOut(Action then = null)
 	{
 		To(new Color(0, 0, 0, 255), then);
 	}
 
-	public void Hide(Action then = null)
+	public void FadeIn(Action then = null)
 	{
 		To(new Color(0, 0, 0, 0), then);
 	}

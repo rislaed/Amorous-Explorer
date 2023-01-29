@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class TexturedLayer : AbstractLayer
-{
+{ // _uqydQVaCmCvK7zzWs5W4gZFpKBu
 	public Texture2D Texture { get; private set; }
 	public bool Flip { get; set; }
 
@@ -26,6 +26,6 @@ public class TexturedLayer : AbstractLayer
 
 	public override void Remove()
 	{
-		base.Scene.Game.Content._HXLRmt9GqcmA9GTG5xzRKNu3QpF(Texture);
+		base.Scene.Game.Content.Unload(Texture);
 	}
 }

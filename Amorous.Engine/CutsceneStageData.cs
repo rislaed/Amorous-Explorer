@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 [Serializable]
 public class CutsceneStageData
-{
+{ // _FMuxd8PX5exXCoRNDVuFFbnirof
 	[JsonProperty("Stage")]
 	public int Stage { get; set; }
 

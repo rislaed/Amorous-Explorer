@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 
 public abstract class AbstractInterpolator<T>
-{
+{ // _RlrsL89bialFQa9mzWurgsdr6FK
 	private T _value, _from, _to;
 	private int _ticks;
 	private Action _then;

@@ -8,7 +8,7 @@ using Spine;
 using Squid;
 
 public abstract class AbstractScene
-{
+{ // _7UlnfykmEmZDFt3BmCKZekI43Ih
 	public const int OrderBackground = 0;
 	public const int OrderBackgroundOverlay = 1;
 	public const int OrderForeground = 2;
@@ -18,7 +18,7 @@ public abstract class AbstractScene
 	private AbstractLayer CapturedLayer;
 	public IAmorous Game { get; private set; }
 	public List<AbstractLayer> Layers { get; private set; }
-	public string Variant { get; private set; }
+	public string Subscene { get; private set; }
 	public static bool CapturedByOverlay { get; set; }
 	protected BlendState Blending { get; set; }
 	public Desktop Squid { get; set; }
@@ -50,9 +50,9 @@ public abstract class AbstractScene
 		return AddLayer(layer, OrderBackground);
 	}
 
-	public AnimatedLayer AddAnimatedLayer(string name, int x, int y, int delay, params string[] textures)
+	public AnimatedLayer AddAnimatedLayer(string name, int x, int y, int delay, params string[] images)
 	{
-		AnimatedLayer layer = NewAnimatedLayer(name, x, y, delay, textures);
+		AnimatedLayer layer = NewAnimatedLayer(name, x, y, delay, images);
 		return AddLayer(layer, OrderBackground);
 	}
 
@@ -80,9 +80,9 @@ public abstract class AbstractScene
 		return AddLayer(layer, OrderBackground);
 	}
 
-	public AnimatedClickableLayer AddAnimatedClickableLayer(string name, int x, int y, Action click, int delay, params string[] textures)
+	public AnimatedClickableLayer AddAnimatedClickableLayer(string name, int x, int y, Action click, int delay, params string[] images)
 	{
-		AnimatedClickableLayer layer = NewAnimatedClickableLayer(name, x, y, click, delay, textures);
+		AnimatedClickableLayer layer = NewAnimatedClickableLayer(name, x, y, click, delay, images);
 		return AddLayer(layer, OrderBackground);
 	}
 
@@ -92,9 +92,9 @@ public abstract class AbstractScene
 		return AddLayer(layer, OrderForeground);
 	}
 
-	public AnimatedLayer AddForegroundAnimatedLayer(string name, int x, int y, int delay, params string[] textures)
+	public AnimatedLayer AddForegroundAnimatedLayer(string name, int x, int y, int delay, params string[] images)
 	{
-		AnimatedLayer layer = NewAnimatedLayer(name, x, y, delay, textures);
+		AnimatedLayer layer = NewAnimatedLayer(name, x, y, delay, images);
 		return AddLayer(layer, OrderForeground);
 	}
 
@@ -122,9 +122,9 @@ public abstract class AbstractScene
 		return AddLayer(layer, OrderForeground);
 	}
 
-	public AnimatedClickableLayer AddForegroundAnimatedClickableLayer(string name, int x, int y, Action click, int delay, params string[] textures)
+	public AnimatedClickableLayer AddForegroundAnimatedClickableLayer(string name, int x, int y, Action click, int delay, params string[] images)
 	{
-		AnimatedClickableLayer layer = NewAnimatedClickableLayer(name, x, y, click, delay, textures);
+		AnimatedClickableLayer layer = NewAnimatedClickableLayer(name, x, y, click, delay, images);
 		return AddLayer(layer, OrderForeground);
 	}
 
@@ -138,18 +138,18 @@ public abstract class AbstractScene
 		};
 	}
 
-	private AnimatedLayer NewAnimatedLayer(string name, int x, int y, int delay, params string[] textures)
+	private AnimatedLayer NewAnimatedLayer(string name, int x, int y, int delay, params string[] images)
 	{
-		if (textures.Length == 0)
+		if (images.Length == 0)
 		{
 			throw new ArgumentException("Images cannot be empty");
 		}
-		List<Texture2D> list = new List<Texture2D>(textures.Length);
-		foreach (string assetName in textures)
+		List<Texture2D> textures = new List<Texture2D>(images.Length);
+		foreach (string assetName in images)
 		{
-			list.Add(Game.Content.Load<Texture2D>(assetName));
+			textures.Add(Game.Content.Load<Texture2D>(assetName));
 		}
-		return new AnimatedLayer(this, name, delay, list)
+		return new AnimatedLayer(this, name, delay, textures)
 		{
 			X = x,
 			Y = y
@@ -203,18 +203,18 @@ public abstract class AbstractScene
 		};
 	}
 
-	private AnimatedClickableLayer NewAnimatedClickableLayer(string name, int x, int y, Action action, int delay, params string[] textures)
+	private AnimatedClickableLayer NewAnimatedClickableLayer(string name, int x, int y, Action action, int delay, params string[] images)
 	{
-		if (textures.Length == 0)
+		if (images.Length == 0)
 		{
 			throw new ArgumentException("Images cannot be empty");
 		}
-		List<Texture2D> list = new List<Texture2D>(textures.Length);
-		foreach (string assetName in textures)
+		List<Texture2D> textures = new List<Texture2D>(images.Length);
+		foreach (string assetName in images)
 		{
-			list.Add(Game.Content.Load<Texture2D>(assetName));
+			textures.Add(Game.Content.Load<Texture2D>(assetName));
 		}
-		return new AnimatedClickableLayer(this, name, action, delay, list)
+		return new AnimatedClickableLayer(this, name, action, delay, textures)
 		{
 			X = x,
 			Y = y
@@ -237,30 +237,30 @@ public abstract class AbstractScene
 		}
 		if (!CapturedByOverlay)
 		{
-			bool bool_;
-			if ((bool_ = Game.Controller.JustPressed(ControllerButtonType.LeftButton)) && CapturedLayer != null)
+			bool pressed;
+			if ((pressed = Game.Controller.JustPressed(ControllerButtonType.LeftButton)) && CapturedLayer != null)
 			{
 				CapturedLayer.Continue();
 				CapturedLayer = null;
 			}
 			Microsoft.Xna.Framework.Point point = Game.Mouse._e6KgAy4CTN1JFYwA88grvAEmDxX(Game.Controller.Cursor);
-			Touch(point, bool_, Layers);
+			Touch(point, pressed, Layers);
 		}
 		Squid.Update();
 	}
 
 	private void UpdateLayers(GameTime gameTime, IEnumerable<AbstractLayer> layers)
 	{
-		foreach (AbstractLayer item in layers)
+		foreach (AbstractLayer layer in layers)
 		{
-			if (item.Updatable)
+			if (layer.Updatable)
 			{
-				item.Update(gameTime);
+				layer.Update(gameTime);
 			}
 		}
 	}
 
-	private void Touch(Microsoft.Xna.Framework.Point point, bool bool_0, List<AbstractLayer> layers)
+	private void Touch(Microsoft.Xna.Framework.Point point, bool pressed, List<AbstractLayer> layers)
 	{
 		AbstractLayer layer = null;
 		Microsoft.Xna.Framework.Rectangle rectangle = default(Microsoft.Xna.Framework.Rectangle);
@@ -309,7 +309,7 @@ public abstract class AbstractScene
 				}
 			}
 		}
-		if (!(layer != null && bool_0))
+		if (!(layer != null && pressed))
 		{
 			return;
 		}
@@ -341,100 +341,100 @@ public abstract class AbstractScene
 
 	private void DrawLayers(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix, IEnumerable<AbstractLayer> layers)
 	{
-		bool flag = false;
-		foreach (AbstractLayer item in layers)
+		bool begin = false;
+		foreach (AbstractLayer layer in layers)
 		{
-			if (!item.Visible)
+			if (!layer.Visible)
 			{
 				continue;
 			}
-			if (!(item is NPCLayer))
+			if (!(layer is NPCLayer))
 			{
-				if (!(item is SpineDrawableLayer))
+				if (!(layer is SpineDrawableLayer))
 				{
-					if (item is DrawableLayer)
+					if (layer is DrawableLayer)
 					{
-						if (flag)
+						if (begin)
 						{
 							spriteBatch.End();
-							flag = false;
+							begin = false;
 						}
-						((DrawableLayer)item).AdditionalMatrix = matrix;
-						item.Draw(spriteBatch);
+						((DrawableLayer)layer).AdditionalMatrix = matrix;
+						layer.Draw(spriteBatch);
 					}
 					else
 					{
-						if (!flag)
+						if (!begin)
 						{
 							spriteBatch.Begin(SpriteSortMode.Deferred, transformationMatrix: matrix, blendState: Blending);
-							flag = true;
+							begin = true;
 						}
-						item.Draw(spriteBatch);
+						layer.Draw(spriteBatch);
 					}
 					continue;
 				}
-				if (flag)
+				if (begin)
 				{
 					spriteBatch.End();
-					flag = false;
+					begin = false;
 				}
-				SpineDrawableLayer wBXNT6eIVGk6ZKExRBJ6JxXE6zb = (SpineDrawableLayer)item;
-				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb.InTalking)
+				SpineDrawableLayer spineLayer = (SpineDrawableLayer)layer;
+				if (!spineLayer.InTalking)
 				{
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetX += matrix.M41;
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetY += matrix.M42;
+					spineLayer.OffsetX += matrix.M41;
+					spineLayer.OffsetY += matrix.M42;
 				}
-				wBXNT6eIVGk6ZKExRBJ6JxXE6zb.Draw(spriteBatch, skeletonMeshRenderer);
-				if (!wBXNT6eIVGk6ZKExRBJ6JxXE6zb.InTalking)
+				spineLayer.Draw(spriteBatch, skeletonMeshRenderer);
+				if (!spineLayer.InTalking)
 				{
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetX -= matrix.M41;
-					wBXNT6eIVGk6ZKExRBJ6JxXE6zb.OffsetY -= matrix.M42;
+					spineLayer.OffsetX -= matrix.M41;
+					spineLayer.OffsetY -= matrix.M42;
 				}
 			}
 			else
 			{
-				if (flag)
+				if (begin)
 				{
 					spriteBatch.End();
-					flag = false;
+					begin = false;
 				}
-				DrawNPC(item as NPCLayer, spriteBatch, skeletonMeshRenderer, matrix);
+				DrawNPC(layer as NPCLayer, spriteBatch, skeletonMeshRenderer, matrix);
 			}
 		}
-		if (flag)
+		if (begin)
 		{
 			spriteBatch.End();
 		}
 	}
 
-	private void DrawNPC(NPCLayer npclayer, SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix)
+	private void DrawNPC(NPCLayer layer, SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix)
 	{
-		AbstractNPC NPC = npclayer.NPC;
-		if (NPC is AbstractSpineNPC)
+		AbstractNPC npc = layer.NPC;
+		if (npc is AbstractSpineNPC)
 		{
-			if (!NPC.InTalking)
+			if (!npc.InTalking)
 			{
-				((AbstractSpineNPC)NPC).X += matrix.M41;
-				((AbstractSpineNPC)NPC).Y += matrix.M42;
+				((AbstractSpineNPC)npc).X += matrix.M41;
+				((AbstractSpineNPC)npc).Y += matrix.M42;
 			}
-			((AbstractSpineNPC)NPC).Draw(spriteBatch, skeletonMeshRenderer);
-			if (!NPC.InTalking)
+			((AbstractSpineNPC)npc).Draw(spriteBatch, skeletonMeshRenderer);
+			if (!npc.InTalking)
 			{
-				((AbstractSpineNPC)NPC).X -= matrix.M41;
-				((AbstractSpineNPC)NPC).Y -= matrix.M42;
+				((AbstractSpineNPC)npc).X -= matrix.M41;
+				((AbstractSpineNPC)npc).Y -= matrix.M42;
 			}
 		}
-		else if (NPC is _xZgbANe7gi6i2DAhBEkKpR1QFLe)
+		else if (npc is BreathingNPC)
 		{
-			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, null, null, null, null, (!NPC.InTalking) ? matrix : Matrix.Identity);
-			((_xZgbANe7gi6i2DAhBEkKpR1QFLe)NPC).Draw(spriteBatch);
+			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, null, null, null, null, (!npc.InTalking) ? matrix : Matrix.Identity);
+			((BreathingNPC)npc).Draw(spriteBatch);
 			spriteBatch.End();
 		}
 	}
 
-	public virtual void SetVariant(string skin)
+	public virtual void SwitchToSubscene(string subscene)
 	{
-		Variant = skin;
+		Subscene = subscene;
 	}
 
 	public NPCLayer GetNPCLayer(string name)
@@ -442,9 +442,9 @@ public abstract class AbstractScene
 		return GetLayer(NPCLayer.Prefix + name) as NPCLayer;
 	}
 
-	public NPCLayer GetNPCLayer(NPCLocation npclocation)
+	public NPCLayer GetNPCLayer(NPCLocation location)
 	{
-		return Layers.FirstOrDefault((AbstractLayer layer) => layer is NPCLayer && ((NPCLayer)layer).NPC.Location == npclocation) as NPCLayer;
+		return Layers.FirstOrDefault((AbstractLayer layer) => layer is NPCLayer && ((NPCLayer)layer).NPC.Location == location) as NPCLayer;
 	}
 
 	public NPCLayer GetNPCLayer<T>()
@@ -452,17 +452,22 @@ public abstract class AbstractScene
 		return GetLayer(NPCLayer.Prefix + typeof(T).Name) as NPCLayer;
 	}
 
-	public NPCLayer AddNPC(AbstractNPC abstractNPC, LayerOrder layerOrder)
+	public NPCLayer AddNPC(AbstractNPC npc, LayerOrder order)
 	{
-		NPCLayer npcLayer = GetNPCLayer(abstractNPC.GetType().Name) ?? new NPCLayer(this, abstractNPC, layerOrder);
-		npcLayer.Layer = layerOrder;
-		AddLayer(npcLayer, (layerOrder == LayerOrder.Background) ? OrderBackgroundOverlay : OrderForegroundOverlay);
-		return npcLayer;
+		string name = npc.GetType().Name;
+		NPCLayer layer = GetNPCLayer(name) ?? new NPCLayer(this, npc, order);
+		layer.Layer = order;
+		Logger.Log(ConsoleColor.White, "Debug", "Adding NPC '{0}' in order {1} ({2}, {3}, {4}x{5})", name.EndsWith("NPC") ? name.Substring(0, name.Length - 3) : name, (int)order, npc.X, npc.Y, npc.Width, npc.Height);
+		AddLayer(layer, (order == LayerOrder.Background) ? OrderBackgroundOverlay : OrderForegroundOverlay);
+		return layer;
 	}
 
 	public T AddLayer<T>(T layer, int zorder, int state = 0) where T : AbstractLayer
 	{
 		layer.ZOrder = zorder;
+		if (!(layer is NPCLayer)) {
+			Logger.Log(ConsoleColor.White, "Debug", "Adding layer '{0}' in order {1} ({2}, {3}, {4}x{5})", layer.Name, ((byte)zorder), layer.X, layer.Y, layer.Width, layer.Height);
+		}
 		Layers.Add(layer);
 		IsOrderingChanged = true;
 		return layer;

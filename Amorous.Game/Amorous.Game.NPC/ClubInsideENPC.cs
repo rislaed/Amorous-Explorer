@@ -6,7 +6,7 @@ public class ClubInsideENPC : ClubStaticNPC
 		: base(game, "Assets/NPC/ClubInsideStatic", "E", bool_0: true, bool_1: true)
 	{
 		base.Scale = 0.32f;
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 }

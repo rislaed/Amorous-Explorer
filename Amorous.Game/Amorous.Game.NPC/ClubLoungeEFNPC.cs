@@ -25,10 +25,10 @@ public class ClubLoungeEFNPC : LayerNPC<ClubLoungeEFNPC.EHeads, ClubLoungeEFNPC.
 	public ClubLoungeEFNPC(IAmorous game)
 		: base(game, "Assets/NPC/ClubLoungeStatic", 1f)
 	{
-		GetPose(EPoses.Sitting, "E F club nude")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("E F club nude cock");
-		GetClothes(EPoses.Sitting, EClothes.Shirt, "E F club shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Sitting, EClothes.Pants, "E F club pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Sitting, "E F club nude").AddNudes("E F club nude cock");
+		AddClothes(EPoses.Sitting, EClothes.Shirt, "E F club shirt").AsShirt().AsNudes();
+		AddClothes(EPoses.Sitting, EClothes.Pants, "E F club pants").AsPants().AsCloth();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

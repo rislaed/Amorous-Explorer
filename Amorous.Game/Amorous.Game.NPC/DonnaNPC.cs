@@ -25,7 +25,5 @@ public class DonnaNPC : LayerNPC<DonnaNPC.EHeads, DonnaNPC.EPoses, DonnaNPC.EClo
 	public static Color Color = new Color(255, 0, 255);
 
 	public DonnaNPC(IAmorous game)
-		: base(game, string.Empty, 1f)
-	{
-	}
+		: base(game, string.Empty, 1f) {}
 }

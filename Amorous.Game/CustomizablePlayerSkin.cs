@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Newtonsoft.Json;
 
 public class CustomizablePlayerSkin : AbstractPlayerSkin
-{
+{ // _MqMsYrF1I2ghuKhx3f6aKuRGquq
 	public const int _X0FdDDJqVXe7X0FGiN6OsnaZtIF = 1040;
 	public const int _qeKBLvATV3QS3jYy3CuAJCqqAtbA = 960;
 	private const int _VTrOShnWP89ESyeqO1LPtrBoUIB = 350;
@@ -16,15 +14,15 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 	private static readonly string _U8RMOUb18ulpoDDaA6ORCGlTl9P = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
 	private static readonly string _yMVbZb1CBoa3bnnWLWCSnPFoK4o = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves/playertemplates.json");
 
-	private readonly _oVHccpskJmMcOYan50N52Esmi8k _KyRTfqdr2zZtsEAgkvOlUoQoB5j;
-	private readonly List<PlayerConfiguration> _HnbIDkSG3bmzUQyE7hhFdFKUaCcA = new List<PlayerConfiguration>();
-	private List<PlayerConfiguration> _hFBs7DhxsNnkc55oFfnyfMJ6PKb = new List<PlayerConfiguration>();
+	private readonly CustomizationData _KyRTfqdr2zZtsEAgkvOlUoQoB5j;
+	private readonly List<PlayerCustomizationData> _HnbIDkSG3bmzUQyE7hhFdFKUaCcA = new List<PlayerCustomizationData>();
+	private List<PlayerCustomizationData> _hFBs7DhxsNnkc55oFfnyfMJ6PKb = new List<PlayerCustomizationData>();
 	private bool _Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn;
-	private float _i8C0PwO83NRzGvNoyMhHwLV9HeC;
+	private float _zoomScale;
 	private int _nD28BmrDaEzCHelTAa14TKyuSyG;
-	private int _LkckKdvuh9GaAwn7XojfbJBd91r;
+	private int _zoomOffset;
 	private int _cux27d2yUtT8iqgPFghmznXR0nC = 1000;
-	private int _0nXh0yFCLkGPBWCZ8nbRLpWEQ6E;
+	private int _zoomInterpolation;
 	private float _iM7i7fLtaIJgLy3ciRpenDbf5CHb;
 	private float _ZTkD3TiiqWMrAbMLsoeIOBirnQc;
 	private int _wBWHhq9jY0K2NLTqM11LsE4yDM;
@@ -47,7 +45,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		}
 		set
 		{
-			if (_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E > 0 || _Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
+			if (_zoomInterpolation > 0 || _Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
 			{
 				return;
 			}
@@ -66,43 +64,43 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 			{
 				_cux27d2yUtT8iqgPFghmznXR0nC = _X0FdDDJqVXe7X0FGiN6OsnaZtIF;
 			}
-			_i8C0PwO83NRzGvNoyMhHwLV9HeC = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
-			_LkckKdvuh9GaAwn7XojfbJBd91r = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
+			_zoomScale = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
+			_zoomOffset = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
 			UpdateLayers();
 		}
 	}
 
 	public bool _vZ6v4a6UcXrp8I7fOK5GurTGvwg => _Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn;
-	public IEnumerable<PlayerConfiguration> _A088aXIdbVflSYtbl7vA5RjQOjXA => _HnbIDkSG3bmzUQyE7hhFdFKUaCcA;
-	public IEnumerable<PlayerConfiguration> _I6gsCHlb2BKFCJSAk9Cn5fCMAPu => _hFBs7DhxsNnkc55oFfnyfMJ6PKb;
+	public IEnumerable<PlayerCustomizationData> _A088aXIdbVflSYtbl7vA5RjQOjXA => _HnbIDkSG3bmzUQyE7hhFdFKUaCcA;
+	public IEnumerable<PlayerCustomizationData> _I6gsCHlb2BKFCJSAk9Cn5fCMAPu => _hFBs7DhxsNnkc55oFfnyfMJ6PKb;
 
 	public CustomizablePlayerSkin(IAmorous game)
 		: base(game)
 	{
 		string value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/Customization.json"));
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<_oVHccpskJmMcOYan50N52Esmi8k>(value, ExtendedSerializers);
+		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<CustomizationData>(value, ExtendedSerializers);
 		value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/DefaultTemplates.json"));
-		_Q0ZahtTsyov6ogSphMEhTo0NJfz q0ZahtTsyov6ogSphMEhTo0NJfz = JsonConvert.DeserializeObject<_Q0ZahtTsyov6ogSphMEhTo0NJfz>(value, ExtendedSerializers);
+		PlayerCustomizationTemplatesData q0ZahtTsyov6ogSphMEhTo0NJfz = JsonConvert.DeserializeObject<PlayerCustomizationTemplatesData>(value, ExtendedSerializers);
 		_HnbIDkSG3bmzUQyE7hhFdFKUaCcA.AddRange(q0ZahtTsyov6ogSphMEhTo0NJfz.Templates);
 		_NTp4LybfIeImwrI3gGcIHmtkkDF();
-		_i8C0PwO83NRzGvNoyMhHwLV9HeC = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
+		_zoomScale = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
 		_nD28BmrDaEzCHelTAa14TKyuSyG = 400;
-		_LkckKdvuh9GaAwn7XojfbJBd91r = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
+		_zoomOffset = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
 	}
 
-	public CustomizablePlayerSkin(IAmorous game, _oVHccpskJmMcOYan50N52Esmi8k _oVHccpskJmMcOYan50N52Esmi8k_0, IEnumerable<PlayerConfiguration> ienumerable_0)
+	public CustomizablePlayerSkin(IAmorous game, CustomizationData _oVHccpskJmMcOYan50N52Esmi8k_0, IEnumerable<PlayerCustomizationData> ienumerable_0)
 		: base(game)
 	{
 		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = _oVHccpskJmMcOYan50N52Esmi8k_0;
 		_HnbIDkSG3bmzUQyE7hhFdFKUaCcA.AddRange(ienumerable_0);
-		_i8C0PwO83NRzGvNoyMhHwLV9HeC = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
+		_zoomScale = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
 		_nD28BmrDaEzCHelTAa14TKyuSyG = 400;
-		_LkckKdvuh9GaAwn7XojfbJBd91r = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
+		_zoomOffset = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
 	}
 
-	public PlayerConfiguration _aeTnyiKZSEemnK3AXL8to8blcUj(PlayerConfiguration _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
+	public PlayerCustomizationData _aeTnyiKZSEemnK3AXL8to8blcUj(PlayerCustomizationData _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
 	{
-		return JsonConvert.DeserializeObject<PlayerConfiguration>(JsonConvert.SerializeObject(_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, ExtendedSerializers), ExtendedSerializers);
+		return JsonConvert.DeserializeObject<PlayerCustomizationData>(JsonConvert.SerializeObject(_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, ExtendedSerializers), ExtendedSerializers);
 	}
 
 	public void _0S3oMrwxDtOTcbzkglSllPfRq53(string string_0, PlayerData data)
@@ -125,7 +123,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		if (int_0 >= 0 && int_0 < _hFBs7DhxsNnkc55oFfnyfMJ6PKb.Count)
 		{
 			PlayerPreferences.GetPlayerData()._IVxmfAaagekk8d3cdgAtQRhbUY9(_hFBs7DhxsNnkc55oFfnyfMJ6PKb[int_0]);
-			_0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			RefreshData();
 		}
 	}
 
@@ -143,7 +141,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		if (int_0 >= 0 && int_0 < _HnbIDkSG3bmzUQyE7hhFdFKUaCcA.Count)
 		{
 			PlayerPreferences.GetPlayerData()._IVxmfAaagekk8d3cdgAtQRhbUY9(_HnbIDkSG3bmzUQyE7hhFdFKUaCcA[int_0]);
-			_0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			RefreshData();
 		}
 	}
 
@@ -152,7 +150,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		if (int_0 >= 0 && int_0 < _hFBs7DhxsNnkc55oFfnyfMJ6PKb.Count)
 		{
 			PlayerPreferences.GetPlayerData()._IVxmfAaagekk8d3cdgAtQRhbUY9(_hFBs7DhxsNnkc55oFfnyfMJ6PKb[int_0]);
-			_0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			RefreshData();
 		}
 	}
 
@@ -178,7 +176,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 	{
 		if (File.Exists(_yMVbZb1CBoa3bnnWLWCSnPFoK4o))
 		{
-			List<PlayerConfiguration> list = JsonConvert.DeserializeObject<List<PlayerConfiguration>>(File.ReadAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o), ExtendedSerializers);
+			List<PlayerCustomizationData> list = JsonConvert.DeserializeObject<List<PlayerCustomizationData>>(File.ReadAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o), ExtendedSerializers);
 			if (list != null)
 			{
 				_hFBs7DhxsNnkc55oFfnyfMJ6PKb = list;
@@ -186,11 +184,11 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		}
 	}
 
-	public void _0cFb48aKbcbREkHm9Jwptl6r6Vi()
+	public void RefreshData()
 	{
-		foreach (_WmDwUqOXqj6xpaw8SzHUPXR0uwB item in _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups)
+		foreach (CustomizationGroupData item in _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups)
 		{
-			foreach (_Qzndj0TwqO8yTQMbRwL4FFwlTbv item2 in item.Layers)
+			foreach (CustomizationLayerData item2 in item.Layers)
 			{
 				if (item2.Layer != null)
 				{
@@ -199,9 +197,9 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 			}
 		}
 		Initialize(PlayerPreferences.GetPlayerData());
-		foreach (_WmDwUqOXqj6xpaw8SzHUPXR0uwB item3 in _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups)
+		foreach (CustomizationGroupData item3 in _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups)
 		{
-			foreach (_Qzndj0TwqO8yTQMbRwL4FFwlTbv item4 in item3.Layers)
+			foreach (CustomizationLayerData item4 in item3.Layers)
 			{
 				if (item4.Layer != null && !item4.Layer.Visible)
 				{
@@ -213,20 +211,20 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		}
 	}
 
-	private void _aXgmKv0acZSej4DXtFZ3EwykcX4(_WmDwUqOXqj6xpaw8SzHUPXR0uwB _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0, _Qzndj0TwqO8yTQMbRwL4FFwlTbv _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0)
+	private void _aXgmKv0acZSej4DXtFZ3EwykcX4(CustomizationGroupData _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0, CustomizationLayerData _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0)
 	{
-		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer = NewTexturedLayer(_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName, $"Assets/PlayerCustomization/{_WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name}/{_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName}", _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.X + _nD28BmrDaEzCHelTAa14TKyuSyG, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Y + _LkckKdvuh9GaAwn7XojfbJBd91r, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.ZOrder, _i8C0PwO83NRzGvNoyMhHwLV9HeC);
+		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer = NewTexturedLayer(_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName, $"Assets/PlayerCustomization/{_WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name}/{_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName}", _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.X + _nD28BmrDaEzCHelTAa14TKyuSyG, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Y + _zoomOffset, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.ZOrder, _zoomScale);
 		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer.Visible = false;
 	}
 
 	private void _MvwR0kE4wvi2cZX9CN5Dfu3jPWG(string string_0, string string_1, Color color_0)
 	{
-		_WmDwUqOXqj6xpaw8SzHUPXR0uwB wmDwUqOXqj6xpaw8SzHUPXR0uwB = _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups.FirstOrDefault((_WmDwUqOXqj6xpaw8SzHUPXR0uwB _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0) => _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name == string_0);
+		CustomizationGroupData wmDwUqOXqj6xpaw8SzHUPXR0uwB = _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups.FirstOrDefault((CustomizationGroupData _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0) => _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name == string_0);
 		if (wmDwUqOXqj6xpaw8SzHUPXR0uwB == null)
 		{
 			return;
 		}
-		foreach (_Qzndj0TwqO8yTQMbRwL4FFwlTbv item in wmDwUqOXqj6xpaw8SzHUPXR0uwB.Layers)
+		foreach (CustomizationLayerData item in wmDwUqOXqj6xpaw8SzHUPXR0uwB.Layers)
 		{
 			if (item.Tags.Contains(string_1))
 			{
@@ -368,9 +366,9 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		if (!_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
 		{
 			_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn = true;
-			_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E = _VTrOShnWP89ESyeqO1LPtrBoUIB - _0nXh0yFCLkGPBWCZ8nbRLpWEQ6E;
-			_iM7i7fLtaIJgLy3ciRpenDbf5CHb = _i8C0PwO83NRzGvNoyMhHwLV9HeC;
-			_wBWHhq9jY0K2NLTqM11LsE4yDM = _LkckKdvuh9GaAwn7XojfbJBd91r;
+			_zoomInterpolation = _VTrOShnWP89ESyeqO1LPtrBoUIB - _zoomInterpolation;
+			_iM7i7fLtaIJgLy3ciRpenDbf5CHb = _zoomScale;
+			_wBWHhq9jY0K2NLTqM11LsE4yDM = _zoomOffset;
 			_ZTkD3TiiqWMrAbMLsoeIOBirnQc = 1f;
 			_kpLvTY6XXVX762n2WA2bxMWl8eL = 0;
 		}
@@ -381,15 +379,15 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		if (_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
 		{
 			_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn = false;
-			_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E = _VTrOShnWP89ESyeqO1LPtrBoUIB - _0nXh0yFCLkGPBWCZ8nbRLpWEQ6E;
-			_iM7i7fLtaIJgLy3ciRpenDbf5CHb = _i8C0PwO83NRzGvNoyMhHwLV9HeC;
-			_wBWHhq9jY0K2NLTqM11LsE4yDM = _LkckKdvuh9GaAwn7XojfbJBd91r;
+			_zoomInterpolation = _VTrOShnWP89ESyeqO1LPtrBoUIB - _zoomInterpolation;
+			_iM7i7fLtaIJgLy3ciRpenDbf5CHb = _zoomScale;
+			_wBWHhq9jY0K2NLTqM11LsE4yDM = _zoomOffset;
 			_ZTkD3TiiqWMrAbMLsoeIOBirnQc = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
 			_kpLvTY6XXVX762n2WA2bxMWl8eL = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
 		}
 	}
 
-	public void _BlScjiyHDsZk3jkAZbAbjUxn87sA()
+	public void ToggleZoom()
 	{
 		if (_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
 		{
@@ -404,32 +402,32 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 	public override void Update(GameTime gameTime)
 	{
 		int y = base.Game.Controller.Cursor.Y;
-		if (_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E <= 0)
+		if (_zoomInterpolation <= 0)
 		{
 			if (_vZ6v4a6UcXrp8I7fOK5GurTGvwg && base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				int num = y - _fqUhMheAq3WxPgLgXhgAKkZQOss;
 				if (num != 0)
 				{
-					_LkckKdvuh9GaAwn7XojfbJBd91r = Math.Min(Math.Max(-1600, _LkckKdvuh9GaAwn7XojfbJBd91r + num), 0);
+					_zoomOffset = Math.Min(Math.Max(-1600, _zoomOffset + num), 0);
 					UpdateLayers();
 				}
 			}
 			_fqUhMheAq3WxPgLgXhgAKkZQOss = y;
 			return;
 		}
-		_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E <= 0)
+		_zoomInterpolation -= gameTime.ElapsedGameTime.Milliseconds;
+		if (_zoomInterpolation <= 0)
 		{
-			_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E = 0;
-			_i8C0PwO83NRzGvNoyMhHwLV9HeC = _ZTkD3TiiqWMrAbMLsoeIOBirnQc;
-			_LkckKdvuh9GaAwn7XojfbJBd91r = _kpLvTY6XXVX762n2WA2bxMWl8eL;
+			_zoomInterpolation = 0;
+			_zoomScale = _ZTkD3TiiqWMrAbMLsoeIOBirnQc;
+			_zoomOffset = _kpLvTY6XXVX762n2WA2bxMWl8eL;
 		}
 		else
 		{
-			float amount = (float)_0nXh0yFCLkGPBWCZ8nbRLpWEQ6E / 350f;
-			_i8C0PwO83NRzGvNoyMhHwLV9HeC = MathHelper.Lerp(_ZTkD3TiiqWMrAbMLsoeIOBirnQc, _iM7i7fLtaIJgLy3ciRpenDbf5CHb, amount);
-			_LkckKdvuh9GaAwn7XojfbJBd91r = (int)MathHelper.Lerp(_kpLvTY6XXVX762n2WA2bxMWl8eL, _wBWHhq9jY0K2NLTqM11LsE4yDM, amount);
+			float amount = (float)_zoomInterpolation / 350f;
+			_zoomScale = MathHelper.Lerp(_ZTkD3TiiqWMrAbMLsoeIOBirnQc, _iM7i7fLtaIJgLy3ciRpenDbf5CHb, amount);
+			_zoomOffset = (int)MathHelper.Lerp(_kpLvTY6XXVX762n2WA2bxMWl8eL, _wBWHhq9jY0K2NLTqM11LsE4yDM, amount);
 		}
 		UpdateLayers();
 		_fqUhMheAq3WxPgLgXhgAKkZQOss = y;
@@ -438,11 +436,10 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 	private void UpdateLayers()
 	{
 		using List<AbstractLayer>.Enumerator enumerator = base.Layers.GetEnumerator();
-		if (enumerator.MoveNext())
+		while (enumerator.MoveNext())
 		{
-			AbstractLayer current = enumerator.Current;
-			current.Scale = _i8C0PwO83NRzGvNoyMhHwLV9HeC;
-			current.Y = _LkckKdvuh9GaAwn7XojfbJBd91r;
+			enumerator.Current.Scale = _zoomScale;
+			enumerator.Current.Y = _zoomOffset;
 		}
 	}
 }

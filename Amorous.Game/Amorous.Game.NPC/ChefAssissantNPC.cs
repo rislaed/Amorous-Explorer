@@ -30,17 +30,17 @@ public class ChefAssissantNPC : LayerNPC<ChefAssissantNPC.EHeads, ChefAssissantN
 	public ChefAssissantNPC(IAmorous game)
 		: base(game, "Assets/NPC/ChefAssissant", 1f)
 	{
-		GetPose(EPoses.Standing, "Wraak Veldheer - Nude");
-		GetClothes(EPoses.Standing, EClothes.Pants, "Wraak Veldheer - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Standing, EClothes.Shirt, "Wraak Veldheer - Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Standing, "Wraak Veldheer - Nude");
+		AddClothes(EPoses.Standing, EClothes.Pants, "Wraak Veldheer - Pants").AsPants().AsCloth();
+		AddClothes(EPoses.Standing, EClothes.Shirt, "Wraak Veldheer - Shirt").AsShirt().AsNudes();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

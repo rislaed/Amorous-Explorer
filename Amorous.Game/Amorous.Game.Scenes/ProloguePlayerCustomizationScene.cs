@@ -16,13 +16,13 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 
 	protected override void ConfirmEverything()
 	{
-		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, delegate(int int_0)
+		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.WideDialogueOffset, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
-				PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+				PhoneOverlay.Get().RefreshSkin();
 				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric1);
-				base.Game.StartCutscene("Prologue");
+				base.Game.StartCutscene(AmorousData.Prologue);
 			}
 		});
 	}

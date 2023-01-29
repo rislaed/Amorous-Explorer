@@ -1,9 +1,8 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 public class TexturedSequenceLayer : AbstractLayer
-{
+{ // _Yu3OngEjZbsgelWEySu6GE7aoYg
 	private int Value;
 
 	public Texture2D[] Textures { get; private set; }
@@ -49,7 +48,7 @@ public class TexturedSequenceLayer : AbstractLayer
 		Texture2D[] textures = Textures;
 		foreach (Texture2D texture in textures)
 		{
-			base.Scene.Game.Content._HXLRmt9GqcmA9GTG5xzRKNu3QpF(texture);
+			base.Scene.Game.Content.Unload(texture);
 		}
 	}
 }

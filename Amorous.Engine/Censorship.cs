@@ -1,5 +1,5 @@
 public static class Censorship
-{
+{ // _iExD93IWLlzVfXsU9wyrEvWgJsg
 	private static bool _censored, _topless, _bottomless;
 
 	public static bool Booties { get; set; }

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Achievements : IAchievements
-{
+{ // _bm5ybW5ND5sDF6bvP0sbYyOpvP
 	public enum AchievementType
 	{
 		Generic,
@@ -17,7 +17,7 @@ public class Achievements : IAchievements
 		public string Icon { get; }
 		public string Title { get; }
 
-		public AchievementData(string key, string id, string title, string icon = "MessageIconGeneric", AchievementType type = AchievementType.Generic)
+		public AchievementData(string key, string id, string title, string icon = AmorousData.MessageIconGeneric, AchievementType type = AchievementType.Generic)
 		{
 			Key = key;
 			ID = id;
@@ -75,51 +75,51 @@ public class Achievements : IAchievements
 
 	private static readonly List<AchievementData> _achievementDatas = new List<AchievementData>
 	{
-		new AchievementData(AchievementPhonenumberCoby, "ACHIEVEMENT_PHONENUMBER_COBY", "Coby", "MessageIconCoby", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberJax, "ACHIEVEMENT_PHONENUMBER_JAX", "Jax", "MessageIconJax", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberSeth, "ACHIEVEMENT_PHONENUMBER_SETH", "Seth", "MessageIconSeth", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberSkye, "ACHIEVEMENT_PHONENUMBER_SKYE", "Skye", "MessageIconSkye", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberDustin, "ACHIEVEMENT_PHONENUMBER_DUSTIN", "Dustin", "MessageIconDustin", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberZenith, "ACHIEVEMENT_PHONENUMBER_ZENITH", "Zenith", "MessageIconZenith", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberMercy, "ACHIEVEMENT_PHONENUMBER_MERCY", "Mercy", "MessageIconMercy", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberRemy, "ACHIEVEMENT_PHONENUMBER_REMY", "Remy", "MessageIconRemy", AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberLex, "ACHIEVEMENT_PHONENUMBER_LEX", "Lex", "MessageIconLex", AchievementType.Contact),
-		new AchievementData(AchievementDate1Coby, "ACHIEVEMENT_DATE1_COBY", "Oh, Brother!", "MessageIconCoby"),
-		new AchievementData(AchievementDate1Jax, "ACHIEVEMENT_DATE1_JAX", "Testing the Waters", "MessageIconJax"),
-		new AchievementData(AchievementDate2Jax, "ACHIEVEMENT_DATE2_JAX", "Someone Likes You", "MessageIconJax"),
-		new AchievementData(AchievementDate3Jax, "ACHIEVEMENT_DATE3_JAX", "This is Love", "MessageIconJax"),
-		new AchievementData(AchievementDate1Seth, "ACHIEVEMENT_DATE1_SETH", "Testing the Waters", "MessageIconSeth"),
-		new AchievementData(AchievementDate2Seth, "ACHIEVEMENT_DATE2_SETH", "Someone Likes You", "MessageIconSeth"),
-		new AchievementData(AchievementDate3Seth, "ACHIEVEMENT_DATE3_SETH", "This is Love", "MessageIconSeth"),
-		new AchievementData(AchievementDate1Skye, "ACHIEVEMENT_DATE1_SKYE", "Testing the Waters", "MessageIconSkye"),
-		new AchievementData(AchievementDate2Skye, "ACHIEVEMENT_DATE2_SKYE", "Someone Likes You", "MessageIconSkye"),
-		new AchievementData(AchievementDate3Skye, "ACHIEVEMENT_DATE3_SKYE", "This is Love", "MessageIconSkye"),
-		new AchievementData(AchievementDate1Dustin, "ACHIEVEMENT_DATE1_DUSTIN", "Testing the Waters", "MessageIconDustin"),
-		new AchievementData(AchievementDate2Dustin, "ACHIEVEMENT_DATE2_DUSTIN", "Someone Likes You", "MessageIconDustin"),
-		new AchievementData(AchievementDate3Dustin, "ACHIEVEMENT_DATE3_DUSTIN", "This is Love", "MessageIconDustin"),
-		new AchievementData(AchievementDate1Zenith, "ACHIEVEMENT_DATE1_ZENITH", "Testing the Waters", "MessageIconZenith"),
-		new AchievementData(AchievementDate2Zenith, "ACHIEVEMENT_DATE2_ZENITH", "Someone Likes You", "MessageIconZenith"),
-		new AchievementData(AchievementDate3Zenith, "ACHIEVEMENT_DATE3_ZENITH", "This is Love", "MessageIconZenith"),
-		new AchievementData(AchievementDate1Mercy, "ACHIEVEMENT_DATE1_MERCY", "Testing the Waters", "MessageIconMercy"),
-		new AchievementData(AchievementDate2Mercy, "ACHIEVEMENT_DATE2_MERCY", "Someone Likes You", "MessageIconMercy"),
-		new AchievementData(AchievementDate3Mercy, "ACHIEVEMENT_DATE3_MERCY", "This is Love", "MessageIconMercy"),
-		new AchievementData(AchievementDate1Remy, "ACHIEVEMENT_DATE1_REMY", "Testing the Waters", "MessageIconRemy"),
-		new AchievementData(AchievementDate2Remy, "ACHIEVEMENT_DATE2_REMY", "Someone Likes You", "MessageIconRemy"),
-		new AchievementData(AchievementDate3Remy, "ACHIEVEMENT_DATE3_REMY", "This is Love", "MessageIconRemy"),
-		new AchievementData(AchievementDate1Lex, "ACHIEVEMENT_DATE1_LEX", "Testing the Waters", "MessageIconLex"),
-		new AchievementData(AchievementDate2Lex, "ACHIEVEMENT_DATE2_LEX", "Someone Likes You", "MessageIconLex"),
-		new AchievementData(AchievementDate3Lex, "ACHIEVEMENT_DATE3_LEX", "This is Love", "MessageIconLex"),
+		new AchievementData(AchievementPhonenumberCoby, "ACHIEVEMENT_PHONENUMBER_COBY", "Coby", AmorousData.MessageIconCoby, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberJax, "ACHIEVEMENT_PHONENUMBER_JAX", "Jax", AmorousData.MessageIconJax, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberSeth, "ACHIEVEMENT_PHONENUMBER_SETH", "Seth", AmorousData.MessageIconSeth, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberSkye, "ACHIEVEMENT_PHONENUMBER_SKYE", "Skye", AmorousData.MessageIconSkye, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberDustin, "ACHIEVEMENT_PHONENUMBER_DUSTIN", "Dustin", AmorousData.MessageIconDustin, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberZenith, "ACHIEVEMENT_PHONENUMBER_ZENITH", "Zenith", AmorousData.MessageIconZenith, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberMercy, "ACHIEVEMENT_PHONENUMBER_MERCY", "Mercy", AmorousData.MessageIconMercy, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberRemy, "ACHIEVEMENT_PHONENUMBER_REMY", "Remy", AmorousData.MessageIconRemy, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberLex, "ACHIEVEMENT_PHONENUMBER_LEX", "Lex", AmorousData.MessageIconLex, AchievementType.Contact),
+		new AchievementData(AchievementDate1Coby, "ACHIEVEMENT_DATE1_COBY", "Oh, Brother!", AmorousData.MessageIconCoby),
+		new AchievementData(AchievementDate1Jax, "ACHIEVEMENT_DATE1_JAX", "Testing the Waters", AmorousData.MessageIconJax),
+		new AchievementData(AchievementDate2Jax, "ACHIEVEMENT_DATE2_JAX", "Someone Likes You", AmorousData.MessageIconJax),
+		new AchievementData(AchievementDate3Jax, "ACHIEVEMENT_DATE3_JAX", "This is Love", AmorousData.MessageIconJax),
+		new AchievementData(AchievementDate1Seth, "ACHIEVEMENT_DATE1_SETH", "Testing the Waters", AmorousData.MessageIconSeth),
+		new AchievementData(AchievementDate2Seth, "ACHIEVEMENT_DATE2_SETH", "Someone Likes You", AmorousData.MessageIconSeth),
+		new AchievementData(AchievementDate3Seth, "ACHIEVEMENT_DATE3_SETH", "This is Love", AmorousData.MessageIconSeth),
+		new AchievementData(AchievementDate1Skye, "ACHIEVEMENT_DATE1_SKYE", "Testing the Waters", AmorousData.MessageIconSkye),
+		new AchievementData(AchievementDate2Skye, "ACHIEVEMENT_DATE2_SKYE", "Someone Likes You", AmorousData.MessageIconSkye),
+		new AchievementData(AchievementDate3Skye, "ACHIEVEMENT_DATE3_SKYE", "This is Love", AmorousData.MessageIconSkye),
+		new AchievementData(AchievementDate1Dustin, "ACHIEVEMENT_DATE1_DUSTIN", "Testing the Waters", AmorousData.MessageIconDustin),
+		new AchievementData(AchievementDate2Dustin, "ACHIEVEMENT_DATE2_DUSTIN", "Someone Likes You", AmorousData.MessageIconDustin),
+		new AchievementData(AchievementDate3Dustin, "ACHIEVEMENT_DATE3_DUSTIN", "This is Love", AmorousData.MessageIconDustin),
+		new AchievementData(AchievementDate1Zenith, "ACHIEVEMENT_DATE1_ZENITH", "Testing the Waters", AmorousData.MessageIconZenith),
+		new AchievementData(AchievementDate2Zenith, "ACHIEVEMENT_DATE2_ZENITH", "Someone Likes You", AmorousData.MessageIconZenith),
+		new AchievementData(AchievementDate3Zenith, "ACHIEVEMENT_DATE3_ZENITH", "This is Love", AmorousData.MessageIconZenith),
+		new AchievementData(AchievementDate1Mercy, "ACHIEVEMENT_DATE1_MERCY", "Testing the Waters", AmorousData.MessageIconMercy),
+		new AchievementData(AchievementDate2Mercy, "ACHIEVEMENT_DATE2_MERCY", "Someone Likes You", AmorousData.MessageIconMercy),
+		new AchievementData(AchievementDate3Mercy, "ACHIEVEMENT_DATE3_MERCY", "This is Love", AmorousData.MessageIconMercy),
+		new AchievementData(AchievementDate1Remy, "ACHIEVEMENT_DATE1_REMY", "Testing the Waters", AmorousData.MessageIconRemy),
+		new AchievementData(AchievementDate2Remy, "ACHIEVEMENT_DATE2_REMY", "Someone Likes You", AmorousData.MessageIconRemy),
+		new AchievementData(AchievementDate3Remy, "ACHIEVEMENT_DATE3_REMY", "This is Love", AmorousData.MessageIconRemy),
+		new AchievementData(AchievementDate1Lex, "ACHIEVEMENT_DATE1_LEX", "Testing the Waters", AmorousData.MessageIconLex),
+		new AchievementData(AchievementDate2Lex, "ACHIEVEMENT_DATE2_LEX", "Someone Likes You", AmorousData.MessageIconLex),
+		new AchievementData(AchievementDate3Lex, "ACHIEVEMENT_DATE3_LEX", "This is Love", AmorousData.MessageIconLex),
 		new AchievementData(AchievementGeneric1, "ACHIEVEMENT_GENERIC1", "Bells and Whistles"),
 		new AchievementData(AchievementGeneric2, "ACHIEVEMENT_GENERIC2", "Welcome to Amorous"),
-		new AchievementData(AchievementGeneric3, "ACHIEVEMENT_GENERIC3", "Hey Mr. D.J.", "MessageIconDJ"),
+		new AchievementData(AchievementGeneric3, "ACHIEVEMENT_GENERIC3", "Hey Mr. D.J.", AmorousData.MessageIconDJ),
 		new AchievementData(AchievementGeneric4, "ACHIEVEMENT_GENERIC4", "Last Night a D.J.Saved My Life"),
 		new AchievementData(AchievementGeneric5, "ACHIEVEMENT_GENERIC5", "Ohh, what does THIS button do?"),
 		new AchievementData(AchievementGeneric6, "ACHIEVEMENT_GENERIC6", "Clothes Maketh Man"),
-		new AchievementData(AchievementGeneric7, "ACHIEVEMENT_GENERIC7", "Gunslinger", "MessageIconShootingRange"),
-		new AchievementData(AchievementGeneric8, "ACHIEVEMENT_GENERIC8", "Boom Headshot!", "MessageIconShootingRange"),
-		new AchievementData(AchievementGeneric9, "ACHIEVEMENT_GENERIC9", "Steady Aim", "MessageIconShootingRange"),
-		new AchievementData(AchievementGeneric10, "ACHIEVEMENT_GENERIC10", "Sleight of Hand", "MessageIconShootingRange"),
-		new AchievementData(AchievementGeneric11, "ACHIEVEMENT_GENERIC11", "Yes Chef!", "MessageIconCooking")
+		new AchievementData(AchievementGeneric7, "ACHIEVEMENT_GENERIC7", "Gunslinger", AmorousData.MessageIconShootingRange),
+		new AchievementData(AchievementGeneric8, "ACHIEVEMENT_GENERIC8", "Boom Headshot!", AmorousData.MessageIconShootingRange),
+		new AchievementData(AchievementGeneric9, "ACHIEVEMENT_GENERIC9", "Steady Aim", AmorousData.MessageIconShootingRange),
+		new AchievementData(AchievementGeneric10, "ACHIEVEMENT_GENERIC10", "Sleight of Hand", AmorousData.MessageIconShootingRange),
+		new AchievementData(AchievementGeneric11, "ACHIEVEMENT_GENERIC11", "Yes Chef!", AmorousData.MessageIconCooking)
 	};
 
 	private static readonly Dictionary<string, AchievementData> _achievements = _achievementDatas.ToDictionary((AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0.Key, (AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0);
@@ -141,109 +141,109 @@ public class Achievements : IAchievements
 
 	public void GainCutsceneStageAchievement(string name, int stage)
 	{
-		if (name == "Clothes")
+		if (name == AmorousData.Clothes)
 		{
 			GainAchievement(AchievementGeneric6);
 		}
-		else if (name == "Prologue" && stage == 30)
+		else if (name == AmorousData.Prologue && stage == 30)
 		{
 			GainAchievement(AchievementGeneric4);
 		}
-		else if (name == "CobyDate")
+		else if (name == AmorousData.CobyDate)
 		{
 			GainAchievement(AchievementDate1Coby);
 		}
-		else if (name == "DJ" && stage == 10)
+		else if (name == AmorousData.DJ && stage == 10)
 		{
-			NotifyAchievedContact("Club Amorous DJ", "MessageIconDJ");
+			NotifyAchievedContact("Club Amorous DJ", AmorousData.MessageIconDJ);
 		}
 	}
 
-	public void SetDecimal(string key, int value)
+	public void SetStage(string key, int value)
 	{
-		if (key == "JaxDate" && value == 20)
+		if (key == AmorousData.JaxDate && value == 20)
 		{
 			GainAchievement(AchievementDate1Jax);
 		}
-		else if (key == "JaxDate" && value == 30)
+		else if (key == AmorousData.JaxDate && value == 30)
 		{
 			GainAchievement(AchievementDate2Jax);
 		}
-		else if (key == "JaxDate" && value == 40)
+		else if (key == AmorousData.JaxDate && value == AmorousData.JaxStateCompleted)
 		{
 			GainAchievement(AchievementDate3Jax);
 		}
-		else if (key == "SethDate" && value == 20)
+		else if (key == AmorousData.SethDate && value == 20)
 		{
 			GainAchievement(AchievementDate1Seth);
 		}
-		else if (!(key == "SethDate") || value != 30)
+		else if (!(key == AmorousData.SethDate) || value != 30)
 		{
-			if (key == "SethDate" && value == 40)
+			if (key == AmorousData.SethDate && value == AmorousData.SethStateCompleted)
 			{
 				GainAchievement(AchievementDate3Seth);
 			}
-			else if (key == "SkyeDate" && value == 40)
+			else if (key == AmorousData.SkyeDate && value == 40)
 			{
 				GainAchievement(AchievementDate1Skye);
 			}
-			else if (key == "SkyeDate" && value == 50)
+			else if (key == AmorousData.SkyeDate && value == 50)
 			{
 				GainAchievement(AchievementDate2Skye);
 			}
-			else if (key == "SkyeDate" && value == 60)
+			else if (key == AmorousData.SkyeDate && value == AmorousData.SkyeStateCompleted)
 			{
 				GainAchievement(AchievementDate3Skye);
 			}
-			else if (key == "DustinDate" && value == 50)
+			else if (key == AmorousData.DustinDate && value == 50)
 			{
 				GainAchievement(AchievementDate1Dustin);
 			}
-			else if (key == "DustinDate" && value == 60)
+			else if (key == AmorousData.DustinDate && value == 60)
 			{
 				GainAchievement(AchievementDate2Dustin);
 			}
-			else if (!(key == "DustinDate") || value != 70)
+			else if (!(key == AmorousData.DustinDate) || value != AmorousData.DustinStateCompleted)
 			{
-				if (!(key == "ZenithDate") || value != 30)
+				if (!(key == AmorousData.ZenithDate) || value != 30)
 				{
-					if (!(key == "ZenithDate") || value != 40)
+					if (!(key == AmorousData.ZenithDate) || value != 40)
 					{
-						if (key == "ZenithDate" && value == 60)
+						if (key == AmorousData.ZenithDate && value == 60)
 						{
 							GainAchievement(AchievementDate3Zenith);
 						}
-						else if (key == "MercyDate" && value == 30)
+						else if (key == AmorousData.MercyDate && value == 30)
 						{
 							GainAchievement(AchievementDate1Mercy);
 						}
-						else if (key == "MercyDate" && value == 40)
+						else if (key == AmorousData.MercyDate && value == 40)
 						{
 							GainAchievement(AchievementDate2Mercy);
 						}
-						else if (key == "MercyDate" && value == 60)
+						else if (key == AmorousData.MercyDate && value == AmorousData.SkyeStateCompleted)
 						{
 							GainAchievement(AchievementDate3Mercy);
 						}
-						else if (!(key == "RemyDate") || value != 20)
+						else if (!(key == AmorousData.RemyDate) || value != 20)
 						{
-							if (key == "RemyDate" && value == 30)
+							if (key == AmorousData.RemyDate && value == 30)
 							{
 								GainAchievement(AchievementDate2Remy);
 							}
-							else if (key == "RemyDate" && value == 40)
+							else if (key == AmorousData.RemyDate && value == AmorousData.RemyStateCompleted)
 							{
 								GainAchievement(AchievementDate3Remy);
 							}
-							else if (key == "LexDate" && value == 20)
+							else if (key == AmorousData.LexDate && value == 20)
 							{
 								GainAchievement(AchievementDate1Lex);
 							}
-							else if (key == "LexDate" && value == 30)
+							else if (key == AmorousData.LexDate && value == 30)
 							{
 								GainAchievement(AchievementDate2Lex);
 							}
-							else if (key == "LexDate" && value == 50)
+							else if (key == AmorousData.LexDate && value == AmorousData.LexStateCompleted)
 							{
 								GainAchievement(AchievementDate3Lex);
 							}
@@ -274,12 +274,12 @@ public class Achievements : IAchievements
 		}
 	}
 
-	public void SetBit(string key, bool value)
+	public void SetFlag(string key, bool value)
 	{
 		// ?
 	}
 
-	public void GainContact(PlayerData.EPhoneContacts contact)
+	public void UnlockContact(PlayerData.EPhoneContacts contact)
 	{
 		switch (contact)
 		{
@@ -316,11 +316,11 @@ public class Achievements : IAchievements
 	public void GainAchievement(string name)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetBit(name))
+		if (data.GetFlag(name))
 		{
 			return;
 		}
-		data.SetBit(name, bool_0: true);
+		data.SetFlag(name, bool_0: true);
 		if (_achievements.TryGetValue(name, out var value))
 		{
 			if (_steam != null)
@@ -351,12 +351,12 @@ public class Achievements : IAchievements
 	public void GainTutorial(string key)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (!data.GetBit(key))
+		if (!data.GetFlag(key))
 		{
-			data.SetBit(key, bool_0: true);
+			data.SetFlag(key, bool_0: true);
 			if (key == AchievementTutorial)
 			{
-				_game.ShowMessage("MessageIconGeneric", "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
+				_game.ShowMessage(AmorousData.MessageIconGeneric, "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
 			}
 		}
 	}

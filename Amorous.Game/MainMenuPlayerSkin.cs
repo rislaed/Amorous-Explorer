@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 
 public class MainMenuPlayerSkin : AbstractPlayerSkin
-{
+{ // _hiwkgwXJpRLUFatcgZFfH6ECNfm
 	private static TexturedLayer _bicep, _bicepStripe, _nails, _hand, _handColor, _forearm,
 								 _forearmColorLong, _forearmColorShort, _forearmStripes,
 								 _forearmAvian, _bicepAvian, _handAvian;

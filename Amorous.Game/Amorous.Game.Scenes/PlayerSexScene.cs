@@ -33,18 +33,18 @@ public class PlayerSexScene : AbstractScene
 		}
 		if (base.Game.Controller.JustPressed(Keys.S))
 		{
-			string[] array = base.Game.Sexscene.GetSkins();
+			string[] array = base.Game.Sexscene.GetSubscenes();
 			if (array.Length == 0)
 			{
 				return;
 			}
-			int num = Array.IndexOf(array, base.Game.Sexscene.Variant);
+			int num = Array.IndexOf(array, base.Game.Sexscene.Subscene);
 			num++;
 			if (num >= array.Length)
 			{
 				num = 0;
 			}
-			base.Game.Sexscene.SetSkin(array[num]);
+			base.Game.Sexscene.SwitchToSubscene(array[num]);
 		}
 		if (base.Game.Controller.JustPressed(Keys.Z))
 		{
@@ -54,23 +54,23 @@ public class PlayerSexScene : AbstractScene
 		{
 			if (base.Game.Controller.JustPressed(Keys.Space))
 			{
-				base.Game.Sexscene._4XV5xPzQUH5ABIwpxH3yf5EIAyL(1);
+				base.Game.Sexscene.ToPhase(1);
 			}
 			if (base.Game.Controller.JustPressed(Keys.LeftControl))
 			{
-				base.Game.Sexscene._4XV5xPzQUH5ABIwpxH3yf5EIAyL(-1);
+				base.Game.Sexscene.ToPhase(-1);
 			}
-			if (base.Game.Sexscene.Cumming && base.Game.Controller.JustPressed(Keys.X))
+			if (base.Game.Sexscene.Exploded && base.Game.Controller.JustPressed(Keys.X))
 			{
-				base.Game.Sexscene._paoLItUYkFWaGSDnCAvBagJ1F5T();
+				base.Game.Sexscene.Clean();
 			}
-			else if (!base.Game.Sexscene.Cumming && base.Game.Controller.JustPressed(Keys.C))
+			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.JustPressed(Keys.C))
 			{
-				base.Game.Sexscene._JHfBnmyItvKJDQtdUPp2yLsm4yR();
+				base.Game.Sexscene.ExplodeNow();
 			}
-			else if (!base.Game.Sexscene.Cumming && base.Game.Controller.JustPressed(Keys.V))
+			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.JustPressed(Keys.V))
 			{
-				base.Game.Sexscene._oHE0dGUBNplXQia6K85vMaNc8jp();
+				base.Game.Sexscene.Explode();
 			}
 		}
 	}
@@ -86,7 +86,7 @@ public class PlayerSexScene : AbstractScene
 		if (Censorship.Censored)
 		{
 			int num = 10;
-			if (base.Game.Sexscene != null && base.Game.Sexscene.GetSkins().Length != 0)
+			if (base.Game.Sexscene != null && base.Game.Sexscene.GetSubscenes().Length != 0)
 			{
 				spriteBatch.DrawString(_font, "Cycle skin (S)", new Vector2(10f, num), Color.White);
 				num += 40;
@@ -104,7 +104,7 @@ public class PlayerSexScene : AbstractScene
 			spriteBatch.DrawString(_font, "Clean mess (X)", new Vector2(10f, 90f), Color.White);
 			spriteBatch.DrawString(_font, "Insta-mess (C)", new Vector2(10f, 130f), Color.White);
 			spriteBatch.DrawString(_font, "Finish it! (V)", new Vector2(10f, 170f), Color.White);
-			if (base.Game.Sexscene != null && base.Game.Sexscene.GetSkins().Length != 0)
+			if (base.Game.Sexscene != null && base.Game.Sexscene.GetSubscenes().Length != 0)
 			{
 				spriteBatch.DrawString(_font, "Cycle skin (S)", new Vector2(10f, 250f), Color.White);
 			}

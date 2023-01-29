@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Net;
-using System.Runtime.CompilerServices;
 using Amorous.Game.NPC;
 using Newtonsoft.Json;
 using Squid;
@@ -49,7 +48,7 @@ public class StartupScene : AbstractScene
 		AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
 		AddTexturedLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
 		AddForegroundTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
 		Window window = new Window
 		{
 			Position = new Point(704, 412),
@@ -70,7 +69,7 @@ public class StartupScene : AbstractScene
 		_njC7ZfEM6PTCffwkw18LisM3W9E = new TextBox
 		{
 			Position = new Point(140, 130),
-			Size = new Point(200, 30),
+			Size = new Point(200, AmorousData.ButtonHeight),
 			TabIndex = 1
 		};
 		if (File.Exists(_Pxncvon3rRvuowKL1yYBOZjpf2y))
@@ -86,14 +85,14 @@ public class StartupScene : AbstractScene
 		TextBox _mzwWNbSlBetGnbEr0j6IpMenjkp = new TextBox
 		{
 			Position = new Point(140, 165),
-			Size = new Point(200, 30),
+			Size = new Point(200, AmorousData.ButtonHeight),
 			TabIndex = 2,
 			IsPassword = true
 		};
 		_9nCiJkYgPYczxXJNlo8Z7BbfdsB = new CheckBox
 		{
 			Position = new Point(15, 200),
-			Size = new Point(300, 30),
+			Size = new Point(300, AmorousData.ButtonHeight),
 			Text = "Remember username",
 			Checked = true
 		};
@@ -127,23 +126,23 @@ public class StartupScene : AbstractScene
 					}
 					else
 					{
-						base.Squid.ShowConfirm("Sorry, please try again!", 250);
+						base.Squid.ShowConfirm("Sorry, please try again!", AmorousData.WideDialogueOffset);
 					}
 				}
 				else
 				{
-					base.Squid.ShowConfirm(apiReponse.message, 500);
+					base.Squid.ShowConfirm(apiReponse.message, AmorousData.ShortDialogueOffset);
 				}
 			}
 			catch (Exception)
 			{
-				base.Squid.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", 500);
+				base.Squid.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", AmorousData.ShortDialogueOffset);
 			}
 		};
 		Button button2 = new Button
 		{
 			Position = new Point(120, 240),
-			Size = new Point(180, 30),
+			Size = new Point(180, AmorousData.ButtonHeight),
 			Text = "Forgot password?"
 		};
 		button2.MouseClick += delegate

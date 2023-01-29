@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Squid;
 
 public class TypingDialogue
-{
+{ // _nkzqFdEfDyLcyGikIKGcHjklI4y
 	private enum _QGnsmTImvr3dFBCr8hpzDZiCWLP
 	{
 		None,
@@ -312,7 +312,7 @@ public class TypingDialogue
 
 	private class _3Kf8FQeGRyCD8FhytGMMBQFkhFl : InteractableOverlay
 	{
-		private readonly _iHJrndJdM1jj9TEnuU3BvgdDuvf[] _92GwVFulItjaDs6osQZyIk9xgMH;
+		private readonly ButtonInteractable[] _92GwVFulItjaDs6osQZyIk9xgMH;
 
 		private int _VZ02JDgQaX5qJVSBot6TM2rtZ3O;
 
@@ -323,14 +323,14 @@ public class TypingDialogue
 		public _3Kf8FQeGRyCD8FhytGMMBQFkhFl(IAmorous game, Texture2D texture2D_0, Texture2D texture2D_1, SpriteFont spriteFont_0)
 			: base(game)
 		{
-			_92GwVFulItjaDs6osQZyIk9xgMH = new _iHJrndJdM1jj9TEnuU3BvgdDuvf[5];
+			_92GwVFulItjaDs6osQZyIk9xgMH = new ButtonInteractable[5];
 			_mc4p6vpMBZ0hOHPqLBE5H6OxT7f = -1;
 			_VZ02JDgQaX5qJVSBot6TM2rtZ3O = 0;
-			_92GwVFulItjaDs6osQZyIk9xgMH[0] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 1", new Color(250, 251, 162), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _ICiyaoVDO6XvJb0FsHkwv7e4YrS);
-			_92GwVFulItjaDs6osQZyIk9xgMH[1] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 2", new Color(165, 250, 171), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _hXUKutqtuyapSBUWT1AVUzerGjc);
-			_92GwVFulItjaDs6osQZyIk9xgMH[2] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 3", new Color(171, 199, 255), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _IniwNTOJAFQzPUg40NMaN8sku9k);
-			_92GwVFulItjaDs6osQZyIk9xgMH[3] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 4", new Color(228, 187, 253), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _5TLz87dh7yxXEP5B2Lceq9uOAp1);
-			_92GwVFulItjaDs6osQZyIk9xgMH[4] = _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_0, texture2D_1, spriteFont_0, "Choice 5", new Color(255, 171, 179), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _0wd4x937or88gFFP0wpuEK3BkyM);
+			_92GwVFulItjaDs6osQZyIk9xgMH[0] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 1", new Color(250, 251, 162), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _ICiyaoVDO6XvJb0FsHkwv7e4YrS);
+			_92GwVFulItjaDs6osQZyIk9xgMH[1] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 2", new Color(165, 250, 171), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _hXUKutqtuyapSBUWT1AVUzerGjc);
+			_92GwVFulItjaDs6osQZyIk9xgMH[2] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 3", new Color(171, 199, 255), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _IniwNTOJAFQzPUg40NMaN8sku9k);
+			_92GwVFulItjaDs6osQZyIk9xgMH[3] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 4", new Color(228, 187, 253), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _5TLz87dh7yxXEP5B2Lceq9uOAp1);
+			_92GwVFulItjaDs6osQZyIk9xgMH[4] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 5", new Color(255, 171, 179), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _0wd4x937or88gFFP0wpuEK3BkyM);
 			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(-1);
 		}
 
@@ -351,11 +351,11 @@ public class TypingDialogue
 				{
 					_92GwVFulItjaDs6osQZyIk9xgMH[j].Visible = false;
 				}
-				int num = (int)(30f + (float)(690 - _92GwVFulItjaDs6osQZyIk9xgMH[0]._2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height - (_92GwVFulItjaDs6osQZyIk9xgMH[0]._2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height + 15) * (_VZ02JDgQaX5qJVSBot6TM2rtZ3O - 1)) / 2f);
+				int num = (int)(30f + (float)(690 - _92GwVFulItjaDs6osQZyIk9xgMH[0].Bounds.Height - (_92GwVFulItjaDs6osQZyIk9xgMH[0].Bounds.Height + 15) * (_VZ02JDgQaX5qJVSBot6TM2rtZ3O - 1)) / 2f);
 				for (int k = 0; k < _VZ02JDgQaX5qJVSBot6TM2rtZ3O; k++)
 				{
-					_92GwVFulItjaDs6osQZyIk9xgMH[k].X = (int)((float)(1920 - _92GwVFulItjaDs6osQZyIk9xgMH[k]._2psWLw4AI8EIjQzaXnhGg8M1FnaA.Width) / 2f);
-					_92GwVFulItjaDs6osQZyIk9xgMH[k].Y = num + (_92GwVFulItjaDs6osQZyIk9xgMH[k]._2psWLw4AI8EIjQzaXnhGg8M1FnaA.Height + 15) * k;
+					_92GwVFulItjaDs6osQZyIk9xgMH[k].X = (int)((float)(1920 - _92GwVFulItjaDs6osQZyIk9xgMH[k].Bounds.Width) / 2f);
+					_92GwVFulItjaDs6osQZyIk9xgMH[k].Y = num + (_92GwVFulItjaDs6osQZyIk9xgMH[k].Bounds.Height + 15) * k;
 				}
 			}
 		}
@@ -365,8 +365,8 @@ public class TypingDialogue
 			_zatbtX2c8i2hGOTptNymBxA8kVI = false;
 			_mc4p6vpMBZ0hOHPqLBE5H6OxT7f = int_0;
 			_VZ02JDgQaX5qJVSBot6TM2rtZ3O = 0;
-			_iHJrndJdM1jj9TEnuU3BvgdDuvf[] array = _92GwVFulItjaDs6osQZyIk9xgMH;
-			foreach (_iHJrndJdM1jj9TEnuU3BvgdDuvf iHJrndJdM1jj9TEnuU3BvgdDuvf in array)
+			ButtonInteractable[] array = _92GwVFulItjaDs6osQZyIk9xgMH;
+			foreach (ButtonInteractable iHJrndJdM1jj9TEnuU3BvgdDuvf in array)
 			{
 				iHJrndJdM1jj9TEnuU3BvgdDuvf.Visible = false;
 			}
@@ -763,7 +763,7 @@ public class TypingDialogue
 		_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
 	}
 
-	private void _QrgbXEg7MMeD9Ybz12fFVsbmAd9(_oDZZ0F7Qg08utTIjAaoyIbeDuFG _oDZZ0F7Qg08utTIjAaoyIbeDuFG_0)
+	private void Play(_oDZZ0F7Qg08utTIjAaoyIbeDuFG _oDZZ0F7Qg08utTIjAaoyIbeDuFG_0)
 	{
 		Value = _oDZZ0F7Qg08utTIjAaoyIbeDuFG_0;
 		Value._TN6mQ7Lbe501vwqhgs7b8d6wd1b(_font, _23jI7jMreLgRTSs5rhEGCUkow2b);
@@ -812,9 +812,9 @@ public class TypingDialogue
 		Singleton._bkUB7WagRc6RJkVVY4DTGPizp0F(new _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string_0, string_1, color_0));
 	}
 
-	public static void _zunSyHn4DekdA6CngP10dXcR1kq(string string_0, string string_1, Color color_0)
+	public static void Play(string string_0, string string_1, Color color_0)
 	{
-		Singleton._QrgbXEg7MMeD9Ybz12fFVsbmAd9(new _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string_0, string_1, color_0));
+		Singleton.Play(new _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string_0, string_1, color_0));
 	}
 
 	public static void Next()
@@ -825,7 +825,7 @@ public class TypingDialogue
 		}
 	}
 
-	public static void DiplayOptions(params string[] string_0)
+	public static void Choice(params string[] string_0)
 	{
 		Singleton._overlay._ww4wA3UwGXxaAlMqo3jhy6Bnh8g(string_0);
 	}

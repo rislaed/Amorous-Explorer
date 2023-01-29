@@ -6,6 +6,6 @@ public class ShowerScene : AbstractScene
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/Shower/Shower BG", 0, 0);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/4U - Long Gone", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.LongGoneTrack, 0.4f);
 	}
 }

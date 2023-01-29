@@ -28,11 +28,11 @@ public class ClubInsideDancerDNPC : SpineNPC<ClubInsideDancerDNPC.EHeads, ClubIn
 		: base(game, "Assets/NPC/ClubInsideStatic/Dancer D", 0.8f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Dancing");
-		GetEmotion(EHeads.Smirk, "Head");
-		GetPose(EPoses.Dancing, "Arm right", "Body", "Left forearm", "Tail")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
-		GetClothes(EPoses.Dancing, EClothes.Shirt, "Shirt", "Shirt arm right", "Shirt left forearm")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Dancing, EClothes.Pants, "Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddEmotion(EHeads.Smirk, "Head");
+		AddPose(EPoses.Dancing, "Arm right", "Body", "Left forearm", "Tail").AddNudes("Cock");
+		AddClothes(EPoses.Dancing, EClothes.Shirt, "Shirt", "Shirt arm right", "Shirt left forearm").AsShirt().AsNudes();
+		AddClothes(EPoses.Dancing, EClothes.Pants, "Pants").AsPants().AsCloth();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

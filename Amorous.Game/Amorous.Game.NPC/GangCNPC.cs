@@ -24,7 +24,6 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 	}
 
 	public static string Name = "Jade";
-
 	public static Color Color = new Color(98, 178, 17);
 
 	public GangCNPC(IAmorous game)
@@ -32,22 +31,22 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 	{
 		Width = 610;
 		Height = 1002;
-		GetPose(EPoses.Neutral, "Jade Nude");
-		GetClothes(EPoses.Neutral, EClothes.Shirt, "Jade Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Neutral, EClothes.Pants, "Jade Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Neutral, "Jade Nude");
+		AddClothes(EPoses.Neutral, EClothes.Shirt, "Jade Shirt").AsShirt().AsNudes();
+		AddClothes(EPoses.Neutral, EClothes.Pants, "Jade Pants").AsPants().AsCloth();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
+	protected override string[] GetPieces()
 	{
 		return new string[3] { "Jade Nude", "Jade Pants", "Jade Shirt" };
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

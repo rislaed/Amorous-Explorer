@@ -5,7 +5,7 @@ using Amorous.Engine.NPC;
 using Newtonsoft.Json;
 
 public class CutsceneState
-{
+{ // _zkUeZhJDizkmvvRfp4S0G7aap8J
 	public class NPCState
 	{
 		[JsonProperty("Name")]

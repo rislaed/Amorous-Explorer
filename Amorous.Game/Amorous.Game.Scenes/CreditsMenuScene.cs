@@ -44,7 +44,7 @@ public class CreditsMenuScene : AbstractScene
 	public CreditsMenuScene(IAmorous game)
 		: base(game)
 	{
-		CreditsMenuScene _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA = this;
+		CreditsMenuScene self = this;
 		base.Blending = BlendState.AlphaBlend;
 		_t76cjDKppsRdw5nUq3tnNw3ypAv = typeof(MainMenuScene);
 		_ICAb9QUE8hnbl0uKD8fBpEB1kSV = "Press Escape or Left-click here to return to the Main Menu.";
@@ -57,7 +57,7 @@ public class CreditsMenuScene : AbstractScene
 		_lHXUPUciX33biAqfQQ8Yx79nzNB = _tYZIsh9jywDMNNUVaAxLdrUBPIS.MeasureString("Test").Y;
 		_3STGOMMEQo4zHKNnz9z7ftUA5Df = _6YCQhlMaqcDds8uGX1g8fjBKqV4A.MeasureString("Test").Y;
 		Vector2 _AjA452JzkbwnCTtbITN5kOEaNrR = new Vector2(50f, 1080f - _2MfIKVtD2AO6rfNH8r9gBa9ABgc - 40f);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Father-of-Death - Happy Jazz Shit", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.HappyJazzShitTrack, 0.4f);
 		_Otv0Xepue9AcysEmioBbEWTisDaA = Compressions.ReadStreamAsText(Path.Combine(Game.Content.RootDirectory, "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
 		DrawableLayer gparam_ = new DrawableLayer(this, "Credits")
 		{
@@ -72,13 +72,13 @@ public class CreditsMenuScene : AbstractScene
 		{
 			OnUpdate = delegate
 			{
-				Point point = _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.Mouse.Rescale(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.Controller.Cursor);
+				Point point = self.Game.Mouse.Rescale(self.Game.Controller.Cursor);
 				if ((float)point.X >= _AjA452JzkbwnCTtbITN5kOEaNrR.X && (float)point.X <= _AjA452JzkbwnCTtbITN5kOEaNrR.X + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.X && (float)point.Y >= _AjA452JzkbwnCTtbITN5kOEaNrR.Y && (float)point.Y <= _AjA452JzkbwnCTtbITN5kOEaNrR.Y + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.Y)
 				{
 					_vfz3itarR7RfYdT3BqrAmb1qElP = true;
-					if (_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+					if (self.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
 					{
-						_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA.Game.StartScene(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._t76cjDKppsRdw5nUq3tnNw3ypAv.Name);
+						self.Game.StartScene(self._t76cjDKppsRdw5nUq3tnNw3ypAv.Name);
 					}
 				}
 				else
@@ -89,7 +89,7 @@ public class CreditsMenuScene : AbstractScene
 			OnDraw = delegate(SpriteBatch spriteBatch)
 			{
 				spriteBatch.Begin();
-				spriteBatch.DrawString(_KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._nQK443boDHTZ4Jfc3W1VhQkMCcX, _KJWMaoRJ7oaDYXtF5MPjg5DcYwvA._ICAb9QUE8hnbl0uKD8fBpEB1kSV, _AjA452JzkbwnCTtbITN5kOEaNrR, _vfz3itarR7RfYdT3BqrAmb1qElP ? Color.Red : Color.White);
+				spriteBatch.DrawString(self._nQK443boDHTZ4Jfc3W1VhQkMCcX, self._ICAb9QUE8hnbl0uKD8fBpEB1kSV, _AjA452JzkbwnCTtbITN5kOEaNrR, _vfz3itarR7RfYdT3BqrAmb1qElP ? Color.Red : Color.White);
 				spriteBatch.End();
 			}
 		}, 2);

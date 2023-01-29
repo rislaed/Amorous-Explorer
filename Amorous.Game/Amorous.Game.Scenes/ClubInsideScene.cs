@@ -37,15 +37,15 @@ public class ClubInsideScene : AbstractScene
 		AddForegroundFadingLayer("Strobe Green", "Assets/Scenes/ClubInside/green_strobe", 708, 120, 1200, 600, 600);
 		AddForegroundFadingLayer("Strobe Pink", "Assets/Scenes/ClubInside/pink_strobe", 48, 130, 1200, 1200);
 		Game.Mouse._EPA0ilTeyu3r3U3sXajd13XXT1B(-1770, 1770);
-		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
+		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showCoby = true;
-		_showJax = !data.GetBit("JaxLeftClub");
-		_showSeth = !data.GetBit("SethLeftClub");
-		_showSkye = !data.GetBit("SkyeLeftClub");
-		if (data.GetDecimal("SkyeDate") == 20)
+		_showJax = !data.GetFlag(AmorousData.JaxLeftClub);
+		_showSeth = !data.GetFlag(AmorousData.SethLeftClub);
+		_showSkye = !data.GetFlag(AmorousData.SkyeLeftClub);
+		if (data.GetState(AmorousData.SkyeDate) == 20)
 		{
-			data.SetDecimal("SkyeDate", 10);
+			data.SetStage(AmorousData.SkyeDate, 10);
 		}
 		base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric2);
 	}
@@ -123,7 +123,7 @@ public class ClubInsideScene : AbstractScene
 		clubDJNPC.SetClothes(ClubDJNPC.EClothes.Shirt, ClubDJNPC.EClothes.Pants);
 		clubDJNPC.X = -400f;
 		clubDJNPC.Y = 500f;
-		clubDJNPC._SC7QlorMIWTLSkD757wC7ybszpE = true;
+		clubDJNPC.LockedInLayer = true;
 		clubDJNPC.Click = OnDJClick;
 		_dancerA = base.Game.GetNPCLayerAt<ClubInsideDancerANPC>(LayerOrder.Foreground);
 		_dancerA.SetEmotion(ClubInsideDancerANPC.EHeads.Happy);
@@ -191,39 +191,39 @@ public class ClubInsideScene : AbstractScene
 
 	private void OnJaxClick()
 	{
-		base.Game.StartCutscene("JaxPreDate");
+		base.Game.StartCutscene(AmorousData.JaxPreDate);
 	}
 
 	private void OnRouClick()
 	{
-		base.Game.StartCutscene("Rou");
+		base.Game.StartCutscene(AmorousData.Rou);
 	}
 
 	private void OnSethClick()
 	{
-		base.Game.StartCutscene("SethPreDate");
+		base.Game.StartCutscene(AmorousData.SethPreDate);
 	}
 
 	private void OnSkyeClick()
 	{
-		base.Game.StartCutscene("SkyePreDate");
+		base.Game.StartCutscene(AmorousData.SkyePreDate);
 	}
 
 	private void OnCobyClick()
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetDecimal("Prologue") >= 40)
+		if (data.GetState(AmorousData.Prologue) >= AmorousData.PrologueStateCompleted)
 		{
-			base.Game.StartCutscene("CobyClub");
+			base.Game.StartCutscene(AmorousData.CobyClub);
 		}
 		else
 		{
-			base.Game.StartCutscene("Prologue");
+			base.Game.StartCutscene(AmorousData.Prologue);
 		}
 	}
 
 	private void OnDJClick()
 	{
-		base.Game.StartCutscene("DJ");
+		base.Game.StartCutscene(AmorousData.DJ);
 	}
 }

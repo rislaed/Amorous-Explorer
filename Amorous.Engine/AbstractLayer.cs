@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public abstract class AbstractLayer
-{
+{ // _ujAkjlfN5TywwbLAUDzPvtab6uJ
 	public Vector2 Location;
 	public Color Color;
 	public int ZOrder, LayerOrder;

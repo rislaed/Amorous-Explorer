@@ -30,17 +30,17 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 	public CinemaClerkNPC(IAmorous game)
 		: base(game, "Assets/NPC/CinemaClerk", 1f)
 	{
-		GetPose(EPoses.Standing, "Cinema Clerk Expressions");
-		GetClothes(EPoses.Standing, EClothes.Pants, "Cinema Clerk Expressions - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Standing, EClothes.Vest, "Cinema Clerk Expressions - Vest")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Standing, "Cinema Clerk Expressions");
+		AddClothes(EPoses.Standing, EClothes.Pants, "Cinema Clerk Expressions - Pants").AsPants().AsCloth();
+		AddClothes(EPoses.Standing, EClothes.Vest, "Cinema Clerk Expressions - Vest").AsShirt().AsNudes();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

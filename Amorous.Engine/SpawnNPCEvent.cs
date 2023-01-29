@@ -4,7 +4,7 @@ using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
 
 public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
-{
+{ // _1vmNfnjLnh2B8rqPJN4xqYr1vnC
 	private AbstractNPC _npc;
 
 	public string NPC { get; private set; }
@@ -33,8 +33,8 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 	public override void Begin()
 	{
 		base.Begin();
-		LayerOrder result = ((!Enum.TryParse<LayerOrder>(Layer, out result)) ? LayerOrder.Background : result);
-		_npc = base.Cutscene.Game.GetNPCLayerAt(NPC, result);
+		LayerOrder order = ((!Enum.TryParse<LayerOrder>(Layer, out order)) ? LayerOrder.Background : order);
+		_npc = base.Cutscene.Game.GetNPCLayerAt(NPC, order);
 		if (_npc == null)
 		{
 			return;
@@ -64,7 +64,7 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 					{
 						Clothes = npc.Clothes;
 					}
-					npc._CX43jhSKNOViVFqkMliNa9qgGon();
+					npc.Reset();
 					break;
 				}
 			}
@@ -75,7 +75,7 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 			AbstractNPC npc = base.Cutscene.Game.GetNPCLayer(location);
 			if (npc != null && npc != _npc)
 			{
-				npc._CX43jhSKNOViVFqkMliNa9qgGon();
+				npc.Reset();
 			}
 			_npc.Apply(location, Head, Pose, Clothes);
 		}
@@ -84,7 +84,7 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 			AbstractNPC npc = base.Cutscene.Game.GetNPCLayer(location);
 			if (npc != null && npc != _npc)
 			{
-				npc._CX43jhSKNOViVFqkMliNa9qgGon();
+				npc.Reset();
 			}
 			_npc.Apply(location, Head, Pose, Clothes);
 			NPCLayer layer = base.Cutscene.Game.Scene.GetNPCLayer(NPC);
@@ -101,7 +101,7 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 		}
 		else
 		{
-			_npc._CX43jhSKNOViVFqkMliNa9qgGon();
+			_npc.Reset();
 		}
 	}
 

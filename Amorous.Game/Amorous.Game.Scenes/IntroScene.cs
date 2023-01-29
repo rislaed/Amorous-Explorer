@@ -6,68 +6,64 @@ namespace Amorous.Game.Scenes;
 
 public class IntroScene : AbstractScene
 {
-	private int Stopwatch;
+	private int _stopwatch;
+	private readonly float _cycle;
 
-	private readonly float _PbBEddQtI9iZg1ocIlBafUuVdrO;
-
-	public AbstractLayer _h29gtnqEWLAa5qsliRXuXiPwY2o { get; private set; }
-
-	public AbstractLayer _agB6DEyENfHFg1x2I4KsJqoQUpg { get; private set; }
-
-	public CoupleANPC _4BkRUyoqu3iKk7SRvIVoP35EcKA { get; private set; }
-
-	public CoupleBNPC _ZCUbMPsnW0SgjlADsYyZVasibXM { get; private set; }
+	public AbstractLayer Background { get; private set; }
+	public AbstractLayer Scenery { get; private set; }
+	public CoupleANPC LeftCouples { get; private set; }
+	public CoupleBNPC RightCouples { get; private set; }
 
 	public IntroScene(IAmorous game)
 		: base(game)
 	{
-		_h29gtnqEWLAa5qsliRXuXiPwY2o = AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, 0);
-		_agB6DEyENfHFg1x2I4KsJqoQUpg = AddTexturedLayer("Scenery", "Assets/Scenes/Intro/Scenery", 0, 1250);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
-		_PbBEddQtI9iZg1ocIlBafUuVdrO = 1f;
+		Background = AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, 0);
+		Scenery = AddTexturedLayer("Scenery", "Assets/Scenes/Intro/Scenery", 0, 1250);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
+		_cycle = 1f;
 	}
 
 	public override void Begin()
 	{
-		_ZCUbMPsnW0SgjlADsYyZVasibXM = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Foreground);
-		_ZCUbMPsnW0SgjlADsYyZVasibXM.X = 1280f;
-		_ZCUbMPsnW0SgjlADsYyZVasibXM.Y = 1090f;
-		_ZCUbMPsnW0SgjlADsYyZVasibXM.SetPose(CoupleBNPC.EPoses.Waving);
-		_ZCUbMPsnW0SgjlADsYyZVasibXM.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
-		_4BkRUyoqu3iKk7SRvIVoP35EcKA = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Foreground);
-		_4BkRUyoqu3iKk7SRvIVoP35EcKA.X = -800f;
-		_4BkRUyoqu3iKk7SRvIVoP35EcKA.Y = 1090f;
-		_4BkRUyoqu3iKk7SRvIVoP35EcKA.SetPose(CoupleANPC.EPoses.Waving);
-		_4BkRUyoqu3iKk7SRvIVoP35EcKA.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
+		RightCouples = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Foreground);
+		RightCouples.X = 1280f;
+		RightCouples.Y = 1090f;
+		RightCouples.SetPose(CoupleBNPC.EPoses.Waving);
+		RightCouples.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
+		LeftCouples = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Foreground);
+		LeftCouples.X = -800f;
+		LeftCouples.Y = 1090f;
+		LeftCouples.SetPose(CoupleANPC.EPoses.Waving);
+		LeftCouples.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		Stopwatch += gameTime.ElapsedGameTime.Milliseconds;
-		_EZKvqbHbBzrIsmIefNbwSVvgrP5A(_h29gtnqEWLAa5qsliRXuXiPwY2o, 0f, 18000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 0, 0, 0, -540);
-		_EZKvqbHbBzrIsmIefNbwSVvgrP5A(_agB6DEyENfHFg1x2I4KsJqoQUpg, 10000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 8000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 0, 1250, 0, -170);
-		_nuSr558RHFkx9d2QBs2DeGUB1wX(_4BkRUyoqu3iKk7SRvIVoP35EcKA, 14000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 4000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, -800, 1090, 600, 1090);
-		_nuSr558RHFkx9d2QBs2DeGUB1wX(_ZCUbMPsnW0SgjlADsYyZVasibXM, 14000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 4000f * _PbBEddQtI9iZg1ocIlBafUuVdrO, 1280, 1090, 450, 1090);
+		_stopwatch += gameTime.ElapsedGameTime.Milliseconds;
+		SlideTo(Background, 0f, 18000f * _cycle, 0, 0, 0, -540);
+		SlideTo(Scenery, 10000f * _cycle, 8000f * _cycle, 0, 1250, 0, -170);
+		MoveTo(LeftCouples, 14000f * _cycle, 4000f * _cycle, -800, 1090, 600, 1090);
+		MoveTo(RightCouples, 14000f * _cycle, 4000f * _cycle, 1280, 1090, 450, 1090);
 	}
 
-	private void _EZKvqbHbBzrIsmIefNbwSVvgrP5A(AbstractLayer layer, float float_0, float float_1, int int_0, int int_1, int int_2, int int_3)
+	private void SlideTo(AbstractLayer layer, float from, float to, int x1, int y1, int x2, int y2)
 	{
-		if (!((float)Stopwatch < float_0) && (float)Stopwatch < float_0 + float_1)
+		if (!((float)_stopwatch < from) && (float)_stopwatch < from + to)
 		{
-			float amount = ((float)Stopwatch - float_0) / float_1;
-			layer.X = MathHelper.Lerp(int_0, int_2, amount);
-			layer.Y = MathHelper.Lerp(int_1, int_3, amount);
+			float amount = ((float)_stopwatch - from) / to;
+			layer.X = MathHelper.Lerp(x1, x2, amount);
+			layer.Y = MathHelper.Lerp(y1, y2, amount);
 		}
 	}
 
-	private void _nuSr558RHFkx9d2QBs2DeGUB1wX(AbstractSpineNPC _tfDAeR6npiqJMLRSXPO1DxGA0TgA_0, float float_0, float float_1, int int_0, int int_1, int int_2, int int_3)
+	private void MoveTo(AbstractSpineNPC npc, float from, float to, int x1, int y1, int x2, int y2)
 	{
-		if (!((float)Stopwatch < float_0) && (float)Stopwatch < float_0 + float_1)
+		if (!((float)_stopwatch < from) && (float)_stopwatch < from + to)
 		{
-			float amount = ((float)Stopwatch - float_0) / float_1;
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA_0.X = MathHelper.Lerp(int_0, int_2, amount);
-			_tfDAeR6npiqJMLRSXPO1DxGA0TgA_0.Y = MathHelper.Lerp(int_1, int_3, amount);
+			float amount = ((float)_stopwatch - from) / to;
+			npc.X = MathHelper.Lerp(x1, x2, amount);
+			npc.Y = MathHelper.Lerp(y1, y2, amount);
 		}
 	}
 }

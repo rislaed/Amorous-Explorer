@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class AnimatedClickableLayer : AbstractLayer
-{
+{ // _rmc1e7Ng50C4uLmgllAoRtxaZiB
 	private int Value;
 	private int Stopwatch;
 	private bool Hovered;

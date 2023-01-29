@@ -39,33 +39,33 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 		: base(game, "Assets/NPC/Coby/Coby", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Breathing");
-		GetEmotion(EHeads.Sad, "Sad Head", "Sad Pupils", "Sad Eye back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Sad Blink");
-		GetEmotion(EHeads.Cocky, "Cocky Head", "Cocky Pupils", "Cocky Black eye back", "Cocky Jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Cocky Blink");
-		GetEmotion(EHeads.Flirty, "Flirty Head", "Flirty Pupils", "Flirty Black eye back", "Flirty Jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Flirty Blink");
-		GetEmotion(EHeads.Happy, "Happy Head", "Happy Pupil", "Happy Black eye back", "Happy Jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Happy Blink");
-		GetPose(EPoses.Flirty, "Neck puff", "Flirty Bod", "Leg extension")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Flirty cock");
-		GetPose(EPoses.Shy, "Neck puff", "Shy Bod")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Chill/Shy Cock");
-		GetPose(EPoses.Chill, "Neck puff", "Chill Bod")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Chill cock");
-		GetClothes(EPoses.Flirty, EClothes.Shirt, "Flirty shirt only")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Flirty, EClothes.Shorts, "Flirty outfit")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Flirty, EClothes.Sleeves, "Flirty Sleeves")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Flirty, EClothes.Underwear, "Flirty underwear")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Shy, EClothes.Shirt, "Shy shirt only")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Shy, EClothes.Shorts, "Shy outfit")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Shy, EClothes.Sleeves, "Shy sleeves")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Shy, EClothes.Underwear, "Shy underwear")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Chill, EClothes.Shirt, "Chill shirt only")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Chill, EClothes.Shorts, "Chil outfit")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Chill, EClothes.Sleeves, "Chill Sleeves")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Chill, EClothes.Underwear, "Chill underwear")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddEmotion(EHeads.Sad, "Sad Head", "Sad Pupils", "Sad Eye back").WithBlinking("Sad Blink");
+		AddEmotion(EHeads.Cocky, "Cocky Head", "Cocky Pupils", "Cocky Black eye back", "Cocky Jaw").WithBlinking("Cocky Blink");
+		AddEmotion(EHeads.Flirty, "Flirty Head", "Flirty Pupils", "Flirty Black eye back", "Flirty Jaw").WithBlinking("Flirty Blink");
+		AddEmotion(EHeads.Happy, "Happy Head", "Happy Pupil", "Happy Black eye back", "Happy Jaw").WithBlinking("Happy Blink");
+		AddPose(EPoses.Flirty, "Neck puff", "Flirty Bod", "Leg extension").AddNudes("Flirty cock");
+		AddPose(EPoses.Shy, "Neck puff", "Shy Bod").AddNudes("Chill/Shy Cock");
+		AddPose(EPoses.Chill, "Neck puff", "Chill Bod").AddNudes("Chill cock");
+		AddClothes(EPoses.Flirty, EClothes.Shirt, "Flirty shirt only").AsShirt().AsNudes();
+		AddClothes(EPoses.Flirty, EClothes.Shorts, "Flirty outfit").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Flirty, EClothes.Sleeves, "Flirty Sleeves").AsShirt().AsNudes();
+		AddClothes(EPoses.Flirty, EClothes.Underwear, "Flirty underwear").AsPants().AsCloth();
+		AddClothes(EPoses.Shy, EClothes.Shirt, "Shy shirt only").AsShirt().AsNudes();
+		AddClothes(EPoses.Shy, EClothes.Shorts, "Shy outfit").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Shy, EClothes.Sleeves, "Shy sleeves").AsShirt().AsNudes();
+		AddClothes(EPoses.Shy, EClothes.Underwear, "Shy underwear").AsPants().AsCloth();
+		AddClothes(EPoses.Chill, EClothes.Shirt, "Chill shirt only").AsShirt().AsNudes();
+		AddClothes(EPoses.Chill, EClothes.Shorts, "Chil outfit").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Chill, EClothes.Sleeves, "Chill Sleeves").AsShirt().AsNudes();
+		AddClothes(EPoses.Chill, EClothes.Underwear, "Chill underwear").AsPants().AsCensoredPants().AsCloth();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

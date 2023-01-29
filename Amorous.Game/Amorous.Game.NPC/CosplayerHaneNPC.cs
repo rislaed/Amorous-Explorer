@@ -29,16 +29,16 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 	public CosplayerHaneNPC(IAmorous game)
 		: base(game, "Assets/NPC/CosplayerHane", 1f)
 	{
-		GetPose(EPoses.Standing, "Hane Maxwell Cosplayer (nude)");
-		GetClothes(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Standing, "Hane Maxwell Cosplayer (nude)");
+		AddClothes(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)").AsShirt().AsNudes();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

@@ -28,13 +28,13 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 	public PlaceholderNPC(IAmorous game)
 		: base(game, "Assets/NPC/Placeholder", 1f)
 	{
-		GetPose(EPoses.Placeholder, "Placeholder");
+		AddPose(EPoses.Placeholder, "Placeholder");
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

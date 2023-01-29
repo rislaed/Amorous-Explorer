@@ -30,17 +30,17 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 	public LifeguardNPC(IAmorous game)
 		: base(game, "Assets/NPC/Lifeguard", 1f)
 	{
-		GetPose(EPoses.Standing, "Riptide - Nude");
-		GetClothes(EPoses.Standing, EClothes.Pants, "Riptide - Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Standing, EClothes.Shirt, "Riptide - Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Standing, "Riptide - Nude");
+		AddClothes(EPoses.Standing, EClothes.Pants, "Riptide - Pants").AsPants().AsCloth();
+		AddClothes(EPoses.Standing, EClothes.Shirt, "Riptide - Shirt").AsShirt().AsNudes();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

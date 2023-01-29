@@ -13,12 +13,12 @@ public class MakeoutPointScene : TimeOfDayScene
 	{
 		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = AddTexturedLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
 		_bYgAJ7foDqpxOElDOYhOkQFMzrz = AddTexturedLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 
-	public override void SetVariant(string daytime)
+	public override void SwitchToSubscene(string daytime)
 	{
-		base.SetVariant(daytime);
+		base.SwitchToSubscene(daytime);
 		if (daytime == VariantNight)
 		{
 			_bYgAJ7foDqpxOElDOYhOkQFMzrz.Color.A = byte.MaxValue;

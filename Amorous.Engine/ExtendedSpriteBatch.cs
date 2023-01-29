@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public static class ExtendedSpriteBatch
-{
+{ // _dXVK1NWaxcsgYg6KpavA0e8oion
 	public static readonly Vector2 Location0x0 = new Vector2(-1f, -1f);
 	public static readonly Vector2 Location1x0 = new Vector2(0f, -1f);
 	public static readonly Vector2 Location2x0 = new Vector2(1f, -1f);

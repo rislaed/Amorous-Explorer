@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework.Input;
 using Squid;
 
 public static class SquidUtils
-{
+{ // _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 	public static readonly Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?> _HSj1lr89AFIB9adVhSrAeWjS1xC = new Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?>
 	{
 		{
@@ -725,18 +723,18 @@ public static class SquidUtils
 		};
 	}
 
-	public static void SetSkin(this Desktop desktop_0, string string_0, string string_1 = null)
+	public static void SetSkin(this Desktop squid, string skin, string asset = null)
 	{
-		_JQQysO7uwugUSzo1g63o3jzSP4H jQQysO7uwugUSzo1g63o3jzSP4H = new _JQQysO7uwugUSzo1g63o3jzSP4H();
-		jQQysO7uwugUSzo1g63o3jzSP4H._Gz8axRA2ks9sOlb2vx60ucqDEM0($"{AppDomain.CurrentDomain.BaseDirectory}/Content-Release/{string_0}.xml");
-		foreach (ControlStyle value in desktop_0.Skin.Values)
+		XmlSerializableFactory factory = new XmlSerializableFactory();
+		factory.Read($"{AppDomain.CurrentDomain.BaseDirectory}/Content-Release/{skin}.xml");
+		foreach (ControlStyle control in squid.Skin.Values)
 		{
-			foreach (Style value2 in value.Styles.Values)
+			foreach (Style style in control.Styles.Values)
 			{
-				if (!string.IsNullOrEmpty(value2.Texture) && jQQysO7uwugUSzo1g63o3jzSP4H._eA4yRWB5CfMJCCzEhBJkRcJhaGT(value2.Texture))
+				if (!string.IsNullOrEmpty(style.Texture) && factory.ContainsKey(style.Texture))
 				{
-					value2.TextureRect = jQQysO7uwugUSzo1g63o3jzSP4H._zETvz5wV1cpcKFl6i5KBgWbBmFR(value2.Texture);
-					value2.Texture = string_1 ?? string_0;
+					style.TextureRect = factory.Get(style.Texture);
+					style.Texture = asset ?? skin;
 				}
 			}
 		}

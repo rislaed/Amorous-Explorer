@@ -10,7 +10,6 @@ namespace Amorous.Game.Sexscenes;
 public class LexSexscene : CensoredSexscene
 {
 	public const string _7p39D6gRnJVEL4nBpm27s7mRbMo = "Male";
-
 	public const string _bguKzeUbXe4hujNISQZXXCW725e = "Female";
 
 	private static readonly List<SkeletonJson.SpineEvent> Events = new List<SkeletonJson.SpineEvent>
@@ -18,25 +17,25 @@ public class LexSexscene : CensoredSexscene
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustStart",
+			EventName = EventThrustStart,
 			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustEnd",
+			EventName = EventThrustEnd,
 			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "Moan",
+			EventName = EventMoan,
 			FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f }
 		}
 	};
 
 	public LexSexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Lex/Lex Sex", "Assets/SexScenes/Lex/Background", null, list_0: Events, float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: null, cycle: 5000f)
+		: base(content, "Assets/SexScenes/Lex/Lex Sex", "Assets/SexScenes/Lex/Background", null, events: Events, scale: Censorship.Censored ? 1.5f : 1f, premultipliedAlpha: true, sounds: null, cycle: 5000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (Censorship.Censored)
@@ -52,44 +51,44 @@ public class LexSexscene : CensoredSexscene
 		}
 	}
 
-	public override string[] GetSkins()
+	public override string[] GetSubscenes()
 	{
 		if (Censorship.Censored)
 		{
-			return base.GetSkins();
+			return base.GetSubscenes();
 		}
 		return new string[2] { "Male", "Female" };
 	}
 
-	public override void SetSkin(string string_0)
+	public override void SwitchToSubscene(string subscene)
 	{
-		base.SetSkin(string_0);
-		if (string_0 == "Male")
+		base.SwitchToSubscene(subscene);
+		if (subscene == "Male")
 		{
-			base._wQSC6rD8bbXFvRxba0kr1RqxlOV = new _ecVLwNBaQAiybVyX9cgWCvnbkWe(base.Content);
+			base.Sounds = new MaleSexsceneSounds(base.Content);
 			base.Spine.SetAlpha("Alex balls", 1f);
 			base.Spine.SetAlpha("Alex knot", 1f);
 			base.Spine.SetAlpha("Alex dick tip", 1f);
 			base.Spine.SetAlpha("Alex vag", 0f);
-			base.Overlays.Clear();
-			base.Overlays.Add("Cum");
-			base.Overlays.Add("Alex dick cum");
+			base.ExplosionBones.Clear();
+			base.ExplosionBones.Add("Cum");
+			base.ExplosionBones.Add("Alex dick cum");
 		}
-		else if (string_0 == "Female")
+		else if (subscene == "Female")
 		{
-			base._wQSC6rD8bbXFvRxba0kr1RqxlOV = _sg4TvSTYoH0YwumBfYnvr7IeDaT.Get(base.Content);
+			base.Sounds = FemaleSexsceneSounds.Get(base.Content);
 			base.Spine.SetAlpha("Alex balls", 0f);
 			base.Spine.SetAlpha("Alex knot", 0f);
 			base.Spine.SetAlpha("Alex dick tip", 0f);
 			base.Spine.SetAlpha("Alex vag", 1f);
-			base.Overlays.Clear();
-			base.Overlays.Add("Cum");
+			base.ExplosionBones.Clear();
+			base.ExplosionBones.Add("Cum");
 		}
 	}
 
-	protected override void RefreshScene(PlayerData data)
+	protected override void RefreshSubscene(PlayerData data)
 	{
-		bool flag = data.GetBit("Lex.Is.Male");
+		bool isMale = data.GetFlag(AmorousData.LexIsMale);
 		base.Spine.SetVisibility(0f);
 		if (!Censorship.Censored)
 		{
@@ -131,7 +130,7 @@ public class LexSexscene : CensoredSexscene
 			base.Spine.SetAlpha("Alex fringe", 1f);
 			base.Spine.SetAlpha("Alex hand left", 1f);
 			base.Spine.SetAlpha("Alex hand right", 1f);
-			SetSkin(flag ? "Male" : "Female");
+			SwitchToSubscene(isMale ? "Male" : "Female");
 		}
 		else
 		{

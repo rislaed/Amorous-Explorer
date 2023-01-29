@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
 public abstract class AbstractSpineNPC : AbstractNPC
-{
+{ // _tfDAeR6npiqJMLRSXPO1DxGA0TgA
 	private class _eBuDnRXeABWf8uwfsN15PfKEHw
 	{
 		public Vector2 Location { get; set; }
@@ -13,7 +13,7 @@ public abstract class AbstractSpineNPC : AbstractNPC
 		public float _WxTaPaOE8qb7d7anVlwwqCzugAo { get; set; }
 	}
 
-	private readonly _NxPDyghimJKCwBg53DaNTazjQ5k _YWKqVMq3bCWDIv73VmJykYuZBKN;
+	private readonly SpineSkeletonBounds _bounds;
 	private bool _7sgRQPgr8EJYjFmEXCYagaObJd0;
 	private int? _xm9p2W8AbxEBdrI3wbC7knvB06R;
 	private bool _FdDzmVlp0fgTsGUxfkRfLr0dxtF;
@@ -44,7 +44,7 @@ public abstract class AbstractSpineNPC : AbstractNPC
 		Spine = base.Game.Content.LoadSkeleton(path, scale, premultipliedAlpha);
 		Spine.SetVisibility(0f);
 		base.Scale = scale;
-		_YWKqVMq3bCWDIv73VmJykYuZBKN = new _NxPDyghimJKCwBg53DaNTazjQ5k();
+		_bounds = new SpineSkeletonBounds();
 		_smM3y5A19la8hNpeOINXXDeitDH = new _eBuDnRXeABWf8uwfsN15PfKEHw[2];
 		_FdDzmVlp0fgTsGUxfkRfLr0dxtF = true;
 	}
@@ -104,15 +104,15 @@ public abstract class AbstractSpineNPC : AbstractNPC
 		}
 	}
 
-	protected override bool _BbDRof5yB0Qn864T1KJxUzMy8di(int int_0)
+	protected override bool Refresh(int stage)
 	{
-		if (int_0 == 0)
+		if (stage == 0)
 		{
 			_location = base.Location;
 		}
-		else if (int_0 != 1)
+		else if (stage != 1)
 		{
-			if (int_0 >= 2)
+			if (stage >= 2)
 			{
 				_xm9p2W8AbxEBdrI3wbC7knvB06R = null;
 				return false;
@@ -123,41 +123,41 @@ public abstract class AbstractSpineNPC : AbstractNPC
 			return false;
 		}
 		_7sgRQPgr8EJYjFmEXCYagaObJd0 = true;
-		_xm9p2W8AbxEBdrI3wbC7knvB06R = int_0;
+		_xm9p2W8AbxEBdrI3wbC7knvB06R = stage;
 		_FdDzmVlp0fgTsGUxfkRfLr0dxtF = false;
 		Spine.X = 0f;
 		Spine.Y = 0f;
-		_YWKqVMq3bCWDIv73VmJykYuZBKN.Update(Spine.Spine);
-		Vector2 vector = new Vector2((int)_YWKqVMq3bCWDIv73VmJykYuZBKN.Width, (int)_YWKqVMq3bCWDIv73VmJykYuZBKN.Height);
+		_bounds.Update(Spine.Spine);
+		Vector2 vector = new Vector2((int)_bounds.Width, (int)_bounds.Height);
 		if (!(vector.X <= 0f) && vector.Y > 0f)
 		{
-			_smM3y5A19la8hNpeOINXXDeitDH[int_0] = new _eBuDnRXeABWf8uwfsN15PfKEHw
+			_smM3y5A19la8hNpeOINXXDeitDH[stage] = new _eBuDnRXeABWf8uwfsN15PfKEHw
 			{
-				Location = new Vector2(Spine.Spine.RootBone.WorldX - _YWKqVMq3bCWDIv73VmJykYuZBKN._SjhHztt8d5kOtb7Z2BJKnZZxEKh, Spine.Spine.RootBone.WorldY - _YWKqVMq3bCWDIv73VmJykYuZBKN._xqxFKfudZYzf8RtrC7EB1Ya6FPT),
+				Location = new Vector2(Spine.Spine.RootBone.WorldX - _bounds.X1, Spine.Spine.RootBone.WorldY - _bounds.Y1),
 				_Z5JOwYZpe1u3WDYizFmDS7dmAcK = new RenderTarget2D(base.Game.GLES, (int)vector.X, (int)vector.Y),
-				_WxTaPaOE8qb7d7anVlwwqCzugAo = ((int_0 == 0) ? 1f : 0f)
+				_WxTaPaOE8qb7d7anVlwwqCzugAo = ((stage == 0) ? 1f : 0f)
 			};
 		}
 		else
 		{
-			_smM3y5A19la8hNpeOINXXDeitDH[int_0] = null;
+			_smM3y5A19la8hNpeOINXXDeitDH[stage] = null;
 		}
 		return true;
 	}
 
-	protected override void _PdRLTpsImBScBFQhILtCHJpcsllA(float float_0)
+	protected override void Fade(float percent)
 	{
 		if (_smM3y5A19la8hNpeOINXXDeitDH[0] != null)
 		{
-			_smM3y5A19la8hNpeOINXXDeitDH[0]._WxTaPaOE8qb7d7anVlwwqCzugAo = float_0;
+			_smM3y5A19la8hNpeOINXXDeitDH[0]._WxTaPaOE8qb7d7anVlwwqCzugAo = percent;
 		}
 		if (_smM3y5A19la8hNpeOINXXDeitDH[1] != null)
 		{
-			_smM3y5A19la8hNpeOINXXDeitDH[1]._WxTaPaOE8qb7d7anVlwwqCzugAo = 1f - float_0;
+			_smM3y5A19la8hNpeOINXXDeitDH[1]._WxTaPaOE8qb7d7anVlwwqCzugAo = 1f - percent;
 		}
 	}
 
-	protected override void _Hx7zLXU6nbxudxFgMuYbyRXeEPB()
+	protected override void DisposeFading()
 	{
 		_7sgRQPgr8EJYjFmEXCYagaObJd0 = false;
 		_xm9p2W8AbxEBdrI3wbC7knvB06R = null;

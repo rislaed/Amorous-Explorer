@@ -7,7 +7,7 @@ public class ClubStaticDustinNPC : ClubStaticNPC
 	{
 		Width = 214;
 		Height = 588;
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

@@ -19,18 +19,18 @@ public class CinemaScene : AbstractScene
 		BackgroundWestern = AddTexturedLayer("Background", "Assets/Scenes/Cinema/Movie Action-Western", 0, 0);
 		BackgroundRomantic = AddTexturedLayer("Background", "Assets/Scenes/Cinema/Movie Comedy-Romantic", 0, 0);
 		BackgroundHorror = AddTexturedLayer("Background", "Assets/Scenes/Cinema/Movie Noire Gloomy", 0, 0);
-		SetVariant(VariantNone);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
+		SwitchToSubscene(VariantNone);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 
-	public override void SetVariant(string variant)
+	public override void SwitchToSubscene(string subscene)
 	{
-		base.SetVariant(variant);
+		base.SwitchToSubscene(subscene);
 		BackgroundWestern.Visible = false;
 		BackgroundRomantic.Visible = false;
 		BackgroundHorror.Visible = false;
 		BackgroundNone.Visible = false;
-		switch (variant)
+		switch (subscene)
 		{
 			case VariantRomantic:
 				BackgroundRomantic.Visible = true;

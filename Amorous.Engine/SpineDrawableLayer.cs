@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
 public class SpineDrawableLayer : DrawableLayer
-{
+{ // _WBXNT6eIVGk6ZKExRBJ6JxXE6zb
 	public Action<SpriteBatch, SkeletonMeshRenderer> OnSpineDraw { private get; set; }
 	public virtual float OffsetX { get; set; }
 	public virtual float OffsetY { get; set; }

@@ -14,25 +14,25 @@ public class ZenithSexscene : CensoredSexscene
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustStart",
+			EventName = EventThrustStart,
 			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustEnd",
+			EventName = EventThrustEnd,
 			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "Moan",
+			EventName = EventMoan,
 			FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f }
 		}
 	};
 
 	public ZenithSexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.3f : 1f, bool_0: true, cycle: 3000f)
+		: base(content, "Assets/SexScenes/Zenith/Zenith Sex", "Assets/SexScenes/Zenith/Background", null, events: Events, sounds: new MaleSexsceneSounds(content), scale: Censorship.Censored ? 1.3f : 1f, premultipliedAlpha: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (!Censorship.Censored)
@@ -47,7 +47,7 @@ public class ZenithSexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshScene(PlayerData data)
+	protected override void RefreshSubscene(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (Censorship.Censored)
@@ -143,13 +143,13 @@ public class ZenithSexscene : CensoredSexscene
 		base.Spine.SetColor("Player cock knot lines", data.GenitaliaColor);
 		if (data.CockType != PlayerData.ECockType.Thor)
 		{
-			base.Overlays.Add("Player cock cum");
+			base.ExplosionBones.Add("Player cock cum");
 		}
 		else
 		{
-			base.Overlays.Add("Player cock horse cum");
+			base.ExplosionBones.Add("Player cock horse cum");
 		}
-		base.Overlays.Add("Zenith cock cum");
-		base.Overlays.Add("Cum belly");
+		base.ExplosionBones.Add("Zenith cock cum");
+		base.ExplosionBones.Add("Cum belly");
 	}
 }

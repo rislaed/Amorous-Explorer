@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 [Serializable]
 public class CutsceneData
-{
+{ // _0SvCRe0EgzR9DhI3QPe1GUqubAt
 	[JsonProperty("Name")]
 	public string Name { get; set; }
 

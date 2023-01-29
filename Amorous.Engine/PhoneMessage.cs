@@ -2,7 +2,7 @@ using System;
 using Newtonsoft.Json;
 
 public class PhoneMessage
-{
+{ // _iDN1IKOu3e1uADYzeMEUon5D9fg
 	[JsonProperty("Icon")]
 	public string Icon { get; set; }
 

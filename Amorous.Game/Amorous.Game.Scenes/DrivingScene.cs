@@ -42,13 +42,13 @@ public class DrivingScene : AbstractScene
 	public DrivingScene(IAmorous game)
 		: base(game)
 	{
-		SetVariant("Day");
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/AudioDriver - Detective's Scoop", 0.4f);
+		SwitchToSubscene("Day");
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.DetectivesScoopTrack, 0.4f);
 	}
 
-	public override void SetVariant(string daytime)
+	public override void SwitchToSubscene(string daytime)
 	{
-		base.SetVariant(daytime);
+		base.SwitchToSubscene(daytime);
 		_2WuocFtGsvuqlLRNzg1JvWYdCPu = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background", 0, 0);
 		_keMqzR2MH8pk2eRBjpmBvvHsKkH = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background 2", 0, 680);
 		_NtI6JcCZUIU6eqmZEqieFBtS51g = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Foreground", 0, 0);

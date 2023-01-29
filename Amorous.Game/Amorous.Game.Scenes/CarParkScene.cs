@@ -6,6 +6,6 @@ public class CarParkScene : AbstractScene
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/CarPark/Car Park Background", 0, 0);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Hopeku - In A Finger Blink", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.InAFingerBlinkTrack, 0.4f);
 	}
 }

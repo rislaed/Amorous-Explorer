@@ -37,26 +37,26 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 		: base(game, "Assets/NPC/Zenith/Zenith", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
-		GetEmotion(EHeads.Angry, "Head angry", "Eye Back", "Pupils")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetEmotion(EHeads.Blush, "Head Blush", "Eye Back", "Pupils")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetEmotion(EHeads.Happy, "Head Happy", "Eye Back", "Pupils")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetEmotion(EHeads.NotAmused, "Head Un-amused", "Eye Back", "Pupils")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetPose(EPoses.ArmsFolded, "Body fold arms", "Wing left", "Wing right");
-		GetPose(EPoses.HandsOnHips, "Body hips", "Wing left", "Wing right");
-		GetClothes(EPoses.ArmsFolded, EClothes.Security, "Security fold arms")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.ArmsFolded, EClothes.Shirt, "Shirt fold arms")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.ArmsFolded, EClothes.Pants, "Pants fold arms")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.HandsOnHips, EClothes.Security, "Security hips")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.HandsOnHips, EClothes.Shirt, "Shirt hips")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.HandsOnHips, EClothes.Pants, "Pants hips")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddEmotion(EHeads.Angry, "Head angry", "Eye Back", "Pupils").WithBlinking("Blink");
+		AddEmotion(EHeads.Blush, "Head Blush", "Eye Back", "Pupils").WithBlinking("Blink");
+		AddEmotion(EHeads.Happy, "Head Happy", "Eye Back", "Pupils").WithBlinking("Blink");
+		AddEmotion(EHeads.NotAmused, "Head Un-amused", "Eye Back", "Pupils").WithBlinking("Blink");
+		AddPose(EPoses.ArmsFolded, "Body fold arms", "Wing left", "Wing right");
+		AddPose(EPoses.HandsOnHips, "Body hips", "Wing left", "Wing right");
+		AddClothes(EPoses.ArmsFolded, EClothes.Security, "Security fold arms").AsShirt();
+		AddClothes(EPoses.ArmsFolded, EClothes.Shirt, "Shirt fold arms").AsShirt();
+		AddClothes(EPoses.ArmsFolded, EClothes.Pants, "Pants fold arms").AsPants();
+		AddClothes(EPoses.HandsOnHips, EClothes.Security, "Security hips").AsShirt();
+		AddClothes(EPoses.HandsOnHips, EClothes.Shirt, "Shirt hips").AsShirt();
+		AddClothes(EPoses.HandsOnHips, EClothes.Pants, "Pants hips").AsPants();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

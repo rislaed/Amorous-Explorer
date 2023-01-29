@@ -2,7 +2,7 @@ using System.IO;
 using System.IO.Compression;
 
 public static class Compressions
-{
+{ // _K2047A8SCJdaw0LZKStEHOiH110
 	public static Stream ReadStream(string path)
 	{
 		return ReadStream(File.OpenRead(path));

@@ -44,48 +44,48 @@ public class LexNPC : SpineNPC<LexNPC.EHeads, LexNPC.EPoses, LexNPC.EClothes>
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		string[] first = new string[5] { "Fringe", "Hair back", "Pupils", "Eyes back", "Ear" };
-		GetEmotion(EHeads.Happy, first.Union(new string[1] { "Head happy" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetEmotion(EHeads.Angry, first.Union(new string[1] { "Head angry" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetEmotion(EHeads.Sad, first.Union(new string[1] { "Head sad" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetEmotion(EHeads.Embarrassed, first.Union(new string[1] { "Head blush" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Blink");
-		GetPose(EPoses.Neutral, "Body neutral", "Shoulder neutral", "Forearm neutral", "Tail");
-		GetPose(EPoses.Gesture, "Body neutral", "Shoulder gesture", "Forearm gesture", "Hand gesture", "Tail");
-		GetPose(EPoses.GestureDrink, "Body neutral", "Shoulder gesture", "Forearm gesture", "Hand drink", "Tail");
-		GetPose(EPoses.GestureSigaret, "Body neutral", "Shoulder gesture", "Forearm gesture", "Hand cig", "Tail");
-		GetClothes(EPoses.Neutral, EClothes.Jacket, "Jacket", "Shoulder neutral jacket", "Forearm neutral jacket")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.Gesture, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.GestureDrink, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.GestureSigaret, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.Neutral, EClothes.Jeans, "Jeans")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF();
-		GetClothes(EPoses.Gesture, EClothes.Jeans, "Jeans")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF();
-		GetClothes(EPoses.GestureDrink, EClothes.Jeans, "Jeans")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF();
-		GetClothes(EPoses.GestureSigaret, EClothes.Jeans, "Jeans")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF();
-		GetClothes(EPoses.Neutral, EClothes.Panties, "Panties")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.Gesture, EClothes.Panties, "Panties")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.GestureDrink, EClothes.Panties, "Panties")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.GestureSigaret, EClothes.Panties, "Panties")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.Neutral, EClothes.Boxers, "Boxers")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.Gesture, EClothes.Boxers, "Boxers")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.GestureDrink, EClothes.Boxers, "Boxers")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.GestureSigaret, EClothes.Boxers, "Boxers")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.Neutral, EClothes.DickSoft, "Male balls", "Male dick soft");
-		GetClothes(EPoses.Gesture, EClothes.DickSoft, "Male balls", "Male dick soft");
-		GetClothes(EPoses.GestureDrink, EClothes.DickSoft, "Male balls", "Male dick soft");
-		GetClothes(EPoses.GestureSigaret, EClothes.DickSoft, "Male balls", "Male dick soft");
-		GetClothes(EPoses.Neutral, EClothes.DickHard, "Male balls", "Male dick hard");
-		GetClothes(EPoses.Gesture, EClothes.DickHard, "Male balls", "Male dick hard");
-		GetClothes(EPoses.GestureDrink, EClothes.DickHard, "Male balls", "Male dick hard");
-		GetClothes(EPoses.GestureSigaret, EClothes.DickHard, "Male balls", "Male dick hard");
+		AddEmotion(EHeads.Happy, first.Union(new string[1] { "Head happy" }).ToArray()).WithBlinking("Blink");
+		AddEmotion(EHeads.Angry, first.Union(new string[1] { "Head angry" }).ToArray()).WithBlinking("Blink");
+		AddEmotion(EHeads.Sad, first.Union(new string[1] { "Head sad" }).ToArray()).WithBlinking("Blink");
+		AddEmotion(EHeads.Embarrassed, first.Union(new string[1] { "Head blush" }).ToArray()).WithBlinking("Blink");
+		AddPose(EPoses.Neutral, "Body neutral", "Shoulder neutral", "Forearm neutral", "Tail");
+		AddPose(EPoses.Gesture, "Body neutral", "Shoulder gesture", "Forearm gesture", "Hand gesture", "Tail");
+		AddPose(EPoses.GestureDrink, "Body neutral", "Shoulder gesture", "Forearm gesture", "Hand drink", "Tail");
+		AddPose(EPoses.GestureSigaret, "Body neutral", "Shoulder gesture", "Forearm gesture", "Hand cig", "Tail");
+		AddClothes(EPoses.Neutral, EClothes.Jacket, "Jacket", "Shoulder neutral jacket", "Forearm neutral jacket").AsShirt();
+		AddClothes(EPoses.Gesture, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket").AsShirt();
+		AddClothes(EPoses.GestureDrink, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket").AsShirt();
+		AddClothes(EPoses.GestureSigaret, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket").AsShirt();
+		AddClothes(EPoses.Neutral, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
+		AddClothes(EPoses.Gesture, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
+		AddClothes(EPoses.GestureDrink, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
+		AddClothes(EPoses.GestureSigaret, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
+		AddClothes(EPoses.Neutral, EClothes.Panties, "Panties").AsPants();
+		AddClothes(EPoses.Gesture, EClothes.Panties, "Panties").AsPants();
+		AddClothes(EPoses.GestureDrink, EClothes.Panties, "Panties").AsPants();
+		AddClothes(EPoses.GestureSigaret, EClothes.Panties, "Panties").AsPants();
+		AddClothes(EPoses.Neutral, EClothes.Boxers, "Boxers").AsPants();
+		AddClothes(EPoses.Gesture, EClothes.Boxers, "Boxers").AsPants();
+		AddClothes(EPoses.GestureDrink, EClothes.Boxers, "Boxers").AsPants();
+		AddClothes(EPoses.GestureSigaret, EClothes.Boxers, "Boxers").AsPants();
+		AddClothes(EPoses.Neutral, EClothes.DickSoft, "Male balls", "Male dick soft");
+		AddClothes(EPoses.Gesture, EClothes.DickSoft, "Male balls", "Male dick soft");
+		AddClothes(EPoses.GestureDrink, EClothes.DickSoft, "Male balls", "Male dick soft");
+		AddClothes(EPoses.GestureSigaret, EClothes.DickSoft, "Male balls", "Male dick soft");
+		AddClothes(EPoses.Neutral, EClothes.DickHard, "Male balls", "Male dick hard");
+		AddClothes(EPoses.Gesture, EClothes.DickHard, "Male balls", "Male dick hard");
+		AddClothes(EPoses.GestureDrink, EClothes.DickHard, "Male balls", "Male dick hard");
+		AddClothes(EPoses.GestureSigaret, EClothes.DickHard, "Male balls", "Male dick hard");
 		base.Spine.OverlayWith("Male dick soft", "Jacket");
 		base.Spine.OverlayWith("Male dick hard", "Male dick soft");
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 			case NPCLocation.Middle:
 				FlipX = false;

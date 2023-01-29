@@ -5,48 +5,46 @@ namespace Amorous.Game.Scenes;
 
 public class SaveMigrationScene : AbstractScene
 {
-	private readonly string _BMUFdD4GwdBkg2lksa43USTpcIz;
+	private readonly string _cutscene;
+	private readonly string _scene;
+	private bool _started;
 
-	private readonly string _Z8BClcChRJrlB6tR1VPJcycVpHN;
-
-	private bool _OvbescGEY3Lfk7RmD2smIoB5Es2A;
-
-	public SaveMigrationScene(IAmorous game, string string_0, string string_1)
+	public SaveMigrationScene(IAmorous game, string cutscene, string scene)
 		: base(game)
 	{
-		_BMUFdD4GwdBkg2lksa43USTpcIz = string_0;
-		_Z8BClcChRJrlB6tR1VPJcycVpHN = string_1;
+		_cutscene = cutscene;
+		_scene = scene;
 		AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
 		AddTexturedLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
 		AddForegroundTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Biggyzoom - The Night Sky", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
 	}
 
 	public override void Begin()
 	{
-		CoupleANPC coupleANPC = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Background);
-		coupleANPC.X = 350f;
-		coupleANPC.Y = 1090f;
-		coupleANPC.SetPose(CoupleANPC.EPoses.Waving);
-		coupleANPC.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
-		CoupleBNPC coupleBNPC = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Background);
-		coupleBNPC.X = 550f;
-		coupleBNPC.Y = 1090f;
-		coupleBNPC.SetPose(CoupleBNPC.EPoses.Waving);
-		coupleBNPC.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
-		if (_BMUFdD4GwdBkg2lksa43USTpcIz != null)
+		CoupleANPC couplesLeft = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Background);
+		couplesLeft.X = 350f;
+		couplesLeft.Y = 1090f;
+		couplesLeft.SetPose(CoupleANPC.EPoses.Waving);
+		couplesLeft.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
+		CoupleBNPC couplesRight = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Background);
+		couplesRight.X = 550f;
+		couplesRight.Y = 1090f;
+		couplesRight.SetPose(CoupleBNPC.EPoses.Waving);
+		couplesRight.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
+		if (_cutscene != null)
 		{
-			base.Game.StartCutscene(_BMUFdD4GwdBkg2lksa43USTpcIz);
+			base.Game.StartCutscene(_cutscene);
 		}
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		if (!_OvbescGEY3Lfk7RmD2smIoB5Es2A && !base.Game.InScenePending && base.Game.Cutscene == null)
+		if (!_started && !base.Game.InScenePending && base.Game.Cutscene == null)
 		{
-			_OvbescGEY3Lfk7RmD2smIoB5Es2A = true;
-			base.Game.StartScene(_Z8BClcChRJrlB6tR1VPJcycVpHN);
+			_started = true;
+			base.Game.StartScene(_scene);
 		}
 	}
 }

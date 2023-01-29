@@ -14,25 +14,25 @@ public class RemySexscene : CensoredSexscene
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustStart",
+			EventName = EventThrustStart,
 			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustEnd",
+			EventName = EventThrustEnd,
 			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "Moan",
+			EventName = EventMoan,
 			FrameTimes = new float[3] { 1.3f, 3.3f, 5.3f }
 		}
 	};
 
 	public RemySexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Jax/Jax Sex", "Assets/SexScenes/Remy/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT.Get(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, cycle: 3000f)
+		: base(content, "Assets/SexScenes/Jax/Jax Sex", "Assets/SexScenes/Remy/Background", null, events: Events, sounds: FemaleSexsceneSounds.Get(content), scale: Censorship.Censored ? 1.5f : 1f, premultipliedAlpha: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (Censorship.Censored)
@@ -48,7 +48,7 @@ public class RemySexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshScene(PlayerData data)
+	protected override void RefreshSubscene(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (Censorship.Censored)
@@ -129,8 +129,8 @@ public class RemySexscene : CensoredSexscene
 		base.Spine.SetAlpha("Remy glasses front", 1f);
 		base.Spine.SetAlpha("Remy fringe mid", 1f);
 		base.Spine.SetAlpha("Remy fringe front", 1f);
-		base.Overlays.Add("Cum dick");
-		base.Overlays.Add("Cum vag");
+		base.ExplosionBones.Add("Cum dick");
+		base.ExplosionBones.Add("Cum vag");
 		base.Spine.OverlayWith("Remy Back Leg", "Player legs stripes");
 	}
 }

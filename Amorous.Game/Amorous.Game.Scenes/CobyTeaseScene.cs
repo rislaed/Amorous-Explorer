@@ -19,17 +19,17 @@ public class CobyTeaseScene : AbstractScene
 		: base(game)
 	{
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ = Game.Content.LoadSkeleton("Assets/Scenes/CobyTease/Coby buttshake Teasel");
-		SetVariant("Panties");
+		SwitchToSubscene("Panties");
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.SetVisibility(1f);
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.StartAnimationWithLooping("animation");
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.X = 985f;
 		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.Y = 1081f;
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.SunFunkTrack, 0.4f);
 	}
 
-	public override void SetVariant(string string_0)
+	public override void SwitchToSubscene(string string_0)
 	{
-		base.SetVariant(string_0);
+		base.SwitchToSubscene(string_0);
 		if (string_0 == "Panties")
 		{
 			_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.SetSkin("Panties");

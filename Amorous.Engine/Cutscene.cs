@@ -5,7 +5,7 @@ using System.Reflection;
 using Microsoft.Xna.Framework;
 
 public class Cutscene
-{
+{ // _nR8eroJOHehP0ZGyyTveo6aMTHg
 	public class Stage
 	{
 		private IEvent _event;
@@ -29,7 +29,7 @@ public class Cutscene
 			State = Data.Events.FirstOrDefault((EventData eventData) => eventData.ID == _id);
 			if (State != null)
 			{
-				// ?
+				ApplyData(State);
 			}
 		}
 
@@ -93,7 +93,7 @@ public class Cutscene
 	public IAmorous Game { get; private set; }
 	public CutsceneData Data { get; private set; }
 	public Stage State => _state;
-	public bool Active => _state != null || _pendingState != null;
+	public bool Active => _state != null;
 
 	public Cutscene(IAmorous amorous, CutsceneData cutscene, params Assembly[] resources)
 	{
@@ -164,7 +164,7 @@ public class Cutscene
 		Game.Start();
 	}
 
-	public void ResetProgression()
+	public void ResetState()
 	{
 		_pendingState = _state;
 		_state = null;

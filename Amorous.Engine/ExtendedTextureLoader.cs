@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
 public class ExtendedTextureLoader : TextureLoader
-{
+{ // _AUtA43NfhBNYDqRrVB1t9VQxe1v
 	private static ExtendedTextureLoader _singleton;
 	private readonly ContentManager _content;
 

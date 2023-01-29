@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 
 public static class Logger
-{
+{ // _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
 	private static Stopwatch _stopwatch;
 
 	public static void Initialize()

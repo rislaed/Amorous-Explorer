@@ -24,7 +24,6 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 	}
 
 	public static string Name = "Alexis Pryde";
-
 	public static Color Color = new Color(17, 178, 105);
 
 	public SecurityGuardNPC(IAmorous game)
@@ -32,22 +31,22 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 	{
 		Width = 452;
 		Height = 945;
-		GetPose(EPoses.Neutral, "Alexis Nude", "Alexis Tufts");
-		GetClothes(EPoses.Neutral, EClothes.Shirt, "Alexis Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Neutral, EClothes.Pants, "Alexis Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Neutral, "Alexis Nude", "Alexis Tufts");
+		AddClothes(EPoses.Neutral, EClothes.Shirt, "Alexis Shirt").AsShirt().AsNudes();
+		AddClothes(EPoses.Neutral, EClothes.Pants, "Alexis Pants").AsPants().AsCloth();
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 
-	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
+	protected override string[] GetPieces()
 	{
 		return new string[4] { "Alexis Nude", "Alexis Tufts", "Alexis Pants", "Alexis Shirt" };
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

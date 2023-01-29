@@ -53,7 +53,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			Center = new Vector2(int_1, int_2);
 		}
 
-		public void _QrgbXEg7MMeD9Ybz12fFVsbmAd9(int int_0, int int_1, float float_0)
+		public void Play(int int_0, int int_1, float float_0)
 		{
 			_NbYrjABARmnikNXQHmmbM8k62UE.X = int_0;
 			_NbYrjABARmnikNXQHmmbM8k62UE.Y = int_1;
@@ -125,7 +125,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		private readonly SpineRenderer _pO4d7wyWlp6cYLHahUVYplpUWxw;
 
-		public bool _kf3EbE0B70xGe1szklqAZyCqoLj { get; set; }
+		public bool Enabled { get; set; }
 
 		public new float Scale => _i8C0PwO83NRzGvNoyMhHwLV9HeC;
 
@@ -174,7 +174,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		public bool _ZCfNJ0nxXx3YppgLl5SvS2LkQ5B(Point point_0, out CollisionType collisionType_0)
 		{
 			collisionType_0 = CollisionType.None;
-			if (!_kf3EbE0B70xGe1szklqAZyCqoLj)
+			if (!Enabled)
 			{
 				return false;
 			}
@@ -388,9 +388,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			spriteBatch.DrawString(_font, Text, new Vector2(_nD28BmrDaEzCHelTAa14TKyuSyG, _LkckKdvuh9GaAwn7XojfbJBd91r), _JbGNnZhaeWyNm0aWm7TtSamww4C * _AQwQu1ldCtpbkD5F9oEByJdCnWaA);
 		}
 
-		public void Remove()
-		{
-		}
+		public void Remove() {}
 	}
 
 	private class TimedDrawable : IDrawable
@@ -421,9 +419,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			}
 		}
 
-		public void Draw(SpriteBatch spriteBatch)
-		{
-		}
+		public void Draw(SpriteBatch spriteBatch) {}
 
 		public void Remove()
 		{
@@ -434,9 +430,9 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private class RailInfo
 	{
-		public readonly int _SjhHztt8d5kOtb7Z2BJKnZZxEKh;
+		public readonly int X1;
 
-		public readonly int _nVnyJkkce6HsdRrKSpRrzUDElg0;
+		public readonly int X2;
 
 		public readonly int Y;
 
@@ -446,8 +442,8 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 		public RailInfo(int int_0, int int_1, int int_2, float float_0, int int_3)
 		{
-			_SjhHztt8d5kOtb7Z2BJKnZZxEKh = int_0;
-			_nVnyJkkce6HsdRrKSpRrzUDElg0 = int_1;
+			X1 = int_0;
+			X2 = int_1;
 			Y = int_2;
 			Scale = float_0;
 			Layer = int_3;
@@ -494,17 +490,17 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private readonly List<IDrawable> _d9mstkVrU6KGDJyOtHGgrr2ZciA;
 
-	private readonly _hqmu3NsKXqziXGfVh3dt79G0fye _vCjkdRWXT5mvEu0c22Hgh93luLg;
+	private readonly RandomSoundEffect _vCjkdRWXT5mvEu0c22Hgh93luLg;
 
-	private readonly _hqmu3NsKXqziXGfVh3dt79G0fye _ykeARom1bl7r01BeRXMOSqoJU6o;
+	private readonly RandomSoundEffect _ykeARom1bl7r01BeRXMOSqoJU6o;
 
-	private readonly _hqmu3NsKXqziXGfVh3dt79G0fye _RiMZpLLSGIesSXF8vhSlVQ8SrDg;
+	private readonly RandomSoundEffect _RiMZpLLSGIesSXF8vhSlVQ8SrDg;
 
-	private readonly _hqmu3NsKXqziXGfVh3dt79G0fye _gabFSY9HcJdPu830plKx8W936qG;
+	private readonly RandomSoundEffect _gabFSY9HcJdPu830plKx8W936qG;
 
-	private readonly _hqmu3NsKXqziXGfVh3dt79G0fye _Hsn6Qz2oeKaTkin9XGwBJUJqy1C;
+	private readonly RandomSoundEffect _Hsn6Qz2oeKaTkin9XGwBJUJqy1C;
 
-	private readonly _hqmu3NsKXqziXGfVh3dt79G0fye _Oeqego17TDqmByfLbOEB1isMXzJ;
+	private readonly RandomSoundEffect _Oeqego17TDqmByfLbOEB1isMXzJ;
 
 	private readonly bool _WD4Plg5m1AwZ5mVyjQCADcW1ZTk;
 
@@ -561,21 +557,21 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	{
 		_WD4Plg5m1AwZ5mVyjQCADcW1ZTk = Game.IsRenderingCursor;
 		Game.IsRenderingCursor = false;
-		_U8eNAZVBW15ZflhG4fel0hK3Juu = PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj;
-		PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+		_U8eNAZVBW15ZflhG4fel0hK3Juu = PhoneOverlay.Enabled;
+		PhoneOverlay.Enabled = false;
 		FadingMediaPlayer.BeginCutscene();
-		_vCjkdRWXT5mvEu0c22Hgh93luLg = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
-		_vCjkdRWXT5mvEu0c22Hgh93luLg._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Fire");
-		_RiMZpLLSGIesSXF8vhSlVQ8SrDg = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
-		_RiMZpLLSGIesSXF8vhSlVQ8SrDg._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Dry");
-		_ykeARom1bl7r01BeRXMOSqoJU6o = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
-		_ykeARom1bl7r01BeRXMOSqoJU6o._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Reload");
-		_gabFSY9HcJdPu830plKx8W936qG = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
-		_gabFSY9HcJdPu830plKx8W936qG._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Headshot 1", "Assets/Sounds/MiniGames/ShootingRange/Headshot 2");
-		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
-		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Impact 1", "Assets/Sounds/MiniGames/ShootingRange/Impact 2", "Assets/Sounds/MiniGames/ShootingRange/Impact 3");
-		_Oeqego17TDqmByfLbOEB1isMXzJ = new _hqmu3NsKXqziXGfVh3dt79G0fye(Game.Content);
-		_Oeqego17TDqmByfLbOEB1isMXzJ._cHRhcv3PTfJmYNZAZdcHvbfbkpj("Assets/Sounds/MiniGames/ShootingRange/Ricochete 1", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 2", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 3");
+		_vCjkdRWXT5mvEu0c22Hgh93luLg = new RandomSoundEffect(Game.Content);
+		_vCjkdRWXT5mvEu0c22Hgh93luLg.Append("Assets/Sounds/MiniGames/ShootingRange/Fire");
+		_RiMZpLLSGIesSXF8vhSlVQ8SrDg = new RandomSoundEffect(Game.Content);
+		_RiMZpLLSGIesSXF8vhSlVQ8SrDg.Append("Assets/Sounds/MiniGames/ShootingRange/Dry");
+		_ykeARom1bl7r01BeRXMOSqoJU6o = new RandomSoundEffect(Game.Content);
+		_ykeARom1bl7r01BeRXMOSqoJU6o.Append("Assets/Sounds/MiniGames/ShootingRange/Reload");
+		_gabFSY9HcJdPu830plKx8W936qG = new RandomSoundEffect(Game.Content);
+		_gabFSY9HcJdPu830plKx8W936qG.Append("Assets/Sounds/MiniGames/ShootingRange/Headshot 1", "Assets/Sounds/MiniGames/ShootingRange/Headshot 2");
+		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C = new RandomSoundEffect(Game.Content);
+		_Hsn6Qz2oeKaTkin9XGwBJUJqy1C.Append("Assets/Sounds/MiniGames/ShootingRange/Impact 1", "Assets/Sounds/MiniGames/ShootingRange/Impact 2", "Assets/Sounds/MiniGames/ShootingRange/Impact 3");
+		_Oeqego17TDqmByfLbOEB1isMXzJ = new RandomSoundEffect(Game.Content);
+		_Oeqego17TDqmByfLbOEB1isMXzJ.Append("Assets/Sounds/MiniGames/ShootingRange/Ricochete 1", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 2", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 3");
 		_m1dNhD2jwJ6iTVUgUzMJUvnQFS = base.Game.Content.Load<Texture2D>("Assets/Scenes/ShootingRange/Bullet");
 		AddLayer(NewTexturedLayer("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180), 0);
 		AddLayer(NewTexturedLayer("Background", "Assets/Scenes/ShootingRange/Background", 0, 0), 2);
@@ -602,7 +598,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		_MZh3nVRuDktDpIu8X149SF90ZjO = _MnMUFBDfrGZBHvrJ30IAQilqivI.MeasureString("Time up, Game over! Press <Enter> to retry or <Escape> to continue.").X;
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq = 90f;
 		_M8VVMN3GHWWmFmORCACqNTXVh6b = 1;
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Mittsies - Mech", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.MechTrack, 0.4f);
 		_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.NotStarted;
 	}
 
@@ -661,7 +657,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
-			_ykeARom1bl7r01BeRXMOSqoJU6o._xDFlaclLtJxSUU63JEJALvRLdfe();
+			_ykeARom1bl7r01BeRXMOSqoJU6o.PlayNext();
 			_85WqOX8OcxbI6g74CaBZtHiHK2m._hAt3H7isKECkVrQjY4L0hESiqLF(delegate
 			{
 				_YFr89aAV3UzO9kf7kPKQJilRWED = 6;
@@ -687,7 +683,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 					_nHs33RHZMuYhYev0dQ6ic0aHmvO = false;
 				});
 				_85WqOX8OcxbI6g74CaBZtHiHK2m._e2DHCcfpFNWn5NTzMOw3FBUkwzA();
-				_vCjkdRWXT5mvEu0c22Hgh93luLg._xDFlaclLtJxSUU63JEJALvRLdfe();
+				_vCjkdRWXT5mvEu0c22Hgh93luLg.PlayNext();
 				bool flag = false;
 				foreach (TargetModel _OJbyketBmeLlVtChfay03TIx5KM in _u8GaIYUzQ65BoFU3NzXBzyvujjbA)
 				{
@@ -699,10 +695,10 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 					if (_0U2R42Dbf2ddmyfQBv0z7zBWwJm == TargetModel.CollisionType.Headshot)
 					{
 						_C6cjmtLovCejw2N3OZYswcoYxsd++;
-						_gabFSY9HcJdPu830plKx8W936qG._xDFlaclLtJxSUU63JEJALvRLdfe();
+						_gabFSY9HcJdPu830plKx8W936qG.PlayNext();
 						_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 30;
 						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "30!", Color.Yellow);
-						_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+						_OJbyketBmeLlVtChfay03TIx5KM.Enabled = false;
 						_OJbyketBmeLlVtChfay03TIx5KM._DcBCpcEfsjl4zP1zbrOrd1bwNReb(delegate
 						{
 							_5b1aUCG2FfD5yQCBUDAoLZYMu7A(0f, delegate
@@ -715,10 +711,10 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 					else if (_0U2R42Dbf2ddmyfQBv0z7zBWwJm == TargetModel.CollisionType.Bodyshot)
 					{
 						_pL6aoe4HLq4X3yQACLFyUH3xwBp++;
-						_Hsn6Qz2oeKaTkin9XGwBJUJqy1C._xDFlaclLtJxSUU63JEJALvRLdfe();
+						_Hsn6Qz2oeKaTkin9XGwBJUJqy1C.PlayNext();
 						_G0GwJ5OWQOA4BjacW3XmFsyMFjz += 10;
 						_xaBDiofMkYNdWQ4me0hnZ4NsCnk(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, "10!", Color.Red);
-						_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+						_OJbyketBmeLlVtChfay03TIx5KM.Enabled = false;
 						_OJbyketBmeLlVtChfay03TIx5KM._u1yq8F9lG8oMcA9vZO9c7Qbh8vj(delegate
 						{
 							_5b1aUCG2FfD5yQCBUDAoLZYMu7A(0f, delegate
@@ -736,19 +732,19 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 					RailInfo railInfo = _HYME5rEMzi5Cag9e7DCXk5lrXwX.FirstOrDefault((RailInfo railInfo_0) => _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y < railInfo_0.Y);
 					_Kp1esj4V82aePkZwvlresNSkHsC(_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X, _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y, railInfo?.Scale ?? 1f);
 					_dH7hlTzeJboGa5rfpgerBfCmyKO++;
-					_Oeqego17TDqmByfLbOEB1isMXzJ._xDFlaclLtJxSUU63JEJALvRLdfe();
+					_Oeqego17TDqmByfLbOEB1isMXzJ.PlayNext();
 				}
 			}
 			else
 			{
-				_RiMZpLLSGIesSXF8vhSlVQ8SrDg._xDFlaclLtJxSUU63JEJALvRLdfe();
+				_RiMZpLLSGIesSXF8vhSlVQ8SrDg.PlayNext();
 			}
 		}
 		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base.Game.Controller.JustPressed(ControllerButtonType.RightButton) || base.Game.Controller.JustPressed(Keys.R) || base.Game.Controller.JustPressed(Keys.Space)))
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
-			_ykeARom1bl7r01BeRXMOSqoJU6o._xDFlaclLtJxSUU63JEJALvRLdfe();
+			_ykeARom1bl7r01BeRXMOSqoJU6o.PlayNext();
 			_85WqOX8OcxbI6g74CaBZtHiHK2m._hAt3H7isKECkVrQjY4L0hESiqLF(delegate
 			{
 				_YFr89aAV3UzO9kf7kPKQJilRWED = 6;
@@ -762,7 +758,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	{
 		if (_dxhbACq6BB89IAMy6ZOALWJgv7L == GameState.Started)
 		{
-			int num = _u8GaIYUzQ65BoFU3NzXBzyvujjbA.Count((TargetModel targetModel_0) => targetModel_0._kf3EbE0B70xGe1szklqAZyCqoLj);
+			int num = _u8GaIYUzQ65BoFU3NzXBzyvujjbA.Count((TargetModel targetModel_0) => targetModel_0.Enabled);
 			for (int i = num; i < _M8VVMN3GHWWmFmORCACqNTXVh6b; i++)
 			{
 				_OLpKeyCIa9e3g4oTFOGxKKmVbHJ();
@@ -773,10 +769,10 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	private void _OLpKeyCIa9e3g4oTFOGxKKmVbHJ()
 	{
 		RailInfo railInfo = _HYME5rEMzi5Cag9e7DCXk5lrXwX[Randoms.Next(0, _HYME5rEMzi5Cag9e7DCXk5lrXwX.Length)];
-		int int_ = Randoms.Next(railInfo._SjhHztt8d5kOtb7Z2BJKnZZxEKh, railInfo._nVnyJkkce6HsdRrKSpRrzUDElg0);
+		int int_ = Randoms.Next(railInfo.X1, railInfo.X2);
 		TargetModel _OJbyketBmeLlVtChfay03TIx5KM = new TargetModel(this, int_, railInfo.Y, railInfo.Scale)
 		{
-			_kf3EbE0B70xGe1szklqAZyCqoLj = true
+			Enabled = true
 		};
 		_OJbyketBmeLlVtChfay03TIx5KM._edcakvTOp2fd2J9ZHAu9GKjDaN7();
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA.Add(_OJbyketBmeLlVtChfay03TIx5KM);
@@ -784,10 +780,10 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA = _u8GaIYUzQ65BoFU3NzXBzyvujjbA.OrderByDescending((TargetModel targetModel_0) => targetModel_0.ZOrder).ToList();
 		_5b1aUCG2FfD5yQCBUDAoLZYMu7A(3.5f, delegate
 		{
-			if (_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj && _dxhbACq6BB89IAMy6ZOALWJgv7L != GameState.GameOver)
+			if (_OJbyketBmeLlVtChfay03TIx5KM.Enabled && _dxhbACq6BB89IAMy6ZOALWJgv7L != GameState.GameOver)
 			{
 				_JvgphfrWtBncPfgb6ERRVKKtlQG++;
-				_OJbyketBmeLlVtChfay03TIx5KM._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+				_OJbyketBmeLlVtChfay03TIx5KM.Enabled = false;
 				_OJbyketBmeLlVtChfay03TIx5KM._u1yq8F9lG8oMcA9vZO9c7Qbh8vj(delegate
 				{
 					_5b1aUCG2FfD5yQCBUDAoLZYMu7A(0f, delegate
@@ -810,7 +806,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	{
 		if (base.Game.Controller.JustPressed(Keys.Enter))
 		{
-			ResetProgression();
+			ResetState();
 		}
 		else if (base.Game.Controller.JustPressed(Keys.Escape))
 		{
@@ -821,7 +817,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	protected abstract void _5Z9jaXDcRYm0wNlEm1aTutL9kSH();
 
-	private void ResetProgression()
+	private void ResetState()
 	{
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq = 90f;
 		_G0GwJ5OWQOA4BjacW3XmFsyMFjz = 0;
@@ -891,7 +887,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	{
 		base.End();
 		base.Game.IsRenderingCursor = _WD4Plg5m1AwZ5mVyjQCADcW1ZTk;
-		PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = _U8eNAZVBW15ZflhG4fel0hK3Juu;
+		PhoneOverlay.Enabled = _U8eNAZVBW15ZflhG4fel0hK3Juu;
 	}
 
 	private void _FCyUaxF0GIE1r2fyuYC4b4tGqpJ(float float_0)
@@ -920,24 +916,23 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	private void _LSweOA3cIPq1IjLzplF4mDludQf(SpriteBatch spriteBatch)
 	{
 		using List<IDrawable>.Enumerator enumerator = _xEG3axnWkco0Erk0PdjakXDULcA.GetEnumerator();
-		if (enumerator.MoveNext())
+		while (enumerator.MoveNext())
 		{
-			IDrawable current = enumerator.Current;
-			current.Draw(spriteBatch);
+			enumerator.Current.Draw(spriteBatch);
 		}
 	}
 
 	private void _Vu9iV57zUVa3p8WMfOsDaoqv7wL(int int_0, int int_1, float float_0)
 	{
 		FrameAnimation frameAnimation = new FrameAnimation(this, "Assets/Scenes/ShootingRange/Explosion_12x1", 0.5f, 12, 125, 111, float_0);
-		frameAnimation._QrgbXEg7MMeD9Ybz12fFVsbmAd9(int_0, int_1, Randoms.NextDouble(0f, 360f));
+		frameAnimation.Play(int_0, int_1, Randoms.NextDouble(0f, 360f));
 		_xEG3axnWkco0Erk0PdjakXDULcA.Add(frameAnimation);
 	}
 
 	private void _Kp1esj4V82aePkZwvlresNSkHsC(int int_0, int int_1, float float_0)
 	{
 		FrameAnimation frameAnimation = new FrameAnimation(this, "Assets/Scenes/ShootingRange/Smoke_12x1", 0.5f, 12, 122, 129, float_0);
-		frameAnimation._QrgbXEg7MMeD9Ybz12fFVsbmAd9(int_0, int_1, 0f);
+		frameAnimation.Play(int_0, int_1, 0f);
 		_xEG3axnWkco0Erk0PdjakXDULcA.Add(frameAnimation);
 	}
 

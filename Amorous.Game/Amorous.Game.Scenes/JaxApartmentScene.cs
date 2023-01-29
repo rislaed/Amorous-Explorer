@@ -6,6 +6,6 @@ public class JaxApartmentScene : TimeOfDayScene
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/JaxApartment/jax background apartment", 0, 0);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.SunFunkTrack, 0.4f);
 	}
 }

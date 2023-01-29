@@ -10,22 +10,22 @@ public abstract class TimeOfDayScene : AbstractScene
 	protected const string VariantDay = "Day";
 	protected const string VariantSunset = "Sunset";
 
-	private readonly _G2GbwTTqXkVDMUL6fDmljsAPB4s _TyX29AlEBF2URt0abU6bc2VBQvm;
+	private readonly TimeOfDayFader _fader;
 
 	protected TimeOfDayScene(IAmorous game)
 		: base(game)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm = new _G2GbwTTqXkVDMUL6fDmljsAPB4s(game);
+		_fader = new TimeOfDayFader(game);
 	}
 
 	public override void Begin()
 	{
-		SetVariant(VariantDay);
+		SwitchToSubscene(VariantDay);
 	}
 
-	public override void SetVariant(string daytime)
+	public override void SwitchToSubscene(string daytime)
 	{
-		base.SetVariant(daytime);
+		base.SwitchToSubscene(daytime);
 		switch (daytime)
 		{
 			case VariantSunset:
@@ -49,13 +49,13 @@ public abstract class TimeOfDayScene : AbstractScene
 
 	public override void Update(GameTime gameTime)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm.Update(gameTime);
+		_fader.Update(gameTime);
 		base.Update(gameTime);
 	}
 
 	public override void DrawOverlay(SpriteBatch spriteBatch)
 	{
-		_TyX29AlEBF2URt0abU6bc2VBQvm.Draw(spriteBatch, base.Game.Mouse);
+		_fader.Draw(spriteBatch, base.Game.Mouse);
 		base.DrawOverlay(spriteBatch);
 	}
 }

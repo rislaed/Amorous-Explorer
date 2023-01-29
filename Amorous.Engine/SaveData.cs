@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 public class SaveData
-{
+{ // _lRHDfpOTd4PxClZkjMpoakPEA9d
 	[JsonProperty("Version")]
 	public int Version { get; set; }
 

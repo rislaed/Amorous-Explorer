@@ -17,7 +17,7 @@ public class MainMenuScene : TimeOfDayScene
 	private int Blinking;
 	private readonly AbstractLayer Separator;
 	private readonly List<TexturedSequenceLayer> Indicators = new List<TexturedSequenceLayer>();
-	private readonly CopyrightGUI Copyright;
+	private readonly CopyrightOverlay Copyright;
 	private readonly TexturedLayer Logotype;
 
 	public MainMenuScene(IAmorous game)
@@ -41,13 +41,13 @@ public class MainMenuScene : TimeOfDayScene
 		Blinking = TickingDelay;
 		Separator = GetLayer("LCD Separator");
 		PlayerPreferences.SetPlayerSkin(new MainMenuPlayerSkin(game));
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/WarmanSteve - Giant Robots", 0.4f);
-		Game.SetOverlay(new _BlUQCbX8YXbBc38I7iPEHyF1rUQ(game)
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.GiantRobotsTrack, 0.4f);
+		Game.SetOverlay(new MainMenuOverlay(game)
 		{
-			_uIOOxdCbSvCxXvjNgoXh2qYj0hr = delegate
+			NewGame = delegate
 			{
 				base.Game.Overlay.Touchable = false;
-				base.Squid.ShowSelection("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, 500, delegate(int answer)
+				base.Squid.ShowSelection("What would you like to do?", new string[4] { "New Game", "New Game w/o Prologue", "Character Customization", "Oops, I've changed my mind!" }, AmorousData.ShortDialogueOffset, delegate(int answer)
 				{
 					PlayerData data = PlayerPreferences.GetPlayerData();
 					switch (answer)
@@ -56,25 +56,25 @@ public class MainMenuScene : TimeOfDayScene
 							base.Game.Overlay.Touchable = true;
 							break;
 						case 0:
-							FadingMediaPlayer.Show();
+							FadingMediaPlayer.FadeOut();
 							data.Reset();
-							PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							PhoneOverlay.Enabled = false;
 							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
 							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
-							base.Game.StartCutscene("Prologue");
+							base.Game.StartCutscene(AmorousData.Prologue);
 							break;
 						case 1:
-							FadingMediaPlayer.Show();
+							FadingMediaPlayer.FadeOut();
 							data.Reset();
-							PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							PhoneOverlay.Enabled = false;
 							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
 							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
 							base.Game.StartScene<SkipProloguePlayerCustomizationScene>();
 							break;
 						case 2:
-							FadingMediaPlayer.Show();
+							FadingMediaPlayer.FadeOut();
 							data.Reset();
-							PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+							PhoneOverlay.Enabled = false;
 							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
 							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
 							base.Game.StartScene<PlayerCustomizationScene>();
@@ -82,13 +82,13 @@ public class MainMenuScene : TimeOfDayScene
 					}
 				});
 			},
-			_HmpXEsA3mxR8eI4MZmgIPCtSGQb = delegate
+			Continue = delegate
 			{
 				base.Game.Overlay.Touchable = false;
 				List<Saves.Pointer> saves = Saves.GetPointers(excludeAutosaves: false);
 				List<string> saveNames = saves.Select((Saves.Pointer pointer) => pointer.Name).ToList();
 				saveNames.Add("Oops, I've changed my mind!");
-				base.Squid.ShowSelection("Which save do you wish to load?", saveNames.ToArray(), 500, delegate(int answer)
+				base.Squid.ShowSelection("Which save do you wish to load?", saveNames.ToArray(), AmorousData.ShortDialogueOffset, delegate(int answer)
 				{
 					if (answer == saveNames.Count - 1)
 					{
@@ -101,7 +101,7 @@ public class MainMenuScene : TimeOfDayScene
 						{
 							if (!((!Pointer.IsAutosave) ? base.Game.ReadFromSlot(Pointer.Index) : base.Game.ReadFromAutosaveSlot(Pointer.Index)))
 							{
-								base.Squid.ShowConfirm("Failed to load save, it's most likely corrupted.", 250, "OK", delegate
+								base.Squid.ShowConfirm("Failed to load save, it's most likely corrupted.", AmorousData.WideDialogueOffset, "OK", delegate
 								{
 									base.Game.Overlay.Touchable = true;
 								});
@@ -113,7 +113,7 @@ public class MainMenuScene : TimeOfDayScene
 						}
 						else
 						{
-							base.Squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", Pointer.IsAutosave ? "autosave " : string.Empty, answer + 1), 250, "OK", delegate
+							base.Squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", Pointer.IsAutosave ? "autosave " : string.Empty, answer + 1), AmorousData.WideDialogueOffset, "OK", delegate
 							{
 								base.Game.Overlay.Touchable = true;
 							});
@@ -121,14 +121,14 @@ public class MainMenuScene : TimeOfDayScene
 					}
 				});
 			},
-			_vE5Pvwth7cQFh82bMTB5u59Ju4o = delegate
+			Quit = delegate
 			{
 				base.Game.Overlay.Touchable = false;
-				base.Squid.ShowSelection("Are you sure you wish to quit the Game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, 500, delegate(int answer)
+				base.Squid.ShowSelection("Are you sure you wish to quit the Game?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.ShortDialogueOffset, delegate(int answer)
 				{
 					if (answer == 1)
 					{
-						base.Game.Fading.Show(delegate
+						base.Game.Fading.FadeOut(delegate
 						{
 							base.Game.Exit();
 						});
@@ -137,9 +137,9 @@ public class MainMenuScene : TimeOfDayScene
 				});
 			}
 		});
-		Copyright = new CopyrightGUI(game)
+		Copyright = new CopyrightOverlay(game)
 		{
-			Configure = DiplayOptions
+			DisplayOptions = DiplayOptions
 		};
 		Clocks.InRealTime = true;
 	}
@@ -256,7 +256,7 @@ public class MainMenuScene : TimeOfDayScene
 			{
 				Text = supportedDisplayMode.Width + "x" + supportedDisplayMode.Height,
 				Value = supportedDisplayMode,
-				Size = new Squid.Point(0, 30),
+				Size = new Squid.Point(0, AmorousData.ButtonHeight),
 				Selected = (_ExpbREeE97oXaFMwg5UwE6MpAAQ == supportedDisplayMode.Width && _P2eFcUFiRYQgRf4ICqeX3kVcA2m == supportedDisplayMode.Height)
 			});
 		}
@@ -304,7 +304,7 @@ public class MainMenuScene : TimeOfDayScene
 		slider.Steps = 100f;
 		slider.Value = Options.Data.MasterVolume * 100f;
 		slider.Style = "scrollSlider";
-		slider.Size = new Squid.Point(0, 30);
+		slider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
 		slider.Button.Style = "scrollSliderButton";
 		Slider _XEgAfmv7sJWJSaC2diC3eaD4Fgl = slider;
 		_XEgAfmv7sJWJSaC2diC3eaD4Fgl.ValueChanged += delegate
@@ -322,7 +322,7 @@ public class MainMenuScene : TimeOfDayScene
 		slider2.Steps = 100f;
 		slider2.Value = Options.Data.MusicVolume * 100f;
 		slider2.Style = "scrollSlider";
-		slider2.Size = new Squid.Point(0, 30);
+		slider2.Size = new Squid.Point(0, AmorousData.ButtonHeight);
 		slider2.Button.Style = "scrollSliderButton";
 		Slider _gjeIIVx9bHyd0aMj0WD483nrLWK = slider2;
 		_gjeIIVx9bHyd0aMj0WD483nrLWK.ValueChanged += delegate
@@ -340,7 +340,7 @@ public class MainMenuScene : TimeOfDayScene
 		slider3.Steps = 100f;
 		slider3.Value = Options.Data.SfxVolume * 100f;
 		slider3.Style = "scrollSlider";
-		slider3.Size = new Squid.Point(0, 30);
+		slider3.Size = new Squid.Point(0, AmorousData.ButtonHeight);
 		slider3.Button.Style = "scrollSliderButton";
 		Slider _5mK9ExiyKm0md8q4J1C6xc4TzdF = slider3;
 		_5mK9ExiyKm0md8q4J1C6xc4TzdF.ValueChanged += delegate

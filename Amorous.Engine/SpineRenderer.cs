@@ -1,11 +1,10 @@
 using System;
-using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
 public class SpineRenderer
-{
+{ // _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	public Action<string> OnAnimationFrame;
 
 	private readonly Skeleton Skeleton;

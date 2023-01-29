@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 [Serializable]
 public abstract class EventData
-{
+{ // _3GMZuOfG1tyI9A65sJfkkPLAGdr
 	[JsonProperty("ID")]
 	public int ID { get; set; }
 

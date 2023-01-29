@@ -5,14 +5,14 @@ namespace Amorous.Game.Scenes;
 
 public class BedroomScene : TimeOfDayScene
 {
-	private readonly _dvyBDFOZwoBLf9qqHSfHYLLXVwP _phoneNag;
+	private readonly PhoneUrgentlyRinging _phoneNag;
 
 	public BedroomScene(IAmorous game)
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
 		AddClickableLayer("Background", "Assets/Scenes/Bedroom/Door", 1008, 186, OnDoorClick);
-		if (PlayerPreferences.GetPlayerData().GetDecimal("Prologue") >= 40)
+		if (PlayerPreferences.GetPlayerData().GetState(AmorousData.Prologue) >= AmorousData.PrologueStateCompleted)
 		{
 			AddClickableLayer("Background", "Assets/Scenes/Bedroom/Closet", 1551, 112, OnClosetClick);
 		}
@@ -32,14 +32,14 @@ public class BedroomScene : TimeOfDayScene
 		AddInteractableLayer("Background", "Assets/Scenes/Bedroom/Kangaroo Plush", 359, 159, null, 0, 0, "A little something my brother bought as a reminder of his long-distance boyfriend. It must be a pretty open relationship.");
 		AddInteractableLayer("Background", "Assets/Scenes/Bedroom/Laptop", 1153, 662, null, 0, 0, "My entertainment centre for the last few weeks.");
 		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-458, 458, 0, 0);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DanMasterFlash - Sun Funk", 0.4f);
-		_phoneNag = new _dvyBDFOZwoBLf9qqHSfHYLLXVwP(Game);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.SunFunkTrack, 0.4f);
+		_phoneNag = new PhoneUrgentlyRinging(Game);
 		Reset();
 	}
 
 	private void Reset()
 	{
-		if (PlayerPreferences.GetPlayerData().GetDecimal("Prologue") == 40)
+		if (PlayerPreferences.GetPlayerData().GetState(AmorousData.Prologue) == AmorousData.PrologueStateCompleted)
 		{
 			base.Game.Achievements.GainTutorial("MessageTutorial1");
 		}
@@ -55,33 +55,33 @@ public class BedroomScene : TimeOfDayScene
 	public void ResetFailedDates()
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetDecimal("Prologue") == 30 && data.GetDecimal("LexDate") == 40)
+		if (data.GetState(AmorousData.Prologue) == 30 && data.GetState(AmorousData.LexDate) == 40)
 		{
-			data.AddContact(PlayerData.EPhoneContacts.Coby);
-			data.SetDecimal("Prologue", 40);
-			data.SetBit("CobyLeftClub", bool_0: true);
-			base.Game.Achievements.GainContact(PlayerData.EPhoneContacts.Coby);
+			data.UnlockContact(PlayerData.EPhoneContacts.Coby);
+			data.SetStage(AmorousData.Prologue, AmorousData.PrologueStateCompleted);
+			data.SetFlag(AmorousData.CobyLeftClub, bool_0: true);
+			base.Game.Achievements.UnlockContact(PlayerData.EPhoneContacts.Coby);
 			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric4);
 		}
-		if (data.GetBit("LexLeftClub") && (data.GetDecimal("LexPreDate") == 20 || data.GetDecimal("LexDate") == 40))
+		if (data.GetFlag(AmorousData.LexLeftClub) && (data.GetState(AmorousData.LexPreDate) == 20 || data.GetState(AmorousData.LexDate) == 40))
 		{
-			data.ResetContact(PlayerData.EPhoneContacts.Lex);
+			data.DisableContact(PlayerData.EPhoneContacts.Lex);
 		}
-		if (data.GetBit("RemyLeftClub") && data.GetDecimal("RemyPreDate") == 10)
+		if (data.GetFlag(AmorousData.RemyLeftClub) && data.GetState(AmorousData.RemyPreDate) == 10)
 		{
-			data.ResetContact(PlayerData.EPhoneContacts.Remy);
+			data.DisableContact(PlayerData.EPhoneContacts.Remy);
 		}
-		if (data.GetBit("SethLeftClub") && data.GetDecimal("SethPreDate") == 10)
+		if (data.GetFlag(AmorousData.SethLeftClub) && data.GetState(AmorousData.SethPreDate) == 10)
 		{
-			data.ResetContact(PlayerData.EPhoneContacts.Seth);
+			data.DisableContact(PlayerData.EPhoneContacts.Seth);
 		}
-		if (data.GetBit("SkyeLeftClub") && data.GetDecimal("SkyePreDate") == 10)
+		if (data.GetFlag(AmorousData.SkyeLeftClub) && data.GetState(AmorousData.SkyePreDate) == 10)
 		{
-			data.ResetContact(PlayerData.EPhoneContacts.Skye);
+			data.DisableContact(PlayerData.EPhoneContacts.Skye);
 		}
-		if (data.GetBit("ZenithLeftClub") && data.GetDecimal("ZenithDate") == 10)
+		if (data.GetFlag(AmorousData.ZenithLeftClub) && data.GetState(AmorousData.ZenithDate) == 10)
 		{
-			data.ResetContact(PlayerData.EPhoneContacts.Zenith);
+			data.DisableContact(PlayerData.EPhoneContacts.Zenith);
 		}
 	}
 
@@ -90,41 +90,41 @@ public class BedroomScene : TimeOfDayScene
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Coby))
 		{
-			data.SetDecimal("CobyDate", 10);
+			data.SetStage(AmorousData.CobyDate, 10);
 			data.Remove("Coby");
-			data.AddContact(PlayerData.EPhoneContacts.Coby);
+			data.UnlockContact(PlayerData.EPhoneContacts.Coby);
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Dustin))
 		{
-			data.SetDecimal("DustinDate", 10);
+			data.SetStage(AmorousData.DustinDate, 10);
 			data.Remove("Dustin");
 			data.Remove("Club_Dustin_");
 			data.Remove("First_Dustin_");
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Jax))
 		{
-			data.SetDecimal("JaxPreDate", 10);
-			data.SetDecimal("JaxDate", 10);
+			data.SetStage(AmorousData.JaxPreDate, 10);
+			data.SetStage(AmorousData.JaxDate, 10);
 			data.Remove("Jax");
 			data.Remove("SimpleOrder", bool_0: false);
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Lex))
 		{
-			data.SetDecimal("LexPreDate", 10);
-			data.SetDecimal("LexDate", 10);
+			data.SetStage(AmorousData.LexPreDate, 10);
+			data.SetStage(AmorousData.LexDate, 10);
 			data.Remove("Lex");
 			data.Remove("Player.Dork", bool_0: false);
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Mercy))
 		{
-			data.SetDecimal("MercyPreDate", 10);
-			data.SetDecimal("MercyDate", 10);
+			data.SetStage(AmorousData.MercyPreDate, 10);
+			data.SetStage(AmorousData.MercyDate, 10);
 			data.Remove("Mercy");
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Remy))
 		{
-			data.SetDecimal("RemyPreDate", 10);
-			data.SetDecimal("RemyDate", 10);
+			data.SetStage(AmorousData.RemyPreDate, 10);
+			data.SetStage(AmorousData.RemyDate, 10);
 			data.Remove("Remy");
 			data.Remove("Rip.");
 			data.Remove("Chef.");
@@ -132,20 +132,20 @@ public class BedroomScene : TimeOfDayScene
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Seth))
 		{
-			data.SetDecimal("SethPreDate", 10);
-			data.SetDecimal("SethDate", 10);
+			data.SetStage(AmorousData.SethPreDate, 10);
+			data.SetStage(AmorousData.SethDate, 10);
 			data.Remove("Seth");
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Skye))
 		{
-			data.SetDecimal("SkyePreDate", 10);
-			data.SetDecimal("SkyeDate", 10);
+			data.SetStage(AmorousData.SkyePreDate, 10);
+			data.SetStage(AmorousData.SkyeDate, 10);
 			data.Remove("Skye");
 		}
 		if (data.DisabledContacts.HasFlag(PlayerData.EPhoneContacts.Zenith))
 		{
-			data.SetDecimal("ZenithPreDate", 10);
-			data.SetDecimal("ZenithDate", 10);
+			data.SetStage(AmorousData.ZenithPreDate, 10);
+			data.SetStage(AmorousData.ZenithDate, 10);
 			data.Remove("Zenith");
 		}
 		data.ResetDeletedContacts();
@@ -165,18 +165,18 @@ public class BedroomScene : TimeOfDayScene
 
 	private void OnClosetClick()
 	{
-		base.Game.StartCutscene("Clothes");
+		base.Game.StartCutscene(AmorousData.Clothes);
 	}
 
 	private void OnDoorClick()
 	{
-		if (PlayerPreferences.GetPlayerData().GetDecimal("Prologue") >= 40)
+		if (PlayerPreferences.GetPlayerData().GetState(AmorousData.Prologue) >= AmorousData.PrologueStateCompleted)
 		{
 			base.Game.StartScene<LivingRoomScene>();
 		}
 		else
 		{
-			base.Game.StartCutscene("Prologue");
+			base.Game.StartCutscene(AmorousData.Prologue);
 		}
 	}
 }

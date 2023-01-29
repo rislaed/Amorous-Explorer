@@ -3,7 +3,7 @@ using System.IO;
 using Facepunch.Steamworks;
 
 public class SteamObserver
-{
+{ // _KDiaUloddpdv1QwixDEBIJs6IMA
 	private Client _client;
 
 	public bool Initialize(uint version, IAmorous game)

@@ -6,6 +6,6 @@ public class SethApartmentScene : TimeOfDayScene
 		: base(game)
 	{
 		AddTexturedLayer("Background", "Assets/Scenes/SethApartment/Background", 0, 0);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Father-of-Death - Happy Jazz Shit", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.HappyJazzShitTrack, 0.4f);
 	}
 }

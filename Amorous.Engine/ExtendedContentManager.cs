@@ -3,7 +3,7 @@ using System.IO;
 using Microsoft.Xna.Framework.Content;
 
 public class ExtendedContentManager : ContentManager
-{
+{ // _xM5N1Fg3VZCSTaBWtPXoS6nJ82E
 	public ExtendedContentManager(IServiceProvider serviceProvider)
 		: base(serviceProvider) {}
 

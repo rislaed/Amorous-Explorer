@@ -23,25 +23,25 @@ public class SkyeSexscene : CensoredSexscene
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "Sex",
-			EventName = "ThrustStart",
+			EventName = EventThrustStart,
 			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "Sex",
-			EventName = "ThrustEnd",
+			EventName = EventThrustEnd,
 			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "Sex",
-			EventName = "Moan",
+			EventName = EventMoan,
 			FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f }
 		}
 	};
 
 	public SkyeSexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Skye/Skye Sex", "Assets/SexScenes/Skye/Background", null, list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: _sg4TvSTYoH0YwumBfYnvr7IeDaT.Get(content), float_0: Censorship.Censored ? 2f : 1f, bool_0: true, cycle: 3000f)
+		: base(content, "Assets/SexScenes/Skye/Skye Sex", "Assets/SexScenes/Skye/Background", null, events: Events, sounds: FemaleSexsceneSounds.Get(content), scale: Censorship.Censored ? 2f : 1f, premultipliedAlpha: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("Sex");
 		if (Censorship.Censored)
@@ -58,38 +58,38 @@ public class SkyeSexscene : CensoredSexscene
 		SkinYellow = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
 		SkinBlue = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		bool isYellow = data.GetBit("SkyeSkinYellow");
-		bool isBlue = data.GetBit("SkyeSkinBlue");
+		bool isYellow = data.GetFlag(AmorousData.SkyeSkinYellow);
+		bool isBlue = data.GetFlag(AmorousData.SkyeSkinBlue);
 		if (!(isYellow && isBlue))
 		{
 			if (isYellow)
 			{
-				SetSkin(VariantYellow);
+				SwitchToSubscene(VariantYellow);
 			}
 			else if (isBlue)
 			{
-				SetSkin(VariantBlue);
+				SwitchToSubscene(VariantBlue);
 			}
 			else
 			{
-				SetSkin(VariantGray);
+				SwitchToSubscene(VariantGray);
 			}
 		}
 		else
 		{
-			SetSkin(VariantGray);
+			SwitchToSubscene(VariantGray);
 		}
 	}
 
-	public override string[] GetSkins()
+	public override string[] GetSubscenes()
 	{
 		return new string[3] { "Gray", "Yellow", "Blue" };
 	}
 
-	public override void SetSkin(string variant)
+	public override void SwitchToSubscene(string subscene)
 	{
-		base.SetSkin(variant);
-		switch (variant)
+		base.SwitchToSubscene(subscene);
+		switch (subscene)
 		{
 			case VariantGray:
 				base.Skin = SkinGray;
@@ -103,7 +103,7 @@ public class SkyeSexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshScene(PlayerData data)
+	protected override void RefreshSubscene(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (!Censorship.Censored)
@@ -150,7 +150,7 @@ public class SkyeSexscene : CensoredSexscene
 			base.Spine.SetColor("Player belly stripes", (float)(int)data.StripesColor.R / 255f, (float)(int)data.StripesColor.G / 255f, (float)(int)data.StripesColor.B / 255f);
 			base.Spine.SetColor("Player cock", (float)(int)data.GenitaliaColor.R / 255f, (float)(int)data.GenitaliaColor.G / 255f, (float)(int)data.GenitaliaColor.B / 255f);
 			base.Spine.SetColor("Player knot", (float)(int)data.GenitaliaColor.R / 255f, (float)(int)data.GenitaliaColor.G / 255f, (float)(int)data.GenitaliaColor.B / 255f);
-			base.Overlays.Add("Player wetness");
+			base.ExplosionBones.Add("Player wetness");
 		}
 		else
 		{

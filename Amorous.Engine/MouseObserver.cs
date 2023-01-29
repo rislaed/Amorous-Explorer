@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 
 public class MouseObserver
-{
+{ // _wRd4nHuQQlAPEwrHOGkBfut6Uip
 	private readonly IAmorous _game;
 	private bool _EKoVuulhFH2bvqZKateoyZN7Ink;
 	private bool _qazbvc9K4STcPjV9jPSO0qIDsOJA;

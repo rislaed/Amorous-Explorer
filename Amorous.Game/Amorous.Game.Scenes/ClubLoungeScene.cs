@@ -26,10 +26,10 @@ public class ClubLoungeScene : AbstractScene
 		AddAnimatedClickableLayer("Club", 2588, 0, OnClubClick, 1200, "Assets/Scenes/ClubLounge/Main Room Blue", "Assets/Scenes/ClubLounge/Main Room Green");
 		AddForegroundTexturedLayer("Couches", "Assets/Scenes/ClubLounge/Foreground couches", -1295, 758);
 		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-1295, 1295, 0, 0);
-		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
+		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showDustin = !data.GetBit("DustinLeftClub");
-		_showMercy = !data.GetBit("MercyLeftClub");
+		_showDustin = !data.GetFlag(AmorousData.DustinLeftClub);
+		_showMercy = !data.GetFlag(AmorousData.MercyLeftClub);
 		if (_showDustin)
 		{
 			AddTexturedLayer("Shadow", "Assets/Scenes/ClubLounge/ShadowDustin", -426, 259);
@@ -62,7 +62,7 @@ public class ClubLoungeScene : AbstractScene
 		clubLoungeANPC.SetClothes(ClubStaticNPC.EClothes.Shirt);
 		clubLoungeANPC.X = 40f;
 		clubLoungeANPC.Y = 55f;
-		clubLoungeANPC._YyDeMNgCbNCOMTBX2QLUb4ruMp9A = false;
+		clubLoungeANPC.Breathing = false;
 		ClubLoungeDancerANPC clubLoungeDancerANPC = base.Game.GetNPCLayerAt<ClubLoungeDancerANPC>(LayerOrder.Foreground);
 		clubLoungeDancerANPC.SetEmotion(ClubLoungeDancerANPC.EHeads.Smirk);
 		clubLoungeDancerANPC.SetPose(ClubLoungeDancerANPC.EPoses.Dancing);
@@ -102,11 +102,11 @@ public class ClubLoungeScene : AbstractScene
 
 	private void OnDustinClick()
 	{
-		base.Game.StartCutscene("DustinDate");
+		base.Game.StartCutscene(AmorousData.DustinDate);
 	}
 
 	private void OnMercyClick()
 	{
-		base.Game.StartCutscene("MercyPreDate");
+		base.Game.StartCutscene(AmorousData.MercyPreDate);
 	}
 }

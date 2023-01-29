@@ -40,7 +40,7 @@ public class SkyGazeScene : AbstractScene
 		_NGOOUGHxCQRJ95YqBGvCZoDVi1K = AddTexturedLayer("Cloud1", "Assets/Scenes/SkyGaze/Cloud1", list[0], list2[0]);
 		_5ucKPpTFNOSSSAiQwUdMbhUYRPC = AddTexturedLayer("Cloud2", "Assets/Scenes/SkyGaze/Cloud2", list[1], list2[1]);
 		_6pX8CiiBs3G2EaPqh95VdNHT3tu = AddTexturedLayer("Cloud3", "Assets/Scenes/SkyGaze/Cloud3", list[2], list2[2]);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/DJ-ZEK - Simulate", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 
 	public override void Update(GameTime gameTime)

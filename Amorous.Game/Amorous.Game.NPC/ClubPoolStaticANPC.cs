@@ -9,7 +9,7 @@ public class ClubPoolStaticANPC : ClubStaticSpineNPC
 	public ClubPoolStaticANPC(IAmorous game)
 		: base(game, "Assets/NPC/ClubPoolStatic/A club", _faT8q4ZAxVWFlC2DnvTQkGsQ8Dh, null, _zUSO7mJ2m3VQVLAdUFTSi7leUMe)
 	{
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

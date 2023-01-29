@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-// using Amorous.Engine.GUI;
 using Amorous.Engine.NPC;
 using Amorous.Game.Scenes;
 using Microsoft.Xna.Framework;
@@ -17,7 +16,7 @@ using Spine;
 using Squid;
 
 public class AmorousSingleton : IAmorous
-{
+{ // _bj8iyyk84DtxcxcHgAHHFGgq8oN
 	private readonly Game _game;
 	private readonly GraphicsDeviceManager _display;
 	private SpriteBatch _batch;
@@ -45,7 +44,7 @@ public class AmorousSingleton : IAmorous
 	private SpriteFont _font;
 
 	private bool _hasControls;
-	private bool _debugger;
+	private bool _debugger = true; // ?
 	private bool _pendingScreenshot;
 
 	private static readonly string[] _nonContextualPlaces = new string[8]
@@ -134,7 +133,7 @@ public class AmorousSingleton : IAmorous
 		if (!File.Exists(pathNonSteam) && !File.Exists(pathNonSteam + ".txt"))
 		{
 			_steam = new SteamObserver();
-			if (!_steam.Initialize(778700u, this))
+			if (!_steam.Initialize(AmorousData.Code, this))
 			{
 				_steam = null;
 			}
@@ -185,19 +184,19 @@ public class AmorousSingleton : IAmorous
 		Clocks.InRealTime = true;
 		Clocks.UpdateTime();
 		_hasControls = true;
-		Gui.Renderer.SetTexture("MessageIconCoby", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Coby"));
-		Gui.Renderer.SetTexture("MessageIconDustin", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Dustin"));
-		Gui.Renderer.SetTexture("MessageIconJax", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Jax"));
-		Gui.Renderer.SetTexture("MessageIconLex", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Lex"));
-		Gui.Renderer.SetTexture("MessageIconMercy", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Mercy"));
-		Gui.Renderer.SetTexture("MessageIconRemy", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Remy"));
-		Gui.Renderer.SetTexture("MessageIconSeth", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Seth"));
-		Gui.Renderer.SetTexture("MessageIconSkye", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Skye"));
-		Gui.Renderer.SetTexture("MessageIconZenith", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Zenith"));
-		Gui.Renderer.SetTexture("MessageIconGeneric", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Generic"));
-		Gui.Renderer.SetTexture("MessageIconDJ", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_DJ"));
-		Gui.Renderer.SetTexture("MessageIconShootingRange", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_ShootingRange"));
-		Gui.Renderer.SetTexture("MessageIconCooking", Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Cooking"));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconCoby, Content.Load<Texture2D>(AmorousData.AchievementCoby));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconDustin, Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Dustin"));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconJax, Content.Load<Texture2D>(AmorousData.AchievementJax));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconLex, Content.Load<Texture2D>(AmorousData.AchievementLex));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconMercy, Content.Load<Texture2D>(AmorousData.AchievementMercy));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconRemy, Content.Load<Texture2D>(AmorousData.AchievementRemy));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconSeth, Content.Load<Texture2D>(AmorousData.AchievementSeth));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconSkye, Content.Load<Texture2D>(AmorousData.AchievementSkye));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconZenith, Content.Load<Texture2D>(AmorousData.AchievementZenith));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconGeneric, Content.Load<Texture2D>(AmorousData.AchievementGeneric));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconDJ, Content.Load<Texture2D>(AmorousData.AchievementDJ));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconShootingRange, Content.Load<Texture2D>(AmorousData.AchievementShootingRange));
+		Gui.Renderer.SetTexture(AmorousData.MessageIconCooking, Content.Load<Texture2D>(AmorousData.AchievementCooking));
 		Begin();
 	}
 
@@ -205,13 +204,15 @@ public class AmorousSingleton : IAmorous
 	{
 		_scene = new EmptyScene(this);
 		Fading.ApplyNow(new Color(0, 0, 0, 255));
-		SwitchScene<MainMenuScene>(delegate
+		SwitchToScene<MainMenuScene>(delegate
 		{
-			Fading.Hide();
+			Fading.FadeIn();
 		});
 	}
 
-	public void UnloadContent() {}
+	public void UnloadContent() {
+		// ?
+	}
 
 	public void Update(GameTime gameTime)
 	{
@@ -245,7 +246,7 @@ public class AmorousSingleton : IAmorous
 		_mouse.Update(gameTime);
 		_fader.Update(gameTime);
 		_media.Update(gameTime);
-		_media._LcX2y4hMIzQST4uGT2Q5Ce7vaGg();
+		_media.InterpolateVolume();
 		if (_pendingScene != null)
 		{
 			if (_scene != null)
@@ -523,38 +524,38 @@ public class AmorousSingleton : IAmorous
 
 	public void StartScene<T>() where T : AbstractScene
 	{
-		_fader.Show(delegate
+		_fader.FadeOut(delegate
 		{
-			SwitchScene<T>(delegate
+			SwitchToScene<T>(delegate
 			{
-				_fader.Hide();
+				_fader.FadeIn();
 			});
 		});
 	}
 
 	public void StartScene(string name)
 	{
-		_fader.Show(delegate
+		_fader.FadeOut(delegate
 		{
-			SwitchScene(name, delegate
+			SwitchToScene(name, delegate
 			{
-				_fader.Hide();
+				_fader.FadeIn();
 			});
 		});
 	}
 
 	public void StartScene(AbstractScene scene)
 	{
-		_fader.Show(delegate
+		_fader.FadeOut(delegate
 		{
-			SwitchScene(scene, delegate
+			SwitchToScene(scene, delegate
 			{
-				_fader.Hide();
+				_fader.FadeIn();
 			});
 		});
 	}
 
-	public void SwitchScene<T>(Action then = null) where T : AbstractScene
+	public void SwitchToScene<T>(Action then = null) where T : AbstractScene
 	{
 		if (_pendingSceneThen != null)
 		{
@@ -571,7 +572,7 @@ public class AmorousSingleton : IAmorous
 		InScenePending = true;
 	}
 
-	public void SwitchScene(string name, Action then = null)
+	public void SwitchToScene(string name, Action then = null)
 	{
 		if (_pendingSceneThen != null)
 		{
@@ -599,7 +600,7 @@ public class AmorousSingleton : IAmorous
 		}
 	}
 
-	public void SwitchScene(AbstractScene scene, Action then = null)
+	public void SwitchToScene(AbstractScene scene, Action then = null)
 	{
 		if (_pendingSceneThen != null)
 		{
@@ -616,7 +617,7 @@ public class AmorousSingleton : IAmorous
 		InScenePending = true;
 	}
 
-	public void StartSexscene(string name)
+	public void PlaySexscene(string name)
 	{
 		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 			where typeof(AbstractSexscene).IsAssignableFrom(type_0)
@@ -658,7 +659,7 @@ public class AmorousSingleton : IAmorous
 				Logger.Log(ConsoleColor.White, "Debug", "Starting cutscene '{0}'", cutscene.Data.Name);
 			}
 			_cutscene = cutscene;
-			int stage = _player.Data.GetDecimal(cutscene.Data.Name);
+			int stage = _player.Data.GetState(cutscene.Data.Name);
 			PhoneOverlay.Hide();
 			_cutscene.Begin(stage);
 		}
@@ -706,10 +707,10 @@ public class AmorousSingleton : IAmorous
 				Stage = Cutscene.State.Data.Stage,
 				ID = Cutscene.State.State.ID,
 				Scene = Scene.GetType().Name,
-				Subscene = Scene.Variant,
+				Subscene = Scene.Subscene,
 				Sexscene = Sexscene?.GetType().Name,
 				SexscenePhase = (Sexscene?.State ?? AbstractSexscene.Phase.Idle),
-				SexsceneFinished = (Sexscene?.Cumming ?? false),
+				SexsceneFinished = (Sexscene?.Exploded ?? false),
 				FadedOut = (Fading.State.A > 0)
 			};
 			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Left));
@@ -722,21 +723,21 @@ public class AmorousSingleton : IAmorous
 
 	private void LoadCutscene(CutsceneState state)
 	{
-		Fading.Show(delegate
+		Fading.FadeOut(delegate
 		{
 			Cutscene cutscene = ReadCutscene(state.Name);
 			if (cutscene != null)
 			{
-				SwitchScene(state.Scene, delegate
+				SwitchToScene(state.Scene, delegate
 				{
 					if (state.Subscene != null)
 					{
-						Scene.SetVariant(state.Subscene);
+						Scene.SwitchToSubscene(state.Subscene);
 					}
 					if (state.Sexscene != null)
 					{
-						StartSexscene(state.Sexscene);
-						Sexscene._eXH4tq2J0DADXDLofA8G8Yw8fau(state.SexscenePhase, state.SexsceneFinished);
+						PlaySexscene(state.Sexscene);
+						Sexscene.LoadPhase(state.SexscenePhase, state.SexsceneFinished);
 					}
 					foreach (CutsceneState.NPCState item in state.NPCs)
 					{
@@ -752,7 +753,7 @@ public class AmorousSingleton : IAmorous
 					}
 					else
 					{
-						Fading.Hide(delegate
+						Fading.FadeIn(delegate
 						{
 							_cutscene = cutscene;
 							_cutscene.Begin(state.Stage, state.ID);
@@ -816,12 +817,12 @@ public class AmorousSingleton : IAmorous
 				Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
 				if (!(type == null))
 				{
-					if (Activator.CreateInstance(type, this) is AbstractNPC qGGOTxZ8aNWGh0hc26wcmx8wmwT)
+					if (Activator.CreateInstance(type, this) is AbstractNPC npc)
 					{
-						qGGOTxZ8aNWGh0hc26wcmx8wmwT.Game = this;
-						qGGOTxZ8aNWGh0hc26wcmx8wmwT.Begin();
-						_scene.AddNPC(qGGOTxZ8aNWGh0hc26wcmx8wmwT, (order == LayerOrder.None) ? LayerOrder.Background : order);
-						return qGGOTxZ8aNWGh0hc26wcmx8wmwT;
+						npc.Game = this;
+						npc.Begin();
+						_scene.AddNPC(npc, (order == LayerOrder.None) ? LayerOrder.Background : order);
+						return npc;
 					}
 					Logger.Error("Failed to instance npc '{0}'", name);
 					return null;
@@ -830,7 +831,7 @@ public class AmorousSingleton : IAmorous
 				return null;
 			}
 			AbstractNPC NPC = NPCLayer.NPC;
-			if (NPC != null && NPC._SC7QlorMIWTLSkD757wC7ybszpE)
+			if (NPC != null && NPC.LockedInLayer)
 			{
 				return null;
 			}
@@ -851,11 +852,11 @@ public class AmorousSingleton : IAmorous
 	{
 		Saves.Save(slot, new SaveData
 		{
-			Version = 5,
+			Version = SavesDatabase.CurrentlyVersion,
 			PlayerData = _player.Data,
 			CutsceneState = GetCutsceneState(),
 			SceneName = _scene.GetType().Name,
-			PhoneEnabled = PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj
+			PhoneEnabled = PhoneOverlay.Enabled
 		});
 	}
 
@@ -863,10 +864,10 @@ public class AmorousSingleton : IAmorous
 	{
 		Saves.Autosave(slot, new SaveData
 		{
-			Version = 5,
+			Version = SavesDatabase.CurrentlyVersion,
 			PlayerData = _player.Data,
 			SceneName = _scene.GetType().Name,
-			PhoneEnabled = PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj
+			PhoneEnabled = PhoneOverlay.Enabled
 		});
 	}
 
@@ -876,10 +877,10 @@ public class AmorousSingleton : IAmorous
 		SaveData save = Saves.Read(slot);
 		if (save != null)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._NG0eIZcXsX6Fp38GhuED0LKeWHf(save);
+			SavesDatabase.RestoreSaveData(save);
 			_player.Data = save.PlayerData;
-			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = save.PhoneEnabled;
-			PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			PhoneOverlay.Enabled = save.PhoneEnabled;
+			PhoneOverlay.Get().RefreshSkin();
 			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
 			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
 			if (save.CutsceneState != null)
@@ -892,7 +893,7 @@ public class AmorousSingleton : IAmorous
 				{
 					save.SceneName = typeof(ClubInsideScene).Name;
 				}
-				if (!_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._RUw8RieezXPoVSmbk3eROtfKXVi(this, save))
+				if (!SavesDatabase.StartMigration(this, save))
 				{
 					StartScene(save.SceneName);
 				}
@@ -908,17 +909,17 @@ public class AmorousSingleton : IAmorous
 		SaveData save = Saves.ReadAutosave(slot);
 		if (save != null)
 		{
-			_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._NG0eIZcXsX6Fp38GhuED0LKeWHf(save);
+			SavesDatabase.RestoreSaveData(save);
 			_player.Data = save.PlayerData;
-			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = save.PhoneEnabled;
-			PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			PhoneOverlay.Enabled = save.PhoneEnabled;
+			PhoneOverlay.Get().RefreshSkin();
 			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
 			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
 			if (!_nonContextualPlaces.Contains(save.SceneName))
 			{
 				save.SceneName = typeof(ClubInsideScene).Name;
 			}
-			if (!_9gbCIL8lNtgBPuVMJ6pA7rCsMoT._RUw8RieezXPoVSmbk3eROtfKXVi(this, save))
+			if (!SavesDatabase.StartMigration(this, save))
 			{
 				StartScene(save.SceneName);
 			}
@@ -949,10 +950,10 @@ public class AmorousSingleton : IAmorous
 	{
 		if (Cutscene != null)
 		{
-			Cutscene.ResetProgression();
+			Cutscene.ResetState();
 		}
 		PhoneOverlay.Hide();
-		PhoneOverlay.Get().ResetProgression();
+		PhoneOverlay.Get().ResetState();
 		TypingDialogue._gVRGC9VAGHCLvP8p5Q4mqLPvFCm();
 		TypingDialogue.BeginCutscene();
 		_fader.ApplyNow(new Color(0, 0, 0, 0));

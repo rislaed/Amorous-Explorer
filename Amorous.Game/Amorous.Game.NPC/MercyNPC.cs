@@ -42,31 +42,31 @@ public class MercyNPC : SpineNPC<MercyNPC.EHeads, MercyNPC.EPoses, MercyNPC.EClo
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		string[] first = new string[7] { "Pupils", "Eyeback", "Hair back", "Hairlock left", "Fringe", "Horn", "Horn tip" };
-		GetEmotion(EHeads.Angry, first.Union(new string[2] { "Angry head", "AngrySad ear" }).ToArray());
-		GetEmotion(EHeads.Happy, first.Union(new string[3] { "Happy head", "Happy Jaw", "Happy ear" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Happy blink");
-		GetEmotion(EHeads.Sad, first.Union(new string[2] { "Sad head", "AngrySad ear" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Sad Blink");
-		GetEmotion(EHeads.BlushConfident, first.Union(new string[2] { "Blush Confident Head", "AngrySad ear" }).ToArray());
-		GetEmotion(EHeads.BlushShy, first.Union(new string[2] { "Blush Shy Head", "AngrySad ear" }).ToArray())._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Sad Blink");
-		GetPose(EPoses.Standing, "Body one", "Arm left hip", "Arm right hip", "Tail");
-		GetPose(EPoses.ArmsShy, "Body one", "Arms shy", "Arms shy back", "Tail");
-		GetClothes(EPoses.Standing, EClothes.Dress, "Dress")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.Standing, EClothes.SkimpyDress, "Skimpy Dress")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.Standing, EClothes.SportsBra, "Sports Bra")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._KCZzL8xtjbw97bTOV0k8JDz3olE();
-		GetClothes(EPoses.Standing, EClothes.SportsShorts, "Sports Shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF();
-		GetClothes(EPoses.Standing, EClothes.Necklace, "Necklace");
-		GetClothes(EPoses.ArmsShy, EClothes.Dress, "Dress")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.ArmsShy, EClothes.SkimpyDress, "Skimpy Dress")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		GetClothes(EPoses.ArmsShy, EClothes.SportsBra, "Sports Bra")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._KCZzL8xtjbw97bTOV0k8JDz3olE();
-		GetClothes(EPoses.ArmsShy, EClothes.SportsShorts, "Sports Shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF();
-		GetClothes(EPoses.ArmsShy, EClothes.Necklace, "Necklace");
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddEmotion(EHeads.Angry, first.Union(new string[2] { "Angry head", "AngrySad ear" }).ToArray());
+		AddEmotion(EHeads.Happy, first.Union(new string[3] { "Happy head", "Happy Jaw", "Happy ear" }).ToArray()).WithBlinking("Happy blink");
+		AddEmotion(EHeads.Sad, first.Union(new string[2] { "Sad head", "AngrySad ear" }).ToArray()).WithBlinking("Sad Blink");
+		AddEmotion(EHeads.BlushConfident, first.Union(new string[2] { "Blush Confident Head", "AngrySad ear" }).ToArray());
+		AddEmotion(EHeads.BlushShy, first.Union(new string[2] { "Blush Shy Head", "AngrySad ear" }).ToArray()).WithBlinking("Sad Blink");
+		AddPose(EPoses.Standing, "Body one", "Arm left hip", "Arm right hip", "Tail");
+		AddPose(EPoses.ArmsShy, "Body one", "Arms shy", "Arms shy back", "Tail");
+		AddClothes(EPoses.Standing, EClothes.Dress, "Dress").AsShirt().AsPants();
+		AddClothes(EPoses.Standing, EClothes.SkimpyDress, "Skimpy Dress").AsShirt().AsPants();
+		AddClothes(EPoses.Standing, EClothes.SportsBra, "Sports Bra").AsShirt().AsCensoredShirt();
+		AddClothes(EPoses.Standing, EClothes.SportsShorts, "Sports Shorts").AsPants().AsCensoredPants();
+		AddClothes(EPoses.Standing, EClothes.Necklace, "Necklace");
+		AddClothes(EPoses.ArmsShy, EClothes.Dress, "Dress").AsShirt().AsPants();
+		AddClothes(EPoses.ArmsShy, EClothes.SkimpyDress, "Skimpy Dress").AsShirt().AsPants();
+		AddClothes(EPoses.ArmsShy, EClothes.SportsBra, "Sports Bra").AsShirt().AsCensoredShirt();
+		AddClothes(EPoses.ArmsShy, EClothes.SportsShorts, "Sports Shorts").AsPants().AsCensoredPants();
+		AddClothes(EPoses.ArmsShy, EClothes.Necklace, "Necklace");
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

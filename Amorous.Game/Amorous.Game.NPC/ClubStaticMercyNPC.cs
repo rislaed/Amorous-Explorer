@@ -7,7 +7,7 @@ public class ClubStaticMercyNPC : ClubStaticNPC
 	{
 		Width = 291;
 		Height = 492;
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 }

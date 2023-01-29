@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Content;
 using Spine;
 
 public static class SpinesContentManager
-{
+{ // _VqMsnKIrKxoILv49l85B6Rm0fuQ
 	public static SpineRenderer LoadSkeleton(this ContentManager content, string path, float scale = 1f, bool premultipliedAlpha = true, List<SkeletonJson.SpineEvent> events = null)
 	{
 		string text = Path.Combine(content.RootDirectory, path);

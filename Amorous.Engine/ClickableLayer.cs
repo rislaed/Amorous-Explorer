@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class ClickableLayer : AbstractLayer
-{
+{ // _z20t8IpBINiJtljSeTIkNoKUOkx
 	private bool Hovered;
 
 	private readonly Action When;

@@ -14,25 +14,25 @@ public class DustinSexscene : CensoredSexscene
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustStart",
+			EventName = EventThrustStart,
 			FrameTimes = new float[6] { 1f, 2f, 3f, 4f, 5f, 6f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "ThrustEnd",
+			EventName = EventThrustEnd,
 			FrameTimes = new float[6] { 1.2f, 2.2f, 3.2f, 4.2f, 5.2f, 6.2f }
 		},
 		new SkeletonJson.SpineEvent
 		{
 			AnimationName = "animation",
-			EventName = "Moan",
+			EventName = EventMoan,
 			FrameTimes = new float[6] { 1.3f, 2.3f, 3.3f, 4.3f, 5.3f, 6.3f }
 		}
 	};
 
 	public DustinSexscene(ContentManager content)
-		: base(content, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", list_0: Events, _sa8EsNgk4VDRaASdXE7VprdlNlg_0: new _ecVLwNBaQAiybVyX9cgWCvnbkWe(content), float_0: Censorship.Censored ? 1.5f : 1f, bool_0: true, cycle: 3000f)
+		: base(content, "Assets/SexScenes/Dustin/Dustin Sex", "Assets/SexScenes/Dustin/Background", "Assets/SexScenes/Dustin/Foreground", events: Events, sounds: new MaleSexsceneSounds(content), scale: Censorship.Censored ? 1.5f : 1f, premultipliedAlpha: true, cycle: 3000f)
 	{
 		base.Spine.StartAnimationWithLooping("animation");
 		if (Censorship.Censored)
@@ -48,7 +48,7 @@ public class DustinSexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshScene(PlayerData data)
+	protected override void RefreshSubscene(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (!Censorship.Censored)
@@ -95,7 +95,7 @@ public class DustinSexscene : CensoredSexscene
 			base.Spine.SetColor("Player thigh top stripes", data.StripesColor);
 			base.Spine.SetColor("Player thigh top underbelly", data.UnderbellyColor);
 			base.Spine.SetColor("Player shin top", data.BodyColor);
-			base.Overlays.Add("Cum");
+			base.ExplosionBones.Add("Cum");
 		}
 		else
 		{

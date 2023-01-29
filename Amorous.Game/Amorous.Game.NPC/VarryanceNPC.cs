@@ -24,7 +24,6 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 	}
 
 	public static string Name = "Varryance";
-
 	public static Color Color = new Color(162, 65, 159);
 
 	public VarryanceNPC(IAmorous game)
@@ -32,22 +31,22 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 	{
 		Width = 850;
 		Height = 1649;
-		GetPose(EPoses.Standing, "Varryance Body");
-		GetClothes(EPoses.Standing, EClothes.Shirt, "Varryance Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Standing, EClothes.Pants, "Varryance Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Standing, "Varryance Body");
+		AddClothes(EPoses.Standing, EClothes.Shirt, "Varryance Shirt").AsShirt().AsCloth();
+		AddClothes(EPoses.Standing, EClothes.Pants, "Varryance Pants").AsPants().AsCloth();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	protected override string[] _zBK8PXhWw9GtXK9IHkvbuvhbigE()
+	protected override string[] GetPieces()
 	{
 		return new string[3] { "Varryance Body", "Varryance Shirt", "Varryance Pants" };
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

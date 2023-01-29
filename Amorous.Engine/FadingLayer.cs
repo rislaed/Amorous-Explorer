@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class FadingLayer : AbstractLayer
-{
+{ // _hxdR2gDHAgUMo1HqEU81OpKiFNA
 	private enum FadingStep
 	{
 		Offset,

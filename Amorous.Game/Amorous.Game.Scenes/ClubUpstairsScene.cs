@@ -21,9 +21,9 @@ public class ClubUpstairsScene : AbstractScene
 		AddClickableLayer("Stairs", "Assets/Scenes/ClubUpstairs/Staircase Selectable", -245, 20, OnDownstairsClick);
 		AddClickableLayer("Door", "Assets/Scenes/ClubUpstairs/Pool Door Selectable", 2533, 0, OnDoorClick);
 		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-1295, 1295, 0, 0);
-		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
+		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showZenith = !data.GetBit("ZenithLeftClub");
+		_showZenith = !data.GetFlag(AmorousData.ZenithLeftClub);
 		if (_showZenith)
 		{
 			AddTexturedLayer("Shadow", "Assets/Scenes/ClubUpstairs/ShadowZenith", 540, 712);
@@ -63,6 +63,6 @@ public class ClubUpstairsScene : AbstractScene
 
 	private void OnZenithClick()
 	{
-		base.Game.StartCutscene("ZenithPreDate");
+		base.Game.StartCutscene(AmorousData.ZenithPreDate);
 	}
 }

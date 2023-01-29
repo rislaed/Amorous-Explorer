@@ -5,76 +5,76 @@ using Microsoft.Xna.Framework.Graphics;
 using Squid;
 
 public class InteractableOverlay
-{
+{ // _8lVOgkauaSHbAkAqHzI1K7mIyOI
 	public IAmorous Game { get; private set; }
-	public List<_1dTaaW9MQWoHm2Pqblg0u9bPhpe> _6qfro4buoEQEXNMVAj08xANyjWf { get; private set; }
+	public List<AbstractInteractable> Interactables { get; private set; }
 	public bool Touchable { get; set; }
 
 	public InteractableOverlay(IAmorous amorous)
 	{
 		Game = amorous;
-		_6qfro4buoEQEXNMVAj08xANyjWf = new List<_1dTaaW9MQWoHm2Pqblg0u9bPhpe>();
+		Interactables = new List<AbstractInteractable>();
 		Touchable = true;
 	}
 
-	public _d4ad1i8rcZMvfN9iaxggA1KtVgx _aiunwWjasFcF9afjl2FnUxWXB0M(string string_0, string string_1, int int_0, int int_1, Microsoft.Xna.Framework.Rectangle rectangle_0, Action action_0)
+	public SpriteInteractable AddSpriteInteractable(string foreground, string background, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		Texture2D texture2D_ = Game.Content.Load<Texture2D>(string_0);
-		Texture2D texture2D_2 = null;
-		if (!string.IsNullOrEmpty(string_1))
+		Texture2D _foreground = Game.Content.Load<Texture2D>(foreground);
+		Texture2D _background = null;
+		if (!string.IsNullOrEmpty(background))
 		{
-			texture2D_2 = Game.Content.Load<Texture2D>(string_1);
+			_background = Game.Content.Load<Texture2D>(background);
 		}
-		return _aiunwWjasFcF9afjl2FnUxWXB0M(texture2D_, texture2D_2, int_0, int_1, rectangle_0, action_0);
+		return AddSpriteInteractable(_foreground, _background, x, y, bounds, click);
 	}
 
-	public _d4ad1i8rcZMvfN9iaxggA1KtVgx _aiunwWjasFcF9afjl2FnUxWXB0M(Texture2D texture2D_0, Texture2D texture2D_1, int int_0, int int_1, Microsoft.Xna.Framework.Rectangle rectangle_0, Action action_0)
+	public SpriteInteractable AddSpriteInteractable(Texture2D foreground, Texture2D background, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		_d4ad1i8rcZMvfN9iaxggA1KtVgx d4ad1i8rcZMvfN9iaxggA1KtVgx = new _d4ad1i8rcZMvfN9iaxggA1KtVgx(texture2D_0, texture2D_1, action_0)
+		SpriteInteractable interactable = new SpriteInteractable(foreground, background, click)
 		{
-			X = int_0,
-			Y = int_1,
-			_2psWLw4AI8EIjQzaXnhGg8M1FnaA = rectangle_0
+			X = x,
+			Y = y,
+			Bounds = bounds
 		};
-		_6qfro4buoEQEXNMVAj08xANyjWf.Add(d4ad1i8rcZMvfN9iaxggA1KtVgx);
-		return d4ad1i8rcZMvfN9iaxggA1KtVgx;
+		Interactables.Add(interactable);
+		return interactable;
 	}
 
-	public _iHJrndJdM1jj9TEnuU3BvgdDuvf _QVqIVxBeF2SAQh6HDFwwp2RFmXB(string string_0, string string_1, string string_2, string string_3, Color color_0, int int_0, int int_1, Microsoft.Xna.Framework.Rectangle rectangle_0, Action action_0)
+	public ButtonInteractable AddButtonInteractable(string foreground, string background, string font, string text, Color color, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		Texture2D texture2D_ = Game.Content.Load<Texture2D>(string_0);
-		Texture2D texture2D_2 = null;
-		if (!string.IsNullOrEmpty(string_1))
+		Texture2D _foreground = Game.Content.Load<Texture2D>(background);
+		Texture2D _background = null;
+		if (!string.IsNullOrEmpty(background))
 		{
-			texture2D_2 = Game.Content.Load<Texture2D>(string_1);
+			_background = Game.Content.Load<Texture2D>(background);
 		}
-		SpriteFont spriteFont_ = Game.Content.Load<SpriteFont>(string_2);
-		return _QVqIVxBeF2SAQh6HDFwwp2RFmXB(texture2D_, texture2D_2, spriteFont_, string_3, color_0, int_0, int_1, rectangle_0, action_0);
+		SpriteFont _font = Game.Content.Load<SpriteFont>(font);
+		return AddButtonInteractable(_foreground, _background, _font, text, color, x, y, bounds, click);
 	}
 
-	public _iHJrndJdM1jj9TEnuU3BvgdDuvf _QVqIVxBeF2SAQh6HDFwwp2RFmXB(Texture2D texture2D_0, Texture2D texture2D_1, SpriteFont spriteFont_0, string string_0, Color color_0, int int_0, int int_1, Microsoft.Xna.Framework.Rectangle rectangle_0, Action action_0)
+	public ButtonInteractable AddButtonInteractable(Texture2D foreground, Texture2D background, SpriteFont font, string text, Color color, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		_iHJrndJdM1jj9TEnuU3BvgdDuvf iHJrndJdM1jj9TEnuU3BvgdDuvf = new _iHJrndJdM1jj9TEnuU3BvgdDuvf(texture2D_0, texture2D_1, spriteFont_0, string_0, color_0, action_0)
+		ButtonInteractable interactable = new ButtonInteractable(foreground, background, font, text, color, click)
 		{
-			X = int_0,
-			Y = int_1,
-			_2psWLw4AI8EIjQzaXnhGg8M1FnaA = rectangle_0
+			X = x,
+			Y = y,
+			Bounds = bounds
 		};
-		_6qfro4buoEQEXNMVAj08xANyjWf.Add(iHJrndJdM1jj9TEnuU3BvgdDuvf);
-		return iHJrndJdM1jj9TEnuU3BvgdDuvf;
+		Interactables.Add(interactable);
+		return interactable;
 	}
 
-	public _abqs0UynzjUEhuA3VpR4t6Uuk0E _83EecuYIFalvL6Gd1s9MoTLHdgq(string string_0, string string_1, Alignment alignment_0, Color color_0, int int_0, int int_1)
+	public TextInteractable AddTextInteractable(string font, string text, Alignment gravity, Color color, int x, int y)
 	{
-		SpriteFont spriteFont_ = Game.Content.Load<SpriteFont>(string_0);
-		_abqs0UynzjUEhuA3VpR4t6Uuk0E abqs0UynzjUEhuA3VpR4t6Uuk0E = new _abqs0UynzjUEhuA3VpR4t6Uuk0E(spriteFont_, string_1, color_0)
+		SpriteFont _font = Game.Content.Load<SpriteFont>(font);
+		TextInteractable interactable = new TextInteractable(_font, text, color)
 		{
-			X = int_0,
-			Y = int_1,
-			Gravity = alignment_0
+			X = x,
+			Y = y,
+			Gravity = gravity
 		};
-		_6qfro4buoEQEXNMVAj08xANyjWf.Add(abqs0UynzjUEhuA3VpR4t6Uuk0E);
-		return abqs0UynzjUEhuA3VpR4t6Uuk0E;
+		Interactables.Add(interactable);
+		return interactable;
 	}
 
 	public void Update(GameTime gameTime)
@@ -83,19 +83,19 @@ public class InteractableOverlay
 		{
 			return;
 		}
-		Microsoft.Xna.Framework.Point value = Game.Mouse.Rescale(Game.Controller.Cursor);
-		foreach (_1dTaaW9MQWoHm2Pqblg0u9bPhpe item in _6qfro4buoEQEXNMVAj08xANyjWf)
+		Microsoft.Xna.Framework.Point point = Game.Mouse.Rescale(Game.Controller.Cursor);
+		foreach (AbstractInteractable interactable in Interactables)
 		{
-			if (item.Visible)
+			if (interactable.Visible)
 			{
-				bool flag = item._2psWLw4AI8EIjQzaXnhGg8M1FnaA.Contains(value);
-				if (!item._NUP8Fs8I7oMuI6vfg25DFKFlQqE && flag)
+				bool innersection = interactable.Bounds.Contains(point);
+				if (!interactable.Hovered && innersection)
 				{
-					item._4xz3iE0ff4Zjl6ybnWxczeMPKyB();
+					interactable.Hover();
 				}
-				else if (item._NUP8Fs8I7oMuI6vfg25DFKFlQqE && !flag)
+				else if (interactable.Hovered && !innersection)
 				{
-					item._TVKS7kokuGdoU8kMxQQPKABgo4c();
+					interactable.Unhover();
 				}
 			}
 		}
@@ -103,11 +103,11 @@ public class InteractableOverlay
 		{
 			return;
 		}
-		foreach (_1dTaaW9MQWoHm2Pqblg0u9bPhpe item2 in _6qfro4buoEQEXNMVAj08xANyjWf)
+		foreach (AbstractInteractable interactable in Interactables)
 		{
-			if (item2.Visible && item2._2psWLw4AI8EIjQzaXnhGg8M1FnaA.Contains(value))
+			if (interactable.Visible && interactable.Bounds.Contains(point))
 			{
-				item2._eJedLbGgSejIX7Xyx6RoIYD1soJA();
+				interactable.Click();
 			}
 		}
 	}
@@ -115,11 +115,11 @@ public class InteractableOverlay
 	public void Draw(SpriteBatch spriteBatch)
 	{
 		spriteBatch.Begin();
-		foreach (_1dTaaW9MQWoHm2Pqblg0u9bPhpe item in _6qfro4buoEQEXNMVAj08xANyjWf)
+		foreach (AbstractInteractable interactable in Interactables)
 		{
-			if (item.Visible)
+			if (interactable.Visible)
 			{
-				item.Draw(spriteBatch);
+				interactable.Draw(spriteBatch);
 			}
 		}
 		spriteBatch.End();

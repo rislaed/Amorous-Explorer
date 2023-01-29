@@ -8,7 +8,7 @@ public class ClubPoolStaticDNPC : ClubPoolStaticNPC
 		Width = 566;
 		Height = 881;
 		_rlJEdnItzlU5efWtBjMCaC5Nizb = 350f;
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 }

@@ -53,41 +53,41 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 			typeof(JaxRedNPC)
 		};
 		base.Spine.StartAnimationWithLooping("animation");
-		GetEmotion(EHeads.Grumpy, "Grumpy Head", "Grumpy pupils", "Grumpy eyes back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Grumpy Blink");
-		GetEmotion(EHeads.Smirk, "Smirk head", "Smirk pupils", "Smirk eyes back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Smirk Blink");
-		GetEmotion(EHeads.Sad, "Sad Head", "Sad pupil", "Sad eye back", "Flirty Jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Sad blink");
-		GetEmotion(EHeads.Frustrated, "Frustrated Head", "Frustrated pupil", "Frustrated eye back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Frustrated blink");
-		GetEmotion(EHeads.Cheeky, "Cheeky Head", "Cheeky pupils", "Cheeky eye back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Cheeky Blink");
-		GetEmotion(EHeads.Unamused, "Unamused Head", "Unamused Pupils", "Unamused eye back")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Unamused Blink");
-		GetEmotion(EHeads.Happy, "Happy head", "Happy pupil", "Happy eye back", "Happy jaw")._qL2MEiFtBpbdxqUUTSqOgOsEK4j("Happy Blink");
-		GetPose(EPoses.Chill, "Body", "Right arm GestureChill", "Left arm chill", "Left thumb Chill")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
-		GetPose(EPoses.Gesture, "Body", "Right arm GestureChill", "Left arm Gesture")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
-		GetPose(EPoses.Defensive, "Body", "Right arm defensive", "Left Arm defensive")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
-		GetPose(EPoses.Shy, "Body", "Right arm shy", "Left arm shy")._6NcgB9eEKq8eKu8SgNWnKbLsDhB("Cock");
-		GetClothes(EPoses.Chill, EClothes.TuxChest, "Tux chest", "Tux Right arm GestureChill", "Tux Left arm chill")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Chill, EClothes.TuxUnderwear, "Tux underwear")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Chill, EClothes.CasualJacket, "Casual body", "Casual right arm GestureChill", "Casual left arm chill")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Chill, EClothes.CasualPants, "Casual shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Gesture, EClothes.TuxChest, "Tux chest", "Tux Right arm GestureChill", "Tux left arm gesture")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Gesture, EClothes.TuxUnderwear, "Tux underwear")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Gesture, EClothes.CasualJacket, "Casual body", "Casual right arm GestureChill", "Casual left arm Gesture copy 2")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Gesture, EClothes.CasualPants, "Casual shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Defensive, EClothes.TuxChest, "Tux chest", "Tux Right arm defensive")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Defensive, EClothes.TuxUnderwear, "Tux underwear")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Defensive, EClothes.CasualJacket, "Casual body", "Casual right arm defensive", "Casual left arm defensive")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Defensive, EClothes.CasualPants, "Casual shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Shy, EClothes.TuxChest, "Tux chest", "Tux right arm shy")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Shy, EClothes.TuxUnderwear, "Tux underwear")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Shy, EClothes.CasualJacket, "Casual body", "Casual right arm shy", "Casual left arm shy")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Shy, EClothes.CasualPants, "Casual shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._B19pyNfKCkJxZB1oCC3WzfkqEQF()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddEmotion(EHeads.Grumpy, "Grumpy Head", "Grumpy pupils", "Grumpy eyes back").WithBlinking("Grumpy Blink");
+		AddEmotion(EHeads.Smirk, "Smirk head", "Smirk pupils", "Smirk eyes back").WithBlinking("Smirk Blink");
+		AddEmotion(EHeads.Sad, "Sad Head", "Sad pupil", "Sad eye back", "Flirty Jaw").WithBlinking("Sad blink");
+		AddEmotion(EHeads.Frustrated, "Frustrated Head", "Frustrated pupil", "Frustrated eye back").WithBlinking("Frustrated blink");
+		AddEmotion(EHeads.Cheeky, "Cheeky Head", "Cheeky pupils", "Cheeky eye back").WithBlinking("Cheeky Blink");
+		AddEmotion(EHeads.Unamused, "Unamused Head", "Unamused Pupils", "Unamused eye back").WithBlinking("Unamused Blink");
+		AddEmotion(EHeads.Happy, "Happy head", "Happy pupil", "Happy eye back", "Happy jaw").WithBlinking("Happy Blink");
+		AddPose(EPoses.Chill, "Body", "Right arm GestureChill", "Left arm chill", "Left thumb Chill").AddNudes("Cock");
+		AddPose(EPoses.Gesture, "Body", "Right arm GestureChill", "Left arm Gesture").AddNudes("Cock");
+		AddPose(EPoses.Defensive, "Body", "Right arm defensive", "Left Arm defensive").AddNudes("Cock");
+		AddPose(EPoses.Shy, "Body", "Right arm shy", "Left arm shy").AddNudes("Cock");
+		AddClothes(EPoses.Chill, EClothes.TuxChest, "Tux chest", "Tux Right arm GestureChill", "Tux Left arm chill").AsShirt().AsNudes();
+		AddClothes(EPoses.Chill, EClothes.TuxUnderwear, "Tux underwear").AsPants().AsCloth();
+		AddClothes(EPoses.Chill, EClothes.CasualJacket, "Casual body", "Casual right arm GestureChill", "Casual left arm chill").AsShirt().AsNudes();
+		AddClothes(EPoses.Chill, EClothes.CasualPants, "Casual shorts").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Gesture, EClothes.TuxChest, "Tux chest", "Tux Right arm GestureChill", "Tux left arm gesture").AsShirt().AsNudes();
+		AddClothes(EPoses.Gesture, EClothes.TuxUnderwear, "Tux underwear").AsPants().AsCloth();
+		AddClothes(EPoses.Gesture, EClothes.CasualJacket, "Casual body", "Casual right arm GestureChill", "Casual left arm Gesture copy 2").AsShirt().AsNudes();
+		AddClothes(EPoses.Gesture, EClothes.CasualPants, "Casual shorts").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Defensive, EClothes.TuxChest, "Tux chest", "Tux Right arm defensive").AsShirt().AsNudes();
+		AddClothes(EPoses.Defensive, EClothes.TuxUnderwear, "Tux underwear").AsPants().AsCloth();
+		AddClothes(EPoses.Defensive, EClothes.CasualJacket, "Casual body", "Casual right arm defensive", "Casual left arm defensive").AsShirt().AsNudes();
+		AddClothes(EPoses.Defensive, EClothes.CasualPants, "Casual shorts").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Shy, EClothes.TuxChest, "Tux chest", "Tux right arm shy").AsShirt().AsNudes();
+		AddClothes(EPoses.Shy, EClothes.TuxUnderwear, "Tux underwear").AsPants().AsCloth();
+		AddClothes(EPoses.Shy, EClothes.CasualJacket, "Casual body", "Casual right arm shy", "Casual left arm shy").AsShirt().AsNudes();
+		AddClothes(EPoses.Shy, EClothes.CasualPants, "Casual shorts").AsPants().AsCensoredPants().AsCloth();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

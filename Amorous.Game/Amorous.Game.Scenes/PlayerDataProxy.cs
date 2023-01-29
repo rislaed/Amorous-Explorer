@@ -833,9 +833,9 @@ internal class PlayerDataProxy : IPlayerData
 		Data = data;
 	}
 
-	public bool GetBit(string string_0)
+	public bool GetFlag(string string_0)
 	{
-		return Data.GetBit(string_0);
+		return Data.GetFlag(string_0);
 	}
 
 	public PlayerData GetPlayerData()

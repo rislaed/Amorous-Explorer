@@ -26,9 +26,9 @@ public class ClubBackScene : AbstractScene
 		AddClickableLayer("Side", "Assets/Scenes/ClubBack/Front of Club Selectable", 608, 0, OnClubFrontClick);
 		AddDeviationLayer("Fan", "Assets/Scenes/ClubBack/Fan", 524, 75, 10f, 68, 75);
 		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-535, 535, 0, 0);
-		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
+		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showLex = !data.GetBit("LexLeftClub");
+		_showLex = !data.GetFlag(AmorousData.LexLeftClub);
 	}
 
 	public override void Start()
@@ -54,6 +54,6 @@ public class ClubBackScene : AbstractScene
 
 	private void OnLexClick()
 	{
-		base.Game.StartCutscene("LexPreDate");
+		base.Game.StartCutscene(AmorousData.LexPreDate);
 	}
 }

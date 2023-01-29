@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using SDL2;
 
 public class ControllerObserver
-{
+{ // _3FFZvGWTAe7rsviKkDPTXEVjxWf
 	private readonly IAmorous _game;
 	private Vector2 _cursorVector;
 	private Point _cursorPoint;

@@ -6,7 +6,6 @@ namespace Amorous.Game.Scenes;
 public class ClubEntranceScene : AbstractScene
 {
 	private KaneNPC _kane;
-
 	private NPCLayer _kaneLayer;
 
 	public ClubEntranceScene(IAmorous game)
@@ -19,11 +18,11 @@ public class ClubEntranceScene : AbstractScene
 		AddClickableLayer("Club Back", "Assets/Scenes/ClubEntrance/Back of Club Selectable", -535, 0, OnClubBackClick);
 		AddTexturedLayer("Rope Front", "Assets/Scenes/ClubEntrance/Club Front Ropes (infront)", -535, 0);
 		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-535, 535, 0, 0);
-		FadingMediaPlayer._QrgbXEg7MMeD9Ybz12fFVsbmAd9(_KZ7hNP1K5E99Xfup1lTZ9UDrxPE._oCy13KHJxLHriH7TwMiQ1qKJ8Uc, 0.4f, repeat: true, oneOf: true);
+		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetDecimal("Prologue") >= 20)
+		if (data.GetState(AmorousData.Prologue) >= AmorousData.PhoneAllowedState)
 		{
-			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = true;
+			PhoneOverlay.Enabled = true;
 		}
 	}
 
@@ -31,7 +30,7 @@ public class ClubEntranceScene : AbstractScene
 	{
 		_kane = base.Game.GetNPCLayerAt<KaneNPC>(LayerOrder.Background);
 		_kaneLayer = GetNPCLayer<KaneNPC>();
-		_kaneLayer._64JjsghBPDjZ1OxZwhO8Y6dFE5t = delegate
+		_kaneLayer.CutsceneChange = delegate
 		{
 			_kaneLayer.ZOrder = 1;
 			_kaneLayer.LayerOrder = 0;
@@ -85,6 +84,6 @@ public class ClubEntranceScene : AbstractScene
 		_kane.Click = null;
 		_kane.IsHovered = false;
 		RefreshLayerOrdering();
-		base.Game.StartCutscene("Kane");
+		base.Game.StartCutscene(AmorousData.Kane);
 	}
 }

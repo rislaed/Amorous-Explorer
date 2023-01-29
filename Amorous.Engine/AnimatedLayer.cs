@@ -4,9 +4,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class AnimatedLayer : AbstractLayer
-{
-	private int Value;
-	private int Stopwatch;
+{ // _kxm3yIqio0baXT5t5vOHBAEdviB
+	private int _frame;
+	private int _stopwatch;
 
 	public List<Texture2D> Textures { get; private set; }
 	public int Ticks { get; private set; }
@@ -18,20 +18,20 @@ public class AnimatedLayer : AbstractLayer
 		base.Width = textures[0].Width;
 		base.Height = textures[0].Height;
 		Ticks = delay;
-		Value = 0;
-		Stopwatch = Ticks;
+		_frame = 0;
+		_stopwatch = Ticks;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		Stopwatch -= gameTime.ElapsedGameTime.Milliseconds;
-		if (Stopwatch < 0)
+		_stopwatch -= gameTime.ElapsedGameTime.Milliseconds;
+		if (_stopwatch < 0)
 		{
-			Stopwatch = Ticks;
-			Value++;
-			if (Value >= Textures.Count)
+			_stopwatch = Ticks;
+			_frame++;
+			if (_frame >= Textures.Count)
 			{
-				Value = 0;
+				_frame = 0;
 			}
 		}
 	}
@@ -40,7 +40,7 @@ public class AnimatedLayer : AbstractLayer
 	{
 		if (Color.A != 0)
 		{
-			spriteBatch.Draw(Textures[Value], Location, null, Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+			spriteBatch.Draw(Textures[_frame], Location, null, Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 		}
 	}
 }

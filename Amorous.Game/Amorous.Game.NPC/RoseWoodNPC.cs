@@ -30,17 +30,17 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 	public RoseWoodNPC(IAmorous game)
 		: base(game, "Assets/NPC/RoseWood", 1f)
 	{
-		GetPose(EPoses.Standing, "Rose Wood Body");
-		GetClothes(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		GetClothes(EPoses.Standing, EClothes.Shirt, "Rose Wood Shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Standing, "Rose Wood Body");
+		AddClothes(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts").AsPants().AsCloth();
+		AddClothes(EPoses.Standing, EClothes.Shirt, "Rose Wood Shirt").AsShirt().AsNudes();
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

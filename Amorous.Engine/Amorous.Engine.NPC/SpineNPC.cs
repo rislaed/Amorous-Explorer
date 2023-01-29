@@ -8,19 +8,19 @@ public abstract class SpineNPC<THead, TPose, TClothes> : AbstractSpineNPC where 
 	protected SpineNPC(IAmorous game, string path, float scale = 1f, bool premultipliedAlpha = true)
 		: base(game, path, scale, premultipliedAlpha) {}
 
-	public _xmfdPa5IagU3cXbLL61gyoXAV7gA GetEmotion(THead emotion, params string[] self)
+	public FilterableEmotion AddEmotion(THead emotion, params string[] self)
 	{
-		return GetEmotion(Enum.GetName(typeof(THead), (object)emotion), self);
+		return AddEmotion(Enum.GetName(typeof(THead), (object)emotion), self);
 	}
 
-	public _NaKchYC4I4GjWR34SfBLAktysCE GetPose(TPose pose, params string[] self)
+	public FilterablePose AddPose(TPose pose, params string[] self)
 	{
-		return GetPose(Enum.GetName(typeof(TPose), (object)pose), self);
+		return AddPose(Enum.GetName(typeof(TPose), (object)pose), self);
 	}
 
-	public _EZ0kOLXoEoEfWGQDdTbNqaPzDUh GetClothes(TPose pose, TClothes clothes, params string[] self)
+	public FilterableClothes AddClothes(TPose pose, TClothes clothes, params string[] self)
 	{
-		return GetClothes(Enum.GetName(typeof(TPose), (object)pose), Enum.GetName(typeof(TClothes), (object)clothes), self);
+		return AddClothes(Enum.GetName(typeof(TPose), (object)pose), Enum.GetName(typeof(TClothes), (object)clothes), self);
 	}
 
 	public void SetEmotion(THead emotion)

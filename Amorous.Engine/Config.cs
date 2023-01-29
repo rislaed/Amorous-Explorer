@@ -2,7 +2,7 @@ using Amorous.Engine.GUI;
 using Newtonsoft.Json;
 
 public class Config
-{
+{ // _eNOTHZZiu5nx6PrADzfLyng3Igc
 	[JsonProperty("ResolutionWidth")]
 	public int ResolutionWidth { get; set; }
 

@@ -30,17 +30,17 @@ public class CosplayerJacquelineNPC : LayerNPC<CosplayerJacquelineNPC.EHeads, Co
 	public CosplayerJacquelineNPC(IAmorous game)
 		: base(game, "Assets/NPC/CosplayerJacqueline", 1f)
 	{
-		GetPose(EPoses.Standing, "Jacqueline Knight (nude)");
-		GetClothes(EPoses.Standing, EClothes.Shirt, "Jacqueline Knight (shirt)")._XJUU6QdUDN3lYoRweLWOMaWqcUE()._9mDS3yizOswyCzK6V3LBhafV7Dh();
-		GetClothes(EPoses.Standing, EClothes.Pants, "Jacqueline Knight (pants)")._dUWotuFGWMaIlD1IFkXcXUhjchR()._mgkfAuKt1tsSRmn1YmxkzbHikc();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = true;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Standing, "Jacqueline Knight (nude)");
+		AddClothes(EPoses.Standing, EClothes.Shirt, "Jacqueline Knight (shirt)").AsShirt().AsNudes();
+		AddClothes(EPoses.Standing, EClothes.Pants, "Jacqueline Knight (pants)").AsPants().AsCloth();
+		NudesBehindShirt = true;
+		NudesBehindPants = true;
 	}
 
-	public override void SetLocation(NPCLocation npclocation_0)
+	public override void SetLocation(NPCLocation location)
 	{
-		base.SetLocation(npclocation_0);
-		switch (npclocation_0)
+		base.SetLocation(location);
+		switch (location)
 		{
 		case NPCLocation.Middle:
 			FlipX = false;

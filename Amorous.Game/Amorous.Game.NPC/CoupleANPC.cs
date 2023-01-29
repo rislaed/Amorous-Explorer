@@ -27,10 +27,10 @@ public class CoupleANPC : SpineNPC<CoupleANPC.EHeads, CoupleANPC.EPoses, CoupleA
 		: base(game, "Assets/Scenes/Intro/Couple A", 1f, premultipliedAlpha: true)
 	{
 		base.Spine.StartAnimationWithLooping("Waving");
-		GetPose(EPoses.Waving, "Skunk arm back", "Characters left", "Silver arm");
-		GetClothes(EPoses.Waving, EClothes.Shirt, "Shirts")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
-		GetClothes(EPoses.Waving, EClothes.Pants, "Pants")._dUWotuFGWMaIlD1IFkXcXUhjchR();
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		AddPose(EPoses.Waving, "Skunk arm back", "Characters left", "Silver arm");
+		AddClothes(EPoses.Waving, EClothes.Shirt, "Shirts").AsShirt();
+		AddClothes(EPoses.Waving, EClothes.Pants, "Pants").AsPants();
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

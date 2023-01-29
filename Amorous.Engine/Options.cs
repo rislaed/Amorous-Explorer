@@ -3,7 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 
 public class Options
-{
+{ // _eJWqL2MhFZHNHP960nsWLJJmyPD
 	private static readonly string Storage = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.json");
 
 	public static Config Data { get; private set; }

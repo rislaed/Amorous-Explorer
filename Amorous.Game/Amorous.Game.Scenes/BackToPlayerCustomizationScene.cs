@@ -14,24 +14,22 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 		: base(game)
 	{
 		MightConfigurateEverything = true;
-		PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = false;
+		PhoneOverlay.Enabled = false;
 	}
 
-	protected override void _hI8MfcRDpV9Q45afjBJe8lA5sbr()
-	{
-	}
+	protected override void _hI8MfcRDpV9Q45afjBJe8lA5sbr() {}
 
 	protected override void ConfirmEverything()
 	{
-		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, 250, delegate(int int_0)
+		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.WideDialogueOffset, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
 				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric1);
-				PlayerPreferences.GetPlayerData().SetDecimal("Gender", 10);
+				PlayerPreferences.GetPlayerData().SetStage(AmorousData.Gender, 10);
 				PlayerPreferences.GetPlayerData().Remove("Player.Gender");
 				PlayerPreferences.GetPlayerData().Remove("Player.No");
-				base.Game.StartCutscene("Gender");
+				base.Game.StartCutscene(AmorousData.Gender);
 				_e1Kru66UIN1SkWkBreRDCF5RsWA = true;
 			}
 		});
@@ -43,8 +41,8 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 		if (_e1Kru66UIN1SkWkBreRDCF5RsWA && !base.Game.InScenePending && base.Game.Cutscene == null)
 		{
 			_e1Kru66UIN1SkWkBreRDCF5RsWA = false;
-			PhoneOverlay._kf3EbE0B70xGe1szklqAZyCqoLj = true;
-			PhoneOverlay.Get()._Xrfjrxr72hHh4bDdQB7HzEbJUCb();
+			PhoneOverlay.Enabled = true;
+			PhoneOverlay.Get().RefreshSkin();
 			base.Game.StartScene<ClubEntranceScene>();
 		}
 	}

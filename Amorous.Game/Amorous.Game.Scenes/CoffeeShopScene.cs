@@ -17,19 +17,19 @@ public class CoffeeShopScene : AbstractScene
 		BackgroundJax = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
 		BackgroundSeth = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
 		BackgroundNone = AddForegroundTexturedLayer("Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
-		SetVariant(VariantNone);
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Steampianist - O Morro Nao Tem Vez", 0.4f);
+		SwitchToSubscene(VariantNone);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.OMorroNaoTemVezTrack, 0.4f);
 	}
 
-	public override void SetVariant(string variant)
+	public override void SwitchToSubscene(string subscene)
 	{
-		base.SetVariant(variant);
+		base.SwitchToSubscene(subscene);
 		BackgroundJax.Visible = false;
 		BackgroundSeth.Visible = false;
 		BackgroundNone.Visible = false;
-		if (!(variant == VariantJax))
+		if (!(subscene == VariantJax))
 		{
-			if (!(variant == VariantSeth))
+			if (!(subscene == VariantSeth))
 			{
 				BackgroundNone.Visible = true;
 			}

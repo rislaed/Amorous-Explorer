@@ -7,7 +7,7 @@ public class ClubStaticZenithNPC : ClubStaticNPC
 	{
 		Width = 299;
 		Height = 765;
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

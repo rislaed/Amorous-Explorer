@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public abstract class AbstractPlayerSkin
-{
+{ // _21uBmerICJi18moE2gpxlEipBgz
 	private IAmorous Amorous;
 	public List<AbstractLayer> Layers { get; private set; }
 	protected IAmorous Game => Amorous;

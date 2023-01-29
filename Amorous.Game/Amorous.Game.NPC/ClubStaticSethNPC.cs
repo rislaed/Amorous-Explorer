@@ -7,7 +7,7 @@ public class ClubStaticSethNPC : ClubStaticNPC
 	{
 		Width = 225;
 		Height = 334;
-		_J4giDjnRtYmiHMmzwRZ0ThvfAhH = false;
-		_upl1k7yzBzlU7vErvbydGmXROfA = true;
+		NudesBehindShirt = false;
+		NudesBehindPants = true;
 	}
 }

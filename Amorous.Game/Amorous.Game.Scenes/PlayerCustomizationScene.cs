@@ -34,7 +34,7 @@ public class PlayerCustomizationScene : AbstractScene
 	private readonly List<SexsceneData> _sexscenes = new List<SexsceneData>
 	{
 		new SexsceneData("None", null),
-		new SexsceneData("Coby", "CobySexscene"),
+		new SexsceneData("Coby", AmorousData.CobySexscene),
 		new SexsceneData("Dustin", "DustinSexscene"),
 		new SexsceneData("Jax", "JaxSexscene"),
 		new SexsceneData("Lex", "LexSexscene"),
@@ -66,10 +66,10 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (base.Game.Sexscene != null)
 			{
-				base.Game.Sexscene._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+				base.Game.Sexscene.RefreshData();
 			}
 		};
-		FadingMediaPlayer._l94kUraQ13OohoVwwxKC37hG7Pc("Assets/Music/Blazing Dragon - Midnight Sizzle", 0.4f);
+		FadingMediaPlayer.PlayOnRepeat(AmorousData.MidnightSizzleTrack, 0.4f);
 		_shader = Game.Content.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
@@ -191,7 +191,7 @@ public class PlayerCustomizationScene : AbstractScene
 			_data.Name = templateName.Text;
 		};
 		controlCollection_0.Add(templateName);
-		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Stock Templates", _skin._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((PlayerConfiguration configuration) => configuration.Name).ToArray(), _templateStockIndex, delegate(int int_0)
+		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Stock Templates", _skin._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templateStockIndex, delegate(int int_0)
 		{
 			_templateStockIndex = int_0;
 			_skin._BwV21jdCpo4YpIp6x74bJ0H7hut(int_0);
@@ -199,10 +199,10 @@ public class PlayerCustomizationScene : AbstractScene
 			_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 			if (base.Game.Sexscene != null)
 			{
-				base.Game.Sexscene._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+				base.Game.Sexscene.RefreshData();
 			}
 		});
-		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Your Templates", _skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((PlayerConfiguration configuration) => configuration.Name).ToArray(), _templatePlayerIndex, delegate(int index)
+		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Your Templates", _skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templatePlayerIndex, delegate(int index)
 		{
 			_templatePlayerIndex = index;
 			_skin._BCRMBb9uhQZrQlfdXPidu27yb8C(index);
@@ -211,7 +211,7 @@ public class PlayerCustomizationScene : AbstractScene
 			_OBIbaNO8X49ahEZ5n3Ta8HUK7mO(controlCollection_0);
 			if (base.Game.Sexscene != null)
 			{
-				base.Game.Sexscene._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+				base.Game.Sexscene.RefreshData();
 			}
 		});
 		Control control = _z5npzs7mj5H3zJ1PF64BFNsXBmm(controlCollection_0, "Phone", _data.PhoneColor, delegate(Color color)
@@ -229,7 +229,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (string.IsNullOrWhiteSpace(templateName.Text))
 			{
-				base.Squid.ShowConfirm("You did not enter a name!", 500);
+				base.Squid.ShowConfirm("You did not enter a name!", AmorousData.ShortDialogueOffset);
 			}
 			else
 			{
@@ -254,7 +254,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (string.IsNullOrWhiteSpace(templateName.Text))
 			{
-				base.Squid.ShowConfirm("You did not enter a name!", 500);
+				base.Squid.ShowConfirm("You did not enter a name!", AmorousData.ShortDialogueOffset);
 			}
 			else if (_templatePlayerIndex >= 0)
 			{
@@ -298,7 +298,7 @@ public class PlayerCustomizationScene : AbstractScene
 			}
 			else
 			{
-				base.Squid.ShowConfirm("You did not select a template!", 500);
+				base.Squid.ShowConfirm("You did not select a template!", AmorousData.ShortDialogueOffset);
 			}
 		};
 		controlCollection_0.Add(button3);
@@ -321,7 +321,7 @@ public class PlayerCustomizationScene : AbstractScene
 			}
 			else
 			{
-				base.Squid.ShowConfirm("You did not select a template!", 500);
+				base.Squid.ShowConfirm("You did not select a template!", AmorousData.ShortDialogueOffset);
 			}
 		};
 		controlCollection_0.Add(button4);
@@ -333,7 +333,7 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button5.MouseClick += delegate
 		{
-			_skin._BlScjiyHDsZk3jkAZbAbjUxn87sA();
+			_skin.ToggleZoom();
 		};
 		controlCollection_0.Add(button5);
 		if (!Censorship.Censored)
@@ -347,8 +347,8 @@ public class PlayerCustomizationScene : AbstractScene
 				}
 				else
 				{
-					base.Game.StartSexscene(_sexscenes[index].Scene);
-					base.Game.Sexscene._7BfTap1TnZXk1aaAXnFODowTQCp = true;
+					base.Game.PlaySexscene(_sexscenes[index].Scene);
+					base.Game.Sexscene.Muted = true;
 				}
 			});
 		}
@@ -370,7 +370,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (MightConfigurateEverything && string.IsNullOrWhiteSpace(templateName.Text))
 			{
-				base.Squid.ShowConfirm("You did not enter a name!", 500);
+				base.Squid.ShowConfirm("You did not enter a name!", AmorousData.ShortDialogueOffset);
 			}
 			else
 			{
@@ -382,7 +382,7 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void _yA2ISabBQiVKBxMt5AXSybmkG5o(string string_0, Action action_0)
 	{
-		base.Squid.ShowSelection(string_0, new string[2] { "No way!", "Yes please!" }, 500, delegate(int int_0)
+		base.Squid.ShowSelection(string_0, new string[2] { "No way!", "Yes please!" }, AmorousData.ShortDialogueOffset, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -393,7 +393,7 @@ public class PlayerCustomizationScene : AbstractScene
 
 	protected virtual void ConfirmEverything()
 	{
-		base.Squid.ShowSelection("Are you sure you wish to exit? All unsaved changes will be lost!", new string[2] { "Oops, my bad!", "Yes please!" }, 500, delegate(int int_0)
+		base.Squid.ShowSelection("Are you sure you wish to exit? All unsaved changes will be lost!", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.ShortDialogueOffset, delegate(int int_0)
 		{
 			if (int_0 == 1)
 			{
@@ -748,7 +748,7 @@ public class PlayerCustomizationScene : AbstractScene
 		}, delegate(Color color_0)
 		{
 			action_0(color_0);
-			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin.RefreshData();
 		});
 	}
 
@@ -767,7 +767,7 @@ public class PlayerCustomizationScene : AbstractScene
 		}, delegate(Color color_0)
 		{
 			action_0(color_0);
-			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin.RefreshData();
 		});
 	}
 
@@ -788,7 +788,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			_XXaN99sI8FddBJPpuffIrCZZ49q.Visible = _SbG09NUiMRUtR5nySpplBTa1qug.Checked;
 			action_0(_SbG09NUiMRUtR5nySpplBTa1qug.Checked);
-			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin.RefreshData();
 		};
 	}
 
@@ -809,7 +809,7 @@ public class PlayerCustomizationScene : AbstractScene
 		ImageControl image = new ImageControl
 		{
 			Dock = DockStyle.Left,
-			Size = new Squid.Point(29, 30),
+			Size = new Squid.Point(29, AmorousData.ButtonHeight),
 			Color = ColorInt.ARGB(color_0.A, color_0.R, color_0.G, color_0.B)
 		};
 		Label item = new Label
@@ -824,7 +824,7 @@ public class PlayerCustomizationScene : AbstractScene
 			{
 				image.Color = ColorInt.ARGB(color_0.A, color_0.R, color_0.G, color_0.B);
 				action_0(color_0);
-				_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+				_skin.RefreshData();
 			});
 		};
 		control.GetElements().Add(image);
@@ -895,13 +895,13 @@ public class PlayerCustomizationScene : AbstractScene
 				Text = string_1[i],
 				Value = i,
 				Selected = (i == int_0),
-				Size = new Squid.Point(0, 30)
+				Size = new Squid.Point(0, AmorousData.ButtonHeight)
 			});
 		}
 		dropDownList2.SelectedItemChanged += delegate(Control control_0, ListBoxItem listBoxItem_0)
 		{
 			action_0((int)listBoxItem_0.Value);
-			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin.RefreshData();
 		};
 		controlCollection_0.Add(item);
 		controlCollection_0.Add(dropDownList2);
@@ -935,13 +935,13 @@ public class PlayerCustomizationScene : AbstractScene
 				Text = text,
 				Value = values.GetValue(i),
 				Selected = (num2 == num),
-				Size = new Squid.Point(0, 30)
+				Size = new Squid.Point(0, AmorousData.ButtonHeight)
 			});
 		}
 		dropDownList2.SelectedItemChanged += delegate(Control control_0, ListBoxItem listBoxItem_0)
 		{
 			action_0((T)listBoxItem_0.Value);
-			_skin._0cFb48aKbcbREkHm9Jwptl6r6Vi();
+			_skin.RefreshData();
 		};
 		controlCollection_0.Add(item);
 		controlCollection_0.Add(dropDownList2);
@@ -1000,7 +1000,7 @@ public class PlayerCustomizationScene : AbstractScene
 		Panel panel4 = new Panel
 		{
 			Dock = DockStyle.Top,
-			Size = new Squid.Point(275, 30),
+			Size = new Squid.Point(275, AmorousData.ButtonHeight),
 			Margin = new Margin(0, 0, 0, 8)
 		};
 		Label item2 = new Label
@@ -1008,12 +1008,12 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Left,
 			Text = "H:",
 			TextAlign = Alignment.MiddleCenter,
-			Size = new Squid.Point(30, 30)
+			Size = new Squid.Point(AmorousData.ButtonHeight, AmorousData.ButtonHeight)
 		};
 		TextBox text = new TextBox
 		{
 			Dock = DockStyle.Left,
-			Size = new Squid.Point(107, 30),
+			Size = new Squid.Point(107, AmorousData.ButtonHeight),
 			TabIndex = 1
 		};
 		Label item3 = new Label
@@ -1021,7 +1021,7 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Left,
 			Text = "R:",
 			TextAlign = Alignment.MiddleCenter,
-			Size = new Squid.Point(30, 30)
+			Size = new Squid.Point(AmorousData.ButtonHeight, AmorousData.ButtonHeight)
 		};
 		TextBox text2 = new TextBox
 		{
@@ -1035,7 +1035,7 @@ public class PlayerCustomizationScene : AbstractScene
 		Panel panel5 = new Panel
 		{
 			Dock = DockStyle.Top,
-			Size = new Squid.Point(275, 30),
+			Size = new Squid.Point(275, AmorousData.ButtonHeight),
 			Margin = new Margin(0, 0, 0, 8)
 		};
 		Label item4 = new Label
@@ -1043,12 +1043,12 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Left,
 			Text = "S:",
 			TextAlign = Alignment.MiddleCenter,
-			Size = new Squid.Point(30, 30)
+			Size = new Squid.Point(AmorousData.ButtonHeight, AmorousData.ButtonHeight)
 		};
 		TextBox text3 = new TextBox
 		{
 			Dock = DockStyle.Left,
-			Size = new Squid.Point(107, 30),
+			Size = new Squid.Point(107, AmorousData.ButtonHeight),
 			TabIndex = 2
 		};
 		Label item5 = new Label
@@ -1056,7 +1056,7 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Left,
 			Text = "G:",
 			TextAlign = Alignment.MiddleCenter,
-			Size = new Squid.Point(30, 30)
+			Size = new Squid.Point(AmorousData.ButtonHeight, AmorousData.ButtonHeight)
 		};
 		TextBox text4 = new TextBox
 		{
@@ -1070,7 +1070,7 @@ public class PlayerCustomizationScene : AbstractScene
 		Panel panel6 = new Panel
 		{
 			Dock = DockStyle.Top,
-			Size = new Squid.Point(275, 30),
+			Size = new Squid.Point(275, AmorousData.ButtonHeight),
 			Margin = new Margin(0, 0, 0, 8)
 		};
 		Label item6 = new Label
@@ -1078,12 +1078,12 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Left,
 			Text = "V:",
 			TextAlign = Alignment.MiddleCenter,
-			Size = new Squid.Point(30, 30)
+			Size = new Squid.Point(AmorousData.ButtonHeight, AmorousData.ButtonHeight)
 		};
 		TextBox text5 = new TextBox
 		{
 			Dock = DockStyle.Left,
-			Size = new Squid.Point(107, 30),
+			Size = new Squid.Point(107, AmorousData.ButtonHeight),
 			TabIndex = 3
 		};
 		Label item7 = new Label
@@ -1091,7 +1091,7 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Left,
 			Text = "B:",
 			TextAlign = Alignment.MiddleCenter,
-			Size = new Squid.Point(30, 30)
+			Size = new Squid.Point(AmorousData.ButtonHeight, AmorousData.ButtonHeight)
 		};
 		TextBox text6 = new TextBox
 		{
@@ -1105,7 +1105,7 @@ public class PlayerCustomizationScene : AbstractScene
 		Panel panel7 = new Panel
 		{
 			Dock = DockStyle.Top,
-			Size = new Squid.Point(275, 30),
+			Size = new Squid.Point(275, AmorousData.ButtonHeight),
 			Margin = new Margin(0, 0, 0, 8)
 		};
 		Label item8 = new Label
@@ -1113,7 +1113,7 @@ public class PlayerCustomizationScene : AbstractScene
 			Dock = DockStyle.Left,
 			Text = "Hex:",
 			TextAlign = Alignment.MiddleCenter,
-			Size = new Squid.Point(45, 30)
+			Size = new Squid.Point(45, AmorousData.ButtonHeight)
 		};
 		TextBox text7 = new TextBox
 		{

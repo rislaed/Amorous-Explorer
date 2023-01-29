@@ -25,14 +25,14 @@ public abstract class ClubStaticNPC : LayerNPC<ClubStaticNPC.EHeads, ClubStaticN
 	protected ClubStaticNPC(IAmorous game, string string_0, string string_1, bool bool_0, bool bool_1)
 		: base(game, string_0, 1f)
 	{
-		GetPose(EPoses.Nude, $"{string_1} club nude");
+		AddPose(EPoses.Nude, $"{string_1} club nude");
 		if (bool_0)
 		{
-			GetClothes(EPoses.Nude, EClothes.Shirt, $"{string_1} club shirt")._XJUU6QdUDN3lYoRweLWOMaWqcUE();
+			AddClothes(EPoses.Nude, EClothes.Shirt, $"{string_1} club shirt").AsShirt();
 		}
 		if (bool_1)
 		{
-			GetClothes(EPoses.Nude, EClothes.Pants, $"{string_1} club pants")._dUWotuFGWMaIlD1IFkXcXUhjchR();
+			AddClothes(EPoses.Nude, EClothes.Pants, $"{string_1} club pants").AsPants();
 		}
 	}
 

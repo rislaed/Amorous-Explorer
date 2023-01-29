@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 
 public class AmorousGame : Game
-{
+{ // _SkYjfUaaNhTySNgoGUeFZ46X4dM
 	private readonly IAmorous Amorous;
 
 	public AmorousGame(bool safemode)
 	{
-		base.Window.Title = string.Format("Amorous v{0} (Windows)", "1.0.4");
+		base.Window.Title = string.Format("Amorous v{0} (Windows)", AmorousData.Version);
 		Amorous = new AmorousSingleton(this, safemode);
 	}
 
