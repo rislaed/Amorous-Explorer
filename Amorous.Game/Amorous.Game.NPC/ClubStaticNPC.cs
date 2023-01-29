@@ -22,23 +22,23 @@ public abstract class ClubStaticNPC : LayerNPC<ClubStaticNPC.EHeads, ClubStaticN
 		Pants
 	}
 
-	protected ClubStaticNPC(IAmorous game, string string_0, string string_1, bool bool_0, bool bool_1)
-		: base(game, string_0, 1f)
+	protected ClubStaticNPC(IAmorous game, string sprite, string part, bool shirt, bool pants)
+		: base(game, sprite, 1f)
 	{
-		AddPose(EPoses.Nude, $"{string_1} club nude");
-		if (bool_0)
+		AddPose(EPoses.Nude, $"{part} club nude");
+		if (shirt)
 		{
-			AddClothes(EPoses.Nude, EClothes.Shirt, $"{string_1} club shirt").AsShirt();
+			AddClothes(EPoses.Nude, EClothes.Shirt, $"{part} club shirt").AsShirt();
 		}
-		if (bool_1)
+		if (pants)
 		{
-			AddClothes(EPoses.Nude, EClothes.Pants, $"{string_1} club pants").AsPants();
+			AddClothes(EPoses.Nude, EClothes.Pants, $"{part} club pants").AsPants();
 		}
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		SetEmotion(EHeads.None);
 		SetPose(EPoses.Nude);
 		SetClothes(EClothes.Shirt, EClothes.Pants);

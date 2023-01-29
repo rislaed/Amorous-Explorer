@@ -48,8 +48,8 @@ public class CreditsMenuScene : AbstractScene
 		base.Blending = BlendState.AlphaBlend;
 		_t76cjDKppsRdw5nUq3tnNw3ypAv = typeof(MainMenuScene);
 		_ICAb9QUE8hnbl0uKD8fBpEB1kSV = "Press Escape or Left-click here to return to the Main Menu.";
-		AddTexturedLayer("Background", "Assets/Scenes/CreditsMenu/Background", 0, 0);
-		AddForegroundTexturedLayer("Overlay", "Assets/Scenes/CreditsMenu/Overlay", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/CreditsMenu/Background", 0, 0);
+		AddForegroundSpriteLayer("Overlay", "Assets/Scenes/CreditsMenu/Overlay", 0, 0);
 		_nQK443boDHTZ4Jfc3W1VhQkMCcX = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 		_tYZIsh9jywDMNNUVaAxLdrUBPIS = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-20");
 		_6YCQhlMaqcDds8uGX1g8fjBKqV4A = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
@@ -67,16 +67,16 @@ public class CreditsMenuScene : AbstractScene
 		AddLayer(gparam_, 0);
 		bool _vfz3itarR7RfYdT3BqrAmb1qElP = false;
 		Vector2 vector = _6YCQhlMaqcDds8uGX1g8fjBKqV4A.MeasureString(_ICAb9QUE8hnbl0uKD8fBpEB1kSV);
-		Point _LWpJMkbSZ0LnBJGJqKcICxgdLwq = base.Game.Mouse._2j5HjqIBNOwD2br7yBprKdzVhAK(new Point((int)vector.X, (int)vector.Y));
+		Point _LWpJMkbSZ0LnBJGJqKcICxgdLwq = base.Game.Canvas.RelativeToContent(new Point((int)vector.X, (int)vector.Y));
 		AddLayer(new DrawableLayer(this, "GoBackText")
 		{
 			OnUpdate = delegate
 			{
-				Point point = self.Game.Mouse.Rescale(self.Game.Controller.Cursor);
+				Point point = self.Game.Canvas.GlobalToContent(self.Game.Controller.Cursor);
 				if ((float)point.X >= _AjA452JzkbwnCTtbITN5kOEaNrR.X && (float)point.X <= _AjA452JzkbwnCTtbITN5kOEaNrR.X + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.X && (float)point.Y >= _AjA452JzkbwnCTtbITN5kOEaNrR.Y && (float)point.Y <= _AjA452JzkbwnCTtbITN5kOEaNrR.Y + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.Y)
 				{
 					_vfz3itarR7RfYdT3BqrAmb1qElP = true;
-					if (self.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+					if (self.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 					{
 						self.Game.StartScene(self._t76cjDKppsRdw5nUq3tnNw3ypAv.Name);
 					}
@@ -171,9 +171,9 @@ public class CreditsMenuScene : AbstractScene
 
 	public override void Update(GameTime gameTime)
 	{
-		if (!base.Game.Controller.JustPressed(Keys.Escape))
+		if (!base.Game.Controller.IsPressed(Keys.Escape))
 		{
-			_lmBaEmzKj1Yvgl07XZnnBeMGYov = ((!base.Game.Controller.IsPressed(Keys.Space)) ? 100f : 300f);
+			_lmBaEmzKj1Yvgl07XZnnBeMGYov = ((!base.Game.Controller.IsHolding(Keys.Space)) ? 100f : 300f);
 			base.Update(gameTime);
 		}
 		else

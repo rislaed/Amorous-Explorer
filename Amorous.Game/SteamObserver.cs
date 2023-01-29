@@ -38,7 +38,7 @@ public class SteamObserver
 		_client.Screenshots.AddScreenshotToLibrary(Path.Combine(Directory.GetCurrentDirectory(), path), width, height);
 	}
 
-	public void GainAchievement(string name)
+	public void TriggerAchievement(string name)
 	{
 		_client.Achievements.Trigger(name);
 	}

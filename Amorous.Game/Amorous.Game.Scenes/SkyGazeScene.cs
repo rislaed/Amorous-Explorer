@@ -18,7 +18,7 @@ public class SkyGazeScene : AbstractScene
 	public SkyGazeScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/SkyGaze/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/SkyGaze/Background", 0, 0);
 		List<int> list = new List<int>
 		{
 			Randoms.Next(0, 320),
@@ -37,9 +37,9 @@ public class SkyGazeScene : AbstractScene
 			Randoms.Next(5, 25),
 			Randoms.Next(5, 25)
 		};
-		_NGOOUGHxCQRJ95YqBGvCZoDVi1K = AddTexturedLayer("Cloud1", "Assets/Scenes/SkyGaze/Cloud1", list[0], list2[0]);
-		_5ucKPpTFNOSSSAiQwUdMbhUYRPC = AddTexturedLayer("Cloud2", "Assets/Scenes/SkyGaze/Cloud2", list[1], list2[1]);
-		_6pX8CiiBs3G2EaPqh95VdNHT3tu = AddTexturedLayer("Cloud3", "Assets/Scenes/SkyGaze/Cloud3", list[2], list2[2]);
+		_NGOOUGHxCQRJ95YqBGvCZoDVi1K = AddSpriteLayer("Cloud1", "Assets/Scenes/SkyGaze/Cloud1", list[0], list2[0]);
+		_5ucKPpTFNOSSSAiQwUdMbhUYRPC = AddSpriteLayer("Cloud2", "Assets/Scenes/SkyGaze/Cloud2", list[1], list2[1]);
+		_6pX8CiiBs3G2EaPqh95VdNHT3tu = AddSpriteLayer("Cloud3", "Assets/Scenes/SkyGaze/Cloud3", list[2], list2[2]);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 

@@ -23,10 +23,10 @@ public abstract class AbstractPlayerSkin
 		return Layers.FirstOrDefault((AbstractLayer layer) => layer.Name == name);
 	}
 
-	public TexturedLayer NewTexturedLayer(string name, string texture, int x, int y, int zorder = 0, float scale = 1f)
+	public SpriteLayer NewSpriteLayer(string name, string texture, int x, int y, int zorder = 0, float scale = 1f)
 	{
 		Texture2D texture2D = Amorous.Content.Load<Texture2D>(texture);
-		TexturedLayer layer = new TexturedLayer(Game.Scene, name, texture2D)
+		SpriteLayer layer = new SpriteLayer(Game.Scene, name, texture2D)
 		{
 			Removable = true,
 			X = x,

@@ -97,7 +97,7 @@ public class FadingMediaPlayer : AbstractInterpolator<float>
 		_singleton.Start(names, volume, repeat, oneOf);
 	}
 
-	public static void BeginCutscene()
+	public static void Complete()
 	{
 		_singleton._stack = new string[0];
 		_singleton._path = null;

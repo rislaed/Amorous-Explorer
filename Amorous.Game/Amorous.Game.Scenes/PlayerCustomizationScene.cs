@@ -55,7 +55,7 @@ public class PlayerCustomizationScene : AbstractScene
 	public PlayerCustomizationScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
 		AddLayer(new DrawableLayer(this, "Custom")
 		{
 			OnDraw = DrawPlayer
@@ -73,7 +73,7 @@ public class PlayerCustomizationScene : AbstractScene
 		_shader = Game.Content.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
 		_skin = new CustomizablePlayerSkin(base.Game);
 		_hI8MfcRDpV9Q45afjBJe8lA5sbr();
@@ -191,7 +191,7 @@ public class PlayerCustomizationScene : AbstractScene
 			_data.Name = templateName.Text;
 		};
 		controlCollection_0.Add(templateName);
-		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Stock Templates", _skin._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templateStockIndex, delegate(int int_0)
+		AttachDropDownList(controlCollection_0, "Stock Templates", _skin._A088aXIdbVflSYtbl7vA5RjQOjXA.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templateStockIndex, delegate(int int_0)
 		{
 			_templateStockIndex = int_0;
 			_skin._BwV21jdCpo4YpIp6x74bJ0H7hut(int_0);
@@ -202,7 +202,7 @@ public class PlayerCustomizationScene : AbstractScene
 				base.Game.Sexscene.RefreshData();
 			}
 		});
-		_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Your Templates", _skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templatePlayerIndex, delegate(int index)
+		AttachDropDownList(controlCollection_0, "Your Templates", _skin._I6gsCHlb2BKFCJSAk9Cn5fCMAPu.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templatePlayerIndex, delegate(int index)
 		{
 			_templatePlayerIndex = index;
 			_skin._BCRMBb9uhQZrQlfdXPidu27yb8C(index);
@@ -338,7 +338,7 @@ public class PlayerCustomizationScene : AbstractScene
 		controlCollection_0.Add(button5);
 		if (!Censorship.Censored)
 		{
-			_YemBTJprwfbd3mpg5Gy9uyEJWwI(controlCollection_0, "Preview Sexscene", _sexsceneNames, _sexsceneIndex, delegate(int index)
+			AttachDropDownList(controlCollection_0, "Preview Sexscene", _sexsceneNames, _sexsceneIndex, delegate(int index)
 			{
 				_sexsceneIndex = index;
 				if (index == 0)
@@ -729,7 +729,7 @@ public class PlayerCustomizationScene : AbstractScene
 
 	public void DrawPlayer(SpriteBatch spriteBatch)
 	{
-		_shader.Parameters["Time"].SetValue(Randoms.Time);
+		_shader.Parameters["Time"].SetValue(Randoms.Date);
 		PlayerPreferences.Singleton.Draw(spriteBatch, _shader);
 	}
 
@@ -872,7 +872,7 @@ public class PlayerCustomizationScene : AbstractScene
 		return button;
 	}
 
-	private void _YemBTJprwfbd3mpg5Gy9uyEJWwI(ControlCollection controlCollection_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
+	private void AttachDropDownList(ControlCollection controlCollection_0, string string_0, string[] string_1, int int_0, Action<int> action_0)
 	{
 		Label item = new Label
 		{
@@ -1200,7 +1200,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (!_FxCuMzbCIAsYKlL8DmmchjsMpir)
 			{
-				if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
+				if (base.Game.Controller.IsHolding(ControllerButtonType.LeftButton))
 				{
 					if (!_a7vdsaGCzLloXi7sntZm1rCdbZK && Gui.MousePosition.x >= image.Location.x && Gui.MousePosition.x <= image.Location.x + image.Size.x && Gui.MousePosition.y >= image.Location.y && Gui.MousePosition.y <= image.Location.y + image.Size.y)
 					{
@@ -1228,7 +1228,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (!_a7vdsaGCzLloXi7sntZm1rCdbZK)
 			{
-				if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
+				if (base.Game.Controller.IsHolding(ControllerButtonType.LeftButton))
 				{
 					if (!_FxCuMzbCIAsYKlL8DmmchjsMpir && Gui.MousePosition.x >= image2.Location.x && Gui.MousePosition.x <= image2.Location.x + image2.Size.x && Gui.MousePosition.y >= image2.Location.y && Gui.MousePosition.y <= image2.Location.y + image2.Size.y)
 					{
@@ -1340,7 +1340,7 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		pickerWindow.Update += delegate
 		{
-			if (base.Game.Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.Escape))
+			if (base.Game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Escape))
 			{
 				pickerWindow.Close();
 				_colorPicker = null;

@@ -5,9 +5,9 @@ public class AcceptCallEvent : AbstractContactEvent<AcceptCallEventData>
 	public AcceptCallEvent(Cutscene cutscene)
 		: base(cutscene) {}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PhoneOverlay.Get().AcceptCall(Contact);
 	}
 }

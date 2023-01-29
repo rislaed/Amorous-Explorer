@@ -496,21 +496,21 @@ public class PlayerData : IPlayerData
 		Flags.Clear();
 	}
 
-	public int GetState(string string_0)
+	public int GetState(string key)
 	{
-		if (!QuestStages.ContainsKey(string_0))
+		if (!QuestStages.ContainsKey(key))
 		{
-			SetStage(string_0, 10);
+			SetStage(key, 10);
 			return 10;
 		}
-		return QuestStages[string_0];
+		return QuestStages[key];
 	}
 
-	public void SetStage(string string_0, int int_0)
+	public void SetStage(string key, int stage)
 	{
-		if (string_0 != null)
+		if (key != null)
 		{
-			QuestStages[string_0] = int_0;
+			QuestStages[key] = stage;
 		}
 	}
 
@@ -552,20 +552,20 @@ public class PlayerData : IPlayerData
 		return num;
 	}
 
-	public bool GetFlag(string string_0)
+	public bool GetFlag(string key)
 	{
-		if (!Flags.ContainsKey(string_0))
+		if (!Flags.ContainsKey(key))
 		{
-			return HasChanged(string_0);
+			return HasChanged(key);
 		}
-		return Flags[string_0];
+		return Flags[key];
 	}
 
-	private bool HasChanged(string string_0)
+	private bool HasChanged(string key)
 	{
-		if (string_0.StartsWith("Player."))
+		if (key.StartsWith("Player."))
 		{
-			string[] array = string_0.Split(new char[1] { '.' });
+			string[] array = key.Split(new char[1] { '.' });
 			if (array.Length > 2)
 			{
 				EBodyType result4;
@@ -605,15 +605,15 @@ public class PlayerData : IPlayerData
 				}
 			}
 		}
-		else if (string_0.StartsWith("Quests."))
+		else if (key.StartsWith("Quests."))
 		{
-			string[] array2 = string_0.Split(new char[1] { '.' });
+			string[] array2 = key.Split(new char[1] { '.' });
 			if (array2.Length > 2 && int.TryParse(array2[2], out var result5))
 			{
 				return GetState(array2[1]) == result5;
 			}
 		}
-		return string_0 switch
+		return key switch
 		{
 			"PlayerChubby" => BodyType == EBodyType.Chubby, 
 			"PlayerLean" => BodyType == EBodyType.Lean, 
@@ -624,11 +624,11 @@ public class PlayerData : IPlayerData
 		};
 	}
 
-	public void SetFlag(string string_0, bool bool_0)
+	public void SetFlag(string key, bool flag)
 	{
-		if (string_0.StartsWith("Player."))
+		if (key.StartsWith("Player."))
 		{
-			string[] array = string_0.Split(new char[1] { '.' });
+			string[] array = key.Split(new char[1] { '.' });
 			if (array.Length > 2)
 			{
 				if (array[1] == "Body" || array[1] == "Breasts" || array[1] == "Cock" || array[1] == "Balls")
@@ -637,21 +637,21 @@ public class PlayerData : IPlayerData
 				}
 				if (array[1] == "Outfit")
 				{
-					Flags.Keys.Where((string string_0) => string_0.StartsWith("Player.Outfit.")).ToList().ForEach(delegate(string string_0)
+					Flags.Keys.Where((string key) => key.StartsWith("Player.Outfit.")).ToList().ForEach(delegate(string key)
 					{
-						Flags.Remove(string_0);
+						Flags.Remove(key);
 					});
 				}
 			}
 		}
-		Flags[string_0] = bool_0;
+		Flags[key] = flag;
 	}
 
-	public void Remove(string string_0, bool bool_0 = true)
+	public void Remove(string key, bool same = true)
 	{
-		Flags.Keys.Where((string string_1) => (!bool_0) ? (string_0 == string_1) : string_1.StartsWith(string_0)).ToList().ForEach(delegate(string string_0)
+		Flags.Keys.Where((string next) => (!same) ? (key == next) : next.StartsWith(key)).ToList().ForEach(delegate(string key)
 		{
-			Flags.Remove(string_0);
+			Flags.Remove(key);
 		});
 	}
 }

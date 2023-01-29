@@ -38,7 +38,7 @@ public static class Clocks
 		}
 	}
 
-	public static TimeOfDay Time
+	public static TimeOfDay Date
 	{
 		get
 		{

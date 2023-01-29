@@ -14,13 +14,13 @@ public class SaveMigrationScene : AbstractScene
 	{
 		_cutscene = cutscene;
 		_scene = scene;
-		AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
-		AddTexturedLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
-		AddForegroundTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
+		AddSpriteLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
+		AddSpriteLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
+		AddForegroundSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
 		CoupleANPC couplesLeft = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Background);
 		couplesLeft.X = 350f;

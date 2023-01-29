@@ -16,18 +16,18 @@ public class ClubUpstairsScene : AbstractScene
 	public ClubUpstairsScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/ClubUpstairs/Upstairs Hall main", -1295, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/ClubUpstairs/Upstairs Hall main", -1295, 0);
 		AddClickableLayer("Elevator", "Assets/Scenes/ClubUpstairs/Elevator Door Selectable", -919, 103, OnDownstairsClick);
 		AddClickableLayer("Stairs", "Assets/Scenes/ClubUpstairs/Staircase Selectable", -245, 20, OnDownstairsClick);
 		AddClickableLayer("Door", "Assets/Scenes/ClubUpstairs/Pool Door Selectable", 2533, 0, OnDoorClick);
-		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-1295, 1295, 0, 0);
+		Game.Canvas.SetOverscroll(-1295, 1295, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showZenith = !data.GetFlag(AmorousData.ZenithLeftClub);
 		if (_showZenith)
 		{
-			AddTexturedLayer("Shadow", "Assets/Scenes/ClubUpstairs/ShadowZenith", 540, 712);
-			AddTexturedLayer("Shadow", "Assets/Scenes/ClubUpstairs/ShadowRose", 930, 700);
+			AddSpriteLayer("Shadow", "Assets/Scenes/ClubUpstairs/ShadowZenith", 540, 712);
+			AddSpriteLayer("Shadow", "Assets/Scenes/ClubUpstairs/ShadowRose", 930, 700);
 		}
 	}
 

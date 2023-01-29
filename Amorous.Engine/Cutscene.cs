@@ -23,7 +23,7 @@ public class Cutscene
 			_event = null;
 		}
 
-		public void Begin(int? id = null)
+		public void Start(int? id = null)
 		{
 			int _id = id ?? Data.StartID;
 			State = Data.Events.FirstOrDefault((EventData eventData) => eventData.ID == _id);
@@ -58,17 +58,18 @@ public class Cutscene
 
 		private void ApplyData(EventData eventData)
 		{
-			Cutscene.Click?.Invoke(eventData);
+			Cutscene.Progress?.Invoke(eventData);
 			_steps.Add(eventData.DebugID);
 			_event = Cutscene.GetNextEvent(eventData.GetType());
 			if (_event != null)
 			{
+				Logger.Log(ConsoleColor.White, "Debug", "Going to event '{0}' in stage {1} ({2} -> {3})", _event.GetType().Name, eventData.DebugID, eventData.ID, eventData.NextID);
 				_event.SetData(eventData);
-				_event.Begin();
+				_event.Start();
 			}
 		}
 
-		public string ToString(int steps = 0)
+		public string GetSteps(int steps = 0)
 		{
 			IEnumerable<string> enumerable = _steps.Select((int step) => $"{(step >> 24) & 0xFF}:{step & 0xFFFFFF}");
 			if (steps == 0)
@@ -79,17 +80,17 @@ public class Cutscene
 			return string.Join(" > ", enumerable);
 		}
 
-		public string GetActiveStep()
+		public string GetStep()
 		{
 			return _steps.Select((int step) => $"{(step >> 24) & 0xFF}:{step & 0xFFFFFF}").LastOrDefault();
 		}
 	}
 
 	private Stage _state;
-	private Stage _pendingState;
+	private Stage _previousState;
 	private readonly Dictionary<Type, IEvent> _eventByType;
 
-	public Action<EventData> Click { get; set; }
+	public Action<EventData> Progress { get; set; }
 	public IAmorous Game { get; private set; }
 	public CutsceneData Data { get; private set; }
 	public Stage State => _state;
@@ -141,7 +142,7 @@ public class Cutscene
 		return _eventByType[_event];
 	}
 
-	public void Begin(int stage, int? id = null)
+	public void Start(int stage, int? id = null)
 	{
 		if (!Active)
 		{
@@ -149,7 +150,7 @@ public class Cutscene
 			if (stageData != null)
 			{
 				_state = new Stage(this, stageData);
-				_state.Begin(id);
+				_state.Start(id);
 			}
 			else
 			{
@@ -158,15 +159,15 @@ public class Cutscene
 		}
 	}
 
-	public void BeginCutscene()
+	public void Complete()
 	{
-		Game.Achievements.GainCutsceneStageAchievement(Data.Name, State.Data.Stage);
-		Game.Start();
+		Game.Achievements.TriggerCutsceneStageAchievement(Data.Name, State.Data.Stage);
+		Game.Autosave();
 	}
 
 	public void ResetState()
 	{
-		_pendingState = _state;
+		_previousState = _state;
 		_state = null;
 	}
 
@@ -174,13 +175,13 @@ public class Cutscene
 	{
 		if (Active && _state.Update(gameTime))
 		{
-			Game.Start();
+			Complete();
 		}
 	}
 
 	public string[] ToString(int steps = 0)
 	{
-		Stage stage = _state ?? _pendingState;
+		Stage stage = _state ?? _previousState;
 		if (stage == null)
 		{
 			return null;
@@ -189,8 +190,8 @@ public class Cutscene
 		{
 			Data.Name,
 			stage.Data.Stage.ToString(),
-			stage.ToString(steps),
-			stage.GetActiveStep()
+			stage.GetSteps(steps),
+			stage.GetStep()
 		};
 	}
 }

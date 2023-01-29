@@ -47,18 +47,18 @@ public class ControllerObserver
 		_gamepad = GamePad.GetState(PlayerIndex.One);
 		_mousePrevious = _mouse;
 		_mouse = Mouse.GetState();
-		_cursorVector.X = Math.Max(0, Math.Min(_mouse.X, _game.Mouse.DisplayWidth));
-		_cursorVector.Y = Math.Max(0, Math.Min(_mouse.Y, _game.Mouse.DisplayHeight));
+		_cursorVector.X = Math.Max(0, Math.Min(_mouse.X, _game.Canvas.DisplayWidth));
+		_cursorVector.Y = Math.Max(0, Math.Min(_mouse.Y, _game.Canvas.DisplayHeight));
 		_cursorPoint.X = (int)_cursorVector.X;
 		_cursorPoint.Y = (int)_cursorVector.Y;
 	}
 
-	public bool IsPressed(Keys keys)
+	public bool IsHolding(Keys keys)
 	{
 		return _keyboard[keys] == KeyState.Down;
 	}
 
-	public bool IsPressed(Buttons buttons)
+	public bool IsHolding(Buttons buttons)
 	{
 		if (_gamepad.IsConnected)
 		{
@@ -67,7 +67,7 @@ public class ControllerObserver
 		return false;
 	}
 
-	public bool IsPressed(ControllerButtonType type)
+	public bool IsHolding(ControllerButtonType type)
 	{
 		return type switch
 		{
@@ -118,7 +118,7 @@ public class ControllerObserver
 		}
 	}
 
-	public bool JustPressed(Keys keys)
+	public bool IsPressed(Keys keys)
 	{
 		if (_keyboardPrevious[keys] == KeyState.Up)
 		{
@@ -127,7 +127,7 @@ public class ControllerObserver
 		return false;
 	}
 
-	public bool JustPressed(Buttons buttons)
+	public bool IsPressed(Buttons buttons)
 	{
 		if (_gamepadPrevious.IsConnected && _gamepad.IsConnected)
 		{
@@ -140,7 +140,7 @@ public class ControllerObserver
 		return false;
 	}
 
-	public bool JustPressed(ControllerButtonType type)
+	public bool IsPressed(ControllerButtonType type)
 	{
 		switch (type)
 		{
@@ -183,7 +183,7 @@ public class ControllerObserver
 		}
 	}
 
-	public bool JustReleased(Keys keys)
+	public bool IsReleasing(Keys keys)
 	{
 		if (_keyboardPrevious[keys] == KeyState.Down)
 		{
@@ -192,7 +192,7 @@ public class ControllerObserver
 		return false;
 	}
 
-	public bool JustReleased(Buttons buttons)
+	public bool IsReleasing(Buttons buttons)
 	{
 		if (_gamepadPrevious.IsConnected && _gamepad.IsConnected)
 		{
@@ -205,7 +205,7 @@ public class ControllerObserver
 		return false;
 	}
 
-	public bool JustReleased(ControllerButtonType type)
+	public bool IsReleasing(ControllerButtonType type)
 	{
 		switch (type)
 		{
@@ -257,7 +257,7 @@ public class ControllerObserver
 		Array values = Enum.GetValues(typeof(Buttons));
 		foreach (Buttons item in values)
 		{
-			if (IsPressed(item))
+			if (IsHolding(item))
 			{
 				return true;
 			}
@@ -265,7 +265,7 @@ public class ControllerObserver
 		values = Enum.GetValues(typeof(ControllerButtonType));
 		foreach (ControllerButtonType item in values)
 		{
-			if (IsPressed(item))
+			if (IsHolding(item))
 			{
 				return true;
 			}
@@ -273,7 +273,7 @@ public class ControllerObserver
 		return false;
 	}
 
-	public Keys[] JustPressed()
+	public Keys[] IsPressed()
 	{
 		Keys[] previousKeys = _keyboardPrevious.GetPressedKeys();
 		Keys[] keys = _keyboard.GetPressedKeys();

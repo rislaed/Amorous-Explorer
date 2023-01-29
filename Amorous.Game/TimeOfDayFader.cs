@@ -22,17 +22,17 @@ public class TimeOfDayFader
 		UpdateTime();
 	}
 
-	public void Draw(SpriteBatch spriteBatch, MouseObserver mouse)
+	public void Draw(SpriteBatch spriteBatch, CanvasObserver mouse)
 	{
 		_fader.Draw(spriteBatch, mouse);
 	}
 
 	private void UpdateTime()
 	{
-		if (_time != Clocks.Time)
+		if (_time != Clocks.Date)
 		{
-			_time = Clocks.Time;
-			switch (Clocks.Time)
+			_time = Clocks.Date;
+			switch (Clocks.Date)
 			{
 				default:
 					_fader.Apply(NightColor);

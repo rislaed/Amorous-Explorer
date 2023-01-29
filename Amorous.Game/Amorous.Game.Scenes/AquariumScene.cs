@@ -5,7 +5,7 @@ public class AquariumScene : AbstractScene
 	public AquariumScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/Aquarium/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/Aquarium/Background", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.InAFingerBlinkTrack, 0.4f);
 	}
 }

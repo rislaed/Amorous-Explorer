@@ -5,7 +5,7 @@ public class BuildingRoofScene : AbstractScene
 	public BuildingRoofScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/BuildingRoof/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/BuildingRoof/Background", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 }

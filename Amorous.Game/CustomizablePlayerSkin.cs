@@ -213,7 +213,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 
 	private void _aXgmKv0acZSej4DXtFZ3EwykcX4(CustomizationGroupData _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0, CustomizationLayerData _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0)
 	{
-		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer = NewTexturedLayer(_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName, $"Assets/PlayerCustomization/{_WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name}/{_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName}", _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.X + _nD28BmrDaEzCHelTAa14TKyuSyG, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Y + _zoomOffset, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.ZOrder, _zoomScale);
+		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer = NewSpriteLayer(_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName, $"Assets/PlayerCustomization/{_WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name}/{_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName}", _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.X + _nD28BmrDaEzCHelTAa14TKyuSyG, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Y + _zoomOffset, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.ZOrder, _zoomScale);
 		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer.Visible = false;
 	}
 
@@ -404,7 +404,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		int y = base.Game.Controller.Cursor.Y;
 		if (_zoomInterpolation <= 0)
 		{
-			if (_vZ6v4a6UcXrp8I7fOK5GurTGvwg && base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
+			if (_vZ6v4a6UcXrp8I7fOK5GurTGvwg && base.Game.Controller.IsHolding(ControllerButtonType.LeftButton))
 			{
 				int num = y - _fqUhMheAq3WxPgLgXhgAKkZQOss;
 				if (num != 0)

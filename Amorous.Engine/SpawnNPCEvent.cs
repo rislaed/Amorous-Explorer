@@ -30,9 +30,9 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 		Clothes = ((eventData.Clothes == null) ? null : eventData.Clothes.ToArray());
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		LayerOrder order = ((!Enum.TryParse<LayerOrder>(Layer, out order)) ? LayerOrder.Background : order);
 		_npc = base.Cutscene.Game.GetNPCLayerAt(NPC, order);
 		if (_npc == null)

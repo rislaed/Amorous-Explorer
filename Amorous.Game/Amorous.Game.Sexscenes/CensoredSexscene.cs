@@ -39,7 +39,7 @@ public class CensoredSexscene : AbstractSexscene
 
 		public void Update(float ticks)
 		{
-			_x += (float)Math.Sin(Randoms.Time * _vectorX) * (_speedX * ticks);
+			_x += (float)Math.Sin(Randoms.Date * _vectorX) * (_speedX * ticks);
 			_y -= _speedY * ticks;
 			if (_y < _cycle)
 			{

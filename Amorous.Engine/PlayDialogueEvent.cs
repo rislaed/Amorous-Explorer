@@ -21,10 +21,10 @@ public class PlayDialogueEvent : AbstractEvent<PlayDialogueEventData>
 		_completable = false;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
-		TypingDialogue.Play(Text, Title, Color);
+		base.Start();
+		TypingDialogue.Type(Text, Title, Color);
 	}
 
 	public override bool Next()
@@ -36,7 +36,7 @@ public class PlayDialogueEvent : AbstractEvent<PlayDialogueEventData>
 		else
 		{
 			_completable = true;
-			TypingDialogue.Next();
+			TypingDialogue.SkipToNext();
 		}
 		return false;
 	}

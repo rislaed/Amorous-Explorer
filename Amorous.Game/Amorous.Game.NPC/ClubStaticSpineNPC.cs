@@ -37,9 +37,9 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 		}
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		SetEmotion(EHeads.None);
 		SetPose(EPoses.Nude);
 		SetClothes(EClothes.Shirt, EClothes.Pants);

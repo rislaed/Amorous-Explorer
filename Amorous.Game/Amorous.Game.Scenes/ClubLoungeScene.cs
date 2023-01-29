@@ -6,37 +6,33 @@ namespace Amorous.Game.Scenes;
 public class ClubLoungeScene : AbstractScene
 {
 	private ClubStaticDustinNPC _dustin;
-
 	private ClubStaticMercyNPC _mercy;
-
-	private readonly bool _showDustin;
-
-	private readonly bool _showMercy;
+	private readonly bool _showDustin, _showMercy;
 
 	public ClubLoungeScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/ClubLounge/Lounge Main", -1295, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/ClubLounge/Lounge Main", -1295, 0);
 		AddAnimatedLayer("Lights", 638, 0, 500, "Assets/Scenes/ClubLounge/Lights Green Flicker", "Assets/Scenes/ClubLounge/Lights Yellow Flicker");
-		AddTexturedLayer("Lights Glow", "Assets/Scenes/ClubLounge/Lights glow", 638, 0);
-		AddTexturedLayer("Pole", "Assets/Scenes/ClubLounge/Dance Pole", 1384, -150);
+		AddSpriteLayer("Lights Glow", "Assets/Scenes/ClubLounge/Lights glow", 638, 0);
+		AddSpriteLayer("Pole", "Assets/Scenes/ClubLounge/Dance Pole", 1384, -150);
 		AddClickableLayer("Elevator", "Assets/Scenes/ClubLounge/Elevator Door Selectable", -958, 0, OnUpstairsClick);
 		AddClickableLayer("Stairs", "Assets/Scenes/ClubLounge/Stairs selectable", -242, 0, OnUpstairsClick);
 		AddClickableLayer("Door", "Assets/Scenes/ClubLounge/Exit door selectable", 235, 0, OnDoorClick);
 		AddAnimatedClickableLayer("Club", 2588, 0, OnClubClick, 1200, "Assets/Scenes/ClubLounge/Main Room Blue", "Assets/Scenes/ClubLounge/Main Room Green");
-		AddForegroundTexturedLayer("Couches", "Assets/Scenes/ClubLounge/Foreground couches", -1295, 758);
-		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-1295, 1295, 0, 0);
+		AddForegroundSpriteLayer("Couches", "Assets/Scenes/ClubLounge/Foreground couches", -1295, 758);
+		Game.Canvas.SetOverscroll(-1295, 1295, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showDustin = !data.GetFlag(AmorousData.DustinLeftClub);
 		_showMercy = !data.GetFlag(AmorousData.MercyLeftClub);
 		if (_showDustin)
 		{
-			AddTexturedLayer("Shadow", "Assets/Scenes/ClubLounge/ShadowDustin", -426, 259);
+			AddSpriteLayer("Shadow", "Assets/Scenes/ClubLounge/ShadowDustin", -426, 259);
 		}
 		if (_showMercy)
 		{
-			AddTexturedLayer("Shadow", "Assets/Scenes/ClubLounge/ShadowMercy", 2333, 448);
+			AddSpriteLayer("Shadow", "Assets/Scenes/ClubLounge/ShadowMercy", 2333, 448);
 		}
 	}
 

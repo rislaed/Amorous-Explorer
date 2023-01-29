@@ -8,10 +8,10 @@ public class HidePhoneEvent : AbstractEvent<HidePhoneEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		if (PhoneOverlay.Get().Phase == PhoneOverlay.PhonePhase.ArmUp)
+		if (PhoneOverlay.Get().Pose == PhoneOverlay.ArmPose.ArmUp)
 		{
 			PhoneOverlay.Hide();
 		}
-		base.Completable = PhoneOverlay.Get().Phase == PhoneOverlay.PhonePhase.ArmDown;
+		base.Completable = PhoneOverlay.Get().Pose == PhoneOverlay.ArmPose.ArmDown;
 	}
 }

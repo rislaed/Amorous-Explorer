@@ -5,9 +5,9 @@ public class DeclineIMEvent : AbstractContactEvent<DeclineIMEventData>
 	public DeclineIMEvent(Cutscene cutscene)
 		: base(cutscene) {}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PhoneOverlay.Get().DeclineIM(Contact);
 	}
 }

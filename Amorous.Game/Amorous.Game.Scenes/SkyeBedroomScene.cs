@@ -7,7 +7,7 @@ public class SkyeBedroomScene : AbstractScene
 	public SkyeBedroomScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/SkyeBedroom/interactable bedroom - Backround", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/SkyeBedroom/interactable bedroom - Backround", 0, 0);
 		AddClickableLayer("Door", "Assets/Scenes/SkyeBedroom/interactable bedroom - Door", 1534, 70, delegate
 		{
 			if (PlayerPreferences.GetPlayerData().GetState(AmorousData.SkyeDate) == 55)

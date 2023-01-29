@@ -8,10 +8,10 @@ public class ShowPhoneEvent : AbstractEvent<ShowPhoneEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		if (PhoneOverlay.Get().Phase == PhoneOverlay.PhonePhase.ArmDown)
+		if (PhoneOverlay.Get().Pose == PhoneOverlay.ArmPose.ArmDown)
 		{
 			PhoneOverlay.Show();
 		}
-		base.Completable = PhoneOverlay.Get().Phase == PhoneOverlay.PhonePhase.ArmUp;
+		base.Completable = PhoneOverlay.Get().Pose == PhoneOverlay.ArmPose.ArmUp;
 	}
 }

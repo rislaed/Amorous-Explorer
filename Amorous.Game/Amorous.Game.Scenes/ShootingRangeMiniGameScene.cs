@@ -482,7 +482,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private const int _1pcAANk13CvJrSXUOZ3qhxtMDku = 6;
 
-	private const string _9RACjV4WJk4KFrnXLYxI9sViikj = "Press <Space/R/Mouse-R> to Reload and begin.";
+	private const string _9RACjV4WJk4KFrnXLYxI9sViikj = "Press <Space/R/Canvas-R> to Reload and begin.";
 
 	private const string _U1HaVdhFZJNSjA4zQOBoTSRBtMl = "Time up, Game over! Press <Enter> to retry or <Escape> to continue.";
 
@@ -510,7 +510,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private List<TargetModel> _u8GaIYUzQ65BoFU3NzXBzyvujjbA;
 
-	private readonly TexturedLayer _tvM0bxD4ITME03hjc6seyYclzxf;
+	private readonly SpriteLayer _tvM0bxD4ITME03hjc6seyYclzxf;
 
 	private Point _TcTPQp3KE5mO2mYA6sSQDbHnhAw;
 
@@ -559,7 +559,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		Game.IsRenderingCursor = false;
 		_U8eNAZVBW15ZflhG4fel0hK3Juu = PhoneOverlay.Enabled;
 		PhoneOverlay.Enabled = false;
-		FadingMediaPlayer.BeginCutscene();
+		FadingMediaPlayer.Complete();
 		_vCjkdRWXT5mvEu0c22Hgh93luLg = new RandomSoundEffect(Game.Content);
 		_vCjkdRWXT5mvEu0c22Hgh93luLg.Append("Assets/Sounds/MiniGames/ShootingRange/Fire");
 		_RiMZpLLSGIesSXF8vhSlVQ8SrDg = new RandomSoundEffect(Game.Content);
@@ -573,13 +573,13 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		_Oeqego17TDqmByfLbOEB1isMXzJ = new RandomSoundEffect(Game.Content);
 		_Oeqego17TDqmByfLbOEB1isMXzJ.Append("Assets/Sounds/MiniGames/ShootingRange/Ricochete 1", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 2", "Assets/Sounds/MiniGames/ShootingRange/Ricochete 3");
 		_m1dNhD2jwJ6iTVUgUzMJUvnQFS = base.Game.Content.Load<Texture2D>("Assets/Scenes/ShootingRange/Bullet");
-		AddLayer(NewTexturedLayer("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180), 0);
-		AddLayer(NewTexturedLayer("Background", "Assets/Scenes/ShootingRange/Background", 0, 0), 2);
-		AddLayer(NewTexturedLayer("Countertop", "Assets/Scenes/ShootingRange/Countertop", 0, 0), 6);
+		AddLayer(NewSpriteLayer("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180), 0);
+		AddLayer(NewSpriteLayer("Background", "Assets/Scenes/ShootingRange/Background", 0, 0), 2);
+		AddLayer(NewSpriteLayer("Countertop", "Assets/Scenes/ShootingRange/Countertop", 0, 0), 6);
 		_6YCQhlMaqcDds8uGX1g8fjBKqV4A = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
 		_MnMUFBDfrGZBHvrJ30IAQilqivI = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 		_AWLddj1Rm2sqiBwYcJDngG0QaQI = PlayerPreferences.GetPlayerData().PhoneColor;
-		_tvM0bxD4ITME03hjc6seyYclzxf = NewTexturedLayer("Crosshair", "Assets/Scenes/ShootingRange/Crosshair", 0, 0);
+		_tvM0bxD4ITME03hjc6seyYclzxf = NewSpriteLayer("Crosshair", "Assets/Scenes/ShootingRange/Crosshair", 0, 0);
 		_tvM0bxD4ITME03hjc6seyYclzxf.Color = _AWLddj1Rm2sqiBwYcJDngG0QaQI;
 		AddLayer(_tvM0bxD4ITME03hjc6seyYclzxf, 7);
 		_85WqOX8OcxbI6g74CaBZtHiHK2m = new GunModel(this)
@@ -594,7 +594,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		_u8GaIYUzQ65BoFU3NzXBzyvujjbA = new List<TargetModel>();
 		_xEG3axnWkco0Erk0PdjakXDULcA = new List<IDrawable>();
 		_d9mstkVrU6KGDJyOtHGgrr2ZciA = new List<IDrawable>();
-		_YhybMVqCJnFekEXVbF1huXupDmh = _MnMUFBDfrGZBHvrJ30IAQilqivI.MeasureString("Press <Space/R/Mouse-R> to Reload and begin.").X;
+		_YhybMVqCJnFekEXVbF1huXupDmh = _MnMUFBDfrGZBHvrJ30IAQilqivI.MeasureString("Press <Space/R/Canvas-R> to Reload and begin.").X;
 		_MZh3nVRuDktDpIu8X149SF90ZjO = _MnMUFBDfrGZBHvrJ30IAQilqivI.MeasureString("Time up, Game over! Press <Enter> to retry or <Escape> to continue.").X;
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq = 90f;
 		_M8VVMN3GHWWmFmORCACqNTXVh6b = 1;
@@ -605,7 +605,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	public override void Update(GameTime gameTime)
 	{
 		float float_ = (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-		if (_F2ao1gdMb4UciyKC7Zly4by95Mn && base.Game.Controller.JustPressed(Keys.Escape))
+		if (_F2ao1gdMb4UciyKC7Zly4by95Mn && base.Game.Controller.IsPressed(Keys.Escape))
 		{
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.None;
 			_5Z9jaXDcRYm0wNlEm1aTutL9kSH();
@@ -630,7 +630,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.GameOver;
 			_jj3EwaVU5VqWdkXGZXsxWtQcYOv();
 		}
-		_TcTPQp3KE5mO2mYA6sSQDbHnhAw = base.Game.Mouse._2j5HjqIBNOwD2br7yBprKdzVhAK(base.Game.Controller.Cursor);
+		_TcTPQp3KE5mO2mYA6sSQDbHnhAw = base.Game.Canvas.RelativeToContent(base.Game.Controller.Cursor);
 		_tvM0bxD4ITME03hjc6seyYclzxf.X = _TcTPQp3KE5mO2mYA6sSQDbHnhAw.X - 32;
 		_tvM0bxD4ITME03hjc6seyYclzxf.Y = _TcTPQp3KE5mO2mYA6sSQDbHnhAw.Y - 32;
 		_85WqOX8OcxbI6g74CaBZtHiHK2m.X = 780f + Math.Min(1f, (float)_TcTPQp3KE5mO2mYA6sSQDbHnhAw.X / 1730f) * 1570f;
@@ -653,7 +653,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private void _fFSom2DrN3XLCdgmD5vZaJmWP7G(float float_0)
 	{
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base.Game.Controller.JustPressed(ControllerButtonType.RightButton) || base.Game.Controller.JustPressed(Keys.R) || base.Game.Controller.JustPressed(Keys.Space)))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base.Game.Controller.IsPressed(ControllerButtonType.RightButton) || base.Game.Controller.IsPressed(Keys.R) || base.Game.Controller.IsPressed(Keys.Space)))
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
@@ -672,7 +672,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	private void _8GHK7o3vLmG6sThZNN5JsWHoKkE(float float_0)
 	{
 		_0zKXRrSXqoTAuTYQNrJIgtt7Emq -= float_0;
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && !_nHs33RHZMuYhYev0dQ6ic0aHmvO && base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && !_nHs33RHZMuYhYev0dQ6ic0aHmvO && base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 		{
 			if (_YFr89aAV3UzO9kf7kPKQJilRWED != 0)
 			{
@@ -740,7 +740,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 				_RiMZpLLSGIesSXF8vhSlVQ8SrDg.PlayNext();
 			}
 		}
-		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base.Game.Controller.JustPressed(ControllerButtonType.RightButton) || base.Game.Controller.JustPressed(Keys.R) || base.Game.Controller.JustPressed(Keys.Space)))
+		if (!_eMnDHRem25x38ZqmbzZLc1CLkwlA && (base.Game.Controller.IsPressed(ControllerButtonType.RightButton) || base.Game.Controller.IsPressed(Keys.R) || base.Game.Controller.IsPressed(Keys.Space)))
 		{
 			_eMnDHRem25x38ZqmbzZLc1CLkwlA = true;
 			_nHs33RHZMuYhYev0dQ6ic0aHmvO = true;
@@ -804,11 +804,11 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 
 	private void _g0eYquQ8BcifsIs5UMyAIkXM5paA(float float_0)
 	{
-		if (base.Game.Controller.JustPressed(Keys.Enter))
+		if (base.Game.Controller.IsPressed(Keys.Enter))
 		{
 			ResetState();
 		}
-		else if (base.Game.Controller.JustPressed(Keys.Escape))
+		else if (base.Game.Controller.IsPressed(Keys.Escape))
 		{
 			_dxhbACq6BB89IAMy6ZOALWJgv7L = GameState.None;
 			_5Z9jaXDcRYm0wNlEm1aTutL9kSH();
@@ -861,7 +861,7 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 		switch (_dxhbACq6BB89IAMy6ZOALWJgv7L)
 		{
 			case GameState.NotStarted:
-				spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Mouse-R> to Reload and begin.", new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.Red);
+				spriteBatch.DrawString(_MnMUFBDfrGZBHvrJ30IAQilqivI, "Press <Space/R/Canvas-R> to Reload and begin.", new Vector2((1920f - _YhybMVqCJnFekEXVbF1huXupDmh) / 2f, 10f), Color.Red);
 				break;
 			case GameState.Started:
 				if (_0zKXRrSXqoTAuTYQNrJIgtt7Emq >= 0f)
@@ -952,19 +952,19 @@ public abstract class ShootingRangeMiniGameScene : AbstractScene
 	{
 		if (_G0GwJ5OWQOA4BjacW3XmFsyMFjz > 2500)
 		{
-			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric7);
+			base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric7);
 		}
 		if (_C6cjmtLovCejw2N3OZYswcoYxsd > 60)
 		{
-			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric8);
+			base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric8);
 		}
 		if (_dH7hlTzeJboGa5rfpgerBfCmyKO == 0)
 		{
-			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric9);
+			base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric9);
 		}
 		if (_JvgphfrWtBncPfgb6ERRVKKtlQG < 30)
 		{
-			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric10);
+			base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric10);
 		}
 	}
 }

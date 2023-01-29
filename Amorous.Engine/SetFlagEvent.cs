@@ -16,9 +16,9 @@ public class SetFlagEvent : AbstractEvent<SetFlagEventData>
 		Value = eventData.Value;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PlayerPreferences.GetPlayerData().SetFlag(Flag, Value);
 		base.Cutscene.Game.Achievements.SetFlag(Flag, Value);
 	}

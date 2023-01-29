@@ -5,9 +5,9 @@ public class DeclineCallEvent : AbstractContactEvent<DeclineCallEventData>
 	public DeclineCallEvent(Cutscene cutscene)
 		: base(cutscene) {}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PhoneOverlay.Get().DeclineCall(Contact);
 	}
 }

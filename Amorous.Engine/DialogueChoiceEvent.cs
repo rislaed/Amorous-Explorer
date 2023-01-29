@@ -15,18 +15,18 @@ public class DialogueChoiceEvent : AbstractEvent<DialogueChoiceEventData>
 		Choices = eventData.Choices.ToArray();
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		TypingDialogue.Choice(Choices.Select((DialogueChoiceItem choice) => choice.Text).ToArray());
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = !TypingDialogue._zatbtX2c8i2hGOTptNymBxA8kVI;
+		base.Completable = !TypingDialogue.Outgoing;
 		if (base.Completable)
 		{
-			int num = TypingDialogue._rVWIUtPzqmWcZbPclkfMRcIkeGR - 1;
+			int num = TypingDialogue.Which - 1;
 			if (num >= 0 && num < Choices.Length)
 			{
 				base.NextID = Choices[num].NextID;

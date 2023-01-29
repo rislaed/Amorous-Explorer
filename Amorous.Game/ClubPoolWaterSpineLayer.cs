@@ -50,7 +50,7 @@ public class ClubPoolWaterSpineLayer : SpineDrawableLayer
 			self.Scene.Game.GLES.SetRenderTargets(renderTargets);
 			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
 			float cycle = offset + (float)waves.Height;
-			effect.Parameters["Time"].SetValue(Randoms.Time);
+			effect.Parameters["Time"].SetValue(Randoms.Date);
 			effect.Parameters["PoolSpeed"].SetValue(0.1f);
 			effect.Parameters["PoolOffset"].SetValue(0);
 			effect.Parameters["MaskTexture"].SetValue(waves);

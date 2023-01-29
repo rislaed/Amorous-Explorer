@@ -45,9 +45,9 @@ public class StartupScene : AbstractScene
 	public StartupScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
-		AddTexturedLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
-		AddForegroundTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
+		AddSpriteLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
+		AddSpriteLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
+		AddForegroundSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
 		Window window = new Window
 		{
@@ -160,7 +160,7 @@ public class StartupScene : AbstractScene
 		base.Squid.Controls.Add(window);
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
 		CoupleANPC coupleANPC = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Background);
 		coupleANPC.X = 350f;

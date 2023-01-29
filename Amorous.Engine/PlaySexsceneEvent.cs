@@ -14,9 +14,9 @@ public class PlaySexsceneEvent : AbstractEvent<PlaySexsceneEventData>
 		SceneName = eventData.SceneName;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		base.Cutscene.Game.PlaySexscene(SceneName);
 	}
 

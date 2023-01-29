@@ -15,8 +15,8 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 
 	protected bool _vAix6GBEcVh3peB11tbKy7HJWwb { get; set; }
 
-	protected ClubPoolStaticNPC(IAmorous game, string string_0, string string_1, bool bool_0, bool bool_1)
-		: base(game, string_0, string_1, bool_0, bool_1)
+	protected ClubPoolStaticNPC(IAmorous game, string string_0, string string_1, bool shirt, bool pants)
+		: base(game, string_0, string_1, shirt, pants)
 	{
 		_2dDfDHYjKMlOJWKHdOpvafF417M = base.Game.Content.Load<Effect>("Assets/Shaders/Pool");
 		_za9QLzJUpOFmy4hIqyTdGh34IpD = base.Game.Content.Load<Texture2D>("Assets/Scenes/ClubPool/Wave Mask");
@@ -25,7 +25,7 @@ public abstract class ClubPoolStaticNPC : ClubStaticNPC
 	public override void Draw(SpriteBatch spriteBatch)
 	{
 		float num = _rlJEdnItzlU5efWtBjMCaC5Nizb + (float)_za9QLzJUpOFmy4hIqyTdGh34IpD.Height;
-		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["Time"].SetValue(Randoms.Time);
+		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["Time"].SetValue(Randoms.Date);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["PoolSpeed"].SetValue(0.1f);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["PoolOffset"].SetValue(_qFVIvzuvIuKKG5vOrovLtn4NplA);
 		_2dDfDHYjKMlOJWKHdOpvafF417M.Parameters["MaskTexture"].SetValue(_za9QLzJUpOFmy4hIqyTdGh34IpD);

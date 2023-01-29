@@ -19,7 +19,7 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 		{
 			if (index == 1)
 			{
-				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric1);
+				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric1);
 				base.Game.StartCutscene(AmorousData.Gender);
 				_pendingEntering = true;
 			}
@@ -35,11 +35,11 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 			PlayerData data = PlayerPreferences.GetPlayerData();
 			data.UnlockContact(PlayerData.EPhoneContacts.Coby);
 			data.SetStage(AmorousData.Prologue, AmorousData.PrologueStateCompleted);
-			data.SetFlag(AmorousData.CobyLeftClub, bool_0: true);
+			data.SetFlag(AmorousData.CobyLeftClub, flag: true);
 			PhoneOverlay.Enabled = true;
 			PhoneOverlay.Get().RefreshSkin();
 			base.Game.Achievements.UnlockContact(PlayerData.EPhoneContacts.Coby);
-			base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric4);
+			base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric4);
 			base.Game.StartScene<ClubEntranceScene>();
 		}
 	}

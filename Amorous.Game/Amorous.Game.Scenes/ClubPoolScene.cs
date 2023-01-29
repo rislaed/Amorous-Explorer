@@ -94,7 +94,7 @@ public class ClubPoolScene : AbstractScene
 	public ClubPoolScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
 		AddClickableLayer("Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, OnDoorClick);
 		ClubPoolSpineLayer gparam_ = new ClubPoolSpineLayer(this)
 		{
@@ -108,21 +108,21 @@ public class ClubPoolScene : AbstractScene
 		frameAnimationLayer2.Play(-1170, 200, 2, 10f);
 		AddLayer(frameAnimationLayer, 2);
 		AddLayer(frameAnimationLayer2, 2);
-		AddForegroundTexturedLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
-		AddForegroundTexturedLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
-		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-1677, 1677, 0, 0);
+		AddForegroundSpriteLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
+		AddForegroundSpriteLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
+		Game.Canvas.SetOverscroll(-1677, 1677, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showRemy = !data.GetFlag(AmorousData.RemyLeftClub);
 		if (_showRemy)
 		{
-			AddTexturedLayer("Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
+			AddSpriteLayer("Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
 		}
 	}
 
 	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		ClubPoolStaticANPC clubPoolStaticANPC = base.Game.GetNPCLayerAt<ClubPoolStaticANPC>(LayerOrder.Background);
 		clubPoolStaticANPC.X = -1400f;
 		clubPoolStaticANPC.Y = 910f;

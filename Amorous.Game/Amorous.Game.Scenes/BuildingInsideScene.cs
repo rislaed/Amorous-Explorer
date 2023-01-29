@@ -5,7 +5,7 @@ public class BuildingInsideScene : AbstractScene
 	public BuildingInsideScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/BuildingInside/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/BuildingInside/Background", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 }

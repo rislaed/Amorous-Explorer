@@ -19,7 +19,7 @@ public class PhoneUrgentlyRinging
 		{
 			return;
 		}
-		if (PhoneOverlay.Get().Phase != PhoneOverlay.PhonePhase.ArmUp)
+		if (PhoneOverlay.Get().Pose != PhoneOverlay.ArmPose.ArmUp)
 		{
 			if (_appeared)
 			{
@@ -36,21 +36,21 @@ public class PhoneUrgentlyRinging
 					_message = false;
 					_ticks = 0f;
 					_appeared = true;
-					PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.MessageUrgent;
+					PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.MessageUrgent;
 				}
 			}
 			else
 			{
 				_message = true;
-				PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.MessageNew;
+				PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.MessageNew;
 			}
 		}
-		else if (PhoneOverlay.Indication != PhoneOverlay.PhoneIndication.NoMessage)
+		else if (PhoneOverlay.Indicator != PhoneOverlay.PhoneIndicator.NoMessage)
 		{
 			_message = false;
 			_ticks = 0f;
 			_appeared = false;
-			PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.NoMessage;
+			PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.NoMessage;
 		}
 	}
 
@@ -58,7 +58,7 @@ public class PhoneUrgentlyRinging
 	{
 		if (PhoneOverlay.Enabled)
 		{
-			PhoneOverlay.Indication = PhoneOverlay.PhoneIndication.NoMessage;
+			PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.NoMessage;
 		}
 	}
 }

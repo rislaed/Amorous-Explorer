@@ -6,9 +6,9 @@ public class HideGameBoxEvent : AbstractEvent<HideGameBoxEventData>
 	public HideGameBoxEvent(Cutscene cutscene)
 		: base(cutscene) {}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PhoneOverlay.Get().HideGameBox();
 	}
 

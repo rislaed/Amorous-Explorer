@@ -25,7 +25,7 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 		{
 			if (int_0 == 1)
 			{
-				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric1);
+				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric1);
 				PlayerPreferences.GetPlayerData().SetStage(AmorousData.Gender, 10);
 				PlayerPreferences.GetPlayerData().Remove("Player.Gender");
 				PlayerPreferences.GetPlayerData().Remove("Player.No");

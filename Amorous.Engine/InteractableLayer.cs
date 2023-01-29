@@ -71,7 +71,7 @@ public class InteractableLayer : AbstractLayer
 
 	public override bool Click()
 	{
-		TypingDialogue.Play(Text, string.Empty, Color.White);
+		TypingDialogue.Type(Text, string.Empty, Color.White);
 		Captured = true;
 		Hovered = false;
 		return true;
@@ -79,7 +79,7 @@ public class InteractableLayer : AbstractLayer
 
 	public override void Continue()
 	{
-		TypingDialogue.BeginCutscene();
+		TypingDialogue.Complete();
 		Captured = false;
 	}
 

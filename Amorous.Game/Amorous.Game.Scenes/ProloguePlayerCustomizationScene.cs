@@ -21,7 +21,7 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 			if (int_0 == 1)
 			{
 				PhoneOverlay.Get().RefreshSkin();
-				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric1);
+				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric1);
 				base.Game.StartCutscene(AmorousData.Prologue);
 			}
 		});

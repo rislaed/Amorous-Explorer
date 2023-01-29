@@ -4,15 +4,15 @@ namespace Amorous.Game.Scenes;
 
 public class MakeoutPointScene : TimeOfDayScene
 {
-	private readonly TexturedLayer _4Hew2VldDt2hPLjc5fBPbqIVUEQ;
+	private readonly SpriteLayer _4Hew2VldDt2hPLjc5fBPbqIVUEQ;
 
-	private readonly TexturedLayer _bYgAJ7foDqpxOElDOYhOkQFMzrz;
+	private readonly SpriteLayer _bYgAJ7foDqpxOElDOYhOkQFMzrz;
 
 	public MakeoutPointScene(IAmorous game)
 		: base(game)
 	{
-		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = AddTexturedLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
-		_bYgAJ7foDqpxOElDOYhOkQFMzrz = AddTexturedLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
+		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = AddSpriteLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
+		_bYgAJ7foDqpxOElDOYhOkQFMzrz = AddSpriteLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 
@@ -33,7 +33,7 @@ public class MakeoutPointScene : TimeOfDayScene
 
 	public override void DrawOverlay(SpriteBatch spriteBatch)
 	{
-		if (Clocks.Time != TimeOfDay.Night)
+		if (Clocks.Date != TimeOfDay.Night)
 		{
 			base.DrawOverlay(spriteBatch);
 		}

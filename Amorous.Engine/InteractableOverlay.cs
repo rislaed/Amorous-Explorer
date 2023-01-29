@@ -83,7 +83,7 @@ public class InteractableOverlay
 		{
 			return;
 		}
-		Microsoft.Xna.Framework.Point point = Game.Mouse.Rescale(Game.Controller.Cursor);
+		Microsoft.Xna.Framework.Point point = Game.Canvas.GlobalToContent(Game.Controller.Cursor);
 		foreach (AbstractInteractable interactable in Interactables)
 		{
 			if (interactable.Visible)
@@ -99,7 +99,7 @@ public class InteractableOverlay
 				}
 			}
 		}
-		if (!Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+		if (!Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 		{
 			return;
 		}

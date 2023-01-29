@@ -6,17 +6,17 @@ using Squid;
 
 public class Notifications
 { // _XJasjdoOf6PYbfaC5MsbXSjDWV3
-	private class _RQQdLVHyZm4GNvRCeQfcIx1OlwJ
+	private class Message
 	{
-		public Frame _kvuzph4c9LD4fDAaURHVjkfJKwk;
-		public float Time;
+		public Frame Control;
+		public float Date;
 	}
 
-	private const float _c8P7clKqCyeAfypCea6vVId1tdN = 5f;
+	private const float BetweenDelay = 5f;
 	private readonly Desktop _squid;
-	private readonly Frame _g1jCwh8QFyZkbnduUiAjCzKbLWF;
-	private readonly List<_RQQdLVHyZm4GNvRCeQfcIx1OlwJ> _IRRZMMioeCJC8zGoIaJiRaRSSiM;
-	private bool _0WBDNE6IV1uJhHzUHzdiNj5c9bcA;
+	private readonly Frame _overlay;
+	private readonly List<Message> _messages;
+	private bool _completed;
 
 	public Notifications()
 	{
@@ -32,20 +32,20 @@ public class Notifications
 		};
 		_squid.Skin["window"].Tint = ColorInt.ARGB(0.75f, 1f, 1f, 1f);
 		_squid.Skin.Add("header", value);
-		_g1jCwh8QFyZkbnduUiAjCzKbLWF = new Frame
+		_overlay = new Frame
 		{
 			Dock = DockStyle.Right,
 			Size = new Squid.Point(600, 1080),
 			Margin = new Margin(0, 0, 10, 0)
 		};
-		_squid.Controls.Add(_g1jCwh8QFyZkbnduUiAjCzKbLWF);
-		_IRRZMMioeCJC8zGoIaJiRaRSSiM = new List<_RQQdLVHyZm4GNvRCeQfcIx1OlwJ>();
-		_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = false;
+		_squid.Controls.Add(_overlay);
+		_messages = new List<Message>();
+		_completed = false;
 	}
 
 	public void ShowMessage(string icon, string title, string message)
 	{
-		Frame frame = new Frame
+		Frame contentFrame = new Frame
 		{
 			Dock = DockStyle.Bottom,
 			Style = "window",
@@ -53,58 +53,58 @@ public class Notifications
 			Margin = new Margin(0, 0, 0, 10),
 			Size = new Squid.Point(0, 120)
 		};
-		ImageControl item = new ImageControl
+		ImageControl iconImage = new ImageControl
 		{
 			Dock = DockStyle.Left,
 			Margin = new Margin(0, 0, 10, 0),
 			Size = new Squid.Point(100, 100),
 			Texture = icon
 		};
-		Frame frame2 = new Frame
+		Frame textFrame = new Frame
 		{
 			Dock = DockStyle.Fill,
 			Scissor = true
 		};
-		Label item2 = new Label
+		Label headerText = new Label
 		{
 			Dock = DockStyle.Top,
 			Style = "header",
 			Text = "New message: " + title + "!"
 		};
-		Label item3 = new Label
+		Label messageText = new Label
 		{
 			Dock = DockStyle.Fill,
 			Text = message,
 			TextWrap = true
 		};
-		frame.Controls.Add(item);
-		frame.Controls.Add(frame2);
-		frame2.Controls.Add(item2);
-		frame2.Controls.Add(item3);
-		_g1jCwh8QFyZkbnduUiAjCzKbLWF.Controls.Add(frame);
-		_IRRZMMioeCJC8zGoIaJiRaRSSiM.Add(new _RQQdLVHyZm4GNvRCeQfcIx1OlwJ
+		contentFrame.Controls.Add(iconImage);
+		contentFrame.Controls.Add(textFrame);
+		textFrame.Controls.Add(headerText);
+		textFrame.Controls.Add(messageText);
+		_overlay.Controls.Add(contentFrame);
+		_messages.Add(new Message
 		{
-			_kvuzph4c9LD4fDAaURHVjkfJKwk = frame
+			Control = contentFrame
 		});
 	}
 
 	public void Update(GameTime gameTime)
 	{
 		_squid.Update();
-		float num = (float)(gameTime.ElapsedGameTime.TotalMilliseconds / 1000.0);
-		foreach (_RQQdLVHyZm4GNvRCeQfcIx1OlwJ item in _IRRZMMioeCJC8zGoIaJiRaRSSiM)
+		float ticks = (float)(gameTime.ElapsedGameTime.TotalMilliseconds / 1000.0);
+		foreach (Message message in _messages)
 		{
-			item.Time += num;
-			if (item.Time >= 5f)
+			message.Date += ticks;
+			if (message.Date >= BetweenDelay)
 			{
-				_g1jCwh8QFyZkbnduUiAjCzKbLWF.Controls.Remove(item._kvuzph4c9LD4fDAaURHVjkfJKwk);
-				_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = true;
+				_overlay.Controls.Remove(message.Control);
+				_completed = true;
 			}
 		}
-		if (_0WBDNE6IV1uJhHzUHzdiNj5c9bcA)
+		if (_completed)
 		{
-			_0WBDNE6IV1uJhHzUHzdiNj5c9bcA = false;
-			_IRRZMMioeCJC8zGoIaJiRaRSSiM.RemoveAll((_RQQdLVHyZm4GNvRCeQfcIx1OlwJ _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0) => _RQQdLVHyZm4GNvRCeQfcIx1OlwJ_0.Time >= 5f);
+			_completed = false;
+			_messages.RemoveAll((Message message) => message.Date >= BetweenDelay);
 		}
 	}
 

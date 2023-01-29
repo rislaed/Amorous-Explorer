@@ -5,9 +5,9 @@ public class OutgoingCallEvent : AbstractContactEvent<OutgoingCallEventData>
 	public OutgoingCallEvent(Cutscene cutscene)
 		: base(cutscene) {}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PhoneOverlay.Get().OutgoingCall(Contact);
 	}
 }

@@ -34,9 +34,10 @@ public abstract class AbstractScene
 			Size = new Squid.Point(1920, 1080)
 		};
 		Squid.SetSkin("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
+		Logger.Log(ConsoleColor.White, "Debug", "Initiating scene '{0}' with desktop state {1}", GetType().Name, Squid.AutoId);
 	}
 
-	public virtual void Begin() {}
+	public virtual void Start() {}
 	public virtual void End() {}
 
 	public AbstractLayer GetLayer(string name)
@@ -44,9 +45,9 @@ public abstract class AbstractScene
 		return Layers.FirstOrDefault((AbstractLayer layer) => layer.Name == name);
 	}
 
-	public TexturedLayer AddTexturedLayer(string name, string texture, int x, int y)
+	public SpriteLayer AddSpriteLayer(string name, string texture, int x, int y)
 	{
-		TexturedLayer layer = NewTexturedLayer(name, texture, x, y);
+		SpriteLayer layer = NewSpriteLayer(name, texture, x, y);
 		return AddLayer(layer, OrderBackground);
 	}
 
@@ -86,9 +87,9 @@ public abstract class AbstractScene
 		return AddLayer(layer, OrderBackground);
 	}
 
-	public TexturedLayer AddForegroundTexturedLayer(string name, string texture, int x, int y)
+	public SpriteLayer AddForegroundSpriteLayer(string name, string texture, int x, int y)
 	{
-		TexturedLayer layer = NewTexturedLayer(name, texture, x, y);
+		SpriteLayer layer = NewSpriteLayer(name, texture, x, y);
 		return AddLayer(layer, OrderForeground);
 	}
 
@@ -128,10 +129,10 @@ public abstract class AbstractScene
 		return AddLayer(layer, OrderForeground);
 	}
 
-	protected TexturedLayer NewTexturedLayer(string name, string texture, int x, int y)
+	protected SpriteLayer NewSpriteLayer(string name, string texture, int x, int y)
 	{
 		Texture2D texture2D = Game.Content.Load<Texture2D>(texture);
-		return new TexturedLayer(this, name, texture2D)
+		return new SpriteLayer(this, name, texture2D)
 		{
 			X = x,
 			Y = y
@@ -238,12 +239,12 @@ public abstract class AbstractScene
 		if (!CapturedByOverlay)
 		{
 			bool pressed;
-			if ((pressed = Game.Controller.JustPressed(ControllerButtonType.LeftButton)) && CapturedLayer != null)
+			if ((pressed = Game.Controller.IsPressed(ControllerButtonType.LeftButton)) && CapturedLayer != null)
 			{
 				CapturedLayer.Continue();
 				CapturedLayer = null;
 			}
-			Microsoft.Xna.Framework.Point point = Game.Mouse._e6KgAy4CTN1JFYwA88grvAEmDxX(Game.Controller.Cursor);
+			Microsoft.Xna.Framework.Point point = Game.Canvas.GlobalToTouch(Game.Controller.Cursor);
 			Touch(point, pressed, Layers);
 		}
 		Squid.Update();
@@ -478,5 +479,5 @@ public abstract class AbstractScene
 		IsOrderingChanged = true;
 	}
 
-	public virtual void Start() {}
+	public virtual void Autosave() {}
 }

@@ -21,12 +21,12 @@ public class AmorousSingleton : IAmorous
 	private readonly GraphicsDeviceManager _display;
 	private SpriteBatch _batch;
 	private SkeletonMeshRenderer _spines;
-	private MouseObserver _mouse;
-	private RenderTarget2D _canvas;
+	private CanvasObserver _canvas;
+	private RenderTarget2D _target;
 	private Microsoft.Xna.Framework.Rectangle _destinationRectangle;
 	private ScreenFader _fader;
 	private FadingMediaPlayer _media;
-	private ExtendedTextureLoader _resources;
+	private SpineTextureLoader _resources;
 	private ControllerObserver _controller;
 	private Notifications _notifier;
 	private Achievements _achievements;
@@ -67,7 +67,7 @@ public class AmorousSingleton : IAmorous
 	public GraphicsDevice GLES => _game.GraphicsDevice;
 	public ContentManager Content => _game.Content;
 	public ControllerObserver Controller => _controller;
-	public MouseObserver Mouse => _mouse;
+	public CanvasObserver Canvas => _canvas;
 	public AbstractScene Scene => _scene;
 	public AbstractSexscene Sexscene => _sexscene;
 	public Cutscene Cutscene => _cutscene;
@@ -150,11 +150,11 @@ public class AmorousSingleton : IAmorous
 		Controller.Grabbed = true;
 		_batch = new SpriteBatch(_game.GraphicsDevice);
 		_spines = new SkeletonMeshRenderer(_game.GraphicsDevice);
-		_mouse = new MouseObserver(this, 1920, 1080);
-		_mouse.SetResolution(_display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
-		_canvas = new RenderTarget2D(_game.GraphicsDevice, 1920, 1080);
-		_canvas.SetUsage(RenderTargetUsage.PreserveContents);
-		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_mouse.RelativeX, _mouse.RelativeY, _mouse.RelativeWidth, _mouse.RelativeHeight);
+		_canvas = new CanvasObserver(this, 1920, 1080);
+		_canvas.SetResolution(_display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
+		_target = new RenderTarget2D(_game.GraphicsDevice, 1920, 1080);
+		_target.SetUsage(RenderTargetUsage.PreserveContents);
+		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_canvas.RelativeX, _canvas.RelativeY, _canvas.RelativeWidth, _canvas.RelativeHeight);
 		Gui.Renderer = new SquidRenderer(_game);
 		Gui.Renderer.SetTexture("PhoneScreen", _game.Content.Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
 		Gui.Renderer.SetTexture("Contact_DJ", _game.Content.Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
@@ -162,7 +162,7 @@ public class AmorousSingleton : IAmorous
 		_player = new PlayerPreferences();
 		_fader = new ScreenFader(_game.GraphicsDevice);
 		_media = new FadingMediaPlayer(_game.Content);
-		_resources = new ExtendedTextureLoader(_game.Content);
+		_resources = new SpineTextureLoader(_game.Content);
 		_notifier = new Notifications();
 		Texture2D dialogueTexture = _game.Content.Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
 		Texture2D buttonTexture = _game.Content.Load<Texture2D>("Assets/GUI/Dialogue/button");
@@ -197,10 +197,10 @@ public class AmorousSingleton : IAmorous
 		Gui.Renderer.SetTexture(AmorousData.MessageIconDJ, Content.Load<Texture2D>(AmorousData.AchievementDJ));
 		Gui.Renderer.SetTexture(AmorousData.MessageIconShootingRange, Content.Load<Texture2D>(AmorousData.AchievementShootingRange));
 		Gui.Renderer.SetTexture(AmorousData.MessageIconCooking, Content.Load<Texture2D>(AmorousData.AchievementCooking));
-		Begin();
+		Start();
 	}
 
-	protected virtual void Begin()
+	protected virtual void Start()
 	{
 		_scene = new EmptyScene(this);
 		Fading.ApplyNow(new Color(0, 0, 0, 255));
@@ -227,23 +227,23 @@ public class AmorousSingleton : IAmorous
 			}
 		}
 		_controller.Update();
-		if (Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.F1))
+		if (Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.F1))
 		{
 			_hasControls = !_hasControls;
 		}
-		if ((Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) || Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.F2))
+		if ((Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) || Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.F2))
 		{
 			RefreshDisplay();
 		}
-		if (_steam == null && (Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.F12) || Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.PrintScreen)))
+		if (_steam == null && (Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.F12) || Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.PrintScreen)))
 		{
 			RequestScreenshot();
 		}
-		if (Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.Tab))
+		if (Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Tab))
 		{
 			_debugger = !_debugger;
 		}
-		_mouse.Update(gameTime);
+		_canvas.Update(gameTime);
 		_fader.Update(gameTime);
 		_media.Update(gameTime);
 		_media.InterpolateVolume();
@@ -258,11 +258,11 @@ public class AmorousSingleton : IAmorous
 			}
 			_scene = _pendingScene;
 			_pendingScene = null;
-			_scene.Begin();
+			_scene.Start();
 		}
 		_scene.Update(gameTime);
 		_player.Update(gameTime);
-		_phone.Update(gameTime, _mouse);
+		_phone.Update(gameTime, _canvas);
 		_writer.Update(gameTime);
 		if (_cutscene != null)
 		{
@@ -283,12 +283,12 @@ public class AmorousSingleton : IAmorous
 			_overlay.Update(gameTime);
 		}
 		_notifier.Update(gameTime);
-		Microsoft.Xna.Framework.Point point = _mouse.Rescale(Controller.Cursor);
+		Microsoft.Xna.Framework.Point point = _canvas.GlobalToContent(Controller.Cursor);
 		List<KeyData> list = new List<KeyData>();
 		foreach (Microsoft.Xna.Framework.Input.Keys keys in _keyboard)
 		{
-			bool pressed = Controller.JustPressed(keys);
-			bool released = Controller.JustReleased(keys);
+			bool pressed = Controller.IsPressed(keys);
+			bool released = Controller.IsReleasing(keys);
 			if (pressed || released)
 			{
 				Squid.Keys? availables = SquidUtils._HSj1lr89AFIB9adVhSrAeWjS1xC[Keyboard.GetKeyFromScancodeEXT(keys)];
@@ -297,7 +297,7 @@ public class AmorousSingleton : IAmorous
 					list.Add(new KeyData
 					{
 						Scancode = (int)availables.Value,
-						Char = keys.ChangeKeyboard(Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift) || Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)),
+						Char = keys.ChangeKeyboard(Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.LeftShift) || Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.RightShift)),
 						Pressed = pressed,
 						Released = released
 					});
@@ -305,7 +305,7 @@ public class AmorousSingleton : IAmorous
 			}
 		}
 		Gui.SetKeyboard(list.ToArray());
-		Gui.SetButtons(Controller.IsPressed(ControllerButtonType.LeftButton), Controller.IsPressed(ControllerButtonType.RightButton));
+		Gui.SetButtons(Controller.IsHolding(ControllerButtonType.LeftButton), Controller.IsHolding(ControllerButtonType.RightButton));
 		Gui.SetMouse(point.X, point.Y, Controller.Scroll);
 		Gui.TimeElapsed = gameTime.ElapsedGameTime.Milliseconds;
 		if (_steam != null)
@@ -316,17 +316,17 @@ public class AmorousSingleton : IAmorous
 
 	public void Draw(GameTime gameTime)
 	{
-		Randoms.Time = (float)gameTime.TotalGameTime.TotalSeconds;
-		_game.GraphicsDevice.SetRenderTarget(_canvas);
+		Randoms.Date = (float)gameTime.TotalGameTime.TotalSeconds;
+		_game.GraphicsDevice.SetRenderTarget(_target);
 		_game.GraphicsDevice.Clear(Color.Black);
-		_scene.Draw(_batch, _spines, _mouse._oLRK3f26Sw9AKBKi0iR44APDZEt);
-		if (_mouse._q1DGEI79OguKnK8dCIgPvfGc9Bi)
+		_scene.Draw(_batch, _spines, _canvas.OverscrollNoneMatrix);
+		if (_canvas.OverscrollRight)
 		{
-			_scene.Draw(_batch, _spines, _mouse._00mMjYnrMXUVj1aA8AYlqz1bdTI);
+			_scene.Draw(_batch, _spines, _canvas.OverscrollRightMatrix);
 		}
-		else if (_mouse._c3CMfxjIJAFFcSeEIluZOLANXnE)
+		else if (_canvas.OverscrollLeft)
 		{
-			_scene.Draw(_batch, _spines, _mouse._MPYpHIXdfUjJipVgAvBCGASJZiZ);
+			_scene.Draw(_batch, _spines, _canvas.OverscrollLeftMatrix);
 		}
 		if (_sexscene != null)
 		{
@@ -341,7 +341,7 @@ public class AmorousSingleton : IAmorous
 			_overlay.Draw(_batch);
 		}
 		_scene.DrawOverlay(_batch);
-		_fader.Draw(_batch, _mouse);
+		_fader.Draw(_batch, _canvas);
 		if (_hasControls)
 		{
 			_writer.Draw(_batch);
@@ -413,7 +413,7 @@ public class AmorousSingleton : IAmorous
 		_game.GraphicsDevice.SetRenderTarget(null);
 		_game.GraphicsDevice.Clear(Color.Black);
 		_batch.Begin();
-		_batch.Draw(_canvas, _destinationRectangle, Color.White);
+		_batch.Draw(_target, _destinationRectangle, Color.White);
 		if (IsRenderingCursor)
 		{
 			_batch.Draw(_cursorTexture, Controller.CursorVector, _player.Data.PhoneColor);
@@ -422,8 +422,7 @@ public class AmorousSingleton : IAmorous
 		return;
 		IL_04d3:
 		string path2;
-		object[] array;
-		object obj2;
+		object sceneName;
 		if (_pendingScreenshot)
 		{
 			_pendingScreenshot = false;
@@ -435,7 +434,7 @@ public class AmorousSingleton : IAmorous
 			string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
 			using (Stream stream = File.OpenWrite(text))
 			{
-				_canvas.SaveAsPng(stream, _canvas.Width, _canvas.Height);
+				_target.SaveAsPng(stream, _canvas.Width, _canvas.Height);
 			}
 			if (_steam != null)
 			{
@@ -444,27 +443,26 @@ public class AmorousSingleton : IAmorous
 			if (_debugger && _debuggerCutsceneStates != null)
 			{
 				path2 = $"{text}.txt";
-				array = new object[5];
-				AbstractScene scene = _scene;
-				if (scene == null)
+				if (_scene == null)
 				{
-					obj2 = null;
+					sceneName = null;
 				}
 				else
 				{
-					obj2 = scene.GetType().Name;
-					if (obj2 != null)
+					sceneName = _scene.GetType().Name;
+					if (sceneName != null)
 					{
 						goto IL_0625;
 					}
 				}
-				obj2 = "None";
+				sceneName = "None";
 				goto IL_0625;
 			}
 		}
 		goto IL_065c;
 		IL_0625:
-		array[0] = obj2;
+		object[] array = new object[5];
+		array[0] = sceneName;
 		array[1] = _debuggerCutsceneStates[0];
 		array[2] = _debuggerCutsceneStates[1];
 		array[3] = _debuggerCutsceneStates[2];
@@ -475,7 +473,7 @@ public class AmorousSingleton : IAmorous
 
 	public void RefreshDisplay()
 	{
-		SetDisplay(_mouse.CanvasWidth, _mouse.CanvasHeight, !_display.IsFullScreen);
+		SetDisplay(_canvas.CanvasWidth, _canvas.CanvasHeight, !_display.IsFullScreen);
 	}
 
 	public void RequestScreenshot()
@@ -512,8 +510,8 @@ public class AmorousSingleton : IAmorous
 		_display.PreferredBackBufferWidth = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width : width);
 		_display.PreferredBackBufferHeight = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height : height);
 		_display.GraphicsDevice.Viewport = new Viewport(0, 0, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
-		_mouse.SetResolution(width, height, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
-		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_mouse.RelativeX, _mouse.RelativeY, _mouse.RelativeWidth, _mouse.RelativeHeight);
+		_canvas.SetResolution(width, height, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
+		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_canvas.RelativeX, _canvas.RelativeY, _canvas.RelativeWidth, _canvas.RelativeHeight);
 		_display.ApplyChanges();
 	}
 
@@ -564,7 +562,7 @@ public class AmorousSingleton : IAmorous
 			action();
 		}
 		_pendingSceneThen = then;
-		_mouse._n4NdRK3l14j7hHgGSJS4dI9LeYR();
+		_canvas.ResetOverscroll();
 		PlayerPreferences.SetPlayerSkin(null);
 		_overlay = null;
 		_sexscene = null;
@@ -587,7 +585,7 @@ public class AmorousSingleton : IAmorous
 		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
 		if (!(type == null))
 		{
-			_mouse._n4NdRK3l14j7hHgGSJS4dI9LeYR();
+			_canvas.ResetOverscroll();
 			PlayerPreferences.SetPlayerSkin(null);
 			_overlay = null;
 			_sexscene = null;
@@ -609,7 +607,7 @@ public class AmorousSingleton : IAmorous
 			action();
 		}
 		_pendingSceneThen = then;
-		_mouse._n4NdRK3l14j7hHgGSJS4dI9LeYR();
+		_canvas.ResetOverscroll();
 		PlayerPreferences.SetPlayerSkin(null);
 		_overlay = null;
 		_sexscene = null;
@@ -661,7 +659,7 @@ public class AmorousSingleton : IAmorous
 			_cutscene = cutscene;
 			int stage = _player.Data.GetState(cutscene.Data.Name);
 			PhoneOverlay.Hide();
-			_cutscene.Begin(stage);
+			_cutscene.Start(stage);
 		}
 	}
 
@@ -749,14 +747,14 @@ public class AmorousSingleton : IAmorous
 					if (state.FadedOut)
 					{
 						_cutscene = cutscene;
-						_cutscene.Begin(state.Stage, state.ID);
+						_cutscene.Start(state.Stage, state.ID);
 					}
 					else
 					{
 						Fading.FadeIn(delegate
 						{
 							_cutscene = cutscene;
-							_cutscene.Begin(state.Stage, state.ID);
+							_cutscene.Start(state.Stage, state.ID);
 						});
 					}
 				});
@@ -764,11 +762,11 @@ public class AmorousSingleton : IAmorous
 		});
 	}
 
-	public void Start()
+	public void Autosave()
 	{
 		AutosaveAtSlot(0);
 		ResetInGameDrawing();
-		_scene.Start();
+		_scene.Autosave();
 	}
 
 	public void SetOverlay<T>() where T : InteractableOverlay
@@ -820,7 +818,7 @@ public class AmorousSingleton : IAmorous
 					if (Activator.CreateInstance(type, this) is AbstractNPC npc)
 					{
 						npc.Game = this;
-						npc.Begin();
+						npc.Start();
 						_scene.AddNPC(npc, (order == LayerOrder.None) ? LayerOrder.Background : order);
 						return npc;
 					}
@@ -882,7 +880,7 @@ public class AmorousSingleton : IAmorous
 			PhoneOverlay.Enabled = save.PhoneEnabled;
 			PhoneOverlay.Get().RefreshSkin();
 			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
-			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+			TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
 			if (save.CutsceneState != null)
 			{
 				LoadCutscene(save.CutsceneState);
@@ -914,7 +912,7 @@ public class AmorousSingleton : IAmorous
 			PhoneOverlay.Enabled = save.PhoneEnabled;
 			PhoneOverlay.Get().RefreshSkin();
 			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
-			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+			TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
 			if (!_nonContextualPlaces.Contains(save.SceneName))
 			{
 				save.SceneName = typeof(ClubInsideScene).Name;
@@ -954,8 +952,8 @@ public class AmorousSingleton : IAmorous
 		}
 		PhoneOverlay.Hide();
 		PhoneOverlay.Get().ResetState();
-		TypingDialogue._gVRGC9VAGHCLvP8p5Q4mqLPvFCm();
-		TypingDialogue.BeginCutscene();
+		TypingDialogue.Unselect();
+		TypingDialogue.Complete();
 		_fader.ApplyNow(new Color(0, 0, 0, 0));
 	}
 }

@@ -5,14 +5,14 @@ public class HikingTrailScene : AbstractScene
 	public const string VariantNight = "Night";
 	public const string VariantDay = "Day";
 
-	private readonly TexturedLayer _4Hew2VldDt2hPLjc5fBPbqIVUEQ;
-	private readonly TexturedLayer _bYgAJ7foDqpxOElDOYhOkQFMzrz;
+	private readonly SpriteLayer _4Hew2VldDt2hPLjc5fBPbqIVUEQ;
+	private readonly SpriteLayer _bYgAJ7foDqpxOElDOYhOkQFMzrz;
 
 	public HikingTrailScene(IAmorous game)
 		: base(game)
 	{
-		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = AddTexturedLayer("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
-		_bYgAJ7foDqpxOElDOYhOkQFMzrz = AddTexturedLayer("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
+		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
+		_bYgAJ7foDqpxOElDOYhOkQFMzrz = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
 		SwitchToSubscene(VariantDay);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}

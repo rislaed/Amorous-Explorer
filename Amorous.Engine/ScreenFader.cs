@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class ScreenFader : AbstractInterpolator<Color>
 { // _gJR4g7ak0hsZAUWX1vJbMqG2P5I
-	private readonly Texture2D _foreground;
+	private readonly Texture2D _mask;
 
 	public ScreenFader(GraphicsDevice graphicsDevice)
 	{
-		_foreground = new Texture2D(graphicsDevice, 1, 1, mipMap: false, SurfaceFormat.Color);
-		_foreground.SetData(new Color[1] { Color.White });
+		_mask = new Texture2D(graphicsDevice, 1, 1, mipMap: false, SurfaceFormat.Color);
+		_mask.SetData(new Color[1] { Color.White });
 	}
 
 	protected override Color Interpolate(Color value1, Color value2, float interpolation)
@@ -17,10 +17,10 @@ public class ScreenFader : AbstractInterpolator<Color>
 		return Color.Lerp(value1, value2, interpolation);
 	}
 
-	public void Draw(SpriteBatch spriteBatch, MouseObserver mouse)
+	public void Draw(SpriteBatch spriteBatch, CanvasObserver mouse)
 	{
 		spriteBatch.Begin();
-		spriteBatch.Draw(_foreground, new Rectangle(0, 0, mouse.Width, mouse.Height), base.State);
+		spriteBatch.Draw(_mask, new Rectangle(0, 0, mouse.Width, mouse.Height), base.State);
 		spriteBatch.End();
 	}
 

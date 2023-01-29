@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class TexturedLayer : AbstractLayer
+public class SpriteLayer : AbstractLayer
 { // _uqydQVaCmCvK7zzWs5W4gZFpKBu
 	public Texture2D Texture { get; private set; }
 	public bool Flip { get; set; }
 
-	public TexturedLayer(AbstractScene scene, string name, Texture2D texture2D)
+	public SpriteLayer(AbstractScene scene, string name, Texture2D texture2D)
 		: base(scene, name)
 	{
 		Texture = texture2D;

@@ -23,20 +23,20 @@ public class ClubInsideScene : AbstractScene
 		AddFadingLayer("Floor Left", "Assets/Scenes/ClubInside/dancefloor_left", -1740, 748, 1200);
 		AddFadingLayer("Floor Middle", "Assets/Scenes/ClubInside/dancefloor_mid", 54, 736, 1200);
 		AddFadingLayer("Floor Right", "Assets/Scenes/ClubInside/dancefloor_right", 1874, 815, 1200);
-		AddTexturedLayer("Spotlight Blue", "Assets/Scenes/ClubInside/blue_spotlight", -1454, 75);
-		AddTexturedLayer("Spotlight Green", "Assets/Scenes/ClubInside/Green_spotlight", 1078, 75);
-		AddTexturedLayer("Spotlight Pink", "Assets/Scenes/ClubInside/pink_spotlight", 1580, 100);
+		AddSpriteLayer("Spotlight Blue", "Assets/Scenes/ClubInside/blue_spotlight", -1454, 75);
+		AddSpriteLayer("Spotlight Green", "Assets/Scenes/ClubInside/Green_spotlight", 1078, 75);
+		AddSpriteLayer("Spotlight Pink", "Assets/Scenes/ClubInside/pink_spotlight", 1580, 100);
 		AddClickableLayer("Entrance", "Assets/Scenes/ClubInside/Entrance Selectable", -1733, 302, OnDoorClick);
 		AddClickableLayer("Lounge", "Assets/Scenes/ClubInside/Loungeroom Selectable", 231, 347, OnLoungeClick);
-		TexturedLayer bar = AddTexturedLayer("Bar", "Assets/Scenes/ClubInside/Bar", 1162, 541);
+		SpriteLayer bar = AddSpriteLayer("Bar", "Assets/Scenes/ClubInside/Bar", 1162, 541);
 		bar.LayerOrder = 1;
-		AddForegroundTexturedLayer("Coat check-in", "Assets/Scenes/ClubInside/Service desk coverup", -1234, 516);
-		AddForegroundTexturedLayer("DJ", "Assets/Scenes/ClubInside/DJ Booth Coverup", -718, 314);
-		AddForegroundTexturedLayer("DJ Screen", "Assets/Scenes/ClubInside/Jumbo screen", -701, 385);
+		AddForegroundSpriteLayer("Coat check-in", "Assets/Scenes/ClubInside/Service desk coverup", -1234, 516);
+		AddForegroundSpriteLayer("DJ", "Assets/Scenes/ClubInside/DJ Booth Coverup", -718, 314);
+		AddForegroundSpriteLayer("DJ Screen", "Assets/Scenes/ClubInside/Jumbo screen", -701, 385);
 		AddForegroundFadingLayer("Strobe Blue", "Assets/Scenes/ClubInside/blue_strobe", -1425, 100, 1200, 0, 1200);
 		AddForegroundFadingLayer("Strobe Green", "Assets/Scenes/ClubInside/green_strobe", 708, 120, 1200, 600, 600);
 		AddForegroundFadingLayer("Strobe Pink", "Assets/Scenes/ClubInside/pink_strobe", 48, 130, 1200, 1200);
-		Game.Mouse._EPA0ilTeyu3r3U3sXajd13XXT1B(-1770, 1770);
+		Game.Canvas.SetCyclingOverscroll(-1770, 1770);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showCoby = true;
@@ -47,7 +47,7 @@ public class ClubInsideScene : AbstractScene
 		{
 			data.SetStage(AmorousData.SkyeDate, 10);
 		}
-		base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric2);
+		base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric2);
 	}
 
 	public override void Start()

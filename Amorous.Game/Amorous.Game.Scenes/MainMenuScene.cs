@@ -18,22 +18,22 @@ public class MainMenuScene : TimeOfDayScene
 	private readonly AbstractLayer Separator;
 	private readonly List<TexturedSequenceLayer> Indicators = new List<TexturedSequenceLayer>();
 	private readonly CopyrightOverlay Copyright;
-	private readonly TexturedLayer Logotype;
+	private readonly SpriteLayer Logotype;
 
 	public MainMenuScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
-		AddTexturedLayer("Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
-		AddTexturedLayer("Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
-		AddTexturedLayer("Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
-		AddTexturedLayer("LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
+		AddSpriteLayer("Background", "Assets/Scenes/MainMenu/Menu Background", -240, -135);
+		AddSpriteLayer("Bed", "Assets/Scenes/MainMenu/Bed", -240, -135);
+		AddSpriteLayer("Logo", "Assets/Scenes/MainMenu/Bed Logo", -240, -135);
+		AddSpriteLayer("Table", "Assets/Scenes/MainMenu/Table and clock", -240, -135);
+		AddSpriteLayer("LCD Separator", "Assets/Scenes/MainMenu/Semicolon", -155, -135);
 		AddLayer(new DrawableLayer(this, "Custom")
 		{
 			OnDraw = DrawPlayer
 		}, 0);
-		AddForegroundTexturedLayer("Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
-		Logotype = NewTexturedLayer("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
+		AddForegroundSpriteLayer("Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
+		Logotype = NewSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
 		AddIndicatorLayer("LCD 1", "Assets/Scenes/MainMenu/{0}", 1090, 330);
 		AddIndicatorLayer("LCD 2", "Assets/Scenes/MainMenu/{0}", 1215, 330);
 		AddIndicatorLayer("LCD 3", "Assets/Scenes/MainMenu/{0}", 1395, 330);
@@ -60,7 +60,7 @@ public class MainMenuScene : TimeOfDayScene
 							data.Reset();
 							PhoneOverlay.Enabled = false;
 							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
-							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
 							base.Game.StartCutscene(AmorousData.Prologue);
 							break;
 						case 1:
@@ -68,7 +68,7 @@ public class MainMenuScene : TimeOfDayScene
 							data.Reset();
 							PhoneOverlay.Enabled = false;
 							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
-							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
 							base.Game.StartScene<SkipProloguePlayerCustomizationScene>();
 							break;
 						case 2:
@@ -76,7 +76,7 @@ public class MainMenuScene : TimeOfDayScene
 							data.Reset();
 							PhoneOverlay.Enabled = false;
 							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
-							TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = Options.Data.DialogueAutoSkip;
+							TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
 							base.Game.StartScene<PlayerCustomizationScene>();
 							break;
 					}
@@ -144,7 +144,7 @@ public class MainMenuScene : TimeOfDayScene
 		Clocks.InRealTime = true;
 	}
 
-	public override void Begin() {}
+	public override void Start() {}
 
 	public TexturedSequenceLayer AddIndicatorLayer(string name, string textureFormat, int x, int y)
 	{
@@ -188,7 +188,7 @@ public class MainMenuScene : TimeOfDayScene
 	{
 		if (PlayerPreferences.Singleton.PlayerSkin != null)
 		{
-			spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(Randoms.Time) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
+			spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(Randoms.Date) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
 			PlayerPreferences.Singleton.PlayerSkin.Draw(spriteBatch);
 			spriteBatch.End();
 		}
@@ -248,8 +248,8 @@ public class MainMenuScene : TimeOfDayScene
 		DropDownList dropDownList2 = dropDownList;
 		dropDownList2.Listbox.Scrollbar.ButtonUp.Visible = false;
 		dropDownList2.Listbox.Scrollbar.ButtonDown.Visible = false;
-		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base.Game.Mouse.CanvasWidth;
-		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base.Game.Mouse.CanvasHeight;
+		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base.Game.Canvas.CanvasWidth;
+		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base.Game.Canvas.CanvasHeight;
 		foreach (DisplayMode supportedDisplayMode in base.Game.GLES.Adapter.SupportedDisplayModes)
 		{
 			dropDownList2.Items.Add(new ListBoxItem
@@ -361,7 +361,7 @@ public class MainMenuScene : TimeOfDayScene
 			Text = "Dialogue"
 		};
 		panel.Content.Controls.Add(item7);
-		PhoneOverlay._YemBTJprwfbd3mpg5Gy9uyEJWwI(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
+		PhoneOverlay.AttachDropDownList(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
 		{
 			Options.Data.DialogueTextSpeed = (DialogueSpeed)int_0;
 			TypingDialogue.Speed = (DialogueSpeed)int_0;
@@ -375,7 +375,7 @@ public class MainMenuScene : TimeOfDayScene
 		_feL3soNn6ZWaJqYfjYJUyH118tF.CheckedChanged += delegate
 		{
 			Options.Data.DialogueAutoSkip = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
-			TypingDialogue._fUgDiz7KX8TZUVzFlTeXMOhmfUT = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
+			TypingDialogue.AutoSkip = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
 		};
 		panel.Content.Controls.Add(_feL3soNn6ZWaJqYfjYJUyH118tF);
 		if (Censorship.Booties)

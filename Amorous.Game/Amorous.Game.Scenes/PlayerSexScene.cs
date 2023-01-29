@@ -17,7 +17,7 @@ public class PlayerSexScene : AbstractScene
 	{
 		_jOJQdqVUTXcPDmuOqViqC8pczW = true;
 		_font = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		FadingMediaPlayer.BeginCutscene();
+		FadingMediaPlayer.Complete();
 	}
 
 	public override void Update(GameTime gameTime)
@@ -27,11 +27,11 @@ public class PlayerSexScene : AbstractScene
 		{
 			return;
 		}
-		if (base.Game.Controller.JustPressed(Keys.Escape))
+		if (base.Game.Controller.IsPressed(Keys.Escape))
 		{
 			PhoneOverlay.Rise();
 		}
-		if (base.Game.Controller.JustPressed(Keys.S))
+		if (base.Game.Controller.IsPressed(Keys.S))
 		{
 			string[] array = base.Game.Sexscene.GetSubscenes();
 			if (array.Length == 0)
@@ -46,29 +46,29 @@ public class PlayerSexScene : AbstractScene
 			}
 			base.Game.Sexscene.SwitchToSubscene(array[num]);
 		}
-		if (base.Game.Controller.JustPressed(Keys.Z))
+		if (base.Game.Controller.IsPressed(Keys.Z))
 		{
 			_jOJQdqVUTXcPDmuOqViqC8pczW = !_jOJQdqVUTXcPDmuOqViqC8pczW;
 		}
 		if (!Censorship.Censored)
 		{
-			if (base.Game.Controller.JustPressed(Keys.Space))
+			if (base.Game.Controller.IsPressed(Keys.Space))
 			{
 				base.Game.Sexscene.ToPhase(1);
 			}
-			if (base.Game.Controller.JustPressed(Keys.LeftControl))
+			if (base.Game.Controller.IsPressed(Keys.LeftControl))
 			{
 				base.Game.Sexscene.ToPhase(-1);
 			}
-			if (base.Game.Sexscene.Exploded && base.Game.Controller.JustPressed(Keys.X))
+			if (base.Game.Sexscene.Exploded && base.Game.Controller.IsPressed(Keys.X))
 			{
 				base.Game.Sexscene.Clean();
 			}
-			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.JustPressed(Keys.C))
+			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.IsPressed(Keys.C))
 			{
 				base.Game.Sexscene.ExplodeNow();
 			}
-			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.JustPressed(Keys.V))
+			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.IsPressed(Keys.V))
 			{
 				base.Game.Sexscene.Explode();
 			}

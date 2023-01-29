@@ -16,9 +16,9 @@ public class SetStageEvent : AbstractEvent<SetStageEventData>
 		Stage = eventData.Stage;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PlayerPreferences.GetPlayerData().SetStage(Quest, Stage);
 		base.Cutscene.Game.Achievements.SetStage(Quest, Stage);
 	}

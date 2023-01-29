@@ -3,7 +3,7 @@ namespace Amorous.Game.NPC;
 public class ClubStaticZenithNPC : ClubStaticNPC
 {
 	public ClubStaticZenithNPC(IAmorous game)
-		: base(game, "Assets/NPC/ClubStatic", "Zenith", bool_0: true, bool_1: true)
+		: base(game, "Assets/NPC/ClubStatic", "Zenith", shirt: true, pants: true)
 	{
 		Width = 299;
 		Height = 765;

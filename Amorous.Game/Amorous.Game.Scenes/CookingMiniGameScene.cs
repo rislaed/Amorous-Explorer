@@ -122,12 +122,12 @@ public class CookingMiniGameScene : AbstractScene
 	{
 		_overlay = new GUI(game, _Ee9VcMQIfuD0ElqFdXVvMHxofkf);
 		base.Game.SetOverlay(_overlay);
-		AddTexturedLayer("Background", "Assets/Scenes/Cooking/Background", 0, 0);
-		_urxVZoSWXCtbeM9oQmVXW0Fb7co = AddForegroundTexturedLayer("Background", "Assets/Scenes/Cooking/Bad", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/Cooking/Background", 0, 0);
+		_urxVZoSWXCtbeM9oQmVXW0Fb7co = AddForegroundSpriteLayer("Background", "Assets/Scenes/Cooking/Bad", 0, 0);
 		_urxVZoSWXCtbeM9oQmVXW0Fb7co.Visible = false;
-		_RZsDgwVY7R44E6mMbUF7YWYyBjK = AddForegroundTexturedLayer("Background", "Assets/Scenes/Cooking/Okay", 0, 0);
+		_RZsDgwVY7R44E6mMbUF7YWYyBjK = AddForegroundSpriteLayer("Background", "Assets/Scenes/Cooking/Okay", 0, 0);
 		_RZsDgwVY7R44E6mMbUF7YWYyBjK.Visible = false;
-		_9cxzh98qcLMOVst3Rlmc4AaYoBp = AddForegroundTexturedLayer("Background", "Assets/Scenes/Cooking/Excellent", 0, 0);
+		_9cxzh98qcLMOVst3Rlmc4AaYoBp = AddForegroundSpriteLayer("Background", "Assets/Scenes/Cooking/Excellent", 0, 0);
 		_9cxzh98qcLMOVst3Rlmc4AaYoBp.Visible = false;
 		SpineDrawableLayer spineLayer = new SpineDrawableLayer(this, "Cooking");
 		_bFjOLB3sqVGFgwwMENJRlZ5vouC = game.Content.LoadSkeleton("Assets/Scenes/Cooking/Cooking");
@@ -259,7 +259,7 @@ public class CookingMiniGameScene : AbstractScene
 		{
 			return;
 		}
-		Point point = base.Game.Mouse.Rescale(base.Game.Controller.Cursor);
+		Point point = base.Game.Canvas.GlobalToContent(base.Game.Controller.Cursor);
 		if (_HXs79I5YAlnCxHxJS0JxD7jccyt || !_bFjOLB3sqVGFgwwMENJRlZ5vouC.InAttachment("Onions bowl glow", point.X, point.Y))
 		{
 			_bFjOLB3sqVGFgwwMENJRlZ5vouC.SetAlpha("Onions bowl glow", 0f);
@@ -267,7 +267,7 @@ public class CookingMiniGameScene : AbstractScene
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("OnionsGarlic highlight", EIngrediants.OnionsGarlic, _R1mDpxg72ZTKnMeOQ0sH8szndlG);
-			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				_7UQ7J6jOjw0vBiKHgcli5eXatrN();
 			}
@@ -279,7 +279,7 @@ public class CookingMiniGameScene : AbstractScene
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Ground beef highlight", EIngrediants.GroundBeef, _E5COS2Wew1BQS9CZNJcDAnV99Y);
-			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				_KS0Vtg4XWGmpAsqFy5tYlJXLKLA();
 			}
@@ -291,7 +291,7 @@ public class CookingMiniGameScene : AbstractScene
 		else
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Carrot highlight", EIngrediants.Carrots, _NCyPsw4quyw64ZmYLMqlIaQaclA);
-			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				_VcZyHKzhoXLGNA1DIp006kBhiDN();
 			}
@@ -299,7 +299,7 @@ public class CookingMiniGameScene : AbstractScene
 		if (!_g0GLDf9i20jtYweGI1DAr0f9WON && _bFjOLB3sqVGFgwwMENJRlZ5vouC.InAttachment("Tomatoe bowl gold", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Tomatoe highlight", EIngrediants.TinnedTomatoes, _gDkX1mAt76eLA8P3gGXs2wM5wTE);
-			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				_FJRq83fBqGFaoHbsYpaAVoouvFQ();
 			}
@@ -311,7 +311,7 @@ public class CookingMiniGameScene : AbstractScene
 		if (!_ylWBqGZTor7PB0HyMRwAuoV4hvH && _bFjOLB3sqVGFgwwMENJRlZ5vouC.InAttachment("Bayleaves bowl glow", point.X, point.Y))
 		{
 			_QMxAinggzISmU1LmkqSK0bfv9h5("Bay highlight", EIngrediants.Herbs, _7f8HjbO7kyXkAQLb2mIqPJKHcLb);
-			if (base.Game.Controller.JustPressed(ControllerButtonType.LeftButton))
+			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				_hHMvLMSFiOFnDNkhUnBcQpsEN9T();
 			}
@@ -523,7 +523,7 @@ public class CookingMiniGameScene : AbstractScene
 		{
 			if (_YVtICgpvRZU0ZRqniFuAVlkSOFM)
 			{
-				base.Game.Achievements.GainAchievement(Achievements.AchievementGeneric11);
+				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric11);
 				_MHlWAOoiEHfmdM0FqWO6WSRbC1hA.PlayNext();
 			}
 			else if (_Y8SewnxQuAuHOtMeTeuRSJlpbGJ)

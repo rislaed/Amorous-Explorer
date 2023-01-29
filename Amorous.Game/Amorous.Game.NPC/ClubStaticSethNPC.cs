@@ -3,7 +3,7 @@ namespace Amorous.Game.NPC;
 public class ClubStaticSethNPC : ClubStaticNPC
 {
 	public ClubStaticSethNPC(IAmorous game)
-		: base(game, "Assets/NPC/ClubStatic", "Seth", bool_0: true, bool_1: true)
+		: base(game, "Assets/NPC/ClubStatic", "Seth", shirt: true, pants: true)
 	{
 		Width = 225;
 		Height = 334;

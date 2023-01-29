@@ -12,7 +12,7 @@ public abstract class AbstractEvent<T> : IEvent where T : EventData
 		Cutscene = cutscene;
 	}
 
-	public virtual void Begin()
+	public virtual void Start()
 	{
 		Completable = false;
 	}

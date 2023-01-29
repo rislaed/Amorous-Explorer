@@ -3,14 +3,14 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
-public class ExtendedTextureLoader : TextureLoader
+public class SpineTextureLoader : TextureLoader
 { // _AUtA43NfhBNYDqRrVB1t9VQxe1v
-	private static ExtendedTextureLoader _singleton;
+	private static SpineTextureLoader _singleton;
 	private readonly ContentManager _content;
 
-	public static ExtendedTextureLoader Singleton => _singleton;
+	public static SpineTextureLoader Singleton => _singleton;
 
-	public ExtendedTextureLoader(ContentManager content)
+	public SpineTextureLoader(ContentManager content)
 	{
 		_singleton = this;
 		_content = content;

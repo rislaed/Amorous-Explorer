@@ -10,7 +10,7 @@ public static class SpinesContentManager
 		string text = Path.Combine(content.RootDirectory, path);
 		string atlasName = text + ".atlas.txt";
 		Stream atlasStream = Compressions.ReadStream(atlasName);
-		Atlas atlas = new Atlas(atlasStream, path, ExtendedTextureLoader.Singleton);
+		Atlas atlas = new Atlas(atlasStream, path, SpineTextureLoader.Singleton);
 		SkeletonJson skeletonJson = new SkeletonJson(atlas)
 		{
 			Scale = scale

@@ -18,7 +18,7 @@ public abstract class TimeOfDayScene : AbstractScene
 		_fader = new TimeOfDayFader(game);
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
 		SwitchToSubscene(VariantDay);
 	}
@@ -30,19 +30,19 @@ public abstract class TimeOfDayScene : AbstractScene
 		{
 			case VariantSunset:
 				Clocks.InRealTime = false;
-				Clocks.Time = TimeOfDay.Sunset;
+				Clocks.Date = TimeOfDay.Sunset;
 				break;
 			case VariantDay:
 				Clocks.InRealTime = false;
-				Clocks.Time = TimeOfDay.Day;
+				Clocks.Date = TimeOfDay.Day;
 				break;
 			case VariantMorning:
 				Clocks.InRealTime = false;
-				Clocks.Time = TimeOfDay.Morning;
+				Clocks.Date = TimeOfDay.Morning;
 				break;
 			case VariantNight:
 				Clocks.InRealTime = false;
-				Clocks.Time = TimeOfDay.Night;
+				Clocks.Date = TimeOfDay.Night;
 				break;
 		}
 	}
@@ -55,7 +55,7 @@ public abstract class TimeOfDayScene : AbstractScene
 
 	public override void DrawOverlay(SpriteBatch spriteBatch)
 	{
-		_fader.Draw(spriteBatch, base.Game.Mouse);
+		_fader.Draw(spriteBatch, base.Game.Canvas);
 		base.DrawOverlay(spriteBatch);
 	}
 }

@@ -10,7 +10,7 @@ public interface IAmorous
 	GraphicsDevice GLES { get; }
 	ContentManager Content { get; }
 	ControllerObserver Controller { get; }
-	MouseObserver Mouse { get; }
+	CanvasObserver Canvas { get; }
 	AbstractScene Scene { get; }
 	AbstractSexscene Sexscene { get; }
 	Cutscene Cutscene { get; }
@@ -42,7 +42,7 @@ public interface IAmorous
 	void ResetSexscene();
 	void StartCutscene(string name);
 	void StartCutscene(Cutscene cutscene);
-	void Start();
+	void Autosave();
 	void SetOverlay<T>() where T : InteractableOverlay;
 	void SetOverlay<T>(T overlay) where T : InteractableOverlay;
 	void ResetOverlay();

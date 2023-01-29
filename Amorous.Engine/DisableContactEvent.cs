@@ -15,9 +15,9 @@ public class DisableContactEvent : AbstractEvent<DisableContactEventData>
 		Contact = (Enum.TryParse<PlayerData.EPhoneContacts>(eventData.Contact, out var contact) ? contact : PlayerData.EPhoneContacts.None);
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PlayerPreferences.GetPlayerData().DisableContact(Contact);
 	}
 

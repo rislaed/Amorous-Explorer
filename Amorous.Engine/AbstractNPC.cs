@@ -85,7 +85,7 @@ public abstract class AbstractNPC
 		_timeToBlink = 4000;
 	}
 
-	public virtual void Begin() {}
+	public virtual void Start() {}
 
 	public FilterableEmotion AddEmotion(string name, params string[] parts)
 	{

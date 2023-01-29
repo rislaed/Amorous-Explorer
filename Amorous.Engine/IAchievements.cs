@@ -1,11 +1,11 @@
 public interface IAchievements
 { // _691ooXdgg17CWFkMkjedKBBBfYw
 	bool IsSteamSupported { get; }
-	void GainCutsceneStageAchievement(string string_0, int int_0);
-	void SetStage(string key, int value);
-	void SetFlag(string key, bool value);
+	void TriggerCutsceneStageAchievement(string cutscene, int stage);
+	void SetStage(string key, int stage);
+	void SetFlag(string key, bool flag);
 	void UnlockContact(PlayerData.EPhoneContacts contact);
-	void GainAchievement(string key);
-	void GainTutorial(string string_0);
+	void TriggerAchievement(string key);
+	void TriggerTutorialAchievement(string key);
 	void OpenAchievements();
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 public static class Randoms
 { // _boyt8NIMtKsAGSTcjHeL0WMbFxs
-	public static float Time;
+	public static float Date;
 
 	private static readonly Random _random = new Random();
 

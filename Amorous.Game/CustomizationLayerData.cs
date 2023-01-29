@@ -7,7 +7,7 @@ public class CustomizationLayerData
 { // _Qzndj0TwqO8yTQMbRwL4FFwlTbv
 	[NonSerialized]
 	[JsonIgnore]
-	public TexturedLayer Layer;
+	public SpriteLayer Layer;
 
 	[JsonProperty("AssetName")]
 	public string AssetName { get; set; }

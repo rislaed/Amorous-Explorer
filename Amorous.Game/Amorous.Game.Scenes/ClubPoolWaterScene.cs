@@ -7,7 +7,7 @@ public class ClubPoolWaterScene : AbstractScene
 	public ClubPoolWaterScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/ClubPoolWater/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/ClubPoolWater/Background", 0, 0);
 		ClubPoolWaterSpineLayer waterLeft = new ClubPoolWaterSpineLayer(this, 700f, new Rectangle(0, -190, 1920, 1080), inversed: true)
 		{
 			OffsetX = 600f,

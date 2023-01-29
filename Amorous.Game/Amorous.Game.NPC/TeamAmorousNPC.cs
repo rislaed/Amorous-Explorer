@@ -21,7 +21,6 @@ public class TeamAmorousNPC : LayerNPC<TeamAmorousNPC.EHeads, TeamAmorousNPC.EPo
 	}
 
 	public static string Name = "Team Amorous";
-
 	public static Color Color = new Color(255, 160, 255);
 
 	public TeamAmorousNPC(IAmorous game)

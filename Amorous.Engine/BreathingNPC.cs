@@ -100,7 +100,7 @@ public abstract class BreathingNPC : AbstractNPC
 		_effect = base.Game.Content.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
 		foreach (FilterablePose pose in base.Poses)
 		{
@@ -167,7 +167,7 @@ public abstract class BreathingNPC : AbstractNPC
 		base.Draw();
 		if (Breathing)
 		{
-			_effect.Parameters["Time"].SetValue(Randoms.Time);
+			_effect.Parameters["Time"].SetValue(Randoms.Date);
 			_effect.Parameters["BreathingOffset"].SetValue(BreathingOffset);
 			_effect.Parameters["BreathingSpeed"].SetValue(BreathingSpeed);
 			_effect.CurrentTechnique.Passes[0].Apply();

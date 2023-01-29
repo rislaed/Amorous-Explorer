@@ -5,6 +5,6 @@ public class PicknickScene : TimeOfDayScene
 	public PicknickScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/SexScenes/Jax/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/SexScenes/Jax/Background", 0, 0);
 	}
 }

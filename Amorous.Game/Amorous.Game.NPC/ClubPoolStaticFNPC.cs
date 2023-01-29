@@ -3,7 +3,7 @@ namespace Amorous.Game.NPC;
 public class ClubPoolStaticFNPC : ClubStaticNPC
 {
 	public ClubPoolStaticFNPC(IAmorous game)
-		: base(game, "Assets/NPC/ClubPoolStatic", "F", bool_0: false, bool_1: true)
+		: base(game, "Assets/NPC/ClubPoolStatic", "F", shirt: false, pants: true)
 	{
 		NudesBehindShirt = false;
 		NudesBehindPants = true;

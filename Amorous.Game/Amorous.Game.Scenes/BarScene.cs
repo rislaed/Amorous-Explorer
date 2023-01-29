@@ -5,7 +5,7 @@ public class BarScene : AbstractScene
 	public BarScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/Bar/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/Bar/Background", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.OMorroNaoTemVezTrack, 0.4f);
 	}
 }

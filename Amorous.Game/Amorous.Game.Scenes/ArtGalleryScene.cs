@@ -7,11 +7,11 @@ public class ArtGalleryScene : AbstractScene
 	{
 		if (Censorship.Censored)
 		{
-			AddTexturedLayer("Background", "Assets/Scenes/ArtGallery/Background-SFW", 0, 0);
+			AddSpriteLayer("Background", "Assets/Scenes/ArtGallery/Background-SFW", 0, 0);
 		}
 		else
 		{
-			AddTexturedLayer("Background", "Assets/Scenes/ArtGallery/Background", 0, 0);
+			AddSpriteLayer("Background", "Assets/Scenes/ArtGallery/Background", 0, 0);
 		}
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.OutdatedTrack, 0.4f);
 	}

@@ -14,9 +14,9 @@ public class SwitchToSubsceneEvent : AbstractEvent<SwitchToSubsceneEventData>
 		SubsceneName = eventData.SubsceneName;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		base.Cutscene.Game.Scene.SwitchToSubscene(SubsceneName);
 	}
 

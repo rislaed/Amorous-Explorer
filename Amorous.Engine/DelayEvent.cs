@@ -16,9 +16,9 @@ public class DelayEvent : AbstractEvent<DelayEventData>
 		Delay = eventData.Delay;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		_stopwatch = Delay;
 	}
 

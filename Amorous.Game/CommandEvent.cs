@@ -19,9 +19,9 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 		_eventData = eventData;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		if (!(_eventData.Command == typeof(Commands.CookingSelectIngredient).Name))
 		{
 			if (_eventData.Command == typeof(Commands.CookingShowResult).Name)
@@ -42,7 +42,7 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 			{
 				if (_eventData.Command == typeof(Commands.RemyHideNudes).Name)
 				{
-					PhoneOverlay.Get()._zFlBtKgcAb6cv77WHC6dI3lO8EwA();
+					PhoneOverlay.Get().HideRemyNudes();
 					base.Completable = true;
 				}
 				else if (_eventData.Command == typeof(Commands.PlayCutscene).Name)
@@ -52,7 +52,7 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 				}
 				else
 				{
-					TypingDialogue.Play("A unknown command is triggered: " + _eventData.Command, "[Command]", Color.Green);
+					TypingDialogue.Type("A unknown command is triggered: " + _eventData.Command, "[Command]", Color.Green);
 					_next = Skip;
 					_update = Complete;
 				}
@@ -60,7 +60,7 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 			else
 			{
 				int.TryParse(_eventData.Parameters["Nude"], out var result);
-				PhoneOverlay.Get()._f2CdPIvAGYavrZlA3VXyxB0B8Jh(result);
+				PhoneOverlay.Get().UpdateRemyNudes(result);
 				base.Completable = true;
 			}
 		}

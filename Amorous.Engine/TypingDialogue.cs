@@ -8,14 +8,14 @@ using Squid;
 
 public class TypingDialogue
 { // _nkzqFdEfDyLcyGikIKGcHjklI4y
-	private enum _QGnsmTImvr3dFBCr8hpzDZiCWLP
+	private enum OverlayState
 	{
 		None,
 		Started,
 		Visible
 	}
 
-	private enum _IIGQSKohQsLi09FILC8oKHG5UXG
+	private enum TypingPhase
 	{
 		None,
 		Started,
@@ -26,86 +26,86 @@ public class TypingDialogue
 		Done
 	}
 
-	private class _oDZZ0F7Qg08utTIjAaoyIbeDuFG
+	private class TypingOverlay
 	{
-		private readonly List<_W4jOxbRDzppFv0IAFpA5Blo7CjUA> _Fcqa4Lsbrq6zW3KyJnkvEumd0f4;
-		private int Value;
+		private readonly List<TypingOverlayChunk> _chunks;
+		private int _chunk;
 
-		public bool Completable => Value >= _Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Count;
-		public string Text { get; }
-		public string Title { get; }
+		public bool Completable => _chunk >= _chunks.Count;
+		public string Message { get; }
+		public string Author { get; }
 		public Color Color { get; }
 
-		public _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string title, string text, Color color)
+		public TypingOverlay(string message, string author, Color color)
 		{
-			Title = title.Replace("%playername%", PlayerPreferences.GetPlayerData().Name).Trim();
-			if (!(text == "%playername%"))
+			Message = message.Replace("%playername%", PlayerPreferences.GetPlayerData().Name).Trim();
+			if (!(author == "%playername%"))
 			{
-				Text = text;
+				Author = author;
 			}
 			else
 			{
-				Text = PlayerPreferences.GetPlayerData().Name;
+				Author = PlayerPreferences.GetPlayerData().Name;
 			}
 			Color = color;
-			_Fcqa4Lsbrq6zW3KyJnkvEumd0f4 = new List<_W4jOxbRDzppFv0IAFpA5Blo7CjUA>();
+			_chunks = new List<TypingOverlayChunk>();
 		}
 
-		public void _TN6mQ7Lbe501vwqhgs7b8d6wd1b(SpriteFont spriteFont_0, SpriteFont spriteFont_1)
+		public void Begin(SpriteFont font, SpriteFont italicFont)
 		{
-			_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Clear();
-			Value = 0;
-			if (string.IsNullOrEmpty(Text))
+			_chunks.Clear();
+			_chunk = 0;
+			if (string.IsNullOrEmpty(Message))
 			{
 				return;
 			}
-			string string_ = Text;
-			int int_ = 0;
+			string buffer = Message;
+			int index = 0;
 			string text = string.Empty;
-			int num = 0;
-			int int_2 = 0;
-			bool flag = false;
-			bool bool_ = false;
-			char char_ = ' ';
-			bool bool_2 = false;
-			while (int_ < string_.Length)
+			int width = 0;
+			int offset = 0;
+			bool isItalic = false;
+			bool isBold = false;
+			char tag = ' ';
+			bool isStyle = false;
+			while (index < buffer.Length)
 			{
-				char char_2 = string_[int_++];
-				if (char_2 == '<' && _NAyejbnxgyLeIcptsV2gubUyOZq(ref string_, ref int_, ref char_, ref bool_2))
+				char symbol = buffer[index++];
+				if (symbol == '<' && ConsumeTag(ref buffer, ref index, ref tag, ref isStyle))
 				{
 					if (text.Length > 0)
 					{
-						_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Add(new _W4jOxbRDzppFv0IAFpA5Blo7CjUA(text, bool_0: false, flag, bool_, int_2));
+						_chunks.Add(new TypingOverlayChunk(text, lineEnding: false, isItalic, isBold, offset));
 						text = string.Empty;
-						int_2 = num;
+						offset = width;
 					}
-					switch (char_)
+					switch (tag)
 					{
-					case 'b':
-						bool_ = !bool_2;
-						break;
-					case 'i':
-						flag = !bool_2;
-						break;
+						case 'b':
+							isBold = !isStyle;
+							break;
+						case 'i':
+							isItalic = !isStyle;
+							break;
 					}
 					continue;
 				}
-				text += char_2;
-				if (_oj8dqD8luomebDeOFLXAy1e38Z5(ref char_2))
+				text += symbol;
+				if (IsWhitespace(ref symbol))
 				{
 					continue;
 				}
-				if (char_2 != '\n')
+				if (symbol != '\n')
 				{
-					num += (int)(flag ? spriteFont_1 : spriteFont_0).MeasureString(char_2.ToString()).X;
-					if (num < 1770)
+					width += (int)(isItalic ? italicFont : font).MeasureString(symbol.ToString()).X;
+					if (width < 1770)
 					{
 						continue;
 					}
-					while (text.Length != 0 && int_ != 0)
+					while (text.Length != 0 && index != 0)
 					{
-						int_--;
-						if (string_[int_] == ' ')
+						index--;
+						if (buffer[index] == ' ')
 						{
 							break;
 						}
@@ -113,57 +113,57 @@ public class TypingDialogue
 					}
 					if (text.Length == 0)
 					{
-						if (_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Count > 0)
+						if (_chunks.Count > 0)
 						{
-							_Fcqa4Lsbrq6zW3KyJnkvEumd0f4[_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Count - 1]._YqQMYa7eF6BsHAixrYycR8apI6F = true;
+							_chunks[_chunks.Count - 1].IsLineEnding = true;
 						}
 					}
 					else
 					{
-						_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Add(new _W4jOxbRDzppFv0IAFpA5Blo7CjUA(text, bool_0: true, flag, bool_, int_2));
+						_chunks.Add(new TypingOverlayChunk(text, lineEnding: true, isItalic, isBold, offset));
 						text = string.Empty;
 					}
-					int_2 = 0;
-					num = 0;
+					offset = 0;
+					width = 0;
 				}
 				else
 				{
 					if (text.Length > 0)
 					{
-						_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Add(new _W4jOxbRDzppFv0IAFpA5Blo7CjUA(text, bool_0: true, flag, bool_, int_2));
+						_chunks.Add(new TypingOverlayChunk(text, lineEnding: true, isItalic, isBold, offset));
 						text = string.Empty;
-						int_2 = 0;
+						offset = 0;
 					}
-					num = 0;
+					width = 0;
 				}
 			}
 			if (text.Length > 0)
 			{
-				_Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Add(new _W4jOxbRDzppFv0IAFpA5Blo7CjUA(text, bool_0: false, flag, bool_, int_2));
+				_chunks.Add(new TypingOverlayChunk(text, lineEnding: false, isItalic, isBold, offset));
 			}
 		}
 
-		private bool _NAyejbnxgyLeIcptsV2gubUyOZq(ref string string_0, ref int int_0, ref char char_0, ref bool bool_0)
+		private bool ConsumeTag(ref string text, ref int index, ref char symbol, ref bool flag)
 		{
-			int num = int_0;
-			if (num >= string_0.Length)
+			int position = index;
+			if (position >= text.Length)
 			{
 				return false;
 			}
-			char_0 = string_0[num++];
-			bool_0 = char_0 == '/';
-			if (num < string_0.Length)
+			symbol = text[position++];
+			flag = symbol == '/';
+			if (position < text.Length)
 			{
-				if (bool_0)
+				if (flag)
 				{
-					char_0 = string_0[num++];
+					symbol = text[position++];
 				}
-				if (num < string_0.Length)
+				if (position < text.Length)
 				{
-					char c = string_0[num++];
-					if (c == '>' && _hFQYJfPSNmwOMj06bgwOluYktME(ref char_0))
+					char next = text[position++];
+					if (next == '>' && IsStyle(ref symbol))
 					{
-						int_0 = num;
+						index = position;
 						return true;
 					}
 					return false;
@@ -173,63 +173,63 @@ public class TypingDialogue
 			return false;
 		}
 
-		private bool _hFQYJfPSNmwOMj06bgwOluYktME(ref char char_0)
+		private bool IsStyle(ref char symbol)
 		{
-			if (char_0 != 'i')
+			if (symbol != 'i')
 			{
-				return char_0 == 'b';
+				return symbol == 'b';
 			}
 			return true;
 		}
 
-		private bool _oj8dqD8luomebDeOFLXAy1e38Z5(ref char char_0)
+		private bool IsWhitespace(ref char symbol)
 		{
-			if (char_0 != '░')
+			if (symbol != '░')
 			{
-				return char_0 == '\r';
+				return symbol == '\r';
 			}
 			return true;
 		}
 
-		public void _pYBSD3QOMXtGMbCUDyvyluUZnx()
+		public void SkipToNext()
 		{
 			if (Completable)
 			{
 				return;
 			}
-			foreach (_W4jOxbRDzppFv0IAFpA5Blo7CjUA item in _Fcqa4Lsbrq6zW3KyJnkvEumd0f4)
+			foreach (TypingOverlayChunk chunk in _chunks)
 			{
-				item._pYBSD3QOMXtGMbCUDyvyluUZnx();
+				chunk.Complete();
 			}
-			Value = _Fcqa4Lsbrq6zW3KyJnkvEumd0f4.Count;
+			_chunk = _chunks.Count;
 		}
 
-		public char _ZKadRFahgnwn10dM34638KGsLNu()
+		public char GetCharacter()
 		{
 			if (Completable)
 			{
 				return ' ';
 			}
-			_W4jOxbRDzppFv0IAFpA5Blo7CjUA w4jOxbRDzppFv0IAFpA5Blo7CjUA = _Fcqa4Lsbrq6zW3KyJnkvEumd0f4[Value];
-			char result = w4jOxbRDzppFv0IAFpA5Blo7CjUA._ZKadRFahgnwn10dM34638KGsLNu();
-			if (w4jOxbRDzppFv0IAFpA5Blo7CjUA.Completable)
+			TypingOverlayChunk chunk = _chunks[_chunk];
+			char symbol = chunk.ComputeCharacter();
+			if (chunk.Completable)
 			{
-				Value++;
+				_chunk++;
 			}
-			return result;
+			return symbol;
 		}
 
-		public void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont_0, SpriteFont spriteFont_1, Vector2[] vector2_0)
+		public void Draw(SpriteBatch spriteBatch, SpriteFont font, SpriteFont italicFont, Vector2[] lineLocations)
 		{
-			int num = 0;
-			foreach (_W4jOxbRDzppFv0IAFpA5Blo7CjUA item in _Fcqa4Lsbrq6zW3KyJnkvEumd0f4)
+			int line = 0;
+			foreach (TypingOverlayChunk chunk in _chunks)
 			{
-				if (num < vector2_0.Length)
+				if (line < lineLocations.Length)
 				{
-					item.Draw(spriteBatch, spriteFont_0, spriteFont_1, vector2_0[num], Color);
-					if (item._YqQMYa7eF6BsHAixrYycR8apI6F)
+					chunk.Draw(spriteBatch, font, italicFont, lineLocations[line], Color);
+					if (chunk.IsLineEnding)
 					{
-						num++;
+						line++;
 					}
 					continue;
 				}
@@ -238,261 +238,257 @@ public class TypingDialogue
 		}
 	}
 
-	private class _W4jOxbRDzppFv0IAFpA5Blo7CjUA
+	private class TypingOverlayChunk
 	{
-		private int Value;
-		private readonly Vector2 _BK3BSdlEv4xSjAlS93TtxbrrjjA;
+		private int _position;
+		private readonly Vector2 _offset;
 
-		public bool Completable => Value >= _Si5dw38ImuGLFJvc8DC1FoIc0PG.Length;
-		public string _Si5dw38ImuGLFJvc8DC1FoIc0PG { get; }
-		public bool _YqQMYa7eF6BsHAixrYycR8apI6F { get; set; }
-		public bool _m2fqFdYkda0gaCnRfu9lTOJ9CAi { get; }
-		public bool _ADnm4p5lVjBKkT3NkUtyGVE6UyC { get; }
+		public bool Completable => _position >= Text.Length;
+		public string Text { get; }
+		public bool IsLineEnding { get; set; }
+		public bool IsItalic { get; }
+		public bool IsBold { get; }
 
-		public _W4jOxbRDzppFv0IAFpA5Blo7CjUA(string string_0, bool bool_0, bool bool_1, bool bool_2, int int_0)
+		public TypingOverlayChunk(string text, bool lineEnding, bool italic, bool bold, int offset)
 		{
-			_Si5dw38ImuGLFJvc8DC1FoIc0PG = ((int_0 == 0) ? string_0.Trim() : string_0);
-			_YqQMYa7eF6BsHAixrYycR8apI6F = bool_0;
-			_m2fqFdYkda0gaCnRfu9lTOJ9CAi = bool_1;
-			_ADnm4p5lVjBKkT3NkUtyGVE6UyC = bool_2;
-			_BK3BSdlEv4xSjAlS93TtxbrrjjA = new Vector2(int_0, 0f);
+			Text = ((offset == 0) ? text.Trim() : text);
+			IsLineEnding = lineEnding;
+			IsItalic = italic;
+			IsBold = bold;
+			_offset = new Vector2(offset, 0f);
 		}
 
-		public void _pYBSD3QOMXtGMbCUDyvyluUZnx()
+		public void Complete()
 		{
-			Value = _Si5dw38ImuGLFJvc8DC1FoIc0PG.Length;
+			_position = Text.Length;
 		}
 
-		public char _ZKadRFahgnwn10dM34638KGsLNu()
+		public char ComputeCharacter()
 		{
 			if (Completable)
 			{
 				return ' ';
 			}
-			return _Si5dw38ImuGLFJvc8DC1FoIc0PG[Value++];
+			return Text[_position++];
 		}
 
-		public void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont_0, SpriteFont spriteFont_1, Vector2 vector2_0, Color color_0)
+		public void Draw(SpriteBatch spriteBatch, SpriteFont font, SpriteFont _italicFont, Vector2 location, Color color)
 		{
-			string text = _Jnjh8hNzVbH0Eov4seqBq1UNOCq();
+			string text = ComputeText();
 			if (!string.IsNullOrEmpty(text))
 			{
-				if (_m2fqFdYkda0gaCnRfu9lTOJ9CAi)
+				if (IsItalic)
 				{
-					spriteBatch.DrawString(spriteFont_1, text, vector2_0 + _BK3BSdlEv4xSjAlS93TtxbrrjjA, color_0);
+					spriteBatch.DrawString(_italicFont, text, location + _offset, color);
 				}
 				else
 				{
-					spriteBatch.DrawString(spriteFont_0, text, vector2_0 + _BK3BSdlEv4xSjAlS93TtxbrrjjA, color_0);
+					spriteBatch.DrawString(font, text, location + _offset, color);
 				}
 			}
 		}
 
-		private string _Jnjh8hNzVbH0Eov4seqBq1UNOCq()
+		private string ComputeText()
 		{
-			if (Value == 0)
+			if (_position == 0)
 			{
 				return string.Empty;
 			}
-			string text = ((Value >= _Si5dw38ImuGLFJvc8DC1FoIc0PG.Length) ? _Si5dw38ImuGLFJvc8DC1FoIc0PG : _Si5dw38ImuGLFJvc8DC1FoIc0PG.Substring(0, Value));
-			string text2 = string.Empty;
-			int num = 0;
-			for (int num2 = text.IndexOf('░'); num2 >= 0; num2 = text.IndexOf('░', num))
+			string buffer = ((_position >= Text.Length) ? Text : Text.Substring(0, _position));
+			string text = string.Empty;
+			int index = 0;
+			for (int count = buffer.IndexOf('░'); count >= 0; count = buffer.IndexOf('░', index))
 			{
-				text2 += text.Substring(num, num2 - num);
-				num = num2 + 1;
+				text += buffer.Substring(index, count - index);
+				index = count + 1;
 			}
-			if (num < text.Length)
+			if (index < buffer.Length)
 			{
-				text2 += text.Substring(num);
+				text += buffer.Substring(index);
 			}
-			return text2;
+			return text;
 		}
 	}
 
-	private class _3Kf8FQeGRyCD8FhytGMMBQFkhFl : InteractableOverlay
+	private class ChoiceOverlay : InteractableOverlay
 	{
-		private readonly ButtonInteractable[] _92GwVFulItjaDs6osQZyIk9xgMH;
+		private readonly ButtonInteractable[] _variants;
+		private int _count;
 
-		private int _VZ02JDgQaX5qJVSBot6TM2rtZ3O;
+		public int Which { get; private set; }
+		public bool Outgoing { get; private set; }
 
-		public int _mc4p6vpMBZ0hOHPqLBE5H6OxT7f { get; private set; }
-
-		public bool _zatbtX2c8i2hGOTptNymBxA8kVI { get; private set; }
-
-		public _3Kf8FQeGRyCD8FhytGMMBQFkhFl(IAmorous game, Texture2D texture2D_0, Texture2D texture2D_1, SpriteFont spriteFont_0)
+		public ChoiceOverlay(IAmorous game, Texture2D buttonTexture, Texture2D backgroundButtonTexture, SpriteFont font)
 			: base(game)
 		{
-			_92GwVFulItjaDs6osQZyIk9xgMH = new ButtonInteractable[5];
-			_mc4p6vpMBZ0hOHPqLBE5H6OxT7f = -1;
-			_VZ02JDgQaX5qJVSBot6TM2rtZ3O = 0;
-			_92GwVFulItjaDs6osQZyIk9xgMH[0] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 1", new Color(250, 251, 162), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _ICiyaoVDO6XvJb0FsHkwv7e4YrS);
-			_92GwVFulItjaDs6osQZyIk9xgMH[1] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 2", new Color(165, 250, 171), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _hXUKutqtuyapSBUWT1AVUzerGjc);
-			_92GwVFulItjaDs6osQZyIk9xgMH[2] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 3", new Color(171, 199, 255), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _IniwNTOJAFQzPUg40NMaN8sku9k);
-			_92GwVFulItjaDs6osQZyIk9xgMH[3] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 4", new Color(228, 187, 253), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _5TLz87dh7yxXEP5B2Lceq9uOAp1);
-			_92GwVFulItjaDs6osQZyIk9xgMH[4] = AddButtonInteractable(texture2D_0, texture2D_1, spriteFont_0, "Choice 5", new Color(255, 171, 179), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, texture2D_0.Width, texture2D_0.Height), _0wd4x937or88gFFP0wpuEK3BkyM);
-			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(-1);
+			_variants = new ButtonInteractable[5];
+			Which = -1;
+			_count = 0;
+			_variants[0] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 1", new Color(250, 251, 162), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceFirst);
+			_variants[1] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 2", new Color(165, 250, 171), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceSecond);
+			_variants[2] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 3", new Color(171, 199, 255), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceThird);
+			_variants[3] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 4", new Color(228, 187, 253), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceForth);
+			_variants[4] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 5", new Color(255, 171, 179), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceFifth);
+			Select(-1);
 		}
 
-		public void _ww4wA3UwGXxaAlMqo3jhy6Bnh8g(params string[] string_0)
+		public void ShowChoice(params string[] variants)
 		{
-			if (string_0.Length != 0)
+			if (variants.Length != 0)
 			{
-				_zatbtX2c8i2hGOTptNymBxA8kVI = true;
-				_mc4p6vpMBZ0hOHPqLBE5H6OxT7f = 0;
-				_VZ02JDgQaX5qJVSBot6TM2rtZ3O = 0;
-				for (int i = 0; i < string_0.Length && i < _92GwVFulItjaDs6osQZyIk9xgMH.Length; i++)
+				Outgoing = true;
+				Which = 0;
+				_count = 0;
+				for (int i = 0; i < variants.Length && i < _variants.Length; i++)
 				{
-					_92GwVFulItjaDs6osQZyIk9xgMH[i].Text = string_0[i];
-					_92GwVFulItjaDs6osQZyIk9xgMH[i].Visible = true;
-					_VZ02JDgQaX5qJVSBot6TM2rtZ3O++;
+					_variants[i].Text = variants[i];
+					_variants[i].Visible = true;
+					_count++;
 				}
-				for (int j = string_0.Length; j < _92GwVFulItjaDs6osQZyIk9xgMH.Length; j++)
+				for (int j = variants.Length; j < _variants.Length; j++)
 				{
-					_92GwVFulItjaDs6osQZyIk9xgMH[j].Visible = false;
+					_variants[j].Visible = false;
 				}
-				int num = (int)(30f + (float)(690 - _92GwVFulItjaDs6osQZyIk9xgMH[0].Bounds.Height - (_92GwVFulItjaDs6osQZyIk9xgMH[0].Bounds.Height + 15) * (_VZ02JDgQaX5qJVSBot6TM2rtZ3O - 1)) / 2f);
-				for (int k = 0; k < _VZ02JDgQaX5qJVSBot6TM2rtZ3O; k++)
+				int y = (int)(30f + (float)(690 - _variants[0].Bounds.Height - (_variants[0].Bounds.Height + 15) * (_count - 1)) / 2f);
+				for (int k = 0; k < _count; k++)
 				{
-					_92GwVFulItjaDs6osQZyIk9xgMH[k].X = (int)((float)(1920 - _92GwVFulItjaDs6osQZyIk9xgMH[k].Bounds.Width) / 2f);
-					_92GwVFulItjaDs6osQZyIk9xgMH[k].Y = num + (_92GwVFulItjaDs6osQZyIk9xgMH[k].Bounds.Height + 15) * k;
+					_variants[k].X = (int)((float)(1920 - _variants[k].Bounds.Width) / 2f);
+					_variants[k].Y = y + (_variants[k].Bounds.Height + 15) * k;
 				}
 			}
 		}
 
-		public void _mXNb0ylIEgd0VJEHTX3MBvFWYEf(int int_0)
+		public void Select(int which)
 		{
-			_zatbtX2c8i2hGOTptNymBxA8kVI = false;
-			_mc4p6vpMBZ0hOHPqLBE5H6OxT7f = int_0;
-			_VZ02JDgQaX5qJVSBot6TM2rtZ3O = 0;
-			ButtonInteractable[] array = _92GwVFulItjaDs6osQZyIk9xgMH;
-			foreach (ButtonInteractable iHJrndJdM1jj9TEnuU3BvgdDuvf in array)
+			Outgoing = false;
+			Which = which;
+			_count = 0;
+			foreach (ButtonInteractable button in _variants)
 			{
-				iHJrndJdM1jj9TEnuU3BvgdDuvf.Visible = false;
+				button.Visible = false;
 			}
 		}
 
-		private void _ICiyaoVDO6XvJb0FsHkwv7e4YrS()
+		private void ChoiceFirst()
 		{
-			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(1);
+			Select(1);
 		}
 
-		private void _hXUKutqtuyapSBUWT1AVUzerGjc()
+		private void ChoiceSecond()
 		{
-			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(2);
+			Select(2);
 		}
 
-		private void _IniwNTOJAFQzPUg40NMaN8sku9k()
+		private void ChoiceThird()
 		{
-			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(3);
+			Select(3);
 		}
 
-		private void _5TLz87dh7yxXEP5B2Lceq9uOAp1()
+		private void ChoiceForth()
 		{
-			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(4);
+			Select(4);
 		}
 
-		private void _0wd4x937or88gFFP0wpuEK3BkyM()
+		private void ChoiceFifth()
 		{
-			_mXNb0ylIEgd0VJEHTX3MBvFWYEf(5);
+			Select(5);
 		}
 	}
 
-	private struct _DVKVvNZmeqGXSzmpcRmcXttpiKC
+	private struct TypingSpeed
 	{
-		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _LPPPQ033UFYBL4fz3qUtSfOD75I = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(100, 750, 2000);
-		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _e6GzQtekajGAokkayN1IPGIhCKx = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(60, 450, 1500);
-		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _NN1aVVAo1wwjW67j2cNcdp7rWET = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(30, 300, 1000);
-		public static readonly _DVKVvNZmeqGXSzmpcRmcXttpiKC _4d4FmftbqsXGnBhU8JorfUifjoo = new _DVKVvNZmeqGXSzmpcRmcXttpiKC(0, 0, 1000);
+		public static readonly TypingSpeed Slow = new TypingSpeed(100, 750, 2000);
+		public static readonly TypingSpeed Normal = new TypingSpeed(60, 450, 1500);
+		public static readonly TypingSpeed Fast = new TypingSpeed(30, 300, 1000);
+		public static readonly TypingSpeed Instant = new TypingSpeed(0, 0, 1000);
 
-		public int _aFbxCmyEb7GMPT5kU3P9NvcWQgK { get; }
-		public int _a5fUssbr0SWbg9Sv48tHvMxW2ic { get; }
-		public int _TDuCcAGW0lPdvxvfHyDM3aP4i84 { get; }
+		public int WhitespaceDelay { get; }
+		public int CharacterDelay { get; }
+		public int AutoSkipDelay { get; }
 
-		private _DVKVvNZmeqGXSzmpcRmcXttpiKC(int int_0, int int_1, int int_2)
+		private TypingSpeed(int whitespace, int character, int autoSkip)
 		{
-			_aFbxCmyEb7GMPT5kU3P9NvcWQgK = int_0;
-			_a5fUssbr0SWbg9Sv48tHvMxW2ic = int_1;
-			_TDuCcAGW0lPdvxvfHyDM3aP4i84 = int_2;
+			WhitespaceDelay = whitespace;
+			CharacterDelay = character;
+			AutoSkipDelay = autoSkip;
 		}
 	}
 
-	private static TypingDialogue Singleton;
+	private static TypingDialogue _singleton;
 	private readonly IAmorous _game;
-	private readonly Texture2D _P62DygY6CKZG8s5wqDu0uAFksjs;
-	private readonly SpriteFont _font;
-	private readonly SpriteFont _23jI7jMreLgRTSs5rhEGCUkow2b;
-	private readonly Vector2 _rv7JIIMY4Ta1tpSvflng4Lose4H;
-	private readonly Vector2 _4djSc5RiRJZMGzvYwwEprIYf6ZM;
-	private readonly Vector2[] _gWIuAj6CuJjxiHOmaYwYLvu8g0r;
-	private readonly _3Kf8FQeGRyCD8FhytGMMBQFkhFl _overlay;
+	private readonly Texture2D _dialogueTexture;
+	private readonly SpriteFont _font, _italicFont;
+	private readonly Vector2 _backgroundLocation;
+	private readonly Vector2 _controlBounds;
+	private readonly Vector2[] _lineLocations;
+	private readonly ChoiceOverlay _choiceOverlay;
 	private Desktop _squid;
-	private DialogueSpeed _tAC7ojbHHd15LKk7rGbelW2nGWN;
-	private _DVKVvNZmeqGXSzmpcRmcXttpiKC _4V6bFHOi28R2wJIOaQKs1A0pIQ0;
-	private DropDownList _xU7PBNQL0I3LiOcbd02e8KK5uYi;
-	private bool _O7kX3MfMCx3M2dVro1UbOCbajyo;
-	private CheckBox _2pNQedwLe7YapSxneCqi4SreGdH;
-	private _QGnsmTImvr3dFBCr8hpzDZiCWLP _lMAOhEkyOOJcbuU0ONDYvJ8bs8w;
-	private _IIGQSKohQsLi09FILC8oKHG5UXG _NYF6CyMYCqbkxJ8Q1N7O3ehzldE;
-	private _IIGQSKohQsLi09FILC8oKHG5UXG _MOBkoboXIfjixJIW15TJTdFlwDC;
-	private int Stopwatch;
-	private _oDZZ0F7Qg08utTIjAaoyIbeDuFG Value;
+	private DialogueSpeed _dialogueSpeed;
+	private TypingSpeed _speed;
+	private DropDownList _speedDropDown;
+	private bool _autoSkip;
+	private CheckBox _autoSkipBox;
+	private OverlayState _overlayState;
+	private TypingPhase _phase;
+	private TypingPhase _pendingPhase;
+	private int _ticks;
+	private TypingOverlay _dialogue;
 
-	public static bool Completable => Singleton._NYF6CyMYCqbkxJ8Q1N7O3ehzldE == _IIGQSKohQsLi09FILC8oKHG5UXG.Done;
-	public static bool _zatbtX2c8i2hGOTptNymBxA8kVI => Singleton._overlay._zatbtX2c8i2hGOTptNymBxA8kVI;
-	public static int _rVWIUtPzqmWcZbPclkfMRcIkeGR => Singleton._overlay._mc4p6vpMBZ0hOHPqLBE5H6OxT7f;
+	public static bool Completable => _singleton._phase == TypingPhase.Done;
+	public static bool Outgoing => _singleton._choiceOverlay.Outgoing;
+	public static int Which => _singleton._choiceOverlay.Which;
 
 	public static DialogueSpeed Speed
 	{
 		get
 		{
-			return Singleton._tAC7ojbHHd15LKk7rGbelW2nGWN;
+			return _singleton._dialogueSpeed;
 		}
 		set
 		{
-			Singleton._tAC7ojbHHd15LKk7rGbelW2nGWN = value;
-			switch (Singleton._tAC7ojbHHd15LKk7rGbelW2nGWN)
+			_singleton._dialogueSpeed = value;
+			switch (_singleton._dialogueSpeed)
 			{
 				case DialogueSpeed.Slow:
-					Singleton._4V6bFHOi28R2wJIOaQKs1A0pIQ0 = _DVKVvNZmeqGXSzmpcRmcXttpiKC._LPPPQ033UFYBL4fz3qUtSfOD75I;
+					_singleton._speed = TypingSpeed.Slow;
 					break;
 				case DialogueSpeed.Normal:
-					Singleton._4V6bFHOi28R2wJIOaQKs1A0pIQ0 = _DVKVvNZmeqGXSzmpcRmcXttpiKC._e6GzQtekajGAokkayN1IPGIhCKx;
+					_singleton._speed = TypingSpeed.Normal;
 					break;
 				case DialogueSpeed.Fast:
-					Singleton._4V6bFHOi28R2wJIOaQKs1A0pIQ0 = _DVKVvNZmeqGXSzmpcRmcXttpiKC._NN1aVVAo1wwjW67j2cNcdp7rWET;
+					_singleton._speed = TypingSpeed.Fast;
 					break;
 				case DialogueSpeed.Instant:
-					Singleton._4V6bFHOi28R2wJIOaQKs1A0pIQ0 = _DVKVvNZmeqGXSzmpcRmcXttpiKC._4d4FmftbqsXGnBhU8JorfUifjoo;
+					_singleton._speed = TypingSpeed.Instant;
 					break;
 			}
-			Singleton._R3gvtOBYRg2VLQrb2zkAwC846nt();
+			_singleton.UpdateSelectedSpeed();
 		}
 	}
 
-	public static bool _fUgDiz7KX8TZUVzFlTeXMOhmfUT
+	public static bool AutoSkip
 	{
 		get
 		{
-			return Singleton._O7kX3MfMCx3M2dVro1UbOCbajyo;
+			return _singleton._autoSkip;
 		}
 		set
 		{
-			Singleton._O7kX3MfMCx3M2dVro1UbOCbajyo = value;
-			Singleton._EwAojaUxtAdk1E5cI9aRmcwPirB();
+			_singleton._autoSkip = value;
+			_singleton.UpdateCheckedAutoSkip();
 		}
 	}
 
-	public TypingDialogue(IAmorous game, Texture2D texture2D_0, Texture2D texture2D_1, SpriteFont spriteFont_0, SpriteFont spriteFont_1)
+	public TypingDialogue(IAmorous game, Texture2D dialogueTexture, Texture2D buttonTexture, SpriteFont font, SpriteFont italicFont)
 	{
-		Singleton = this;
+		_singleton = this;
 		_game = game;
-		_P62DygY6CKZG8s5wqDu0uAFksjs = texture2D_0;
-		_font = spriteFont_0;
-		_23jI7jMreLgRTSs5rhEGCUkow2b = spriteFont_1;
-		_rv7JIIMY4Ta1tpSvflng4Lose4H = new Vector2((float)(texture2D_0.Width - 1920) / 2f, 1080 - texture2D_0.Height);
-		_4djSc5RiRJZMGzvYwwEprIYf6ZM = new Vector2(75f, 625f);
-		_gWIuAj6CuJjxiHOmaYwYLvu8g0r = new Vector2[6]
+		_dialogueTexture = dialogueTexture;
+		_font = font;
+		_italicFont = italicFont;
+		_backgroundLocation = new Vector2((float)(dialogueTexture.Width - 1920) / 2f, 1080 - dialogueTexture.Height);
+		_controlBounds = new Vector2(75f, 625f);
+		_lineLocations = new Vector2[6]
 		{
 			new Vector2(75f, 720f),
 			new Vector2(75f, 770f),
@@ -501,12 +497,12 @@ public class TypingDialogue
 			new Vector2(75f, 920f),
 			new Vector2(75f, 970f)
 		};
-		_overlay = new _3Kf8FQeGRyCD8FhytGMMBQFkhFl(game, texture2D_1, null, spriteFont_0);
+		_choiceOverlay = new ChoiceOverlay(game, buttonTexture, null, font);
 		Speed = DialogueSpeed.Normal;
-		_dRHb7tDcI5IkrHNRAFSme9H1Rh4();
+		CreateOverlay();
 	}
 
-	private void _dRHb7tDcI5IkrHNRAFSme9H1Rh4()
+	private void CreateOverlay()
 	{
 		_squid = new Desktop
 		{
@@ -514,238 +510,237 @@ public class TypingDialogue
 			Size = new Squid.Point(1920, 1080)
 		};
 		_squid.SetSkin("Assets/GUI/Squid/DefaultSkin");
-		FlowLayoutFrame flowLayoutFrame = new FlowLayoutFrame
+		FlowLayoutFrame container = new FlowLayoutFrame
 		{
-			Position = new Squid.Point(1220, (int)_4djSc5RiRJZMGzvYwwEprIYf6ZM.Y + 10),
+			Position = new Squid.Point(1220, (int)_controlBounds.Y + 10),
 			FlowDirection = FlowDirection.LeftToRight,
 			Margin = new Margin(0, 0, 100, 0),
 			HSpacing = 10,
 			Size = new Squid.Point(650, 30)
 		};
-		Button button = new Button
+		Button saveButton = new Button
 		{
 			Size = new Squid.Point(100, 30),
 			TextAlign = Alignment.MiddleCenter,
 			Text = "Save"
 		};
-		button.MouseClick += delegate
+		saveButton.MouseClick += delegate
 		{
-			_game.ConfirmSaving(_squid, delegate(bool bool_0)
+			_game.ConfirmSaving(_squid, delegate(bool toggle)
 			{
-				_overlay.Touchable = bool_0;
+				_choiceOverlay.Touchable = toggle;
 			});
 		};
-		Button button2 = new Button
+		Button loadButton = new Button
 		{
 			Size = new Squid.Point(100, 30),
 			TextAlign = Alignment.MiddleCenter,
 			Text = "Load"
 		};
-		button2.MouseClick += delegate
+		loadButton.MouseClick += delegate
 		{
-			_game.ConfirmLoading(_squid, delegate(bool bool_0)
+			_game.ConfirmLoading(_squid, delegate(bool toggle)
 			{
-				_overlay.Touchable = bool_0;
+				_choiceOverlay.Touchable = toggle;
 			});
 		};
-		Button button3 = new Button
+		Button exitButton = new Button
 		{
 			Size = new Squid.Point(100, 30),
 			TextAlign = Alignment.MiddleCenter,
 			Text = "Exit"
 		};
-		button3.MouseClick += delegate
+		exitButton.MouseClick += delegate
 		{
-			_game.ConfirmLeave(_squid, delegate(bool bool_0)
+			_game.ConfirmLeave(_squid, delegate(bool toggle)
 			{
-				_overlay.Touchable = bool_0;
+				_choiceOverlay.Touchable = toggle;
 			});
 		};
-		DropDownList dropDownList = new DropDownList();
-		dropDownList.Style = "button";
-		dropDownList.Size = new Squid.Point(120, 30);
-		dropDownList.DropdownAbove = true;
-		dropDownList.Label.TextAlign = Alignment.MiddleCenter;
-		dropDownList.Label.AutoEllipsis = false;
-		dropDownList.Dropdown.Resizable = false;
-		dropDownList.Button.Visible = false;
-		_xU7PBNQL0I3LiOcbd02e8KK5uYi = dropDownList;
-		_xU7PBNQL0I3LiOcbd02e8KK5uYi.Listbox.Scrollbar.ButtonUp.Visible = false;
-		_xU7PBNQL0I3LiOcbd02e8KK5uYi.Listbox.Scrollbar.ButtonDown.Visible = false;
-		foreach (DialogueSpeed value in Enum.GetValues(typeof(DialogueSpeed)))
+		_speedDropDown = new DropDownList();
+		_speedDropDown.Style = "button";
+		_speedDropDown.Size = new Squid.Point(120, 30);
+		_speedDropDown.DropdownAbove = true;
+		_speedDropDown.Label.TextAlign = Alignment.MiddleCenter;
+		_speedDropDown.Label.AutoEllipsis = false;
+		_speedDropDown.Dropdown.Resizable = false;
+		_speedDropDown.Button.Visible = false;
+		_speedDropDown.Listbox.Scrollbar.ButtonUp.Visible = false;
+		_speedDropDown.Listbox.Scrollbar.ButtonDown.Visible = false;
+		foreach (DialogueSpeed speed in Enum.GetValues(typeof(DialogueSpeed)))
 		{
-			_xU7PBNQL0I3LiOcbd02e8KK5uYi.Items.Add(new ListBoxItem
+			_speedDropDown.Items.Add(new ListBoxItem
 			{
-				Text = value.ToString(),
+				Text = speed.ToString(),
 				Size = new Squid.Point(0, 30),
-				Value = value
+				Value = speed
 			});
 		}
-		_xU7PBNQL0I3LiOcbd02e8KK5uYi.SelectedItemChanged += delegate(Control control_0, ListBoxItem listBoxItem_0)
+		_speedDropDown.SelectedItemChanged += delegate(Control container, ListBoxItem box)
 		{
-			Speed = (DialogueSpeed)listBoxItem_0.Value;
-			Options.Data.DialogueTextSpeed = _tAC7ojbHHd15LKk7rGbelW2nGWN;
+			Speed = (DialogueSpeed)box.Value;
+			Options.Data.DialogueTextSpeed = _dialogueSpeed;
 		};
-		_2pNQedwLe7YapSxneCqi4SreGdH = new CheckBox
+		_autoSkipBox = new CheckBox
 		{
 			Text = "Auto-skip",
 			Size = new Squid.Point(140, 30),
-			Checked = _fUgDiz7KX8TZUVzFlTeXMOhmfUT
+			Checked = AutoSkip
 		};
-		_2pNQedwLe7YapSxneCqi4SreGdH.CheckedChanged += delegate
+		_autoSkipBox.CheckedChanged += delegate
 		{
-			_fUgDiz7KX8TZUVzFlTeXMOhmfUT = _2pNQedwLe7YapSxneCqi4SreGdH.Checked;
-			Options.Data.DialogueAutoSkip = _O7kX3MfMCx3M2dVro1UbOCbajyo;
+			AutoSkip = _autoSkipBox.Checked;
+			Options.Data.DialogueAutoSkip = _autoSkip;
 		};
-		flowLayoutFrame.Controls.Add(button);
-		flowLayoutFrame.Controls.Add(button2);
-		flowLayoutFrame.Controls.Add(button3);
-		flowLayoutFrame.Controls.Add(_2pNQedwLe7YapSxneCqi4SreGdH);
-		flowLayoutFrame.Controls.Add(_xU7PBNQL0I3LiOcbd02e8KK5uYi);
-		_squid.Controls.Add(flowLayoutFrame);
+		container.Controls.Add(saveButton);
+		container.Controls.Add(loadButton);
+		container.Controls.Add(exitButton);
+		container.Controls.Add(_autoSkipBox);
+		container.Controls.Add(_speedDropDown);
+		_squid.Controls.Add(container);
 	}
 
-	private void _R3gvtOBYRg2VLQrb2zkAwC846nt()
+	private void UpdateSelectedSpeed()
 	{
-		if (Singleton._xU7PBNQL0I3LiOcbd02e8KK5uYi != null)
+		if (_singleton._speedDropDown != null)
 		{
-			Singleton._xU7PBNQL0I3LiOcbd02e8KK5uYi.SelectedItem = Singleton._xU7PBNQL0I3LiOcbd02e8KK5uYi.Items.First((ListBoxItem listBoxItem_0) => (DialogueSpeed)listBoxItem_0.Value == _tAC7ojbHHd15LKk7rGbelW2nGWN);
+			_singleton._speedDropDown.SelectedItem = _singleton._speedDropDown.Items.First((ListBoxItem box) => (DialogueSpeed)box.Value == _dialogueSpeed);
 		}
 	}
 
-	private void _EwAojaUxtAdk1E5cI9aRmcwPirB()
+	private void UpdateCheckedAutoSkip()
 	{
-		if (Singleton._2pNQedwLe7YapSxneCqi4SreGdH != null)
+		if (_singleton._autoSkipBox != null)
 		{
-			Singleton._2pNQedwLe7YapSxneCqi4SreGdH.Checked = _O7kX3MfMCx3M2dVro1UbOCbajyo;
+			_singleton._autoSkipBox.Checked = _autoSkip;
 		}
 	}
 
 	public void Update(GameTime gameTime)
 	{
-		switch (_lMAOhEkyOOJcbuU0ONDYvJ8bs8w)
+		switch (_overlayState)
 		{
-			case _QGnsmTImvr3dFBCr8hpzDZiCWLP.None:
+			case OverlayState.None:
 				return;
-			case _QGnsmTImvr3dFBCr8hpzDZiCWLP.Started:
-				_lMAOhEkyOOJcbuU0ONDYvJ8bs8w = _QGnsmTImvr3dFBCr8hpzDZiCWLP.Visible;
+			case OverlayState.Started:
+				_overlayState = OverlayState.Visible;
 				return;
 		}
-		_overlay.Update(gameTime);
+		_choiceOverlay.Update(gameTime);
 		if (_game.Cutscene != null)
 		{
 			_squid.Update();
 		}
-		if (_overlay.Touchable)
+		if (_choiceOverlay.Touchable)
 		{
-			_mBZq0n4Bks2rpEfFwuLZ2Mlxlwi(gameTime);
+			Interact(gameTime);
 		}
 	}
 
-	private void _mBZq0n4Bks2rpEfFwuLZ2Mlxlwi(GameTime gameTime)
+	private void Interact(GameTime gameTime)
 	{
-		if (_NYF6CyMYCqbkxJ8Q1N7O3ehzldE == _IIGQSKohQsLi09FILC8oKHG5UXG.Done)
+		if (_phase == TypingPhase.Done)
 		{
 			if (_game.Cutscene == null)
 			{
-				ResetPlayer();
+				Reset();
 			}
 			return;
 		}
-		if ((_NYF6CyMYCqbkxJ8Q1N7O3ehzldE == _IIGQSKohQsLi09FILC8oKHG5UXG.Waiting || _NYF6CyMYCqbkxJ8Q1N7O3ehzldE == _IIGQSKohQsLi09FILC8oKHG5UXG.Typing || _NYF6CyMYCqbkxJ8Q1N7O3ehzldE == _IIGQSKohQsLi09FILC8oKHG5UXG.WaitForSkip) && _8rrKDeGOr7tozdP0dxFbBPWq7NG())
+		if ((_phase == TypingPhase.Waiting || _phase == TypingPhase.Typing || _phase == TypingPhase.WaitForSkip) && IsPressedSkip())
 		{
-			Next();
-			if (_MOBkoboXIfjixJIW15TJTdFlwDC != 0)
+			SkipToNext();
+			if (_pendingPhase != 0)
 			{
-				_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _MOBkoboXIfjixJIW15TJTdFlwDC;
-				_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
+				_phase = _pendingPhase;
+				_pendingPhase = TypingPhase.None;
 			}
-			else if (!_fUgDiz7KX8TZUVzFlTeXMOhmfUT)
+			else if (!AutoSkip)
 			{
-				_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.WaitForSkip;
-				_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.Skip;
+				_phase = TypingPhase.WaitForSkip;
+				_pendingPhase = TypingPhase.Skip;
 			}
 			else
 			{
-				Stopwatch = _4V6bFHOi28R2wJIOaQKs1A0pIQ0._TDuCcAGW0lPdvxvfHyDM3aP4i84;
-				_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.Waiting;
-				_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.Skip;
+				_ticks = _speed.AutoSkipDelay;
+				_phase = TypingPhase.Waiting;
+				_pendingPhase = TypingPhase.Skip;
 			}
 		}
-		switch (_NYF6CyMYCqbkxJ8Q1N7O3ehzldE)
+		switch (_phase)
 		{
-			case _IIGQSKohQsLi09FILC8oKHG5UXG.Started:
-				if (_4V6bFHOi28R2wJIOaQKs1A0pIQ0._aFbxCmyEb7GMPT5kU3P9NvcWQgK != 0)
+			case TypingPhase.Started:
+				if (_speed.WhitespaceDelay != 0)
 				{
-					_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.Typing;
-					_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
+					_phase = TypingPhase.Typing;
+					_pendingPhase = TypingPhase.None;
 				}
 				else
 				{
-					Next();
-					_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.WaitForSkip;
-					_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.Skip;
+					SkipToNext();
+					_phase = TypingPhase.WaitForSkip;
+					_pendingPhase = TypingPhase.Skip;
 				}
 				break;
-			case _IIGQSKohQsLi09FILC8oKHG5UXG.Typing:
+			case TypingPhase.Typing:
 			{
-				char c = Value._ZKadRFahgnwn10dM34638KGsLNu();
-				if (Value.Completable)
+				char c = _dialogue.GetCharacter();
+				if (_dialogue.Completable)
 				{
-					if (!_fUgDiz7KX8TZUVzFlTeXMOhmfUT)
+					if (!AutoSkip)
 					{
-						_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.WaitForSkip;
+						_phase = TypingPhase.WaitForSkip;
 					}
 					else
 					{
-						Stopwatch = _4V6bFHOi28R2wJIOaQKs1A0pIQ0._TDuCcAGW0lPdvxvfHyDM3aP4i84;
-						_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.Waiting;
+						_ticks = _speed.AutoSkipDelay;
+						_phase = TypingPhase.Waiting;
 					}
-					_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.Skip;
+					_pendingPhase = TypingPhase.Skip;
 				}
 				else
 				{
 					if (c != '░')
 					{
-						Stopwatch = _4V6bFHOi28R2wJIOaQKs1A0pIQ0._aFbxCmyEb7GMPT5kU3P9NvcWQgK;
+						_ticks = _speed.WhitespaceDelay;
 					}
 					else
 					{
-						Stopwatch = _4V6bFHOi28R2wJIOaQKs1A0pIQ0._a5fUssbr0SWbg9Sv48tHvMxW2ic;
+						_ticks = _speed.CharacterDelay;
 					}
-					_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.Waiting;
-					_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.Typing;
+					_phase = TypingPhase.Waiting;
+					_pendingPhase = TypingPhase.Typing;
 				}
 				break;
 			}
-			case _IIGQSKohQsLi09FILC8oKHG5UXG.Waiting:
-				Stopwatch -= gameTime.ElapsedGameTime.Milliseconds;
-				if (Stopwatch <= 0)
+			case TypingPhase.Waiting:
+				_ticks -= gameTime.ElapsedGameTime.Milliseconds;
+				if (_ticks <= 0)
 				{
-					Stopwatch = 0;
-					_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _MOBkoboXIfjixJIW15TJTdFlwDC;
-					_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
+					_ticks = 0;
+					_phase = _pendingPhase;
+					_pendingPhase = TypingPhase.None;
 				}
 				break;
-			case _IIGQSKohQsLi09FILC8oKHG5UXG.Skip:
-				_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.Done;
-				_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
+			case TypingPhase.Skip:
+				_phase = TypingPhase.Done;
+				_pendingPhase = TypingPhase.None;
 				break;
-			case _IIGQSKohQsLi09FILC8oKHG5UXG.WaitForSkip:
+			case TypingPhase.WaitForSkip:
 				break;
 		}
 	}
 
-	private bool _8rrKDeGOr7tozdP0dxFbBPWq7NG()
+	private bool IsPressedSkip()
 	{
-		if (_game.Controller.JustPressed(Microsoft.Xna.Framework.Input.Keys.Space))
+		if (_game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space))
 		{
 			return true;
 		}
-		if (_game.Controller.JustPressed(ControllerButtonType.LeftButton))
+		if (_game.Controller.IsPressed(ControllerButtonType.LeftButton))
 		{
-			Microsoft.Xna.Framework.Point point = _game.Mouse.Rescale(_game.Controller.Cursor);
-			if ((float)point.Y >= _rv7JIIMY4Ta1tpSvflng4Lose4H.Y + 10f && point.Y <= 1080)
+			Microsoft.Xna.Framework.Point cursor = _game.Canvas.GlobalToContent(_game.Controller.Cursor);
+			if ((float)cursor.Y >= _backgroundLocation.Y + 10f && cursor.Y <= 1080)
 			{
 				return true;
 			}
@@ -753,43 +748,43 @@ public class TypingDialogue
 		return false;
 	}
 
-	private void _bkUB7WagRc6RJkVVY4DTGPizp0F(_oDZZ0F7Qg08utTIjAaoyIbeDuFG _oDZZ0F7Qg08utTIjAaoyIbeDuFG_0)
+	private void TypeNow(TypingOverlay dialogue)
 	{
-		Value = _oDZZ0F7Qg08utTIjAaoyIbeDuFG_0;
-		Value._TN6mQ7Lbe501vwqhgs7b8d6wd1b(_font, _23jI7jMreLgRTSs5rhEGCUkow2b);
-		Value._pYBSD3QOMXtGMbCUDyvyluUZnx();
-		_lMAOhEkyOOJcbuU0ONDYvJ8bs8w = _QGnsmTImvr3dFBCr8hpzDZiCWLP.Started;
-		_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.Started;
-		_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
+		_dialogue = dialogue;
+		_dialogue.Begin(_font, _italicFont);
+		_dialogue.SkipToNext();
+		_overlayState = OverlayState.Started;
+		_phase = TypingPhase.Started;
+		_pendingPhase = TypingPhase.None;
 	}
 
-	private void Play(_oDZZ0F7Qg08utTIjAaoyIbeDuFG _oDZZ0F7Qg08utTIjAaoyIbeDuFG_0)
+	private void Type(TypingOverlay dialogue)
 	{
-		Value = _oDZZ0F7Qg08utTIjAaoyIbeDuFG_0;
-		Value._TN6mQ7Lbe501vwqhgs7b8d6wd1b(_font, _23jI7jMreLgRTSs5rhEGCUkow2b);
-		Stopwatch = 150;
-		_lMAOhEkyOOJcbuU0ONDYvJ8bs8w = _QGnsmTImvr3dFBCr8hpzDZiCWLP.Started;
-		_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.Started;
-		_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
+		_dialogue = dialogue;
+		_dialogue.Begin(_font, _italicFont);
+		_ticks = 150;
+		_overlayState = OverlayState.Started;
+		_phase = TypingPhase.Started;
+		_pendingPhase = TypingPhase.None;
 	}
 
 	public void Draw(SpriteBatch spriteBatch)
 	{
-		if (_lMAOhEkyOOJcbuU0ONDYvJ8bs8w == _QGnsmTImvr3dFBCr8hpzDZiCWLP.None)
+		if (_overlayState == OverlayState.None)
 		{
 			return;
 		}
-		_overlay.Draw(spriteBatch);
-		_oDZZ0F7Qg08utTIjAaoyIbeDuFG oDZZ0F7Qg08utTIjAaoyIbeDuFG = Value;
+		_choiceOverlay.Draw(spriteBatch);
+		TypingOverlay oDZZ0F7Qg08utTIjAaoyIbeDuFG = _dialogue;
 		if (oDZZ0F7Qg08utTIjAaoyIbeDuFG != null)
 		{
 			spriteBatch.Begin();
-			spriteBatch.Draw(_P62DygY6CKZG8s5wqDu0uAFksjs, _rv7JIIMY4Ta1tpSvflng4Lose4H, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Color);
-			if (!string.IsNullOrEmpty(oDZZ0F7Qg08utTIjAaoyIbeDuFG.Title))
+			spriteBatch.Draw(_dialogueTexture, _backgroundLocation, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Color);
+			if (!string.IsNullOrEmpty(oDZZ0F7Qg08utTIjAaoyIbeDuFG.Author))
 			{
-				spriteBatch.DrawString(_font, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Title, _4djSc5RiRJZMGzvYwwEprIYf6ZM, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Color);
+				spriteBatch.DrawString(_font, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Author, _controlBounds, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Color);
 			}
-			oDZZ0F7Qg08utTIjAaoyIbeDuFG.Draw(spriteBatch, _font, _23jI7jMreLgRTSs5rhEGCUkow2b, _gWIuAj6CuJjxiHOmaYwYLvu8g0r);
+			oDZZ0F7Qg08utTIjAaoyIbeDuFG.Draw(spriteBatch, _font, _italicFont, _lineLocations);
 			spriteBatch.End();
 			if (_game.Cutscene != null)
 			{
@@ -798,45 +793,45 @@ public class TypingDialogue
 		}
 	}
 
-	public void ResetPlayer()
+	public void Reset()
 	{
-		Value = null;
-		Stopwatch = 0;
-		_lMAOhEkyOOJcbuU0ONDYvJ8bs8w = _QGnsmTImvr3dFBCr8hpzDZiCWLP.None;
-		_NYF6CyMYCqbkxJ8Q1N7O3ehzldE = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
-		_MOBkoboXIfjixJIW15TJTdFlwDC = _IIGQSKohQsLi09FILC8oKHG5UXG.None;
+		_dialogue = null;
+		_ticks = 0;
+		_overlayState = OverlayState.None;
+		_phase = TypingPhase.None;
+		_pendingPhase = TypingPhase.None;
 	}
 
-	public static void _9RhaHKUaQmQeJrrxVYowZyJe4mo(string string_0, string string_1, Color color_0)
+	public static void TypeNow(string message, string author, Color color)
 	{
-		Singleton._bkUB7WagRc6RJkVVY4DTGPizp0F(new _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string_0, string_1, color_0));
+		_singleton.TypeNow(new TypingOverlay(message, author, color));
 	}
 
-	public static void Play(string string_0, string string_1, Color color_0)
+	public static void Type(string message, string author, Color color)
 	{
-		Singleton.Play(new _oDZZ0F7Qg08utTIjAaoyIbeDuFG(string_0, string_1, color_0));
+		_singleton.Type(new TypingOverlay(message, author, color));
 	}
 
-	public static void Next()
+	public static void SkipToNext()
 	{
-		if (Singleton.Value != null)
+		if (_singleton._dialogue != null)
 		{
-			Singleton.Value._pYBSD3QOMXtGMbCUDyvyluUZnx();
+			_singleton._dialogue.SkipToNext();
 		}
 	}
 
-	public static void Choice(params string[] string_0)
+	public static void Choice(params string[] variants)
 	{
-		Singleton._overlay._ww4wA3UwGXxaAlMqo3jhy6Bnh8g(string_0);
+		_singleton._choiceOverlay.ShowChoice(variants);
 	}
 
-	public static void _gVRGC9VAGHCLvP8p5Q4mqLPvFCm()
+	public static void Unselect()
 	{
-		Singleton._overlay._mXNb0ylIEgd0VJEHTX3MBvFWYEf(0);
+		_singleton._choiceOverlay.Select(0);
 	}
 
-	public static void BeginCutscene()
+	public static void Complete()
 	{
-		Singleton.ResetPlayer();
+		_singleton.Reset();
 	}
 }

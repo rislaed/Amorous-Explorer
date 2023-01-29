@@ -6,9 +6,9 @@ public class FadeInEvent : AbstractEvent<FadeInEventData>
 	public FadeInEvent(Cutscene cutscene)
 		: base(cutscene) {}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		base.Cutscene.Game.Fading.FadeIn(delegate
 		{
 			base.Completable = true;

@@ -17,13 +17,13 @@ public class IntroScene : AbstractScene
 	public IntroScene(IAmorous game)
 		: base(game)
 	{
-		Background = AddTexturedLayer("Background", "Assets/Scenes/Intro/Background", 0, 0);
-		Scenery = AddTexturedLayer("Scenery", "Assets/Scenes/Intro/Scenery", 0, 1250);
+		Background = AddSpriteLayer("Background", "Assets/Scenes/Intro/Background", 0, 0);
+		Scenery = AddSpriteLayer("Scenery", "Assets/Scenes/Intro/Scenery", 0, 1250);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
 		_cycle = 1f;
 	}
 
-	public override void Begin()
+	public override void Start()
 	{
 		RightCouples = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Foreground);
 		RightCouples.X = 1280f;

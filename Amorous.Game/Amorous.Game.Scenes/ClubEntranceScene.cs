@@ -11,13 +11,13 @@ public class ClubEntranceScene : AbstractScene
 	public ClubEntranceScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/ClubEntrance/Club Front", -535, 0);
-		AddTexturedLayer("Rope Back", "Assets/Scenes/ClubEntrance/Club Front Ropes (behind)", -535, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/ClubEntrance/Club Front", -535, 0);
+		AddSpriteLayer("Rope Back", "Assets/Scenes/ClubEntrance/Club Front Ropes (behind)", -535, 0);
 		AddAnimatedLayer("Lights", -535, 0, 500, "Assets/Scenes/ClubEntrance/Club Front Glow (option one)", "Assets/Scenes/ClubEntrance/Club Front Glow (option two)");
 		AddClickableLayer("Entrance", "Assets/Scenes/ClubEntrance/Club Entrance Door Selectable", 410, 96, OnDoorClick);
 		AddClickableLayer("Club Back", "Assets/Scenes/ClubEntrance/Back of Club Selectable", -535, 0, OnClubBackClick);
-		AddTexturedLayer("Rope Front", "Assets/Scenes/ClubEntrance/Club Front Ropes (infront)", -535, 0);
-		Game.Mouse._wFfc7xL7eKxed7i9gWtao7pgsnm(-535, 535, 0, 0);
+		AddSpriteLayer("Rope Front", "Assets/Scenes/ClubEntrance/Club Front Ropes (infront)", -535, 0);
+		Game.Canvas.SetOverscroll(-535, 535, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		if (data.GetState(AmorousData.Prologue) >= AmorousData.PhoneAllowedState)

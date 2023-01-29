@@ -19,19 +19,19 @@ public class DrivingScene : AbstractScene
 
 	private const float _tpdb62hWwmsf91RJNNUulTzZfAk = 0.9f;
 
-	private TexturedLayer _2WuocFtGsvuqlLRNzg1JvWYdCPu;
+	private SpriteLayer _2WuocFtGsvuqlLRNzg1JvWYdCPu;
 
-	private TexturedLayer _keMqzR2MH8pk2eRBjpmBvvHsKkH;
+	private SpriteLayer _keMqzR2MH8pk2eRBjpmBvvHsKkH;
 
-	private TexturedLayer _NtI6JcCZUIU6eqmZEqieFBtS51g;
+	private SpriteLayer _NtI6JcCZUIU6eqmZEqieFBtS51g;
 
-	private readonly TexturedLayer[] _cmNp2s95voDHTlRfEo0WKjoNC5D = new TexturedLayer[3];
+	private readonly SpriteLayer[] _cmNp2s95voDHTlRfEo0WKjoNC5D = new SpriteLayer[3];
 
 	private int _HuRva9O1Dird7HCHNvEYAhbEXEx;
 
-	private TexturedLayer _SwpBYcoXXTll45NBeycIpflE8r;
+	private SpriteLayer _SwpBYcoXXTll45NBeycIpflE8r;
 
-	private TexturedLayer _ywjql7DttUMPriZ95ycoakuivHF;
+	private SpriteLayer _ywjql7DttUMPriZ95ycoakuivHF;
 
 	private float _rn1x58VMBD9DAD7YIR46LqTEfMP;
 
@@ -49,12 +49,12 @@ public class DrivingScene : AbstractScene
 	public override void SwitchToSubscene(string daytime)
 	{
 		base.SwitchToSubscene(daytime);
-		_2WuocFtGsvuqlLRNzg1JvWYdCPu = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background", 0, 0);
-		_keMqzR2MH8pk2eRBjpmBvvHsKkH = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background 2", 0, 680);
-		_NtI6JcCZUIU6eqmZEqieFBtS51g = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Foreground", 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree A", 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree B", 0, 0);
-		_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = AddTexturedLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree C", 0, 0);
+		_2WuocFtGsvuqlLRNzg1JvWYdCPu = AddSpriteLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background", 0, 0);
+		_keMqzR2MH8pk2eRBjpmBvvHsKkH = AddSpriteLayer("Background", "Assets/Scenes/Driving/" + daytime + " Background 2", 0, 680);
+		_NtI6JcCZUIU6eqmZEqieFBtS51g = AddSpriteLayer("Background", "Assets/Scenes/Driving/" + daytime + " Foreground", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[0] = AddSpriteLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree A", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[1] = AddSpriteLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree B", 0, 0);
+		_cmNp2s95voDHTlRfEo0WKjoNC5D[2] = AddSpriteLayer("Background", "Assets/Scenes/Driving/" + daytime + " Tree C", 0, 0);
 		_HuRva9O1Dird7HCHNvEYAhbEXEx = Randoms.Next(0, _cmNp2s95voDHTlRfEo0WKjoNC5D.Length - 1);
 		_jLqsVc7ZjWokEg8zjm4aue7Vfwr();
 		_rn1x58VMBD9DAD7YIR46LqTEfMP = Randoms.Next(-1920, 0);

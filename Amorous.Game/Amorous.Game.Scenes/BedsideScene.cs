@@ -5,7 +5,7 @@ public class BedsideScene : TimeOfDayScene
 	public BedsideScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/Bedside/Background", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/Bedside/Background", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SunFunkTrack, 0.4f);
 	}
 }

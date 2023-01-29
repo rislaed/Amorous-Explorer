@@ -124,7 +124,7 @@ public class Achievements : IAchievements
 
 	private static readonly Dictionary<string, AchievementData> _achievements = _achievementDatas.ToDictionary((AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0.Key, (AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0);
 
-	public const string AchievementTutorial = "MessageTutorial1";
+	public const string MessageTutorial1 = "MessageTutorial1";
 
 	private readonly IAmorous _game;
 	private readonly SteamObserver _steam;
@@ -139,142 +139,142 @@ public class Achievements : IAchievements
 		_steam = client;
 	}
 
-	public void GainCutsceneStageAchievement(string name, int stage)
+	public void TriggerCutsceneStageAchievement(string cutscene, int stage)
 	{
-		if (name == AmorousData.Clothes)
+		if (cutscene == AmorousData.Clothes)
 		{
-			GainAchievement(AchievementGeneric6);
+			TriggerAchievement(AchievementGeneric6);
 		}
-		else if (name == AmorousData.Prologue && stage == 30)
+		else if (cutscene == AmorousData.Prologue && stage == 30)
 		{
-			GainAchievement(AchievementGeneric4);
+			TriggerAchievement(AchievementGeneric4);
 		}
-		else if (name == AmorousData.CobyDate)
+		else if (cutscene == AmorousData.CobyDate)
 		{
-			GainAchievement(AchievementDate1Coby);
+			TriggerAchievement(AchievementDate1Coby);
 		}
-		else if (name == AmorousData.DJ && stage == 10)
+		else if (cutscene == AmorousData.DJ && stage == 10)
 		{
 			NotifyAchievedContact("Club Amorous DJ", AmorousData.MessageIconDJ);
 		}
 	}
 
-	public void SetStage(string key, int value)
+	public void SetStage(string key, int stage)
 	{
-		if (key == AmorousData.JaxDate && value == 20)
+		if (key == AmorousData.JaxDate && stage == 20)
 		{
-			GainAchievement(AchievementDate1Jax);
+			TriggerAchievement(AchievementDate1Jax);
 		}
-		else if (key == AmorousData.JaxDate && value == 30)
+		else if (key == AmorousData.JaxDate && stage == 30)
 		{
-			GainAchievement(AchievementDate2Jax);
+			TriggerAchievement(AchievementDate2Jax);
 		}
-		else if (key == AmorousData.JaxDate && value == AmorousData.JaxStateCompleted)
+		else if (key == AmorousData.JaxDate && stage == AmorousData.JaxStateCompleted)
 		{
-			GainAchievement(AchievementDate3Jax);
+			TriggerAchievement(AchievementDate3Jax);
 		}
-		else if (key == AmorousData.SethDate && value == 20)
+		else if (key == AmorousData.SethDate && stage == 20)
 		{
-			GainAchievement(AchievementDate1Seth);
+			TriggerAchievement(AchievementDate1Seth);
 		}
-		else if (!(key == AmorousData.SethDate) || value != 30)
+		else if (!(key == AmorousData.SethDate) || stage != 30)
 		{
-			if (key == AmorousData.SethDate && value == AmorousData.SethStateCompleted)
+			if (key == AmorousData.SethDate && stage == AmorousData.SethStateCompleted)
 			{
-				GainAchievement(AchievementDate3Seth);
+				TriggerAchievement(AchievementDate3Seth);
 			}
-			else if (key == AmorousData.SkyeDate && value == 40)
+			else if (key == AmorousData.SkyeDate && stage == 40)
 			{
-				GainAchievement(AchievementDate1Skye);
+				TriggerAchievement(AchievementDate1Skye);
 			}
-			else if (key == AmorousData.SkyeDate && value == 50)
+			else if (key == AmorousData.SkyeDate && stage == 50)
 			{
-				GainAchievement(AchievementDate2Skye);
+				TriggerAchievement(AchievementDate2Skye);
 			}
-			else if (key == AmorousData.SkyeDate && value == AmorousData.SkyeStateCompleted)
+			else if (key == AmorousData.SkyeDate && stage == AmorousData.SkyeStateCompleted)
 			{
-				GainAchievement(AchievementDate3Skye);
+				TriggerAchievement(AchievementDate3Skye);
 			}
-			else if (key == AmorousData.DustinDate && value == 50)
+			else if (key == AmorousData.DustinDate && stage == 50)
 			{
-				GainAchievement(AchievementDate1Dustin);
+				TriggerAchievement(AchievementDate1Dustin);
 			}
-			else if (key == AmorousData.DustinDate && value == 60)
+			else if (key == AmorousData.DustinDate && stage == 60)
 			{
-				GainAchievement(AchievementDate2Dustin);
+				TriggerAchievement(AchievementDate2Dustin);
 			}
-			else if (!(key == AmorousData.DustinDate) || value != AmorousData.DustinStateCompleted)
+			else if (!(key == AmorousData.DustinDate) || stage != AmorousData.DustinStateCompleted)
 			{
-				if (!(key == AmorousData.ZenithDate) || value != 30)
+				if (!(key == AmorousData.ZenithDate) || stage != 30)
 				{
-					if (!(key == AmorousData.ZenithDate) || value != 40)
+					if (!(key == AmorousData.ZenithDate) || stage != 40)
 					{
-						if (key == AmorousData.ZenithDate && value == 60)
+						if (key == AmorousData.ZenithDate && stage == 60)
 						{
-							GainAchievement(AchievementDate3Zenith);
+							TriggerAchievement(AchievementDate3Zenith);
 						}
-						else if (key == AmorousData.MercyDate && value == 30)
+						else if (key == AmorousData.MercyDate && stage == 30)
 						{
-							GainAchievement(AchievementDate1Mercy);
+							TriggerAchievement(AchievementDate1Mercy);
 						}
-						else if (key == AmorousData.MercyDate && value == 40)
+						else if (key == AmorousData.MercyDate && stage == 40)
 						{
-							GainAchievement(AchievementDate2Mercy);
+							TriggerAchievement(AchievementDate2Mercy);
 						}
-						else if (key == AmorousData.MercyDate && value == AmorousData.SkyeStateCompleted)
+						else if (key == AmorousData.MercyDate && stage == AmorousData.SkyeStateCompleted)
 						{
-							GainAchievement(AchievementDate3Mercy);
+							TriggerAchievement(AchievementDate3Mercy);
 						}
-						else if (!(key == AmorousData.RemyDate) || value != 20)
+						else if (!(key == AmorousData.RemyDate) || stage != 20)
 						{
-							if (key == AmorousData.RemyDate && value == 30)
+							if (key == AmorousData.RemyDate && stage == 30)
 							{
-								GainAchievement(AchievementDate2Remy);
+								TriggerAchievement(AchievementDate2Remy);
 							}
-							else if (key == AmorousData.RemyDate && value == AmorousData.RemyStateCompleted)
+							else if (key == AmorousData.RemyDate && stage == AmorousData.RemyStateCompleted)
 							{
-								GainAchievement(AchievementDate3Remy);
+								TriggerAchievement(AchievementDate3Remy);
 							}
-							else if (key == AmorousData.LexDate && value == 20)
+							else if (key == AmorousData.LexDate && stage == 20)
 							{
-								GainAchievement(AchievementDate1Lex);
+								TriggerAchievement(AchievementDate1Lex);
 							}
-							else if (key == AmorousData.LexDate && value == 30)
+							else if (key == AmorousData.LexDate && stage == 30)
 							{
-								GainAchievement(AchievementDate2Lex);
+								TriggerAchievement(AchievementDate2Lex);
 							}
-							else if (key == AmorousData.LexDate && value == AmorousData.LexStateCompleted)
+							else if (key == AmorousData.LexDate && stage == AmorousData.LexStateCompleted)
 							{
-								GainAchievement(AchievementDate3Lex);
+								TriggerAchievement(AchievementDate3Lex);
 							}
 						}
 						else
 						{
-							GainAchievement(AchievementDate1Remy);
+							TriggerAchievement(AchievementDate1Remy);
 						}
 					}
 					else
 					{
-						GainAchievement(AchievementDate2Zenith);
+						TriggerAchievement(AchievementDate2Zenith);
 					}
 				}
 				else
 				{
-					GainAchievement(AchievementDate1Zenith);
+					TriggerAchievement(AchievementDate1Zenith);
 				}
 			}
 			else
 			{
-				GainAchievement(AchievementDate3Dustin);
+				TriggerAchievement(AchievementDate3Dustin);
 			}
 		}
 		else
 		{
-			GainAchievement(AchievementDate2Seth);
+			TriggerAchievement(AchievementDate2Seth);
 		}
 	}
 
-	public void SetFlag(string key, bool value)
+	public void SetFlag(string key, bool flag)
 	{
 		// ?
 	}
@@ -284,56 +284,56 @@ public class Achievements : IAchievements
 		switch (contact)
 		{
 			case PlayerData.EPhoneContacts.Skye:
-				GainAchievement(AchievementPhonenumberSkye);
+				TriggerAchievement(AchievementPhonenumberSkye);
 				break;
 			case PlayerData.EPhoneContacts.Dustin:
-				GainAchievement(AchievementPhonenumberDustin);
+				TriggerAchievement(AchievementPhonenumberDustin);
 				break;
 			case PlayerData.EPhoneContacts.Coby:
-				GainAchievement(AchievementPhonenumberCoby);
+				TriggerAchievement(AchievementPhonenumberCoby);
 				break;
 			case PlayerData.EPhoneContacts.Jax:
-				GainAchievement(AchievementPhonenumberJax);
+				TriggerAchievement(AchievementPhonenumberJax);
 				break;
 			case PlayerData.EPhoneContacts.Seth:
-				GainAchievement(AchievementPhonenumberSeth);
+				TriggerAchievement(AchievementPhonenumberSeth);
 				break;
 			case PlayerData.EPhoneContacts.Zenith:
-				GainAchievement(AchievementPhonenumberZenith);
+				TriggerAchievement(AchievementPhonenumberZenith);
 				break;
 			case PlayerData.EPhoneContacts.Mercy:
-				GainAchievement(AchievementPhonenumberMercy);
+				TriggerAchievement(AchievementPhonenumberMercy);
 				break;
 			case PlayerData.EPhoneContacts.Remy:
-				GainAchievement(AchievementPhonenumberRemy);
+				TriggerAchievement(AchievementPhonenumberRemy);
 				break;
 			case PlayerData.EPhoneContacts.Lex:
-				GainAchievement(AchievementPhonenumberLex);
+				TriggerAchievement(AchievementPhonenumberLex);
 				break;
 		}
 	}
 
-	public void GainAchievement(string name)
+	public void TriggerAchievement(string name)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		if (data.GetFlag(name))
 		{
 			return;
 		}
-		data.SetFlag(name, bool_0: true);
-		if (_achievements.TryGetValue(name, out var value))
+		data.SetFlag(name, flag: true);
+		if (_achievements.TryGetValue(name, out var achievement))
 		{
 			if (_steam != null)
 			{
-				_steam.GainAchievement(value.ID);
+				_steam.TriggerAchievement(achievement.ID);
 			}
-			if (value.Type != AchievementType.Contact)
+			if (achievement.Type != AchievementType.Contact)
 			{
-				NotifyAchievedGeneric(value.Icon, value.Title);
+				NotifyAchievedGeneric(achievement.Icon, achievement.Title);
 			}
 			else
 			{
-				NotifyAchievedContact(value.Icon, value.Title);
+				NotifyAchievedContact(achievement.Icon, achievement.Title);
 			}
 		}
 	}
@@ -348,13 +348,13 @@ public class Achievements : IAchievements
 		_game.ShowMessage(icon, "Contact", "The phonenumber of " + name + " has been added to your contacts!");
 	}
 
-	public void GainTutorial(string key)
+	public void TriggerTutorialAchievement(string key)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		if (!data.GetFlag(key))
 		{
-			data.SetFlag(key, bool_0: true);
-			if (key == AchievementTutorial)
+			data.SetFlag(key, flag: true);
+			if (key == MessageTutorial1)
 			{
 				_game.ShowMessage(AmorousData.MessageIconGeneric, "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
 			}

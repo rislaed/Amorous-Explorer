@@ -6,9 +6,9 @@ public class ShowGameBoxEvent : AbstractEvent<ShowGameBoxEventData>
 	public ShowGameBoxEvent(Cutscene cutscene)
 		: base(cutscene) {}
 
-	public override void Begin()
+	public override void Start()
 	{
-		base.Begin();
+		base.Start();
 		PhoneOverlay.Get().ShowGameBox();
 	}
 

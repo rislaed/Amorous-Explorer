@@ -9,14 +9,14 @@ public class LivingRoomScene : TimeOfDayScene
 	public LivingRoomScene(IAmorous game)
 		: base(game)
 	{
-		AddTexturedLayer("Background", "Assets/Scenes/LivingRoom/Foyer", 0, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/LivingRoom/Foyer", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SunFunkTrack, 0.4f);
 		_phoneNag = new PhoneUrgentlyRinging(Game);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		Update(gameTime);
+		base.Update(gameTime);
 		_phoneNag.Update(gameTime);
 	}
 
