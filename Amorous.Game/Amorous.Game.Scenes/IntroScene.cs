@@ -1,4 +1,3 @@
-using System;
 using Amorous.Game.NPC;
 using Microsoft.Xna.Framework;
 
@@ -6,8 +5,8 @@ namespace Amorous.Game.Scenes;
 
 public class IntroScene : AbstractScene
 {
-	private int _stopwatch;
-	private readonly float _cycle;
+	private int _ticks;
+	private readonly float _delay;
 
 	public AbstractLayer Background { get; private set; }
 	public AbstractLayer Scenery { get; private set; }
@@ -20,7 +19,7 @@ public class IntroScene : AbstractScene
 		Background = AddSpriteLayer("Background", "Assets/Scenes/Intro/Background", 0, 0);
 		Scenery = AddSpriteLayer("Scenery", "Assets/Scenes/Intro/Scenery", 0, 1250);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
-		_cycle = 1f;
+		_delay = 1f;
 	}
 
 	public override void Start()
@@ -40,18 +39,18 @@ public class IntroScene : AbstractScene
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		_stopwatch += gameTime.ElapsedGameTime.Milliseconds;
-		SlideTo(Background, 0f, 18000f * _cycle, 0, 0, 0, -540);
-		SlideTo(Scenery, 10000f * _cycle, 8000f * _cycle, 0, 1250, 0, -170);
-		MoveTo(LeftCouples, 14000f * _cycle, 4000f * _cycle, -800, 1090, 600, 1090);
-		MoveTo(RightCouples, 14000f * _cycle, 4000f * _cycle, 1280, 1090, 450, 1090);
+		_ticks += gameTime.ElapsedGameTime.Milliseconds;
+		SlideTo(Background, 0f, 18000f * _delay, 0, 0, 0, -540);
+		SlideTo(Scenery, 10000f * _delay, 8000f * _delay, 0, 1250, 0, -170);
+		MoveTo(LeftCouples, 14000f * _delay, 4000f * _delay, -800, 1090, 600, 1090);
+		MoveTo(RightCouples, 14000f * _delay, 4000f * _delay, 1280, 1090, 450, 1090);
 	}
 
 	private void SlideTo(AbstractLayer layer, float from, float to, int x1, int y1, int x2, int y2)
 	{
-		if (!((float)_stopwatch < from) && (float)_stopwatch < from + to)
+		if (!((float)_ticks < from) && (float)_ticks < from + to)
 		{
-			float amount = ((float)_stopwatch - from) / to;
+			float amount = ((float)_ticks - from) / to;
 			layer.X = MathHelper.Lerp(x1, x2, amount);
 			layer.Y = MathHelper.Lerp(y1, y2, amount);
 		}
@@ -59,9 +58,9 @@ public class IntroScene : AbstractScene
 
 	private void MoveTo(AbstractSpineNPC npc, float from, float to, int x1, int y1, int x2, int y2)
 	{
-		if (!((float)_stopwatch < from) && (float)_stopwatch < from + to)
+		if (!((float)_ticks < from) && (float)_ticks < from + to)
 		{
-			float amount = ((float)_stopwatch - from) / to;
+			float amount = ((float)_ticks - from) / to;
 			npc.X = MathHelper.Lerp(x1, x2, amount);
 			npc.Y = MathHelper.Lerp(y1, y2, amount);
 		}

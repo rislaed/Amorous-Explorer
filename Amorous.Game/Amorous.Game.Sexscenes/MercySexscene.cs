@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Spine;
 
@@ -47,7 +44,7 @@ public class MercySexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshSubscene(PlayerData data)
+	protected override void RefreshData(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (!Censorship.Censored)
@@ -96,13 +93,13 @@ public class MercySexscene : CensoredSexscene
 			base.Spine.SetAlpha("Player thigh right", 1f);
 			base.Spine.SetAlpha("Player thigh right markings inner thigh", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
 			base.Spine.SetAlpha("Player thigh right stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);
-			bool flag = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianShin);
+			bool isAvian = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianShin);
 			base.Spine.SetColor("Player body", data.BodyColor);
 			base.Spine.SetColor("Player body underbelly", data.UnderbellyColor);
 			base.Spine.SetColor("Player taint", data.UnderbellyColor);
 			base.Spine.SetColor("Player shin left", data.BodyColor);
-			base.Spine.SetColor("Player shin left markings short", flag ? data.AvianShinColor : data.ShortShinColor);
-			base.Spine.SetColor("Player shin left markings long", flag ? data.AvianShinColor : data.LongShinColor);
+			base.Spine.SetColor("Player shin left markings short", isAvian ? data.AvianShinColor : data.ShortShinColor);
+			base.Spine.SetColor("Player shin left markings long", isAvian ? data.AvianShinColor : data.LongShinColor);
 			if (data.CockType != PlayerData.ECockType.Cut)
 			{
 				base.Spine.SetColor("Player cock", data.GenitaliaColor);
@@ -119,8 +116,8 @@ public class MercySexscene : CensoredSexscene
 			base.Spine.SetColor("Player balls", data.BallsColor);
 			base.Spine.SetColor("Player Underbelly", data.UnderbellyColor);
 			base.Spine.SetColor("Player shin right", data.BodyColor);
-			base.Spine.SetColor("Player shin right markings short", flag ? data.AvianShinColor : data.ShortShinColor);
-			base.Spine.SetColor("Player shin right markings long", flag ? data.AvianShinColor : data.LongShinColor);
+			base.Spine.SetColor("Player shin right markings short", isAvian ? data.AvianShinColor : data.ShortShinColor);
+			base.Spine.SetColor("Player shin right markings long", isAvian ? data.AvianShinColor : data.LongShinColor);
 			base.Spine.SetColor("Player thigh right", data.BodyColor);
 			base.Spine.SetColor("Player thigh right markings inner thigh", data.UnderthighColor);
 			base.Spine.SetColor("Player thigh right stripes", data.StripesColor);

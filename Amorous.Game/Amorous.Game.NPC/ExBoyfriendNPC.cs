@@ -24,7 +24,6 @@ public class ExBoyfriendNPC : LayerNPC<ExBoyfriendNPC.EHeads, ExBoyfriendNPC.EPo
 	}
 
 	public static string Name = "Vareoth";
-
 	public static Color Color = new Color(139, 215, 125);
 
 	public ExBoyfriendNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class ExBoyfriendNPC : LayerNPC<ExBoyfriendNPC.EHeads, ExBoyfriendNPC.EPo
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 546f;
-			Y = 177f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = -120f;
-			Y = 177f;
-			break;
-		case NPCLocation.Right:
-			FlipX = true;
-			X = 1412f;
-			Y = 177f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 546f;
+				Y = 177f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = -120f;
+				Y = 177f;
+				break;
+			case NPCLocation.Right:
+				FlipX = true;
+				X = 1412f;
+				Y = 177f;
+				break;
 		}
 	}
 }

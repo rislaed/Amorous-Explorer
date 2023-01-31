@@ -23,7 +23,6 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 	}
 
 	public static string Name = "Hane Maxwell";
-
 	public static Color Color = new Color(186, 78, 60);
 
 	public CosplayerHaneNPC(IAmorous game)
@@ -40,21 +39,21 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 413f;
-			Y = 0f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -190f;
-			Y = 0f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1016f;
-			Y = 0f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 413f;
+				Y = 0f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -190f;
+				Y = 0f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1016f;
+				Y = 0f;
+				break;
 		}
 	}
 }

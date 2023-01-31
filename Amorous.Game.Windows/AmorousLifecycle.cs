@@ -45,17 +45,17 @@ public static class AmorousLifecycle
 				SetDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
 			}
 		}
-		FNALoggerEXT.LogInfo = delegate(string string_0)
+		FNALoggerEXT.LogInfo = delegate(string message)
 		{
-			Logger.Log(string_0);
+			Logger.Log(message);
 		};
-		FNALoggerEXT.LogWarn = delegate(string string_0)
+		FNALoggerEXT.LogWarn = delegate(string message)
 		{
-			Logger.Warning(string_0);
+			Logger.Warning(message);
 		};
-		FNALoggerEXT.LogError = delegate(string string_0)
+		FNALoggerEXT.LogError = delegate(string message)
 		{
-			Logger.Error(string_0);
+			Logger.Error(message);
 		};
 		Environment.SetEnvironmentVariable("FNA_OPENGL_DISABLE_LATESWAPTEAR", "1");
 		try

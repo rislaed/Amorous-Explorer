@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class DrawableLayer : AbstractLayer
 { // _fAUddQEKfZyemRb327NhM3GGlmzA
-	public Matrix AdditionalMatrix { get; set; }
+	public Matrix DrawableMatrix { get; set; }
 	public Action<GameTime> OnUpdate { private get; set; }
 	public Action<SpriteBatch> OnDraw { private get; set; }
 

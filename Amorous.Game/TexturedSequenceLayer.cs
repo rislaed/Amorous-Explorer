@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class TexturedSequenceLayer : AbstractLayer
 { // _Yu3OngEjZbsgelWEySu6GE7aoYg
-	private int Value;
+	private int _state;
 
 	public Texture2D[] Textures { get; private set; }
 
@@ -11,21 +11,21 @@ public class TexturedSequenceLayer : AbstractLayer
 	{
 		get
 		{
-			return Value;
+			return _state;
 		}
 		set
 		{
 			if (value < 0)
 			{
-				Value = 0;
+				_state = 0;
 			}
 			else if (value < Textures.Length)
 			{
-				Value = value;
+				_state = value;
 			}
 			else
 			{
-				Value = Textures.Length - 1;
+				_state = Textures.Length - 1;
 			}
 		}
 	}

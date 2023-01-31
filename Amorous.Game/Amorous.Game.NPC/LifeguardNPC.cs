@@ -24,7 +24,6 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 	}
 
 	public static string Name = "Riptide";
-
 	public static Color Color = new Color(244, 146, 66);
 
 	public LifeguardNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 689f;
-			Y = 102f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -271f;
-			Y = 102f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1320f;
-			Y = 102f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 689f;
+				Y = 102f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -271f;
+				Y = 102f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1320f;
+				Y = 102f;
+				break;
 		}
 	}
 }

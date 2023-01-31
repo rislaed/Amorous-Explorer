@@ -21,10 +21,10 @@ public class JaxContactsCheckEvent : AbstractEvent<JaxContactsCheckEventData>
 	public override void Update(GameTime gameTime)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		int num = data.GetContactCount();
-		if (num > 1)
+		int count = data.GetContactCount();
+		if (count > 1)
 		{
-			if (num >= 1 && num <= 2)
+			if (count >= 1 && count <= 2)
 			{
 				base.NextID = OneOrTwoID;
 			}

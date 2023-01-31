@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using Squid;
 
-public static class SquidUtils
+public static class SquidDesktop
 { // _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
-	public static readonly Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?> _HSj1lr89AFIB9adVhSrAeWjS1xC = new Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?>
+	public static readonly Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?> Keys = new Dictionary<Microsoft.Xna.Framework.Input.Keys,Squid.Keys?>
 	{
 		{
 			Microsoft.Xna.Framework.Input.Keys.None,
@@ -648,78 +648,78 @@ public static class SquidUtils
 		}
 	};
 
-	public static char? ChangeKeyboard(this Microsoft.Xna.Framework.Input.Keys keys_0, bool bool_0)
+	public static char? ChangeKeyboard(this Microsoft.Xna.Framework.Input.Keys keys, bool capital)
 	{
-		return keys_0 switch
+		return keys switch
 		{
-			Microsoft.Xna.Framework.Input.Keys.A => bool_0 ? 'A' : 'a', 
-			Microsoft.Xna.Framework.Input.Keys.B => bool_0 ? 'B' : 'b', 
-			Microsoft.Xna.Framework.Input.Keys.C => bool_0 ? 'C' : 'c', 
-			Microsoft.Xna.Framework.Input.Keys.D => bool_0 ? 'D' : 'd', 
-			Microsoft.Xna.Framework.Input.Keys.E => bool_0 ? 'E' : 'e', 
-			Microsoft.Xna.Framework.Input.Keys.H => bool_0 ? 'H' : 'h', 
-			Microsoft.Xna.Framework.Input.Keys.K => bool_0 ? 'K' : 'k', 
-			Microsoft.Xna.Framework.Input.Keys.M => bool_0 ? 'M' : 'm', 
-			Microsoft.Xna.Framework.Input.Keys.P => bool_0 ? 'P' : 'p', 
-			Microsoft.Xna.Framework.Input.Keys.Q => bool_0 ? 'Q' : 'q', 
-			Microsoft.Xna.Framework.Input.Keys.S => bool_0 ? 'S' : 's', 
-			Microsoft.Xna.Framework.Input.Keys.T => bool_0 ? 'T' : 't', 
-			Microsoft.Xna.Framework.Input.Keys.V => bool_0 ? 'V' : 'v', 
-			Microsoft.Xna.Framework.Input.Keys.W => bool_0 ? 'W' : 'w', 
-			Microsoft.Xna.Framework.Input.Keys.X => bool_0 ? 'X' : 'x', 
-			Microsoft.Xna.Framework.Input.Keys.D3 => bool_0 ? '#' : '3', 
-			Microsoft.Xna.Framework.Input.Keys.D4 => bool_0 ? '$' : '4', 
-			Microsoft.Xna.Framework.Input.Keys.D5 => bool_0 ? '%' : '5', 
-			Microsoft.Xna.Framework.Input.Keys.D6 => bool_0 ? '^' : '6', 
-			Microsoft.Xna.Framework.Input.Keys.D7 => bool_0 ? '&' : '7', 
-			Microsoft.Xna.Framework.Input.Keys.D9 => bool_0 ? '(' : '9', 
-			Microsoft.Xna.Framework.Input.Keys.OemTilde => bool_0 ? '~' : '`', 
-			Microsoft.Xna.Framework.Input.Keys.OemOpenBrackets => bool_0 ? '{' : '[', 
-			Microsoft.Xna.Framework.Input.Keys.OemQuotes => bool_0 ? '"' : '\'', 
-			Microsoft.Xna.Framework.Input.Keys.OemComma => bool_0 ? '<' : ',', 
-			Microsoft.Xna.Framework.Input.Keys.OemPeriod => bool_0 ? '>' : '.', 
-			Microsoft.Xna.Framework.Input.Keys.OemQuestion => bool_0 ? '?' : '/', 
-			Microsoft.Xna.Framework.Input.Keys.Space => ' ', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad3 => '3', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad6 => '6', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad7 => '7', 
-			Microsoft.Xna.Framework.Input.Keys.Divide => '/', 
-			Microsoft.Xna.Framework.Input.Keys.Multiply => '*', 
-			Microsoft.Xna.Framework.Input.Keys.Subtract => '-', 
-			Microsoft.Xna.Framework.Input.Keys.Decimal => '.', 
-			Microsoft.Xna.Framework.Input.Keys.Add => '+', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad9 => '9', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad8 => '8', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad5 => '5', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad4 => '4', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad2 => '2', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad1 => '1', 
-			Microsoft.Xna.Framework.Input.Keys.NumPad0 => '0', 
-			Microsoft.Xna.Framework.Input.Keys.Enter => '\r', 
-			Microsoft.Xna.Framework.Input.Keys.Back => '\b', 
-			Microsoft.Xna.Framework.Input.Keys.Tab => '\t', 
-			Microsoft.Xna.Framework.Input.Keys.OemBackslash => '\\', 
-			Microsoft.Xna.Framework.Input.Keys.OemSemicolon => bool_0 ? ':' : ';', 
-			Microsoft.Xna.Framework.Input.Keys.OemPipe => bool_0 ? '|' : '\\', 
-			Microsoft.Xna.Framework.Input.Keys.OemCloseBrackets => bool_0 ? '}' : ']', 
-			Microsoft.Xna.Framework.Input.Keys.OemPlus => bool_0 ? '+' : '=', 
-			Microsoft.Xna.Framework.Input.Keys.OemMinus => bool_0 ? '_' : '-', 
-			Microsoft.Xna.Framework.Input.Keys.D0 => bool_0 ? ')' : '0', 
-			Microsoft.Xna.Framework.Input.Keys.D8 => bool_0 ? '*' : '8', 
-			Microsoft.Xna.Framework.Input.Keys.D2 => bool_0 ? '@' : '2', 
-			Microsoft.Xna.Framework.Input.Keys.D1 => bool_0 ? '!' : '1', 
-			Microsoft.Xna.Framework.Input.Keys.Z => bool_0 ? 'Z' : 'z', 
-			Microsoft.Xna.Framework.Input.Keys.Y => bool_0 ? 'Y' : 'y', 
-			Microsoft.Xna.Framework.Input.Keys.U => bool_0 ? 'U' : 'u', 
-			Microsoft.Xna.Framework.Input.Keys.R => bool_0 ? 'R' : 'r', 
-			Microsoft.Xna.Framework.Input.Keys.O => bool_0 ? 'O' : 'o', 
-			Microsoft.Xna.Framework.Input.Keys.N => bool_0 ? 'N' : 'n', 
-			Microsoft.Xna.Framework.Input.Keys.L => bool_0 ? 'L' : 'l', 
-			Microsoft.Xna.Framework.Input.Keys.J => bool_0 ? 'J' : 'j', 
-			Microsoft.Xna.Framework.Input.Keys.I => bool_0 ? 'I' : 'i', 
-			Microsoft.Xna.Framework.Input.Keys.G => bool_0 ? 'G' : 'g', 
-			Microsoft.Xna.Framework.Input.Keys.F => bool_0 ? 'F' : 'f', 
-			_ => null, 
+			Microsoft.Xna.Framework.Input.Keys.A => capital ? 'A' : 'a',
+			Microsoft.Xna.Framework.Input.Keys.B => capital ? 'B' : 'b',
+			Microsoft.Xna.Framework.Input.Keys.C => capital ? 'C' : 'c',
+			Microsoft.Xna.Framework.Input.Keys.D => capital ? 'D' : 'd',
+			Microsoft.Xna.Framework.Input.Keys.E => capital ? 'E' : 'e',
+			Microsoft.Xna.Framework.Input.Keys.H => capital ? 'H' : 'h',
+			Microsoft.Xna.Framework.Input.Keys.K => capital ? 'K' : 'k',
+			Microsoft.Xna.Framework.Input.Keys.M => capital ? 'M' : 'm',
+			Microsoft.Xna.Framework.Input.Keys.P => capital ? 'P' : 'p',
+			Microsoft.Xna.Framework.Input.Keys.Q => capital ? 'Q' : 'q',
+			Microsoft.Xna.Framework.Input.Keys.S => capital ? 'S' : 's',
+			Microsoft.Xna.Framework.Input.Keys.T => capital ? 'T' : 't',
+			Microsoft.Xna.Framework.Input.Keys.V => capital ? 'V' : 'v',
+			Microsoft.Xna.Framework.Input.Keys.W => capital ? 'W' : 'w',
+			Microsoft.Xna.Framework.Input.Keys.X => capital ? 'X' : 'x',
+			Microsoft.Xna.Framework.Input.Keys.D3 => capital ? '#' : '3',
+			Microsoft.Xna.Framework.Input.Keys.D4 => capital ? '$' : '4',
+			Microsoft.Xna.Framework.Input.Keys.D5 => capital ? '%' : '5',
+			Microsoft.Xna.Framework.Input.Keys.D6 => capital ? '^' : '6',
+			Microsoft.Xna.Framework.Input.Keys.D7 => capital ? '&' : '7',
+			Microsoft.Xna.Framework.Input.Keys.D9 => capital ? '(' : '9',
+			Microsoft.Xna.Framework.Input.Keys.OemTilde => capital ? '~' : '`',
+			Microsoft.Xna.Framework.Input.Keys.OemOpenBrackets => capital ? '{' : '[',
+			Microsoft.Xna.Framework.Input.Keys.OemQuotes => capital ? '"' : '\'',
+			Microsoft.Xna.Framework.Input.Keys.OemComma => capital ? '<' : ',',
+			Microsoft.Xna.Framework.Input.Keys.OemPeriod => capital ? '>' : '.',
+			Microsoft.Xna.Framework.Input.Keys.OemQuestion => capital ? '?' : '/',
+			Microsoft.Xna.Framework.Input.Keys.Space => ' ',
+			Microsoft.Xna.Framework.Input.Keys.NumPad3 => '3',
+			Microsoft.Xna.Framework.Input.Keys.NumPad6 => '6',
+			Microsoft.Xna.Framework.Input.Keys.NumPad7 => '7',
+			Microsoft.Xna.Framework.Input.Keys.Divide => '/',
+			Microsoft.Xna.Framework.Input.Keys.Multiply => '*',
+			Microsoft.Xna.Framework.Input.Keys.Subtract => '-',
+			Microsoft.Xna.Framework.Input.Keys.Decimal => '.',
+			Microsoft.Xna.Framework.Input.Keys.Add => '+',
+			Microsoft.Xna.Framework.Input.Keys.NumPad9 => '9',
+			Microsoft.Xna.Framework.Input.Keys.NumPad8 => '8',
+			Microsoft.Xna.Framework.Input.Keys.NumPad5 => '5',
+			Microsoft.Xna.Framework.Input.Keys.NumPad4 => '4',
+			Microsoft.Xna.Framework.Input.Keys.NumPad2 => '2',
+			Microsoft.Xna.Framework.Input.Keys.NumPad1 => '1',
+			Microsoft.Xna.Framework.Input.Keys.NumPad0 => '0',
+			Microsoft.Xna.Framework.Input.Keys.Enter => '\r',
+			Microsoft.Xna.Framework.Input.Keys.Back => '\b',
+			Microsoft.Xna.Framework.Input.Keys.Tab => '\t',
+			Microsoft.Xna.Framework.Input.Keys.OemBackslash => '\\',
+			Microsoft.Xna.Framework.Input.Keys.OemSemicolon => capital ? ':' : ';',
+			Microsoft.Xna.Framework.Input.Keys.OemPipe => capital ? '|' : '\\',
+			Microsoft.Xna.Framework.Input.Keys.OemCloseBrackets => capital ? '}' : ']',
+			Microsoft.Xna.Framework.Input.Keys.OemPlus => capital ? '+' : '=',
+			Microsoft.Xna.Framework.Input.Keys.OemMinus => capital ? '_' : '-',
+			Microsoft.Xna.Framework.Input.Keys.D0 => capital ? ')' : '0',
+			Microsoft.Xna.Framework.Input.Keys.D8 => capital ? '*' : '8',
+			Microsoft.Xna.Framework.Input.Keys.D2 => capital ? '@' : '2',
+			Microsoft.Xna.Framework.Input.Keys.D1 => capital ? '!' : '1',
+			Microsoft.Xna.Framework.Input.Keys.Z => capital ? 'Z' : 'z',
+			Microsoft.Xna.Framework.Input.Keys.Y => capital ? 'Y' : 'y',
+			Microsoft.Xna.Framework.Input.Keys.U => capital ? 'U' : 'u',
+			Microsoft.Xna.Framework.Input.Keys.R => capital ? 'R' : 'r',
+			Microsoft.Xna.Framework.Input.Keys.O => capital ? 'O' : 'o',
+			Microsoft.Xna.Framework.Input.Keys.N => capital ? 'N' : 'n',
+			Microsoft.Xna.Framework.Input.Keys.L => capital ? 'L' : 'l',
+			Microsoft.Xna.Framework.Input.Keys.J => capital ? 'J' : 'j',
+			Microsoft.Xna.Framework.Input.Keys.I => capital ? 'I' : 'i',
+			Microsoft.Xna.Framework.Input.Keys.G => capital ? 'G' : 'g',
+			Microsoft.Xna.Framework.Input.Keys.F => capital ? 'F' : 'f',
+			_ => null,
 		};
 	}
 
@@ -740,84 +740,82 @@ public static class SquidUtils
 		}
 	}
 
-	public static void ShowConfirm(this Desktop desktop_0, string string_0, int int_0, string string_1 = "OK", Action confirm = null)
+	public static void ShowConfirm(this Desktop desktop, string message, int offset, string buttonText = "OK", Action confirm = null)
 	{
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
+		Window container = new Window
 		{
 			Modal = true,
 			Dock = DockStyle.Center,
 			Padding = new Margin(15),
-			Size = new Point(int_0, 0),
+			Size = new Point(offset, 0),
 			AutoSize = AutoSize.Vertical
 		};
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(new Label
+		container.Controls.Add(new Label
 		{
 			Dock = DockStyle.Top,
 			TextAlign = Alignment.MiddleCenter,
-			Text = string_0,
+			Text = message,
 			TextWrap = true,
 			AutoSize = AutoSize.Vertical,
-			Margin = new Margin(0, 0, 0, 10)
+			Margin = new Margin(0,0,0,10)
 		});
 		Button button = new Button
 		{
 			Dock = DockStyle.Top,
-			Text = string_1,
-			Padding = new Margin(5, 0, 5, 0),
-			Margin = new Margin(0, 0, 0, 15),
+			Text = buttonText,
+			Padding = new Margin(5,0,5,0),
+			Margin = new Margin(0,0,0,15),
 			Scissor = true
 		};
 		button.MouseClick += delegate
 		{
-			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
+			container.Close();
 			if (confirm != null)
 			{
 				confirm();
 			}
 		};
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(button);
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
+		container.Controls.Add(button);
+		container.Show(desktop);
 	}
 
-	public static void ShowSelection(this Desktop desktop_0, string string_0, string[] string_1, int int_0, Action<int> select)
+	public static void ShowSelection(this Desktop desktop, string message, string[] variants, int int_0, Action<int> select)
 	{
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
+		Window container = new Window
 		{
 			Modal = true,
 			Dock = DockStyle.Center,
 			Padding = new Margin(15),
-			Size = new Point(int_0, 0),
+			Size = new Point(int_0,0),
 			AutoSize = AutoSize.Vertical
 		};
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(new Label
+		container.Controls.Add(new Label
 		{
 			Dock = DockStyle.Top,
 			TextAlign = Alignment.MiddleCenter,
-			Text = string_0,
+			Text = message,
 			TextWrap = true,
 			AutoSize = AutoSize.Vertical,
-			Margin = new Margin(0, 0, 0, 10)
+			Margin = new Margin(0,0,0,10)
 		});
-		for (int i = 0; i < string_1.Length; i++)
+		for (int i = 0; i < variants.Length; i++)
 		{
-			string text = string_1[i];
 			Button button = new Button
 			{
 				Dock = DockStyle.Top,
-				Text = text,
+				Text = variants[i],
 				Padding = new Margin(5, 0, 5, 0),
-				Margin = new Margin(0, 0, 0, (i < string_1.Length - 1) ? 5 : 15),
+				Margin = new Margin(0, 0, 0, (i < variants.Length - 1) ? 5 : 15),
 				Scissor = true
 			};
-			int _5ft6kbimSBgLCWvFCD6FPEU8cCO = i;
+			int index = i;
 			button.MouseClick += delegate
 			{
-				int obj = _5ft6kbimSBgLCWvFCD6FPEU8cCO;
-				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-				select(obj);
+				container.Close();
+				select(index);
 			};
-			_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(button);
+			container.Controls.Add(button);
 		}
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(desktop_0);
+		container.Show(desktop);
 	}
 }

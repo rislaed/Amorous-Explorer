@@ -24,7 +24,6 @@ public class SororityGirlNPC : LayerNPC<SororityGirlNPC.EHeads, SororityGirlNPC.
 	}
 
 	public static string Name = "Lunar";
-
 	public static Color Color = new Color(221, 110, 218);
 
 	public SororityGirlNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class SororityGirlNPC : LayerNPC<SororityGirlNPC.EHeads, SororityGirlNPC.
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 665f;
-			Y = 126f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -60f;
-			Y = 126f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1390f;
-			Y = 126f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 665f;
+				Y = 126f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -60f;
+				Y = 126f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1390f;
+				Y = 126f;
+				break;
 		}
 	}
 }

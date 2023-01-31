@@ -34,14 +34,14 @@ public class SaveMigrationScene : AbstractScene
 		couplesRight.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
 		if (_cutscene != null)
 		{
-			base.Game.StartCutscene(_cutscene);
+			base.Game.PlayCutscene(_cutscene);
 		}
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		if (!_started && !base.Game.InScenePending && base.Game.Cutscene == null)
+		if (!_started && !base.Game.InPendingScene && base.Game.Cutscene == null)
 		{
 			_started = true;
 			base.Game.StartScene(_scene);

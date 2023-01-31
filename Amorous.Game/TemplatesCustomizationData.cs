@@ -1,10 +1,10 @@
 using System.Reflection;
 
-public static class CensoredPlayerData
+public static class TemplatesCustomizationData
 { // _z8oOEvKr598r7HgA3VFwVCn2j0q
-	public static void _IVxmfAaagekk8d3cdgAtQRhbUY9(this PlayerData data, PlayerCustomizationData configuration)
+	public static void CloneCustomizationData(this PlayerData data, PlayerCustomizationData configuration)
 	{
-		data.ResetPlayer();
+		data.ResetData();
 		if (Censorship.Censored)
 		{
 			configuration.CockType = PlayerData.ECockType.None;
@@ -12,36 +12,36 @@ public static class CensoredPlayerData
 			configuration.BreastsType = PlayerData.EBreastsType.None;
 		}
 		PropertyInfo[] properties = configuration.GetType().GetProperties();
-		foreach (PropertyInfo propertyInfo in properties)
+		foreach (PropertyInfo info in properties)
 		{
-			if (!(propertyInfo.Name == "Name"))
+			if (!(info.Name == "Name"))
 			{
-				PropertyInfo property = data.GetType().GetProperty(propertyInfo.Name);
+				PropertyInfo property = data.GetType().GetProperty(info.Name);
 				if (!(property == null))
 				{
-					object value = propertyInfo.GetValue(configuration, null);
+					object value = info.GetValue(configuration, null);
 					property.SetValue(data, value, null);
 				}
 			}
 		}
 	}
 
-	public static PlayerCustomizationData _3phsCUyg0G1wDNmHtsfmOUToBpF(this PlayerData data, string name)
+	public static PlayerCustomizationData NewCustomizationData(this PlayerData data, string name)
 	{
 		PlayerCustomizationData configuration = new PlayerCustomizationData
 		{
 			Name = name
 		};
 		PropertyInfo[] properties = configuration.GetType().GetProperties();
-		foreach (PropertyInfo propertyInfo in properties)
+		foreach (PropertyInfo info in properties)
 		{
-			if (!(propertyInfo.Name == "Name"))
+			if (!(info.Name == "Name"))
 			{
-				PropertyInfo property = data.GetType().GetProperty(propertyInfo.Name);
+				PropertyInfo property = data.GetType().GetProperty(info.Name);
 				if (!(property == null))
 				{
 					object value = property.GetValue(data, null);
-					propertyInfo.SetValue(configuration, value, null);
+					info.SetValue(configuration, value, null);
 				}
 			}
 		}

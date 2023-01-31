@@ -48,24 +48,24 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 655f;
-			Y = 78f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = 100f;
-			Y = 78f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1210f;
-			Y = 78f;
-			base.Scale = 1f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 655f;
+				Y = 78f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = 100f;
+				Y = 78f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1210f;
+				Y = 78f;
+				base.Scale = 1f;
+				break;
 		}
 	}
 }

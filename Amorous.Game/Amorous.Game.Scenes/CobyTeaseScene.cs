@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
 
@@ -9,46 +6,45 @@ namespace Amorous.Game.Scenes;
 
 public class CobyTeaseScene : AbstractScene
 {
-	public const string _49wRM6p4FnMoH7b17tjNG4eYx0 = "Panties";
+	public const string VariantPanties = "Panties";
+	public const string VariantTease = "Default";
 
-	public const string _IwkDWPkJa4LinNlSxooUdCPU4oq = "Default";
-
-	private readonly SpineRenderer _7vYi5xfMKLYMkbLDqzCDgoxrzIJ;
+	private readonly SpineRenderer _spine;
 
 	public CobyTeaseScene(IAmorous game)
 		: base(game)
 	{
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ = Game.Content.LoadSkeleton("Assets/Scenes/CobyTease/Coby buttshake Teasel");
-		SwitchToSubscene("Panties");
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.SetVisibility(1f);
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.StartAnimationWithLooping("animation");
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.X = 985f;
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.Y = 1081f;
+		_spine = Game.Content.LoadSkeleton("Assets/Scenes/CobyTease/Coby buttshake Teasel");
+		SwitchToSubscene(VariantPanties);
+		_spine.SetVisibility(1f);
+		_spine.StartAnimationWithLooping("animation");
+		_spine.X = 985f;
+		_spine.Y = 1081f;
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SunFunkTrack, 0.4f);
 	}
 
-	public override void SwitchToSubscene(string string_0)
+	public override void SwitchToSubscene(string subscene)
 	{
-		base.SwitchToSubscene(string_0);
-		if (string_0 == "Panties")
+		base.SwitchToSubscene(subscene);
+		if (subscene == VariantPanties)
 		{
-			_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.SetSkin("Panties");
+			_spine.SetSkin(VariantPanties);
 		}
 		else
 		{
-			_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.SetSkin("default");
+			_spine.SetSkin(VariantTease);
 		}
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.Update(gameTime, 1500f);
+		_spine.Update(gameTime, 1500f);
 	}
 
-	public override void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix_0)
+	public override void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer, Matrix matrix)
 	{
-		base.Draw(spriteBatch, skeletonMeshRenderer, matrix_0);
-		_7vYi5xfMKLYMkbLDqzCDgoxrzIJ.Draw(skeletonMeshRenderer);
+		base.Draw(spriteBatch, skeletonMeshRenderer, matrix);
+		_spine.Draw(skeletonMeshRenderer);
 	}
 }

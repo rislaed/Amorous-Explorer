@@ -44,7 +44,7 @@ public class AmorousSingleton : IAmorous
 	private SpriteFont _font;
 
 	private bool _hasControls;
-	private bool _debugger = true; // ?
+	private bool _debugger;
 	private bool _pendingScreenshot;
 
 	private static readonly string[] _nonContextualPlaces = new string[8]
@@ -60,22 +60,22 @@ public class AmorousSingleton : IAmorous
 	};
 
 	private Microsoft.Xna.Framework.Input.Keys[] _keyboard;
-	private string[] _debuggerCutsceneStates;
+	private string[] _debuggerCutscene;
 	private Vector2 _debuggerPoint;
 
 	public GameWindow Window => _game.Window;
-	public GraphicsDevice GLES => _game.GraphicsDevice;
+	public GraphicsDevice Graphics => _game.GraphicsDevice;
 	public ContentManager Content => _game.Content;
 	public ControllerObserver Controller => _controller;
 	public CanvasObserver Canvas => _canvas;
 	public AbstractScene Scene => _scene;
 	public AbstractSexscene Sexscene => _sexscene;
 	public Cutscene Cutscene => _cutscene;
-	public ScreenFader Fading => _fader;
+	public ScreenFader Fader => _fader;
 	public InteractableOverlay Overlay => _overlay;
 	public IAchievements Achievements => _achievements;
 	public bool IsFullscreen => _display.IsFullScreen;
-	public bool InScenePending { get; set; }
+	public bool InPendingScene { get; set; }
 	public bool IsRenderingCursor { get; set; }
 	public bool IsControlsOnScreen => _hasControls;
 
@@ -115,7 +115,7 @@ public class AmorousSingleton : IAmorous
 			};
 		}
 		Content.RootDirectory = "Content-Release";
-		_game.Content = new ExtendedContentManager(Content.ServiceProvider, Content.RootDirectory);
+		_game.Content = new CompressableContentManager(Content.ServiceProvider, Content.RootDirectory);
 	}
 
 	public void Initialize()
@@ -158,7 +158,7 @@ public class AmorousSingleton : IAmorous
 		Gui.Renderer = new SquidRenderer(_game);
 		Gui.Renderer.SetTexture("PhoneScreen", _game.Content.Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
 		Gui.Renderer.SetTexture("Contact_DJ", _game.Content.Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
-		Confirmations.WhenReturnToMenu = ReturnToMenu;
+		Overlays.WhenReturnToMenu = ReturnToMenu;
 		_player = new PlayerPreferences();
 		_fader = new ScreenFader(_game.GraphicsDevice);
 		_media = new FadingMediaPlayer(_game.Content);
@@ -203,22 +203,21 @@ public class AmorousSingleton : IAmorous
 	protected virtual void Start()
 	{
 		_scene = new EmptyScene(this);
-		Fading.ApplyNow(new Color(0, 0, 0, 255));
+		Fader.ApplyNow(new Color(0, 0, 0, 255));
 		SwitchToScene<MainMenuScene>(delegate
 		{
-			Fading.FadeIn();
+			Fader.FadeIn();
 		});
 	}
 
 	public void UnloadContent() {
-		// ?
 	}
 
 	public void Update(GameTime gameTime)
 	{
-		if (InScenePending && _pendingScene == null)
+		if (InPendingScene && _pendingScene == null)
 		{
-			InScenePending = false;
+			InPendingScene = false;
 			if (_pendingSceneThen != null)
 			{
 				Action action = _pendingSceneThen;
@@ -269,8 +268,8 @@ public class AmorousSingleton : IAmorous
 			_cutscene.Update(gameTime);
 			if (!_cutscene.Active)
 			{
-				_debuggerCutsceneStates = _cutscene.ToString(5);
-				Logger.Log(ConsoleColor.White, "Debug", "Finishing cutscene '{0}' ({1})", _cutscene.Data.Name, string.Join(", ", _debuggerCutsceneStates).Trim(new char[] { ' ', ',' }));
+				_debuggerCutscene = _cutscene.ToString(5);
+				Logger.Log(ConsoleColor.White, "Debug", "Finishing cutscene '{0}' ({1})", _cutscene.Data.Name, string.Join(", ", _debuggerCutscene).Trim(new char[] { ' ', ',' }));
 				_cutscene = null;
 			}
 		}
@@ -291,7 +290,7 @@ public class AmorousSingleton : IAmorous
 			bool released = Controller.IsReleasing(keys);
 			if (pressed || released)
 			{
-				Squid.Keys? availables = SquidUtils._HSj1lr89AFIB9adVhSrAeWjS1xC[Keyboard.GetKeyFromScancodeEXT(keys)];
+				Squid.Keys? availables = SquidDesktop.Keys[Keyboard.GetKeyFromScancodeEXT(keys)];
 				if (availables.HasValue)
 				{
 					list.Add(new KeyData
@@ -316,7 +315,7 @@ public class AmorousSingleton : IAmorous
 
 	public void Draw(GameTime gameTime)
 	{
-		Randoms.Date = (float)gameTime.TotalGameTime.TotalSeconds;
+		Utils.Date = (float)gameTime.TotalGameTime.TotalSeconds;
 		_game.GraphicsDevice.SetRenderTarget(_target);
 		_game.GraphicsDevice.Clear(Color.Black);
 		_scene.Draw(_batch, _spines, _canvas.OverscrollNoneMatrix);
@@ -347,69 +346,92 @@ public class AmorousSingleton : IAmorous
 			_writer.Draw(_batch);
 		}
 		_notifier.Draw(_batch);
-		object obj;
 		if (_debugger)
 		{
+			object sceneName = null;
 			if (_cutscene != null)
 			{
-				_debuggerCutsceneStates = _cutscene.ToString(5);
+				_debuggerCutscene = _cutscene.ToString(5);
 			}
 			_debuggerPoint.X = 10f;
 			_debuggerPoint.Y = 10f;
 			_batch.Begin();
 			_batch.DrawString(_font, "[Generic]", _debuggerPoint, Color.White);
 			_debuggerPoint.Y += 40f;
-			AbstractScene scene = _scene;
-			if (scene == null)
+			if (_scene != null)
 			{
-				obj = null;
+				sceneName = _scene.GetType().Name;
+			}
+			if (sceneName == null) {
+				sceneName = "None";
+			}
+			_batch.DrawString(_font, "Scene: " + sceneName, _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			_batch.DrawString(_font, "ScreenFader: " + _fader.State.A, _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			_debuggerPoint.Y += 40f;
+			_batch.DrawString(_font, "[Cutscenes]", _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			_batch.DrawString(_font, string.Format("Cutscene in progress: {0}", (_cutscene == null) ? "No" : "Yes"), _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			if (_debuggerCutscene != null)
+			{
+				_batch.DrawString(_font, "Cutscene: " + _debuggerCutscene[0], _debuggerPoint, Color.White);
+				_debuggerPoint.Y += 40f;
+				_batch.DrawString(_font, "Stage: " + _debuggerCutscene[1], _debuggerPoint, Color.White);
+				_debuggerPoint.Y += 40f;
+				_batch.DrawString(_font, "Path: " + _debuggerCutscene[2], _debuggerPoint, Color.White);
+				_debuggerPoint.Y += 40f;
+				_batch.DrawString(_font, "Current: " + _debuggerCutscene[3], _debuggerPoint, Color.White);
+				_debuggerPoint.Y += 40f;
 			}
 			else
 			{
-				obj = scene.GetType().Name;
-				if (obj != null)
-				{
-					goto IL_0220;
-				}
+				_batch.DrawString(_font, "Cutscene: None", _debuggerPoint, Color.White);
+				_debuggerPoint.Y += 40f;
 			}
-			obj = "None";
-			goto IL_0220;
+			_debuggerPoint.Y += 40f;
+			_batch.DrawString(_font, "Press Tab to toggle", _debuggerPoint, Color.White);
+			_debuggerPoint.Y += 40f;
+			_batch.End();
 		}
-		goto IL_04d3;
-		IL_0220:
-		#nullable enable
-		_batch.DrawString(_font, "Scene: " + (string?)obj, _debuggerPoint, Color.White);
-		#nullable restore
-		_debuggerPoint.Y += 40f;
-		_batch.DrawString(_font, "ScreenFader: " + _fader.State.A, _debuggerPoint, Color.White);
-		_debuggerPoint.Y += 40f;
-		_debuggerPoint.Y += 40f;
-		_batch.DrawString(_font, "[Cutscenes]", _debuggerPoint, Color.White);
-		_debuggerPoint.Y += 40f;
-		_batch.DrawString(_font, string.Format("Cutscene in progress: {0}", (_cutscene == null) ? "No" : "Yes"), _debuggerPoint, Color.White);
-		_debuggerPoint.Y += 40f;
-		if (_debuggerCutsceneStates != null)
+		if (_pendingScreenshot)
 		{
-			_batch.DrawString(_font, "Cutscene: " + _debuggerCutsceneStates[0], _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			_batch.DrawString(_font, "Stage: " + _debuggerCutsceneStates[1], _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			_batch.DrawString(_font, "Path: " + _debuggerCutsceneStates[2], _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			_batch.DrawString(_font, "Current: " + _debuggerCutsceneStates[3], _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
+			_pendingScreenshot = false;
+			if (!Directory.Exists("Screenshots"))
+			{
+				Directory.CreateDirectory("Screenshots");
+			}
+			string screenshotDirectory = $"Screenshots/screenshot-{DateTime.Now.DayOfYear}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}.png";
+			string screenshotPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, screenshotDirectory);
+			using (Stream stream = File.OpenWrite(screenshotPath))
+			{
+				_target.SaveAsPng(stream, _canvas.Width, _canvas.Height);
+			}
+			if (_steam != null)
+			{
+				_steam.AddScreenshotToLibrary(screenshotPath, _canvas.Width, _canvas.Height);
+			}
+			if (_debugger && _debuggerCutscene != null)
+			{
+				string scenePath = $"{screenshotPath}.txt";
+				object sceneName = null;
+				if (_scene != null)
+				{
+					sceneName = _scene.GetType().Name;
+				}
+				if (sceneName == null) {
+					sceneName = "None";
+				}
+				object[] sceneInformation = new object[5];
+				sceneInformation[0] = sceneName;
+				sceneInformation[1] = _debuggerCutscene[0];
+				sceneInformation[2] = _debuggerCutscene[1];
+				sceneInformation[3] = _debuggerCutscene[2];
+				sceneInformation[4] = _debuggerCutscene[3];
+				File.WriteAllText(scenePath, string.Format("Scene: {0}\r\nCutscene: {1}\r\nStage: {2}\r\nPath: {3}\r\nCurrent: {4}", sceneInformation));
+			}
 		}
-		else
-		{
-			_batch.DrawString(_font, "Cutscene: None", _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-		}
-		_debuggerPoint.Y += 40f;
-		_batch.DrawString(_font, "Press Tab to toggle", _debuggerPoint, Color.White);
-		_debuggerPoint.Y += 40f;
-		_batch.End();
-		goto IL_04d3;
-		IL_065c:
 		_game.GraphicsDevice.SetRenderTarget(null);
 		_game.GraphicsDevice.Clear(Color.Black);
 		_batch.Begin();
@@ -419,56 +441,6 @@ public class AmorousSingleton : IAmorous
 			_batch.Draw(_cursorTexture, Controller.CursorVector, _player.Data.PhoneColor);
 		}
 		_batch.End();
-		return;
-		IL_04d3:
-		string path2;
-		object sceneName;
-		if (_pendingScreenshot)
-		{
-			_pendingScreenshot = false;
-			if (!Directory.Exists("Screenshots"))
-			{
-				Directory.CreateDirectory("Screenshots");
-			}
-			string path = $"Screenshots/screenshot-{DateTime.Now.DayOfYear}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}.png";
-			string text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
-			using (Stream stream = File.OpenWrite(text))
-			{
-				_target.SaveAsPng(stream, _canvas.Width, _canvas.Height);
-			}
-			if (_steam != null)
-			{
-				_steam.AddScreenshotToLibrary(text, _canvas.Width, _canvas.Height);
-			}
-			if (_debugger && _debuggerCutsceneStates != null)
-			{
-				path2 = $"{text}.txt";
-				if (_scene == null)
-				{
-					sceneName = null;
-				}
-				else
-				{
-					sceneName = _scene.GetType().Name;
-					if (sceneName != null)
-					{
-						goto IL_0625;
-					}
-				}
-				sceneName = "None";
-				goto IL_0625;
-			}
-		}
-		goto IL_065c;
-		IL_0625:
-		object[] array = new object[5];
-		array[0] = sceneName;
-		array[1] = _debuggerCutsceneStates[0];
-		array[2] = _debuggerCutsceneStates[1];
-		array[3] = _debuggerCutsceneStates[2];
-		array[4] = _debuggerCutsceneStates[3];
-		File.WriteAllText(path2, string.Format("Scene: {0}\r\nCutscene: {1}\r\nStage: {2}\r\nPath: {3}\r\nCurrent: {4}", array));
-		goto IL_065c;
 	}
 
 	public void RefreshDisplay()
@@ -563,11 +535,11 @@ public class AmorousSingleton : IAmorous
 		}
 		_pendingSceneThen = then;
 		_canvas.ResetOverscroll();
-		PlayerPreferences.SetPlayerSkin(null);
+		PlayerPreferences.SetPlayerOverlay(null);
 		_overlay = null;
 		_sexscene = null;
 		_pendingScene = Activator.CreateInstance(typeof(T), this) as AbstractScene;
-		InScenePending = true;
+		InPendingScene = true;
 	}
 
 	public void SwitchToScene(string name, Action then = null)
@@ -586,11 +558,11 @@ public class AmorousSingleton : IAmorous
 		if (!(type == null))
 		{
 			_canvas.ResetOverscroll();
-			PlayerPreferences.SetPlayerSkin(null);
+			PlayerPreferences.SetPlayerOverlay(null);
 			_overlay = null;
 			_sexscene = null;
 			_pendingScene = Activator.CreateInstance(type, this) as AbstractScene;
-			InScenePending = true;
+			InPendingScene = true;
 		}
 		else
 		{
@@ -608,11 +580,11 @@ public class AmorousSingleton : IAmorous
 		}
 		_pendingSceneThen = then;
 		_canvas.ResetOverscroll();
-		PlayerPreferences.SetPlayerSkin(null);
+		PlayerPreferences.SetPlayerOverlay(null);
 		_overlay = null;
 		_sexscene = null;
 		_pendingScene = scene;
-		InScenePending = true;
+		InPendingScene = true;
 	}
 
 	public void PlaySexscene(string name)
@@ -641,13 +613,13 @@ public class AmorousSingleton : IAmorous
 		_sexscene = null;
 	}
 
-	public void StartCutscene(string name)
+	public void PlayCutscene(string name)
 	{
 		Cutscene cutscene = ReadCutscene(name);
-		StartCutscene(cutscene);
+		PlayCutscene(cutscene);
 	}
 
-	public void StartCutscene(Cutscene cutscene)
+	public void PlayCutscene(Cutscene cutscene)
 	{
 		if (cutscene != null)
 		{
@@ -665,7 +637,6 @@ public class AmorousSingleton : IAmorous
 
 	private Cutscene ReadCutscene(string name)
 	{
-		// TODO: Such as ModLoader thing implementation
 		string path = Path.Combine(Content.RootDirectory, $"Content-Mods/Data/Quests/{name}.json");
 		string json;
 		if (File.Exists(path))
@@ -709,7 +680,7 @@ public class AmorousSingleton : IAmorous
 				Sexscene = Sexscene?.GetType().Name,
 				SexscenePhase = (Sexscene?.State ?? AbstractSexscene.Phase.Idle),
 				SexsceneFinished = (Sexscene?.Exploded ?? false),
-				FadedOut = (Fading.State.A > 0)
+				FadedOut = (Fader.State.A > 0)
 			};
 			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Left));
 			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Middle));
@@ -721,7 +692,7 @@ public class AmorousSingleton : IAmorous
 
 	private void LoadCutscene(CutsceneState state)
 	{
-		Fading.FadeOut(delegate
+		Fader.FadeOut(delegate
 		{
 			Cutscene cutscene = ReadCutscene(state.Name);
 			if (cutscene != null)
@@ -751,7 +722,7 @@ public class AmorousSingleton : IAmorous
 					}
 					else
 					{
-						Fading.FadeIn(delegate
+						Fader.FadeIn(delegate
 						{
 							_cutscene = cutscene;
 							_cutscene.Start(state.Stage, state.ID);
@@ -850,7 +821,7 @@ public class AmorousSingleton : IAmorous
 	{
 		Saves.Save(slot, new SaveData
 		{
-			Version = SavesDatabase.CurrentlyVersion,
+			Version = SavesMigration.CurrentlyVersion,
 			PlayerData = _player.Data,
 			CutsceneState = GetCutsceneState(),
 			SceneName = _scene.GetType().Name,
@@ -862,7 +833,7 @@ public class AmorousSingleton : IAmorous
 	{
 		Saves.Autosave(slot, new SaveData
 		{
-			Version = SavesDatabase.CurrentlyVersion,
+			Version = SavesMigration.CurrentlyVersion,
 			PlayerData = _player.Data,
 			SceneName = _scene.GetType().Name,
 			PhoneEnabled = PhoneOverlay.Enabled
@@ -875,7 +846,7 @@ public class AmorousSingleton : IAmorous
 		SaveData save = Saves.Read(slot);
 		if (save != null)
 		{
-			SavesDatabase.RestoreSaveData(save);
+			SavesMigration.RestoreSaveData(save);
 			_player.Data = save.PlayerData;
 			PhoneOverlay.Enabled = save.PhoneEnabled;
 			PhoneOverlay.Get().RefreshSkin();
@@ -891,7 +862,7 @@ public class AmorousSingleton : IAmorous
 				{
 					save.SceneName = typeof(ClubInsideScene).Name;
 				}
-				if (!SavesDatabase.StartMigration(this, save))
+				if (!SavesMigration.StartMigration(this, save))
 				{
 					StartScene(save.SceneName);
 				}
@@ -907,7 +878,7 @@ public class AmorousSingleton : IAmorous
 		SaveData save = Saves.ReadAutosave(slot);
 		if (save != null)
 		{
-			SavesDatabase.RestoreSaveData(save);
+			SavesMigration.RestoreSaveData(save);
 			_player.Data = save.PlayerData;
 			PhoneOverlay.Enabled = save.PhoneEnabled;
 			PhoneOverlay.Get().RefreshSkin();
@@ -917,7 +888,7 @@ public class AmorousSingleton : IAmorous
 			{
 				save.SceneName = typeof(ClubInsideScene).Name;
 			}
-			if (!SavesDatabase.StartMigration(this, save))
+			if (!SavesMigration.StartMigration(this, save))
 			{
 				StartScene(save.SceneName);
 			}

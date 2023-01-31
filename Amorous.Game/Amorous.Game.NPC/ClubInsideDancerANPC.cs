@@ -1,5 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
 using Amorous.Engine.NPC;
 
 namespace Amorous.Game.NPC;
@@ -25,11 +23,8 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 		Pants
 	}
 
-	private int _MRHxrmqa7mb7D9woehQMcBaVzSfA;
-
-	private int _CuajPz31r9WOAgF3NIMwGAOneYc;
-
-	private int _ujQoS5Vtc4de0wSOTrBu7W9PbRc;
+	private int _countDanceA, _countDanceB;
+	private int _offset;
 
 	public ClubInsideDancerANPC(IAmorous game)
 		: base(game, "Assets/NPC/ClubInsideStatic/Dancer A", 0.8f, premultipliedAlpha: true)
@@ -43,38 +38,38 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 		NudesBehindPants = true;
 	}
 
-	public void _KDimeEJ9On2dWcynEqeEZz9c8DE(int int_0, int int_1)
+	public void SetDanceScheme(int danceA, int danceB)
 	{
-		_MRHxrmqa7mb7D9woehQMcBaVzSfA = int_0;
-		_CuajPz31r9WOAgF3NIMwGAOneYc = int_1;
+		_countDanceA = danceA;
+		_countDanceB = danceB;
 		base.Spine.SetMix("Dance_A", "Dance_B", 0.5f);
 		base.Spine.SetMix("Dance_B", "Dance_A", 0.5f);
-		_ujQoS5Vtc4de0wSOTrBu7W9PbRc = _MRHxrmqa7mb7D9woehQMcBaVzSfA;
-		_W59CJD6wYGEUk3hOFlZnc3R24Ct();
+		_offset = _countDanceA;
+		StartDanceA();
 	}
 
-	public void _W59CJD6wYGEUk3hOFlZnc3R24Ct()
+	public void StartDanceA()
 	{
 		base.Spine.AddAnimation("Dance_A", looping: true, 0f, delegate
 		{
-			_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
-			if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)
+			_offset--;
+			if (_offset <= 0)
 			{
-				_ujQoS5Vtc4de0wSOTrBu7W9PbRc = _CuajPz31r9WOAgF3NIMwGAOneYc;
-				_QxrbucYEdHM0AE1Mfd0LKZp28pv();
+				_offset = _countDanceB;
+				StartDanceB();
 			}
 		});
 	}
 
-	public void _QxrbucYEdHM0AE1Mfd0LKZp28pv()
+	public void StartDanceB()
 	{
 		base.Spine.AddAnimation("Dance_B", looping: true, 0f, delegate
 		{
-			_ujQoS5Vtc4de0wSOTrBu7W9PbRc--;
-			if (_ujQoS5Vtc4de0wSOTrBu7W9PbRc <= 0)
+			_offset--;
+			if (_offset <= 0)
 			{
-				_ujQoS5Vtc4de0wSOTrBu7W9PbRc = _MRHxrmqa7mb7D9woehQMcBaVzSfA;
-				_W59CJD6wYGEUk3hOFlZnc3R24Ct();
+				_offset = _countDanceA;
+				StartDanceA();
 			}
 		});
 	}

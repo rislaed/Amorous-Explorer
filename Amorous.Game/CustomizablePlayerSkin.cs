@@ -5,28 +5,28 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 
-public class CustomizablePlayerSkin : AbstractPlayerSkin
+public class CustomizablePlayerSkin : AbstractPlayerOverlay
 { // _MqMsYrF1I2ghuKhx3f6aKuRGquq
-	public const int _X0FdDDJqVXe7X0FGiN6OsnaZtIF = 1040;
-	public const int _qeKBLvATV3QS3jYy3CuAJCqqAtbA = 960;
-	private const int _VTrOShnWP89ESyeqO1LPtrBoUIB = 350;
+	public const int MaxHeight = 1040;
+	public const int MinHeight = 960;
+	private const int ZoomHeight = 350;
 
-	private static readonly string _U8RMOUb18ulpoDDaA6ORCGlTl9P = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
-	private static readonly string _yMVbZb1CBoa3bnnWLWCSnPFoK4o = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves/playertemplates.json");
+	private static readonly string SavesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
+	private static readonly string PlayerTemplatesFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves/playertemplates.json");
 
-	private readonly CustomizationData _KyRTfqdr2zZtsEAgkvOlUoQoB5j;
-	private readonly List<PlayerCustomizationData> _HnbIDkSG3bmzUQyE7hhFdFKUaCcA = new List<PlayerCustomizationData>();
-	private List<PlayerCustomizationData> _hFBs7DhxsNnkc55oFfnyfMJ6PKb = new List<PlayerCustomizationData>();
-	private bool _Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn;
+	private readonly CustomizationData _customizationData;
+	private readonly List<PlayerCustomizationData> _stockTemplates = new List<PlayerCustomizationData>();
+	private List<PlayerCustomizationData> _customTemplates = new List<PlayerCustomizationData>();
+	private bool _zoomed;
 	private float _zoomScale;
-	private int _nD28BmrDaEzCHelTAa14TKyuSyG;
-	private int _zoomOffset;
-	private int _cux27d2yUtT8iqgPFghmznXR0nC = 1000;
+	private int _zoomOffsetX;
+	private int _zoomOffsetY;
+	private int _height = 1000;
 	private int _zoomInterpolation;
-	private float _iM7i7fLtaIJgLy3ciRpenDbf5CHb;
-	private float _ZTkD3TiiqWMrAbMLsoeIOBirnQc;
-	private int _wBWHhq9jY0K2NLTqM11LsE4yDM;
-	private int _kpLvTY6XXVX762n2WA2bxMWl8eL;
+	private float _targetZoomScale;
+	private float _previousZoomScale;
+	private int _targetZoomOffsetY;
+	private int _previousZoomOffsetY;
 
 	private readonly JsonSerializerSettings ExtendedSerializers = new JsonSerializerSettings
 	{
@@ -34,159 +34,159 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		Converters = { (JsonConverter)new ColorJsonConverter() }
 	};
 
-	private int _wO2k8QO0Jb1ECTFpHuFC2wQFtRB;
-	private int _fqUhMheAq3WxPgLgXhgAKkZQOss { get; set; }
+	private int _spriteIndex;
+	private int _previousCursorY { get; set; }
 
 	public int Height
 	{
 		get
 		{
-			return _cux27d2yUtT8iqgPFghmznXR0nC;
+			return _height;
 		}
 		set
 		{
-			if (_zoomInterpolation > 0 || _Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
+			if (_zoomInterpolation > 0 || _zoomed)
 			{
 				return;
 			}
-			if (value <= _X0FdDDJqVXe7X0FGiN6OsnaZtIF)
+			if (value <= MaxHeight)
 			{
-				if (value < _qeKBLvATV3QS3jYy3CuAJCqqAtbA)
+				if (value < MinHeight)
 				{
-					_cux27d2yUtT8iqgPFghmznXR0nC = _qeKBLvATV3QS3jYy3CuAJCqqAtbA;
+					_height = MinHeight;
 				}
 				else
 				{
-					_cux27d2yUtT8iqgPFghmznXR0nC = value;
+					_height = value;
 				}
 			}
 			else
 			{
-				_cux27d2yUtT8iqgPFghmznXR0nC = _X0FdDDJqVXe7X0FGiN6OsnaZtIF;
+				_height = MaxHeight;
 			}
-			_zoomScale = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
-			_zoomOffset = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
-			UpdateLayers();
+			_zoomScale = (float)_height / (float)_customizationData.Height;
+			_zoomOffsetY = 1080 - _height - 20;
+			UpdateZooming();
 		}
 	}
 
-	public bool _vZ6v4a6UcXrp8I7fOK5GurTGvwg => _Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn;
-	public IEnumerable<PlayerCustomizationData> _A088aXIdbVflSYtbl7vA5RjQOjXA => _HnbIDkSG3bmzUQyE7hhFdFKUaCcA;
-	public IEnumerable<PlayerCustomizationData> _I6gsCHlb2BKFCJSAk9Cn5fCMAPu => _hFBs7DhxsNnkc55oFfnyfMJ6PKb;
+	public bool IsZoomed => _zoomed;
+	public IEnumerable<PlayerCustomizationData> StockTemplates => _stockTemplates;
+	public IEnumerable<PlayerCustomizationData> CustomTemplates => _customTemplates;
 
 	public CustomizablePlayerSkin(IAmorous game)
 		: base(game)
 	{
 		string value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/Customization.json"));
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = JsonConvert.DeserializeObject<CustomizationData>(value, ExtendedSerializers);
+		_customizationData = JsonConvert.DeserializeObject<CustomizationData>(value, ExtendedSerializers);
 		value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/DefaultTemplates.json"));
-		PlayerCustomizationTemplatesData q0ZahtTsyov6ogSphMEhTo0NJfz = JsonConvert.DeserializeObject<PlayerCustomizationTemplatesData>(value, ExtendedSerializers);
-		_HnbIDkSG3bmzUQyE7hhFdFKUaCcA.AddRange(q0ZahtTsyov6ogSphMEhTo0NJfz.Templates);
-		_NTp4LybfIeImwrI3gGcIHmtkkDF();
-		_zoomScale = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
-		_nD28BmrDaEzCHelTAa14TKyuSyG = 400;
-		_zoomOffset = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
+		PlayerCustomizationTemplatesData templatesData = JsonConvert.DeserializeObject<PlayerCustomizationTemplatesData>(value, ExtendedSerializers);
+		_stockTemplates.AddRange(templatesData.Templates);
+		Load();
+		_zoomScale = (float)_height / (float)_customizationData.Height;
+		_zoomOffsetX = 400;
+		_zoomOffsetY = 1080 - _height - 20;
 	}
 
-	public CustomizablePlayerSkin(IAmorous game, CustomizationData _oVHccpskJmMcOYan50N52Esmi8k_0, IEnumerable<PlayerCustomizationData> ienumerable_0)
+	public CustomizablePlayerSkin(IAmorous game, CustomizationData data, IEnumerable<PlayerCustomizationData> prototype)
 		: base(game)
 	{
-		_KyRTfqdr2zZtsEAgkvOlUoQoB5j = _oVHccpskJmMcOYan50N52Esmi8k_0;
-		_HnbIDkSG3bmzUQyE7hhFdFKUaCcA.AddRange(ienumerable_0);
-		_zoomScale = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
-		_nD28BmrDaEzCHelTAa14TKyuSyG = 400;
-		_zoomOffset = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
+		_customizationData = data;
+		_stockTemplates.AddRange(prototype);
+		_zoomScale = (float)_height / (float)_customizationData.Height;
+		_zoomOffsetX = 400;
+		_zoomOffsetY = 1080 - _height - 20;
 	}
 
-	public PlayerCustomizationData _aeTnyiKZSEemnK3AXL8to8blcUj(PlayerCustomizationData _xJL9E6vKdg1LYZtKQU5RQKikpvE_0)
+	public PlayerCustomizationData Validate(PlayerCustomizationData data)
 	{
-		return JsonConvert.DeserializeObject<PlayerCustomizationData>(JsonConvert.SerializeObject(_xJL9E6vKdg1LYZtKQU5RQKikpvE_0, ExtendedSerializers), ExtendedSerializers);
+		return JsonConvert.DeserializeObject<PlayerCustomizationData>(JsonConvert.SerializeObject(data, ExtendedSerializers), ExtendedSerializers);
 	}
 
-	public void _0S3oMrwxDtOTcbzkglSllPfRq53(string string_0, PlayerData data)
+	public void AddCustomTemplate(string name, PlayerData data)
 	{
-		_hFBs7DhxsNnkc55oFfnyfMJ6PKb.Add(data._3phsCUyg0G1wDNmHtsfmOUToBpF(string_0));
-		_bItGCINkXiJ4CUgGi63Dq7RfLz8();
+		_customTemplates.Add(data.NewCustomizationData(name));
+		Save();
 	}
 
-	public void _WfRAwdaNcmrDEhMe1AHPq7egPcw(string string_0, int int_0, PlayerData data)
+	public void AddCustomTemplateAtIndex(string name, int index, PlayerData data)
 	{
-		if (int_0 >= 0 && int_0 < _hFBs7DhxsNnkc55oFfnyfMJ6PKb.Count)
+		if (index >= 0 && index < _customTemplates.Count)
 		{
-			_hFBs7DhxsNnkc55oFfnyfMJ6PKb[int_0] = data._3phsCUyg0G1wDNmHtsfmOUToBpF(string_0);
-			_bItGCINkXiJ4CUgGi63Dq7RfLz8();
+			_customTemplates[index] = data.NewCustomizationData(name);
+			Save();
 		}
 	}
 
-	public void _JC60lfB4LT6VifObN1Ynm6iARlc(int int_0)
+	public void ResetCustomTemplate(int index)
 	{
-		if (int_0 >= 0 && int_0 < _hFBs7DhxsNnkc55oFfnyfMJ6PKb.Count)
+		if (index >= 0 && index < _customTemplates.Count)
 		{
-			PlayerPreferences.GetPlayerData()._IVxmfAaagekk8d3cdgAtQRhbUY9(_hFBs7DhxsNnkc55oFfnyfMJ6PKb[int_0]);
-			RefreshData();
+			PlayerPreferences.GetPlayerData().CloneCustomizationData(_customTemplates[index]);
+			Refresh();
 		}
 	}
 
-	public void _FzyCgzYhOXEADaijk8VbcLulpcBA(int int_0)
+	public void RemoveCustomTemplate(int index)
 	{
-		if (int_0 >= 0 && int_0 < _hFBs7DhxsNnkc55oFfnyfMJ6PKb.Count)
+		if (index >= 0 && index < _customTemplates.Count)
 		{
-			_hFBs7DhxsNnkc55oFfnyfMJ6PKb.RemoveAt(int_0);
-			_bItGCINkXiJ4CUgGi63Dq7RfLz8();
+			_customTemplates.RemoveAt(index);
+			Save();
 		}
 	}
 
-	public void _BwV21jdCpo4YpIp6x74bJ0H7hut(int int_0)
+	public void CloneStockTemplate(int index)
 	{
-		if (int_0 >= 0 && int_0 < _HnbIDkSG3bmzUQyE7hhFdFKUaCcA.Count)
+		if (index >= 0 && index < _stockTemplates.Count)
 		{
-			PlayerPreferences.GetPlayerData()._IVxmfAaagekk8d3cdgAtQRhbUY9(_HnbIDkSG3bmzUQyE7hhFdFKUaCcA[int_0]);
-			RefreshData();
+			PlayerPreferences.GetPlayerData().CloneCustomizationData(_stockTemplates[index]);
+			Refresh();
 		}
 	}
 
-	public void _BCRMBb9uhQZrQlfdXPidu27yb8C(int int_0)
+	public void CloneCustomTemplate(int index)
 	{
-		if (int_0 >= 0 && int_0 < _hFBs7DhxsNnkc55oFfnyfMJ6PKb.Count)
+		if (index >= 0 && index < _customTemplates.Count)
 		{
-			PlayerPreferences.GetPlayerData()._IVxmfAaagekk8d3cdgAtQRhbUY9(_hFBs7DhxsNnkc55oFfnyfMJ6PKb[int_0]);
-			RefreshData();
+			PlayerPreferences.GetPlayerData().CloneCustomizationData(_customTemplates[index]);
+			Refresh();
 		}
 	}
 
-	public string _6qwooGF3jWmbG9887Y5IKZ8fJ0E(int int_0)
+	public string GetCustomTemplateName(int index)
 	{
-		if (int_0 >= 0 && int_0 < _hFBs7DhxsNnkc55oFfnyfMJ6PKb.Count)
+		if (index >= 0 && index < _customTemplates.Count)
 		{
-			return _hFBs7DhxsNnkc55oFfnyfMJ6PKb[int_0].Name;
+			return _customTemplates[index].Name;
 		}
 		return string.Empty;
 	}
 
-	private void _bItGCINkXiJ4CUgGi63Dq7RfLz8()
+	private void Save()
 	{
-		if (!Directory.Exists(_U8RMOUb18ulpoDDaA6ORCGlTl9P))
+		if (!Directory.Exists(SavesFolder))
 		{
-			Directory.CreateDirectory(_U8RMOUb18ulpoDDaA6ORCGlTl9P);
+			Directory.CreateDirectory(SavesFolder);
 		}
-		File.WriteAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o, JsonConvert.SerializeObject(_hFBs7DhxsNnkc55oFfnyfMJ6PKb, ExtendedSerializers));
+		File.WriteAllText(PlayerTemplatesFile, JsonConvert.SerializeObject(_customTemplates, ExtendedSerializers));
 	}
 
-	private void _NTp4LybfIeImwrI3gGcIHmtkkDF()
+	private void Load()
 	{
-		if (File.Exists(_yMVbZb1CBoa3bnnWLWCSnPFoK4o))
+		if (File.Exists(PlayerTemplatesFile))
 		{
-			List<PlayerCustomizationData> list = JsonConvert.DeserializeObject<List<PlayerCustomizationData>>(File.ReadAllText(_yMVbZb1CBoa3bnnWLWCSnPFoK4o), ExtendedSerializers);
-			if (list != null)
+			List<PlayerCustomizationData> templates = JsonConvert.DeserializeObject<List<PlayerCustomizationData>>(File.ReadAllText(PlayerTemplatesFile), ExtendedSerializers);
+			if (templates != null)
 			{
-				_hFBs7DhxsNnkc55oFfnyfMJ6PKb = list;
+				_customTemplates = templates;
 			}
 		}
 	}
 
-	public void RefreshData()
+	public void Refresh()
 	{
-		foreach (CustomizationGroupData item in _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups)
+		foreach (CustomizationGroupData item in _customizationData.Groups)
 		{
 			foreach (CustomizationLayerData item2 in item.Layers)
 			{
@@ -197,7 +197,7 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 			}
 		}
 		Initialize(PlayerPreferences.GetPlayerData());
-		foreach (CustomizationGroupData item3 in _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups)
+		foreach (CustomizationGroupData item3 in _customizationData.Groups)
 		{
 			foreach (CustomizationLayerData item4 in item3.Layers)
 			{
@@ -211,191 +211,191 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		}
 	}
 
-	private void _aXgmKv0acZSej4DXtFZ3EwykcX4(CustomizationGroupData _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0, CustomizationLayerData _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0)
+	private void CreateLayerSprite(CustomizationGroupData groupData, CustomizationLayerData layerData)
 	{
-		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer = NewSpriteLayer(_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName, $"Assets/PlayerCustomization/{_WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name}/{_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.AssetName}", _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.X + _nD28BmrDaEzCHelTAa14TKyuSyG, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Y + _zoomOffset, _Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.ZOrder, _zoomScale);
-		_Qzndj0TwqO8yTQMbRwL4FFwlTbv_0.Layer.Visible = false;
+		layerData.Layer = NewSpriteLayer(layerData.AssetName, $"Assets/PlayerCustomization/{groupData.Name}/{layerData.AssetName}", layerData.X + _zoomOffsetX, layerData.Y + _zoomOffsetY, layerData.ZOrder, _zoomScale);
+		layerData.Layer.Visible = false;
 	}
 
-	private void _MvwR0kE4wvi2cZX9CN5Dfu3jPWG(string string_0, string string_1, Color color_0)
+	private void SerializeColor(string group, string tag, Color color)
 	{
-		CustomizationGroupData wmDwUqOXqj6xpaw8SzHUPXR0uwB = _KyRTfqdr2zZtsEAgkvOlUoQoB5j.Groups.FirstOrDefault((CustomizationGroupData _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0) => _WmDwUqOXqj6xpaw8SzHUPXR0uwB_0.Name == string_0);
-		if (wmDwUqOXqj6xpaw8SzHUPXR0uwB == null)
+		CustomizationGroupData groupData = _customizationData.Groups.FirstOrDefault((CustomizationGroupData data) => data.Name == group);
+		if (groupData == null)
 		{
 			return;
 		}
-		foreach (CustomizationLayerData item in wmDwUqOXqj6xpaw8SzHUPXR0uwB.Layers)
+		foreach (CustomizationLayerData layerData in groupData.Layers)
 		{
-			if (item.Tags.Contains(string_1))
+			if (layerData.Tags.Contains(tag))
 			{
-				if (item.Layer == null)
+				if (layerData.Layer == null)
 				{
-					_aXgmKv0acZSej4DXtFZ3EwykcX4(wmDwUqOXqj6xpaw8SzHUPXR0uwB, item);
+					CreateLayerSprite(groupData, layerData);
 				}
-				item.Layer.Visible = true;
-				item.Layer.Color = color_0;
-				item.Layer.LayerOrder = _wO2k8QO0Jb1ECTFpHuFC2wQFtRB++;
+				layerData.Layer.Visible = true;
+				layerData.Layer.Color = color;
+				layerData.Layer.LayerOrder = _spriteIndex++;
 			}
 		}
 	}
 
 	public override void Initialize(PlayerData data)
 	{
-		_wO2k8QO0Jb1ECTFpHuFC2wQFtRB = 0;
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("BodyTypes", data.BodyType.ToString(), data.BodyColor);
+		_spriteIndex = 0;
+		SerializeColor("BodyTypes", data.BodyType.ToString(), data.BodyColor);
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "Underbelly", data.UnderbellyColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "Underbelly", data.UnderbellyColor);
 		}
 		if (data.HeadType != PlayerData.EHeadType.PaperBag)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", data.HeadType.ToString(), data.HeadColor);
+			SerializeColor("Heads", data.HeadType.ToString(), data.HeadColor);
 			if (data.HeadMarkingsType.HasFlag(PlayerData.EHeadMarkingsType.Gaunt))
 			{
-				_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Gaunt", data.HeadGauntColor);
+				SerializeColor("Heads", "Gaunt", data.HeadGauntColor);
 			}
 			if (data.HeadMarkingsType.HasFlag(PlayerData.EHeadMarkingsType.Scruffy))
 			{
-				_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Scruffy", data.HeadScruffyColor);
+				SerializeColor("Heads", "Scruffy", data.HeadScruffyColor);
 			}
 			if (data.HeadMarkingsType.HasFlag(PlayerData.EHeadMarkingsType.Snout))
 			{
-				_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Snout", data.HeadSnoutColor);
+				SerializeColor("Heads", "Snout", data.HeadSnoutColor);
 			}
 			if (data.HeadMarkingsType.HasFlag(PlayerData.EHeadMarkingsType.Stripes))
 			{
-				_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Stripes", data.HeadStripesColor);
+				SerializeColor("Heads", "Stripes", data.HeadStripesColor);
 			}
 		}
 		else
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "Humanoid", data.HeadColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "PaperBag", data.PaperBagColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Heads", "PaperBagEyes", data.PaperBagEyesColor);
+			SerializeColor("Heads", "Humanoid", data.HeadColor);
+			SerializeColor("Heads", "PaperBag", data.PaperBagColor);
+			SerializeColor("Heads", "PaperBagEyes", data.PaperBagEyesColor);
 		}
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Eyes", data.EyesType.ToString() + "Back", data.EyesBackColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Eyes", data.EyesType.ToString() + "Front", data.EyesFrontColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Eyebrows", data.BrowType.ToString(), data.BrowColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("HeadAccessories", data.HeadAccessoriesType.ToString() + "Horn", data.HeadHornsColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("HeadAccessories", data.HeadAccessoriesType.ToString() + "Ear", data.EarColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("HeadAccessories", data.HeadAccessoriesType.ToString() + "EarInner", data.EarInnerColor);
+		SerializeColor("Eyes", data.EyesType.ToString() + "Back", data.EyesBackColor);
+		SerializeColor("Eyes", data.EyesType.ToString() + "Front", data.EyesFrontColor);
+		SerializeColor("Eyebrows", data.BrowType.ToString(), data.BrowColor);
+		SerializeColor("HeadAccessories", data.HeadAccessoriesType.ToString() + "Horn", data.HeadHornsColor);
+		SerializeColor("HeadAccessories", data.HeadAccessoriesType.ToString() + "Ear", data.EarColor);
+		SerializeColor("HeadAccessories", data.HeadAccessoriesType.ToString() + "EarInner", data.EarInnerColor);
 		if (data.MuzzleType != PlayerData.EMuzzleType.Human)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", data.MuzzleType.ToString(), data.MuzzleColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", data.MuzzleType.ToString() + "Nose", data.NoseColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", data.MuzzleType.ToString() + "Teeth", data.TeethColor);
+			SerializeColor("Muzzles", data.MuzzleType.ToString(), data.MuzzleColor);
+			SerializeColor("Muzzles", data.MuzzleType.ToString() + "Nose", data.NoseColor);
+			SerializeColor("Muzzles", data.MuzzleType.ToString() + "Teeth", data.TeethColor);
 		}
 		else
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", data.MuzzleType.ToString(), data.BodyColor);
+			SerializeColor("Muzzles", data.MuzzleType.ToString(), data.BodyColor);
 		}
 		if (data.ShowMuzzleHorn)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", data.MuzzleType.ToString() + "Horn", data.MuzzleHornColor);
+			SerializeColor("Muzzles", data.MuzzleType.ToString() + "Horn", data.MuzzleHornColor);
 		}
 		if (data.ShowMuzzleMask)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Muzzles", data.MuzzleType.ToString() + "Mask", data.MuzzleMaskColor);
+			SerializeColor("Muzzles", data.MuzzleType.ToString() + "Mask", data.MuzzleMaskColor);
 		}
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Hairstyles", data.HairstyleType.ToString(), data.HairColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Hairstyles", data.FringeType.ToString() + "Fringe", data.FringeColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Tails", data.TailType.ToString(), data.TailColor);
+		SerializeColor("Hairstyles", data.HairstyleType.ToString(), data.HairColor);
+		SerializeColor("Hairstyles", data.FringeType.ToString() + "Fringe", data.FringeColor);
+		SerializeColor("Tails", data.TailType.ToString(), data.TailColor);
 		if (data.ShowTailPartOne)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Tails", data.TailType.ToString() + "Part1", data.TailPartOneColor);
+			SerializeColor("Tails", data.TailType.ToString() + "Part1", data.TailPartOneColor);
 		}
 		if (data.ShowTailPartTwo)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Tails", data.TailType.ToString() + "Part2", data.TailPartTwoColor);
+			SerializeColor("Tails", data.TailType.ToString() + "Part2", data.TailPartTwoColor);
 		}
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Feet", data.FeetType.ToString(), data.FeetColor);
+		SerializeColor("Feet", data.FeetType.ToString(), data.FeetColor);
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "Underthigh", data.UnderthighColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "Underthigh", data.UnderthighColor);
 		}
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "Stripes", data.StripesColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "Stripes", data.StripesColor);
 		}
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "LongForearm", data.LongForearmColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "LongForearm", data.LongForearmColor);
 		}
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "ShortForearm", data.ShortForearmColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "ShortForearm", data.ShortForearmColor);
 		}
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "AvianForearm", data.AvianForearmColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "AvianForearm", data.AvianForearmColor);
 		}
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongShin))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "LongShin", data.LongShinColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "LongShin", data.LongShinColor);
 		}
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortShin))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "ShortShin", data.ShortShinColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "ShortShin", data.ShortShinColor);
 		}
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianShin))
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Markings", data.BodyType.ToString() + "AvianShin", data.AvianShinColor);
+			SerializeColor("Markings", data.BodyType.ToString() + "AvianShin", data.AvianShinColor);
 		}
 		if (!Censorship.Censored)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Balls", data.BallsType.ToString(), data.BallsColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("MaleGenitalia", data.CockType.ToString(), data.GenitaliaColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("MaleGenitalia", data.CockType.ToString() + "Flesh", data.GenitaliaFleshColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Breasts", data.BreastsType.ToString(), data.BreastsColor);
+			SerializeColor("Balls", data.BallsType.ToString(), data.BallsColor);
+			SerializeColor("MaleGenitalia", data.CockType.ToString(), data.GenitaliaColor);
+			SerializeColor("MaleGenitalia", data.CockType.ToString() + "Flesh", data.GenitaliaFleshColor);
+			SerializeColor("Breasts", data.BreastsType.ToString(), data.BreastsColor);
 			if (data.ShowNipples)
 			{
-				_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Breasts", data.BreastsType.ToString() + "Nipples", data.NipplesColor);
+				SerializeColor("Breasts", data.BreastsType.ToString() + "Nipples", data.NipplesColor);
 			}
 		}
 		if (data.ShowNails)
 		{
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Nails", data.BodyType.ToString() + "Nail", data.NailColor);
-			_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Nails", data.FeetType.ToString() + "Nails", data.NailColor);
+			SerializeColor("Nails", data.BodyType.ToString() + "Nail", data.NailColor);
+			SerializeColor("Nails", data.FeetType.ToString() + "Nails", data.NailColor);
 		}
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Phone", "Case", data.PhoneColor);
-		_MvwR0kE4wvi2cZX9CN5Dfu3jPWG("Phone", "Screen", Color.White);
+		SerializeColor("Phone", "Case", data.PhoneColor);
+		SerializeColor("Phone", "Screen", Color.White);
 	}
 
-	public void _h7FmRKqsiolCVDHSPyo8tOOxJjI()
+	public void ZoomIn()
 	{
-		if (!_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
+		if (!_zoomed)
 		{
-			_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn = true;
-			_zoomInterpolation = _VTrOShnWP89ESyeqO1LPtrBoUIB - _zoomInterpolation;
-			_iM7i7fLtaIJgLy3ciRpenDbf5CHb = _zoomScale;
-			_wBWHhq9jY0K2NLTqM11LsE4yDM = _zoomOffset;
-			_ZTkD3TiiqWMrAbMLsoeIOBirnQc = 1f;
-			_kpLvTY6XXVX762n2WA2bxMWl8eL = 0;
+			_zoomed = true;
+			_zoomInterpolation = ZoomHeight - _zoomInterpolation;
+			_targetZoomScale = _zoomScale;
+			_targetZoomOffsetY = _zoomOffsetY;
+			_previousZoomScale = 1f;
+			_previousZoomOffsetY = 0;
 		}
 	}
 
-	public void _4yLGwEKDfxbcWN8YsEUfRhL5JK5()
+	public void ZoomOut()
 	{
-		if (_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
+		if (_zoomed)
 		{
-			_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn = false;
-			_zoomInterpolation = _VTrOShnWP89ESyeqO1LPtrBoUIB - _zoomInterpolation;
-			_iM7i7fLtaIJgLy3ciRpenDbf5CHb = _zoomScale;
-			_wBWHhq9jY0K2NLTqM11LsE4yDM = _zoomOffset;
-			_ZTkD3TiiqWMrAbMLsoeIOBirnQc = (float)_cux27d2yUtT8iqgPFghmznXR0nC / (float)_KyRTfqdr2zZtsEAgkvOlUoQoB5j.Height;
-			_kpLvTY6XXVX762n2WA2bxMWl8eL = 1080 - _cux27d2yUtT8iqgPFghmznXR0nC - 20;
+			_zoomed = false;
+			_zoomInterpolation = ZoomHeight - _zoomInterpolation;
+			_targetZoomScale = _zoomScale;
+			_targetZoomOffsetY = _zoomOffsetY;
+			_previousZoomScale = (float)_height / (float)_customizationData.Height;
+			_previousZoomOffsetY = 1080 - _height - 20;
 		}
 	}
 
 	public void ToggleZoom()
 	{
-		if (_Q5TLQ5C9mZDQgJZ3DcYHNl0Pbgn)
+		if (_zoomed)
 		{
-			_4yLGwEKDfxbcWN8YsEUfRhL5JK5();
+			ZoomOut();
 		}
 		else
 		{
-			_h7FmRKqsiolCVDHSPyo8tOOxJjI();
+			ZoomIn();
 		}
 	}
 
@@ -404,42 +404,42 @@ public class CustomizablePlayerSkin : AbstractPlayerSkin
 		int y = base.Game.Controller.Cursor.Y;
 		if (_zoomInterpolation <= 0)
 		{
-			if (_vZ6v4a6UcXrp8I7fOK5GurTGvwg && base.Game.Controller.IsHolding(ControllerButtonType.LeftButton))
+			if (IsZoomed && base.Game.Controller.IsHolding(ControllerButtonType.LeftButton))
 			{
-				int num = y - _fqUhMheAq3WxPgLgXhgAKkZQOss;
-				if (num != 0)
+				int offset = y - _previousCursorY;
+				if (offset != 0)
 				{
-					_zoomOffset = Math.Min(Math.Max(-1600, _zoomOffset + num), 0);
-					UpdateLayers();
+					_zoomOffsetY = Math.Min(Math.Max(-1600, _zoomOffsetY + offset), 0);
+					UpdateZooming();
 				}
 			}
-			_fqUhMheAq3WxPgLgXhgAKkZQOss = y;
+			_previousCursorY = y;
 			return;
 		}
 		_zoomInterpolation -= gameTime.ElapsedGameTime.Milliseconds;
 		if (_zoomInterpolation <= 0)
 		{
 			_zoomInterpolation = 0;
-			_zoomScale = _ZTkD3TiiqWMrAbMLsoeIOBirnQc;
-			_zoomOffset = _kpLvTY6XXVX762n2WA2bxMWl8eL;
+			_zoomScale = _previousZoomScale;
+			_zoomOffsetY = _previousZoomOffsetY;
 		}
 		else
 		{
 			float amount = (float)_zoomInterpolation / 350f;
-			_zoomScale = MathHelper.Lerp(_ZTkD3TiiqWMrAbMLsoeIOBirnQc, _iM7i7fLtaIJgLy3ciRpenDbf5CHb, amount);
-			_zoomOffset = (int)MathHelper.Lerp(_kpLvTY6XXVX762n2WA2bxMWl8eL, _wBWHhq9jY0K2NLTqM11LsE4yDM, amount);
+			_zoomScale = MathHelper.Lerp(_previousZoomScale, _targetZoomScale, amount);
+			_zoomOffsetY = (int)MathHelper.Lerp(_previousZoomOffsetY, _targetZoomOffsetY, amount);
 		}
-		UpdateLayers();
-		_fqUhMheAq3WxPgLgXhgAKkZQOss = y;
+		UpdateZooming();
+		_previousCursorY = y;
 	}
 
-	private void UpdateLayers()
+	private void UpdateZooming()
 	{
-		using List<AbstractLayer>.Enumerator enumerator = base.Layers.GetEnumerator();
-		while (enumerator.MoveNext())
+		using List<AbstractLayer>.Enumerator layers = base.Layers.GetEnumerator();
+		while (layers.MoveNext())
 		{
-			enumerator.Current.Scale = _zoomScale;
-			enumerator.Current.Y = _zoomOffset;
+			layers.Current.Scale = _zoomScale;
+			layers.Current.Y = _zoomOffsetY;
 		}
 	}
 }

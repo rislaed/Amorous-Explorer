@@ -50,24 +50,24 @@ public class KaneNPC : LayerNPC<KaneNPC.EHeads, KaneNPC.EPoses, KaneNPC.EClothes
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 305f;
-			Y = 0f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = -260f;
-			Y = 0f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Right:
-			FlipX = true;
-			X = 1070f;
-			Y = 0f;
-			base.Scale = 1f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 305f;
+				Y = 0f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = -260f;
+				Y = 0f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Right:
+				FlipX = true;
+				X = 1070f;
+				Y = 0f;
+				base.Scale = 1f;
+				break;
 		}
 	}
 }

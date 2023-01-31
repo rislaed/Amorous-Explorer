@@ -122,7 +122,7 @@ public class Achievements : IAchievements
 		new AchievementData(AchievementGeneric11, "ACHIEVEMENT_GENERIC11", "Yes Chef!", AmorousData.MessageIconCooking)
 	};
 
-	private static readonly Dictionary<string, AchievementData> _achievements = _achievementDatas.ToDictionary((AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0.Key, (AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0);
+	private static readonly Dictionary<string, AchievementData> AchievementsData = _achievementDatas.ToDictionary((AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0.Key, (AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0);
 
 	public const string MessageTutorial1 = "MessageTutorial1";
 
@@ -276,7 +276,6 @@ public class Achievements : IAchievements
 
 	public void SetFlag(string key, bool flag)
 	{
-		// ?
 	}
 
 	public void UnlockContact(PlayerData.EPhoneContacts contact)
@@ -321,7 +320,7 @@ public class Achievements : IAchievements
 			return;
 		}
 		data.SetFlag(name, flag: true);
-		if (_achievements.TryGetValue(name, out var achievement))
+		if (AchievementsData.TryGetValue(name, out var achievement))
 		{
 			if (_steam != null)
 			{

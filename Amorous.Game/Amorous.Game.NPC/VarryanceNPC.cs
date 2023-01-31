@@ -48,24 +48,24 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 735f;
-			Y = 0f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -300f;
-			Y = 0f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1370f;
-			Y = 0f;
-			base.Scale = 1f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 735f;
+				Y = 0f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -300f;
+				Y = 0f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1370f;
+				Y = 0f;
+				base.Scale = 1f;
+				break;
 		}
 	}
 }

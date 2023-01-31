@@ -1,4 +1,3 @@
-using System;
 using Amorous.Game.NPC;
 
 namespace Amorous.Game.Scenes;
@@ -62,9 +61,9 @@ public class ClubInsideScene : AbstractScene
 			_jax.Y = 580f;
 			_jax.Scale = 0.2f;
 			_jax.Click = OnJaxClick;
-			NPCLayer NPCLayer = GetNPCLayer<JaxNPC>();
-			NPCLayer.ZOrder = 0;
-			NPCLayer.LayerOrder = 0;
+			NPCLayer layer = GetNPCLayer<JaxNPC>();
+			layer.ZOrder = 0;
+			layer.LayerOrder = 0;
 		}
 		else
 		{
@@ -76,9 +75,9 @@ public class ClubInsideScene : AbstractScene
 			_rou.Y = 380f;
 			_rou.Scale = 0.2f;
 			_rou.Click = OnRouClick;
-			NPCLayer NPCLayer2 = GetNPCLayer<BartenderNPC>();
-			NPCLayer2.ZOrder = 0;
-			NPCLayer2.LayerOrder = 0;
+			NPCLayer layer = GetNPCLayer<BartenderNPC>();
+			layer.ZOrder = 0;
+			layer.LayerOrder = 0;
 		}
 		ClubInsideANPC clubInsideANPC = base.Game.GetNPCLayerAt<ClubInsideANPC>(LayerOrder.Background);
 		clubInsideANPC.SetPose(ClubStaticNPC.EPoses.Nude);
@@ -105,8 +104,7 @@ public class ClubInsideScene : AbstractScene
 		clubInsideENPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubInsideENPC.X = 1150f;
 		clubInsideENPC.Y = 420f;
-		NPCLayer NPCLayer3 = GetNPCLayer<ClubInsideENPC>();
-		NPCLayer3.LayerOrder = 2;
+		GetNPCLayer<ClubInsideENPC>().LayerOrder = 2;
 		ClubInsideFNPC clubInsideFNPC = base.Game.GetNPCLayerAt<ClubInsideFNPC>(LayerOrder.Background);
 		clubInsideFNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubInsideFNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
@@ -131,7 +129,7 @@ public class ClubInsideScene : AbstractScene
 		_dancerA.SetClothes(ClubInsideDancerANPC.EClothes.Pants, ClubInsideDancerANPC.EClothes.Shirt);
 		_dancerA.X = -900f;
 		_dancerA.Y = 950f;
-		_dancerA._KDimeEJ9On2dWcynEqeEZz9c8DE(4, 3);
+		_dancerA.SetDanceScheme(4, 3);
 		if (_showCoby)
 		{
 			_coby = base.Game.GetNPCLayerAt<CobyDancingNPC>(LayerOrder.Foreground);
@@ -173,8 +171,7 @@ public class ClubInsideScene : AbstractScene
 			_skye.X = 2212f;
 			_skye.Y = 438f;
 			_skye.Click = OnSkyeClick;
-			NPCLayer NPCLayer4 = GetNPCLayer<ClubStaticSkyeNPC>();
-			NPCLayer4.LayerOrder = 1;
+			GetNPCLayer<ClubStaticSkyeNPC>().LayerOrder = 1;
 		}
 		RefreshLayerOrdering();
 	}
@@ -191,22 +188,22 @@ public class ClubInsideScene : AbstractScene
 
 	private void OnJaxClick()
 	{
-		base.Game.StartCutscene(AmorousData.JaxPreDate);
+		base.Game.PlayCutscene(AmorousData.JaxPreDate);
 	}
 
 	private void OnRouClick()
 	{
-		base.Game.StartCutscene(AmorousData.Rou);
+		base.Game.PlayCutscene(AmorousData.Rou);
 	}
 
 	private void OnSethClick()
 	{
-		base.Game.StartCutscene(AmorousData.SethPreDate);
+		base.Game.PlayCutscene(AmorousData.SethPreDate);
 	}
 
 	private void OnSkyeClick()
 	{
-		base.Game.StartCutscene(AmorousData.SkyePreDate);
+		base.Game.PlayCutscene(AmorousData.SkyePreDate);
 	}
 
 	private void OnCobyClick()
@@ -214,16 +211,16 @@ public class ClubInsideScene : AbstractScene
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		if (data.GetState(AmorousData.Prologue) >= AmorousData.PrologueStateCompleted)
 		{
-			base.Game.StartCutscene(AmorousData.CobyClub);
+			base.Game.PlayCutscene(AmorousData.CobyClub);
 		}
 		else
 		{
-			base.Game.StartCutscene(AmorousData.Prologue);
+			base.Game.PlayCutscene(AmorousData.Prologue);
 		}
 	}
 
 	private void OnDJClick()
 	{
-		base.Game.StartCutscene(AmorousData.DJ);
+		base.Game.PlayCutscene(AmorousData.DJ);
 	}
 }

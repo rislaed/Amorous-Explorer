@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Spine;
 
@@ -47,7 +44,7 @@ public class ZenithSexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshSubscene(PlayerData data)
+	protected override void RefreshData(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (Censorship.Censored)
@@ -85,10 +82,10 @@ public class ZenithSexscene : CensoredSexscene
 		base.Spine.SetAlpha("Player foot short markings", 0f);
 		base.Spine.SetAlpha("Player foot long markings", 0f);
 		base.Spine.SetAlpha("Player shin left", 1f);
-		bool flag = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianShin);
-		base.Spine.SetAlpha("Player shin left avian", flag ? 1f : 0f);
-		base.Spine.SetAlpha("Player shin long markings", (flag || !data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongShin)) ? 0f : 1f);
-		base.Spine.SetAlpha("Player shin left short markings", (flag || !data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortShin)) ? 0f : 1f);
+		bool isAvian = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianShin);
+		base.Spine.SetAlpha("Player shin left avian", isAvian ? 1f : 0f);
+		base.Spine.SetAlpha("Player shin long markings", (isAvian || !data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongShin)) ? 0f : 1f);
+		base.Spine.SetAlpha("Player shin left short markings", (isAvian || !data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortShin)) ? 0f : 1f);
 		base.Spine.SetAlpha("Player thigh left", 1f);
 		base.Spine.SetAlpha("Player thigh left markings inner thigh", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underthigh) ? 1f : 0f);
 		base.Spine.SetAlpha("Player thigh left stripes", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1f : 0f);

@@ -1,4 +1,3 @@
-using System;
 using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
 
@@ -58,21 +57,21 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 1000f;
-			Y = 1090f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = 380f;
-			Y = 1090f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1540f;
-			Y = 1090f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 1000f;
+				Y = 1090f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = 380f;
+				Y = 1090f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1540f;
+				Y = 1090f;
+				break;
 		}
 	}
 }

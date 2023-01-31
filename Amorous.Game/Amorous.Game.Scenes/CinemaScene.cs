@@ -7,10 +7,7 @@ public class CinemaScene : AbstractScene
 	public const string VariantRomantic = "Romantic";
 	public const string VariantHorror = "Horror";
 
-	private SpriteLayer BackgroundNone;
-	private SpriteLayer BackgroundWestern;
-	private SpriteLayer BackgroundRomantic;
-	private SpriteLayer BackgroundHorror;
+	private SpriteLayer BackgroundNone, BackgroundWestern, BackgroundRomantic, BackgroundHorror;
 
 	public CinemaScene(IAmorous game)
 		: base(game)

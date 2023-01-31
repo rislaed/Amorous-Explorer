@@ -7,7 +7,7 @@ public class ClubPoolStaticCNPC : ClubPoolStaticNPC
 	{
 		Width = 413;
 		Height = 680;
-		_rlJEdnItzlU5efWtBjMCaC5Nizb = 570f;
+		PoolMaskOffset = 570f;
 		NudesBehindShirt = false;
 		NudesBehindPants = true;
 	}

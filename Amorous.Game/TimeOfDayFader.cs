@@ -13,7 +13,7 @@ public class TimeOfDayFader
 
 	public TimeOfDayFader(IAmorous game)
 	{
-		_fader = new ScreenFader(game.GLES);
+		_fader = new ScreenFader(game.Graphics);
 	}
 
 	public void Update(GameTime gameTime)

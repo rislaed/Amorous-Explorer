@@ -4,54 +4,54 @@ using Microsoft.Xna.Framework.Graphics;
 
 public static class ExtendedSpriteBatch
 { // _dXVK1NWaxcsgYg6KpavA0e8oion
-	public static readonly Vector2 Location0x0 = new Vector2(-1f, -1f);
-	public static readonly Vector2 Location1x0 = new Vector2(0f, -1f);
-	public static readonly Vector2 Location2x0 = new Vector2(1f, -1f);
-	public static readonly Vector2 Location0x1 = new Vector2(-1f, 0f);
-	public static readonly Vector2 Location2x1 = new Vector2(1f, 0f);
-	public static readonly Vector2 Location0x2 = new Vector2(-1f, 1f);
-	public static readonly Vector2 Location1x2 = new Vector2(0f, 1f);
-	public static readonly Vector2 Location2x2 = new Vector2(1f, 1f);
+	public static readonly Vector2 Shadow0x0 = new Vector2(-1f, -1f);
+	public static readonly Vector2 Shadow1x0 = new Vector2(0f, -1f);
+	public static readonly Vector2 Shadow2x0 = new Vector2(1f, -1f);
+	public static readonly Vector2 Shadow0x1 = new Vector2(-1f, 0f);
+	public static readonly Vector2 Shadow2x1 = new Vector2(1f, 0f);
+	public static readonly Vector2 Shadow0x2 = new Vector2(-1f, 1f);
+	public static readonly Vector2 Shadow1x2 = new Vector2(0f, 1f);
+	public static readonly Vector2 Shadow2x2 = new Vector2(1f, 1f);
 
 	public const int One = 1;
 
 	public static void DrawString(this SpriteBatch spriteBatch, SpriteFont spriteFont, string text, Vector2 position, Color color)
 	{
-		spriteBatch.DrawString(spriteFont, text, position + Location0x0 * 1f, Color.Black);
-		spriteBatch.DrawString(spriteFont, text, position + Location1x0 * 1f, Color.Black);
-		spriteBatch.DrawString(spriteFont, text, position + Location2x0 * 1f, Color.Black);
-		spriteBatch.DrawString(spriteFont, text, position + Location0x1 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow0x0 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow1x0 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow2x0 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow0x1 * 1f, Color.Black);
 		spriteBatch.DrawString(spriteFont, text, position, Color.Black);
-		spriteBatch.DrawString(spriteFont, text, position + Location2x1 * 1f, Color.Black);
-		spriteBatch.DrawString(spriteFont, text, position + Location0x2 * 1f, Color.Black);
-		spriteBatch.DrawString(spriteFont, text, position + Location1x2 * 1f, Color.Black);
-		spriteBatch.DrawString(spriteFont, text, position + Location2x2 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow2x1 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow0x2 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow1x2 * 1f, Color.Black);
+		spriteBatch.DrawString(spriteFont, text, position + Shadow2x2 * 1f, Color.Black);
 		spriteBatch.DrawString(spriteFont, text, position, color);
 	}
 
-	public static void Draw(this SpriteBatch spriteBatch, Texture2D texture2D_0, Vector2? nullable_0 = null, Rectangle? nullable_1 = null, Rectangle? nullable_2 = null, Vector2? nullable_3 = null, float float_0 = 0f, Vector2? nullable_4 = null, Color? nullable_5 = null, SpriteEffects spriteEffects_0 = SpriteEffects.None, float float_1 = 0f)
+	public static void Draw(this SpriteBatch spriteBatch, Texture2D texture, Vector2? drawRectangle = null, Rectangle? position = null, Rectangle? sourceRectangle = null, Vector2? scale = null, float rotation = 0f, Vector2? rotationBeyond = null, Color? color = null, SpriteEffects effects = SpriteEffects.None, float layerDepth = 0f)
 	{
-		if (!nullable_5.HasValue)
+		if (!color.HasValue)
 		{
-			nullable_5 = Color.White;
+			color = Color.White;
 		}
-		if (!nullable_3.HasValue)
+		if (!scale.HasValue)
 		{
-			nullable_3 = Vector2.Zero;
+			scale = Vector2.Zero;
 		}
-		if (!nullable_4.HasValue)
+		if (!rotationBeyond.HasValue)
 		{
-			nullable_4 = Vector2.One;
+			rotationBeyond = Vector2.One;
 		}
-		if (nullable_1.HasValue != nullable_0.HasValue)
+		if (position.HasValue != drawRectangle.HasValue)
 		{
-			if (nullable_0.HasValue)
+			if (drawRectangle.HasValue)
 			{
-				spriteBatch.Draw(texture2D_0, nullable_0.Value, nullable_2, nullable_5.Value, float_0, nullable_3.Value, nullable_4.Value, spriteEffects_0, float_1);
+				spriteBatch.Draw(texture, drawRectangle.Value, sourceRectangle, color.Value, rotation, scale.Value, rotationBeyond.Value, effects, layerDepth);
 			}
 			else
 			{
-				spriteBatch.Draw(texture2D_0, nullable_1.Value, nullable_2, nullable_5.Value, float_0, nullable_3.Value, spriteEffects_0, float_1);
+				spriteBatch.Draw(texture, position.Value, sourceRectangle, color.Value, rotation, scale.Value, effects, layerDepth);
 			}
 			return;
 		}

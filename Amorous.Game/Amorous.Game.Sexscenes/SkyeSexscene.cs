@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
@@ -14,9 +11,9 @@ public class SkyeSexscene : CensoredSexscene
 	public const string VariantYellow = "Yellow";
 	public const string VariantBlue = "Blue";
 
-	private Texture2D SkinGray;
-	private Texture2D SkinYellow;
-	private Texture2D SkinBlue;
+	private Texture2D _skinGray;
+	private Texture2D _skinYellow;
+	private Texture2D _skinBlue;
 
 	private static readonly List<SkeletonJson.SpineEvent> Events = new List<SkeletonJson.SpineEvent>
 	{
@@ -54,9 +51,9 @@ public class SkyeSexscene : CensoredSexscene
 			base.Spine.X = 950f;
 			base.Spine.Y = 1100f;
 		}
-		SkinGray = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex");
-		SkinYellow = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
-		SkinBlue = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
+		_skinGray = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex");
+		_skinYellow = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Yellow");
+		_skinBlue = content.Load<Texture2D>("Assets/SexScenes/Skye/Skye Sex Blue");
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		bool isYellow = data.GetFlag(AmorousData.SkyeSkinYellow);
 		bool isBlue = data.GetFlag(AmorousData.SkyeSkinBlue);
@@ -83,7 +80,7 @@ public class SkyeSexscene : CensoredSexscene
 
 	public override string[] GetSubscenes()
 	{
-		return new string[3] { "Gray", "Yellow", "Blue" };
+		return new string[3] { VariantGray, VariantYellow, VariantBlue };
 	}
 
 	public override void SwitchToSubscene(string subscene)
@@ -92,18 +89,18 @@ public class SkyeSexscene : CensoredSexscene
 		switch (subscene)
 		{
 			case VariantGray:
-				base.Skin = SkinGray;
+				base.Skin = _skinGray;
 				break;
 			case VariantYellow:
-				base.Skin = SkinYellow;
+				base.Skin = _skinYellow;
 				break;
 			case VariantBlue:
-				base.Skin = SkinBlue;
+				base.Skin = _skinBlue;
 				break;
 		}
 	}
 
-	protected override void RefreshSubscene(PlayerData data)
+	protected override void RefreshData(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (!Censorship.Censored)

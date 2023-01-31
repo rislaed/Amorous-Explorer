@@ -24,7 +24,6 @@ public class CosplayerJacquelineNPC : LayerNPC<CosplayerJacquelineNPC.EHeads, Co
 	}
 
 	public static string Name = "Jacqueline Knight";
-
 	public static Color Color = new Color(138, 148, 170);
 
 	public CosplayerJacquelineNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class CosplayerJacquelineNPC : LayerNPC<CosplayerJacquelineNPC.EHeads, Co
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 545f;
-			Y = 0f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -200f;
-			Y = 0f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1166f;
-			Y = 0f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 545f;
+				Y = 0f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -200f;
+				Y = 0f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1166f;
+				Y = 0f;
+				break;
 		}
 	}
 }

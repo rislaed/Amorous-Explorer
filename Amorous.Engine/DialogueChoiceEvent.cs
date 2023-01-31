@@ -26,10 +26,10 @@ public class DialogueChoiceEvent : AbstractEvent<DialogueChoiceEventData>
 		base.Completable = !TypingDialogue.Outgoing;
 		if (base.Completable)
 		{
-			int num = TypingDialogue.Which - 1;
-			if (num >= 0 && num < Choices.Length)
+			int which = TypingDialogue.Which - 1;
+			if (which >= 0 && which < Choices.Length)
 			{
-				base.NextID = Choices[num].NextID;
+				base.NextID = Choices[which].NextID;
 			}
 		}
 	}

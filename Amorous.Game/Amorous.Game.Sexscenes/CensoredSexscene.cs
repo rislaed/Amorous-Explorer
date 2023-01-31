@@ -25,21 +25,21 @@ public class CensoredSexscene : AbstractSexscene
 
 		private void ResetState()
 		{
-			_x = Randoms.Next(SpawnLeft, SpawnRight);
+			_x = Utils.Random(SpawnLeft, SpawnRight);
 			_y = 1144f;
 			_ticks = 0f;
 			_interpolation = 1f;
-			_degrees = Randoms.NextDouble(-10f, 10f);
-			_speedY = Randoms.NextDouble(128f, 256f);
-			_vectorX = Randoms.NextDouble(1f, 5f);
-			_speedX = Randoms.NextDouble(10f, 100f);
-			_vectorY = Randoms.NextDouble(1f, 3f);
-			_cycle = Randoms.NextDouble(0f, 1080f);
+			_degrees = Utils.RandomFloat(-10f, 10f);
+			_speedY = Utils.RandomFloat(128f, 256f);
+			_vectorX = Utils.RandomFloat(1f, 5f);
+			_speedX = Utils.RandomFloat(10f, 100f);
+			_vectorY = Utils.RandomFloat(1f, 3f);
+			_cycle = Utils.RandomFloat(0f, 1080f);
 		}
 
 		public void Update(float ticks)
 		{
-			_x += (float)Math.Sin(Randoms.Date * _vectorX) * (_speedX * ticks);
+			_x += (float)Math.Sin(Utils.Date * _vectorX) * (_speedX * ticks);
 			_y -= _speedY * ticks;
 			if (_y < _cycle)
 			{
@@ -69,7 +69,7 @@ public class CensoredSexscene : AbstractSexscene
 	{
 		if (Censorship.Censored)
 		{
-			Ticks = (Cycle = cycle);
+			Ticks = (TickToPhase = cycle);
 			_particles = new List<Particle>();
 			_particleTexture = content.Load<Texture2D>("Assets/SexScenes/Generic/Heart");
 			FadingMediaPlayer.PlayOnRepeat(AmorousData.OMorroNaoTemVezTrack, 0.4f);
@@ -137,7 +137,7 @@ public class CensoredSexscene : AbstractSexscene
 			_ticksToEmit -= ticks;
 			if (_ticksToEmit < 0f)
 			{
-				_ticksToEmit = Randoms.NextDouble(0f, 1f);
+				_ticksToEmit = Utils.RandomFloat(0f, 1f);
 				_particles.Add(new Particle());
 			}
 		}

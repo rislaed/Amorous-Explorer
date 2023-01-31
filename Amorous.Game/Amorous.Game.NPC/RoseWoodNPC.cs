@@ -24,7 +24,6 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 	}
 
 	public static string Name = "Rose Wood";
-
 	public static Color Color = new Color(195, 69, 81);
 
 	public RoseWoodNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 725f;
-			Y = 130f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = 100f;
-			Y = 130f;
-			break;
-		case NPCLocation.Right:
-			FlipX = true;
-			X = 1351f;
-			Y = 130f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 725f;
+				Y = 130f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = 100f;
+				Y = 130f;
+				break;
+			case NPCLocation.Right:
+				FlipX = true;
+				X = 1351f;
+				Y = 130f;
+				break;
 		}
 	}
 }

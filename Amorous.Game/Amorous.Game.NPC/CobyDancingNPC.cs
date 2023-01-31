@@ -1,4 +1,3 @@
-using System;
 using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
 
@@ -48,21 +47,21 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 960f;
-			Y = 1120f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = 400f;
-			Y = 1120f;
-			break;
-		case NPCLocation.Right:
-			FlipX = true;
-			X = 1520f;
-			Y = 1120f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 960f;
+				Y = 1120f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = 400f;
+				Y = 1120f;
+				break;
+			case NPCLocation.Right:
+				FlipX = true;
+				X = 1520f;
+				Y = 1120f;
+				break;
 		}
 	}
 }

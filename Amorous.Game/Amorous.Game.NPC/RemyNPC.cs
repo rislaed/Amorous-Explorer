@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
@@ -76,21 +75,21 @@ public class RemyNPC : SpineNPC<RemyNPC.EHeads, RemyNPC.EPoses, RemyNPC.EClothes
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 1000f;
-			Y = 1200f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = 380f;
-			Y = 1200f;
-			break;
-		case NPCLocation.Right:
-			FlipX = true;
-			X = 1540f;
-			Y = 1200f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 1000f;
+				Y = 1200f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = 380f;
+				Y = 1200f;
+				break;
+			case NPCLocation.Right:
+				FlipX = true;
+				X = 1540f;
+				Y = 1200f;
+				break;
 		}
 	}
 }

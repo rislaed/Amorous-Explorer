@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
@@ -68,21 +67,21 @@ public class MercyNPC : SpineNPC<MercyNPC.EHeads, MercyNPC.EPoses, MercyNPC.EClo
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 960f;
-			Y = 1090f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = 320f;
-			Y = 1090f;
-			break;
-		case NPCLocation.Right:
-			FlipX = true;
-			X = 1600f;
-			Y = 1090f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 960f;
+				Y = 1090f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = 320f;
+				Y = 1090f;
+				break;
+			case NPCLocation.Right:
+				FlipX = true;
+				X = 1600f;
+				Y = 1090f;
+				break;
 		}
 	}
 }

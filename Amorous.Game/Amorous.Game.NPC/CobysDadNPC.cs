@@ -25,7 +25,6 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 	}
 
 	public static string Name = "Coby's Dad";
-
 	public static Color Color = new Color(176, 206, 255);
 
 	public CobysDadNPC(IAmorous game)
@@ -44,21 +43,21 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 612f;
-			Y = 24f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -160f;
-			Y = 24f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1185f;
-			Y = 24f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 612f;
+				Y = 24f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -160f;
+				Y = 24f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1185f;
+				Y = 24f;
+				break;
 		}
 	}
 }

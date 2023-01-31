@@ -89,21 +89,21 @@ public class JaxNPC : SpineNPC<JaxNPC.EHeads, JaxNPC.EPoses, JaxNPC.EClothes>
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 960f;
-			Y = 1100f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = 400f;
-			Y = 1100f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1520f;
-			Y = 1100f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 960f;
+				Y = 1100f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = 400f;
+				Y = 1100f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1520f;
+				Y = 1100f;
+				break;
 		}
 	}
 }

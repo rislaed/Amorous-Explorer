@@ -15,17 +15,21 @@ public abstract class AbstractScene
 	public const int OrderForegroundOverlay = 3;
 
 	protected bool IsOrderingChanged;
-	private AbstractLayer CapturedLayer;
+
+	private AbstractLayer _capturedLayer;
+
 	public IAmorous Game { get; private set; }
 	public List<AbstractLayer> Layers { get; private set; }
 	public string Subscene { get; private set; }
 	public static bool CapturedByOverlay { get; set; }
+
 	protected BlendState Blending { get; set; }
+
 	public Desktop Squid { get; set; }
 
-	protected AbstractScene(IAmorous amorous)
+	protected AbstractScene(IAmorous game)
 	{
-		Game = amorous;
+		Game = game;
 		Layers = new List<AbstractLayer>();
 		Blending = BlendState.NonPremultiplied;
 		Squid = new Desktop
@@ -185,7 +189,7 @@ public abstract class AbstractScene
 		{
 			activeTexture2D = Game.Content.Load<Texture2D>(activeTexture);
 		}
-		return new InteractableLayer(this, name, texture2D, activeTexture2D, activeTexture)
+		return new InteractableLayer(this, name, texture2D, activeTexture2D, text)
 		{
 			X = x,
 			Y = y,
@@ -239,10 +243,10 @@ public abstract class AbstractScene
 		if (!CapturedByOverlay)
 		{
 			bool pressed;
-			if ((pressed = Game.Controller.IsPressed(ControllerButtonType.LeftButton)) && CapturedLayer != null)
+			if ((pressed = Game.Controller.IsPressed(ControllerButtonType.LeftButton)) && _capturedLayer != null)
 			{
-				CapturedLayer.Continue();
-				CapturedLayer = null;
+				_capturedLayer.Continue();
+				_capturedLayer = null;
 			}
 			Microsoft.Xna.Framework.Point point = Game.Canvas.GlobalToTouch(Game.Controller.Cursor);
 			Touch(point, pressed, Layers);
@@ -261,72 +265,72 @@ public abstract class AbstractScene
 		}
 	}
 
-	private void Touch(Microsoft.Xna.Framework.Point point, bool pressed, List<AbstractLayer> layers)
+	private void Touch(Microsoft.Xna.Framework.Point cursor, bool pressed, List<AbstractLayer> layers)
 	{
-		AbstractLayer layer = null;
-		Microsoft.Xna.Framework.Rectangle rectangle = default(Microsoft.Xna.Framework.Rectangle);
-		for (int num = layers.Count - 1; num >= 0; num--)
+		AbstractLayer clickedLayer = null;
+		Microsoft.Xna.Framework.Rectangle bounds = default(Microsoft.Xna.Framework.Rectangle);
+		for (int index = layers.Count - 1; index >= 0; index--)
 		{
-			AbstractLayer next = layers[num];
-			if ((next is InteractableLayer || next is ClickableLayer || next is AnimatedClickableLayer || next is NPCLayer) && next.Updatable)
+			AbstractLayer layer = layers[index];
+			if ((layer is InteractableLayer || layer is ClickableLayer || layer is AnimatedClickableLayer || layer is NPCLayer) && layer.Updatable)
 			{
-				if (!(next is NPCLayer))
+				if (!(layer is NPCLayer))
 				{
-					next.Unhover();
-					if (layer == null)
+					layer.Unhover();
+					if (clickedLayer == null)
 					{
-						rectangle.X = (int)next.X;
-						rectangle.Y = (int)next.Y;
-						rectangle.Width = next.Width;
-						rectangle.Height = next.Height;
-						if (rectangle.Contains(point))
+						bounds.X = (int)layer.X;
+						bounds.Y = (int)layer.Y;
+						bounds.Width = layer.Width;
+						bounds.Height = layer.Height;
+						if (bounds.Contains(cursor))
 						{
-							next.Hover();
-							layer = next;
+							layer.Hover();
+							clickedLayer = layer;
 						}
 					}
 				}
 				else
 				{
-					AbstractNPC NPC = ((NPCLayer)next).NPC;
-					NPC.IsHovered = false;
-					if (layer == null)
+					AbstractNPC npc = ((NPCLayer)layer).NPC;
+					npc.IsHovered = false;
+					if (clickedLayer == null)
 					{
-						rectangle.X = (int)NPC.X;
-						rectangle.Y = (int)NPC.Y;
-						rectangle.Width = (int)((float)NPC.Width * NPC.Scale);
-						rectangle.Height = (int)((float)NPC.Height * NPC.Scale);
-						if (NPC is AbstractSpineNPC)
+						bounds.X = (int)npc.X;
+						bounds.Y = (int)npc.Y;
+						bounds.Width = (int)((float)npc.Width * npc.Scale);
+						bounds.Height = (int)((float)npc.Height * npc.Scale);
+						if (npc is AbstractSpineNPC)
 						{
-							rectangle.X -= rectangle.Width / 2;
-							rectangle.Y -= rectangle.Height;
+							bounds.X -= bounds.Width / 2;
+							bounds.Y -= bounds.Height;
 						}
-						if (NPC.Click != null && rectangle.Contains(point))
+						if (npc.Click != null && bounds.Contains(cursor))
 						{
-							NPC.IsHovered = true;
-							layer = next;
+							npc.IsHovered = true;
+							clickedLayer = layer;
 						}
 					}
 				}
 			}
 		}
-		if (!(layer != null && pressed))
+		if (!(clickedLayer != null && pressed))
 		{
 			return;
 		}
-		if (!(layer is NPCLayer))
+		if (!(clickedLayer is NPCLayer))
 		{
-			if (layer.Click())
+			if (clickedLayer.Click())
 			{
-				CapturedLayer = layer;
+				_capturedLayer = clickedLayer;
 			}
 			return;
 		}
-		AbstractNPC npc = ((NPCLayer)layer).NPC;
-		if (npc.Click != null)
+		AbstractNPC clickedNPC = ((NPCLayer)clickedLayer).NPC;
+		if (clickedNPC.Click != null)
 		{
-			npc.Click();
-			CapturedLayer = layer;
+			clickedNPC.Click();
+			_capturedLayer = clickedLayer;
 		}
 	}
 
@@ -360,7 +364,7 @@ public abstract class AbstractScene
 							spriteBatch.End();
 							begin = false;
 						}
-						((DrawableLayer)layer).AdditionalMatrix = matrix;
+						((DrawableLayer)layer).DrawableMatrix = matrix;
 						layer.Draw(spriteBatch);
 					}
 					else

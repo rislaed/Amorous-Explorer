@@ -1,4 +1,3 @@
-using System;
 using Amorous.Engine.NPC;
 
 namespace Amorous.Game.NPC;

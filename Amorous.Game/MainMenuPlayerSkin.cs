@@ -1,7 +1,4 @@
-using System;
-using Microsoft.Xna.Framework;
-
-public class MainMenuPlayerSkin : AbstractPlayerSkin
+public class MainMenuPlayerSkin : AbstractPlayerOverlay
 { // _hiwkgwXJpRLUFatcgZFfH6ECNfm
 	private static SpriteLayer _bicep, _bicepStripe, _nails, _hand, _handColor, _forearm,
 								 _forearmColorLong, _forearmColorShort, _forearmStripes,

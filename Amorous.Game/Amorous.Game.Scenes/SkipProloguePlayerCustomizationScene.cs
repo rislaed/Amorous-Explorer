@@ -10,17 +10,17 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 	public SkipProloguePlayerCustomizationScene(IAmorous game)
 		: base(game)
 	{
-		MightConfigurateEverything = true;
+		MightEnterName = true;
 	}
 
-	protected override void ConfirmEverything()
+	protected override void ShowExit()
 	{
 		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.WideDialogueOffset, delegate(int index)
 		{
 			if (index == 1)
 			{
 				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric1);
-				base.Game.StartCutscene(AmorousData.Gender);
+				base.Game.PlayCutscene(AmorousData.Gender);
 				_pendingEntering = true;
 			}
 		});
@@ -29,7 +29,7 @@ public class SkipProloguePlayerCustomizationScene : PlayerCustomizationScene
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		if (_pendingEntering && !base.Game.InScenePending && base.Game.Cutscene == null)
+		if (_pendingEntering && !base.Game.InPendingScene && base.Game.Cutscene == null)
 		{
 			_pendingEntering = false;
 			PlayerData data = PlayerPreferences.GetPlayerData();

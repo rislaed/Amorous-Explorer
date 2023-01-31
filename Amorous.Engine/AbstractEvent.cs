@@ -22,9 +22,9 @@ public abstract class AbstractEvent<T> : IEvent where T : EventData
 		return false;
 	}
 
-	public void SetData(EventData EventData_0)
+	public void SetData(EventData eventData)
 	{
-		SetData((T)EventData_0);
+		SetData((T)eventData);
 	}
 
 	public virtual void SetData(T eventData)

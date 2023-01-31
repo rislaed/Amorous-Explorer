@@ -3,6 +3,4 @@ using System;
 namespace Amorous.Game.Data.Cutscenes;
 
 [Serializable]
-public class HideGameBoxEventData : EventData
-{
-}
+public class HideGameBoxEventData : EventData {}

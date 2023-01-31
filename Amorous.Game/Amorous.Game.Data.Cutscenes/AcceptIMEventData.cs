@@ -4,6 +4,4 @@ using Amorous.Engine.Data.Cutscenes;
 namespace Amorous.Game.Data.Cutscenes;
 
 [Serializable]
-public class AcceptIMEventData : UnlockContactEventData
-{
-}
+public class AcceptIMEventData : UnlockContactEventData {}

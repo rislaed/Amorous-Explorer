@@ -156,9 +156,9 @@ public class Saves
 				Index = _lastIndex.Value
 			};
 		}
-		bool flag = false;
+		bool autosave = false;
 		DateTime? dateTime = null;
-		int num = -1;
+		int index = -1;
 		for (int i = 0; i < SavesCount; i++)
 		{
 			string path = GetPath(i);
@@ -168,7 +168,7 @@ public class Saves
 				if (!dateTime.HasValue || dateTime.Value < lastWriteTime)
 				{
 					dateTime = lastWriteTime;
-					num = i;
+					index = i;
 				}
 			}
 		}
@@ -180,18 +180,18 @@ public class Saves
 				DateTime lastWriteTime = File.GetLastWriteTime(path);
 				if (!dateTime.HasValue || dateTime.Value < lastWriteTime)
 				{
-					flag = true;
+					autosave = true;
 					dateTime = lastWriteTime;
-					num = j;
+					index = j;
 				}
 			}
 		}
 		return new Pointer
 		{
-			IsEmpty = (num < 0),
-			IsAutosave = flag,
+			IsEmpty = (index < 0),
+			IsAutosave = autosave,
 			Name = string.Empty,
-			Index = num
+			Index = index
 		};
 	}
 }

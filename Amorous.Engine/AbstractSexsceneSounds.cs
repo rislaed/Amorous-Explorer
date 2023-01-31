@@ -2,13 +2,8 @@ using Microsoft.Xna.Framework.Content;
 
 public abstract class AbstractSexsceneSounds
 { // _sa8EsNgk4VDRaASdXE7VprdlNlg
-	public RandomSoundEffect Squishing;
-	public RandomSoundEffect MoaningSlow;
-	public RandomSoundEffect MoaningMedium;
-	public RandomSoundEffect MoaningFast;
-	public RandomSoundEffect MoaningRapid;
-	public RandomSoundEffect SlappingMedium;
-	public RandomSoundEffect SlappingFast;
+	public RandomSoundEffect Squishing, MoaningSlow, MoaningMedium, MoaningFast,
+							 MoaningRapid, SlappingMedium, SlappingFast;
 
 	protected AbstractSexsceneSounds(ContentManager content)
 	{

@@ -1,4 +1,3 @@
-using System;
 using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
 

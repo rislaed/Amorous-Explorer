@@ -46,10 +46,10 @@ public static class Censorship
 		}
 	}
 
-	public static void SetBooties(bool bool_0)
+	public static void SetBooties(bool enabled)
 	{
-		Booties = bool_0;
-		if (bool_0)
+		Booties = enabled;
+		if (enabled)
 		{
 			_censored = Options.Data.CheatsCensored;
 			_topless = Options.Data.CheatsTopless;

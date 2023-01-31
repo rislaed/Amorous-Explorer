@@ -6,12 +6,12 @@ public class SpriteLayer : AbstractLayer
 	public Texture2D Texture { get; private set; }
 	public bool Flip { get; set; }
 
-	public SpriteLayer(AbstractScene scene, string name, Texture2D texture2D)
+	public SpriteLayer(AbstractScene scene, string name, Texture2D texture)
 		: base(scene, name)
 	{
-		Texture = texture2D;
-		base.Width = texture2D.Width;
-		base.Height = texture2D.Height;
+		Texture = texture;
+		base.Width = texture.Width;
+		base.Height = texture.Height;
 	}
 
 	public override void Update(GameTime gameTime) {}

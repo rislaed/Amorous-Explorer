@@ -2,8 +2,8 @@ namespace Amorous.Game.Commands;
 
 public class Commands
 {
-	[CommandParameter(Key = PARAMETER_AMOUNT, Name = "Amount", Text = "How many ingredients should the player pick?")]
 	[CommandDescription(Name = "Cooking: Select Ingredient", Text = "Allow the player to select an ingredient in the cooking minigame.")]
+	[CommandParameter(Key = PARAMETER_AMOUNT, Name = "Amount", Text = "How many ingredients should the player pick?")]
 	public class CookingSelectIngredient
 	{
 		public const string PARAMETER_AMOUNT = "Amount";
@@ -22,8 +22,9 @@ public class Commands
 	[CommandDescription(Name = "Remy: Hide Nudes", Text = "Hide whichever nude is visible")]
 	public class RemyHideNudes {}
 
-	[CommandParameter(Key = PARAMETER_CUTSCENE, Name = "Quest Name")]
+
 	[CommandDescription(Name = "Start Quest", Text = "Start a Quest")]
+	[CommandParameter(Key = PARAMETER_CUTSCENE, Name = "Quest Name")]
 	public class PlayCutscene
 	{
 		public const string PARAMETER_CUTSCENE = "Cutscene";

@@ -25,7 +25,7 @@ public abstract class AbstractSexscene
 	public const float FastPhase = 300f;
 
 	protected float Ticks = 1000f;
-	protected float Cycle = 1000f;
+	protected float TickToPhase = 1000f;
 
 	private float _interpolation, _targetInterpolation;
 	private int _moanTo, _moanWhen;
@@ -57,7 +57,7 @@ public abstract class AbstractSexscene
 		}
 		Spine.SetVisibility(0f);
 		ResetPhase();
-		RefreshData();
+		RefreshSubscene();
 		Background = contentManager.Load<Texture2D>(background);
 		if (!string.IsNullOrEmpty(overlay))
 		{
@@ -65,10 +65,9 @@ public abstract class AbstractSexscene
 		}
 	}
 
-	public void RefreshData()
+	public void RefreshSubscene()
 	{
-		PlayerData data = PlayerPreferences.GetPlayerData();
-		RefreshSubscene(data);
+		RefreshData(PlayerPreferences.GetPlayerData());
 	}
 
 	private void PlaySounds(string moanOrThrust)
@@ -104,7 +103,7 @@ public abstract class AbstractSexscene
 				_moanTo++;
 				if (_moanTo > _moanWhen)
 				{
-					_moanWhen = Randoms.Next(1, 3);
+					_moanWhen = Utils.Random(1, 3);
 					_moanTo = 0;
 					switch (phase)
 					{
@@ -137,24 +136,24 @@ public abstract class AbstractSexscene
 		Subscene = subscene;
 	}
 
-	protected virtual void RefreshSubscene(PlayerData data) {}
+	protected virtual void RefreshData(PlayerData data) {}
 
 	public virtual void Update(GameTime gameTime)
 	{
-		if (Ticks < Cycle)
+		if (Ticks < TickToPhase)
 		{
 			Ticks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 		}
-		else if (Ticks > Cycle)
+		else if (Ticks > TickToPhase)
 		{
 			Ticks -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 		}
 		if (_interpolation < _targetInterpolation)
 		{
 			_interpolation += (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
-			foreach (string item in ExplosionBones)
+			foreach (string bone in ExplosionBones)
 			{
-				Spine.SetAlpha(item, _interpolation);
+				Spine.SetAlpha(bone, _interpolation);
 			}
 			if (_interpolation > _targetInterpolation)
 			{
@@ -164,9 +163,9 @@ public abstract class AbstractSexscene
 		else if (_interpolation > _targetInterpolation)
 		{
 			_interpolation -= (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
-			foreach (string item2 in ExplosionBones)
+			foreach (string bone in ExplosionBones)
 			{
-				Spine.SetAlpha(item2, _interpolation);
+				Spine.SetAlpha(bone, _interpolation);
 			}
 			if (_interpolation < _targetInterpolation)
 			{
@@ -217,16 +216,16 @@ public abstract class AbstractSexscene
 		switch (State)
 		{
 			case Phase.Idle:
-				Cycle = IdlePhase;
+				TickToPhase = IdlePhase;
 				break;
 			case Phase.Slow:
-				Cycle = SlowPhase;
+				TickToPhase = SlowPhase;
 				break;
 			case Phase.Medium:
-				Cycle = MediumPhase;
+				TickToPhase = MediumPhase;
 				break;
 			case Phase.Fast:
-				Cycle = FastPhase;
+				TickToPhase = FastPhase;
 				break;
 		}
 	}

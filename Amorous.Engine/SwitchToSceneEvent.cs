@@ -22,6 +22,6 @@ public class SwitchToSceneEvent : AbstractEvent<SwitchToSceneEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = !base.Cutscene.Game.InScenePending;
+		base.Completable = !base.Cutscene.Game.InPendingScene;
 	}
 }

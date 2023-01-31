@@ -62,7 +62,7 @@ public abstract class BreathingNPC : AbstractNPC
 
 	public bool Breathing = true;
 
-	protected readonly float BreathingOffset = Randoms.NextDouble(0f, (float)Math.PI * 2f);
+	protected readonly float BreathingOffset = Utils.RandomFloat(0f, (float)Math.PI * 2f);
 	protected float BreathingSpeed = 1f;
 
 	private readonly Effect _effect;
@@ -158,8 +158,7 @@ public abstract class BreathingNPC : AbstractNPC
 	private void LoadAsset(ContentManager content, string name)
 	{
 		Texture2D texture = content.Load<Texture2D>(Path.Combine(_sprite, name));
-		SpritePiece piece = new SpritePiece(this, name, texture);
-		_pieces.Add(piece);
+		_pieces.Add(new SpritePiece(this, name, texture));
 	}
 
 	public virtual void Draw(SpriteBatch spriteBatch)
@@ -167,7 +166,7 @@ public abstract class BreathingNPC : AbstractNPC
 		base.Draw();
 		if (Breathing)
 		{
-			_effect.Parameters["Time"].SetValue(Randoms.Date);
+			_effect.Parameters["Time"].SetValue(Utils.Date);
 			_effect.Parameters["BreathingOffset"].SetValue(BreathingOffset);
 			_effect.Parameters["BreathingSpeed"].SetValue(BreathingSpeed);
 			_effect.CurrentTechnique.Passes[0].Apply();
@@ -193,11 +192,7 @@ public abstract class BreathingNPC : AbstractNPC
 		}
 	}
 
-	protected override bool Refresh(int stage)
-	{
-		return true;
-	}
-
+	protected override bool Refresh(int stage) => true;
 	protected override void Fade(float percent) {}
-	protected override void DisposeFading() {}
+	protected override void Dispose() {}
 }

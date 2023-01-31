@@ -7,19 +7,13 @@ public class SpineRenderer
 { // _nHdiyIURlAiaNZ8u6MKzxjcwnyL
 	public Action<string> OnAnimationFrame;
 
-	private readonly Skeleton Skeleton;
-
-	private readonly AnimationState Animation;
-
-	private Action<int> LoopingAnimationCompleted;
-
-	private bool IsAnimationCompleted;
-
-	private int AnimationFrame;
-
-	private Action AnimationEnded;
-
-	private bool IsAnimationEnded;
+	private readonly Skeleton _skeleton;
+	private readonly AnimationState _state;
+	private Action<int> _onLoopingCompleted;
+	private bool _animationCompleted;
+	private int _index;
+	private Action _onAnimationEnded;
+	private bool _animationEnded;
 
 	public bool PremultipliedAlpha { get; set; }
 
@@ -27,12 +21,12 @@ public class SpineRenderer
 	{
 		get
 		{
-			return Skeleton.X;
+			return _skeleton.X;
 		}
 		set
 		{
-			Skeleton.X = value;
-			Skeleton.UpdateWorldTransform();
+			_skeleton.X = value;
+			_skeleton.UpdateWorldTransform();
 		}
 	}
 
@@ -40,12 +34,12 @@ public class SpineRenderer
 	{
 		get
 		{
-			return Skeleton.Y;
+			return _skeleton.Y;
 		}
 		set
 		{
-			Skeleton.Y = value;
-			Skeleton.UpdateWorldTransform();
+			_skeleton.Y = value;
+			_skeleton.UpdateWorldTransform();
 		}
 	}
 
@@ -53,11 +47,11 @@ public class SpineRenderer
 	{
 		get
 		{
-			return Skeleton.FlipX;
+			return _skeleton.FlipX;
 		}
 		set
 		{
-			Skeleton.FlipX = value;
+			_skeleton.FlipX = value;
 		}
 	}
 
@@ -65,25 +59,25 @@ public class SpineRenderer
 	{
 		get
 		{
-			return Skeleton.FlipY;
+			return _skeleton.FlipY;
 		}
 		set
 		{
-			Skeleton.FlipY = value;
+			_skeleton.FlipY = value;
 		}
 	}
 
-	public Skeleton Spine => Skeleton;
+	public Skeleton Spine => _skeleton;
 
 	public SpineRenderer(Skeleton skeleton, bool premultipliedAlpha)
 	{
-		Skeleton = skeleton;
+		_skeleton = skeleton;
 		PremultipliedAlpha = premultipliedAlpha;
-		AnimationStateData data = new AnimationStateData(Skeleton.Data);
-		Animation = new AnimationState(data);
-		Animation.Complete += CompleteAnimation;
-		Animation.End += EndAnimation;
-		Animation.Event += delegate(AnimationState animationState, int state, Event self)
+		AnimationStateData data = new AnimationStateData(_skeleton.Data);
+		_state = new AnimationState(data);
+		_state.Complete += CompleteAnimation;
+		_state.End += EndAnimation;
+		_state.Event += delegate(AnimationState animationState, int state, Event self)
 		{
 			if (OnAnimationFrame != null)
 			{
@@ -94,65 +88,65 @@ public class SpineRenderer
 
 	private void CompleteAnimation(AnimationState animationState, int state1, int state2)
 	{
-		IsAnimationCompleted = true;
-		AnimationFrame = state1;
+		_animationCompleted = true;
+		_index = state1;
 	}
 
 	private void EndAnimation(AnimationState animationState, int state)
 	{
-		IsAnimationEnded = true;
+		_animationEnded = true;
 	}
 
 	public void RestartAnimation()
 	{
-		Skeleton.SetBonesToSetupPose();
+		_skeleton.SetBonesToSetupPose();
 	}
 
 	public void StartAnimationWithLooping(string animation, Action<int> onLoop = null)
 	{
-		Animation.SetAnimation(0, animation, loop: true);
-		LoopingAnimationCompleted = onLoop;
-		IsAnimationCompleted = false;
-		AnimationFrame = 0;
-		AnimationEnded = null;
-		IsAnimationEnded = false;
+		_state.SetAnimation(0, animation, loop: true);
+		_onLoopingCompleted = onLoop;
+		_animationCompleted = false;
+		_index = 0;
+		_onAnimationEnded = null;
+		_animationEnded = false;
 	}
 
 	public void StartAnimation(string animation, Action onEnd = null)
 	{
-		Animation.SetAnimation(0, animation, loop: false);
-		LoopingAnimationCompleted = null;
-		IsAnimationCompleted = false;
-		AnimationFrame = 0;
-		AnimationEnded = onEnd;
-		IsAnimationEnded = false;
+		_state.SetAnimation(0, animation, loop: false);
+		_onLoopingCompleted = null;
+		_animationCompleted = false;
+		_index = 0;
+		_onAnimationEnded = onEnd;
+		_animationEnded = false;
 	}
 
 	public void ResetAnimation()
 	{
-		Animation.ClearTracks();
+		_state.ClearTracks();
 	}
 
 	public void SetMix(string animation1, string animation2, float mix)
 	{
-		Animation.Data.SetMix(animation1, animation2, mix);
+		_state.Data.SetMix(animation1, animation2, mix);
 	}
 
-	public void AddAnimation(string animation, bool looping = false, float float_0 = 0f, Action<int> onLoop = null, Action onEnd = null)
+	public void AddAnimation(string animationName, bool looping = false, float delay = 0f, Action<int> onLoop = null, Action onEnd = null)
 	{
-		Animation.AddAnimation(0, animation, looping, float_0);
-		LoopingAnimationCompleted = onLoop;
-		IsAnimationCompleted = false;
-		AnimationFrame = 0;
-		AnimationEnded = onEnd;
-		IsAnimationEnded = false;
+		_state.AddAnimation(0, animationName, looping, delay);
+		_onLoopingCompleted = onLoop;
+		_animationCompleted = false;
+		_index = 0;
+		_onAnimationEnded = onEnd;
+		_animationEnded = false;
 	}
 
 	public void SetAlpha(string bone, float alpha)
 	{
 		if (!string.IsNullOrEmpty(bone))
 		{
-			Slot slot = Skeleton.FindSlot(bone);
+			Slot slot = _skeleton.FindSlot(bone);
 			if (slot != null)
 			{
 				slot.A = alpha;
@@ -169,7 +163,7 @@ public class SpineRenderer
 	{
 		if (!string.IsNullOrEmpty(bone))
 		{
-			Slot slot = Skeleton.FindSlot(bone);
+			Slot slot = _skeleton.FindSlot(bone);
 			if (slot != null)
 			{
 				slot.R = r;
@@ -179,11 +173,11 @@ public class SpineRenderer
 		}
 	}
 
-	public void SetVisibility(float a)
+	public void SetVisibility(float alpha)
 	{
-		foreach (Slot slot in Skeleton.Slots)
+		foreach (Slot slot in _skeleton.Slots)
 		{
-			slot.A = a;
+			slot.A = alpha;
 		}
 	}
 
@@ -193,38 +187,38 @@ public class SpineRenderer
 		{
 			return false;
 		}
-		Slot slot = Skeleton.FindSlot(bone);
+		Slot slot = _skeleton.FindSlot(bone);
 		if (slot != null && slot.Attachment is RegionAttachment)
 		{
 			RegionAttachment regionAttachment = slot.Attachment as RegionAttachment;
-			float num = Skeleton.X + slot.Bone.WorldX;
-			float num2 = Skeleton.Y + slot.Bone.WorldY;
-			float m = slot.Bone.M00;
-			float m2 = slot.Bone.M01;
-			float m3 = slot.Bone.M10;
-			float m4 = slot.Bone.M11;
+			float worldX = _skeleton.X + slot.Bone.WorldX;
+			float worldY = _skeleton.Y + slot.Bone.WorldY;
+			float m00 = slot.Bone.M00;
+			float m01 = slot.Bone.M01;
+			float m10 = slot.Bone.M10;
+			float m11 = slot.Bone.M11;
 			float[] offset = regionAttachment.Offset;
-			float num3 = offset[0] * m + offset[1] * m2 + num;
-			float num4 = offset[0] * m3 + offset[1] * m4 + num2;
-			float num5 = offset[2] * m + offset[3] * m2 + num;
-			float num6 = offset[2] * m3 + offset[3] * m4 + num2;
-			float num7 = offset[4] * m + offset[5] * m2 + num;
-			float num8 = offset[4] * m3 + offset[5] * m4 + num2;
-			float num9 = num3 - num5;
-			float num10 = num4 - num6;
-			float num11 = num7 - num5;
-			float num12 = num8 - num6;
-			float num13 = num9 * num9 + num10 * num10;
-			float num14 = num11 * num11 + num12 * num12;
-			float num15 = x - num5;
-			float num16 = y - num6;
-			float num17 = num15 * num9 + num16 * num10;
-			float num18 = num15 * num11 + num16 * num12;
-			if (0f <= num17 && num17 <= num13)
+			float vx1 = offset[0] * m00 + offset[1] * m01 + worldX;
+			float vy1 = offset[0] * m10 + offset[1] * m11 + worldY;
+			float vx2 = offset[2] * m00 + offset[3] * m01 + worldX;
+			float vy2 = offset[2] * m10 + offset[3] * m11 + worldY;
+			float vx3 = offset[4] * m00 + offset[5] * m01 + worldX;
+			float vy3 = offset[4] * m10 + offset[5] * m11 + worldY;
+			float x1 = vx1 - vx2;
+			float y1 = vy1 - vy2;
+			float x2 = vx3 - vx2;
+			float y2 = vy3 - vy2;
+			float sqrt1 = x1 * x1 + y1 * y1;
+			float sqrt2 = x2 * x2 + y2 * y2;
+			float x0 = x - vx2;
+			float y0 = y - vy2;
+			float dst1 = x0 * x1 + y0 * y1;
+			float dst2 = x0 * x2 + y0 * y2;
+			if (0f <= dst1 && dst1 <= sqrt1)
 			{
-				if (0f <= num18)
+				if (0f <= dst2)
 				{
-					return num18 <= num14;
+					return dst2 <= sqrt2;
 				}
 				return false;
 			}
@@ -235,46 +229,46 @@ public class SpineRenderer
 
 	public void Update(GameTime gameTime, float speed = 1000f)
 	{
-		Animation.Update((float)gameTime.ElapsedGameTime.Milliseconds / speed);
-		Animation.Apply(Skeleton);
-		Skeleton.UpdateWorldTransform();
-		if (!IsAnimationEnded)
+		_state.Update((float)gameTime.ElapsedGameTime.Milliseconds / speed);
+		_state.Apply(_skeleton);
+		_skeleton.UpdateWorldTransform();
+		if (!_animationEnded)
 		{
-			if (IsAnimationCompleted)
+			if (_animationCompleted)
 			{
-				IsAnimationCompleted = false;
-				if (LoopingAnimationCompleted != null)
+				_animationCompleted = false;
+				if (_onLoopingCompleted != null)
 				{
-					LoopingAnimationCompleted(AnimationFrame);
+					_onLoopingCompleted(_index);
 				}
 			}
 		}
 		else
 		{
-			IsAnimationEnded = false;
-			if (AnimationEnded != null)
+			_animationEnded = false;
+			if (_onAnimationEnded != null)
 			{
-				AnimationEnded();
+				_onAnimationEnded();
 			}
 		}
 	}
 
-	public void Draw(SkeletonMeshRenderer skeletonMeshRenderer, Texture2D texture2D = null, Func<int, string, bool> func_0 = null, Color? nullable_0 = null, float float_0 = 1f)
+	public void Draw(SkeletonMeshRenderer skeletonMeshRenderer, Texture2D overrideTexture = null, Func<int, string, bool> beforeRenderSlot = null, Color? overrideColor = null, float scale = 1f)
 	{
 		skeletonMeshRenderer.PremultipliedAlpha = PremultipliedAlpha;
-		skeletonMeshRenderer.Begin(X, Y, float_0);
-		skeletonMeshRenderer.Draw(Skeleton, texture2D, func_0, nullable_0);
+		skeletonMeshRenderer.Begin(X, Y, scale);
+		skeletonMeshRenderer.Draw(_skeleton, overrideTexture, beforeRenderSlot, overrideColor);
 		skeletonMeshRenderer.End();
 	}
 
 	public Point GetDistanceDepth(string bone, out double depth)
 	{
-		Slot slot = Skeleton.FindSlot(bone);
+		Slot slot = _skeleton.FindSlot(bone);
 		if (slot != null && slot.Attachment is RegionAttachment)
 		{
 			RegionAttachment regionAttachment = slot.Attachment as RegionAttachment;
-			float num = Skeleton.X + slot.Bone.WorldX;
-			float num2 = Skeleton.Y + slot.Bone.WorldY;
+			float num = _skeleton.X + slot.Bone.WorldX;
+			float num2 = _skeleton.Y + slot.Bone.WorldY;
 			float m = slot.Bone.M00;
 			float m2 = slot.Bone.M01;
 			float m3 = slot.Bone.M10;
@@ -293,18 +287,18 @@ public class SpineRenderer
 
 	public void ApplyFrame(string bone, float frame)
 	{
-		Animation animation = Skeleton.Data.FindAnimation(bone);
+		Animation animation = _skeleton.Data.FindAnimation(bone);
 		if (animation == null)
 		{
 			throw new ArgumentException("Animation not found: " + bone);
 		}
-		animation.Apply(Skeleton, 0f, frame, loop: false, null);
+		animation.Apply(_skeleton, 0f, frame, loop: false, null);
 	}
 
 	public void SetSkin(string variant)
 	{
-		Skeleton.SetSkin(variant);
-		Skeleton.SetSlotsToSetupPose();
+		_skeleton.SetSkin(variant);
+		_skeleton.SetSlotsToSetupPose();
 	}
 
 	public void OverlayWith(string bone1, string bone2)
@@ -312,12 +306,12 @@ public class SpineRenderer
 		Slot slot1 = Spine.FindSlot(bone1);
 		Slot slot2 = Spine.FindSlot(bone2);
 		Spine.DrawOrder.Remove(slot1);
-		int num = Spine.DrawOrder.IndexOf(slot2);
-		Spine.DrawOrder.Insert(num + 1, slot1);
+		int index = Spine.DrawOrder.IndexOf(slot2);
+		Spine.DrawOrder.Insert(index + 1, slot1);
 	}
 
 	public void IncreaseDuration(string animation, float ms)
 	{
-		Skeleton.Data.FindAnimation(animation).Duration += ms;
+		_skeleton.Data.FindAnimation(animation).Duration += ms;
 	}
 }

@@ -177,9 +177,9 @@ public class PhoneOverlay
 	private PhoneIndicator _indicator;
 	private bool _isChangingState, _requestedRise, _requestedHang;
 
-	private static readonly string[] _gameboxSprites = new string[6] { "Marlboro", "Angry Curds", "God of Warfare Modern War", "Inanimate 3", "The Blinding of Blissac", "Traffic Controller" };
-	private static readonly string[] _remyNudes = new string[4] { "Nude1", "Nude2", "Nude3", "Nude4" };
-	private static readonly string[] _playerNails = new string[4] { "Pinky Nail", "Ring Nail", "Rude Nail", "Index Nail" };
+	private static readonly string[] GameboxSprites = new string[6] { "Marlboro", "Angry Curds", "God of Warfare Modern War", "Inanimate 3", "The Blinding of Blissac", "Traffic Controller" };
+	private static readonly string[] RemyNudes = new string[4] { "Nude1", "Nude2", "Nude3", "Nude4" };
+	private static readonly string[] PlayerNails = new string[4] { "Pinky Nail", "Ring Nail", "Rude Nail", "Index Nail" };
 
 	private readonly Desktop _squid;
 	private readonly RenderTarget2D _phoneScreenTarget, _phoneActionTarget;
@@ -285,8 +285,8 @@ public class PhoneOverlay
 			Vector2 vector = Vector2.Transform(new Vector2(point_0.x, point_0.y), matrix);
 			return new Squid.Point((int)vector.X, (int)vector.Y);
 		};
-		_phoneScreenTarget = new RenderTarget2D(_game.GLES, 270, 380);
-		_phoneActionTarget = new RenderTarget2D(_game.GLES, 270, 380);
+		_phoneScreenTarget = new RenderTarget2D(_game.Graphics, 270, 380);
+		_phoneActionTarget = new RenderTarget2D(_game.Graphics, 270, 380);
 		_screenHistory = new Stack<PhoneScreen>();
 		_hiddenGameBox = true;
 		_hiddenRemyNudes = true;
@@ -384,9 +384,9 @@ public class PhoneOverlay
 	public void ShowGameBox()
 	{
 		_hiddenGameBox = false;
-		_spriteActiveGamebox = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gameboxes/" + _gameboxSprites[_currentlyGame]);
+		_spriteActiveGamebox = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gameboxes/" + GameboxSprites[_currentlyGame]);
 		_currentlyGame++;
-		if (_currentlyGame >= _gameboxSprites.Length)
+		if (_currentlyGame >= GameboxSprites.Length)
 		{
 			_currentlyGame = 0;
 		}
@@ -401,9 +401,9 @@ public class PhoneOverlay
 	public void UpdateRemyNudes()
 	{
 		_hiddenRemyNudes = false;
-		_spriteActiveRemyNude = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + _remyNudes[_currentlyNude]);
+		_spriteActiveRemyNude = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + RemyNudes[_currentlyNude]);
 		_currentlyNude++;
-		if (_currentlyNude >= _remyNudes.Length)
+		if (_currentlyNude >= RemyNudes.Length)
 		{
 			_currentlyNude = 0;
 		}
@@ -413,7 +413,7 @@ public class PhoneOverlay
 	public void UpdateRemyNudes(int index)
 	{
 		_hiddenRemyNudes = false;
-		_spriteActiveRemyNude = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + _remyNudes[index]);
+		_spriteActiveRemyNude = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + RemyNudes[index]);
 		StartSwipeAnimation();
 	}
 
@@ -781,7 +781,7 @@ public class PhoneOverlay
 			};
 			cookingButton.MouseClick += delegate
 			{
-				_game.StartCutscene(AmorousData.MiniGameCooking);
+				_game.PlayCutscene(AmorousData.MiniGameCooking);
 				Hide();
 			};
 			container.Content.Controls.Add(cookingButton);
@@ -796,7 +796,7 @@ public class PhoneOverlay
 			};
 			remyNudesButton.MouseClick += delegate
 			{
-				_game.StartCutscene(AmorousData.NudesRemy);
+				_game.PlayCutscene(AmorousData.NudesRemy);
 				Hide();
 			};
 			container.Content.Controls.Add(remyNudesButton);
@@ -944,7 +944,7 @@ public class PhoneOverlay
 			soundtrackContainer.Controls.Add(soundtrackArtistLabel);
 			soundtrackContainer.MouseClick += delegate
 			{
-				int dialogue = Randoms.Next(0, _dialogueDJ.Length);
+				int dialogue = Utils.Random(0, _dialogueDJ.Length);
 				TypingDialogue.Type(_dialogueDJ[dialogue], ClubDJNPC.Name, ClubDJNPC.Color);
 				FadingMediaPlayer.Play(soundtrack.AssetName, 0.3f, repeat: false);
 				_game.Achievements.TriggerAchievement(Achievements.AchievementGeneric3);
@@ -1446,7 +1446,7 @@ public class PhoneOverlay
 
 	private void ReloadSceneWith(Action then)
 	{
-		_game.Fading.FadeOut(delegate
+		_game.Fader.FadeOut(delegate
 		{
 			string sceneName = _game.Sexscene?.GetType().Name;
 			if (sceneName != null)
@@ -1460,14 +1460,14 @@ public class PhoneOverlay
 				{
 					_game.PlaySexscene(sceneName);
 				}
-				_game.Fading.FadeIn();
+				_game.Fader.FadeIn();
 			});
 		});
 	}
 
 	private void RequestSexscene(string name)
 	{
-		_game.StartCutscene(name);
+		_game.PlayCutscene(name);
 		Hide();
 	}
 
@@ -1578,7 +1578,7 @@ public class PhoneOverlay
 			case PlayerData.EPhoneContacts.Dustin:
 				if (data.GetState(AmorousData.DustinDate) != AmorousData.DustinStateCompleted)
 				{
-					_game.StartCutscene(AmorousData.DustinDate);
+					_game.PlayCutscene(AmorousData.DustinDate);
 					Hide();
 				}
 				else
@@ -1589,7 +1589,7 @@ public class PhoneOverlay
 			case PlayerData.EPhoneContacts.Remy:
 				if (data.GetState(AmorousData.RemyDate) != AmorousData.RemyStateCompleted)
 				{
-					_game.StartCutscene(AmorousData.RemyDate);
+					_game.PlayCutscene(AmorousData.RemyDate);
 					Hide();
 				}
 				else
@@ -1603,13 +1603,13 @@ public class PhoneOverlay
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.StartCutscene(AmorousData.SethDate);
+				_game.PlayCutscene(AmorousData.SethDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Skye:
 				if (data.GetState(AmorousData.SkyeDate) != AmorousData.SkyeStateCompleted)
 				{
-					_game.StartCutscene(AmorousData.SkyeDate);
+					_game.PlayCutscene(AmorousData.SkyeDate);
 					Hide();
 				}
 				else
@@ -1623,13 +1623,13 @@ public class PhoneOverlay
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.StartCutscene(AmorousData.ZenithDate);
+				_game.PlayCutscene(AmorousData.ZenithDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Mercy:
 				if (data.GetState(AmorousData.MercyDate) != AmorousData.MercyStateCompleted)
 				{
-					_game.StartCutscene(AmorousData.MercyDate);
+					_game.PlayCutscene(AmorousData.MercyDate);
 					Hide();
 				}
 				else
@@ -1643,7 +1643,7 @@ public class PhoneOverlay
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.StartCutscene(AmorousData.LexDate);
+				_game.PlayCutscene(AmorousData.LexDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Jax:
@@ -1652,18 +1652,18 @@ public class PhoneOverlay
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.StartCutscene(AmorousData.JaxDate);
+				_game.PlayCutscene(AmorousData.JaxDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Coby:
 				if (data.GetState(AmorousData.CobyDate) < AmorousData.CobyStateCompleted)
 				{
-					_game.StartCutscene(AmorousData.CobyDate);
+					_game.PlayCutscene(AmorousData.CobyDate);
 					Hide();
 				}
 				else
 				{
-					_game.StartCutscene(AmorousData.CobyPostDate);
+					_game.PlayCutscene(AmorousData.CobyPostDate);
 				}
 				break;
 		}
@@ -1937,10 +1937,10 @@ public class PhoneOverlay
 		}
 		if (_isChangingState || Pose == ArmPose.ArmUp)
 		{
-			RenderTargetBinding[] targets = _game.GLES.GetRenderTargets();
-			_game.GLES.SetRenderTarget(_phoneScreenTarget);
+			RenderTargetBinding[] targets = _game.Graphics.GetRenderTargets();
+			_game.Graphics.SetRenderTarget(_phoneScreenTarget);
 			_squid.Draw();
-			_game.GLES.SetRenderTarget(_phoneActionTarget);
+			_game.Graphics.SetRenderTarget(_phoneActionTarget);
 			_phoneActionSpine.Draw(skeletonMeshRenderer, null, delegate(int answer, string string_0)
 			{
 				if (_visibleContactParts.ContainsKey(string_0))
@@ -1949,7 +1949,7 @@ public class PhoneOverlay
 				}
 				return !_visibleActionParts.ContainsKey(string_0) || _visibleActionParts[string_0];
 			});
-			_game.GLES.SetRenderTargets(targets);
+			_game.Graphics.SetRenderTargets(targets);
 			double depth;
 			Microsoft.Xna.Framework.Point sheen = _interactionSpine.GetDistanceDepth("Sheen Two", out depth);
 			_interactionSpine.Draw(skeletonMeshRenderer, null, delegate(int answer, string string_0)
@@ -1984,7 +1984,7 @@ public class PhoneOverlay
 						skeletonMeshRenderer.Begin();
 					}
 				}
-				else if (!_hiddenGameBox && _playerNails.Contains(string_0))
+				else if (!_hiddenGameBox && PlayerNails.Contains(string_0))
 				{
 					return false;
 				}

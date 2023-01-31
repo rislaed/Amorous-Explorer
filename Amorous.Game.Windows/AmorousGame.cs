@@ -2,29 +2,29 @@ using Microsoft.Xna.Framework;
 
 public class AmorousGame : Game
 { // _SkYjfUaaNhTySNgoGUeFZ46X4dM
-	private readonly IAmorous Amorous;
+	private readonly IAmorous _game;
 
 	public AmorousGame(bool safemode)
 	{
 		base.Window.Title = string.Format("Amorous v{0} (Windows)", AmorousData.Version);
-		Amorous = new AmorousSingleton(this, safemode);
+		_game = new AmorousSingleton(this, safemode);
 	}
 
 	protected override void Initialize()
 	{
-		Amorous.Initialize();
+		_game.Initialize();
 		base.Initialize();
 	}
 
 	protected override void LoadContent()
 	{
-		Amorous.LoadContent();
+		_game.LoadContent();
 		base.LoadContent();
 	}
 
 	protected override void UnloadContent()
 	{
-		Amorous.UnloadContent();
+		_game.UnloadContent();
 		base.UnloadContent();
 	}
 
@@ -32,14 +32,14 @@ public class AmorousGame : Game
 	{
 		if (base.IsActive)
 		{
-			Amorous.Update(gameTime);
+			_game.Update(gameTime);
 		}
 		base.Update(gameTime);
 	}
 
 	protected override void Draw(GameTime gameTime)
 	{
-		Amorous.Draw(gameTime);
+		_game.Draw(gameTime);
 		base.Draw(gameTime);
 	}
 }

@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Amorous.Game.NPC;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Amorous.Game.Scenes;
@@ -13,33 +11,25 @@ public class ClubPoolScene : AbstractScene
 	private class FrameAnimationLayer : DrawableLayer
 	{
 		private readonly Texture2D _animationTexture;
-
 		private Rectangle _destinationRectangle;
-
 		private Rectangle _sourceRectangle;
-
 		private readonly Vector2 _origin;
-
 		private readonly float _timePerFrame;
-
 		private readonly int _numberOfFrames;
-
 		private int _currentFrame;
-
 		private float _angle;
-
 		private float _time;
 
-		public FrameAnimationLayer(AbstractScene scene, string string_0, float float_0, int int_0, int int_1, int int_2, float float_1)
+		public FrameAnimationLayer(AbstractScene scene, string texture, float time, int frames, int dx, int dy, float scale)
 			: base(scene, "FrameAnimationLayer")
 		{
-			_animationTexture = scene.Game.Content.Load<Texture2D>(string_0);
-			_timePerFrame = float_0 / (float)int_0;
-			_numberOfFrames = int_0;
+			_animationTexture = scene.Game.Content.Load<Texture2D>(texture);
+			_timePerFrame = time / (float)frames;
+			_numberOfFrames = frames;
 			_currentFrame = 0;
-			_sourceRectangle = new Rectangle(0, 0, (int)((float)_animationTexture.Width / (float)int_0), _animationTexture.Height);
-			_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * float_1), (int)((float)_sourceRectangle.Height * float_1));
-			_origin = new Vector2(int_1, int_2);
+			_sourceRectangle = new Rectangle(0, 0, (int)((float)_animationTexture.Width / (float)frames), _animationTexture.Height);
+			_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * scale), (int)((float)_sourceRectangle.Height * scale));
+			_origin = new Vector2(dx, dy);
 			base.OnUpdate = delegate(GameTime time)
 			{
 				MyUpdate((float)time.ElapsedGameTime.Milliseconds / 1000f);
@@ -80,7 +70,7 @@ public class ClubPoolScene : AbstractScene
 		{
 			if (_currentFrame >= 0)
 			{
-				spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, base.AdditionalMatrix);
+				spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, base.DrawableMatrix);
 				spriteBatch.Draw(_animationTexture, _destinationRectangle, _sourceRectangle, Color.White, _angle, _origin, SpriteEffects.None, 0f);
 				spriteBatch.End();
 			}
@@ -88,7 +78,6 @@ public class ClubPoolScene : AbstractScene
 	}
 
 	private ClubStaticRemyNPC _remy;
-
 	private readonly bool _showRemy;
 
 	public ClubPoolScene(IAmorous game)
@@ -96,18 +85,18 @@ public class ClubPoolScene : AbstractScene
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
 		AddClickableLayer("Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, OnDoorClick);
-		ClubPoolSpineLayer gparam_ = new ClubPoolSpineLayer(this)
+		ClubPoolSpineLayer poolLayer = new ClubPoolSpineLayer(this)
 		{
 			OffsetX = 1525f,
 			OffsetY = 890f
 		};
-		AddLayer(gparam_, 2);
-		FrameAnimationLayer frameAnimationLayer = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
-		frameAnimationLayer.Play(-1420, 200, 0, 10f);
-		FrameAnimationLayer frameAnimationLayer2 = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
-		frameAnimationLayer2.Play(-1170, 200, 2, 10f);
-		AddLayer(frameAnimationLayer, 2);
-		AddLayer(frameAnimationLayer2, 2);
+		AddLayer(poolLayer, 2);
+		FrameAnimationLayer showerLeftLayer = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
+		showerLeftLayer.Play(-1420, 200, 0, 10f);
+		FrameAnimationLayer showerRightLayer = new FrameAnimationLayer(this, "Assets/Scenes/ClubPool/ShowerParticle", 0.5f, 5, 200, 30, 1.5f);
+		showerRightLayer.Play(-1170, 200, 2, 10f);
+		AddLayer(showerLeftLayer, 2);
+		AddLayer(showerRightLayer, 2);
 		AddForegroundSpriteLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
 		AddForegroundSpriteLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
 		Game.Canvas.SetOverscroll(-1677, 1677, 0, 0);
@@ -136,7 +125,7 @@ public class ClubPoolScene : AbstractScene
 		clubPoolStaticCNPC.X = -180f;
 		clubPoolStaticCNPC.Y = 450f;
 		ClubPoolStaticCNPC2 clubPoolStaticCNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticCNPC2>(LayerOrder.Background);
-		clubPoolStaticCNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticCNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		clubPoolStaticCNPC2.PoolOffset = clubPoolStaticCNPC.PoolOffset;
 		clubPoolStaticCNPC2.X = clubPoolStaticCNPC.X;
 		clubPoolStaticCNPC2.Y = clubPoolStaticCNPC.Y;
 		ClubPoolStaticFNPC clubPoolStaticFNPC = base.Game.GetNPCLayerAt<ClubPoolStaticFNPC>(LayerOrder.Foreground);
@@ -146,14 +135,14 @@ public class ClubPoolScene : AbstractScene
 		clubPoolStaticGHINPC.X = 370f;
 		clubPoolStaticGHINPC.Y = 450f;
 		ClubPoolStaticGHINPC2 clubPoolStaticGHINPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticGHINPC2>(LayerOrder.Background);
-		clubPoolStaticGHINPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticGHINPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		clubPoolStaticGHINPC2.PoolOffset = clubPoolStaticGHINPC.PoolOffset;
 		clubPoolStaticGHINPC2.X = clubPoolStaticGHINPC.X;
 		clubPoolStaticGHINPC2.Y = clubPoolStaticGHINPC.Y;
 		ClubPoolStaticDNPC clubPoolStaticDNPC = base.Game.GetNPCLayerAt<ClubPoolStaticDNPC>(LayerOrder.Foreground);
 		clubPoolStaticDNPC.X = 50f;
 		clubPoolStaticDNPC.Y = 690f;
 		ClubPoolStaticDNPC2 clubPoolStaticDNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticDNPC2>(LayerOrder.Background);
-		clubPoolStaticDNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticDNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		clubPoolStaticDNPC2.PoolOffset = clubPoolStaticDNPC.PoolOffset;
 		clubPoolStaticDNPC2.X = clubPoolStaticDNPC.X;
 		clubPoolStaticDNPC2.Y = clubPoolStaticDNPC.Y;
 		if (_showRemy)
@@ -167,7 +156,7 @@ public class ClubPoolScene : AbstractScene
 		clubPoolStaticJKNPC.X = 1269f;
 		clubPoolStaticJKNPC.Y = 383f;
 		ClubPoolStaticJKNPC2 clubPoolStaticJKNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticJKNPC2>(LayerOrder.Background);
-		clubPoolStaticJKNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticJKNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		clubPoolStaticJKNPC2.PoolOffset = clubPoolStaticJKNPC.PoolOffset;
 		clubPoolStaticJKNPC2.X = clubPoolStaticJKNPC.X;
 		clubPoolStaticJKNPC2.Y = clubPoolStaticJKNPC.Y;
 		ClubPoolStaticLNPC clubPoolStaticLNPC = base.Game.GetNPCLayerAt<ClubPoolStaticLNPC>(LayerOrder.Background);
@@ -183,7 +172,7 @@ public class ClubPoolScene : AbstractScene
 		clubPoolStaticOPNPC.X = 2223f;
 		clubPoolStaticOPNPC.Y = 442f;
 		ClubPoolStaticOPNPC2 clubPoolStaticOPNPC2 = base.Game.GetNPCLayerAt<ClubPoolStaticOPNPC2>(LayerOrder.Background);
-		clubPoolStaticOPNPC2._qFVIvzuvIuKKG5vOrovLtn4NplA = clubPoolStaticOPNPC._qFVIvzuvIuKKG5vOrovLtn4NplA;
+		clubPoolStaticOPNPC2.PoolOffset = clubPoolStaticOPNPC.PoolOffset;
 		clubPoolStaticOPNPC2.X = clubPoolStaticOPNPC.X;
 		clubPoolStaticOPNPC2.Y = clubPoolStaticOPNPC.Y;
 		ClubPoolStaticQRNPC clubPoolStaticQRNPC = base.Game.GetNPCLayerAt<ClubPoolStaticQRNPC>(LayerOrder.Foreground);
@@ -195,10 +184,10 @@ public class ClubPoolScene : AbstractScene
 	{
 		if (IsOrderingChanged)
 		{
-			List<AbstractLayer> list = base.Layers.Where((AbstractLayer x) => x is NPCLayer NPCLayer && (!(NPCLayer.NPC is ClubStaticNPC) || !(NPCLayer.NPC is ClubStaticSpineNPC))).ToList();
-			list.ForEach(delegate(AbstractLayer x)
+			List<AbstractLayer> layers = base.Layers.Where((AbstractLayer x) => x is NPCLayer NPCLayer && (!(NPCLayer.NPC is ClubStaticNPC) || !(NPCLayer.NPC is ClubStaticSpineNPC))).ToList();
+			layers.ForEach(delegate(AbstractLayer layer)
 			{
-				x.ZOrder = 3;
+				layer.ZOrder = 3;
 			});
 		}
 		base.Update(gameTime);
@@ -211,6 +200,6 @@ public class ClubPoolScene : AbstractScene
 
 	private void OnRemyClick()
 	{
-		base.Game.StartCutscene(AmorousData.RemyPreDate);
+		base.Game.PlayCutscene(AmorousData.RemyPreDate);
 	}
 }

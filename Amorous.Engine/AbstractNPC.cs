@@ -72,11 +72,11 @@ public abstract class AbstractNPC
 	public virtual Action Click { get; set; }
 	public Type[] Variations { get; set; }
 
-	protected AbstractNPC(IAmorous amorous)
+	protected AbstractNPC(IAmorous game)
 	{
 		Scale = 1f;
 		_clothes = new List<string>();
-		Game = amorous;
+		Game = game;
 		Emotions = new List<FilterableEmotion>();
 		Poses = new List<FilterablePose>();
 		_random = new Random();
@@ -234,38 +234,38 @@ public abstract class AbstractNPC
 		FilterableClothes pants = null;
 		bool withShirt = false;
 		bool withPants = false;
-		foreach (FilterableClothes item in _pose.Clothes)
+		foreach (FilterableClothes cloth in _pose.Clothes)
 		{
-			item.Updatable = names?.Contains(item.Name) ?? false;
+			cloth.Updatable = names?.Contains(cloth.Name) ?? false;
 			if (Censorship.Censored)
 			{
-				if (NudesBehindShirt && item.IsShirt && (shirt == null || item.IsCensoringShirt))
+				if (NudesBehindShirt && cloth.IsShirt && (shirt == null || cloth.IsCensoringShirt))
 				{
-					shirt = item;
+					shirt = cloth;
 				}
-				if (NudesBehindPants && item.IsPants && (pants == null || item.IsCensoringPants))
+				if (NudesBehindPants && cloth.IsPants && (pants == null || cloth.IsCensoringPants))
 				{
-					pants = item;
+					pants = cloth;
 				}
 			}
-			if (!item.Updatable)
+			if (!cloth.Updatable)
 			{
 				continue;
 			}
 			if (!Censorship.Censored)
 			{
-				if ((Censorship.Topless && item.IsShirt) || (Censorship.Bottomless && item.IsPants))
+				if ((Censorship.Topless && cloth.IsShirt) || (Censorship.Bottomless && cloth.IsPants))
 				{
-					item.Updatable = false;
+					cloth.Updatable = false;
 					continue;
 				}
 			}
 			else
 			{
-				withShirt |= item.IsShirt;
-				withPants |= item.IsPants;
+				withShirt |= cloth.IsShirt;
+				withPants |= cloth.IsPants;
 			}
-			_clothes.Add(item.Name);
+			_clothes.Add(cloth.Name);
 		}
 		if (Censorship.Censored)
 		{
@@ -288,7 +288,7 @@ public abstract class AbstractNPC
 		if (_fading > 0)
 		{
 			ApplyScheduledEvents();
-			DisposeFading();
+			Dispose();
 		}
 		IsAnimating = true;
 		_update = delegate
@@ -304,7 +304,7 @@ public abstract class AbstractNPC
 		if (_fading > 0)
 		{
 			ApplyScheduledEvents();
-			DisposeFading();
+			Dispose();
 		}
 		IsAnimating = true;
 		_update = delegate
@@ -338,7 +338,7 @@ public abstract class AbstractNPC
 				else
 				{
 					_draw = null;
-					DisposeFading();
+					Dispose();
 				}
 			};
 		};
@@ -362,7 +362,7 @@ public abstract class AbstractNPC
 		}
 		else
 		{
-			DisposeFading();
+			Dispose();
 		}
 	}
 
@@ -388,5 +388,5 @@ public abstract class AbstractNPC
 
 	protected abstract bool Refresh(int stage);
 	protected abstract void Fade(float percent);
-	protected abstract void DisposeFading();
+	protected abstract void Dispose();
 }

@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Spine;
 
@@ -9,8 +6,8 @@ namespace Amorous.Game.Sexscenes;
 
 public class LexSexscene : CensoredSexscene
 {
-	public const string _7p39D6gRnJVEL4nBpm27s7mRbMo = "Male";
-	public const string _bguKzeUbXe4hujNISQZXXCW725e = "Female";
+	public const string VariantMale = "Male";
+	public const string VariantFemale = "Female";
 
 	private static readonly List<SkeletonJson.SpineEvent> Events = new List<SkeletonJson.SpineEvent>
 	{
@@ -57,13 +54,13 @@ public class LexSexscene : CensoredSexscene
 		{
 			return base.GetSubscenes();
 		}
-		return new string[2] { "Male", "Female" };
+		return new string[2] { VariantMale, VariantFemale };
 	}
 
 	public override void SwitchToSubscene(string subscene)
 	{
 		base.SwitchToSubscene(subscene);
-		if (subscene == "Male")
+		if (subscene == VariantMale)
 		{
 			base.Sounds = new MaleSexsceneSounds(base.Content);
 			base.Spine.SetAlpha("Alex balls", 1f);
@@ -74,7 +71,7 @@ public class LexSexscene : CensoredSexscene
 			base.ExplosionBones.Add("Cum");
 			base.ExplosionBones.Add("Alex dick cum");
 		}
-		else if (subscene == "Female")
+		else if (subscene == VariantFemale)
 		{
 			base.Sounds = FemaleSexsceneSounds.Get(base.Content);
 			base.Spine.SetAlpha("Alex balls", 0f);
@@ -86,7 +83,7 @@ public class LexSexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshSubscene(PlayerData data)
+	protected override void RefreshData(PlayerData data)
 	{
 		bool isMale = data.GetFlag(AmorousData.LexIsMale);
 		base.Spine.SetVisibility(0f);
@@ -130,7 +127,7 @@ public class LexSexscene : CensoredSexscene
 			base.Spine.SetAlpha("Alex fringe", 1f);
 			base.Spine.SetAlpha("Alex hand left", 1f);
 			base.Spine.SetAlpha("Alex hand right", 1f);
-			SwitchToSubscene(isMale ? "Male" : "Female");
+			SwitchToSubscene(isMale ? VariantMale : VariantFemale);
 		}
 		else
 		{

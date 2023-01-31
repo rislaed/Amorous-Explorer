@@ -526,7 +526,7 @@ public class TypingDialogue
 		};
 		saveButton.MouseClick += delegate
 		{
-			_game.ConfirmSaving(_squid, delegate(bool toggle)
+			_game.ShowSave(_squid, delegate(bool toggle)
 			{
 				_choiceOverlay.Touchable = toggle;
 			});
@@ -539,7 +539,7 @@ public class TypingDialogue
 		};
 		loadButton.MouseClick += delegate
 		{
-			_game.ConfirmLoading(_squid, delegate(bool toggle)
+			_game.ShowLoad(_squid, delegate(bool toggle)
 			{
 				_choiceOverlay.Touchable = toggle;
 			});
@@ -552,7 +552,7 @@ public class TypingDialogue
 		};
 		exitButton.MouseClick += delegate
 		{
-			_game.ConfirmLeave(_squid, delegate(bool toggle)
+			_game.ShowExit(_squid, delegate(bool toggle)
 			{
 				_choiceOverlay.Touchable = toggle;
 			});
@@ -775,16 +775,15 @@ public class TypingDialogue
 			return;
 		}
 		_choiceOverlay.Draw(spriteBatch);
-		TypingOverlay oDZZ0F7Qg08utTIjAaoyIbeDuFG = _dialogue;
-		if (oDZZ0F7Qg08utTIjAaoyIbeDuFG != null)
+		if (_dialogue != null)
 		{
 			spriteBatch.Begin();
-			spriteBatch.Draw(_dialogueTexture, _backgroundLocation, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Color);
-			if (!string.IsNullOrEmpty(oDZZ0F7Qg08utTIjAaoyIbeDuFG.Author))
+			spriteBatch.Draw(_dialogueTexture, _backgroundLocation, _dialogue.Color);
+			if (!string.IsNullOrEmpty(_dialogue.Author))
 			{
-				spriteBatch.DrawString(_font, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Author, _controlBounds, oDZZ0F7Qg08utTIjAaoyIbeDuFG.Color);
+				spriteBatch.DrawString(_font, _dialogue.Author, _controlBounds, _dialogue.Color);
 			}
-			oDZZ0F7Qg08utTIjAaoyIbeDuFG.Draw(spriteBatch, _font, _italicFont, _lineLocations);
+			_dialogue.Draw(spriteBatch, _font, _italicFont, _lineLocations);
 			spriteBatch.End();
 			if (_game.Cutscene != null)
 			{

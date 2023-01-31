@@ -24,7 +24,6 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 	}
 
 	public static string Name = "Game Store Clerk";
-
 	public static Color Color = new Color(252, 137, 76);
 
 	public GamestoreClerkNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 545f;
-			Y = 0f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -80f;
-			Y = 0f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1166f;
-			Y = 0f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 545f;
+				Y = 0f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -80f;
+				Y = 0f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1166f;
+				Y = 0f;
+				break;
 		}
 	}
 }

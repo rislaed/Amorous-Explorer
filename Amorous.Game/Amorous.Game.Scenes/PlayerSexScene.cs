@@ -1,6 +1,5 @@
 using System;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -8,14 +7,13 @@ namespace Amorous.Game.Scenes;
 
 public class PlayerSexScene : AbstractScene
 {
-	private bool _jOJQdqVUTXcPDmuOqViqC8pczW;
-
+	private bool showHelp;
 	private SpriteFont _font;
 
 	public PlayerSexScene(IAmorous game)
 		: base(game)
 	{
-		_jOJQdqVUTXcPDmuOqViqC8pczW = true;
+		showHelp = true;
 		_font = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 		FadingMediaPlayer.Complete();
 	}
@@ -33,22 +31,22 @@ public class PlayerSexScene : AbstractScene
 		}
 		if (base.Game.Controller.IsPressed(Keys.S))
 		{
-			string[] array = base.Game.Sexscene.GetSubscenes();
-			if (array.Length == 0)
+			string[] subscenes = base.Game.Sexscene.GetSubscenes();
+			if (subscenes.Length == 0)
 			{
 				return;
 			}
-			int num = Array.IndexOf(array, base.Game.Sexscene.Subscene);
-			num++;
-			if (num >= array.Length)
+			int index = Array.IndexOf(subscenes, base.Game.Sexscene.Subscene);
+			index++;
+			if (index >= subscenes.Length)
 			{
-				num = 0;
+				index = 0;
 			}
-			base.Game.Sexscene.SwitchToSubscene(array[num]);
+			base.Game.Sexscene.SwitchToSubscene(subscenes[index]);
 		}
 		if (base.Game.Controller.IsPressed(Keys.Z))
 		{
-			_jOJQdqVUTXcPDmuOqViqC8pczW = !_jOJQdqVUTXcPDmuOqViqC8pczW;
+			showHelp = !showHelp;
 		}
 		if (!Censorship.Censored)
 		{
@@ -85,15 +83,15 @@ public class PlayerSexScene : AbstractScene
 		spriteBatch.Begin();
 		if (Censorship.Censored)
 		{
-			int num = 10;
+			int offset = 10;
 			if (base.Game.Sexscene != null && base.Game.Sexscene.GetSubscenes().Length != 0)
 			{
-				spriteBatch.DrawString(_font, "Cycle skin (S)", new Vector2(10f, num), Color.White);
-				num += 40;
+				spriteBatch.DrawString(_font, "Cycle skin (S)", new Vector2(10f, offset), Color.White);
+				offset += 40;
 			}
-			spriteBatch.DrawString(_font, "Toggle phone (Escape or Shift)", new Vector2(10f, num), Color.White);
+			spriteBatch.DrawString(_font, "Toggle phone (Escape or Shift)", new Vector2(10f, offset), Color.White);
 		}
-		else if (!_jOJQdqVUTXcPDmuOqViqC8pczW)
+		else if (!showHelp)
 		{
 			spriteBatch.DrawString(_font, "Show help (Z)", new Vector2(10f, 10f), Color.White);
 		}

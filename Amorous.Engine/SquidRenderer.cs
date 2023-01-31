@@ -15,7 +15,7 @@ public class SquidRenderer : IDisposable, ISquidRenderer
 	private readonly SpriteBatch _batch;
 	private readonly Texture2D _foreground;
 	private readonly RasterizerState _rasterizer;
-	private readonly string _defaultFontPath = "Assets/Gui/Fonts/Bold-14";
+	private readonly string _fontName = "Assets/Gui/Fonts/Bold-14";
 	private int _index;
 	private SpriteFont _font;
 	private Texture2D _texture;
@@ -49,11 +49,11 @@ public class SquidRenderer : IDisposable, ISquidRenderer
 		{
 			return _index;
 		}
-		Texture2D value = _game.Content.Load<Texture2D>(Path.GetDirectoryName(name) + "/" + Path.GetFileNameWithoutExtension(name));
-		int count = _texturePathes.Count;
-		_texturePathes.Add(name, count);
-		_textures.Add(count, value);
-		return count;
+		Texture2D texture = _game.Content.Load<Texture2D>(Path.GetDirectoryName(name) + "/" + Path.GetFileNameWithoutExtension(name));
+		int index = _texturePathes.Count;
+		_texturePathes.Add(name, index);
+		_textures.Add(index, texture);
+		return index;
 	}
 
 	public void SetTexture(string name, object texture)
@@ -63,16 +63,16 @@ public class SquidRenderer : IDisposable, ISquidRenderer
 			_textures[_index] = (Texture2D)texture;
 			return;
 		}
-		int count = _texturePathes.Count;
-		_texturePathes.Add(name, count);
-		_textures.Add(count, (Texture2D)texture);
+		int index = _texturePathes.Count;
+		_texturePathes.Add(name, index);
+		_textures.Add(index, (Texture2D)texture);
 	}
 
 	public int GetFont(string name)
 	{
 		if (name == "default")
 		{
-			name = _defaultFontPath;
+			name = _fontName;
 		}
 		if (!_fontPathes.TryGetValue(name, out _index))
 		{

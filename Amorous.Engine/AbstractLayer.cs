@@ -52,12 +52,7 @@ public abstract class AbstractLayer
 
 	public abstract void Update(GameTime gameTime);
 	public abstract void Draw(SpriteBatch spriteBatch);
-
-	public virtual bool Click()
-	{
-		return false;
-	}
-
+	public virtual bool Click() => false;
 	public virtual void Continue() {}
 	public virtual void Hover() {}
 	public virtual void Unhover() {}

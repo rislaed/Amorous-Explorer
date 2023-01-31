@@ -36,11 +36,10 @@ public class StartupScene : AbstractScene
 		public string hash { get; set; }
 	}
 
-	private static readonly string _Pxncvon3rRvuowKL1yYBOZjpf2y = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "username.txt");
+	private static readonly string LoginCredentials = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "username.txt");
 
-	private readonly TextBox _njC7ZfEM6PTCffwkw18LisM3W9E;
-
-	private readonly CheckBox _9nCiJkYgPYczxXJNlo8Z7BbfdsB;
+	private readonly TextBox usernameBox;
+	private readonly CheckBox rememberUsernameBox;
 
 	public StartupScene(IAmorous game)
 		: base(game)
@@ -49,80 +48,80 @@ public class StartupScene : AbstractScene
 		AddSpriteLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
 		AddForegroundSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
-		Window window = new Window
+		Window container = new Window
 		{
 			Position = new Point(704, 412),
 			Size = new Point(512, 285)
 		};
-		Label item = new Label
+		Label informationLabel = new Label
 		{
 			Position = new Point(15, 15),
 			AutoSize = AutoSize.HorizontalVertical,
 			Text = "Thank you for playing Amorous!\n\nThis release is for patrons only. To verify this, please\nlogin using your forum credentials below:"
 		};
-		Label item2 = new Label
+		Label usernameLabel = new Label
 		{
 			Position = new Point(15, 135),
 			AutoSize = AutoSize.HorizontalVertical,
 			Text = "Username:"
 		};
-		_njC7ZfEM6PTCffwkw18LisM3W9E = new TextBox
+		usernameBox = new TextBox
 		{
 			Position = new Point(140, 130),
 			Size = new Point(200, AmorousData.ButtonHeight),
 			TabIndex = 1
 		};
-		if (File.Exists(_Pxncvon3rRvuowKL1yYBOZjpf2y))
+		if (File.Exists(LoginCredentials))
 		{
-			_njC7ZfEM6PTCffwkw18LisM3W9E.Text = File.ReadAllText(_Pxncvon3rRvuowKL1yYBOZjpf2y);
+			usernameBox.Text = File.ReadAllText(LoginCredentials);
 		}
-		Label item3 = new Label
+		Label passwordLabel = new Label
 		{
 			Position = new Point(15, 170),
 			AutoSize = AutoSize.HorizontalVertical,
 			Text = "Password:"
 		};
-		TextBox _mzwWNbSlBetGnbEr0j6IpMenjkp = new TextBox
+		TextBox passwordBox = new TextBox
 		{
 			Position = new Point(140, 165),
 			Size = new Point(200, AmorousData.ButtonHeight),
 			TabIndex = 2,
 			IsPassword = true
 		};
-		_9nCiJkYgPYczxXJNlo8Z7BbfdsB = new CheckBox
+		rememberUsernameBox = new CheckBox
 		{
 			Position = new Point(15, 200),
 			Size = new Point(300, AmorousData.ButtonHeight),
 			Text = "Remember username",
 			Checked = true
 		};
-		Button button = new Button
+		Button loginButton = new Button
 		{
 			Position = new Point(15, 240),
 			Text = "Login"
 		};
-		button.MouseClick += delegate
+		loginButton.MouseClick += delegate
 		{
 			try
 			{
-				WebRequest webRequest = WebRequest.Create("https://download.amorousgame.com/api/v4/launcherLogin");
-				webRequest.Method = "POST";
-				using (StreamWriter streamWriter = new StreamWriter(webRequest.GetRequestStream()))
+				WebRequest loginRequest = WebRequest.Create("https://download.amorousgame.com/api/v4/launcherLogin");
+				loginRequest.Method = "POST";
+				using (StreamWriter loginData = new StreamWriter(loginRequest.GetRequestStream()))
 				{
-					streamWriter.Write(JsonConvert.SerializeObject(new ApiLogin
+					loginData.Write(JsonConvert.SerializeObject(new ApiLogin
 					{
-						username = _njC7ZfEM6PTCffwkw18LisM3W9E.Text,
-						password = _mzwWNbSlBetGnbEr0j6IpMenjkp.Text
+						username = usernameBox.Text,
+						password = passwordBox.Text
 					}));
 				}
-				using StreamReader streamReader = new StreamReader(webRequest.GetResponse().GetResponseStream());
-				ApiReponse apiReponse = JsonConvert.DeserializeObject<ApiReponse>(streamReader.ReadToEnd());
+				using StreamReader loginAnswer = new StreamReader(loginRequest.GetResponse().GetResponseStream());
+				ApiReponse apiReponse = JsonConvert.DeserializeObject<ApiReponse>(loginAnswer.ReadToEnd());
 				if (!apiReponse.error)
 				{
-					string text = Randoms.GetMD5(_njC7ZfEM6PTCffwkw18LisM3W9E.Text + _mzwWNbSlBetGnbEr0j6IpMenjkp.Text + apiReponse.message + apiReponse.timestamp);
+					string text = Utils.GetMD5(usernameBox.Text + passwordBox.Text + apiReponse.message + apiReponse.timestamp);
 					if (text == apiReponse.hash)
 					{
-						_x8adRt6rvrXniPFYijbzqvPFr4j();
+						Login();
 					}
 					else
 					{
@@ -139,46 +138,46 @@ public class StartupScene : AbstractScene
 				base.Squid.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", AmorousData.ShortDialogueOffset);
 			}
 		};
-		Button button2 = new Button
+		Button forgotPasswordButton = new Button
 		{
 			Position = new Point(120, 240),
 			Size = new Point(180, AmorousData.ButtonHeight),
 			Text = "Forgot password?"
 		};
-		button2.MouseClick += delegate
+		forgotPasswordButton.MouseClick += delegate
 		{
 			base.Game.OpenUrl("https://forums.amorousgame.com/lost-password/");
 		};
-		window.Controls.Add(item);
-		window.Controls.Add(item2);
-		window.Controls.Add(_njC7ZfEM6PTCffwkw18LisM3W9E);
-		window.Controls.Add(item3);
-		window.Controls.Add(_mzwWNbSlBetGnbEr0j6IpMenjkp);
-		window.Controls.Add(_9nCiJkYgPYczxXJNlo8Z7BbfdsB);
-		window.Controls.Add(button);
-		window.Controls.Add(button2);
-		base.Squid.Controls.Add(window);
+		container.Controls.Add(informationLabel);
+		container.Controls.Add(usernameLabel);
+		container.Controls.Add(usernameBox);
+		container.Controls.Add(passwordLabel);
+		container.Controls.Add(passwordBox);
+		container.Controls.Add(rememberUsernameBox);
+		container.Controls.Add(loginButton);
+		container.Controls.Add(forgotPasswordButton);
+		base.Squid.Controls.Add(container);
 	}
 
 	public override void Start()
 	{
-		CoupleANPC coupleANPC = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Background);
-		coupleANPC.X = 350f;
-		coupleANPC.Y = 1090f;
-		coupleANPC.SetPose(CoupleANPC.EPoses.Waving);
-		coupleANPC.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
-		CoupleBNPC coupleBNPC = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Background);
-		coupleBNPC.X = 550f;
-		coupleBNPC.Y = 1090f;
-		coupleBNPC.SetPose(CoupleBNPC.EPoses.Waving);
-		coupleBNPC.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
+		CoupleANPC leftCouples = base.Game.GetNPCLayerAt<CoupleANPC>(LayerOrder.Background);
+		leftCouples.X = 350f;
+		leftCouples.Y = 1090f;
+		leftCouples.SetPose(CoupleANPC.EPoses.Waving);
+		leftCouples.SetClothes(CoupleANPC.EClothes.Shirt, CoupleANPC.EClothes.Pants);
+		CoupleBNPC rightCouples = base.Game.GetNPCLayerAt<CoupleBNPC>(LayerOrder.Background);
+		rightCouples.X = 550f;
+		rightCouples.Y = 1090f;
+		rightCouples.SetPose(CoupleBNPC.EPoses.Waving);
+		rightCouples.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
 	}
 
-	private void _x8adRt6rvrXniPFYijbzqvPFr4j()
+	private void Login()
 	{
-		if (_9nCiJkYgPYczxXJNlo8Z7BbfdsB.Checked)
+		if (rememberUsernameBox.Checked)
 		{
-			File.WriteAllText(_Pxncvon3rRvuowKL1yYBOZjpf2y, _njC7ZfEM6PTCffwkw18LisM3W9E.Text);
+			File.WriteAllText(LoginCredentials, usernameBox.Text);
 		}
 		base.Game.StartScene<MainMenuScene>();
 	}

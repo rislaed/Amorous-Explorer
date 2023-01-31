@@ -5,14 +5,14 @@ public class HikingTrailScene : AbstractScene
 	public const string VariantNight = "Night";
 	public const string VariantDay = "Day";
 
-	private readonly SpriteLayer _4Hew2VldDt2hPLjc5fBPbqIVUEQ;
-	private readonly SpriteLayer _bYgAJ7foDqpxOElDOYhOkQFMzrz;
+	private readonly SpriteLayer _backgroundDay;
+	private readonly SpriteLayer _backgroundNight;
 
 	public HikingTrailScene(IAmorous game)
 		: base(game)
 	{
-		_4Hew2VldDt2hPLjc5fBPbqIVUEQ = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
-		_bYgAJ7foDqpxOElDOYhOkQFMzrz = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
+		_backgroundDay = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
+		_backgroundNight = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
 		SwitchToSubscene(VariantDay);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
@@ -22,13 +22,13 @@ public class HikingTrailScene : AbstractScene
 		base.SwitchToSubscene(daytime);
 		if (!(daytime == VariantNight))
 		{
-			_bYgAJ7foDqpxOElDOYhOkQFMzrz.Color.A = 0;
-			_4Hew2VldDt2hPLjc5fBPbqIVUEQ.Color.A = byte.MaxValue;
+			_backgroundNight.Color.A = 0;
+			_backgroundDay.Color.A = byte.MaxValue;
 		}
 		else
 		{
-			_bYgAJ7foDqpxOElDOYhOkQFMzrz.Color.A = byte.MaxValue;
-			_4Hew2VldDt2hPLjc5fBPbqIVUEQ.Color.A = 0;
+			_backgroundNight.Color.A = byte.MaxValue;
+			_backgroundDay.Color.A = 0;
 		}
 	}
 }

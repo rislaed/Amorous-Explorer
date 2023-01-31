@@ -78,8 +78,7 @@ public class XmlSerializableFactory
 		XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
 		namespaces.Add("", "");
 		serializer.Serialize(writer, _rectangles, namespaces);
-		string contents = stringWriter.ToString();
-		File.WriteAllText(path, contents);
+		File.WriteAllText(path, stringWriter.ToString());
 		stringWriter.Close();
 		serializer = null;
 		writer = null;

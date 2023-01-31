@@ -24,10 +24,10 @@ public class Options
 			Data = new Config();
 			return;
 		}
-		string value = File.ReadAllText(Storage);
+		string json = File.ReadAllText(Storage);
 		try
 		{
-			Data = JsonConvert.DeserializeObject<Config>(value) ?? new Config();
+			Data = JsonConvert.DeserializeObject<Config>(json) ?? new Config();
 		}
 		catch (Exception)
 		{

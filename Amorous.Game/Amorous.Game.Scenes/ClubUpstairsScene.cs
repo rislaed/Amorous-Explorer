@@ -1,4 +1,3 @@
-using System;
 using Amorous.Game.NPC;
 
 namespace Amorous.Game.Scenes;
@@ -6,21 +5,18 @@ namespace Amorous.Game.Scenes;
 public class ClubUpstairsScene : AbstractScene
 {
 	private const int OFFSET_LEFT = -1295;
-
 	private RoseWoodNPC _roseWood;
-
 	private ClubStaticZenithNPC _zenith;
-
 	private readonly bool _showZenith;
 
 	public ClubUpstairsScene(IAmorous game)
 		: base(game)
 	{
-		AddSpriteLayer("Background", "Assets/Scenes/ClubUpstairs/Upstairs Hall main", -1295, 0);
+		AddSpriteLayer("Background", "Assets/Scenes/ClubUpstairs/Upstairs Hall main", OFFSET_LEFT, 0);
 		AddClickableLayer("Elevator", "Assets/Scenes/ClubUpstairs/Elevator Door Selectable", -919, 103, OnDownstairsClick);
 		AddClickableLayer("Stairs", "Assets/Scenes/ClubUpstairs/Staircase Selectable", -245, 20, OnDownstairsClick);
 		AddClickableLayer("Door", "Assets/Scenes/ClubUpstairs/Pool Door Selectable", 2533, 0, OnDoorClick);
-		Game.Canvas.SetOverscroll(-1295, 1295, 0, 0);
+		Game.Canvas.SetOverscroll(OFFSET_LEFT, 1295, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
 		_showZenith = !data.GetFlag(AmorousData.ZenithLeftClub);
@@ -63,6 +59,6 @@ public class ClubUpstairsScene : AbstractScene
 
 	private void OnZenithClick()
 	{
-		base.Game.StartCutscene(AmorousData.ZenithPreDate);
+		base.Game.PlayCutscene(AmorousData.ZenithPreDate);
 	}
 }

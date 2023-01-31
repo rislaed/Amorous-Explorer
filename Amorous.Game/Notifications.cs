@@ -13,6 +13,7 @@ public class Notifications
 	}
 
 	private const float BetweenDelay = 5f;
+
 	private readonly Desktop _squid;
 	private readonly Frame _overlay;
 	private readonly List<Message> _messages;
@@ -116,7 +117,6 @@ public class Notifications
 		}
 		catch (Exception)
 		{
-			// ?
 		}
 	}
 }

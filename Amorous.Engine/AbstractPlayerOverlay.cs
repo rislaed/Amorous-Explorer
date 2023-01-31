@@ -1,20 +1,19 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public abstract class AbstractPlayerSkin
+public abstract class AbstractPlayerOverlay
 { // _21uBmerICJi18moE2gpxlEipBgz
-	private IAmorous Amorous;
-	public List<AbstractLayer> Layers { get; private set; }
-	protected IAmorous Game => Amorous;
+	private IAmorous _game;
 
-	protected AbstractPlayerSkin(IAmorous game)
+	public List<AbstractLayer> Layers { get; private set; }
+
+	protected IAmorous Game => _game;
+
+	protected AbstractPlayerOverlay(IAmorous game)
 	{
-		Amorous = game;
+		_game = game;
 		Layers = new List<AbstractLayer>();
 	}
 
@@ -25,7 +24,7 @@ public abstract class AbstractPlayerSkin
 
 	public SpriteLayer NewSpriteLayer(string name, string texture, int x, int y, int zorder = 0, float scale = 1f)
 	{
-		Texture2D texture2D = Amorous.Content.Load<Texture2D>(texture);
+		Texture2D texture2D = _game.Content.Load<Texture2D>(texture);
 		SpriteLayer layer = new SpriteLayer(Game.Scene, name, texture2D)
 		{
 			Removable = true,
@@ -42,31 +41,31 @@ public abstract class AbstractPlayerSkin
 
 	public virtual void Update(GameTime gameTime)
 	{
-		foreach (AbstractLayer item in Layers.Where((AbstractLayer layer) => layer.Updatable))
+		foreach (AbstractLayer layer in Layers.Where((AbstractLayer layer) => layer.Updatable))
 		{
-			item.Update(gameTime);
+			layer.Update(gameTime);
 		}
 	}
 
 	public virtual void Draw(SpriteBatch spriteBatch)
 	{
-		IOrderedEnumerable<AbstractLayer> orderedEnumerable = from layer in Layers
+		IOrderedEnumerable<AbstractLayer> visibleLayers = from layer in Layers
 			where layer.Visible
 			orderby layer.ZOrder, layer.LayerOrder
 			select layer;
-		foreach (AbstractLayer item in orderedEnumerable)
+		foreach (AbstractLayer layer in visibleLayers)
 		{
-			item.Draw(spriteBatch);
+			layer.Draw(spriteBatch);
 		}
 	}
 
 	public virtual void End()
 	{
-		foreach (AbstractLayer item in Layers)
+		foreach (AbstractLayer layer in Layers)
 		{
-			if (item.Removable)
+			if (layer.Removable)
 			{
-				item.Remove();
+				layer.Remove();
 			}
 		}
 	}

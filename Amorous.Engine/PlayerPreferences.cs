@@ -6,7 +6,7 @@ public class PlayerPreferences
 	private static PlayerPreferences _singleton;
 
 	public static PlayerPreferences Singleton => _singleton;
-	public AbstractPlayerSkin PlayerSkin { get; private set; }
+	public AbstractPlayerOverlay PlayerSkin { get; private set; }
 	public PlayerData Data { get; set; }
 
 	public PlayerPreferences()
@@ -34,7 +34,7 @@ public class PlayerPreferences
 		}
 	}
 
-	public static void SetPlayerSkin(AbstractPlayerSkin skin)
+	public static void SetPlayerOverlay(AbstractPlayerOverlay skin)
 	{
 		_singleton.PlayerSkin = skin;
 		skin?.Initialize(_singleton.Data);

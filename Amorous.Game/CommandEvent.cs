@@ -31,11 +31,11 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 					throw new Exception("Current scene is not CookingScene!");
 				}
 				CookingMiniGameScene cookingScene = base.Cutscene.Game.Scene as CookingMiniGameScene;
-				cookingScene._NvWWx67tvkIBmEn9fgXJ9ZzWJMS();
+				cookingScene.ShowResult();
 				_next = null;
 				_update = delegate
 				{
-					base.Completable = cookingScene._T81AMuUIGw7sZkYmJkIpiDPosrD;
+					base.Completable = cookingScene.IsDone;
 				};
 			}
 			else if (!(_eventData.Command == typeof(Commands.RemyShowNudes).Name))
@@ -47,7 +47,7 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 				}
 				else if (_eventData.Command == typeof(Commands.PlayCutscene).Name)
 				{
-					base.Cutscene.Game.StartCutscene(_eventData.Parameters["Cutscene"]);
+					base.Cutscene.Game.PlayCutscene(_eventData.Parameters["Cutscene"]);
 					base.Completable = true;
 				}
 				else
@@ -71,7 +71,7 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 				throw new Exception("Current scene is not CookingScene!");
 			}
 			CookingMiniGameScene cookingScene = base.Cutscene.Game.Scene as CookingMiniGameScene;
-			cookingScene._c9i4Rbj8ENw5b6aqNq271voBctc = true;
+			cookingScene.IsSelectingIngredient = true;
 			cookingScene.Completable = false;
 			_next = null;
 			_update = delegate

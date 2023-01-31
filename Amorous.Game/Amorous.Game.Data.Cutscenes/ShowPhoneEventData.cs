@@ -1,5 +1,3 @@
 namespace Amorous.Game.Data.Cutscenes;
 
-public class ShowPhoneEventData : EventData
-{
-}
+public class ShowPhoneEventData : EventData {}

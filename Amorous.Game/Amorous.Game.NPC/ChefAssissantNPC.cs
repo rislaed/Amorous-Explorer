@@ -24,7 +24,6 @@ public class ChefAssissantNPC : LayerNPC<ChefAssissantNPC.EHeads, ChefAssissantN
 	}
 
 	public static string Name = "Wraak Veldheer";
-
 	public static Color Color = new Color(204, 149, 0);
 
 	public ChefAssissantNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class ChefAssissantNPC : LayerNPC<ChefAssissantNPC.EHeads, ChefAssissantN
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 636f;
-			Y = 117f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = 0f;
-			Y = 117f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1272f;
-			Y = 117f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 636f;
+				Y = 117f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = 0f;
+				Y = 117f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1272f;
+				Y = 117f;
+				break;
 		}
 	}
 }

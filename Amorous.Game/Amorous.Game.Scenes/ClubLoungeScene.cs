@@ -1,4 +1,3 @@
-using System;
 using Amorous.Game.NPC;
 
 namespace Amorous.Game.Scenes;
@@ -98,11 +97,11 @@ public class ClubLoungeScene : AbstractScene
 
 	private void OnDustinClick()
 	{
-		base.Game.StartCutscene(AmorousData.DustinDate);
+		base.Game.PlayCutscene(AmorousData.DustinDate);
 	}
 
 	private void OnMercyClick()
 	{
-		base.Game.StartCutscene(AmorousData.MercyPreDate);
+		base.Game.PlayCutscene(AmorousData.MercyPreDate);
 	}
 }

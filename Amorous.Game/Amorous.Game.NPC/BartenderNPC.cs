@@ -43,21 +43,21 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 608f;
-			Y = 72f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -160f;
-			Y = 72f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1176f;
-			Y = 72f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 608f;
+				Y = 72f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -160f;
+				Y = 72f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1176f;
+				Y = 72f;
+				break;
 		}
 	}
 }

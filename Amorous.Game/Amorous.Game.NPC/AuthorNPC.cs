@@ -41,21 +41,21 @@ public class AuthorNPC : LayerNPC<AuthorNPC.EHeads, AuthorNPC.EPoses, AuthorNPC.
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 618f;
-			Y = 30f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = 60f;
-			Y = 30f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1206f;
-			Y = 30f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 618f;
+				Y = 30f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = 60f;
+				Y = 30f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1206f;
+				Y = 30f;
+				break;
 		}
 	}
 }

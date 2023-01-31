@@ -5,36 +5,36 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class AnimatedClickableLayer : AbstractLayer
 { // _rmc1e7Ng50C4uLmgllAoRtxaZiB
-	private int Value;
-	private int Stopwatch;
-	private bool Hovered;
+	private int _index;
+	private int _ticks;
+	private bool _hovered;
+	private readonly Action _click;
 
-	private readonly Action When;
 	public List<Texture2D> Textures { get; private set; }
-	public int Ticks { get; private set; }
+	public int TimePerFrame { get; private set; }
 
-	public AnimatedClickableLayer(AbstractScene scene, string name, Action action, int delay, List<Texture2D> textures)
+	public AnimatedClickableLayer(AbstractScene scene, string name, Action click, int delay, List<Texture2D> textures)
 		: base(scene, name)
 	{
 		Textures = textures;
 		base.Width = textures[0].Width;
 		base.Height = textures[0].Height;
-		Ticks = delay;
-		When = action;
-		Value = 0;
-		Stopwatch = Ticks;
+		TimePerFrame = delay;
+		_click = click;
+		_index = 0;
+		_ticks = TimePerFrame;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		Stopwatch -= gameTime.ElapsedGameTime.Milliseconds;
-		if (Stopwatch < 0)
+		_ticks -= gameTime.ElapsedGameTime.Milliseconds;
+		if (_ticks < 0)
 		{
-			Stopwatch = Ticks;
-			Value++;
-			if (Value >= Textures.Count)
+			_ticks = TimePerFrame;
+			_index++;
+			if (_index >= Textures.Count)
 			{
-				Value = 0;
+				_index = 0;
 			}
 		}
 	}
@@ -43,23 +43,23 @@ public class AnimatedClickableLayer : AbstractLayer
 	{
 		if (Color.A != 0)
 		{
-			spriteBatch.Draw(Textures[Value], Location, null, Hovered ? Color.Red : Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+			spriteBatch.Draw(Textures[_index], Location, null, _hovered ? Color.Red : Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 		}
 	}
 
 	public override bool Click()
 	{
-		Click();
+		_click();
 		return true;
 	}
 
 	public override void Hover()
 	{
-		Hovered = true;
+		_hovered = true;
 	}
 
 	public override void Unhover()
 	{
-		Hovered = false;
+		_hovered = false;
 	}
 }

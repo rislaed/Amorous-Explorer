@@ -10,7 +10,7 @@ public class FadingMediaPlayer : AbstractInterpolator<float>
 	private readonly ContentManager _content;
 	private static FadingMediaPlayer _singleton;
 	private string _path;
-	private string[] _stack;
+	private string[] _songs;
 	private int _index;
 	private bool _repeating;
 
@@ -18,13 +18,13 @@ public class FadingMediaPlayer : AbstractInterpolator<float>
 	{
 		_singleton = this;
 		_content = content;
-		_stack = new string[0];
+		_songs = new string[0];
 		MediaPlayer.ActiveSongChanged += delegate
 		{
-			if (MediaPlayer.State == MediaState.Stopped && _stack.Length > 1)
+			if (MediaPlayer.State == MediaState.Stopped && _songs.Length > 1)
 			{
 				_index++;
-				if (_index >= _stack.Length)
+				if (_index >= _songs.Length)
 				{
 					if (!_repeating)
 					{
@@ -32,9 +32,8 @@ public class FadingMediaPlayer : AbstractInterpolator<float>
 					}
 					_index = 0;
 				}
-				_path = _stack[_index];
-				Song song = _content.Load<Song>(_path);
-				MediaPlayer.Play(song);
+				_path = _songs[_index];
+				MediaPlayer.Play(_content.Load<Song>(_path));
 			}
 		};
 	}
@@ -51,9 +50,9 @@ public class FadingMediaPlayer : AbstractInterpolator<float>
 
 	public void Start(string name, float volume, bool repeat)
 	{
-		if (_stack.Length != 1 || !name.Equals(_path))
+		if (_songs.Length != 1 || !name.Equals(_path))
 		{
-			_stack = new string[1] { name };
+			_songs = new string[1] { name };
 			_path = name;
 			_index = 0;
 			_repeating = repeat;
@@ -66,17 +65,17 @@ public class FadingMediaPlayer : AbstractInterpolator<float>
 
 	public void Start(string[] names, float volume, bool repeat, bool oneOf)
 	{
-		if (names.Length == 0 || (names.Length == _stack.Length && ((IEnumerable<string>)_stack).All((Func<string, bool>)((IEnumerable<string>)names).Contains)))
+		if (names.Length == 0 || (names.Length == _songs.Length && ((IEnumerable<string>)_songs).All((Func<string, bool>)((IEnumerable<string>)names).Contains)))
 		{
 			return;
 		}
 		if (oneOf)
 		{
-			_stack = names.OrderBy((string self) => Randoms.Next()).ToArray();
+			_songs = names.OrderBy((string self) => Utils.Random()).ToArray();
 		}
 		else
 		{
-			_stack = names;
+			_songs = names;
 		}
 		_path = names[0];
 		_index = 0;
@@ -99,7 +98,7 @@ public class FadingMediaPlayer : AbstractInterpolator<float>
 
 	public static void Complete()
 	{
-		_singleton._stack = new string[0];
+		_singleton._songs = new string[0];
 		_singleton._path = null;
 		MediaPlayer.Stop();
 	}

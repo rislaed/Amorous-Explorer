@@ -1,4 +1,3 @@
-using System;
 using Amorous.Engine.NPC;
 
 namespace Amorous.Game.NPC;
@@ -23,10 +22,10 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 		Pants
 	}
 
-	protected ClubStaticSpineNPC(IAmorous game, string path, string[] poses, string[] shirts = null, string[] pants = null)
+	protected ClubStaticSpineNPC(IAmorous game, string path, string[] bones, string[] shirts = null, string[] pants = null)
 		: base(game, path, 1f, premultipliedAlpha: true)
 	{
-		AddPose(EPoses.Nude, poses);
+		AddPose(EPoses.Nude, bones);
 		if (shirts != null)
 		{
 			AddClothes(EPoses.Nude, EClothes.Shirt, shirts).AsShirt().AsNudes();

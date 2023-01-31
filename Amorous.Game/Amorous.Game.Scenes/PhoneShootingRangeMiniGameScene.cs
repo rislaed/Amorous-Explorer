@@ -5,10 +5,10 @@ public class PhoneShootingRangeMiniGameScene : ShootingRangeMiniGameScene
 	public PhoneShootingRangeMiniGameScene(IAmorous game)
 		: base(game)
 	{
-		base._F2ao1gdMb4UciyKC7Zly4by95Mn = true;
+		base.ExitWhenEscape = true;
 	}
 
-	protected override void _5Z9jaXDcRYm0wNlEm1aTutL9kSH()
+	protected override void Exit()
 	{
 		base.Game.StartScene<BedroomScene>();
 	}

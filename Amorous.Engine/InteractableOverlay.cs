@@ -10,9 +10,9 @@ public class InteractableOverlay
 	public List<AbstractInteractable> Interactables { get; private set; }
 	public bool Touchable { get; set; }
 
-	public InteractableOverlay(IAmorous amorous)
+	public InteractableOverlay(IAmorous game)
 	{
-		Game = amorous;
+		Game = game;
 		Interactables = new List<AbstractInteractable>();
 		Touchable = true;
 	}

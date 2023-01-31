@@ -4,8 +4,8 @@ using Microsoft.Xna.Framework.Graphics;
 public class InteractableLayer : AbstractLayer
 { // _x1wxbalqqw8qtEqHC1UaGdv59Od
 	public Vector2 ActivePoint;
-	private bool Hovered;
-	private bool Captured;
+
+	private bool _hovered, _captured;
 
 	public Texture2D Texture { get; private set; }
 	public Texture2D ActiveTexture { get; private set; }
@@ -35,21 +35,21 @@ public class InteractableLayer : AbstractLayer
 		}
 	}
 
-	public InteractableLayer(AbstractScene scene, string name, Texture2D texture2D, Texture2D activeTexture2D, string text)
+	public InteractableLayer(AbstractScene scene, string name, Texture2D texture, Texture2D activeTexture, string text)
 		: base(scene, name)
 	{
-		Texture = texture2D;
-		base.Width = texture2D.Width;
-		base.Height = texture2D.Height;
-		ActiveTexture = activeTexture2D;
+		Texture = texture;
+		base.Width = texture.Width;
+		base.Height = texture.Height;
+		ActiveTexture = activeTexture;
 		Text = text;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		if (Captured && TypingDialogue.Completable)
+		if (_captured && TypingDialogue.Completable)
 		{
-			Captured = false;
+			_captured = false;
 		}
 	}
 
@@ -57,8 +57,8 @@ public class InteractableLayer : AbstractLayer
 	{
 		if (Color.A != 0)
 		{
-			Color color = (Hovered ? Color.Red : Color);
-			if (Captured && ActiveTexture != null)
+			Color color = (_hovered ? Color.Red : Color);
+			if (_captured && ActiveTexture != null)
 			{
 				spriteBatch.Draw(ActiveTexture, ActivePoint, null, color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 			}
@@ -72,27 +72,27 @@ public class InteractableLayer : AbstractLayer
 	public override bool Click()
 	{
 		TypingDialogue.Type(Text, string.Empty, Color.White);
-		Captured = true;
-		Hovered = false;
+		_captured = true;
+		_hovered = false;
 		return true;
 	}
 
 	public override void Continue()
 	{
 		TypingDialogue.Complete();
-		Captured = false;
+		_captured = false;
 	}
 
 	public override void Hover()
 	{
-		if (!Captured)
+		if (!_captured)
 		{
-			Hovered = true;
+			_hovered = true;
 		}
 	}
 
 	public override void Unhover()
 	{
-		Hovered = false;
+		_hovered = false;
 	}
 }

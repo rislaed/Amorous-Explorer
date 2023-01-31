@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -11,161 +9,149 @@ namespace Amorous.Game.Scenes;
 
 public class CreditsMenuScene : AbstractScene
 {
-	private readonly SpriteFont _nQK443boDHTZ4Jfc3W1VhQkMCcX;
+	private readonly SpriteFont _bold26;
+	private readonly float _heightBold26;
+	private readonly SpriteFont _bold20;
+	private readonly float _heightBold20;
+	private readonly SpriteFont _bold14;
+	private readonly float _heightBold14;
 
-	private readonly float _2MfIKVtD2AO6rfNH8r9gBa9ABgc;
+	private const float ScrollingSpeed = 100f;
+	private const float HoldingScrollingSpeed = 300f;
 
-	private readonly SpriteFont _tYZIsh9jywDMNNUVaAxLdrUBPIS;
+	private readonly string[] _credits;
+	private Matrix _offsetMatrix;
+	private float _offset;
+	private float _length;
+	private float _scrollingSpeed;
 
-	private readonly float _lHXUPUciX33biAqfQQ8Yx79nzNB;
-
-	private readonly SpriteFont _6YCQhlMaqcDds8uGX1g8fjBKqV4A;
-
-	private readonly float _3STGOMMEQo4zHKNnz9z7ftUA5Df;
-
-	private const float _SYCUujPcgcLNT43d8U31LaDAs2Bb = 100f;
-
-	private const float _eFVIk59FLQAd5rciw22CSTJMEIG = 300f;
-
-	private readonly string[] _Otv0Xepue9AcysEmioBbEWTisDaA;
-
-	private Matrix _5tVHyet2nKslcI2f5Yppk4hAIDA;
-
-	private float _D1Fi4WCGaRckYZ4B9s6CN7FyrsS;
-
-	private float _34TN98j3wyO7VbJ4niAsNCCgFuD;
-
-	private float _lmBaEmzKj1Yvgl07XZnnBeMGYov;
-
-	protected Type _t76cjDKppsRdw5nUq3tnNw3ypAv { get; set; }
-
-	protected string _ICAb9QUE8hnbl0uKD8fBpEB1kSV { get; set; }
+	protected Type PendingScene { get; set; }
+	protected string ReturnToSceneText { get; set; }
 
 	public CreditsMenuScene(IAmorous game)
 		: base(game)
 	{
 		CreditsMenuScene self = this;
 		base.Blending = BlendState.AlphaBlend;
-		_t76cjDKppsRdw5nUq3tnNw3ypAv = typeof(MainMenuScene);
-		_ICAb9QUE8hnbl0uKD8fBpEB1kSV = "Press Escape or Left-click here to return to the Main Menu.";
+		PendingScene = typeof(MainMenuScene);
+		ReturnToSceneText = "Press Escape or Left-click here to return to the Main Menu.";
 		AddSpriteLayer("Background", "Assets/Scenes/CreditsMenu/Background", 0, 0);
 		AddForegroundSpriteLayer("Overlay", "Assets/Scenes/CreditsMenu/Overlay", 0, 0);
-		_nQK443boDHTZ4Jfc3W1VhQkMCcX = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		_tYZIsh9jywDMNNUVaAxLdrUBPIS = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-20");
-		_6YCQhlMaqcDds8uGX1g8fjBKqV4A = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
-		_2MfIKVtD2AO6rfNH8r9gBa9ABgc = _nQK443boDHTZ4Jfc3W1VhQkMCcX.MeasureString("Test").Y;
-		_lHXUPUciX33biAqfQQ8Yx79nzNB = _tYZIsh9jywDMNNUVaAxLdrUBPIS.MeasureString("Test").Y;
-		_3STGOMMEQo4zHKNnz9z7ftUA5Df = _6YCQhlMaqcDds8uGX1g8fjBKqV4A.MeasureString("Test").Y;
-		Vector2 _AjA452JzkbwnCTtbITN5kOEaNrR = new Vector2(50f, 1080f - _2MfIKVtD2AO6rfNH8r9gBa9ABgc - 40f);
+		_bold26 = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		_bold20 = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-20");
+		_bold14 = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
+		_heightBold26 = _bold26.MeasureString("Test").Y;
+		_heightBold20 = _bold20.MeasureString("Test").Y;
+		_heightBold14 = _bold14.MeasureString("Test").Y;
+		Vector2 bounds26 = new Vector2(50f, 1080f - _heightBold26 - 40f);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.HappyJazzShitTrack, 0.4f);
-		_Otv0Xepue9AcysEmioBbEWTisDaA = Compressions.ReadStreamAsText(Path.Combine(Game.Content.RootDirectory, "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
-		DrawableLayer gparam_ = new DrawableLayer(this, "Credits")
+		_credits = Compressions.ReadStreamAsText(Path.Combine(Game.Content.RootDirectory, "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
+		DrawableLayer creditsLayer = new DrawableLayer(this, "Credits")
 		{
-			OnUpdate = _y3e1BQlF0D44DVRCJQTcKxaeNOb,
-			OnDraw = _R35LFMCpqnW2Zsm1xJon3qf0UAg
+			OnUpdate = UpdateCredits,
+			OnDraw = DrawCredits
 		};
-		AddLayer(gparam_, 0);
-		bool _vfz3itarR7RfYdT3BqrAmb1qElP = false;
-		Vector2 vector = _6YCQhlMaqcDds8uGX1g8fjBKqV4A.MeasureString(_ICAb9QUE8hnbl0uKD8fBpEB1kSV);
-		Point _LWpJMkbSZ0LnBJGJqKcICxgdLwq = base.Game.Canvas.RelativeToContent(new Point((int)vector.X, (int)vector.Y));
+		AddLayer(creditsLayer, 0);
+		bool hovered = false;
+		Vector2 bounds14 = _bold14.MeasureString(ReturnToSceneText);
+		Point boundsOfBack = base.Game.Canvas.RelativeToContent(new Point((int)bounds14.X, (int)bounds14.Y));
 		AddLayer(new DrawableLayer(this, "GoBackText")
 		{
 			OnUpdate = delegate
 			{
 				Point point = self.Game.Canvas.GlobalToContent(self.Game.Controller.Cursor);
-				if ((float)point.X >= _AjA452JzkbwnCTtbITN5kOEaNrR.X && (float)point.X <= _AjA452JzkbwnCTtbITN5kOEaNrR.X + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.X && (float)point.Y >= _AjA452JzkbwnCTtbITN5kOEaNrR.Y && (float)point.Y <= _AjA452JzkbwnCTtbITN5kOEaNrR.Y + (float)_LWpJMkbSZ0LnBJGJqKcICxgdLwq.Y)
+				if ((float)point.X >= bounds26.X && (float)point.X <= bounds26.X + (float)boundsOfBack.X && (float)point.Y >= bounds26.Y && (float)point.Y <= bounds26.Y + (float)boundsOfBack.Y)
 				{
-					_vfz3itarR7RfYdT3BqrAmb1qElP = true;
+					hovered = true;
 					if (self.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 					{
-						self.Game.StartScene(self._t76cjDKppsRdw5nUq3tnNw3ypAv.Name);
+						self.Game.StartScene(self.PendingScene.Name);
 					}
 				}
 				else
 				{
-					_vfz3itarR7RfYdT3BqrAmb1qElP = false;
+					hovered = false;
 				}
 			},
 			OnDraw = delegate(SpriteBatch spriteBatch)
 			{
 				spriteBatch.Begin();
-				spriteBatch.DrawString(self._nQK443boDHTZ4Jfc3W1VhQkMCcX, self._ICAb9QUE8hnbl0uKD8fBpEB1kSV, _AjA452JzkbwnCTtbITN5kOEaNrR, _vfz3itarR7RfYdT3BqrAmb1qElP ? Color.Red : Color.White);
+				spriteBatch.DrawString(self._bold26, self.ReturnToSceneText, bounds26, hovered ? Color.Red : Color.White);
 				spriteBatch.End();
 			}
 		}, 2);
-		List<string> list = new List<string>();
+		List<string> textures = new List<string>();
 		for (int i = 1; i < 60; i++)
 		{
-			list.Add($"Assets/Scenes/CreditsMenu/Skye/TYSkye{i:D2}");
+			textures.Add($"Assets/Scenes/CreditsMenu/Skye/TYSkye{i:D2}");
 		}
-		int int_;
-		int int_2;
-		float fO7gSlrDDNMoHR4FO5QXAq8fUyA;
+		int x;
+		int y;
+		float scale;
 		if (!Censorship.Censored)
 		{
-			int_ = 1170;
-			int_2 = 105;
-			fO7gSlrDDNMoHR4FO5QXAq8fUyA = 1.5f;
+			x = 1170;
+			y = 105;
+			scale = 1.5f;
 		}
 		else
 		{
-			int_ = 1000;
-			int_2 = 105;
-			fO7gSlrDDNMoHR4FO5QXAq8fUyA = 2f;
+			x = 1000;
+			y = 105;
+			scale = 2f;
 		}
-		AnimatedLayer kxm3yIqio0baXT5t5vOHBAEdviB = AddForegroundAnimatedLayer("Skye", int_, int_2, 16, list.ToArray());
-		kxm3yIqio0baXT5t5vOHBAEdviB.Scale = fO7gSlrDDNMoHR4FO5QXAq8fUyA;
-		_D1Fi4WCGaRckYZ4B9s6CN7FyrsS = 960f;
-		_lmBaEmzKj1Yvgl07XZnnBeMGYov = 100f;
+		AnimatedLayer skyeLayer = AddForegroundAnimatedLayer("Skye", x, y, 16, textures.ToArray());
+		skyeLayer.Scale = scale;
+		_offset = 960f;
+		_scrollingSpeed = ScrollingSpeed;
 	}
 
-	public void _y3e1BQlF0D44DVRCJQTcKxaeNOb(GameTime gameTime)
+	public void UpdateCredits(GameTime gameTime)
 	{
-		_5tVHyet2nKslcI2f5Yppk4hAIDA = Matrix.CreateTranslation(100f, _D1Fi4WCGaRckYZ4B9s6CN7FyrsS, 0f);
-		if (_D1Fi4WCGaRckYZ4B9s6CN7FyrsS > _34TN98j3wyO7VbJ4niAsNCCgFuD)
+		_offsetMatrix = Matrix.CreateTranslation(100f, _offset, 0f);
+		if (_offset > _length)
 		{
-			_D1Fi4WCGaRckYZ4B9s6CN7FyrsS -= (float)gameTime.ElapsedGameTime.Milliseconds / 1000f * _lmBaEmzKj1Yvgl07XZnnBeMGYov;
+			_offset -= (float)gameTime.ElapsedGameTime.Milliseconds / 1000f * _scrollingSpeed;
 		}
 		else
 		{
-			_D1Fi4WCGaRckYZ4B9s6CN7FyrsS = 960f;
+			_offset = 960f;
 		}
 	}
 
-	public void _R35LFMCpqnW2Zsm1xJon3qf0UAg(SpriteBatch spriteBatch)
+	public void DrawCredits(SpriteBatch spriteBatch)
 	{
-		Vector2 zero = Vector2.Zero;
-		float num = 10f;
-		float num2 = 0f;
-		spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, _5tVHyet2nKslcI2f5Yppk4hAIDA);
-		string[] otv0Xepue9AcysEmioBbEWTisDaA = _Otv0Xepue9AcysEmioBbEWTisDaA;
-		foreach (string text in otv0Xepue9AcysEmioBbEWTisDaA)
+		Vector2 position = Vector2.Zero;
+		float offset = 10f;
+		float height = 0f;
+		spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, _offsetMatrix);
+		foreach (string text in _credits)
 		{
 			if (string.IsNullOrWhiteSpace(text))
 			{
-				num2 += num;
+				height += offset;
 			}
 			else if (!text.StartsWith("##"))
 			{
 				if (text.StartsWith("#"))
 				{
-					spriteBatch.DrawString(_nQK443boDHTZ4Jfc3W1VhQkMCcX, text.Substring(1), zero, Color.SkyBlue);
-					num2 += _2MfIKVtD2AO6rfNH8r9gBa9ABgc + num;
+					spriteBatch.DrawString(_bold26, text.Substring(1), position, Color.SkyBlue);
+					height += _heightBold26 + offset;
 				}
 				else
 				{
-					spriteBatch.DrawString(_6YCQhlMaqcDds8uGX1g8fjBKqV4A, text, zero, Color.White);
-					num2 += _3STGOMMEQo4zHKNnz9z7ftUA5Df + num;
+					spriteBatch.DrawString(_bold14, text, position, Color.White);
+					height += _heightBold14 + offset;
 				}
 			}
 			else
 			{
-				spriteBatch.DrawString(_tYZIsh9jywDMNNUVaAxLdrUBPIS, text.Substring(2), zero, Color.Pink);
-				num2 += _lHXUPUciX33biAqfQQ8Yx79nzNB + num;
+				spriteBatch.DrawString(_bold20, text.Substring(2), position, Color.Pink);
+				height += _heightBold20 + offset;
 			}
-			zero.Y = num2;
+			position.Y = height;
 		}
-		_34TN98j3wyO7VbJ4niAsNCCgFuD = 0f - num2;
+		_length = -height;
 		spriteBatch.End();
 	}
 
@@ -173,12 +159,12 @@ public class CreditsMenuScene : AbstractScene
 	{
 		if (!base.Game.Controller.IsPressed(Keys.Escape))
 		{
-			_lmBaEmzKj1Yvgl07XZnnBeMGYov = ((!base.Game.Controller.IsHolding(Keys.Space)) ? 100f : 300f);
+			_scrollingSpeed = ((!base.Game.Controller.IsHolding(Keys.Space)) ? ScrollingSpeed : HoldingScrollingSpeed);
 			base.Update(gameTime);
 		}
 		else
 		{
-			base.Game.StartScene(_t76cjDKppsRdw5nUq3tnNw3ypAv.Name);
+			base.Game.StartScene(PendingScene.Name);
 		}
 	}
 }

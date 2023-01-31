@@ -1,5 +1,3 @@
-using System;
-
 namespace Amorous.Game.Scenes;
 
 public class SkyeBedroomScene : AbstractScene
@@ -12,7 +10,7 @@ public class SkyeBedroomScene : AbstractScene
 		{
 			if (PlayerPreferences.GetPlayerData().GetState(AmorousData.SkyeDate) == 55)
 			{
-				Game.StartCutscene(AmorousData.SkyeDate);
+				Game.PlayCutscene(AmorousData.SkyeDate);
 			}
 		});
 		AddInteractableLayer("Mirror", "Assets/Scenes/SkyeBedroom/interactable bedroom - Mirror", 1008, 289, null, 0, 0, "<i>That's me!</i>");

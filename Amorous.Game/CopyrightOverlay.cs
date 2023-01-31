@@ -5,7 +5,7 @@ using Squid;
 
 public class CopyrightOverlay : InteractableOverlay
 { // _SsogwGgurAXPoDRtNVTCVKq9yRE
-	public Action DisplayOptions;
+	public Action ShowOptions;
 
 	public CopyrightOverlay(IAmorous game)
 		: base(game)
@@ -23,9 +23,9 @@ public class CopyrightOverlay : InteractableOverlay
 
 	private void ConfigureOptions()
 	{
-		if (DisplayOptions != null)
+		if (ShowOptions != null)
 		{
-			DisplayOptions();
+			ShowOptions();
 		}
 	}
 

@@ -1,6 +1,6 @@
 using Amorous.Game.Scenes;
 
-public static class SavesDatabase
+public static class SavesMigration
 { // _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
 	public const int CurrentlyVersion = 5;
 

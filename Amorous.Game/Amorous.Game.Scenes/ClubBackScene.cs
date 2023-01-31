@@ -1,4 +1,3 @@
-using System;
 using Amorous.Game.NPC;
 
 namespace Amorous.Game.Scenes;
@@ -6,7 +5,6 @@ namespace Amorous.Game.Scenes;
 public class ClubBackScene : AbstractScene
 {
 	private ClubStaticLexNPC _lex;
-
 	private readonly bool _showLex;
 
 	public ClubBackScene(IAmorous game)
@@ -54,6 +52,6 @@ public class ClubBackScene : AbstractScene
 
 	private void OnLexClick()
 	{
-		base.Game.StartCutscene(AmorousData.LexPreDate);
+		base.Game.PlayCutscene(AmorousData.LexPreDate);
 	}
 }

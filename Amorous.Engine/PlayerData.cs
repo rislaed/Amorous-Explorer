@@ -417,11 +417,11 @@ public class PlayerData : IPlayerData
 
 	public void Reset()
 	{
-		ResetPlayer();
+		ResetData();
 		ResetState();
 	}
 
-	public void ResetPlayer()
+	public void ResetData()
 	{
 		Name = string.Empty;
 		BodyType = EBodyType.Lean;
@@ -541,15 +541,15 @@ public class PlayerData : IPlayerData
 
 	public int GetContactCount()
 	{
-		int num = 0;
+		int count = 0;
 		foreach (object value in Enum.GetValues(typeof(EPhoneContacts)))
 		{
 			if (!value.Equals(EPhoneContacts.None) && Contacts.HasFlag((EPhoneContacts)value))
 			{
-				num++;
+				count++;
 			}
 		}
-		return num;
+		return count;
 	}
 
 	public bool GetFlag(string key)
@@ -565,62 +565,59 @@ public class PlayerData : IPlayerData
 	{
 		if (key.StartsWith("Player."))
 		{
-			string[] array = key.Split(new char[1] { '.' });
-			if (array.Length > 2)
+			string[] parts = key.Split(new char[1] { '.' });
+			if (parts.Length > 2)
 			{
-				EBodyType result4;
-				if (!(array[1] == "Body"))
+				if (!(parts[1] == "Body"))
 				{
-					EBreastsType result3;
-					if (!(array[1] == "Breasts"))
+					if (!(parts[1] == "Breasts"))
 					{
-						ECockType result2;
-						if (!(array[1] == "Cock"))
+						if (!(parts[1] == "Cock"))
 						{
-							if (array[1] == "Balls")
+							if (parts[1] == "Balls")
 							{
-								if (Enum.TryParse<EBallsType>(array[2], out var result))
+								if (Enum.TryParse<EBallsType>(parts[2], out var balls))
 								{
-									return BallsType == result;
+									return BallsType == balls;
 								}
 							}
-							else if (array[1] == "Outfit")
+							else if (parts[1] == "Outfit")
 							{
-								return array[2] == "Simple";
+								return parts[2] == "Simple";
 							}
 						}
-						else if (Enum.TryParse<ECockType>(array[2], out result2))
+						else if (Enum.TryParse<ECockType>(parts[2], out var cock))
 						{
-							return CockType == result2;
+							return CockType == cock;
 						}
 					}
-					else if (Enum.TryParse<EBreastsType>(array[2], out result3))
+					else if (Enum.TryParse<EBreastsType>(parts[2], out var breasts))
 					{
-						return BreastsType == result3;
+						return BreastsType == breasts;
 					}
 				}
-				else if (Enum.TryParse<EBodyType>(array[2], out result4))
+				else if (Enum.TryParse<EBodyType>(parts[2], out var body))
 				{
-					return BodyType == result4;
+					return BodyType == body;
 				}
 			}
 		}
 		else if (key.StartsWith("Quests."))
 		{
-			string[] array2 = key.Split(new char[1] { '.' });
-			if (array2.Length > 2 && int.TryParse(array2[2], out var result5))
+			string[] parts = key.Split(new char[1] { '.' });
+			if (parts.Length > 2 && int.TryParse(parts[2], out var state))
 			{
-				return GetState(array2[1]) == result5;
+				return GetState(parts[1]) == state;
 			}
 		}
 		return key switch
 		{
-			"PlayerChubby" => BodyType == EBodyType.Chubby, 
-			"PlayerLean" => BodyType == EBodyType.Lean, 
-			"HasBreasts" => BreastsType != EBreastsType.None, 
-			"PlayerMuscular" => BodyType == EBodyType.Muscular, 
-			"PlayerTwinky" => BodyType == EBodyType.Twinky, 
-			_ => false, 
+			"PlayerChubby" => BodyType == EBodyType.Chubby,
+			"PlayerLean" => BodyType == EBodyType.Lean,
+			"HasBreasts" => BreastsType != EBreastsType.None,
+			"PlayerMuscular" => BodyType == EBodyType.Muscular,
+			"PlayerTwinky" => BodyType == EBodyType.Twinky,
+			_ => false
 		};
 	}
 
@@ -628,14 +625,14 @@ public class PlayerData : IPlayerData
 	{
 		if (key.StartsWith("Player."))
 		{
-			string[] array = key.Split(new char[1] { '.' });
-			if (array.Length > 2)
+			string[] parts = key.Split(new char[1] { '.' });
+			if (parts.Length > 2)
 			{
-				if (array[1] == "Body" || array[1] == "Breasts" || array[1] == "Cock" || array[1] == "Balls")
+				if (parts[1] == "Body" || parts[1] == "Breasts" || parts[1] == "Cock" || parts[1] == "Balls")
 				{
 					throw new Exception("Reserved flag set!");
 				}
-				if (array[1] == "Outfit")
+				if (parts[1] == "Outfit")
 				{
 					Flags.Keys.Where((string key) => key.StartsWith("Player.Outfit.")).ToList().ForEach(delegate(string key)
 					{

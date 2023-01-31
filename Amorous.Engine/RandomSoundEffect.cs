@@ -26,7 +26,7 @@ public class RandomSoundEffect
 	{
 		if (_sounds.Count != 0)
 		{
-			string oneOf = _sounds.Keys.ElementAt(Randoms.Next(0, _sounds.Count));
+			string oneOf = _sounds.Keys.ElementAt(Utils.Random(0, _sounds.Count));
 			if (_sounds[oneOf] == null)
 			{
 				_sounds[oneOf] = _content.Load<SoundEffect>(oneOf);

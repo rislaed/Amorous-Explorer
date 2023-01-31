@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 
 namespace Amorous.Game.Scenes;
@@ -34,10 +33,10 @@ public class BedroomScene : TimeOfDayScene
 		Game.Canvas.SetOverscroll(-458, 458, 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SunFunkTrack, 0.4f);
 		_phoneNag = new PhoneUrgentlyRinging(Game);
-		Reset();
+		Refresh();
 	}
 
-	private void Reset()
+	private void Refresh()
 	{
 		if (PlayerPreferences.GetPlayerData().GetState(AmorousData.Prologue) == AmorousData.PrologueStateCompleted)
 		{
@@ -49,7 +48,7 @@ public class BedroomScene : TimeOfDayScene
 
 	public override void Start()
 	{
-		Reset();
+		Refresh();
 	}
 
 	public void ResetFailedDates()
@@ -165,7 +164,7 @@ public class BedroomScene : TimeOfDayScene
 
 	private void OnClosetClick()
 	{
-		base.Game.StartCutscene(AmorousData.Clothes);
+		base.Game.PlayCutscene(AmorousData.Clothes);
 	}
 
 	private void OnDoorClick()
@@ -176,7 +175,7 @@ public class BedroomScene : TimeOfDayScene
 		}
 		else
 		{
-			base.Game.StartCutscene(AmorousData.Prologue);
+			base.Game.PlayCutscene(AmorousData.Prologue);
 		}
 	}
 }

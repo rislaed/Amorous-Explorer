@@ -8,9 +8,7 @@ public static class AmorousData
 	public class Soundtrack
 	{
 		public string AssetName { get; set; }
-
 		public string Artist { get; set; }
-
 		public string Title { get; set; }
 	}
 
@@ -221,8 +219,8 @@ public static class AmorousData
 	public const string TowerTrack = "Assets/Music/Mittsies - Tower";
 	public const string VentusTrack = "Assets/Music/Mittsies - Ventus";
 
-	public const int ShortDialogueOffset = Confirmations.ShortDialogueOffset;
-	public const int WideDialogueOffset = Confirmations.WideDialogueOffset;
+	public const int ShortDialogueOffset = Overlays.ShortDialogueOffset;
+	public const int WideDialogueOffset = Overlays.WideDialogueOffset;
 	public const int ButtonHeight = 30;
 
 	public const string Prologue = "Prologue";

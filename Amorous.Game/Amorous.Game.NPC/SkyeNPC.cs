@@ -65,21 +65,21 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 		base.SetLocation(location);
 		switch (location)
 		{
-		default:
-			FlipX = false;
-			X = 960f;
-			Y = 1120f;
-			break;
-		case NPCLocation.Right:
-			FlipX = true;
-			X = 1520f;
-			Y = 1120f;
-			break;
-		case NPCLocation.Left:
-			FlipX = false;
-			X = 400f;
-			Y = 1120f;
-			break;
+			default:
+				FlipX = false;
+				X = 960f;
+				Y = 1120f;
+				break;
+			case NPCLocation.Right:
+				FlipX = true;
+				X = 1520f;
+				Y = 1120f;
+				break;
+			case NPCLocation.Left:
+				FlipX = false;
+				X = 400f;
+				Y = 1120f;
+				break;
 		}
 	}
 }

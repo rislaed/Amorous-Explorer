@@ -34,7 +34,7 @@ public class ClubPoolWaterSpineLayer : SpineDrawableLayer
 		: base(scene, "Pool Water")
 	{
 		ClubPoolWaterSpineLayer self = this;
-		RenderTarget2D target = new RenderTarget2D(base.Scene.Game.GLES, location.Width, location.Height);
+		RenderTarget2D target = new RenderTarget2D(base.Scene.Game.Graphics, location.Width, location.Height);
 		Effect effect = base.Scene.Game.Content.Load<Effect>("Assets/Shaders/SpinePool");
 		Texture2D waves = base.Scene.Game.Content.Load<Texture2D>("Assets/Scenes/ClubPool/Wave Mask");
 		base.OnUpdate = delegate(GameTime gameTime)
@@ -43,14 +43,14 @@ public class ClubPoolWaterSpineLayer : SpineDrawableLayer
 		};
 		base.OnSpineDraw = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 		{
-			RenderTargetBinding[] renderTargets = self.Scene.Game.GLES.GetRenderTargets();
-			self.Scene.Game.GLES.SetRenderTarget(target);
-			self.Scene.Game.GLES.Clear(Color.Transparent);
+			RenderTargetBinding[] renderTargets = self.Scene.Game.Graphics.GetRenderTargets();
+			self.Scene.Game.Graphics.SetRenderTarget(target);
+			self.Scene.Game.Graphics.Clear(Color.Transparent);
 			self._spine.Draw(skeletonMeshRenderer, null, null, null, self.Scale);
-			self.Scene.Game.GLES.SetRenderTargets(renderTargets);
+			self.Scene.Game.Graphics.SetRenderTargets(renderTargets);
 			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
 			float cycle = offset + (float)waves.Height;
-			effect.Parameters["Time"].SetValue(Randoms.Date);
+			effect.Parameters["Time"].SetValue(Utils.Date);
 			effect.Parameters["PoolSpeed"].SetValue(0.1f);
 			effect.Parameters["PoolOffset"].SetValue(0);
 			effect.Parameters["MaskTexture"].SetValue(waves);

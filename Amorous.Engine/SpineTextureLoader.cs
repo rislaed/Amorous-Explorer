@@ -19,9 +19,9 @@ public class SpineTextureLoader : TextureLoader
 	public void Load(AtlasPage page, string path)
 	{
 		string assetName = Path.Combine(Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path));
-		Texture2D texture2D = (Texture2D)(page.rendererObject = _content.Load<Texture2D>(assetName));
-		page.width = texture2D.Width;
-		page.height = texture2D.Height;
+		Texture2D texture = (Texture2D)(page.rendererObject = _content.Load<Texture2D>(assetName));
+		page.width = texture.Width;
+		page.height = texture.Height;
 	}
 
 	public void Unload(object texture)

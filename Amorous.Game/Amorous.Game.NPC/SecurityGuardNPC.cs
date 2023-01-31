@@ -48,24 +48,24 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 734f;
-			Y = 135f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = 100f;
-			Y = 135f;
-			base.Scale = 1f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1368f;
-			Y = 135f;
-			base.Scale = 1f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 734f;
+				Y = 135f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = 100f;
+				Y = 135f;
+				base.Scale = 1f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1368f;
+				Y = 135f;
+				base.Scale = 1f;
+				break;
 		}
 	}
 }

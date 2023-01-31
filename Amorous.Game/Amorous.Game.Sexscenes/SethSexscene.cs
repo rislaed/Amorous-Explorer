@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Spine;
 
@@ -48,7 +45,7 @@ public class SethSexscene : CensoredSexscene
 		}
 	}
 
-	protected override void RefreshSubscene(PlayerData data)
+	protected override void RefreshData(PlayerData data)
 	{
 		base.Spine.SetVisibility(0f);
 		if (!Censorship.Censored)

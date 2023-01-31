@@ -1,7 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
-using Squid;
-
 namespace Amorous.Game.Scenes;
 
 public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
@@ -11,10 +7,10 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 	public ProloguePlayerCustomizationScene(IAmorous game)
 		: base(game)
 	{
-		MightConfigurateEverything = true;
+		MightEnterName = true;
 	}
 
-	protected override void ConfirmEverything()
+	protected override void ShowExit()
 	{
 		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.WideDialogueOffset, delegate(int int_0)
 		{
@@ -22,7 +18,7 @@ public class ProloguePlayerCustomizationScene : PlayerCustomizationScene
 			{
 				PhoneOverlay.Get().RefreshSkin();
 				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric1);
-				base.Game.StartCutscene(AmorousData.Prologue);
+				base.Game.PlayCutscene(AmorousData.Prologue);
 			}
 		});
 	}

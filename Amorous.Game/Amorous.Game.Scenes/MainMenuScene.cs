@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Amorous.Engine.GUI;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Squid;
 
@@ -14,11 +12,11 @@ public class MainMenuScene : TimeOfDayScene
 {
 	private const int TickingDelay = 750;
 
-	private int Blinking;
-	private readonly AbstractLayer Separator;
-	private readonly List<TexturedSequenceLayer> Indicators = new List<TexturedSequenceLayer>();
-	private readonly CopyrightOverlay Copyright;
-	private readonly SpriteLayer Logotype;
+	private int _blinking;
+	private readonly AbstractLayer _separator;
+	private readonly List<TexturedSequenceLayer> _segments = new List<TexturedSequenceLayer>();
+	private readonly CopyrightOverlay _copyright;
+	private readonly SpriteLayer _logotype;
 
 	public MainMenuScene(IAmorous game)
 		: base(game)
@@ -33,14 +31,14 @@ public class MainMenuScene : TimeOfDayScene
 			OnDraw = DrawPlayer
 		}, 0);
 		AddForegroundSpriteLayer("Sheet", "Assets/Scenes/MainMenu/Bed Sheet", -240, -135);
-		Logotype = NewSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
+		_logotype = NewSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 1220, 800);
 		AddIndicatorLayer("LCD 1", "Assets/Scenes/MainMenu/{0}", 1090, 330);
 		AddIndicatorLayer("LCD 2", "Assets/Scenes/MainMenu/{0}", 1215, 330);
 		AddIndicatorLayer("LCD 3", "Assets/Scenes/MainMenu/{0}", 1395, 330);
 		AddIndicatorLayer("LCD 4", "Assets/Scenes/MainMenu/{0}", 1520, 330);
-		Blinking = TickingDelay;
-		Separator = GetLayer("LCD Separator");
-		PlayerPreferences.SetPlayerSkin(new MainMenuPlayerSkin(game));
+		_blinking = TickingDelay;
+		_separator = GetLayer("LCD Separator");
+		PlayerPreferences.SetPlayerOverlay(new MainMenuPlayerSkin(game));
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.GiantRobotsTrack, 0.4f);
 		Game.SetOverlay(new MainMenuOverlay(game)
 		{
@@ -61,7 +59,7 @@ public class MainMenuScene : TimeOfDayScene
 							PhoneOverlay.Enabled = false;
 							TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
 							TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
-							base.Game.StartCutscene(AmorousData.Prologue);
+							base.Game.PlayCutscene(AmorousData.Prologue);
 							break;
 						case 1:
 							FadingMediaPlayer.FadeOut();
@@ -96,10 +94,10 @@ public class MainMenuScene : TimeOfDayScene
 					}
 					else
 					{
-						Saves.Pointer Pointer = saves[answer];
-						if (!Pointer.IsEmpty)
+						Saves.Pointer pointer = saves[answer];
+						if (!pointer.IsEmpty)
 						{
-							if (!((!Pointer.IsAutosave) ? base.Game.ReadFromSlot(Pointer.Index) : base.Game.ReadFromAutosaveSlot(Pointer.Index)))
+							if (!((!pointer.IsAutosave) ? base.Game.ReadFromSlot(pointer.Index) : base.Game.ReadFromAutosaveSlot(pointer.Index)))
 							{
 								base.Squid.ShowConfirm("Failed to load save, it's most likely corrupted.", AmorousData.WideDialogueOffset, "OK", delegate
 								{
@@ -113,7 +111,7 @@ public class MainMenuScene : TimeOfDayScene
 						}
 						else
 						{
-							base.Squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", Pointer.IsAutosave ? "autosave " : string.Empty, answer + 1), AmorousData.WideDialogueOffset, "OK", delegate
+							base.Squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", pointer.IsAutosave ? "autosave " : string.Empty, answer + 1), AmorousData.WideDialogueOffset, "OK", delegate
 							{
 								base.Game.Overlay.Touchable = true;
 							});
@@ -128,7 +126,7 @@ public class MainMenuScene : TimeOfDayScene
 				{
 					if (answer == 1)
 					{
-						base.Game.Fading.FadeOut(delegate
+						base.Game.Fader.FadeOut(delegate
 						{
 							base.Game.Exit();
 						});
@@ -137,9 +135,9 @@ public class MainMenuScene : TimeOfDayScene
 				});
 			}
 		});
-		Copyright = new CopyrightOverlay(game)
+		_copyright = new CopyrightOverlay(game)
 		{
-			DisplayOptions = DiplayOptions
+			ShowOptions = ShowOptions
 		};
 		Clocks.InRealTime = true;
 	}
@@ -148,39 +146,39 @@ public class MainMenuScene : TimeOfDayScene
 
 	public TexturedSequenceLayer AddIndicatorLayer(string name, string textureFormat, int x, int y)
 	{
-		Texture2D[] array = new Texture2D[10];
-		for (int i = 0; i < array.Length; i++)
+		Texture2D[] textures = new Texture2D[10];
+		for (int i = 0; i < textures.Length; i++)
 		{
-			array[i] = base.Game.Content.Load<Texture2D>(string.Format(textureFormat, i));
+			textures[i] = base.Game.Content.Load<Texture2D>(string.Format(textureFormat, i));
 		}
-		TexturedSequenceLayer layer = new TexturedSequenceLayer(this, name, array)
+		TexturedSequenceLayer layer = new TexturedSequenceLayer(this, name, textures)
 		{
 			Removable = true,
 			X = x,
 			Y = y
 		};
 		AddLayer(layer, OrderForeground);
-		Indicators.Add(layer);
+		_segments.Add(layer);
 		return layer;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		Blinking -= gameTime.ElapsedGameTime.Milliseconds;
-		if (Blinking < 0)
+		_blinking -= gameTime.ElapsedGameTime.Milliseconds;
+		if (_blinking < 0)
 		{
-			Separator.Visible = !Separator.Visible;
-			Blinking = TickingDelay;
+			_separator.Visible = !_separator.Visible;
+			_blinking = TickingDelay;
 		}
-		Indicators[0].State = DateTime.Now.Hour / 10;
-		Indicators[1].State = DateTime.Now.Hour % 10;
-		Indicators[2].State = DateTime.Now.Minute / 10;
-		Indicators[3].State = DateTime.Now.Minute % 10;
+		_segments[0].State = DateTime.Now.Hour / 10;
+		_segments[1].State = DateTime.Now.Hour % 10;
+		_segments[2].State = DateTime.Now.Minute / 10;
+		_segments[3].State = DateTime.Now.Minute % 10;
 		if (base.Game.Overlay != null)
 		{
-			Copyright.Touchable = base.Game.Overlay.Touchable;
-			Copyright.Update(gameTime);
+			_copyright.Touchable = base.Game.Overlay.Touchable;
+			_copyright.Update(gameTime);
 		}
 	}
 
@@ -188,7 +186,7 @@ public class MainMenuScene : TimeOfDayScene
 	{
 		if (PlayerPreferences.Singleton.PlayerSkin != null)
 		{
-			spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(Randoms.Date) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
+			spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, Matrix.CreateTranslation(-100f, -390f, 0f) * Matrix.CreateRotationZ((float)Math.Sin(Utils.Date) * MathHelper.ToRadians(5f)) * Matrix.CreateTranslation(90f, 390f, 0f));
 			PlayerPreferences.Singleton.PlayerSkin.Draw(spriteBatch);
 			spriteBatch.End();
 		}
@@ -198,247 +196,243 @@ public class MainMenuScene : TimeOfDayScene
 	{
 		base.DrawOverlay(spriteBatch);
 		spriteBatch.Begin();
-		Logotype.Draw(spriteBatch);
+		_logotype.Draw(spriteBatch);
 		spriteBatch.End();
-		Copyright.Draw(spriteBatch);
+		_copyright.Draw(spriteBatch);
 	}
 
-	private void DiplayOptions()
+	private void ShowOptions()
 	{
 		base.Game.Overlay.Touchable = false;
-		int num = 0;
+		int offset = 0;
 		if (Censorship.Booties)
 		{
-			num += 60;
+			offset += 60;
 		}
 		if (!Censorship.Censored)
 		{
-			num += 60;
+			offset += 60;
 		}
-		Window _L7VColD35B3sDgJdUnjTeXGa7pv = new Window
+		Window container = new Window
 		{
 			Dock = DockStyle.Center,
-			Size = new Squid.Point(512, 540 + num),
+			Size = new Squid.Point(512, 540 + offset),
 			Margin = new Margin(8),
 			Padding = new Margin(8)
 		};
-		Panel panel = new Panel
+		Panel content = new Panel
 		{
 			Dock = DockStyle.Fill,
 			Margin = new Margin(8)
 		};
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Controls.Add(panel);
-		Label item = new Label
+		container.Controls.Add(content);
+		Label graphicsLabel = new Label
 		{
 			Dock = DockStyle.Top,
 			TextAlign = Alignment.MiddleCenter,
 			Text = "Display"
 		};
-		Label item2 = new Label
+		Label resolutionLabel = new Label
 		{
 			Dock = DockStyle.Top,
 			Text = "Resolutions"
 		};
-		DropDownList dropDownList = new DropDownList();
-		dropDownList.Dock = DockStyle.Top;
-		dropDownList.Style = "button";
-		dropDownList.Label.Margin = new Margin(10, 0, 0, 0);
-		dropDownList.Dropdown.Resizable = false;
-		dropDownList.Margin = new Margin(0, 0, 0, 5);
-		DropDownList dropDownList2 = dropDownList;
-		dropDownList2.Listbox.Scrollbar.ButtonUp.Visible = false;
-		dropDownList2.Listbox.Scrollbar.ButtonDown.Visible = false;
-		int _ExpbREeE97oXaFMwg5UwE6MpAAQ = base.Game.Canvas.CanvasWidth;
-		int _P2eFcUFiRYQgRf4ICqeX3kVcA2m = base.Game.Canvas.CanvasHeight;
-		foreach (DisplayMode supportedDisplayMode in base.Game.GLES.Adapter.SupportedDisplayModes)
+		DropDownList resolutionDropDown = new DropDownList();
+		resolutionDropDown.Dock = DockStyle.Top;
+		resolutionDropDown.Style = "button";
+		resolutionDropDown.Label.Margin = new Margin(10, 0, 0, 0);
+		resolutionDropDown.Dropdown.Resizable = false;
+		resolutionDropDown.Margin = new Margin(0, 0, 0, 5);
+		resolutionDropDown.Listbox.Scrollbar.ButtonUp.Visible = false;
+		resolutionDropDown.Listbox.Scrollbar.ButtonDown.Visible = false;
+		int canvasWidth = base.Game.Canvas.CanvasWidth;
+		int canvasHeight = base.Game.Canvas.CanvasHeight;
+		foreach (DisplayMode supportedDisplayMode in base.Game.Graphics.Adapter.SupportedDisplayModes)
 		{
-			dropDownList2.Items.Add(new ListBoxItem
+			resolutionDropDown.Items.Add(new ListBoxItem
 			{
 				Text = supportedDisplayMode.Width + "x" + supportedDisplayMode.Height,
 				Value = supportedDisplayMode,
 				Size = new Squid.Point(0, AmorousData.ButtonHeight),
-				Selected = (_ExpbREeE97oXaFMwg5UwE6MpAAQ == supportedDisplayMode.Width && _P2eFcUFiRYQgRf4ICqeX3kVcA2m == supportedDisplayMode.Height)
+				Selected = (canvasWidth == supportedDisplayMode.Width && canvasHeight == supportedDisplayMode.Height)
 			});
 		}
-		dropDownList2.SelectedItemChanged += delegate(Control control_0, ListBoxItem listBoxItem_0)
+		resolutionDropDown.SelectedItemChanged += delegate(Control container, ListBoxItem box)
 		{
-			if (listBoxItem_0.Value is DisplayMode)
+			if (box.Value is DisplayMode)
 			{
-				DisplayMode displayMode = listBoxItem_0.Value as DisplayMode;
+				DisplayMode displayMode = box.Value as DisplayMode;
 				base.Game.SetDisplay(displayMode.Width, displayMode.Height);
 				Options.Data.ResolutionWidth = displayMode.Width;
 				Options.Data.ResolutionHeight = displayMode.Height;
-				_ExpbREeE97oXaFMwg5UwE6MpAAQ = displayMode.Width;
-				_P2eFcUFiRYQgRf4ICqeX3kVcA2m = displayMode.Height;
+				canvasWidth = displayMode.Width;
+				canvasHeight = displayMode.Height;
 			}
 		};
-		CheckBox checkBox = new CheckBox
+		CheckBox fullscreenBox = new CheckBox
 		{
 			Dock = DockStyle.Top,
 			Text = "Fullscreen",
 			Checked = base.Game.IsFullscreen
 		};
-		checkBox.CheckedChanged += delegate
+		fullscreenBox.CheckedChanged += delegate
 		{
-			base.Game.SetDisplay(_ExpbREeE97oXaFMwg5UwE6MpAAQ, _P2eFcUFiRYQgRf4ICqeX3kVcA2m, !base.Game.IsFullscreen);
+			base.Game.SetDisplay(canvasWidth, canvasHeight, !base.Game.IsFullscreen);
 			Options.Data.Fullscreen = base.Game.IsFullscreen;
 		};
-		panel.Content.Controls.Add(item);
-		panel.Content.Controls.Add(item2);
-		panel.Content.Controls.Add(dropDownList2);
-		panel.Content.Controls.Add(checkBox);
-		Label item3 = new Label
+		content.Content.Controls.Add(graphicsLabel);
+		content.Content.Controls.Add(resolutionLabel);
+		content.Content.Controls.Add(resolutionDropDown);
+		content.Content.Controls.Add(fullscreenBox);
+		Label mediaLabel = new Label
 		{
 			Dock = DockStyle.Top,
 			TextAlign = Alignment.MiddleCenter,
 			Text = "Sound"
 		};
-		Label item4 = new Label
+		Label volumeLabel = new Label
 		{
 			Dock = DockStyle.Top,
 			Text = "Master Volume"
 		};
-		Slider slider = new Slider();
-		slider.Dock = DockStyle.Top;
-		slider.Orientation = Orientation.Horizontal;
-		slider.Steps = 100f;
-		slider.Value = Options.Data.MasterVolume * 100f;
-		slider.Style = "scrollSlider";
-		slider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
-		slider.Button.Style = "scrollSliderButton";
-		Slider _XEgAfmv7sJWJSaC2diC3eaD4Fgl = slider;
-		_XEgAfmv7sJWJSaC2diC3eaD4Fgl.ValueChanged += delegate
+		Slider volumeSlider = new Slider();
+		volumeSlider.Dock = DockStyle.Top;
+		volumeSlider.Orientation = Orientation.Horizontal;
+		volumeSlider.Steps = 100f;
+		volumeSlider.Value = Options.Data.MasterVolume * 100f;
+		volumeSlider.Style = "scrollSlider";
+		volumeSlider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
+		volumeSlider.Button.Style = "scrollSliderButton";
+		volumeSlider.ValueChanged += delegate
 		{
-			Options.Data.MasterVolume = _XEgAfmv7sJWJSaC2diC3eaD4Fgl.Value / 100f;
+			Options.Data.MasterVolume = volumeSlider.Value / 100f;
 		};
-		Label item5 = new Label
+		Label musicVolumeLabel = new Label
 		{
 			Dock = DockStyle.Top,
 			Text = "Music Volume"
 		};
-		Slider slider2 = new Slider();
-		slider2.Dock = DockStyle.Top;
-		slider2.Orientation = Orientation.Horizontal;
-		slider2.Steps = 100f;
-		slider2.Value = Options.Data.MusicVolume * 100f;
-		slider2.Style = "scrollSlider";
-		slider2.Size = new Squid.Point(0, AmorousData.ButtonHeight);
-		slider2.Button.Style = "scrollSliderButton";
-		Slider _gjeIIVx9bHyd0aMj0WD483nrLWK = slider2;
-		_gjeIIVx9bHyd0aMj0WD483nrLWK.ValueChanged += delegate
+		Slider musicVolumeSlider = new Slider();
+		musicVolumeSlider.Dock = DockStyle.Top;
+		musicVolumeSlider.Orientation = Orientation.Horizontal;
+		musicVolumeSlider.Steps = 100f;
+		musicVolumeSlider.Value = Options.Data.MusicVolume * 100f;
+		musicVolumeSlider.Style = "scrollSlider";
+		musicVolumeSlider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
+		musicVolumeSlider.Button.Style = "scrollSliderButton";
+		musicVolumeSlider.ValueChanged += delegate
 		{
-			Options.Data.MusicVolume = _gjeIIVx9bHyd0aMj0WD483nrLWK.Value / 100f;
+			Options.Data.MusicVolume = musicVolumeSlider.Value / 100f;
 		};
-		Label item6 = new Label
+		Label soundVolumeLabel = new Label
 		{
 			Dock = DockStyle.Top,
 			Text = "SFX Volume"
 		};
-		Slider slider3 = new Slider();
-		slider3.Dock = DockStyle.Top;
-		slider3.Orientation = Orientation.Horizontal;
-		slider3.Steps = 100f;
-		slider3.Value = Options.Data.SfxVolume * 100f;
-		slider3.Style = "scrollSlider";
-		slider3.Size = new Squid.Point(0, AmorousData.ButtonHeight);
-		slider3.Button.Style = "scrollSliderButton";
-		Slider _5mK9ExiyKm0md8q4J1C6xc4TzdF = slider3;
-		_5mK9ExiyKm0md8q4J1C6xc4TzdF.ValueChanged += delegate
+		Slider soundVolumeSlider = new Slider();
+		soundVolumeSlider.Dock = DockStyle.Top;
+		soundVolumeSlider.Orientation = Orientation.Horizontal;
+		soundVolumeSlider.Steps = 100f;
+		soundVolumeSlider.Value = Options.Data.SfxVolume * 100f;
+		soundVolumeSlider.Style = "scrollSlider";
+		soundVolumeSlider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
+		soundVolumeSlider.Button.Style = "scrollSliderButton";
+		soundVolumeSlider.ValueChanged += delegate
 		{
-			Options.Data.SfxVolume = _5mK9ExiyKm0md8q4J1C6xc4TzdF.Value / 100f;
+			Options.Data.SfxVolume = soundVolumeSlider.Value / 100f;
 		};
-		panel.Content.Controls.Add(item3);
-		panel.Content.Controls.Add(item4);
-		panel.Content.Controls.Add(_XEgAfmv7sJWJSaC2diC3eaD4Fgl);
-		panel.Content.Controls.Add(item5);
-		panel.Content.Controls.Add(_gjeIIVx9bHyd0aMj0WD483nrLWK);
-		panel.Content.Controls.Add(item6);
-		panel.Content.Controls.Add(_5mK9ExiyKm0md8q4J1C6xc4TzdF);
-		Label item7 = new Label
+		content.Content.Controls.Add(mediaLabel);
+		content.Content.Controls.Add(volumeLabel);
+		content.Content.Controls.Add(volumeSlider);
+		content.Content.Controls.Add(musicVolumeLabel);
+		content.Content.Controls.Add(musicVolumeSlider);
+		content.Content.Controls.Add(soundVolumeLabel);
+		content.Content.Controls.Add(soundVolumeSlider);
+		Label dialogueLabel = new Label
 		{
 			Dock = DockStyle.Top,
 			TextAlign = Alignment.MiddleCenter,
 			Text = "Dialogue"
 		};
-		panel.Content.Controls.Add(item7);
-		PhoneOverlay.AttachDropDownList(panel.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
+		content.Content.Controls.Add(dialogueLabel);
+		PhoneOverlay.AttachDropDownList(content.Content.Controls, "Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int int_0)
 		{
 			Options.Data.DialogueTextSpeed = (DialogueSpeed)int_0;
 			TypingDialogue.Speed = (DialogueSpeed)int_0;
 		});
-		CheckBox _feL3soNn6ZWaJqYfjYJUyH118tF = new CheckBox
+		CheckBox autoSkipBox = new CheckBox
 		{
 			Dock = DockStyle.Top,
 			Text = "Auto-skip",
 			Checked = Options.Data.DialogueAutoSkip
 		};
-		_feL3soNn6ZWaJqYfjYJUyH118tF.CheckedChanged += delegate
+		autoSkipBox.CheckedChanged += delegate
 		{
-			Options.Data.DialogueAutoSkip = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
-			TypingDialogue.AutoSkip = _feL3soNn6ZWaJqYfjYJUyH118tF.Checked;
+			Options.Data.DialogueAutoSkip = autoSkipBox.Checked;
+			TypingDialogue.AutoSkip = autoSkipBox.Checked;
 		};
-		panel.Content.Controls.Add(_feL3soNn6ZWaJqYfjYJUyH118tF);
+		content.Content.Controls.Add(autoSkipBox);
 		if (Censorship.Booties)
 		{
-			Label item8 = new Label
+			Label bootiesLabel = new Label
 			{
 				Dock = DockStyle.Top,
 				TextAlign = Alignment.MiddleCenter,
 				Text = "Cheats"
 			};
-			CheckBox _LFRG0GY4VuOaiC2XHbpUmFoVDAj = new CheckBox
+			CheckBox censoredBox = new CheckBox
 			{
 				Dock = DockStyle.Top,
 				Text = "Enable SFW-mode",
 				Checked = Censorship.Censored
 			};
-			_LFRG0GY4VuOaiC2XHbpUmFoVDAj.CheckedChanged += delegate
+			censoredBox.CheckedChanged += delegate
 			{
-				Censorship.Censored = _LFRG0GY4VuOaiC2XHbpUmFoVDAj.Checked;
-				_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
-				DiplayOptions();
+				Censorship.Censored = censoredBox.Checked;
+				container.Close();
+				ShowOptions();
 			};
-			panel.Content.Controls.Add(item8);
-			panel.Content.Controls.Add(_LFRG0GY4VuOaiC2XHbpUmFoVDAj);
+			content.Content.Controls.Add(bootiesLabel);
+			content.Content.Controls.Add(censoredBox);
 		}
 		if (!Censorship.Censored)
 		{
-			CheckBox _PBgLcZr7dRzS97rFn3FU6lDw8ZE = new CheckBox
+			CheckBox toplessBox = new CheckBox
 			{
 				Dock = DockStyle.Top,
 				Text = "Enable Topless",
 				Checked = Censorship.Topless
 			};
-			_PBgLcZr7dRzS97rFn3FU6lDw8ZE.CheckedChanged += delegate
+			toplessBox.CheckedChanged += delegate
 			{
-				Censorship.Topless = _PBgLcZr7dRzS97rFn3FU6lDw8ZE.Checked;
+				Censorship.Topless = toplessBox.Checked;
 			};
-			CheckBox _qWiPLfzctHo3AqPevD7VV4qTuDy = new CheckBox
+			CheckBox bottomlessBox = new CheckBox
 			{
 				Dock = DockStyle.Top,
 				Text = "Enable Bottomless",
 				Checked = Censorship.Bottomless
 			};
-			_qWiPLfzctHo3AqPevD7VV4qTuDy.CheckedChanged += delegate
+			bottomlessBox.CheckedChanged += delegate
 			{
-				Censorship.Bottomless = _qWiPLfzctHo3AqPevD7VV4qTuDy.Checked;
+				Censorship.Bottomless = bottomlessBox.Checked;
 			};
-			panel.Content.Controls.Add(_PBgLcZr7dRzS97rFn3FU6lDw8ZE);
-			panel.Content.Controls.Add(_qWiPLfzctHo3AqPevD7VV4qTuDy);
+			content.Content.Controls.Add(toplessBox);
+			content.Content.Controls.Add(bottomlessBox);
 		}
-		Button button = new Button
+		Button closeButton = new Button
 		{
 			Dock = DockStyle.Bottom,
 			Text = "Close"
 		};
-		button.MouseClick += delegate
+		closeButton.MouseClick += delegate
 		{
 			base.Game.Overlay.Touchable = true;
 			Options.Save();
-			_L7VColD35B3sDgJdUnjTeXGa7pv.Close();
+			container.Close();
 		};
-		panel.Content.Controls.Add(button);
-		_L7VColD35B3sDgJdUnjTeXGa7pv.Show(base.Squid);
+		content.Content.Controls.Add(closeButton);
+		container.Show(base.Squid);
 	}
 
 	public override void End()

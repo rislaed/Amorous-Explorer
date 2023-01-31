@@ -23,7 +23,6 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 	}
 
 	public static string Name = "Lexy";
-
 	public static Color Color = new Color(60, 128, 241);
 
 	public CosplayerLexyNPC(IAmorous game)
@@ -40,21 +39,21 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 413f;
-			Y = 0f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -280f;
-			Y = 0f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1016f;
-			Y = 0f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 413f;
+				Y = 0f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -280f;
+				Y = 0f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1016f;
+				Y = 0f;
+				break;
 		}
 	}
 }

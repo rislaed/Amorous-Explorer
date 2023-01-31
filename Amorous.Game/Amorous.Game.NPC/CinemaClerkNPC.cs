@@ -24,7 +24,6 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 	}
 
 	public static string Name = "Cryptic";
-
 	public static Color Color = new Color(255, 24, 24);
 
 	public CinemaClerkNPC(IAmorous game)
@@ -42,21 +41,21 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 		base.SetLocation(location);
 		switch (location)
 		{
-		case NPCLocation.Middle:
-			FlipX = false;
-			X = 413f;
-			Y = 22f;
-			break;
-		case NPCLocation.Left:
-			FlipX = true;
-			X = -190f;
-			Y = 22f;
-			break;
-		case NPCLocation.Right:
-			FlipX = false;
-			X = 1016f;
-			Y = 22f;
-			break;
+			case NPCLocation.Middle:
+				FlipX = false;
+				X = 413f;
+				Y = 22f;
+				break;
+			case NPCLocation.Left:
+				FlipX = true;
+				X = -190f;
+				Y = 22f;
+				break;
+			case NPCLocation.Right:
+				FlipX = false;
+				X = 1016f;
+				Y = 22f;
+				break;
 		}
 	}
 }

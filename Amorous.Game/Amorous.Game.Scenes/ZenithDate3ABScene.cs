@@ -7,6 +7,6 @@ public class ZenithDate3ABScene : AbstractScene
 
 	public override void Start()
 	{
-		base.Game.StartCutscene(AmorousData.ZenithDate);
+		base.Game.PlayCutscene(AmorousData.ZenithDate);
 	}
 }

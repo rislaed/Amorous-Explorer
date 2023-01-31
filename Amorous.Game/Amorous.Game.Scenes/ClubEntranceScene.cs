@@ -1,4 +1,3 @@
-using System;
 using Amorous.Game.NPC;
 
 namespace Amorous.Game.Scenes;
@@ -49,8 +48,7 @@ public class ClubEntranceScene : AbstractScene
 		clubEntranceABNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubEntranceABNPC.X = -325f;
 		clubEntranceABNPC.Y = 300f;
-		NPCLayer NPCLayer = GetNPCLayer<ClubEntranceABNPC>();
-		NPCLayer.LayerOrder = 1;
+		GetNPCLayer<ClubEntranceABNPC>().LayerOrder = 1;
 		ClubEntranceCNPC clubEntranceCNPC = base.Game.GetNPCLayerAt<ClubEntranceCNPC>(LayerOrder.Background);
 		clubEntranceCNPC.SetPose(ClubStaticNPC.EPoses.Nude);
 		clubEntranceCNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
@@ -61,10 +59,8 @@ public class ClubEntranceScene : AbstractScene
 		clubEntranceDNPC.SetClothes(ClubStaticNPC.EClothes.Pants, ClubStaticNPC.EClothes.Shirt);
 		clubEntranceDNPC.X = 1930f;
 		clubEntranceDNPC.Y = 255f;
-		NPCLayer NPCLayer2 = GetNPCLayer<ClubEntranceCNPC>();
-		NPCLayer2.LayerOrder = 1;
-		NPCLayer NPCLayer3 = GetNPCLayer<ClubEntranceDNPC>();
-		NPCLayer3.LayerOrder = 1;
+		GetNPCLayer<ClubEntranceCNPC>().LayerOrder = 1;
+		GetNPCLayer<ClubEntranceDNPC>().LayerOrder = 1;
 	}
 
 	private void OnDoorClick()
@@ -84,6 +80,6 @@ public class ClubEntranceScene : AbstractScene
 		_kane.Click = null;
 		_kane.IsHovered = false;
 		RefreshLayerOrdering();
-		base.Game.StartCutscene(AmorousData.Kane);
+		base.Game.PlayCutscene(AmorousData.Kane);
 	}
 }
