@@ -32,7 +32,7 @@ public class CobyTeaseScene : AbstractScene
 		}
 		else
 		{
-			_spine.SetSkin(VariantTease);
+			_spine.SetSkin("default");
 		}
 	}
 

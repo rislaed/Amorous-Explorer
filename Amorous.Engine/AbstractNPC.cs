@@ -58,7 +58,7 @@ public abstract class AbstractNPC
 	}
 
 	public string[] Clothes => _clothes.ToArray();
-	public bool IsAnimating { get; private set; }
+	public bool IsRefreshing { get; private set; }
 	public List<FilterableEmotion> Emotions { get; private set; }
 	public List<FilterablePose> Poses { get; private set; }
 	public virtual float X { get; set; }
@@ -290,7 +290,7 @@ public abstract class AbstractNPC
 			ApplyScheduledEvents();
 			Dispose();
 		}
-		IsAnimating = true;
+		IsRefreshing = true;
 		_update = delegate
 		{
 			_update = null;
@@ -306,7 +306,7 @@ public abstract class AbstractNPC
 			ApplyScheduledEvents();
 			Dispose();
 		}
-		IsAnimating = true;
+		IsRefreshing = true;
 		_update = delegate
 		{
 			_update = null;
@@ -322,7 +322,7 @@ public abstract class AbstractNPC
 			Refresh(0);
 			_draw = delegate
 			{
-				IsAnimating = false;
+				IsRefreshing = false;
 				SetLocation(location);
 				SetEmotion(head);
 				SetPose(pose);
@@ -368,9 +368,18 @@ public abstract class AbstractNPC
 
 	private void DrawPending()
 	{
-		if (_fading > 0 && _draw != null)
+		if (_fading > 0)
 		{
-			_draw();
+			if (_draw != null)
+			{
+				_draw();
+			}
+		}
+		else if (IsRefreshing) // ?
+		{
+			Logger.Log(ConsoleColor.White, "Debug", "Overticking scheduled updates at {0} ticks, originally it stucks!", -_fading);
+			Game.ShowMessage("Assets/Gui/Achievements/Achievement_ShootingRange_2", "Locked", "Scheduled NPC events timeout!");
+			_fading = FadingDelay;
 		}
 	}
 

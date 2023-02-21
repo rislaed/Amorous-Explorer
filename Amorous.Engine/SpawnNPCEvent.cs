@@ -107,6 +107,6 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = _npc == null || !_npc.IsAnimating;
+		base.Completable = _npc == null || !_npc.IsRefreshing;
 	}
 }

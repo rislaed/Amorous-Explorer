@@ -13,6 +13,6 @@ public class MaleSexsceneSounds : NeutralSexsceneSounds
 
 	public static MaleSexsceneSounds Get(ContentManager content)
 	{
-		return new MaleSexsceneSounds(content);
+		return new MaleSexsceneSounds(content); // ?
 	}
 }

@@ -6,14 +6,14 @@ public class SpriteInteractable : AbstractInteractable
 { // _d4ad1i8rcZMvfN9iaxggA1KtVgx
 	private readonly Action _click;
 
-	public Texture2D Foreground { get; private set; }
-	public Texture2D Background { get; private set; }
+	public Texture2D Sprite { get; private set; }
+	public Texture2D HoveredSprite { get; private set; }
 	public Color Blending { get; set; }
 
-	public SpriteInteractable(Texture2D foreground, Texture2D background, Action click)
+	public SpriteInteractable(Texture2D sprite, Texture2D hoveredSprite, Action click)
 	{
-		Foreground = foreground;
-		Background = background;
+		Sprite = sprite;
+		HoveredSprite = hoveredSprite;
 		Blending = Color.White;
 		_click = click;
 	}
@@ -30,8 +30,9 @@ public class SpriteInteractable : AbstractInteractable
 	{
 		if (base.Hovered)
 		{
-			spriteBatch.Draw(Background ?? Foreground, Location, Blending);
+			spriteBatch.Draw(HoveredSprite ?? Sprite, Location, Blending);
+			return;
 		}
-		spriteBatch.Draw(Foreground, Location, Blending);
+		spriteBatch.Draw(Sprite, Location, Blending);
 	}
 }

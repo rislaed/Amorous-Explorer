@@ -470,7 +470,8 @@ public abstract class AbstractScene
 	public T AddLayer<T>(T layer, int zorder, int state = 0) where T : AbstractLayer
 	{
 		layer.ZOrder = zorder;
-		if (!(layer is NPCLayer)) {
+		if (!(layer is NPCLayer))
+		{
 			Logger.Log(ConsoleColor.White, "Debug", "Adding layer '{0}' in order {1} ({2}, {3}, {4}x{5})", layer.Name, ((byte)zorder), layer.X, layer.Y, layer.Width, layer.Height);
 		}
 		Layers.Add(layer);

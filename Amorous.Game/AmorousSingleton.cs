@@ -210,7 +210,8 @@ public class AmorousSingleton : IAmorous
 		});
 	}
 
-	public void UnloadContent() {
+	public void UnloadContent()
+	{
 	}
 
 	public void Update(GameTime gameTime)
@@ -252,7 +253,9 @@ public class AmorousSingleton : IAmorous
 			{
 				Logger.Log(ConsoleColor.White, "Debug", "Changing to pending scene '{0}' -> '{1}'", _scene.GetType().Name, _pendingScene.GetType().Name);
 				_scene.End();
-			} else {
+			}
+			else
+			{
 				Logger.Log(ConsoleColor.White, "Debug", "Starting pending scene '{0}'", _pendingScene.GetType().Name);
 			}
 			_scene = _pendingScene;
@@ -362,7 +365,8 @@ public class AmorousSingleton : IAmorous
 			{
 				sceneName = _scene.GetType().Name;
 			}
-			if (sceneName == null) {
+			if (sceneName == null)
+			{
 				sceneName = "None";
 			}
 			_batch.DrawString(_font, "Scene: " + sceneName, _debuggerPoint, Color.White);
@@ -420,7 +424,8 @@ public class AmorousSingleton : IAmorous
 				{
 					sceneName = _scene.GetType().Name;
 				}
-				if (sceneName == null) {
+				if (sceneName == null)
+				{
 					sceneName = "None";
 				}
 				object[] sceneInformation = new object[5];
@@ -551,10 +556,10 @@ public class AmorousSingleton : IAmorous
 			action();
 		}
 		_pendingSceneThen = then;
-		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
-			where typeof(AbstractScene).IsAssignableFrom(type_0)
-			select type_0;
-		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
+		IEnumerable<Type> source = from scene in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
+			where typeof(AbstractScene).IsAssignableFrom(scene)
+			select scene;
+		Type type = source.FirstOrDefault((Type scene) => scene.Name == name);
 		if (!(type == null))
 		{
 			_canvas.ResetOverscroll();
@@ -589,15 +594,18 @@ public class AmorousSingleton : IAmorous
 
 	public void PlaySexscene(string name)
 	{
-		IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
-			where typeof(AbstractSexscene).IsAssignableFrom(type_0)
-			select type_0;
-		Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
+		IEnumerable<Type> source = from sexscene in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
+			where typeof(AbstractSexscene).IsAssignableFrom(sexscene)
+			select sexscene;
+		Type type = source.FirstOrDefault((Type sexscene) => sexscene.Name == name);
 		if (!(type == null))
 		{
-			if (_sexscene != null) {
+			if (_sexscene != null)
+			{
 				Logger.Log(ConsoleColor.White, "Debug", "Changing to sexscene '{0}' -> '{1}'", _sexscene.GetType().Name, type.Name);
-			} else {
+			}
+			else
+			{
 				Logger.Log(ConsoleColor.White, "Debug", "Starting sexscene '{0}'", type.Name);
 			}
 			_sexscene = Activator.CreateInstance(type, _game.Content) as AbstractSexscene;
@@ -615,17 +623,19 @@ public class AmorousSingleton : IAmorous
 
 	public void PlayCutscene(string name)
 	{
-		Cutscene cutscene = ReadCutscene(name);
-		PlayCutscene(cutscene);
+		PlayCutscene(ReadCutscene(name));
 	}
 
 	public void PlayCutscene(Cutscene cutscene)
 	{
 		if (cutscene != null)
 		{
-			if (_cutscene != null) {
+			if (_cutscene != null)
+			{
 				Logger.Log(ConsoleColor.White, "Debug", "Changing to cutscene '{0}' -> '{1}'", _cutscene.Data.Name, cutscene.Data.Name);
-			} else {
+			}
+			else
+			{
 				Logger.Log(ConsoleColor.White, "Debug", "Starting cutscene '{0}'", cutscene.Data.Name);
 			}
 			_cutscene = cutscene;
@@ -638,12 +648,7 @@ public class AmorousSingleton : IAmorous
 	private Cutscene ReadCutscene(string name)
 	{
 		string path = Path.Combine(Content.RootDirectory, $"Content-Mods/Data/Quests/{name}.json");
-		string json;
-		if (File.Exists(path))
-		{
-			json = Compressions.ReadStreamAsText(path);
-		}
-		else
+		if (!File.Exists(path))
 		{
 			path = Path.Combine(Content.RootDirectory, $"Data/Quests/{name}.json");
 			if (!File.Exists(path))
@@ -651,8 +656,8 @@ public class AmorousSingleton : IAmorous
 				Logger.Error("Failed to load cutscene '{0}'", name);
 				return null;
 			}
-			json = Compressions.ReadStreamAsText(path);
 		}
+		string json = Compressions.ReadStreamAsText(path);
 		JsonSerializerSettings settings = new JsonSerializerSettings
 		{
 			TypeNameHandling = TypeNameHandling.Auto,
@@ -780,10 +785,10 @@ public class AmorousSingleton : IAmorous
 			NPCLayer NPCLayer = _scene.GetNPCLayer(name);
 			if (NPCLayer == null)
 			{
-				IEnumerable<Type> source = from type_0 in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
-					where typeof(AbstractNPC).IsAssignableFrom(type_0) && !type_0.IsAbstract
-					select type_0;
-				Type type = source.FirstOrDefault((Type type_0) => type_0.Name == name);
+				IEnumerable<Type> source = from npc in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
+					where typeof(AbstractNPC).IsAssignableFrom(npc) && !npc.IsAbstract
+					select npc;
+				Type type = source.FirstOrDefault((Type npc) => npc.Name == name);
 				if (!(type == null))
 				{
 					if (Activator.CreateInstance(type, this) is AbstractNPC npc)

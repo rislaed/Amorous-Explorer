@@ -42,7 +42,7 @@ public static class Clocks
 	{
 		get
 		{
-			if (Hour < 6)
+			if (Hour < 6 || Hour >= 20)
 			{
 				return TimeOfDay.Night;
 			}
@@ -50,8 +50,9 @@ public static class Clocks
 			{
 				if (Hour < 17)
 				{
+					return TimeOfDay.Day;
 				}
-				return TimeOfDay.Night;
+				return TimeOfDay.Sunset;
 			}
 			return TimeOfDay.Morning;
 		}
@@ -59,21 +60,21 @@ public static class Clocks
 		{
 			switch (value)
 			{
-			default:
-				Hour = 0;
-				break;
-			case TimeOfDay.Morning:
-				Hour = 9;
-				break;
-			case TimeOfDay.Day:
-				Hour = 16;
-				break;
-			case TimeOfDay.Sunset:
-				Hour = 19;
-				break;
-			case TimeOfDay.Night:
-				Hour = 5;
-				break;
+				default:
+					Hour = 0;
+					break;
+				case TimeOfDay.Morning:
+					Hour = 9;
+					break;
+				case TimeOfDay.Day:
+					Hour = 16;
+					break;
+				case TimeOfDay.Sunset:
+					Hour = 19;
+					break;
+				case TimeOfDay.Night:
+					Hour = 5;
+					break;
 			}
 		}
 	}

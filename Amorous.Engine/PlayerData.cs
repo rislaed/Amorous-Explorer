@@ -412,7 +412,7 @@ public class PlayerData : IPlayerData
 		QuestStages = new Dictionary<string, int>();
 		Flags = new Dictionary<string, bool>();
 		Messages = new List<PhoneMessage>();
-		ResetState();
+		Reset();
 	}
 
 	public void Reset()

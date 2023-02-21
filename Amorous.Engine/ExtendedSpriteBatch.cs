@@ -62,9 +62,12 @@ public static class ExtendedSpriteBatch
 	{
 		blendState = blendState ?? BlendState.AlphaBlend;
 		samplerState = samplerState ?? SamplerState.LinearClamp;
-		if (transformationMatrix == null) {
+		if (transformationMatrix == null)
+		{
 			spriteBatch.Begin(sortMode, blendState, samplerState, depthStencilState, rasterizerState, effect);
-		} else {
+		}
+		else
+		{
 			spriteBatch.Begin(sortMode, blendState, samplerState, depthStencilState, rasterizerState, effect, (Matrix) transformationMatrix);
 		}
 	}

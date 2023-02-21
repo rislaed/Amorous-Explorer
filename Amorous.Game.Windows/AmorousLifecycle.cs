@@ -34,7 +34,8 @@ public static class AmorousLifecycle
 		Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 		Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
 		Logger.Initialize();
-		if (!IsUnix) {
+		if (!IsUnix)
+		{
 			try
 			{
 				SetDefaultDllDirectories(AppDomainLibraries);

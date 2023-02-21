@@ -185,7 +185,7 @@ public class PhoneOverlay
 	private readonly RenderTarget2D _phoneScreenTarget, _phoneActionTarget;
 	private Texture2D _spriteActiveGamebox, _spriteActiveRemyNude;
 	private bool _blocked;
-	private bool _isPhoneScreenHidden, _isPhoneActionHidden;
+	private bool _hiddenPhoneScreen, _hiddenPhoneAction;
 	private bool _hiddenGameBox, _hiddenRemyNudes;
 	private int _currentlyGame, _currentlyNude;
 	private static PhoneScreen _screen;
@@ -268,7 +268,7 @@ public class PhoneOverlay
 		_phoneActionSpine = content.LoadSkeleton("Assets/GUI/Phone/PhoneScreen");
 		_phoneActionSpine.X = 135f;
 		_phoneActionSpine.Y = 190f;
-		_isPhoneActionHidden = true;
+		_hiddenPhoneAction = true;
 		RefreshSkin();
 		_squid = new Desktop
 		{
@@ -315,13 +315,13 @@ public class PhoneOverlay
 
 	public void DeclineCall(PlayerData.EPhoneContacts contact)
 	{
-		_isPhoneActionHidden = true;
+		_hiddenPhoneAction = true;
 		StartSwipeAnimation();
 	}
 
 	public void DeclineIM(PlayerData.EPhoneContacts contact)
 	{
-		_isPhoneActionHidden = true;
+		_hiddenPhoneAction = true;
 		StartSwipeAnimation();
 	}
 
@@ -426,12 +426,12 @@ public class PhoneOverlay
 
 	public void HideActions()
 	{
-		_isPhoneActionHidden = true;
+		_hiddenPhoneAction = true;
 	}
 
 	public void ResetState()
 	{
-		_isPhoneActionHidden = true;
+		_hiddenPhoneAction = true;
 		_hiddenGameBox = true;
 		_currentlyGame = 0;
 		_hiddenRemyNudes = true;
@@ -538,7 +538,7 @@ public class PhoneOverlay
 		switch (_screen)
 		{
 			default:
-				_isPhoneScreenHidden = true;
+				_hiddenPhoneScreen = true;
 				return;
 			case PhoneScreen.Contacts:
 				container = CreateContactsScreen();
@@ -583,7 +583,7 @@ public class PhoneOverlay
 				container = CreatePowerScreen();
 				break;
 		}
-		_isPhoneScreenHidden = false;
+		_hiddenPhoneScreen = false;
 		_squid.Controls.Clear();
 		_squid.Controls.Add(container);
 	}
@@ -617,7 +617,7 @@ public class PhoneOverlay
 			Label contactLabel = new Label
 			{
 				Dock = DockStyle.Fill,
-				Text = "Club Amorous DJ",
+				Text = ClubDJNPC.Name,
 				TextAlign = Alignment.MiddleCenter,
 				NoEvents = true
 			};
@@ -876,7 +876,7 @@ public class PhoneOverlay
 		Label contactLabel = new Label
 		{
 			Dock = DockStyle.Top,
-			Text = "Club Amorous DJ",
+			Text = ClubDJNPC.Name,
 			Style = "button",
 			Size = new Squid.Point(0, 40),
 			NoEvents = true
@@ -1765,7 +1765,7 @@ public class PhoneOverlay
 
 	private void ShowContact(PlayerData.EPhoneContacts contact)
 	{
-		_isPhoneActionHidden = false;
+		_hiddenPhoneAction = false;
 		foreach (string key in _visibleContactParts.Keys.ToList())
 		{
 			_visibleContactParts[key] = false;
@@ -1800,7 +1800,7 @@ public class PhoneOverlay
 		ResolvePendingRequests();
 		UpdateOverlayButton(canvas);
 		UpdateOverlayScreen(canvas);
-		if (!_isPhoneScreenHidden)
+		if (!_hiddenPhoneScreen)
 		{
 			_squid.Update();
 		}
@@ -1952,17 +1952,17 @@ public class PhoneOverlay
 			_game.Graphics.SetRenderTargets(targets);
 			double depth;
 			Microsoft.Xna.Framework.Point sheen = _interactionSpine.GetDistanceDepth("Sheen Two", out depth);
-			_interactionSpine.Draw(skeletonMeshRenderer, null, delegate(int answer, string string_0)
+			_interactionSpine.Draw(skeletonMeshRenderer, null, delegate(int index, string bone)
 			{
-				if (string_0 == "Sheen Two")
+				if (bone == "Sheen Two")
 				{
 					skeletonMeshRenderer.End();
 					spriteBatch.Begin();
-					if (!_isPhoneScreenHidden)
+					if (!_hiddenPhoneScreen)
 					{
 						spriteBatch.Draw(_phoneScreenTarget, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
 					}
-					if (!_isPhoneActionHidden)
+					if (!_hiddenPhoneAction)
 					{
 						spriteBatch.Draw(_phoneActionTarget, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
 					}
@@ -1973,7 +1973,7 @@ public class PhoneOverlay
 					spriteBatch.End();
 					skeletonMeshRenderer.Begin();
 				}
-				else if (string_0 == "Thumb")
+				else if (bone == "Thumb")
 				{
 					if (!_hiddenGameBox)
 					{
@@ -1984,7 +1984,7 @@ public class PhoneOverlay
 						skeletonMeshRenderer.Begin();
 					}
 				}
-				else if (!_hiddenGameBox && PlayerNails.Contains(string_0))
+				else if (!_hiddenGameBox && PlayerNails.Contains(bone))
 				{
 					return false;
 				}

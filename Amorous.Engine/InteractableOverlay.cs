@@ -17,20 +17,20 @@ public class InteractableOverlay
 		Touchable = true;
 	}
 
-	public SpriteInteractable AddSpriteInteractable(string foreground, string background, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
+	public SpriteInteractable AddSpriteInteractable(string sprite, string hoveredSprite, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		Texture2D _foreground = Game.Content.Load<Texture2D>(foreground);
-		Texture2D _background = null;
-		if (!string.IsNullOrEmpty(background))
+		Texture2D texture = Game.Content.Load<Texture2D>(sprite);
+		Texture2D hoveredTexture = null;
+		if (!string.IsNullOrEmpty(hoveredSprite))
 		{
-			_background = Game.Content.Load<Texture2D>(background);
+			hoveredTexture = Game.Content.Load<Texture2D>(hoveredSprite);
 		}
-		return AddSpriteInteractable(_foreground, _background, x, y, bounds, click);
+		return AddSpriteInteractable(texture, hoveredTexture, x, y, bounds, click);
 	}
 
-	public SpriteInteractable AddSpriteInteractable(Texture2D foreground, Texture2D background, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
+	public SpriteInteractable AddSpriteInteractable(Texture2D sprite, Texture2D hoveredSprite, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		SpriteInteractable interactable = new SpriteInteractable(foreground, background, click)
+		SpriteInteractable interactable = new SpriteInteractable(sprite, hoveredSprite, click)
 		{
 			X = x,
 			Y = y,
@@ -40,21 +40,21 @@ public class InteractableOverlay
 		return interactable;
 	}
 
-	public ButtonInteractable AddButtonInteractable(string foreground, string background, string font, string text, Color color, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
+	public ButtonInteractable AddButtonInteractable(string sprite, string hoveredSprite, string font, string text, Color color, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		Texture2D _foreground = Game.Content.Load<Texture2D>(background);
-		Texture2D _background = null;
-		if (!string.IsNullOrEmpty(background))
+		Texture2D texture = Game.Content.Load<Texture2D>(sprite);
+		Texture2D hoveredTexture = null;
+		if (!string.IsNullOrEmpty(hoveredSprite))
 		{
-			_background = Game.Content.Load<Texture2D>(background);
+			hoveredTexture = Game.Content.Load<Texture2D>(hoveredSprite);
 		}
 		SpriteFont _font = Game.Content.Load<SpriteFont>(font);
-		return AddButtonInteractable(_foreground, _background, _font, text, color, x, y, bounds, click);
+		return AddButtonInteractable(texture, hoveredTexture, _font, text, color, x, y, bounds, click);
 	}
 
-	public ButtonInteractable AddButtonInteractable(Texture2D foreground, Texture2D background, SpriteFont font, string text, Color color, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
+	public ButtonInteractable AddButtonInteractable(Texture2D sprite, Texture2D hoveredSprite, SpriteFont font, string text, Color color, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
 	{
-		ButtonInteractable interactable = new ButtonInteractable(foreground, background, font, text, color, click)
+		ButtonInteractable interactable = new ButtonInteractable(sprite, hoveredSprite, font, text, color, click)
 		{
 			X = x,
 			Y = y,

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Amorous.Game.NPC;
 
 public class Achievements : IAchievements
 { // _bm5ybW5ND5sDF6bvP0sbYyOpvP
@@ -155,7 +156,7 @@ public class Achievements : IAchievements
 		}
 		else if (cutscene == AmorousData.DJ && stage == 10)
 		{
-			NotifyAchievedContact("Club Amorous DJ", AmorousData.MessageIconDJ);
+			NotifyAchievedContact(AmorousData.MessageIconDJ, ClubDJNPC.Name);
 		}
 	}
 
