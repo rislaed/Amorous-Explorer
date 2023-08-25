@@ -6,8 +6,7 @@ public class SpriteLayer : AbstractLayer
 	public Texture2D Texture { get; private set; }
 	public bool Flip { get; set; }
 
-	public SpriteLayer(AbstractScene scene, string name, Texture2D texture)
-		: base(scene, name)
+	public SpriteLayer(AbstractScene scene, string name, Texture2D texture) : base(scene, name)
 	{
 		Texture = texture;
 		base.Width = texture.Width;

@@ -26,7 +26,7 @@ public class ClubLoungeDancerANPC : SpineNPC<ClubLoungeDancerANPC.EHeads, ClubLo
 	public ClubLoungeDancerANPC(IAmorous game)
 		: base(game, "Assets/NPC/ClubLoungeStatic/Dancer A", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("animation");
+		base.Skeleton.StartAnimationWithLooping("animation");
 		AddEmotion(EHeads.Smirk, "Ear", "Eye back", "Fringe", "Head", "Pupil");
 		AddPose(EPoses.Dancing, "Arms", "Body", "Breast", "Leg left", "Leg right", "Tail base", "Tail head", "Tail head jaw", "Tail head tongue tip");
 		AddClothes(EPoses.Dancing, EClothes.Shirt, "Shirt").AsShirt().AsNudes();

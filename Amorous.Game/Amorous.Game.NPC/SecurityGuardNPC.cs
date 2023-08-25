@@ -26,8 +26,7 @@ public class SecurityGuardNPC : LayerNPC<SecurityGuardNPC.EHeads, SecurityGuardN
 	public static string Name = "Alexis Pryde";
 	public static Color Color = new Color(17, 178, 105);
 
-	public SecurityGuardNPC(IAmorous game)
-		: base(game, "Assets/NPC/SecurityGuard", 1f)
+	public SecurityGuardNPC(IAmorous game) : base(game, "Assets/NPC/SecurityGuard", 1f)
 	{
 		Width = 452;
 		Height = 945;

@@ -4,25 +4,25 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class NPCLayer : AbstractLayer
 { // _3IHp43rpkJgOBcY9lrIrwMuwWve
-	public const string Prefix = "NPCLayer_";
+	public const string PREFIX = "NPCLayer_";
 
 	public AbstractNPC NPC;
 	public LayerOrder Layer;
 
-	private Cutscene _cutscene;
-	private Action _change;
+	private Cutscene cutscene;
+	private Action change;
 
 	public Action CutsceneChange
 	{
 		set
 		{
-			_change = value;
-			_change?.Invoke();
+			change = value;
+			change?.Invoke();
 		}
 	}
 
 	public NPCLayer(AbstractScene scene, AbstractNPC npc, LayerOrder order)
-		: base(scene, Prefix + npc.GetType().Name)
+		: base(scene, PREFIX + npc.GetType().Name)
 	{
 		NPC = npc;
 		Layer = order;
@@ -30,13 +30,13 @@ public class NPCLayer : AbstractLayer
 
 	public override void Update(GameTime gameTime)
 	{
-		if (_change != null)
+		if (change != null)
 		{
-			if (_cutscene != null && base.Scene.Game.Cutscene == null)
+			if (cutscene != null && base.Scene.Game.Cutscene == null)
 			{
-				_change();
+				change();
 			}
-			_cutscene = base.Scene.Game.Cutscene;
+			cutscene = base.Scene.Game.Cutscene;
 		}
 		NPC.Update(gameTime);
 	}

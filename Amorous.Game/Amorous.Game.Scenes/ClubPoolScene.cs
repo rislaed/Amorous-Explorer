@@ -10,26 +10,26 @@ public class ClubPoolScene : AbstractScene
 {
 	private class FrameAnimationLayer : DrawableLayer
 	{
-		private readonly Texture2D _animationTexture;
-		private Rectangle _destinationRectangle;
-		private Rectangle _sourceRectangle;
-		private readonly Vector2 _origin;
-		private readonly float _timePerFrame;
-		private readonly int _numberOfFrames;
-		private int _currentFrame;
-		private float _angle;
-		private float _time;
+		private readonly Texture2D texture;
+		private Rectangle destinationRectangle;
+		private Rectangle sourceRectangle;
+		private readonly Vector2 origin;
+		private readonly float ticksPerFrame;
+		private readonly int numberOfFrames;
+		private int currentFrame;
+		private float rotation;
+		private float ticks;
 
 		public FrameAnimationLayer(AbstractScene scene, string texture, float time, int frames, int dx, int dy, float scale)
 			: base(scene, "FrameAnimationLayer")
 		{
-			_animationTexture = scene.Game.Content.Load<Texture2D>(texture);
-			_timePerFrame = time / (float)frames;
-			_numberOfFrames = frames;
-			_currentFrame = 0;
-			_sourceRectangle = new Rectangle(0, 0, (int)((float)_animationTexture.Width / (float)frames), _animationTexture.Height);
-			_destinationRectangle = new Rectangle(0, 0, (int)((float)_sourceRectangle.Width * scale), (int)((float)_sourceRectangle.Height * scale));
-			_origin = new Vector2(dx, dy);
+			this.texture = scene.Game.Content.Load<Texture2D>(texture);
+			ticksPerFrame = time / (float)frames;
+			numberOfFrames = frames;
+			currentFrame = 0;
+            sourceRectangle = new Rectangle(0, 0, (int)((float)this.texture.Width / (float)frames), this.texture.Height);
+			destinationRectangle = new Rectangle(0, 0, (int)((float)sourceRectangle.Width * scale), (int)((float)sourceRectangle.Height * scale));
+			origin = new Vector2(dx, dy);
 			base.OnUpdate = delegate(GameTime time)
 			{
 				MyUpdate((float)time.ElapsedGameTime.Milliseconds / 1000f);
@@ -39,49 +39,48 @@ public class ClubPoolScene : AbstractScene
 
 		public void Play(int x, int y, int startFrame, float angle)
 		{
-			_destinationRectangle.X = x;
-			_destinationRectangle.Y = y;
-			_currentFrame = startFrame;
-			_angle = MathHelper.ToRadians(angle);
+			destinationRectangle.X = x;
+			destinationRectangle.Y = y;
+			currentFrame = startFrame;
+			rotation = MathHelper.ToRadians(angle);
 		}
 
 		private void MyUpdate(float deltaTime)
 		{
-			if (_currentFrame >= 0)
+			if (currentFrame >= 0)
 			{
-				_time += deltaTime;
-				while (_time > _timePerFrame)
+				ticks += deltaTime;
+				while (ticks > ticksPerFrame)
 				{
-					_time -= _timePerFrame;
-					_currentFrame++;
+					ticks -= ticksPerFrame;
+					currentFrame++;
 				}
-				if (_currentFrame < _numberOfFrames)
+				if (currentFrame < numberOfFrames)
 				{
-					_sourceRectangle.X = _currentFrame * _sourceRectangle.Width;
+					sourceRectangle.X = currentFrame * sourceRectangle.Width;
 				}
 				else
 				{
-					_currentFrame = 0;
+					currentFrame = 0;
 				}
 			}
 		}
 
 		private void MyDraw(SpriteBatch spriteBatch)
 		{
-			if (_currentFrame >= 0)
+			if (currentFrame >= 0)
 			{
-				spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, base.DrawableMatrix);
-				spriteBatch.Draw(_animationTexture, _destinationRectangle, _sourceRectangle, Color.White, _angle, _origin, SpriteEffects.None, 0f);
+				spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, base.Matrix);
+				spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White, rotation, origin, SpriteEffects.None, 0f);
 				spriteBatch.End();
 			}
 		}
 	}
 
-	private ClubStaticRemyNPC _remy;
-	private readonly bool _showRemy;
+	private ClubStaticRemyNPC remy;
+	private readonly bool showRemy;
 
-	public ClubPoolScene(IAmorous game)
-		: base(game)
+	public ClubPoolScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/ClubPool/Club Pool main", -1677, 0);
 		AddClickableLayer("Door", "Assets/Scenes/ClubPool/Pool door selectable", -691, 0, OnDoorClick);
@@ -97,13 +96,13 @@ public class ClubPoolScene : AbstractScene
 		showerRightLayer.Play(-1170, 200, 2, 10f);
 		AddLayer(showerLeftLayer, 2);
 		AddLayer(showerRightLayer, 2);
-		AddForegroundSpriteLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
-		AddForegroundSpriteLayer("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
+		AddSpriteLayerAbove("Foreground", "Assets/Scenes/ClubPool/Club Pool top", -1677, 0);
+		AddSpriteLayerAbove("Foreground", "Assets/Scenes/ClubPool/Club Pool railing", 2041, 351);
 		Game.Canvas.SetOverscroll(-1677, 1677, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showRemy = !data.GetFlag(AmorousData.RemyLeftClub);
-		if (_showRemy)
+		showRemy = !data.HasFlag(AmorousData.RemyLeftClub);
+		if (showRemy)
 		{
 			AddSpriteLayer("Shadow", "Assets/Scenes/ClubPool/ShadowRemy", 995, 517);
 		}
@@ -145,12 +144,12 @@ public class ClubPoolScene : AbstractScene
 		clubPoolStaticDNPC2.PoolOffset = clubPoolStaticDNPC.PoolOffset;
 		clubPoolStaticDNPC2.X = clubPoolStaticDNPC.X;
 		clubPoolStaticDNPC2.Y = clubPoolStaticDNPC.Y;
-		if (_showRemy)
+		if (showRemy)
 		{
-			_remy = base.Game.GetNPCLayerAt<ClubStaticRemyNPC>(LayerOrder.Foreground);
-			_remy.X = 1010f;
-			_remy.Y = 150f;
-			_remy.Click = OnRemyClick;
+			remy = base.Game.GetNPCLayerAt<ClubStaticRemyNPC>(LayerOrder.Foreground);
+			remy.X = 1010f;
+			remy.Y = 150f;
+			remy.Click = OnRemyClick;
 		}
 		ClubPoolStaticJKNPC clubPoolStaticJKNPC = base.Game.GetNPCLayerAt<ClubPoolStaticJKNPC>(LayerOrder.Foreground);
 		clubPoolStaticJKNPC.X = 1269f;

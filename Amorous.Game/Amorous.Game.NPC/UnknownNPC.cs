@@ -23,6 +23,5 @@ public class UnknownNPC : LayerNPC<UnknownNPC.EHeads, UnknownNPC.EPoses, Unknown
 	public static string Name = "Unknown";
 	public static Color Color = new Color(255, 0, 255);
 
-	public UnknownNPC(IAmorous game)
-		: base(game, string.Empty, 1f) {}
+	public UnknownNPC(IAmorous game) : base(game, string.Empty, 1f) {}
 }

@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 
 public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 { // _1vmNfnjLnh2B8rqPJN4xqYr1vnC
-	private AbstractNPC _npc;
+	private AbstractNPC instance;
 
 	public string NPC { get; private set; }
 	public string Location { get; private set; }
@@ -15,8 +15,7 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 	public string Pose { get; private set; }
 	public string[] Clothes { get; private set; }
 
-	public SpawnNPCEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public SpawnNPCEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(SpawnNPCEventData eventData)
 	{
@@ -34,15 +33,15 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 	{
 		base.Start();
 		LayerOrder order = ((!Enum.TryParse<LayerOrder>(Layer, out order)) ? LayerOrder.Background : order);
-		_npc = base.Cutscene.Game.GetNPCLayerAt(NPC, order);
-		if (_npc == null)
+		instance = base.Cutscene.Game.GetNPCLayerAt(NPC, order);
+		if (instance == null)
 		{
 			return;
 		}
-		_npc.InTalking = true;
-		if (_npc.Variations != null)
+		instance.LockedOnScreen = true;
+		if (instance.Variations != null)
 		{
-			Type[] variations = _npc.Variations;
+			Type[] variations = instance.Variations;
 			foreach (Type type in variations)
 			{
 				AbstractNPC npc = base.Cutscene.Game.GetNPCLayer(type.Name);
@@ -71,22 +70,22 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 		}
 		if (!Enum.TryParse<NPCLocation>(Location, out var location))
 		{
-			location = ((_npc.Location == NPCLocation.None) ? NPCLocation.Middle : _npc.Location);
+			location = ((instance.Location == NPCLocation.None) ? NPCLocation.Middle : instance.Location);
 			AbstractNPC npc = base.Cutscene.Game.GetNPCLayer(location);
-			if (npc != null && npc != _npc)
+			if (npc != null && npc != instance)
 			{
 				npc.Reset();
 			}
-			_npc.Apply(location, Head, Pose, Clothes);
+			instance.Apply(location, Head, Pose, Clothes);
 		}
 		else if (location != 0)
 		{
 			AbstractNPC npc = base.Cutscene.Game.GetNPCLayer(location);
-			if (npc != null && npc != _npc)
+			if (npc != null && npc != instance)
 			{
 				npc.Reset();
 			}
-			_npc.Apply(location, Head, Pose, Clothes);
+			instance.Apply(location, Head, Pose, Clothes);
 			NPCLayer layer = base.Cutscene.Game.Scene.GetNPCLayer(NPC);
 			switch (location)
 			{
@@ -101,12 +100,12 @@ public class SpawnNPCEvent : AbstractEvent<SpawnNPCEventData>
 		}
 		else
 		{
-			_npc.Reset();
+			instance.Reset();
 		}
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = _npc == null || !_npc.IsRefreshing;
+		base.IsCompleted = instance == null || !instance.IsRefreshing;
 	}
 }

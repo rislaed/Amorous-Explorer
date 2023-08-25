@@ -24,8 +24,7 @@ public class PlaceholderNPC : LayerNPC<PlaceholderNPC.EHeads, PlaceholderNPC.EPo
 	public static string Name = "Placeholder";
 	public static Color Color = new Color(255, 0, 255);
 
-	public PlaceholderNPC(IAmorous game)
-		: base(game, "Assets/NPC/Placeholder", 1f)
+	public PlaceholderNPC(IAmorous game) : base(game, "Assets/NPC/Placeholder", 1f)
 	{
 		AddPose(EPoses.Placeholder, "Placeholder");
 	}

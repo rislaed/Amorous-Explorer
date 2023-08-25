@@ -12,20 +12,19 @@ public class FadingLayer : AbstractLayer
 		Delay
 	}
 
-	private float _alpha;
-	private float _fadingOut;
-	private float _fadingIn;
-	private int _ticks;
-	private int _timeBetweenFade;
-	private FadingStep _step;
+	private float alpha;
+	private float fadingOut;
+	private float fadingIn;
+	private int ticks;
+	private int timeBetweenFade;
+	private FadingStep step;
 
 	public Texture2D Texture { get; private set; }
 	public int TimePerFade { get; set; }
 	public int Offset { get; set; }
 	public int Delay { get; set; }
 
-	public FadingLayer(AbstractScene scene, string name, Texture2D texture, int timePerFade, int offset, int delay)
-		: base(scene, name)
+	public FadingLayer(AbstractScene scene, string name, Texture2D texture, int timePerFade, int offset, int delay) : base(scene, name)
 	{
 		if (timePerFade == 0)
 		{
@@ -37,53 +36,53 @@ public class FadingLayer : AbstractLayer
 		TimePerFade = timePerFade;
 		Offset = offset;
 		Delay = delay;
-		_step = FadingStep.Delay;
+		step = FadingStep.Delay;
 		RefreshFading();
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		_ticks -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_ticks <= 0)
+		ticks -= gameTime.ElapsedGameTime.Milliseconds;
+		if (ticks <= 0)
 		{
 			RefreshFading();
 		}
-		float amount = (float)_ticks / (float)_timeBetweenFade;
-		_alpha = MathHelper.Lerp(_fadingIn, _fadingOut, amount);
+		float amount = (float)ticks / (float)timeBetweenFade;
+		alpha = MathHelper.Lerp(fadingIn, fadingOut, amount);
 	}
 
 	private void RefreshFading()
 	{
-		switch (_step)
+		switch (step)
 		{
 			case FadingStep.Offset:
-				_fadingOut = 0f;
-				_fadingIn = 1f;
-				_step = FadingStep.FadeIn;
-				_timeBetweenFade = TimePerFade / 2;
+				fadingOut = 0f;
+				fadingIn = 1f;
+				step = FadingStep.FadeIn;
+				timeBetweenFade = TimePerFade / 2;
 				break;
 			case FadingStep.FadeIn:
-				_fadingOut = 1f;
-				_fadingIn = 0f;
-				_step = FadingStep.FadeOut;
-				_timeBetweenFade = TimePerFade / 2;
+				fadingOut = 1f;
+				fadingIn = 0f;
+				step = FadingStep.FadeOut;
+				timeBetweenFade = TimePerFade / 2;
 				break;
 			case FadingStep.FadeOut:
-				_fadingOut = 0f;
-				_fadingIn = 0f;
-				_step = FadingStep.Delay;
-				_timeBetweenFade = Delay;
+				fadingOut = 0f;
+				fadingIn = 0f;
+				step = FadingStep.Delay;
+				timeBetweenFade = Delay;
 				break;
 			case FadingStep.Delay:
-				_fadingOut = 0f;
-				_fadingIn = 0f;
-				_step = FadingStep.Offset;
-				_timeBetweenFade = Offset;
+				fadingOut = 0f;
+				fadingIn = 0f;
+				step = FadingStep.Offset;
+				timeBetweenFade = Offset;
 				break;
 		}
-		_alpha = _fadingOut;
-		_ticks = _timeBetweenFade;
-		if (_ticks == 0)
+		alpha = fadingOut;
+		ticks = timeBetweenFade;
+		if (ticks == 0)
 		{
 			RefreshFading();
 		}
@@ -91,7 +90,7 @@ public class FadingLayer : AbstractLayer
 
 	public override void Draw(SpriteBatch spriteBatch)
 	{
-		Color.A = (byte)(_alpha * 255f);
+		Color.A = (byte)(alpha * 255f);
 		if (Color.A != 0)
 		{
 			spriteBatch.Draw(Texture, Location, null, Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);

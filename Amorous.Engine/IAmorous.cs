@@ -18,9 +18,9 @@ public interface IAmorous
 	InteractableOverlay Overlay { get; }
 	IAchievements Achievements { get; }
 	bool IsFullscreen { get; }
-	bool InPendingScene { get; }
+	bool IsScenePending { get; }
 	bool IsRenderingCursor { get; set; }
-	bool IsControlsOnScreen { get; }
+	bool IsShowingControls { get; }
 	void Initialize();
 	void LoadContent();
 	void UnloadContent();

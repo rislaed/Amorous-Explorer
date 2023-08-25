@@ -48,8 +48,8 @@ public class InteractableOverlay
 		{
 			hoveredTexture = Game.Content.Load<Texture2D>(hoveredSprite);
 		}
-		SpriteFont _font = Game.Content.Load<SpriteFont>(font);
-		return AddButtonInteractable(texture, hoveredTexture, _font, text, color, x, y, bounds, click);
+		SpriteFont spriteFont = Game.Content.Load<SpriteFont>(font);
+		return AddButtonInteractable(texture, hoveredTexture, spriteFont, text, color, x, y, bounds, click);
 	}
 
 	public ButtonInteractable AddButtonInteractable(Texture2D sprite, Texture2D hoveredSprite, SpriteFont font, string text, Color color, int x, int y, Microsoft.Xna.Framework.Rectangle bounds, Action click)
@@ -66,8 +66,8 @@ public class InteractableOverlay
 
 	public TextInteractable AddTextInteractable(string font, string text, Alignment gravity, Color color, int x, int y)
 	{
-		SpriteFont _font = Game.Content.Load<SpriteFont>(font);
-		TextInteractable interactable = new TextInteractable(_font, text, color)
+		SpriteFont spriteFont = Game.Content.Load<SpriteFont>(font);
+		TextInteractable interactable = new TextInteractable(spriteFont, text, color)
 		{
 			X = x,
 			Y = y,
@@ -86,16 +86,16 @@ public class InteractableOverlay
 		Microsoft.Xna.Framework.Point point = Game.Canvas.GlobalToContent(Game.Controller.Cursor);
 		foreach (AbstractInteractable interactable in Interactables)
 		{
-			if (interactable.Visible)
+			if (interactable.IsVisible)
 			{
 				bool innersection = interactable.Bounds.Contains(point);
-				if (!interactable.Hovered && innersection)
+				if (!interactable.IsHovered && innersection)
 				{
-					interactable.Hover();
+					interactable.Enter();
 				}
-				else if (interactable.Hovered && !innersection)
+				else if (interactable.IsHovered && !innersection)
 				{
-					interactable.Unhover();
+					interactable.Leave();
 				}
 			}
 		}
@@ -105,7 +105,7 @@ public class InteractableOverlay
 		}
 		foreach (AbstractInteractable interactable in Interactables)
 		{
-			if (interactable.Visible && interactable.Bounds.Contains(point))
+			if (interactable.IsVisible && interactable.Bounds.Contains(point))
 			{
 				interactable.Click();
 			}
@@ -117,7 +117,7 @@ public class InteractableOverlay
 		spriteBatch.Begin();
 		foreach (AbstractInteractable interactable in Interactables)
 		{
-			if (interactable.Visible)
+			if (interactable.IsVisible)
 			{
 				interactable.Draw(spriteBatch);
 			}

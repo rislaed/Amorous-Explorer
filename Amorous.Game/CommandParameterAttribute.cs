@@ -1,7 +1,7 @@
 using System;
 
 [AttributeUsage(AttributeTargets.Class)]
-public class CommandParameter : Attribute
+public class CommandParameterAttribute : Attribute
 { // _cHVuWjDON6rywwdWoqHCMj9ZKR
 	public string Key { get; set; }
 	public string Name { get; set; }

@@ -32,7 +32,7 @@ public class ClubDJNPC : SpineNPC<ClubDJNPC.EHeads, ClubDJNPC.EPoses, ClubDJNPC.
 	{
 		Width = 400;
 		Height = 600;
-		base.Spine.StartAnimationWithLooping("Dance A");
+		base.Skeleton.StartAnimationWithLooping("Dance A");
 		AddEmotion(EHeads.Smirk, "Ears", "Head");
 		AddPose(EPoses.Dancing, "Arm right", "Body");
 		AddClothes(EPoses.Dancing, EClothes.Shirt, "Shirt").AsShirt().AsNudes();

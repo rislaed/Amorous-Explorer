@@ -4,18 +4,18 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class ClickableLayer : AbstractLayer
 { // _z20t8IpBINiJtljSeTIkNoKUOkx
-	private bool _hovered;
-	private readonly Action _click;
+	private bool hovered;
+	private readonly Action click;
 
 	public Texture2D Texture { get; private set; }
 
-	public ClickableLayer(AbstractScene scene, string name, Texture2D texture2D, Action click)
+	public ClickableLayer(AbstractScene scene, string name, Texture2D texture2D, Action action)
 		: base(scene, name)
 	{
 		Texture = texture2D;
 		base.Width = texture2D.Width;
 		base.Height = texture2D.Height;
-		_click = click;
+		click = action;
 	}
 
 	public override void Update(GameTime gameTime) {}
@@ -24,24 +24,24 @@ public class ClickableLayer : AbstractLayer
 	{
 		if (Color.A != 0)
 		{
-			spriteBatch.Draw(Texture, Location, null, (!_hovered) ? Color : Color.Red, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+			spriteBatch.Draw(Texture, Location, null, (!hovered) ? Color : Color.Red, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 		}
 	}
 
 	public override bool Click()
 	{
-		_hovered = false;
-		_click();
+		hovered = false;
+		click();
 		return true;
 	}
 
-	public override void Hover()
+	public override void Enter()
 	{
-		_hovered = true;
+		hovered = true;
 	}
 
-	public override void Unhover()
+	public override void Leave()
 	{
-		_hovered = false;
+		hovered = false;
 	}
 }

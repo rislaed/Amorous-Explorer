@@ -41,7 +41,7 @@ public class LexNPC : SpineNPC<LexNPC.EHeads, LexNPC.EPoses, LexNPC.EClothes>
 	public LexNPC(IAmorous game)
 		: base(game, "Assets/NPC/Lex/Lex", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("animation");
+		base.Skeleton.StartAnimationWithLooping("animation");
 		string[] first = new string[5] { "Fringe", "Hair back", "Pupils", "Eyes back", "Ear" };
 		AddEmotion(EHeads.Happy, first.Union(new string[1] { "Head happy" }).ToArray()).WithBlinking("Blink");
 		AddEmotion(EHeads.Angry, first.Union(new string[1] { "Head angry" }).ToArray()).WithBlinking("Blink");
@@ -55,10 +55,10 @@ public class LexNPC : SpineNPC<LexNPC.EHeads, LexNPC.EPoses, LexNPC.EClothes>
 		AddClothes(EPoses.Gesture, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket").AsShirt();
 		AddClothes(EPoses.GestureDrink, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket").AsShirt();
 		AddClothes(EPoses.GestureSigaret, EClothes.Jacket, "Jacket", "Shoulder gesture jacket", "Forearm gesture jacket").AsShirt();
-		AddClothes(EPoses.Neutral, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
-		AddClothes(EPoses.Gesture, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
-		AddClothes(EPoses.GestureDrink, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
-		AddClothes(EPoses.GestureSigaret, EClothes.Jeans, "Jeans").AsPants().AsCensoredPants();
+		AddClothes(EPoses.Neutral, EClothes.Jeans, "Jeans").AsPants().AsCensoringPants();
+		AddClothes(EPoses.Gesture, EClothes.Jeans, "Jeans").AsPants().AsCensoringPants();
+		AddClothes(EPoses.GestureDrink, EClothes.Jeans, "Jeans").AsPants().AsCensoringPants();
+		AddClothes(EPoses.GestureSigaret, EClothes.Jeans, "Jeans").AsPants().AsCensoringPants();
 		AddClothes(EPoses.Neutral, EClothes.Panties, "Panties").AsPants();
 		AddClothes(EPoses.Gesture, EClothes.Panties, "Panties").AsPants();
 		AddClothes(EPoses.GestureDrink, EClothes.Panties, "Panties").AsPants();
@@ -75,8 +75,8 @@ public class LexNPC : SpineNPC<LexNPC.EHeads, LexNPC.EPoses, LexNPC.EClothes>
 		AddClothes(EPoses.Gesture, EClothes.DickHard, "Male balls", "Male dick hard");
 		AddClothes(EPoses.GestureDrink, EClothes.DickHard, "Male balls", "Male dick hard");
 		AddClothes(EPoses.GestureSigaret, EClothes.DickHard, "Male balls", "Male dick hard");
-		base.Spine.OverlayWith("Male dick soft", "Jacket");
-		base.Spine.OverlayWith("Male dick hard", "Male dick soft");
+		base.Skeleton.OverlayWith("Male dick soft", "Jacket");
+		base.Skeleton.OverlayWith("Male dick hard", "Male dick soft");
 		NudesBehindShirt = false;
 		NudesBehindPants = true;
 	}

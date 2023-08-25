@@ -4,9 +4,9 @@ using Squid;
 
 public class TextInteractable : AbstractInteractable
 { // _abqs0UynzjUEhuA3VpR4t6Uuk0E
-	private string _text;
-	private Vector2 _bounds;
-	private Vector2 _location;
+	private string text;
+	private Vector2 bounds;
+	private Vector2 location;
 
 	public SpriteFont Font { get; private set; }
 
@@ -14,18 +14,18 @@ public class TextInteractable : AbstractInteractable
 	{
 		get
 		{
-			return _text;
+			return text;
 		}
 		set
 		{
-			_text = value;
-			if (string.IsNullOrEmpty(_text))
+			text = value;
+			if (string.IsNullOrEmpty(text))
 			{
-				_bounds = Vector2.Zero;
+				bounds = Vector2.Zero;
 			}
 			else
 			{
-				_bounds = Font.MeasureString(_text);
+				bounds = Font.MeasureString(text);
 			}
 		}
 	}
@@ -48,19 +48,19 @@ public class TextInteractable : AbstractInteractable
 			switch (Gravity)
 			{
 				case Alignment.MiddleRight:
-					_location.X = (float)base.X - _bounds.X;
-					_location.Y = (float)base.Y + ((float)Bounds.Height - _bounds.Y) / 2f;
+					location.X = (float)base.X - bounds.X;
+					location.Y = (float)base.Y + ((float)Bounds.Height - bounds.Y) / 2f;
 					break;
 				default:
-					_location.X = (float)base.X + ((float)Bounds.Width - _bounds.X) / 2f;
-					_location.Y = (float)base.Y + ((float)Bounds.Height - _bounds.Y) / 2f;
+					location.X = (float)base.X + ((float)Bounds.Width - bounds.X) / 2f;
+					location.Y = (float)base.Y + ((float)Bounds.Height - bounds.Y) / 2f;
 					break;
 				case Alignment.MiddleLeft:
-					_location.X = base.X;
-					_location.Y = (float)base.Y + ((float)Bounds.Height - _bounds.Y) / 2f;
+					location.X = base.X;
+					location.Y = (float)base.Y + ((float)Bounds.Height - bounds.Y) / 2f;
 					break;
 			}
-			spriteBatch.DrawString(Font, Text, _location, Color);
+			spriteBatch.DrawString(Font, Text, location, Color);
 		}
 	}
 }

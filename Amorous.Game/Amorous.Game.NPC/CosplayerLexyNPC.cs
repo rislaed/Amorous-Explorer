@@ -25,8 +25,7 @@ public class CosplayerLexyNPC : LayerNPC<CosplayerLexyNPC.EHeads, CosplayerLexyN
 	public static string Name = "Lexy";
 	public static Color Color = new Color(60, 128, 241);
 
-	public CosplayerLexyNPC(IAmorous game)
-		: base(game, "Assets/NPC/CosplayerLexy", 1f)
+	public CosplayerLexyNPC(IAmorous game) : base(game, "Assets/NPC/CosplayerLexy", 1f)
 	{
 		AddPose(EPoses.Standing, "Lexy Cosplayer (nude)").AddNudes("Lexy Cosplayer (fringe for nude)");
 		AddClothes(EPoses.Standing, EClothes.Costume, "Lexy Cosplayer (clothed)").AsShirt().AsPants().AsCloth();

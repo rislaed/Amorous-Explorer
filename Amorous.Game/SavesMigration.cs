@@ -2,7 +2,7 @@ using Amorous.Game.Scenes;
 
 public static class SavesMigration
 { // _9gbCIL8lNtgBPuVMJ6pA7rCsMoT
-	public const int CurrentlyVersion = 5;
+	public const int CURRENTLY_VERSION = 5;
 
 	private const string PrologueDone = "PrologueDone";
 
@@ -10,7 +10,7 @@ public static class SavesMigration
 	{
 		if (save.Version == 0)
 		{
-			if (save.PlayerData.GetState(AmorousData.Prologue) >= AmorousData.PhoneAllowedState)
+			if (save.PlayerData.GetStage(AmorousData.Prologue) >= AmorousData.PhoneAllowedState)
 			{
 				save.PhoneEnabled = true;
 			}
@@ -18,16 +18,16 @@ public static class SavesMigration
 		}
 		if (save.Version == 1)
 		{
-			if (save.PlayerData.GetFlag(PrologueDone))
+			if (save.PlayerData.HasFlag(PrologueDone))
 			{
-				save.PlayerData.SetStage(AmorousData.Prologue, AmorousData.PrologueStateCompleted);
+				save.PlayerData.InsertStage(AmorousData.Prologue, AmorousData.PrologueStateCompleted);
 			}
 			save.Version = 2;
 		}
 		if (save.Version == 2)
 		{
 			save.PlayerData.Remove("Player.Gender");
-			save.PlayerData.SetStage(AmorousData.Gender, 10);
+			save.PlayerData.InsertStage(AmorousData.Gender, 10);
 			save.Version = 3;
 		}
 		if (save.Version == 3)
@@ -37,13 +37,13 @@ public static class SavesMigration
 		if (save.Version == 4)
 		{
 			save.CutsceneState = null;
-			save.Version = CurrentlyVersion;
+			save.Version = CURRENTLY_VERSION;
 		}
 	}
 
 	public static bool StartMigration(IAmorous game, SaveData save)
 	{
-		if (save.PlayerData.GetState(AmorousData.Prologue) == 30 && save.PlayerData.GetState(AmorousData.Gender) == 10)
+		if (save.PlayerData.GetStage(AmorousData.Prologue) == 30 && save.PlayerData.GetStage(AmorousData.Gender) == 10)
 		{
 			game.StartScene(new SaveMigrationScene(game, AmorousData.Gender, save.SceneName));
 			return true;

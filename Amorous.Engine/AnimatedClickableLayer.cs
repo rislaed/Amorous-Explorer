@@ -5,36 +5,36 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class AnimatedClickableLayer : AbstractLayer
 { // _rmc1e7Ng50C4uLmgllAoRtxaZiB
-	private int _index;
-	private int _ticks;
-	private bool _hovered;
-	private readonly Action _click;
+	private int texture;
+	private int ticksBeforeUpdating;
+	private bool hovered;
+	private readonly Action click;
 
 	public List<Texture2D> Textures { get; private set; }
-	public int TimePerFrame { get; private set; }
+	public int TicksPerFrame { get; private set; }
 
-	public AnimatedClickableLayer(AbstractScene scene, string name, Action click, int delay, List<Texture2D> textures)
+	public AnimatedClickableLayer(AbstractScene scene, string name, Action action, int delay, List<Texture2D> textures)
 		: base(scene, name)
 	{
 		Textures = textures;
 		base.Width = textures[0].Width;
 		base.Height = textures[0].Height;
-		TimePerFrame = delay;
-		_click = click;
-		_index = 0;
-		_ticks = TimePerFrame;
+		TicksPerFrame = delay;
+		click = action;
+		texture = 0;
+		ticksBeforeUpdating = TicksPerFrame;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		_ticks -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_ticks < 0)
+		ticksBeforeUpdating -= gameTime.ElapsedGameTime.Milliseconds;
+		if (ticksBeforeUpdating < 0)
 		{
-			_ticks = TimePerFrame;
-			_index++;
-			if (_index >= Textures.Count)
+			ticksBeforeUpdating = TicksPerFrame;
+			texture++;
+			if (texture >= Textures.Count)
 			{
-				_index = 0;
+				texture = 0;
 			}
 		}
 	}
@@ -43,23 +43,23 @@ public class AnimatedClickableLayer : AbstractLayer
 	{
 		if (Color.A != 0)
 		{
-			spriteBatch.Draw(Textures[_index], Location, null, _hovered ? Color.Red : Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+			spriteBatch.Draw(Textures[texture], Location, null, hovered ? Color.Red : Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 		}
 	}
 
 	public override bool Click()
 	{
-		_click();
+		click();
 		return true;
 	}
 
-	public override void Hover()
+	public override void Enter()
 	{
-		_hovered = true;
+		hovered = true;
 	}
 
-	public override void Unhover()
+	public override void Leave()
 	{
-		_hovered = false;
+		hovered = false;
 	}
 }

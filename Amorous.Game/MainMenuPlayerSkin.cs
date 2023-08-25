@@ -1,48 +1,47 @@
 public class MainMenuPlayerSkin : AbstractPlayerOverlay
 { // _hiwkgwXJpRLUFatcgZFfH6ECNfm
-	private static SpriteLayer _bicep, _bicepStripe, _nails, _hand, _handColor, _forearm,
-								 _forearmColorLong, _forearmColorShort, _forearmStripes,
-								 _forearmAvian, _bicepAvian, _handAvian;
+	private static SpriteLayer bicepLayer, bicepStripeLayer, nailsLayer, handlayer, handColorLayer, forearmLayer,
+							   forearmColorLongLayer, forearmColorShortLayer, forearmStripesLayer,
+							   forearmAvianLayer, bicepAvianLayer, handAvianLayer;
 
-	public MainMenuPlayerSkin(IAmorous game)
-		: base(game)
+	public MainMenuPlayerSkin(IAmorous game) : base(game)
 	{
-		_bicep = NewSpriteLayer("Bicep", "Assets/Scenes/MainMenu/Bicep", -240, -135);
-		_nails = NewSpriteLayer("Nails", "Assets/Scenes/MainMenu/Nails", -240, -135);
-		_hand = NewSpriteLayer("Hand", "Assets/Scenes/MainMenu/Hand", -240, -135);
-		_forearm = NewSpriteLayer("Forearm", "Assets/Scenes/MainMenu/Forearm", -240, -135);
-		_bicepStripe = NewSpriteLayer("Bicep Stripe", "Assets/Scenes/MainMenu/Stripe bicep", -240, -135);
-		_handColor = NewSpriteLayer("Hand Color", "Assets/Scenes/MainMenu/Marking long or short hand", -240, -135);
-		_forearmColorLong = NewSpriteLayer("Forearm Color Long", "Assets/Scenes/MainMenu/Marking long forearm", -240, -135);
-		_forearmColorShort = NewSpriteLayer("Forearm Color Short", "Assets/Scenes/MainMenu/Marking short forearm", -240, -135);
-		_forearmStripes = NewSpriteLayer("Forearm Stripes", "Assets/Scenes/MainMenu/Stripe forearm", -240, -135);
-		_forearmAvian = NewSpriteLayer("Forearm Avian", "Assets/Scenes/MainMenu/Avian forearm", -240, -135);
-		_bicepAvian = NewSpriteLayer("Bicep Avian", "Assets/Scenes/MainMenu/Avian bicep", -240, -135);
-		_handAvian = NewSpriteLayer("Hand Avian", "Assets/Scenes/MainMenu/Avian hand", -240, -135);
+		bicepLayer = AddSpriteLayer("Bicep", "Assets/Scenes/MainMenu/Bicep", -240, -135);
+		nailsLayer = AddSpriteLayer("Nails", "Assets/Scenes/MainMenu/Nails", -240, -135);
+		handlayer = AddSpriteLayer("Hand", "Assets/Scenes/MainMenu/Hand", -240, -135);
+		forearmLayer = AddSpriteLayer("Forearm", "Assets/Scenes/MainMenu/Forearm", -240, -135);
+		bicepStripeLayer = AddSpriteLayer("Bicep Stripe", "Assets/Scenes/MainMenu/Stripe bicep", -240, -135);
+		handColorLayer = AddSpriteLayer("Hand Color", "Assets/Scenes/MainMenu/Marking long or short hand", -240, -135);
+		forearmColorLongLayer = AddSpriteLayer("Forearm Color Long", "Assets/Scenes/MainMenu/Marking long forearm", -240, -135);
+		forearmColorShortLayer = AddSpriteLayer("Forearm Color Short", "Assets/Scenes/MainMenu/Marking short forearm", -240, -135);
+		forearmStripesLayer = AddSpriteLayer("Forearm Stripes", "Assets/Scenes/MainMenu/Stripe forearm", -240, -135);
+		forearmAvianLayer = AddSpriteLayer("Forearm Avian", "Assets/Scenes/MainMenu/Avian forearm", -240, -135);
+		bicepAvianLayer = AddSpriteLayer("Bicep Avian", "Assets/Scenes/MainMenu/Avian bicep", -240, -135);
+		handAvianLayer = AddSpriteLayer("Hand Avian", "Assets/Scenes/MainMenu/Avian hand", -240, -135);
 	}
 
 	public override void Initialize(PlayerData data)
 	{
-		_bicep.Color = data.BodyColor;
-		_nails.Color = data.NailColor;
-		_nails.Visible = data.ShowNails;
-		_hand.Color = data.BodyColor;
-		_forearm.Color = data.BodyColor;
-		_bicepStripe.Color = data.StripesColor;
-		_bicepStripe.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes);
-		_handColor.Color = data.LongForearmColor;
-		_handColor.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
-		_forearmColorLong.Color = data.LongForearmColor;
-		_forearmColorLong.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
-		_forearmColorShort.Color = data.ShortForearmColor;
-		_forearmColorShort.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm);
-		_forearmStripes.Color = data.StripesColor;
-		_forearmStripes.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes);
-		_forearmAvian.Color = data.AvianForearmColor;
-		_forearmAvian.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
-		_bicepAvian.Color = data.AvianForearmColor;
-		_bicepAvian.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
-		_handAvian.Color = data.AvianForearmColor;
-		_handAvian.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
+		bicepLayer.Color = data.BodyColor;
+		nailsLayer.Color = data.NailColor;
+		nailsLayer.Visible = data.ShowNails;
+		handlayer.Color = data.BodyColor;
+		forearmLayer.Color = data.BodyColor;
+		bicepStripeLayer.Color = data.StripesColor;
+		bicepStripeLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes);
+		handColorLayer.Color = data.LongForearmColor;
+		handColorLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
+		forearmColorLongLayer.Color = data.LongForearmColor;
+		forearmColorLongLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
+		forearmColorShortLayer.Color = data.ShortForearmColor;
+		forearmColorShortLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm);
+		forearmStripesLayer.Color = data.StripesColor;
+		forearmStripesLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes);
+		forearmAvianLayer.Color = data.AvianForearmColor;
+		forearmAvianLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
+		bicepAvianLayer.Color = data.AvianForearmColor;
+		bicepAvianLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
+		handAvianLayer.Color = data.AvianForearmColor;
+		handAvianLayer.Visible = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm);
 	}
 }

@@ -25,7 +25,7 @@ public class CoupleBNPC : SpineNPC<CoupleBNPC.EHeads, CoupleBNPC.EPoses, CoupleB
 	public CoupleBNPC(IAmorous game)
 		: base(game, "Assets/Scenes/Intro/Couple B", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("Waving");
+		base.Skeleton.StartAnimationWithLooping("Waving");
 		AddPose(EPoses.Waving, "Dark arm", "Characters right", "fem arms");
 		AddClothes(EPoses.Waving, EClothes.Shirt, "Shirts right").AsShirt();
 		AddClothes(EPoses.Waving, EClothes.Pants, "Pants right").AsPants();

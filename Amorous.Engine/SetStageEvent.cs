@@ -6,8 +6,7 @@ public class SetStageEvent : AbstractEvent<SetStageEventData>
 	public string Quest { get; private set; }
 	public int Stage { get; private set; }
 
-	public SetStageEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public SetStageEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(SetStageEventData eventData)
 	{
@@ -19,12 +18,12 @@ public class SetStageEvent : AbstractEvent<SetStageEventData>
 	public override void Start()
 	{
 		base.Start();
-		PlayerPreferences.GetPlayerData().SetStage(Quest, Stage);
-		base.Cutscene.Game.Achievements.SetStage(Quest, Stage);
+		PlayerPreferences.GetPlayerData().InsertStage(Quest, Stage);
+		base.Cutscene.Game.Achievements.InsertStage(Quest, Stage);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

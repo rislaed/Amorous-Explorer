@@ -3,17 +3,16 @@ using Microsoft.Xna.Framework;
 
 public class HideGameBoxEvent : AbstractEvent<HideGameBoxEventData>
 { // _aCLXRSujZOZcjoJX4ql0VFhmLJq
-	public HideGameBoxEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public HideGameBoxEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void Start()
 	{
 		base.Start();
-		PhoneOverlay.Get().HideGameBox();
+		PhoneOverlay.GetSingleton().HideGameBox();
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

@@ -2,7 +2,7 @@ using System;
 
 public static class Clocks
 { // _5Anqe6GAAkzemoAXYpJmgMlk1yz
-	private static int _hour, _minute;
+	private static int hour, minute;
 
 	public static bool InRealTime { get; set; }
 
@@ -14,11 +14,11 @@ public static class Clocks
 			{
 				return DateTime.Now.Hour;
 			}
-			return _hour;
+			return hour;
 		}
 		set
 		{
-			_hour = value % 24;
+			hour = value % 24;
 		}
 	}
 
@@ -30,11 +30,11 @@ public static class Clocks
 			{
 				return DateTime.Now.Minute;
 			}
-			return _minute;
+			return minute;
 		}
 		set
 		{
-			_minute = value % 60;
+			minute = value % 60;
 		}
 	}
 
@@ -79,9 +79,9 @@ public static class Clocks
 		}
 	}
 
-	public static void UpdateTime()
+	public static void Update()
 	{
-		_hour = DateTime.Now.Hour;
-		_minute = DateTime.Now.Minute;
+		hour = DateTime.Now.Hour;
+		minute = DateTime.Now.Minute;
 	}
 }

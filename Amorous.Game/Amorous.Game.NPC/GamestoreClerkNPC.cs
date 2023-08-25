@@ -26,8 +26,7 @@ public class GamestoreClerkNPC : LayerNPC<GamestoreClerkNPC.EHeads, GamestoreCle
 	public static string Name = "Game Store Clerk";
 	public static Color Color = new Color(252, 137, 76);
 
-	public GamestoreClerkNPC(IAmorous game)
-		: base(game, "Assets/NPC/GamestoreClerk", 1f)
+	public GamestoreClerkNPC(IAmorous game) : base(game, "Assets/NPC/GamestoreClerk", 1f)
 	{
 		AddPose(EPoses.Standing, "Kula Game Store Clerk (nude)");
 		AddClothes(EPoses.Standing, EClothes.Pants, "Kula Game Store Clerk (pants)").AsPants().AsCloth();

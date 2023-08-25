@@ -5,8 +5,7 @@ namespace Amorous.Engine.NPC;
 
 public abstract class SpineNPC<THead, TPose, TClothes> : AbstractSpineNPC where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
 {
-	protected SpineNPC(IAmorous game, string path, float scale = 1f, bool premultipliedAlpha = true)
-		: base(game, path, scale, premultipliedAlpha) {}
+	protected SpineNPC(IAmorous game, string path, float scale = 1f, bool premultipliedAlpha = true) : base(game, path, scale, premultipliedAlpha) {}
 
 	public FilterableEmotion AddEmotion(THead emotion, params string[] parts)
 	{

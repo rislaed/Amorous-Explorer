@@ -1,6 +1,6 @@
 public static class Censorship
 { // _iExD93IWLlzVfXsU9wyrEvWgJsg
-	private static bool _censored, _topless, _bottomless;
+	private static bool censored, topless, bottomless;
 
 	public static bool Booties { get; set; }
 
@@ -8,12 +8,12 @@ public static class Censorship
 	{
 		get
 		{
-			return _censored;
+			return censored;
 		}
 		set
 		{
-			_censored = value;
-			Options.Data.CheatsCensored = value;
+			censored = value;
+			Options.Config.CheatsCensored = value;
 			Options.Save();
 		}
 	}
@@ -22,12 +22,12 @@ public static class Censorship
 	{
 		get
 		{
-			return _topless;
+			return topless;
 		}
 		set
 		{
-			_topless = value;
-			Options.Data.CheatsTopless = value;
+			topless = value;
+			Options.Config.CheatsTopless = value;
 			Options.Save();
 		}
 	}
@@ -36,12 +36,12 @@ public static class Censorship
 	{
 		get
 		{
-			return _bottomless;
+			return bottomless;
 		}
 		set
 		{
-			_bottomless = value;
-			Options.Data.CheatsBottomless = value;
+			bottomless = value;
+			Options.Config.CheatsBottomless = value;
 			Options.Save();
 		}
 	}
@@ -51,15 +51,15 @@ public static class Censorship
 		Booties = enabled;
 		if (enabled)
 		{
-			_censored = Options.Data.CheatsCensored;
-			_topless = Options.Data.CheatsTopless;
-			_bottomless = Options.Data.CheatsBottomless;
+			censored = Options.Config.CheatsCensored;
+			topless = Options.Config.CheatsTopless;
+			bottomless = Options.Config.CheatsBottomless;
 		}
 		else
 		{
-			_censored = true;
-			_topless = false;
-			_bottomless = false;
+			censored = true;
+			topless = false;
+			bottomless = false;
 		}
 	}
 }

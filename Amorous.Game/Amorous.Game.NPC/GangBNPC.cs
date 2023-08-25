@@ -23,6 +23,5 @@ public class GangBNPC : LayerNPC<GangBNPC.EHeads, GangBNPC.EPoses, GangBNPC.EClo
 	public static string Name = "Taylor";
 	public static Color Color = new Color(103, 23, 183);
 
-	public GangBNPC(IAmorous game)
-		: base(game, string.Empty, 1f) {}
+	public GangBNPC(IAmorous game) : base(game, string.Empty, 1f) {}
 }

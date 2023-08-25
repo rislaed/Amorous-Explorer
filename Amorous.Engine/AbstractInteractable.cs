@@ -33,25 +33,25 @@ public abstract class AbstractInteractable
 		}
 	}
 
-	public bool Hovered { get; private set; }
-	public bool Visible { get; set; }
+	public bool IsHovered { get; private set; }
+	public bool IsVisible { get; set; }
 
 	protected AbstractInteractable()
 	{
 		Color = Color.White;
-		Visible = true;
+		IsVisible = true;
 	}
 
 	public abstract void Click();
 
-	public virtual void Hover()
+	public virtual void Enter()
 	{
-		Hovered = true;
+		IsHovered = true;
 	}
 
-	public virtual void Unhover()
+	public virtual void Leave()
 	{
-		Hovered = false;
+		IsHovered = false;
 	}
 
 	public abstract void Draw(SpriteBatch spriteBatch);

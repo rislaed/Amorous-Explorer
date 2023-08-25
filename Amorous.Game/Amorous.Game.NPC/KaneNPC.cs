@@ -27,8 +27,7 @@ public class KaneNPC : LayerNPC<KaneNPC.EHeads, KaneNPC.EPoses, KaneNPC.EClothes
 	public static string Name = "Kane";
 	public static Color Color = new Color(233, 193, 150);
 
-	public KaneNPC(IAmorous game)
-		: base(game, "Assets/NPC/Kane", 1f)
+	public KaneNPC(IAmorous game) : base(game, "Assets/NPC/Kane", 1f)
 	{
 		Width = 1110;
 		Height = 1965;

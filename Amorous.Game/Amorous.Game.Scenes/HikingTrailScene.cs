@@ -2,33 +2,32 @@ namespace Amorous.Game.Scenes;
 
 public class HikingTrailScene : AbstractScene
 {
-	public const string VariantNight = "Night";
-	public const string VariantDay = "Day";
+	public const string VARIANT_NIGHT = "Night";
+	public const string VARIANT_DAY = "Day";
 
-	private readonly SpriteLayer _backgroundDay;
-	private readonly SpriteLayer _backgroundNight;
+	private readonly SpriteLayer backgroundOnDay;
+	private readonly SpriteLayer backgroundOnNight;
 
-	public HikingTrailScene(IAmorous game)
-		: base(game)
+	public HikingTrailScene(IAmorous game) : base(game)
 	{
-		_backgroundDay = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
-		_backgroundNight = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
-		SwitchToSubscene(VariantDay);
+		backgroundOnDay = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Day", 0, 0);
+		backgroundOnNight = AddSpriteLayer("Background", "Assets/Scenes/HikingTrail/Background Night", 0, 0);
+		SwitchToSubscene(VARIANT_DAY);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 
 	public override void SwitchToSubscene(string daytime)
 	{
 		base.SwitchToSubscene(daytime);
-		if (!(daytime == VariantNight))
+		if (!(daytime == VARIANT_NIGHT))
 		{
-			_backgroundNight.Color.A = 0;
-			_backgroundDay.Color.A = byte.MaxValue;
+			backgroundOnNight.Color.A = 0;
+			backgroundOnDay.Color.A = byte.MaxValue;
 		}
 		else
 		{
-			_backgroundNight.Color.A = byte.MaxValue;
-			_backgroundDay.Color.A = 0;
+			backgroundOnNight.Color.A = byte.MaxValue;
+			backgroundOnDay.Color.A = 0;
 		}
 	}
 }

@@ -1,15 +1,14 @@
-using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class AnimatedLayer : AbstractLayer
 { // _kxm3yIqio0baXT5t5vOHBAEdviB
-	private int _index;
-	private int _ticks;
+	private int texture;
+	private int ticksBeforeUpdating;
 
 	public List<Texture2D> Textures { get; private set; }
-	public int TimePerFrame { get; private set; }
+	public int TicksPerFrame { get; private set; }
 
 	public AnimatedLayer(AbstractScene scene, string name, int delay, List<Texture2D> textures)
 		: base(scene, name)
@@ -17,21 +16,21 @@ public class AnimatedLayer : AbstractLayer
 		Textures = textures;
 		base.Width = textures[0].Width;
 		base.Height = textures[0].Height;
-		TimePerFrame = delay;
-		_index = 0;
-		_ticks = TimePerFrame;
+		TicksPerFrame = delay;
+		texture = 0;
+		ticksBeforeUpdating = TicksPerFrame;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		_ticks -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_ticks < 0)
+		ticksBeforeUpdating -= gameTime.ElapsedGameTime.Milliseconds;
+		if (ticksBeforeUpdating < 0)
 		{
-			_ticks = TimePerFrame;
-			_index++;
-			if (_index >= Textures.Count)
+			ticksBeforeUpdating = TicksPerFrame;
+			texture++;
+			if (texture >= Textures.Count)
 			{
-				_index = 0;
+				texture = 0;
 			}
 		}
 	}
@@ -40,7 +39,7 @@ public class AnimatedLayer : AbstractLayer
 	{
 		if (Color.A != 0)
 		{
-			spriteBatch.Draw(Textures[_index], Location, null, Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+			spriteBatch.Draw(Textures[texture], Location, null, Color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 		}
 	}
 }

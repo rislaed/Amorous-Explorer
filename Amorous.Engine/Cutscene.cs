@@ -6,49 +6,49 @@ using Microsoft.Xna.Framework;
 
 public class Cutscene
 { // _nR8eroJOHehP0ZGyyTveo6aMTHg
-	public class Stage
+	public class CutsceneStage
 	{
-		private IEvent _event;
-		private readonly List<int> _steps = new List<int>();
+		private IEvent @event;
+		private readonly List<int> steps = new List<int>();
 
 		public Cutscene Cutscene { get; private set; }
-		public CutsceneStageData Data { get; private set; }
-		public EventData State { get; private set; }
+		public CutsceneStageData StageData { get; private set; }
+		public EventData EventData { get; private set; }
 
-		public Stage(Cutscene cutscene, CutsceneStageData data)
+		public CutsceneStage(Cutscene cutscene, CutsceneStageData data)
 		{
 			Cutscene = cutscene;
-			Data = data;
-			State = null;
-			_event = null;
+			StageData = data;
+			EventData = null;
+			@event = null;
 		}
 
 		public void Start(int? id = null)
 		{
-			int _id = id ?? Data.StartID;
-			State = Data.Events.FirstOrDefault((EventData eventData) => eventData.ID == _id);
-			if (State != null)
+			int startId = id ?? StageData.StartID;
+			EventData = StageData.Events.FirstOrDefault((EventData eventData) => eventData.ID == startId);
+			if (EventData != null)
 			{
-				ApplyData(State);
+				ApplyData(EventData);
 			}
 		}
 
 		public bool Update(GameTime gameTime)
 		{
-			if (State != null && _event != null)
+			if (EventData != null && @event != null)
 			{
-				_event.Update(gameTime);
-				if (_event.Completable)
+				@event.Update(gameTime);
+				if (@event.IsCompleted)
 				{
-					int nextId = _event.NextID;
-					EventData eventData = Data.Events.FirstOrDefault((EventData eventData) => eventData.ID == nextId);
+					int nextId = @event.NextID;
+					EventData eventData = StageData.Events.FirstOrDefault((EventData data) => data.ID == nextId);
 					if (eventData != null)
 					{
-						State = eventData;
-						ApplyData(State);
+						EventData = eventData;
+						ApplyData(EventData);
 						return false;
 					}
-					State = null;
+					EventData = null;
 					return true;
 				}
 				return false;
@@ -59,49 +59,49 @@ public class Cutscene
 		private void ApplyData(EventData eventData)
 		{
 			Cutscene.Progress?.Invoke(eventData);
-			_steps.Add(eventData.DebugID);
-			_event = Cutscene.GetNextEvent(eventData.GetType());
-			if (_event != null)
+			steps.Add(eventData.DebugID);
+			@event = Cutscene.GetNextEvent(eventData.GetType());
+			if (@event != null)
 			{
-				Logger.Log(ConsoleColor.White, "Debug", "Going to event '{0}' in stage {1} ({2} -> {3})", _event.GetType().Name, eventData.DebugID, eventData.ID, eventData.NextID);
-				_event.SetData(eventData);
-				_event.Start();
+				Logger.Debug("Going to event '{0}' in stage {1} ({2} -> {3})", @event.GetType().Name, eventData.DebugID, eventData.ID, eventData.NextID);
+				@event.SetData(eventData);
+				@event.Start();
 			}
 		}
 
-		public string GetSteps(int steps = 0)
+		public string GetSteps(int count = 0)
 		{
-			IEnumerable<string> enumerable = _steps.Select((int step) => $"{(step >> 24) & 0xFF}:{step & 0xFFFFFF}");
-			if (steps == 0)
+            IEnumerable<string> enumerable = steps.Select((int step) => $"{(step >> 24) & 0xFF}:{step & 0xFFFFFF}");
+			if (count == 0)
 			{
 				return string.Join(" > ", enumerable);
 			}
-			enumerable = enumerable.Skip(_steps.Count - steps - 1).Take(steps);
+			enumerable = enumerable.Skip(steps.Count - count - 1).Take(count);
 			return string.Join(" > ", enumerable);
 		}
 
 		public string GetStep()
 		{
-			return _steps.Select((int step) => $"{(step >> 24) & 0xFF}:{step & 0xFFFFFF}").LastOrDefault();
+			return steps.Select((int step) => $"{(step >> 24) & 0xFF}:{step & 0xFFFFFF}").LastOrDefault();
 		}
 	}
 
-	private Stage _state;
-	private Stage _previousState;
-	private readonly Dictionary<Type, IEvent> _eventByType;
+	private CutsceneStage stage;
+	private CutsceneStage inactiveStage;
+	private readonly Dictionary<Type, IEvent> eventByType;
 
 	public Action<EventData> Progress { get; set; }
 	public IAmorous Game { get; private set; }
 	public CutsceneData Data { get; private set; }
-	public Stage State => _state;
-	public bool Active => _state != null;
+	public CutsceneStage Stage => stage;
+	public bool IsActive => stage != null;
 
 	public Cutscene(IAmorous amorous, CutsceneData cutscene, params Assembly[] resources)
 	{
 		Game = amorous;
 		Data = cutscene;
-		_state = null;
-		_eventByType = new Dictionary<Type, IEvent>();
+		stage = null;
+		eventByType = new Dictionary<Type, IEvent>();
 		RefreshEvent(GetType().Assembly);
 		foreach (Assembly assembly in resources)
 		{
@@ -127,30 +127,30 @@ public class Cutscene
 				Type key = genericArguments[0];
 				if (Activator.CreateInstance(item, this) is IEvent value)
 				{
-					_eventByType.Add(key, value);
+					eventByType.Add(key, value);
 				}
 			}
 		}
 	}
 
-	private IEvent GetNextEvent(Type _event)
+	private IEvent GetNextEvent(Type type)
 	{
-		if (!_eventByType.ContainsKey(_event))
+		if (!eventByType.ContainsKey(type))
 		{
 			return null;
 		}
-		return _eventByType[_event];
+		return eventByType[type];
 	}
 
 	public void Start(int stage, int? id = null)
 	{
-		if (!Active)
+		if (!IsActive)
 		{
 			CutsceneStageData stageData = Data.Stages.FirstOrDefault((CutsceneStageData data) => data.Stage == stage);
 			if (stageData != null)
 			{
-				_state = new Stage(this, stageData);
-				_state.Start(id);
+				this.stage = new CutsceneStage(this, stageData);
+				this.stage.Start(id);
 			}
 			else
 			{
@@ -161,19 +161,19 @@ public class Cutscene
 
 	public void Complete()
 	{
-		Game.Achievements.TriggerCutsceneStageAchievement(Data.Name, State.Data.Stage);
+		Game.Achievements.TriggerCutsceneStageAchievement(Data.Name, Stage.StageData.Stage);
 		Game.Autosave();
 	}
 
 	public void ResetState()
 	{
-		_previousState = _state;
-		_state = null;
+		inactiveStage = stage;
+		stage = null;
 	}
 
 	public virtual void Update(GameTime gameTime)
 	{
-		if (Active && _state.Update(gameTime))
+		if (IsActive && stage.Update(gameTime))
 		{
 			Complete();
 		}
@@ -181,17 +181,17 @@ public class Cutscene
 
 	public string[] ToString(int steps = 0)
 	{
-		Stage stage = _state ?? _previousState;
-		if (stage == null)
+		CutsceneStage where = stage ?? inactiveStage;
+		if (where == null)
 		{
 			return null;
 		}
 		return new string[4]
 		{
 			Data.Name,
-			stage.Data.Stage.ToString(),
-			stage.GetSteps(steps),
-			stage.GetStep()
+			where.StageData.Stage.ToString(),
+			where.GetSteps(steps),
+			where.GetStep()
 		};
 	}
 }

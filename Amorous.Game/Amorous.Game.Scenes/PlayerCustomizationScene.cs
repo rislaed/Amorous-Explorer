@@ -23,15 +23,15 @@ public class PlayerCustomizationScene : AbstractScene
 
 	protected bool MightEnterName;
 
-	private CustomizablePlayerSkin _skin;
-	private Panel _backgroundContainer;
-	private List<Button> _categories;
-	private Panel _foregroundContainer;
-	private readonly PlayerDataProxy _data;
-	private Window _colorPicker;
-	private readonly Effect _effect;
+	private CustomizablePlayerSkin playerSkin;
+	private Panel categoriesContainer;
+	private List<Button> categories;
+	private Panel overlayContainer;
+	private readonly PlayerDataProxy playerDataProxy;
+	private Window colorPickerOverlay;
+	private readonly Effect effect;
 
-	private readonly List<SexsceneData> _sexscenes = new List<SexsceneData>
+	private readonly List<SexsceneData> sexscenes = new List<SexsceneData>
 	{
 		new SexsceneData("None", null),
 		new SexsceneData("Coby", "CobySexscene"),
@@ -45,55 +45,54 @@ public class PlayerCustomizationScene : AbstractScene
 		new SexsceneData("Zenith", "ZenithSexscene")
 	};
 
-	private readonly string[] _sexsceneNames;
-	private int _sexsceneIndex;
-	private int _templateStockIndex;
-	private int _templateCustomIndex;
+	private readonly string[] sexsceneNames;
+	private int selectedSexscene;
+	private int selectedStockTemplate;
+	private int selectedCustomTemplate;
 
 	protected virtual string ReturnToGameText => "Exit";
 
-	public PlayerCustomizationScene(IAmorous game)
-		: base(game)
+	public PlayerCustomizationScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/Bedroom/Bedroom", -458, 0);
 		AddLayer(new DrawableLayer(this, "Custom")
 		{
 			OnDraw = DrawSkin
 		}, 0);
-		_sexsceneNames = _sexscenes.Select((SexsceneData sexscene) => sexscene.Name).ToArray();
-		_data = new PlayerDataProxy(PlayerPreferences.GetPlayerData());
-		_data.OnChange += delegate
+		sexsceneNames = sexscenes.Select((SexsceneData sexscene) => sexscene.Name).ToArray();
+		playerDataProxy = new PlayerDataProxy(PlayerPreferences.GetPlayerData());
+		playerDataProxy.DataChanged += delegate
 		{
 			if (base.Game.Sexscene != null)
 			{
-				base.Game.Sexscene.RefreshSubscene();
+				base.Game.Sexscene.Refresh();
 			}
 		};
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.MidnightSizzleTrack, 0.4f);
-		_effect = Game.Content.Load<Effect>("Assets/Shaders/Breathing");
+		effect = Game.Content.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
 	public override void Start()
 	{
-		_skin = new CustomizablePlayerSkin(base.Game);
+		playerSkin = new CustomizablePlayerSkin(base.Game);
 		FetchTemplates();
-		PlayerPreferences.SetPlayerOverlay(_skin);
+		PlayerPreferences.SetPlayerOverlay(playerSkin);
 		ShowOverlay();
 	}
 
 	protected virtual void FetchTemplates()
 	{
-		if (_skin.CustomTemplates.Any())
+		if (playerSkin.CustomTemplates.Any())
 		{
-			_skin.CloneCustomTemplate(0);
-			_data.Name = _skin.GetCustomTemplateName(0);
-			_templateCustomIndex = 0;
+			playerSkin.CloneCustomTemplate(0);
+			playerDataProxy.Name = playerSkin.GetCustomTemplateName(0);
+			selectedCustomTemplate = 0;
 		}
 		else
 		{
-			_skin.CloneStockTemplate(0);
-			_data.Name = "Player";
-			_templateCustomIndex = -1;
+			playerSkin.CloneStockTemplate(0);
+			playerDataProxy.Name = "Player";
+			selectedCustomTemplate = -1;
 		}
 	}
 
@@ -106,70 +105,70 @@ public class PlayerCustomizationScene : AbstractScene
 			Margin = new Margin(8),
 			Padding = new Margin(8)
 		};
-		_backgroundContainer = new Panel
+		categoriesContainer = new Panel
 		{
 			Dock = DockStyle.Fill
 		};
-		container.Controls.Add(_backgroundContainer);
-		_foregroundContainer = new Panel();
-		_foregroundContainer.Dock = DockStyle.Fill;
-		_foregroundContainer.ClipFrame.Margin = new Margin(8);
-		_categories = new List<Button>
+		container.Controls.Add(categoriesContainer);
+		overlayContainer = new Panel();
+		overlayContainer.Dock = DockStyle.Fill;
+		overlayContainer.ClipFrame.Margin = new Margin(8);
+		categories = new List<Button>
 		{
 			NewCategory("Fursona", delegate
 			{
-				AttachFursonaCategory(_foregroundContainer.Content.Controls);
+				AttachFursonaCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Body", delegate
 			{
-				AttachBodyCategory(_foregroundContainer.Content.Controls);
+				AttachBodyCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Arms", delegate
 			{
-				AttachArmsCategory(_foregroundContainer.Content.Controls);
+				AttachArmsCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Legs", delegate
 			{
-				AttachLegsCategory(_foregroundContainer.Content.Controls);
+				AttachLegsCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Head", delegate
 			{
-				AttachHeadCategory(_foregroundContainer.Content.Controls);
+				AttachHeadCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Muzzle", delegate
 			{
-				AttachMuzzleCategory(_foregroundContainer.Content.Controls);
+				AttachMuzzleCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Ears and Horns", delegate
 			{
-				AttachEarsAndHornsCategory(_foregroundContainer.Content.Controls);
+				AttachEarsAndHornsCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Hair and Fringes", delegate
 			{
-				AttachHairAndFringesCategory(_foregroundContainer.Content.Controls);
+				AttachHairAndFringesCategory(overlayContainer.Content.Controls);
 			}),
 			NewCategory("Eyes and Brows", delegate
 			{
-				AttachEyesAndBrowsCategory(_foregroundContainer.Content.Controls);
+				AttachEyesAndBrowsCategory(overlayContainer.Content.Controls);
 			})
 		};
 		if (!Censorship.Censored)
 		{
-			_categories.Add(NewCategory("Breasts, Cock and Balls", delegate
+			categories.Add(NewCategory("Breasts, Cock and Balls", delegate
 			{
-				AttachBreastsCockAndBallsCategory(_foregroundContainer.Content.Controls);
+				AttachGenitaliaCategory(overlayContainer.Content.Controls);
 			}));
 		}
-		_categories.Add(NewCategory("Tail", delegate
+		categories.Add(NewCategory("Tail", delegate
 		{
-			AttachTailCategory(_foregroundContainer.Content.Controls);
+			AttachTailCategory(overlayContainer.Content.Controls);
 		}));
-		_categories.Add(NewCategory("Feet", delegate
+		categories.Add(NewCategory("Feet", delegate
 		{
-			AttachFeetCategory(_foregroundContainer.Content.Controls);
+			AttachFeetCategory(overlayContainer.Content.Controls);
 		}));
-		container.Show(base.Squid);
-		_categories[0].Click(0);
+		container.Show(base.Desktop);
+		categories[0].Click(0);
 	}
 
 	private void AttachFursonaCategory(ControlCollection container)
@@ -182,40 +181,40 @@ public class PlayerCustomizationScene : AbstractScene
 		TextBox templateName = new TextBox
 		{
 			Dock = DockStyle.Top,
-			Text = _data.Name,
+			Text = playerDataProxy.Name,
 			Margin = new Margin(0, 0, 0, 5)
 		};
 		templateName.TextChanged += delegate
 		{
-			_data.Name = templateName.Text;
+			playerDataProxy.Name = templateName.Text;
 		};
 		container.Add(templateName);
-		AttachDropDown(container, "Stock Templates", _skin.StockTemplates.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templateStockIndex, delegate(int int_0)
+		AttachDropDown(container, "Stock Templates", playerSkin.StockTemplates.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), selectedStockTemplate, delegate(int answer)
 		{
-			_templateStockIndex = int_0;
-			_skin.CloneStockTemplate(int_0);
-			_foregroundContainer.Content.Controls.Clear();
+			selectedStockTemplate = answer;
+			playerSkin.CloneStockTemplate(answer);
+			overlayContainer.Content.Controls.Clear();
 			AttachFursonaCategory(container);
 			if (base.Game.Sexscene != null)
 			{
-				base.Game.Sexscene.RefreshSubscene();
+				base.Game.Sexscene.Refresh();
 			}
 		});
-		AttachDropDown(container, "Your Templates", _skin.CustomTemplates.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), _templateCustomIndex, delegate(int index)
+		AttachDropDown(container, "Your Templates", playerSkin.CustomTemplates.Select((PlayerCustomizationData configuration) => configuration.Name).ToArray(), selectedCustomTemplate, delegate(int index)
 		{
-			_templateCustomIndex = index;
-			_skin.CloneCustomTemplate(index);
-			_data.Name = _skin.GetCustomTemplateName(index);
-			_foregroundContainer.Content.Controls.Clear();
+			selectedCustomTemplate = index;
+			playerSkin.CloneCustomTemplate(index);
+			playerDataProxy.Name = playerSkin.GetCustomTemplateName(index);
+			overlayContainer.Content.Controls.Clear();
 			AttachFursonaCategory(container);
 			if (base.Game.Sexscene != null)
 			{
-				base.Game.Sexscene.RefreshSubscene();
+				base.Game.Sexscene.Refresh();
 			}
 		});
-		Control phoneColorControl = AttachColorPicker(container, "Phone", _data.PhoneColor, delegate(Color color)
+		Control phoneColorControl = AttachColorPicker(container, "Phone", playerDataProxy.PhoneColor, delegate(Color color)
 		{
-			_data.PhoneColor = color;
+			playerDataProxy.PhoneColor = color;
 		});
 		phoneColorControl.Margin = new Margin(0, 5, 0, 0);
 		Button createButton = new Button
@@ -228,17 +227,17 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (string.IsNullOrWhiteSpace(templateName.Text))
 			{
-				base.Squid.ShowConfirm("You did not enter a name!", AmorousData.ShortDialogueOffset);
+				base.Desktop.ShowConfirm("You did not enter a name!", AmorousData.WideDialogueWidth);
 			}
 			else
 			{
 				ShowQuestion($"Are you sure you wish to create a new template with the name '{templateName.Text}', based on the current character?", delegate
 				{
-					_skin.AddCustomTemplate(templateName.Text, _data.GetPlayerData());
-					_templateCustomIndex = _skin.CustomTemplates.Count() - 1;
-					_skin.CloneCustomTemplate(_templateCustomIndex);
-					_data.Name = _skin.GetCustomTemplateName(_templateCustomIndex);
-					_foregroundContainer.Content.Controls.Clear();
+					playerSkin.AddCustomTemplate(templateName.Text, playerDataProxy.GetPlayerData());
+					selectedCustomTemplate = playerSkin.CustomTemplates.Count() - 1;
+					playerSkin.CloneCustomTemplate(selectedCustomTemplate);
+					playerDataProxy.Name = playerSkin.GetCustomTemplateName(selectedCustomTemplate);
+					overlayContainer.Content.Controls.Clear();
 					AttachFursonaCategory(container);
 				});
 			}
@@ -253,14 +252,14 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (string.IsNullOrWhiteSpace(templateName.Text))
 			{
-				base.Squid.ShowConfirm("You did not enter a name!", AmorousData.ShortDialogueOffset);
+				base.Desktop.ShowConfirm("You did not enter a name!", AmorousData.WideDialogueWidth);
 			}
-			else if (_templateCustomIndex >= 0)
+			else if (selectedCustomTemplate >= 0)
 			{
-				ShowQuestion($"Are you sure you wish to save the currect character to the selected template '{_skin.GetCustomTemplateName(_templateCustomIndex)}'?", delegate
+				ShowQuestion($"Are you sure you wish to save the currect character to the selected template '{playerSkin.GetCustomTemplateName(selectedCustomTemplate)}'?", delegate
 				{
-					_skin.AddCustomTemplateAtIndex(templateName.Text, _templateCustomIndex, _data.GetPlayerData());
-					_foregroundContainer.Content.Controls.Clear();
+					playerSkin.AddCustomTemplateAtIndex(templateName.Text, selectedCustomTemplate, playerDataProxy.GetPlayerData());
+					overlayContainer.Content.Controls.Clear();
 					AttachFursonaCategory(container);
 				});
 			}
@@ -268,11 +267,11 @@ public class PlayerCustomizationScene : AbstractScene
 			{
 				ShowQuestion($"No template has been selected yet, do you wish to create a new template with the name '{templateName.Text}', based on the current character?", delegate
 				{
-					_skin.AddCustomTemplate(templateName.Text, _data.GetPlayerData());
-					_templateCustomIndex = _skin.CustomTemplates.Count() - 1;
-					_skin.CloneCustomTemplate(_templateCustomIndex);
-					_data.Name = _skin.GetCustomTemplateName(_templateCustomIndex);
-					_foregroundContainer.Content.Controls.Clear();
+					playerSkin.AddCustomTemplate(templateName.Text, playerDataProxy.GetPlayerData());
+					selectedCustomTemplate = playerSkin.CustomTemplates.Count() - 1;
+					playerSkin.CloneCustomTemplate(selectedCustomTemplate);
+					playerDataProxy.Name = playerSkin.GetCustomTemplateName(selectedCustomTemplate);
+					overlayContainer.Content.Controls.Clear();
 					AttachFursonaCategory(container);
 				});
 			}
@@ -285,19 +284,19 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		resetButton.MouseClick += delegate
 		{
-			if (_templateCustomIndex >= 0)
+			if (selectedCustomTemplate >= 0)
 			{
-				ShowQuestion($"Are you sure you wish to reset the current character back to selected template '{_skin.GetCustomTemplateName(_templateCustomIndex)}'? All changes will be lost!", delegate
+				ShowQuestion($"Are you sure you wish to reset the current character back to selected template '{playerSkin.GetCustomTemplateName(selectedCustomTemplate)}'? All changes will be lost!", delegate
 				{
-					_skin.ResetCustomTemplate(_templateCustomIndex);
-					_data.Name = _skin.GetCustomTemplateName(_templateCustomIndex);
-					_foregroundContainer.Content.Controls.Clear();
+					playerSkin.ResetCustomTemplate(selectedCustomTemplate);
+					playerDataProxy.Name = playerSkin.GetCustomTemplateName(selectedCustomTemplate);
+					overlayContainer.Content.Controls.Clear();
 					AttachFursonaCategory(container);
 				});
 			}
 			else
 			{
-				base.Squid.ShowConfirm("You did not select a template!", AmorousData.ShortDialogueOffset);
+				base.Desktop.ShowConfirm("You did not select a template!", AmorousData.WideDialogueWidth);
 			}
 		};
 		container.Add(resetButton);
@@ -308,19 +307,19 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		button4.MouseClick += delegate
 		{
-			if (_templateCustomIndex >= 0)
+			if (selectedCustomTemplate >= 0)
 			{
-				ShowQuestion($"Are you sure you wish to delete the selected template '{_skin.GetCustomTemplateName(_templateCustomIndex)}'?", delegate
+				ShowQuestion($"Are you sure you wish to delete the selected template '{playerSkin.GetCustomTemplateName(selectedCustomTemplate)}'?", delegate
 				{
-					_skin.RemoveCustomTemplate(_templateCustomIndex);
-					_templateCustomIndex = -1;
-					_foregroundContainer.Content.Controls.Clear();
+					playerSkin.RemoveCustomTemplate(selectedCustomTemplate);
+					selectedCustomTemplate = -1;
+					overlayContainer.Content.Controls.Clear();
 					AttachFursonaCategory(container);
 				});
 			}
 			else
 			{
-				base.Squid.ShowConfirm("You did not select a template!", AmorousData.ShortDialogueOffset);
+				base.Desktop.ShowConfirm("You did not select a template!", AmorousData.WideDialogueWidth);
 			}
 		};
 		container.Add(button4);
@@ -332,28 +331,28 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		zoomButton.MouseClick += delegate
 		{
-			_skin.ToggleZoom();
+			playerSkin.ToggleZoom();
 		};
 		container.Add(zoomButton);
 		if (!Censorship.Censored)
 		{
-			AttachDropDown(container, "Preview Sexscene", _sexsceneNames, _sexsceneIndex, delegate(int index)
+			AttachDropDown(container, "Preview Sexscene", sexsceneNames, selectedSexscene, delegate(int index)
 			{
-				_sexsceneIndex = index;
+				selectedSexscene = index;
 				if (index == 0)
 				{
 					base.Game.ResetSexscene();
 				}
 				else
 				{
-					base.Game.PlaySexscene(_sexscenes[index].Scene);
+					base.Game.PlaySexscene(sexscenes[index].Scene);
 					base.Game.Sexscene.Muted = true;
 				}
 			});
 		}
-		if (!base.Squid.Skin.ContainsKey("button2"))
+		if (!base.Desktop.Skin.ContainsKey("button2"))
 		{
-			base.Squid.Skin.Add("button2", new ControlStyle(base.Squid.Skin["button"])
+			base.Desktop.Skin.Add("button2", new ControlStyle(base.Desktop.Skin["button"])
 			{
 				Tint = ColorInt.ARGB(1f, 0f, 1f, 0f)
 			});
@@ -369,7 +368,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			if (MightEnterName && string.IsNullOrWhiteSpace(templateName.Text))
 			{
-				base.Squid.ShowConfirm("You did not enter a name!", AmorousData.ShortDialogueOffset);
+				base.Desktop.ShowConfirm("You did not enter a name!", AmorousData.WideDialogueWidth);
 			}
 			else
 			{
@@ -381,7 +380,7 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void ShowQuestion(string question, Action then)
 	{
-		base.Squid.ShowSelection(question, new string[2] { "No way!", "Yes please!" }, AmorousData.ShortDialogueOffset, delegate(int answer)
+		base.Desktop.ShowSelection(question, new string[2] { "No way!", "Yes please!" }, AmorousData.WideDialogueWidth, delegate(int answer)
 		{
 			if (answer == 1)
 			{
@@ -392,7 +391,7 @@ public class PlayerCustomizationScene : AbstractScene
 
 	protected virtual void ShowExit()
 	{
-		base.Squid.ShowSelection("Are you sure you wish to exit? All unsaved changes will be lost!", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.ShortDialogueOffset, delegate(int answer)
+		base.Desktop.ShowSelection("Are you sure you wish to exit? All unsaved changes will be lost!", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.WideDialogueWidth, delegate(int answer)
 		{
 			if (answer == 1)
 			{
@@ -403,64 +402,64 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void AttachBodyCategory(ControlCollection container)
 	{
-		AttachTypesDropDown(container, "Body", _data.BodyType, delegate(PlayerData.EBodyType type)
+		AttachTypesDropDown(container, "Body", playerDataProxy.BodyType, delegate(PlayerData.EBodyType type)
 		{
-			_data.BodyType = type;
+			playerDataProxy.BodyType = type;
 		});
-		AttachColorPicker(container, "Body Color", _data.BodyColor, delegate(Color color)
+		AttachColorPicker(container, "Body Color", playerDataProxy.BodyColor, delegate(Color color)
 		{
-			_data.BodyColor = color;
+			playerDataProxy.BodyColor = color;
 		});
-		AttachMarkingsColorPicker(container, "Underbelly Marking", PlayerData.EMarkingsType.Underbelly, _data.UnderbellyColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Underbelly Marking", PlayerData.EMarkingsType.Underbelly, playerDataProxy.UnderbellyColor, delegate(Color color)
 		{
-			_data.UnderbellyColor = color;
+			playerDataProxy.UnderbellyColor = color;
 		});
-		AttachMarkingsColorPicker(container, "Underthigh Marking", PlayerData.EMarkingsType.Underthigh, _data.UnderthighColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Underthigh Marking", PlayerData.EMarkingsType.Underthigh, playerDataProxy.UnderthighColor, delegate(Color color)
 		{
-			_data.UnderthighColor = color;
+			playerDataProxy.UnderthighColor = color;
 		});
-		AttachMarkingsColorPicker(container, "Stripes Marking", PlayerData.EMarkingsType.Stripes, _data.StripesColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Stripes Marking", PlayerData.EMarkingsType.Stripes, playerDataProxy.StripesColor, delegate(Color color)
 		{
-			_data.StripesColor = color;
+			playerDataProxy.StripesColor = color;
 		});
-		AttachSwitchableColorPicker(container, "Nails", _data.ShowNails, _data.NailColor, delegate(bool enabled)
+		AttachSwitchableColorPicker(container, "Nails", playerDataProxy.ShowNails, playerDataProxy.NailColor, delegate(bool enabled)
 		{
-			_data.ShowNails = enabled;
+			playerDataProxy.ShowNails = enabled;
 		}, delegate(Color color)
 		{
-			_data.NailColor = color;
+			playerDataProxy.NailColor = color;
 		});
 	}
 
 	private void AttachArmsCategory(ControlCollection container)
 	{
-		AttachMarkingsColorPicker(container, "Long Forearm Marking", PlayerData.EMarkingsType.LongForearm, _data.LongForearmColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Long Forearm Marking", PlayerData.EMarkingsType.LongForearm, playerDataProxy.LongForearmColor, delegate(Color color)
 		{
-			_data.LongForearmColor = color;
+			playerDataProxy.LongForearmColor = color;
 		});
-		AttachMarkingsColorPicker(container, "Short Forearm Marking", PlayerData.EMarkingsType.ShortForearm, _data.ShortForearmColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Short Forearm Marking", PlayerData.EMarkingsType.ShortForearm, playerDataProxy.ShortForearmColor, delegate(Color color)
 		{
-			_data.ShortForearmColor = color;
+			playerDataProxy.ShortForearmColor = color;
 		});
-		AttachMarkingsColorPicker(container, "Avian Forearm Marking", PlayerData.EMarkingsType.AvianForearm, _data.AvianForearmColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Avian Forearm Marking", PlayerData.EMarkingsType.AvianForearm, playerDataProxy.AvianForearmColor, delegate(Color color)
 		{
-			_data.AvianForearmColor = color;
+			playerDataProxy.AvianForearmColor = color;
 		});
 	}
 
 	private void AttachLegsCategory(ControlCollection container)
 	{
-		AttachMarkingsColorPicker(container, "Long Shin Marking", PlayerData.EMarkingsType.LongShin, _data.LongShinColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Long Shin Marking", PlayerData.EMarkingsType.LongShin, playerDataProxy.LongShinColor, delegate(Color color)
 		{
-			_data.LongShinColor = color;
+			playerDataProxy.LongShinColor = color;
 		});
-		AttachMarkingsColorPicker(container, "Short Shin Marking", PlayerData.EMarkingsType.ShortShin, _data.ShortShinColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Short Shin Marking", PlayerData.EMarkingsType.ShortShin, playerDataProxy.ShortShinColor, delegate(Color color)
 		{
-			_data.ShortShinColor = color;
+			playerDataProxy.ShortShinColor = color;
 		});
-		AttachMarkingsColorPicker(container, "Avian Shin Marking", PlayerData.EMarkingsType.AvianShin, _data.AvianShinColor, delegate(Color color)
+		AttachMarkingsColorPicker(container, "Avian Shin Marking", PlayerData.EMarkingsType.AvianShin, playerDataProxy.AvianShinColor, delegate(Color color)
 		{
-			_data.AvianShinColor = color;
+			playerDataProxy.AvianShinColor = color;
 		});
 	}
 
@@ -469,16 +468,16 @@ public class PlayerCustomizationScene : AbstractScene
 		Panel headPanel = new Panel
 		{
 			Dock = DockStyle.Fill,
-			Visible = (_data.HeadType == PlayerData.EHeadType.Default)
+			Visible = (playerDataProxy.HeadType == PlayerData.EHeadType.Default)
 		};
 		Panel paperBagPanel = new Panel
 		{
 			Dock = DockStyle.Fill,
-			Visible = (_data.HeadType == PlayerData.EHeadType.PaperBag)
+			Visible = (playerDataProxy.HeadType == PlayerData.EHeadType.PaperBag)
 		};
-		AttachTypesDropDown(container, "Head", _data.HeadType, delegate(PlayerData.EHeadType type)
+		AttachTypesDropDown(container, "Head", playerDataProxy.HeadType, delegate(PlayerData.EHeadType type)
 		{
-			_data.HeadType = type;
+			playerDataProxy.HeadType = type;
 			switch (type)
 			{
 				case PlayerData.EHeadType.Default:
@@ -495,33 +494,33 @@ public class PlayerCustomizationScene : AbstractScene
 					break;
 			}
 		});
-		AttachColorPicker(container, "Head Color", _data.HeadColor, delegate(Color color)
+		AttachColorPicker(container, "Head Color", playerDataProxy.HeadColor, delegate(Color color)
 		{
-			_data.HeadColor = color;
+			playerDataProxy.HeadColor = color;
 		});
-		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Gaunt Marking", PlayerData.EHeadMarkingsType.Gaunt, _data.HeadGauntColor, delegate(Color color)
+		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Gaunt Marking", PlayerData.EHeadMarkingsType.Gaunt, playerDataProxy.HeadGauntColor, delegate(Color color)
 		{
-			_data.HeadGauntColor = color;
+			playerDataProxy.HeadGauntColor = color;
 		});
-		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Scruffy Marking", PlayerData.EHeadMarkingsType.Scruffy, _data.HeadScruffyColor, delegate(Color color)
+		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Scruffy Marking", PlayerData.EHeadMarkingsType.Scruffy, playerDataProxy.HeadScruffyColor, delegate(Color color)
 		{
-			_data.HeadScruffyColor = color;
+			playerDataProxy.HeadScruffyColor = color;
 		});
-		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Snout Marking", PlayerData.EHeadMarkingsType.Snout, _data.HeadSnoutColor, delegate(Color color)
+		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Snout Marking", PlayerData.EHeadMarkingsType.Snout, playerDataProxy.HeadSnoutColor, delegate(Color color)
 		{
-			_data.HeadSnoutColor = color;
+			playerDataProxy.HeadSnoutColor = color;
 		});
-		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Stripes Marking", PlayerData.EHeadMarkingsType.Stripes, _data.HeadStripesColor, delegate(Color color)
+		AttachHeadMarkingsColorPicker(headPanel.Content.Controls, "Stripes Marking", PlayerData.EHeadMarkingsType.Stripes, playerDataProxy.HeadStripesColor, delegate(Color color)
 		{
-			_data.HeadStripesColor = color;
+			playerDataProxy.HeadStripesColor = color;
 		});
-		AttachColorPicker(paperBagPanel.Content.Controls, "Paper Bag Color", _data.PaperBagColor, delegate(Color color)
+		AttachColorPicker(paperBagPanel.Content.Controls, "Paper Bag Color", playerDataProxy.PaperBagColor, delegate(Color color)
 		{
-			_data.PaperBagColor = color;
+			playerDataProxy.PaperBagColor = color;
 		});
-		AttachColorPicker(paperBagPanel.Content.Controls, "Eyesholes Color", _data.PaperBagEyesColor, delegate(Color color)
+		AttachColorPicker(paperBagPanel.Content.Controls, "Eyesholes Color", playerDataProxy.PaperBagEyesColor, delegate(Color color)
 		{
-			_data.PaperBagEyesColor = color;
+			playerDataProxy.PaperBagEyesColor = color;
 		});
 		container.Add(headPanel);
 		container.Add(paperBagPanel);
@@ -529,244 +528,244 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void AttachMuzzleCategory(ControlCollection container)
 	{
-		AttachTypesDropDown(container, "Muzzle", _data.MuzzleType, delegate(PlayerData.EMuzzleType type)
+		AttachTypesDropDown(container, "Muzzle", playerDataProxy.MuzzleType, delegate(PlayerData.EMuzzleType type)
 		{
-			_data.MuzzleType = type;
+			playerDataProxy.MuzzleType = type;
 		});
-		AttachColorPicker(container, "Muzzle Color", _data.MuzzleColor, delegate(Color color)
+		AttachColorPicker(container, "Muzzle Color", playerDataProxy.MuzzleColor, delegate(Color color)
 		{
-			_data.MuzzleColor = color;
+			playerDataProxy.MuzzleColor = color;
 		});
-		AttachColorPicker(container, "Nose Color", _data.NoseColor, delegate(Color color)
+		AttachColorPicker(container, "Nose Color", playerDataProxy.NoseColor, delegate(Color color)
 		{
-			_data.NoseColor = color;
+			playerDataProxy.NoseColor = color;
 		});
-		AttachColorPicker(container, "Teeth Color", _data.TeethColor, delegate(Color color)
+		AttachColorPicker(container, "Teeth Color", playerDataProxy.TeethColor, delegate(Color color)
 		{
-			_data.TeethColor = color;
+			playerDataProxy.TeethColor = color;
 		});
-		AttachSwitchableColorPicker(container, "Muzzle Horn", _data.ShowMuzzleHorn, _data.MuzzleHornColor, delegate(bool enabled)
+		AttachSwitchableColorPicker(container, "Muzzle Horn", playerDataProxy.ShowMuzzleHorn, playerDataProxy.MuzzleHornColor, delegate(bool enabled)
 		{
-			_data.ShowMuzzleHorn = enabled;
+			playerDataProxy.ShowMuzzleHorn = enabled;
 		}, delegate(Color color)
 		{
-			_data.MuzzleHornColor = color;
+			playerDataProxy.MuzzleHornColor = color;
 		});
-		AttachSwitchableColorPicker(container, "Muzzle Mask", _data.ShowMuzzleMask, _data.MuzzleMaskColor, delegate(bool enabled)
+		AttachSwitchableColorPicker(container, "Muzzle Mask", playerDataProxy.ShowMuzzleMask, playerDataProxy.MuzzleMaskColor, delegate(bool enabled)
 		{
-			_data.ShowMuzzleMask = enabled;
+			playerDataProxy.ShowMuzzleMask = enabled;
 		}, delegate(Color color)
 		{
-			_data.MuzzleMaskColor = color;
+			playerDataProxy.MuzzleMaskColor = color;
 		});
 	}
 
 	private void AttachEarsAndHornsCategory(ControlCollection container)
 	{
-		AttachTypesDropDown(container, "Ears and Horns", _data.HeadAccessoriesType, delegate(PlayerData.EHeadAccessoriesType type)
+		AttachTypesDropDown(container, "Ears and Horns", playerDataProxy.HeadAccessoriesType, delegate(PlayerData.EHeadAccessoriesType type)
 		{
-			_data.HeadAccessoriesType = type;
+			playerDataProxy.HeadAccessoriesType = type;
 		});
-		AttachColorPicker(container, "Horns Color", _data.HeadHornsColor, delegate(Color color)
+		AttachColorPicker(container, "Horns Color", playerDataProxy.HeadHornsColor, delegate(Color color)
 		{
-			_data.HeadHornsColor = color;
+			playerDataProxy.HeadHornsColor = color;
 		});
-		AttachColorPicker(container, "Ear Color", _data.EarColor, delegate(Color color)
+		AttachColorPicker(container, "Ear Color", playerDataProxy.EarColor, delegate(Color color)
 		{
-			_data.EarColor = color;
+			playerDataProxy.EarColor = color;
 		});
-		AttachColorPicker(container, "Ear Inner Color", _data.EarInnerColor, delegate(Color color)
+		AttachColorPicker(container, "Ear Inner Color", playerDataProxy.EarInnerColor, delegate(Color color)
 		{
-			_data.EarInnerColor = color;
+			playerDataProxy.EarInnerColor = color;
 		});
 	}
 
 	private void AttachHairAndFringesCategory(ControlCollection container)
 	{
-		AttachTypesDropDown(container, "Hair", _data.HairstyleType, delegate(PlayerData.EHairstyleType type)
+		AttachTypesDropDown(container, "Hair", playerDataProxy.HairstyleType, delegate(PlayerData.EHairstyleType type)
 		{
-			_data.HairstyleType = type;
+			playerDataProxy.HairstyleType = type;
 		});
-		AttachColorPicker(container, "Hair Color", _data.HairColor, delegate(Color color)
+		AttachColorPicker(container, "Hair Color", playerDataProxy.HairColor, delegate(Color color)
 		{
-			_data.HairColor = color;
+			playerDataProxy.HairColor = color;
 		});
-		AttachTypesDropDown(container, "Fringe", _data.FringeType, delegate(PlayerData.EFringeType type)
+		AttachTypesDropDown(container, "Fringe", playerDataProxy.FringeType, delegate(PlayerData.EFringeType type)
 		{
-			_data.FringeType = type;
+			playerDataProxy.FringeType = type;
 		});
-		AttachColorPicker(container, "Fringe Color", _data.FringeColor, delegate(Color color)
+		AttachColorPicker(container, "Fringe Color", playerDataProxy.FringeColor, delegate(Color color)
 		{
-			_data.FringeColor = color;
+			playerDataProxy.FringeColor = color;
 		});
 	}
 
 	private void AttachEyesAndBrowsCategory(ControlCollection container)
 	{
-		AttachTypesDropDown(container, "Eyes", _data.EyesType, delegate(PlayerData.EEyesType type)
+		AttachTypesDropDown(container, "Eyes", playerDataProxy.EyesType, delegate(PlayerData.EEyesType type)
 		{
-			_data.EyesType = type;
+			playerDataProxy.EyesType = type;
 		});
-		AttachColorPicker(container, "Eyes Back Color", _data.EyesBackColor, delegate(Color color)
+		AttachColorPicker(container, "Eyes Back Color", playerDataProxy.EyesBackColor, delegate(Color color)
 		{
-			_data.EyesBackColor = color;
+			playerDataProxy.EyesBackColor = color;
 		});
-		AttachColorPicker(container, "Eyes Front Color", _data.EyesFrontColor, delegate(Color color)
+		AttachColorPicker(container, "Eyes Front Color", playerDataProxy.EyesFrontColor, delegate(Color color)
 		{
-			_data.EyesFrontColor = color;
+			playerDataProxy.EyesFrontColor = color;
 		});
-		AttachTypesDropDown(container, "Brows", _data.BrowType, delegate(PlayerData.EBrowType type)
+		AttachTypesDropDown(container, "Brows", playerDataProxy.BrowType, delegate(PlayerData.EBrowType type)
 		{
-			_data.BrowType = type;
+			playerDataProxy.BrowType = type;
 		});
-		AttachColorPicker(container, "Brows Color", _data.BrowColor, delegate(Color color)
+		AttachColorPicker(container, "Brows Color", playerDataProxy.BrowColor, delegate(Color color)
 		{
-			_data.BrowColor = color;
+			playerDataProxy.BrowColor = color;
 		});
 	}
 
-	private void AttachBreastsCockAndBallsCategory(ControlCollection container)
+	private void AttachGenitaliaCategory(ControlCollection container)
 	{
 		Panel breastPanel = new Panel
 		{
 			Dock = DockStyle.Top,
-			Visible = (_data.BreastsType != PlayerData.EBreastsType.None)
+			Visible = (playerDataProxy.BreastsType != PlayerData.EBreastsType.None)
 		};
 		Panel cockPanel = new Panel
 		{
 			Dock = DockStyle.Top,
-			Visible = (_data.CockType != PlayerData.ECockType.None)
+			Visible = (playerDataProxy.CockType != PlayerData.ECockType.None)
 		};
 		Panel ballsPanel = new Panel
 		{
 			Dock = DockStyle.Top,
-			Visible = (_data.BallsType != PlayerData.EBallsType.None)
+			Visible = (playerDataProxy.BallsType != PlayerData.EBallsType.None)
 		};
-		AttachTypesDropDown(container, "Breasts", _data.BreastsType, delegate(PlayerData.EBreastsType type)
+		AttachTypesDropDown(container, "Breasts", playerDataProxy.BreastsType, delegate(PlayerData.EBreastsType type)
 		{
-			_data.BreastsType = type;
-			breastPanel.Visible = _data.BreastsType != PlayerData.EBreastsType.None;
+			playerDataProxy.BreastsType = type;
+			breastPanel.Visible = playerDataProxy.BreastsType != PlayerData.EBreastsType.None;
 		});
-		AttachColorPicker(breastPanel.Content.Controls, "Breasts Color", _data.BreastsColor, delegate(Color color)
+		AttachColorPicker(breastPanel.Content.Controls, "Breasts Color", playerDataProxy.BreastsColor, delegate(Color color)
 		{
-			_data.BreastsColor = color;
+			playerDataProxy.BreastsColor = color;
 		});
-		AttachSwitchableColorPicker(breastPanel.Content.Controls, "Nipples", _data.ShowNipples, _data.NipplesColor, delegate(bool enabled)
+		AttachSwitchableColorPicker(breastPanel.Content.Controls, "Nipples", playerDataProxy.ShowNipples, playerDataProxy.NipplesColor, delegate(bool enabled)
 		{
-			_data.ShowNipples = enabled;
+			playerDataProxy.ShowNipples = enabled;
 		}, delegate(Color color)
 		{
-			_data.NipplesColor = color;
+			playerDataProxy.NipplesColor = color;
 		});
 		container.Add(breastPanel);
 		Control cockColorControl = null;
-		AttachTypesDropDown(container, "Cock", _data.CockType, delegate(PlayerData.ECockType type)
+		AttachTypesDropDown(container, "Cock", playerDataProxy.CockType, delegate(PlayerData.ECockType type)
 		{
-			_data.CockType = type;
-			cockPanel.Visible = _data.CockType != PlayerData.ECockType.None;
-			cockColorControl.Visible = _data.CockType == PlayerData.ECockType.Cut || _data.CockType == PlayerData.ECockType.Uncut;
+			playerDataProxy.CockType = type;
+			cockPanel.Visible = playerDataProxy.CockType != PlayerData.ECockType.None;
+			cockColorControl.Visible = playerDataProxy.CockType == PlayerData.ECockType.Cut || playerDataProxy.CockType == PlayerData.ECockType.Uncut;
 		});
-		AttachColorPicker(cockPanel.Content.Controls, "Cock Color", _data.GenitaliaColor, delegate(Color color)
+		AttachColorPicker(cockPanel.Content.Controls, "Cock Color", playerDataProxy.GenitaliaColor, delegate(Color color)
 		{
-			_data.GenitaliaColor = color;
+			playerDataProxy.GenitaliaColor = color;
 		});
-		cockColorControl = AttachColorPicker(cockPanel.Content.Controls, "Cock Tip Color", _data.GenitaliaFleshColor, delegate(Color color)
+		cockColorControl = AttachColorPicker(cockPanel.Content.Controls, "Cock Tip Color", playerDataProxy.GenitaliaFleshColor, delegate(Color color)
 		{
-			_data.GenitaliaFleshColor = color;
+			playerDataProxy.GenitaliaFleshColor = color;
 		});
-		cockColorControl.Visible = _data.CockType == PlayerData.ECockType.Cut || _data.CockType == PlayerData.ECockType.Uncut;
+		cockColorControl.Visible = playerDataProxy.CockType == PlayerData.ECockType.Cut || playerDataProxy.CockType == PlayerData.ECockType.Uncut;
 		container.Add(cockPanel);
-		AttachTypesDropDown(container, "Balls", _data.BallsType, delegate(PlayerData.EBallsType eballsType_0)
+		AttachTypesDropDown(container, "Balls", playerDataProxy.BallsType, delegate(PlayerData.EBallsType balls)
 		{
-			_data.BallsType = eballsType_0;
-			ballsPanel.Visible = _data.BallsType != PlayerData.EBallsType.None;
+			playerDataProxy.BallsType = balls;
+			ballsPanel.Visible = playerDataProxy.BallsType != PlayerData.EBallsType.None;
 		});
-		AttachColorPicker(ballsPanel.Content.Controls, "Balls Color", _data.BallsColor, delegate(Color color_0)
+		AttachColorPicker(ballsPanel.Content.Controls, "Balls Color", playerDataProxy.BallsColor, delegate(Color color)
 		{
-			_data.BallsColor = color_0;
+			playerDataProxy.BallsColor = color;
 		});
 		container.Add(ballsPanel);
 	}
 
 	private void AttachTailCategory(ControlCollection container)
 	{
-		AttachTypesDropDown(container, "Tail", _data.TailType, delegate(PlayerData.ETailType type)
+		AttachTypesDropDown(container, "Tail", playerDataProxy.TailType, delegate(PlayerData.ETailType type)
 		{
-			_data.TailType = type;
+			playerDataProxy.TailType = type;
 		});
-		AttachColorPicker(container, "Tail Color", _data.TailColor, delegate(Color color)
+		AttachColorPicker(container, "Tail Color", playerDataProxy.TailColor, delegate(Color color)
 		{
-			_data.TailColor = color;
+			playerDataProxy.TailColor = color;
 		});
-		AttachSwitchableColorPicker(container, "Tail Part A", _data.ShowTailPartOne, _data.TailPartOneColor, delegate(bool enabled)
+		AttachSwitchableColorPicker(container, "Tail Part A", playerDataProxy.ShowTailPartOne, playerDataProxy.TailPartOneColor, delegate(bool enabled)
 		{
-			_data.ShowTailPartOne = enabled;
+			playerDataProxy.ShowTailPartOne = enabled;
 		}, delegate(Color color)
 		{
-			_data.TailPartOneColor = color;
+			playerDataProxy.TailPartOneColor = color;
 		});
-		AttachSwitchableColorPicker(container, "Tail Part B", _data.ShowTailPartTwo, _data.TailPartTwoColor, delegate(bool enabled)
+		AttachSwitchableColorPicker(container, "Tail Part B", playerDataProxy.ShowTailPartTwo, playerDataProxy.TailPartTwoColor, delegate(bool enabled)
 		{
-			_data.ShowTailPartTwo = enabled;
+			playerDataProxy.ShowTailPartTwo = enabled;
 		}, delegate(Color color)
 		{
-			_data.TailPartTwoColor = color;
+			playerDataProxy.TailPartTwoColor = color;
 		});
 	}
 
 	private void AttachFeetCategory(ControlCollection container)
 	{
-		AttachTypesDropDown(container, "Feet", _data.FeetType, delegate(PlayerData.EFeetType type)
+		AttachTypesDropDown(container, "Feet", playerDataProxy.FeetType, delegate(PlayerData.EFeetType type)
 		{
-			_data.FeetType = type;
+			playerDataProxy.FeetType = type;
 		});
-		AttachColorPicker(container, "Feet Color", _data.FeetColor, delegate(Color color)
+		AttachColorPicker(container, "Feet Color", playerDataProxy.FeetColor, delegate(Color color)
 		{
-			_data.FeetColor = color;
+			playerDataProxy.FeetColor = color;
 		});
 	}
 
 	public void DrawSkin(SpriteBatch spriteBatch)
 	{
-		_effect.Parameters["Time"].SetValue(Utils.Date);
-		PlayerPreferences.Singleton.Draw(spriteBatch, _effect);
+		effect.Parameters["Time"].SetValue(Utils.Date);
+		PlayerPreferences.Singleton.Draw(spriteBatch, effect);
 	}
 
 	private void AttachMarkingsColorPicker(ControlCollection container, string name, PlayerData.EMarkingsType type, Color color, Action<Color> then)
 	{
-		AttachSwitchableColorPicker(container, name, _data.MarkingsType.HasFlag(type), color, delegate(bool enabled)
+		AttachSwitchableColorPicker(container, name, playerDataProxy.MarkingsType.HasFlag(type), color, delegate(bool enabled)
 		{
 			if (enabled)
 			{
-				_data.MarkingsType |= type;
+				playerDataProxy.MarkingsType |= type;
 			}
 			else
 			{
-				_data.MarkingsType &= ~type;
+				playerDataProxy.MarkingsType &= ~type;
 			}
 		}, delegate(Color color)
 		{
 			then(color);
-			_skin.Refresh();
+			playerSkin.Refresh();
 		});
 	}
 
 	private void AttachHeadMarkingsColorPicker(ControlCollection container, string name, PlayerData.EHeadMarkingsType type, Color color, Action<Color> then)
 	{
-		AttachSwitchableColorPicker(container, name, _data.HeadMarkingsType.HasFlag(type), color, delegate(bool enabled)
+		AttachSwitchableColorPicker(container, name, playerDataProxy.HeadMarkingsType.HasFlag(type), color, delegate(bool enabled)
 		{
 			if (enabled)
 			{
-				_data.HeadMarkingsType |= type;
+				playerDataProxy.HeadMarkingsType |= type;
 			}
 			else
 			{
-				_data.HeadMarkingsType &= ~type;
+				playerDataProxy.HeadMarkingsType &= ~type;
 			}
 		}, delegate(Color color)
 		{
 			then(color);
-			_skin.Refresh();
+			playerSkin.Refresh();
 		});
 	}
 
@@ -787,7 +786,7 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			pickerControl.Visible = enabledBox.Checked;
 			onCheck(enabledBox.Checked);
-			_skin.Refresh();
+			playerSkin.Refresh();
 		};
 	}
 
@@ -823,7 +822,7 @@ public class PlayerCustomizationScene : AbstractScene
 			{
 				colorImage.Color = ColorInt.ARGB(color.A, color.R, color.G, color.B);
 				then(color);
-				_skin.Refresh();
+				playerSkin.Refresh();
 			});
 		};
 		container.GetElements().Add(colorImage);
@@ -833,19 +832,19 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void SwitchToCategory(Button categoryButton)
 	{
-		_backgroundContainer.Content.Controls.Clear();
-		int currently = _categories.FindIndex((Button button) => object.Equals(button, categoryButton));
+		categoriesContainer.Content.Controls.Clear();
+		int currently = categories.FindIndex((Button button) => object.Equals(button, categoryButton));
 		for (int i = 0; i <= currently; i++)
 		{
-			_categories[i].Dock = DockStyle.Top;
-			_backgroundContainer.Content.Controls.Add(_categories[i]);
+			categories[i].Dock = DockStyle.Top;
+			categoriesContainer.Content.Controls.Add(categories[i]);
 		}
-		for (int num2 = _categories.Count - 1; num2 > currently; num2--)
+		for (int num2 = categories.Count - 1; num2 > currently; num2--)
 		{
-			_categories[num2].Dock = DockStyle.Bottom;
-			_backgroundContainer.Content.Controls.Add(_categories[num2]);
+			categories[num2].Dock = DockStyle.Bottom;
+			categoriesContainer.Content.Controls.Add(categories[num2]);
 		}
-		_backgroundContainer.Content.Controls.Add(_foregroundContainer);
+		categoriesContainer.Content.Controls.Add(overlayContainer);
 	}
 
 	private Button NewCategory(string name, Action click)
@@ -861,13 +860,13 @@ public class PlayerCustomizationScene : AbstractScene
 		{
 			button.MouseClick += delegate
 			{
-				_foregroundContainer.Content.Controls.Clear();
-				_foregroundContainer.VScroll.Value = 0f;
+				overlayContainer.Content.Controls.Clear();
+				overlayContainer.VScroll.Value = 0f;
 				SwitchToCategory(button);
 				click();
 			};
 		}
-		_backgroundContainer.Content.Controls.Add(button);
+		categoriesContainer.Content.Controls.Add(button);
 		return button;
 	}
 
@@ -899,7 +898,7 @@ public class PlayerCustomizationScene : AbstractScene
 		dropDown.SelectedItemChanged += delegate(Control container, ListBoxItem box)
 		{
 			then((int)box.Value);
-			_skin.Refresh();
+			playerSkin.Refresh();
 		};
 		container.Add(nameLabel);
 		container.Add(dropDown);
@@ -937,7 +936,7 @@ public class PlayerCustomizationScene : AbstractScene
 		dropDown.SelectedItemChanged += delegate(Control container, ListBoxItem box)
 		{
 			then((T)box.Value);
-			_skin.Refresh();
+			playerSkin.Refresh();
 		};
 		container.Add(nameLabel);
 		container.Add(dropDown);
@@ -945,9 +944,9 @@ public class PlayerCustomizationScene : AbstractScene
 
 	private void ShowColorPicker(string name, Color color, Action<Color> then)
 	{
-		if (_colorPicker != null)
+		if (colorPickerOverlay != null)
 		{
-			_colorPicker.Close();
+			colorPickerOverlay.Close();
 		}
 		Window container = new Window
 		{
@@ -955,7 +954,7 @@ public class PlayerCustomizationScene : AbstractScene
 			AutoSize = AutoSize.HorizontalVertical,
 			Margin = new Margin(8, 8, 0, 8)
 		};
-		_colorPicker = container;
+		colorPickerOverlay = container;
 		Panel panel = new Panel();
 		panel.Size = new Squid.Point(307, 519);
 		panel.ClipFrame.Margin = new Margin(16, 8, 16, 16);
@@ -1137,7 +1136,7 @@ public class PlayerCustomizationScene : AbstractScene
 		};
 		closeButton.MouseClick += delegate
 		{
-			_colorPicker.Close();
+			colorPickerOverlay.Close();
 		};
 		panel.Content.Controls.Add(nameLabel);
 		panel.Content.Controls.Add(pickerContainer);
@@ -1148,7 +1147,7 @@ public class PlayerCustomizationScene : AbstractScene
 		panel.Content.Controls.Add(hexContainer);
 		panel.Content.Controls.Add(hexContainer);
 		panel.Content.Controls.Add(closeButton);
-		container.Show(base.Squid);
+		container.Show(base.Desktop);
 		RGBToHSV(color, out var hueComponent, out var saturationComponent, out var valueComponent);
 		Texture2D colorPickerBackground = new Texture2D(base.Game.Graphics, 250, 250, mipMap: false, SurfaceFormat.Color);
 		int[] colorBackgroundGradient = new int[colorPickerBackground.Width * colorPickerBackground.Height];
@@ -1337,7 +1336,7 @@ public class PlayerCustomizationScene : AbstractScene
 			if (base.Game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Escape))
 			{
 				container.Close();
-				_colorPicker = null;
+				colorPickerOverlay = null;
 			}
 		};
 	}

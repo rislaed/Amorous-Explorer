@@ -2,8 +2,9 @@ using Microsoft.Xna.Framework.Content;
 
 public class MaleSexsceneSounds : NeutralSexsceneSounds
 { // _ecVLwNBaQAiybVyX9cgWCvnbkWe
-	public MaleSexsceneSounds(ContentManager content)
-		: base(content)
+	private static MaleSexsceneSounds singleton;
+
+	public MaleSexsceneSounds(ContentManager content) : base(content)
 	{
 		MoaningSlow.Append("Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow1", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow2", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow3", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow4", "Assets/Sounds/SexScenes/Moaning/Male/Slow/Dragonslow5");
 		MoaningMedium.Append("Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed1", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed2", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed3", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed4", "Assets/Sounds/SexScenes/Moaning/Male/Medium/Dragonmed5");
@@ -11,8 +12,8 @@ public class MaleSexsceneSounds : NeutralSexsceneSounds
 		MoaningRapid.Append("Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid1", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid2", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid3", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid4", "Assets/Sounds/SexScenes/Moaning/Male/Rapid/Dragonrapid5");
 	}
 
-	public static MaleSexsceneSounds Get(ContentManager content)
+	public static MaleSexsceneSounds GetSingleton(ContentManager content)
 	{
-		return new MaleSexsceneSounds(content); // ?
+		return singleton ?? (singleton = new MaleSexsceneSounds(content));
 	}
 }

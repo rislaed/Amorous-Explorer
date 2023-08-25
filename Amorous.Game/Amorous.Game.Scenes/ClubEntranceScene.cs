@@ -4,11 +4,10 @@ namespace Amorous.Game.Scenes;
 
 public class ClubEntranceScene : AbstractScene
 {
-	private KaneNPC _kane;
-	private NPCLayer _kaneLayer;
+	private KaneNPC kane;
+	private NPCLayer kaneLayer;
 
-	public ClubEntranceScene(IAmorous game)
-		: base(game)
+	public ClubEntranceScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/ClubEntrance/Club Front", -535, 0);
 		AddSpriteLayer("Rope Back", "Assets/Scenes/ClubEntrance/Club Front Ropes (behind)", -535, 0);
@@ -19,7 +18,7 @@ public class ClubEntranceScene : AbstractScene
 		Game.Canvas.SetOverscroll(-535, 535, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetState(AmorousData.Prologue) >= AmorousData.PhoneAllowedState)
+		if (data.GetStage(AmorousData.Prologue) >= AmorousData.PhoneAllowedState)
 		{
 			PhoneOverlay.Enabled = true;
 		}
@@ -27,20 +26,20 @@ public class ClubEntranceScene : AbstractScene
 
 	public override void Start()
 	{
-		_kane = base.Game.GetNPCLayerAt<KaneNPC>(LayerOrder.Background);
-		_kaneLayer = GetNPCLayer<KaneNPC>();
-		_kaneLayer.CutsceneChange = delegate
+		kane = base.Game.GetNPCLayerAt<KaneNPC>(LayerOrder.Background);
+		kaneLayer = GetNPCLayer<KaneNPC>();
+		kaneLayer.CutsceneChange = delegate
 		{
-			_kaneLayer.ZOrder = 1;
-			_kaneLayer.LayerOrder = 0;
-			_kane.InTalking = false;
-			_kane.SetEmotion(KaneNPC.EHeads.Angry);
-			_kane.SetPose(KaneNPC.EPoses.Stern);
-			_kane.SetClothes(KaneNPC.EClothes.Shirt, KaneNPC.EClothes.Shorts);
-			_kane.X = -25f;
-			_kane.Y = 180f;
-			_kane.Scale = 0.4f;
-			_kane.Click = OnKaneClick;
+			kaneLayer.ZOrder = 1;
+			kaneLayer.LayerOrder = 0;
+			kane.LockedOnScreen = false;
+			kane.SetEmotion(KaneNPC.EHeads.Angry);
+			kane.SetPose(KaneNPC.EPoses.Stern);
+			kane.SetClothes(KaneNPC.EClothes.Shirt, KaneNPC.EClothes.Shorts);
+			kane.X = -25f;
+			kane.Y = 180f;
+			kane.Scale = 0.4f;
+			kane.Click = OnKaneClick;
 			RefreshLayerOrdering();
 		};
 		ClubEntranceABNPC clubEntranceABNPC = base.Game.GetNPCLayerAt<ClubEntranceABNPC>(LayerOrder.Background);
@@ -75,10 +74,10 @@ public class ClubEntranceScene : AbstractScene
 
 	private void OnKaneClick()
 	{
-		_kaneLayer.ZOrder = 3;
-		_kaneLayer.LayerOrder = 0;
-		_kane.Click = null;
-		_kane.IsHovered = false;
+		kaneLayer.ZOrder = 3;
+		kaneLayer.LayerOrder = 0;
+		kane.Click = null;
+		kane.IsHovered = false;
 		RefreshLayerOrdering();
 		base.Game.PlayCutscene(AmorousData.Kane);
 	}

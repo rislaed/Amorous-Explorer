@@ -5,10 +5,9 @@ namespace Amorous.Game.NPC;
 
 public class SkyeBlueNPC : SkyeNPC
 {
-	public SkyeBlueNPC(IAmorous game)
-		: base(game)
+	public SkyeBlueNPC(IAmorous game) : base(game)
 	{
-		base.Skin = base.Game.Content.Load<Texture2D>("Assets/NPC/Skye/skye expressions (Blue)");
+		base.Texture = base.Game.Content.Load<Texture2D>("Assets/NPC/Skye/skye expressions (Blue)");
 		base.Variations = new Type[2]
 		{
 			typeof(SkyeNPC),

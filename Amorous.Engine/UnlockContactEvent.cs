@@ -6,8 +6,7 @@ public class UnlockContactEvent : AbstractEvent<UnlockContactEventData>
 { // _YTLuu5R7clnJnMHMmlsmzn5h6SN
 	public PlayerData.EPhoneContacts Contact { get; private set; }
 
-	public UnlockContactEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public UnlockContactEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(UnlockContactEventData eventData)
 	{
@@ -24,6 +23,6 @@ public class UnlockContactEvent : AbstractEvent<UnlockContactEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

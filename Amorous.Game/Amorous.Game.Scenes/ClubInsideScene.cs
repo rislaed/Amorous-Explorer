@@ -4,17 +4,16 @@ namespace Amorous.Game.Scenes;
 
 public class ClubInsideScene : AbstractScene
 {
-	private ClubInsideDancerANPC _dancerA;
-	private CobyDancingNPC _coby;
-	private JaxNPC _jax;
-	private BartenderNPC _rou;
-	private ClubStaticSkyeNPC _skye;
-	private ClubStaticSethNPC _seth;
+	private ClubInsideDancerANPC dancerA;
+	private CobyDancingNPC coby;
+	private JaxNPC jax;
+	private BartenderNPC rou;
+	private ClubStaticSkyeNPC skye;
+	private ClubStaticSethNPC seth;
 
-	private readonly bool _showCoby, _showJax, _showSeth, _showSkye;
+	private readonly bool showCoby, showJax, showSeth, showSkye;
 
-	public ClubInsideScene(IAmorous game)
-		: base(game)
+	public ClubInsideScene(IAmorous game) : base(game)
 	{
 		AddAnimatedLayer("Background Left", -1770, 0, 1200, "Assets/Scenes/ClubInside/Clubdance_left", "Assets/Scenes/ClubInside/Clubdancegreen_left");
 		AddAnimatedLayer("Background Middle", 50, 0, 1200, "Assets/Scenes/ClubInside/Clubdance_mid", "Assets/Scenes/ClubInside/Clubdancegreen_mid");
@@ -29,52 +28,52 @@ public class ClubInsideScene : AbstractScene
 		AddClickableLayer("Lounge", "Assets/Scenes/ClubInside/Loungeroom Selectable", 231, 347, OnLoungeClick);
 		SpriteLayer bar = AddSpriteLayer("Bar", "Assets/Scenes/ClubInside/Bar", 1162, 541);
 		bar.LayerOrder = 1;
-		AddForegroundSpriteLayer("Coat check-in", "Assets/Scenes/ClubInside/Service desk coverup", -1234, 516);
-		AddForegroundSpriteLayer("DJ", "Assets/Scenes/ClubInside/DJ Booth Coverup", -718, 314);
-		AddForegroundSpriteLayer("DJ Screen", "Assets/Scenes/ClubInside/Jumbo screen", -701, 385);
-		AddForegroundFadingLayer("Strobe Blue", "Assets/Scenes/ClubInside/blue_strobe", -1425, 100, 1200, 0, 1200);
-		AddForegroundFadingLayer("Strobe Green", "Assets/Scenes/ClubInside/green_strobe", 708, 120, 1200, 600, 600);
-		AddForegroundFadingLayer("Strobe Pink", "Assets/Scenes/ClubInside/pink_strobe", 48, 130, 1200, 1200);
+		AddSpriteLayerAbove("Coat check-in", "Assets/Scenes/ClubInside/Service desk coverup", -1234, 516);
+		AddSpriteLayerAbove("DJ", "Assets/Scenes/ClubInside/DJ Booth Coverup", -718, 314);
+		AddSpriteLayerAbove("DJ Screen", "Assets/Scenes/ClubInside/Jumbo screen", -701, 385);
+		AddFadingLayerAbove("Strobe Blue", "Assets/Scenes/ClubInside/blue_strobe", -1425, 100, 1200, 0, 1200);
+		AddFadingLayerAbove("Strobe Green", "Assets/Scenes/ClubInside/green_strobe", 708, 120, 1200, 600, 600);
+		AddFadingLayerAbove("Strobe Pink", "Assets/Scenes/ClubInside/pink_strobe", 48, 130, 1200, 1200);
 		Game.Canvas.SetCyclingOverscroll(-1770, 1770);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showCoby = true;
-		_showJax = !data.GetFlag(AmorousData.JaxLeftClub);
-		_showSeth = !data.GetFlag(AmorousData.SethLeftClub);
-		_showSkye = !data.GetFlag(AmorousData.SkyeLeftClub);
-		if (data.GetState(AmorousData.SkyeDate) == 20)
+		showCoby = true;
+		showJax = !data.HasFlag(AmorousData.JaxLeftClub);
+		showSeth = !data.HasFlag(AmorousData.SethLeftClub);
+		showSkye = !data.HasFlag(AmorousData.SkyeLeftClub);
+		if (data.GetStage(AmorousData.SkyeDate) == 20)
 		{
-			data.SetStage(AmorousData.SkyeDate, 10);
+			data.InsertStage(AmorousData.SkyeDate, 10);
 		}
 		base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric2);
 	}
 
 	public override void Start()
 	{
-		if (_showJax)
+		if (showJax)
 		{
-			_jax = base.Game.GetNPCLayerAt<JaxNPC>(LayerOrder.Background);
-			_jax.SetEmotion(JaxNPC.EHeads.Happy);
-			_jax.SetPose(JaxNPC.EPoses.Chill);
-			_jax.SetClothes(JaxNPC.EClothes.TuxChest, JaxNPC.EClothes.TuxUnderwear);
-			_jax.X = 1500f;
-			_jax.Y = 580f;
-			_jax.Scale = 0.2f;
-			_jax.Click = OnJaxClick;
+			jax = base.Game.GetNPCLayerAt<JaxNPC>(LayerOrder.Background);
+			jax.SetEmotion(JaxNPC.EHeads.Happy);
+			jax.SetPose(JaxNPC.EPoses.Chill);
+			jax.SetClothes(JaxNPC.EClothes.TuxChest, JaxNPC.EClothes.TuxUnderwear);
+			jax.X = 1500f;
+			jax.Y = 580f;
+			jax.Scale = 0.2f;
+			jax.Click = OnJaxClick;
 			NPCLayer layer = GetNPCLayer<JaxNPC>();
 			layer.ZOrder = 0;
 			layer.LayerOrder = 0;
 		}
 		else
 		{
-			_rou = base.Game.GetNPCLayerAt<BartenderNPC>(LayerOrder.Background);
-			_rou.SetEmotion(BartenderNPC.EHeads.None);
-			_rou.SetPose(BartenderNPC.EPoses.Standing);
-			_rou.SetClothes(BartenderNPC.EClothes.Shirt, BartenderNPC.EClothes.Pants);
-			_rou.X = 1450f;
-			_rou.Y = 380f;
-			_rou.Scale = 0.2f;
-			_rou.Click = OnRouClick;
+			rou = base.Game.GetNPCLayerAt<BartenderNPC>(LayerOrder.Background);
+			rou.SetEmotion(BartenderNPC.EHeads.None);
+			rou.SetPose(BartenderNPC.EPoses.Standing);
+			rou.SetClothes(BartenderNPC.EClothes.Shirt, BartenderNPC.EClothes.Pants);
+			rou.X = 1450f;
+			rou.Y = 380f;
+			rou.Scale = 0.2f;
+			rou.Click = OnRouClick;
 			NPCLayer layer = GetNPCLayer<BartenderNPC>();
 			layer.ZOrder = 0;
 			layer.LayerOrder = 0;
@@ -121,24 +120,24 @@ public class ClubInsideScene : AbstractScene
 		clubDJNPC.SetClothes(ClubDJNPC.EClothes.Shirt, ClubDJNPC.EClothes.Pants);
 		clubDJNPC.X = -400f;
 		clubDJNPC.Y = 500f;
-		clubDJNPC.LockedInLayer = true;
+		clubDJNPC.IsFixedOrder = true;
 		clubDJNPC.Click = OnDJClick;
-		_dancerA = base.Game.GetNPCLayerAt<ClubInsideDancerANPC>(LayerOrder.Foreground);
-		_dancerA.SetEmotion(ClubInsideDancerANPC.EHeads.Happy);
-		_dancerA.SetPose(ClubInsideDancerANPC.EPoses.Dancing);
-		_dancerA.SetClothes(ClubInsideDancerANPC.EClothes.Pants, ClubInsideDancerANPC.EClothes.Shirt);
-		_dancerA.X = -900f;
-		_dancerA.Y = 950f;
-		_dancerA.SetDanceScheme(4, 3);
-		if (_showCoby)
+		dancerA = base.Game.GetNPCLayerAt<ClubInsideDancerANPC>(LayerOrder.Foreground);
+		dancerA.SetEmotion(ClubInsideDancerANPC.EHeads.Happy);
+		dancerA.SetPose(ClubInsideDancerANPC.EPoses.Dancing);
+		dancerA.SetClothes(ClubInsideDancerANPC.EClothes.Pants, ClubInsideDancerANPC.EClothes.Shirt);
+		dancerA.X = -900f;
+		dancerA.Y = 950f;
+		dancerA.SetDanceScheme(4, 3);
+		if (showCoby)
 		{
-			_coby = base.Game.GetNPCLayerAt<CobyDancingNPC>(LayerOrder.Foreground);
-			_coby.SetEmotion(CobyDancingNPC.EHeads.Happy);
-			_coby.SetPose(CobyDancingNPC.EPoses.Dancing);
-			_coby.SetClothes(CobyDancingNPC.EClothes.Shirt, CobyDancingNPC.EClothes.Shorts, CobyDancingNPC.EClothes.Sleeves);
-			_coby.X = -400f;
-			_coby.Y = 1000f;
-			_coby.Click = OnCobyClick;
+			coby = base.Game.GetNPCLayerAt<CobyDancingNPC>(LayerOrder.Foreground);
+			coby.SetEmotion(CobyDancingNPC.EHeads.Happy);
+			coby.SetPose(CobyDancingNPC.EPoses.Dancing);
+			coby.SetClothes(CobyDancingNPC.EClothes.Shirt, CobyDancingNPC.EClothes.Shorts, CobyDancingNPC.EClothes.Sleeves);
+			coby.X = -400f;
+			coby.Y = 1000f;
+			coby.Click = OnCobyClick;
 		}
 		ClubInsideDancerCNPC clubInsideDancerCNPC = base.Game.GetNPCLayerAt<ClubInsideDancerCNPC>(LayerOrder.Foreground);
 		clubInsideDancerCNPC.SetEmotion(ClubInsideDancerCNPC.EHeads.Smirk);
@@ -158,19 +157,19 @@ public class ClubInsideScene : AbstractScene
 		clubInsideDancerDNPC.SetClothes(ClubInsideDancerDNPC.EClothes.Shirt, ClubInsideDancerDNPC.EClothes.Pants);
 		clubInsideDancerDNPC.X = 700f;
 		clubInsideDancerDNPC.Y = 960f;
-		if (_showSeth)
+		if (showSeth)
 		{
-			_seth = base.Game.GetNPCLayerAt<ClubStaticSethNPC>(LayerOrder.Foreground);
-			_seth.X = 1612f;
-			_seth.Y = 420f;
-			_seth.Click = OnSethClick;
+			seth = base.Game.GetNPCLayerAt<ClubStaticSethNPC>(LayerOrder.Foreground);
+			seth.X = 1612f;
+			seth.Y = 420f;
+			seth.Click = OnSethClick;
 		}
-		if (_showSkye)
+		if (showSkye)
 		{
-			_skye = base.Game.GetNPCLayerAt<ClubStaticSkyeNPC>(LayerOrder.Background);
-			_skye.X = 2212f;
-			_skye.Y = 438f;
-			_skye.Click = OnSkyeClick;
+			skye = base.Game.GetNPCLayerAt<ClubStaticSkyeNPC>(LayerOrder.Background);
+			skye.X = 2212f;
+			skye.Y = 438f;
+			skye.Click = OnSkyeClick;
 			GetNPCLayer<ClubStaticSkyeNPC>().LayerOrder = 1;
 		}
 		RefreshLayerOrdering();
@@ -209,7 +208,7 @@ public class ClubInsideScene : AbstractScene
 	private void OnCobyClick()
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetState(AmorousData.Prologue) >= AmorousData.PrologueStateCompleted)
+		if (data.GetStage(AmorousData.Prologue) >= AmorousData.PrologueStateCompleted)
 		{
 			base.Game.PlayCutscene(AmorousData.CobyClub);
 		}

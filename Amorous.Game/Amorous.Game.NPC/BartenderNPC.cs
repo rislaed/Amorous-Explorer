@@ -26,8 +26,7 @@ public class BartenderNPC : LayerNPC<BartenderNPC.EHeads, BartenderNPC.EPoses, B
 	public static string Name = "Rou";
 	public static Color Color = new Color(116, 116, 116);
 
-	public BartenderNPC(IAmorous game)
-		: base(game, "Assets/NPC/Bartender", 1f)
+	public BartenderNPC(IAmorous game) : base(game, "Assets/NPC/Bartender", 1f)
 	{
 		Width = 904;
 		Height = 1008;

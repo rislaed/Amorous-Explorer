@@ -26,8 +26,7 @@ public class ChefAssissantNPC : LayerNPC<ChefAssissantNPC.EHeads, ChefAssissantN
 	public static string Name = "Wraak Veldheer";
 	public static Color Color = new Color(204, 149, 0);
 
-	public ChefAssissantNPC(IAmorous game)
-		: base(game, "Assets/NPC/ChefAssissant", 1f)
+	public ChefAssissantNPC(IAmorous game) : base(game, "Assets/NPC/ChefAssissant", 1f)
 	{
 		AddPose(EPoses.Standing, "Wraak Veldheer - Nude");
 		AddClothes(EPoses.Standing, EClothes.Pants, "Wraak Veldheer - Pants").AsPants().AsCloth();

@@ -26,8 +26,7 @@ public class CosplayerJacquelineNPC : LayerNPC<CosplayerJacquelineNPC.EHeads, Co
 	public static string Name = "Jacqueline Knight";
 	public static Color Color = new Color(138, 148, 170);
 
-	public CosplayerJacquelineNPC(IAmorous game)
-		: base(game, "Assets/NPC/CosplayerJacqueline", 1f)
+	public CosplayerJacquelineNPC(IAmorous game) : base(game, "Assets/NPC/CosplayerJacqueline", 1f)
 	{
 		AddPose(EPoses.Standing, "Jacqueline Knight (nude)");
 		AddClothes(EPoses.Standing, EClothes.Shirt, "Jacqueline Knight (shirt)").AsShirt().AsNudes();

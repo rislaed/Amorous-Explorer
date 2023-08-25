@@ -5,12 +5,11 @@ namespace Amorous.Game.Scenes;
 public class ClubUpstairsScene : AbstractScene
 {
 	private const int OFFSET_LEFT = -1295;
-	private RoseWoodNPC _roseWood;
-	private ClubStaticZenithNPC _zenith;
-	private readonly bool _showZenith;
+	private RoseWoodNPC roseWood;
+	private ClubStaticZenithNPC zenith;
+	private readonly bool showZenith;
 
-	public ClubUpstairsScene(IAmorous game)
-		: base(game)
+	public ClubUpstairsScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/ClubUpstairs/Upstairs Hall main", OFFSET_LEFT, 0);
 		AddClickableLayer("Elevator", "Assets/Scenes/ClubUpstairs/Elevator Door Selectable", -919, 103, OnDownstairsClick);
@@ -19,8 +18,8 @@ public class ClubUpstairsScene : AbstractScene
 		Game.Canvas.SetOverscroll(OFFSET_LEFT, 1295, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showZenith = !data.GetFlag(AmorousData.ZenithLeftClub);
-		if (_showZenith)
+		showZenith = !data.HasFlag(AmorousData.ZenithLeftClub);
+		if (showZenith)
 		{
 			AddSpriteLayer("Shadow", "Assets/Scenes/ClubUpstairs/ShadowZenith", 540, 712);
 			AddSpriteLayer("Shadow", "Assets/Scenes/ClubUpstairs/ShadowRose", 930, 700);
@@ -29,21 +28,21 @@ public class ClubUpstairsScene : AbstractScene
 
 	public override void Start()
 	{
-		if (_showZenith)
+		if (showZenith)
 		{
-			_roseWood = base.Game.GetNPCLayerAt<RoseWoodNPC>(LayerOrder.Background);
-			_roseWood.InTalking = false;
-			_roseWood.SetEmotion(RoseWoodNPC.EHeads.None);
-			_roseWood.SetPose(RoseWoodNPC.EPoses.Standing);
-			_roseWood.SetClothes(RoseWoodNPC.EClothes.Shirt, RoseWoodNPC.EClothes.Shorts);
-			_roseWood.X = 950f;
-			_roseWood.Y = 160f;
-			_roseWood.Scale = 0.4f;
-			_roseWood.FlipX = true;
-			_zenith = base.Game.GetNPCLayerAt<ClubStaticZenithNPC>(LayerOrder.Foreground);
-			_zenith.X = 580f;
-			_zenith.Y = 10f;
-			_zenith.Click = OnZenithClick;
+			roseWood = base.Game.GetNPCLayerAt<RoseWoodNPC>(LayerOrder.Background);
+			roseWood.LockedOnScreen = false;
+			roseWood.SetEmotion(RoseWoodNPC.EHeads.None);
+			roseWood.SetPose(RoseWoodNPC.EPoses.Standing);
+			roseWood.SetClothes(RoseWoodNPC.EClothes.Shirt, RoseWoodNPC.EClothes.Shorts);
+			roseWood.X = 950f;
+			roseWood.Y = 160f;
+			roseWood.Scale = 0.4f;
+			roseWood.FlipX = true;
+			zenith = base.Game.GetNPCLayerAt<ClubStaticZenithNPC>(LayerOrder.Foreground);
+			zenith.X = 580f;
+			zenith.Y = 10f;
+			zenith.Click = OnZenithClick;
 		}
 	}
 

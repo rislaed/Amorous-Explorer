@@ -4,21 +4,21 @@ using Facepunch.Steamworks;
 
 public class SteamObserver
 { // _KDiaUloddpdv1QwixDEBIJs6IMA
-	private Client _client;
+	private Client client;
 
 	public bool Initialize(uint version, IAmorous game)
 	{
 		try
 		{
-			_client = new Client(version);
-			if (!_client.IsValid)
+			client = new Client(version);
+			if (!client.IsValid)
 			{
 				throw new Exception("Invalid Steam-client");
 			}
-			_client.CustomInitialize();
-			_client.HookScreenshots(hook: true);
-			_client.ScreenshotRequest += game.RequestScreenshot;
-			Logger.Success("Successfully loaded Steamworks, welcome {0}!", _client.Username);
+			client.CustomInitialize();
+			client.HookScreenshots(hook: true);
+			client.ScreenshotRequest += game.RequestScreenshot;
+			Logger.Success("Successfully loaded Steamworks, welcome {0}!", client.Username);
 			return true;
 		}
 		catch (Exception)
@@ -30,26 +30,26 @@ public class SteamObserver
 
 	public void Update()
 	{
-		_client.Update();
+		client.Update();
 	}
 
 	public void AddScreenshotToLibrary(string path, int width, int height)
 	{
-		_client.Screenshots.AddScreenshotToLibrary(Path.Combine(Directory.GetCurrentDirectory(), path), width, height);
+		client.Screenshots.AddScreenshotToLibrary(Path.Combine(Directory.GetCurrentDirectory(), path), width, height);
 	}
 
 	public void TriggerAchievement(string name)
 	{
-		_client.Achievements.Trigger(name);
+		client.Achievements.Trigger(name);
 	}
 
 	public void OpenAchievements()
 	{
-		_client.Overlay.OpenAchievements(_client.SteamId);
+		client.Overlay.OpenAchievements(client.SteamId);
 	}
 
 	public void OpenUrl(string url)
 	{
-		_client.Overlay.OpenUrl(url);
+		client.Overlay.OpenUrl(url);
 	}
 }

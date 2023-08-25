@@ -3,17 +3,16 @@ using Microsoft.Xna.Framework;
 
 public class ShowGameBoxEvent : AbstractEvent<ShowGameBoxEventData>
 { // _4oLylSYIsuljNZSlkquQd6azTzG
-	public ShowGameBoxEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public ShowGameBoxEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void Start()
 	{
 		base.Start();
-		PhoneOverlay.Get().ShowGameBox();
+		PhoneOverlay.GetSingleton().ShowGameBox();
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

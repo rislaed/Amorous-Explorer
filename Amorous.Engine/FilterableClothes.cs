@@ -9,8 +9,8 @@ public class FilterableClothes : IFilterable
 	public bool IsShirt { get; set; }
 	public bool IsPants { get; set; }
 	public bool Updatable { get; set; }
-	public bool IsCensoringShirt { get; set; }
-	public bool IsCensoringPants { get; set; }
+	public bool CensoringShirt { get; set; }
+	public bool CensoringPants { get; set; }
 
 	public FilterableClothes(string name, params string[] parts)
 	{
@@ -55,15 +55,15 @@ public class FilterableClothes : IFilterable
 		return this;
 	}
 
-	public FilterableClothes AsCensoredShirt()
+	public FilterableClothes AsCensoringShirt()
 	{
-		IsCensoringShirt = true;
+		CensoringShirt = true;
 		return this;
 	}
 
-	public FilterableClothes AsCensoredPants()
+	public FilterableClothes AsCensoringPants()
 	{
-		IsCensoringPants = true;
+		CensoringPants = true;
 		return this;
 	}
 

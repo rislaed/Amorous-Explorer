@@ -26,8 +26,7 @@ public class JasonDartsonNPC : LayerNPC<JasonDartsonNPC.EHeads, JasonDartsonNPC.
 	public static string Name = "Jason Dartson";
 	public static Color Color = new Color(122, 53, 54);
 
-	public JasonDartsonNPC(IAmorous game)
-		: base(game, "Assets/NPC/JasonDartson", 0.9f)
+	public JasonDartsonNPC(IAmorous game) : base(game, "Assets/NPC/JasonDartson", 0.9f)
 	{
 		AddPose(EPoses.Standing, "Jason Body").AddNudes("Jason Cock");
 		AddClothes(EPoses.Standing, EClothes.Pants, "Jason Pants").AsPants().AsCloth();

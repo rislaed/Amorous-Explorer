@@ -2,8 +2,7 @@ namespace Amorous.Game.Scenes;
 
 public class ArtGalleryScene : AbstractScene
 {
-	public ArtGalleryScene(IAmorous game)
-		: base(game)
+	public ArtGalleryScene(IAmorous game) : base(game)
 	{
 		if (Censorship.Censored)
 		{

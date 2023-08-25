@@ -26,8 +26,7 @@ public class LifeguardNPC : LayerNPC<LifeguardNPC.EHeads, LifeguardNPC.EPoses, L
 	public static string Name = "Riptide";
 	public static Color Color = new Color(244, 146, 66);
 
-	public LifeguardNPC(IAmorous game)
-		: base(game, "Assets/NPC/Lifeguard", 1f)
+	public LifeguardNPC(IAmorous game) : base(game, "Assets/NPC/Lifeguard", 1f)
 	{
 		AddPose(EPoses.Standing, "Riptide - Nude");
 		AddClothes(EPoses.Standing, EClothes.Pants, "Riptide - Pants").AsPants().AsCloth();

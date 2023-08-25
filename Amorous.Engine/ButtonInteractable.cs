@@ -4,9 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class ButtonInteractable : SpriteInteractable
 { // _iHJrndJdM1jj9TEnuU3BvgdDuvf
-	private string _text;
-	private Vector2 _bounds;
-	private Vector2 _location;
+	private string text;
+	private Vector2 bounds;
+	private Vector2 location;
 
 	public SpriteFont Font { get; private set; }
 
@@ -14,24 +14,23 @@ public class ButtonInteractable : SpriteInteractable
 	{
 		get
 		{
-			return _text;
+			return text;
 		}
 		set
 		{
-			_text = value;
-			if (!string.IsNullOrEmpty(_text))
+			text = value;
+			if (!string.IsNullOrEmpty(text))
 			{
-				_bounds = Font.MeasureString(_text);
+				bounds = Font.MeasureString(text);
 			}
 			else
 			{
-				_bounds = Vector2.Zero;
+				bounds = Vector2.Zero;
 			}
 		}
 	}
 
-	public ButtonInteractable(Texture2D foreground, Texture2D background, SpriteFont font, string text, Color color, Action click)
-		: base(foreground, background, click)
+	public ButtonInteractable(Texture2D foreground, Texture2D background, SpriteFont font, string text, Color color, Action click) : base(foreground, background, click)
 	{
 		Font = font;
 		Text = text;
@@ -43,9 +42,9 @@ public class ButtonInteractable : SpriteInteractable
 		base.Draw(spriteBatch);
 		if (!string.IsNullOrEmpty(Text))
 		{
-			_location.X = (float)base.X + ((float)Bounds.Width - _bounds.X) / 2f;
-			_location.Y = (float)base.Y + ((float)Bounds.Height - _bounds.Y) / 2f;
-			spriteBatch.DrawString(Font, Text, _location, Color);
+			location.X = (float)base.X + ((float)Bounds.Width - bounds.X) / 2f;
+			location.Y = (float)base.Y + ((float)Bounds.Height - bounds.Y) / 2f;
+			spriteBatch.DrawString(Font, Text, location, Color);
 		}
 	}
 }

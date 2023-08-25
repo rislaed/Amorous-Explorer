@@ -26,7 +26,7 @@ public class ClubInsideDancerDNPC : SpineNPC<ClubInsideDancerDNPC.EHeads, ClubIn
 	public ClubInsideDancerDNPC(IAmorous game)
 		: base(game, "Assets/NPC/ClubInsideStatic/Dancer D", 0.8f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("Dancing");
+		base.Skeleton.StartAnimationWithLooping("Dancing");
 		AddEmotion(EHeads.Smirk, "Head");
 		AddPose(EPoses.Dancing, "Arm right", "Body", "Left forearm", "Tail").AddNudes("Cock");
 		AddClothes(EPoses.Dancing, EClothes.Shirt, "Shirt", "Shirt arm right", "Shirt left forearm").AsShirt().AsNudes();

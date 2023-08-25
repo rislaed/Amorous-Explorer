@@ -6,25 +6,24 @@ using Microsoft.Xna.Framework;
 
 public class CommandEvent : AbstractEvent<CommandEventData>
 { // _ReclSEGHYgrEBUgjU95b2v5sTCe
-	private CommandEventData _eventData;
-	private Func<bool> _next;
-	private Action _update;
+	private CommandEventData eventData;
+	private Func<bool> next;
+	private Action update;
 
-	public CommandEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public CommandEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(CommandEventData eventData)
 	{
 		base.SetData(eventData);
-		_eventData = eventData;
+		this.eventData = eventData;
 	}
 
 	public override void Start()
 	{
 		base.Start();
-		if (!(_eventData.Command == typeof(Commands.CookingSelectIngredient).Name))
+		if (!(eventData.Command == typeof(Commands.CookingSelectIngredient).Name))
 		{
-			if (_eventData.Command == typeof(Commands.CookingShowResult).Name)
+			if (eventData.Command == typeof(Commands.CookingShowResult).Name)
 			{
 				if (!(base.Cutscene.Game.Scene is CookingMiniGameScene))
 				{
@@ -32,36 +31,36 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 				}
 				CookingMiniGameScene cookingScene = base.Cutscene.Game.Scene as CookingMiniGameScene;
 				cookingScene.ShowResult();
-				_next = null;
-				_update = delegate
+				next = null;
+				update = delegate
 				{
-					base.Completable = cookingScene.IsDone;
+					base.IsCompleted = cookingScene.IsShowingResultCompleted;
 				};
 			}
-			else if (!(_eventData.Command == typeof(Commands.RemyShowNudes).Name))
+			else if (!(eventData.Command == typeof(Commands.RemyShowNudes).Name))
 			{
-				if (_eventData.Command == typeof(Commands.RemyHideNudes).Name)
+				if (eventData.Command == typeof(Commands.RemyHideNudes).Name)
 				{
-					PhoneOverlay.Get().HideRemyNudes();
-					base.Completable = true;
+					PhoneOverlay.GetSingleton().HideRemyNudes();
+					base.IsCompleted = true;
 				}
-				else if (_eventData.Command == typeof(Commands.PlayCutscene).Name)
+				else if (eventData.Command == typeof(Commands.PlayCutscene).Name)
 				{
-					base.Cutscene.Game.PlayCutscene(_eventData.Parameters["Cutscene"]);
-					base.Completable = true;
+					base.Cutscene.Game.PlayCutscene(eventData.Parameters["Cutscene"]);
+					base.IsCompleted = true;
 				}
 				else
 				{
-					TypingDialogue.Type("A unknown command is triggered: " + _eventData.Command, "[Command]", Color.Green);
-					_next = Skip;
-					_update = Complete;
+					TypingDialogue.Type("A unknown command is triggered: " + eventData.Command, "[Command]", Color.Green);
+					next = Skip;
+					update = Complete;
 				}
 			}
 			else
 			{
-				int.TryParse(_eventData.Parameters["Nude"], out var result);
-				PhoneOverlay.Get().UpdateRemyNudes(result);
-				base.Completable = true;
+				int.TryParse(eventData.Parameters["Nude"], out var result);
+				PhoneOverlay.GetSingleton().UpdateRemyNudes(result);
+				base.IsCompleted = true;
 			}
 		}
 		else
@@ -72,22 +71,22 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 			}
 			CookingMiniGameScene cookingScene = base.Cutscene.Game.Scene as CookingMiniGameScene;
 			cookingScene.IsSelectingIngredient = true;
-			cookingScene.Completable = false;
-			_next = null;
-			_update = delegate
+			cookingScene.IsSelectingIngredientCompleted = false;
+			next = null;
+			update = delegate
 			{
-				base.Completable = cookingScene.Completable;
+				base.IsCompleted = cookingScene.IsSelectingIngredientCompleted;
 			};
 		}
 	}
 
 	public override bool Next()
 	{
-		if (_next == null)
+		if (next == null)
 		{
 			return false;
 		}
-		return _next();
+		return next();
 	}
 
 	private bool Skip()
@@ -97,14 +96,14 @@ public class CommandEvent : AbstractEvent<CommandEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		if (_update != null)
+		if (update != null)
 		{
-			_update();
+			update();
 		}
 	}
 
 	private void Complete()
 	{
-		base.Completable = TypingDialogue.Completable;
+		base.IsCompleted = TypingDialogue.IsCompleted;
 	}
 }

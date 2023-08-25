@@ -59,24 +59,24 @@ public class XmlSerializableDictionary<T, U> : Dictionary<T, U>, IXmlSerializabl
 
 	public override int GetHashCode()
 	{
-		int code = 0;
+		int hash = 0;
 		int index = 1;
 		foreach (U value in base.Values)
 		{
 			object next = value;
 			try
 			{
-				code ^= next.GetHashCode() + index++;
+				hash ^= next.GetHashCode() + index++;
 			}
 			catch (Exception)
 			{
 				return base.GetHashCode();
 			}
 		}
-		if (code == 0)
+		if (hash == 0)
 		{
 			return base.GetHashCode();
 		}
-		return code;
+		return hash;
 	}
 }

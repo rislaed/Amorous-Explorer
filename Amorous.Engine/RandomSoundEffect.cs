@@ -5,33 +5,33 @@ using Microsoft.Xna.Framework.Content;
 
 public class RandomSoundEffect
 { // _hqmu3NsKXqziXGfVh3dt79G0fye
-	private readonly Dictionary<string, SoundEffect> _sounds;
-	private readonly ContentManager _content;
+	private readonly Dictionary<string, SoundEffect> sounds;
+	private readonly ContentManager content;
 
 	public RandomSoundEffect(ContentManager content)
 	{
-		_content = content;
-		_sounds = new Dictionary<string, SoundEffect>();
+		this.content = content;
+		sounds = new Dictionary<string, SoundEffect>();
 	}
 
 	public void Append(params string[] keys)
 	{
 		foreach (string key in keys)
 		{
-			_sounds.Add(key, null);
+			sounds.Add(key, null);
 		}
 	}
 
 	public void PlayNext(float volume = 1f)
 	{
-		if (_sounds.Count != 0)
+		if (sounds.Count != 0)
 		{
-			string oneOf = _sounds.Keys.ElementAt(Utils.Random(0, _sounds.Count));
-			if (_sounds[oneOf] == null)
+			string oneOf = sounds.Keys.ElementAt(Utils.Random(0, sounds.Count));
+			if (sounds[oneOf] == null)
 			{
-				_sounds[oneOf] = _content.Load<SoundEffect>(oneOf);
+				sounds[oneOf] = content.Load<SoundEffect>(oneOf);
 			}
-			_sounds[oneOf].Play(Options.Data.MasterVolume * Options.Data.SfxVolume * volume, 0f, 0f);
+			sounds[oneOf].Play(Options.Config.MasterVolume * Options.Config.SfxVolume * volume, 0f, 0f);
 		}
 	}
 }

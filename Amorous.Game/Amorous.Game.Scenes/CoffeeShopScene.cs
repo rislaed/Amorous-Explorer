@@ -2,45 +2,44 @@ namespace Amorous.Game.Scenes;
 
 public class CoffeeShopScene : AbstractScene
 {
-	public const string VariantJax = "Jax";
-	public const string VariantSeth = "Seth";
-	public const string VariantNone = "Default";
+	public const string VARIANT_JAX = "Jax";
+	public const string VARIANT_SETH = "Seth";
+	public const string VARIANT_NONE = "Default";
 
-	private readonly SpriteLayer _backgroundJax;
-	private readonly SpriteLayer _backgroundSeth;
-	private readonly SpriteLayer _backgroundNone;
+	private readonly SpriteLayer jaxOverlay;
+	private readonly SpriteLayer sethOverlay;
+	private readonly SpriteLayer noneOverlay;
 
-	public CoffeeShopScene(IAmorous game)
-		: base(game)
+	public CoffeeShopScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/CoffeeShop/Background", 0, 0);
-		_backgroundJax = AddForegroundSpriteLayer("Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
-		_backgroundSeth = AddForegroundSpriteLayer("Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
-		_backgroundNone = AddForegroundSpriteLayer("Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
-		SwitchToSubscene(VariantNone);
+		jaxOverlay = AddSpriteLayerAbove("Background", "Assets/Scenes/CoffeeShop/Jax coffee", 0, 0);
+		sethOverlay = AddSpriteLayerAbove("Background", "Assets/Scenes/CoffeeShop/Seth coffee", 0, 0);
+		noneOverlay = AddSpriteLayerAbove("Background", "Assets/Scenes/CoffeeShop/Remy coffee", 0, 0);
+		SwitchToSubscene(VARIANT_NONE);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.OMorroNaoTemVezTrack, 0.4f);
 	}
 
 	public override void SwitchToSubscene(string subscene)
 	{
 		base.SwitchToSubscene(subscene);
-		_backgroundJax.Visible = false;
-		_backgroundSeth.Visible = false;
-		_backgroundNone.Visible = false;
-		if (!(subscene == VariantJax))
+		jaxOverlay.Visible = false;
+		sethOverlay.Visible = false;
+		noneOverlay.Visible = false;
+		if (!(subscene == VARIANT_JAX))
 		{
-			if (!(subscene == VariantSeth))
+			if (!(subscene == VARIANT_SETH))
 			{
-				_backgroundNone.Visible = true;
+				noneOverlay.Visible = true;
 			}
 			else
 			{
-				_backgroundSeth.Visible = true;
+				sethOverlay.Visible = true;
 			}
 		}
 		else
 		{
-			_backgroundJax.Visible = true;
+			jaxOverlay.Visible = true;
 		}
 	}
 }

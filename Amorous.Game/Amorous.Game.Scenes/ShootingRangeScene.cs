@@ -2,8 +2,7 @@ namespace Amorous.Game.Scenes;
 
 public class ShootingRangeScene : AbstractScene
 {
-	public ShootingRangeScene(IAmorous game)
-		: base(game)
+	public ShootingRangeScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Backdrop", "Assets/Scenes/ShootingRange/Backdrop", 600, 180);
 		AddSpriteLayer("Background", "Assets/Scenes/ShootingRange/Background", 0, 0);

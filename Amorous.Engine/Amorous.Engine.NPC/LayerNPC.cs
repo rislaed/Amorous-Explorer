@@ -5,8 +5,7 @@ namespace Amorous.Engine.NPC;
 
 public abstract class LayerNPC<THead, TPose, TClothes> : BreathingNPC where THead : struct, IConvertible where TPose : struct, IConvertible where TClothes : struct, IConvertible
 {
-	protected LayerNPC(IAmorous game, string sprite, float scale = 1f)
-		: base(game, sprite, scale) {}
+	protected LayerNPC(IAmorous game, string sprite, float scale = 1f) : base(game, sprite, scale) {}
 
 	public FilterableEmotion AddEmotion(THead emotion, params string[] parts)
 	{

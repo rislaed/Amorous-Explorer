@@ -2,44 +2,43 @@ namespace Amorous.Game.Scenes;
 
 public class CinemaScene : AbstractScene
 {
-	public const string VariantNone = "None";
-	public const string VariantWestern = "Western";
-	public const string VariantRomantic = "Romantic";
-	public const string VariantHorror = "Horror";
+	public const string VARIANT_NONE = "None";
+	public const string VARIANT_WESTERN = "Western";
+	public const string VARIANT_ROMANTIC = "Romantic";
+	public const string VARIANT_HORROR = "Horror";
 
-	private SpriteLayer BackgroundNone, BackgroundWestern, BackgroundRomantic, BackgroundHorror;
+	private SpriteLayer backgroundNone, backgroundWestern, backgroundRomantic, ackgroundHorror;
 
-	public CinemaScene(IAmorous game)
-		: base(game)
+	public CinemaScene(IAmorous game) : base(game)
 	{
-		BackgroundNone = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie None", 0, 0);
-		BackgroundWestern = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie Action-Western", 0, 0);
-		BackgroundRomantic = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie Comedy-Romantic", 0, 0);
-		BackgroundHorror = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie Noire Gloomy", 0, 0);
-		SwitchToSubscene(VariantNone);
+		backgroundNone = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie None", 0, 0);
+		backgroundWestern = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie Action-Western", 0, 0);
+		backgroundRomantic = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie Comedy-Romantic", 0, 0);
+		ackgroundHorror = AddSpriteLayer("Background", "Assets/Scenes/Cinema/Movie Noire Gloomy", 0, 0);
+		SwitchToSubscene(VARIANT_NONE);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 
 	public override void SwitchToSubscene(string subscene)
 	{
 		base.SwitchToSubscene(subscene);
-		BackgroundWestern.Visible = false;
-		BackgroundRomantic.Visible = false;
-		BackgroundHorror.Visible = false;
-		BackgroundNone.Visible = false;
+		backgroundWestern.Visible = false;
+		backgroundRomantic.Visible = false;
+		ackgroundHorror.Visible = false;
+		backgroundNone.Visible = false;
 		switch (subscene)
 		{
-			case VariantRomantic:
-				BackgroundRomantic.Visible = true;
+			case VARIANT_ROMANTIC:
+				backgroundRomantic.Visible = true;
 				break;
 			default:
-				BackgroundNone.Visible = true;
+				backgroundNone.Visible = true;
 				break;
-			case VariantHorror:
-				BackgroundHorror.Visible = true;
+			case VARIANT_HORROR:
+				ackgroundHorror.Visible = true;
 				break;
-			case VariantWestern:
-				BackgroundWestern.Visible = true;
+			case VARIANT_WESTERN:
+				backgroundWestern.Visible = true;
 				break;
 		}
 	}

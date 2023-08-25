@@ -26,8 +26,7 @@ public class VarryanceNPC : LayerNPC<VarryanceNPC.EHeads, VarryanceNPC.EPoses, V
 	public static string Name = "Varryance";
 	public static Color Color = new Color(162, 65, 159);
 
-	public VarryanceNPC(IAmorous game)
-		: base(game, "Assets/NPC/Varryance", 1f)
+	public VarryanceNPC(IAmorous game) : base(game, "Assets/NPC/Varryance", 1f)
 	{
 		Width = 850;
 		Height = 1649;

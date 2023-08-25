@@ -7,8 +7,7 @@ public class JaxContactsCheckEvent : AbstractEvent<JaxContactsCheckEventData>
 	public int OneOrTwoID { get; set; }
 	public int ThreeOrMoreID { get; set; }
 
-	public JaxContactsCheckEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public JaxContactsCheckEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(JaxContactsCheckEventData eventData)
 	{
@@ -37,6 +36,6 @@ public class JaxContactsCheckEvent : AbstractEvent<JaxContactsCheckEventData>
 		{
 			base.NextID = OnlyJaxID;
 		}
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

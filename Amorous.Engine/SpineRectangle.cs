@@ -1,28 +1,28 @@
 using System;
 using Spine;
 
-public class SpineBounds
+public class SpineRectangle
 { // _NxPDyghimJKCwBg53DaNTazjQ5k
-	private readonly ExposedList<Polygon> _buffer;
-	private readonly ExposedList<Polygon> _polygons;
+	private readonly ExposedList<Polygon> buffer;
+	private readonly ExposedList<Polygon> polygons;
 
-	public float X1 { get; private set; }
-	public float Y1 { get; private set; }
-	public float X2 { get; private set; }
-	public float Y2 { get; private set; }
-	public float Width => X2 - X1;
-	public float Height => Y2 - Y1;
+	public float Left { get; private set; }
+	public float Top { get; private set; }
+	public float Right { get; private set; }
+	public float Bottom { get; private set; }
+	public float Width => Right - Left;
+	public float Height => Bottom - Top;
 
-	public SpineBounds()
+	public SpineRectangle()
 	{
-		_buffer = new ExposedList<Polygon>();
-		_polygons = new ExposedList<Polygon>();
+		buffer = new ExposedList<Polygon>();
+		polygons = new ExposedList<Polygon>();
 	}
 
 	public void Update(Skeleton skeleton)
 	{
-		_buffer.AddRange(_polygons);
-		_polygons.Clear();
+		buffer.AddRange(polygons);
+		polygons.Clear();
 		ExposedList<Slot> slots = skeleton.Slots;
 		int count = slots.Count;
 		for (int i = 0; i < count; i++)
@@ -38,7 +38,7 @@ public class SpineBounds
 				{
 					MeshAttachment mesh = slot.Attachment as MeshAttachment;
 					Polygon polygon = ComputePolygon();
-					_polygons.Add(polygon);
+					polygons.Add(polygon);
 					polygon.Vertices = new float[mesh.Vertices.Length];
 					mesh.ComputeWorldVertices(slot, polygon.Vertices);
 				}
@@ -46,7 +46,7 @@ public class SpineBounds
 				{
 					SkinnedMeshAttachment skinnedMesh = slot.Attachment as SkinnedMeshAttachment;
 					Polygon polygon = ComputePolygon();
-					_polygons.Add(polygon);
+					polygons.Add(polygon);
 					polygon.Vertices = new float[skinnedMesh.UVs.Length];
 					skinnedMesh.ComputeWorldVertices(slot, polygon.Vertices);
 				}
@@ -55,17 +55,17 @@ public class SpineBounds
 			{
 				RegionAttachment region = slot.Attachment as RegionAttachment;
 				Polygon polygon = ComputePolygon();
-				_polygons.Add(polygon);
+				polygons.Add(polygon);
 				polygon.Vertices = new float[8];
 				region.ComputeWorldVertices(slot.Bone, polygon.Vertices);
 			}
 		}
-		if (_polygons.Count == 0)
+		if (polygons.Count == 0)
 		{
-			X1 = 0f;
-			Y1 = 0f;
-			X2 = 0f;
-			Y2 = 0f;
+			Left = 0f;
+			Top = 0f;
+			Right = 0f;
+			Bottom = 0f;
 		}
 		else
 		{
@@ -75,11 +75,11 @@ public class SpineBounds
 
 	private Polygon ComputePolygon()
 	{
-		int count = _buffer.Count;
+		int count = buffer.Count;
 		if (count > 0)
 		{
-			Polygon polygon = _buffer.Items[count - 1];
-			_buffer.RemoveAt(count - 1);
+			Polygon polygon = buffer.Items[count - 1];
+			buffer.RemoveAt(count - 1);
 			return polygon;
 		}
 		return new Polygon();
@@ -87,27 +87,27 @@ public class SpineBounds
 
 	private void Refresh()
 	{
-		float x1 = 2.1474836E+09f;
-		float y1 = 2.1474836E+09f;
-		float x2 = -2.1474836E+09f;
-		float y2 = -2.1474836E+09f;
-		for (int i = 0, k = _polygons.Count; i < k; i++)
+		float left = 2.1474836E+09f;
+		float top = 2.1474836E+09f;
+		float right = -2.1474836E+09f;
+		float bottom = -2.1474836E+09f;
+		for (int i = 0, k = polygons.Count; i < k; i++)
 		{
-			Polygon polygon = _polygons.Items[i];
+			Polygon polygon = polygons.Items[i];
 			float[] vertices = polygon.Vertices;
 			for (int j = 0, l = vertices.Length; j < l; j += 2)
 			{
 				float x = vertices[j];
 				float y = vertices[j + 1];
-				x1 = Math.Min(x1, x);
-				y1 = Math.Min(y1, y);
-				x2 = Math.Max(x2, x);
-				y2 = Math.Max(y2, y);
+				left = Math.Min(left, x);
+				top = Math.Min(top, y);
+				right = Math.Max(right, x);
+				bottom = Math.Max(bottom, y);
 			}
 		}
-		X1 = x1;
-		Y1 = y1;
-		X2 = x2;
-		Y2 = y2;
+		Left = left;
+		Top = top;
+		Right = right;
+		Bottom = bottom;
 	}
 }

@@ -2,55 +2,55 @@ using Microsoft.Xna.Framework;
 
 public class PhoneUrgentlyRinging
 { // _dvyBDFOZwoBLf9qqHSfHYLLXVwP
-	private const int Cycle = 6;
+	private const int CYCLE = 6;
 
-	private bool _message, _appeared;
-	private float _ticks;
-	private readonly IAmorous _game;
+	private bool messaging, appearing;
+	private float ticks;
+	private readonly IAmorous game;
 
 	public PhoneUrgentlyRinging(IAmorous game)
 	{
-		_game = game;
+		this.game = game;
 	}
 
 	public void Update(GameTime gameTime)
 	{
-		if (!PhoneOverlay.Enabled || _game.Cutscene != null)
+		if (!PhoneOverlay.Enabled || game.Cutscene != null)
 		{
 			return;
 		}
-		if (PhoneOverlay.Get().Pose != PhoneOverlay.ArmPose.ArmUp)
+		if (PhoneOverlay.GetSingleton().ArmPose != PhoneOverlay.EArmPose.ArmUp)
 		{
-			if (_appeared)
+			if (appearing)
 			{
 				return;
 			}
-			if (_message)
+			if (messaging)
 			{
-				if (_message && _ticks < Cycle)
+				if (messaging && ticks < CYCLE)
 				{
-					_ticks += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
+					ticks += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
 				}
-				else if (_message && _ticks >= Cycle)
+				else if (messaging && ticks >= CYCLE)
 				{
-					_message = false;
-					_ticks = 0f;
-					_appeared = true;
-					PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.MessageUrgent;
+					messaging = false;
+					ticks = 0f;
+					appearing = true;
+					PhoneOverlay.State = PhoneOverlay.EPhoneState.MessageUrgent;
 				}
 			}
 			else
 			{
-				_message = true;
-				PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.MessageNew;
+				messaging = true;
+				PhoneOverlay.State = PhoneOverlay.EPhoneState.MessageNew;
 			}
 		}
-		else if (PhoneOverlay.Indicator != PhoneOverlay.PhoneIndicator.NoMessage)
+		else if (PhoneOverlay.State != PhoneOverlay.EPhoneState.NoMessage)
 		{
-			_message = false;
-			_ticks = 0f;
-			_appeared = false;
-			PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.NoMessage;
+			messaging = false;
+			ticks = 0f;
+			appearing = false;
+			PhoneOverlay.State = PhoneOverlay.EPhoneState.NoMessage;
 		}
 	}
 
@@ -58,7 +58,7 @@ public class PhoneUrgentlyRinging
 	{
 		if (PhoneOverlay.Enabled)
 		{
-			PhoneOverlay.Indicator = PhoneOverlay.PhoneIndicator.NoMessage;
+			PhoneOverlay.State = PhoneOverlay.EPhoneState.NoMessage;
 		}
 	}
 }

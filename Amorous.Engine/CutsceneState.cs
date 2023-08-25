@@ -47,7 +47,7 @@ public class CutsceneState
 	public string Sexscene { get; set; }
 
 	[JsonProperty("SexscenePhase")]
-	public AbstractSexscene.Phase SexscenePhase { get; set; }
+	public AbstractSexscene.EPhase SexscenePhase { get; set; }
 
 	[JsonProperty("SexsceneFinished")]
 	public bool SexsceneFinished { get; set; }

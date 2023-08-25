@@ -26,8 +26,7 @@ public class GangANPC : LayerNPC<GangANPC.EHeads, GangANPC.EPoses, GangANPC.EClo
 	public static string Name = "Kazee Fullford";
 	public static Color Color = new Color(220, 0, 0);
 
-	public GangANPC(IAmorous game)
-		: base(game, "Assets/NPC/GangA", 1f)
+	public GangANPC(IAmorous game) : base(game, "Assets/NPC/GangA", 1f)
 	{
 		Width = 1182;
 		Height = 966;

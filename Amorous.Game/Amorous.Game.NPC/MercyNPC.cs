@@ -39,7 +39,7 @@ public class MercyNPC : SpineNPC<MercyNPC.EHeads, MercyNPC.EPoses, MercyNPC.EClo
 	public MercyNPC(IAmorous game)
 		: base(game, "Assets/NPC/Mercy/Mercy", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("animation");
+		base.Skeleton.StartAnimationWithLooping("animation");
 		string[] first = new string[7] { "Pupils", "Eyeback", "Hair back", "Hairlock left", "Fringe", "Horn", "Horn tip" };
 		AddEmotion(EHeads.Angry, first.Union(new string[2] { "Angry head", "AngrySad ear" }).ToArray());
 		AddEmotion(EHeads.Happy, first.Union(new string[3] { "Happy head", "Happy Jaw", "Happy ear" }).ToArray()).WithBlinking("Happy blink");
@@ -50,13 +50,13 @@ public class MercyNPC : SpineNPC<MercyNPC.EHeads, MercyNPC.EPoses, MercyNPC.EClo
 		AddPose(EPoses.ArmsShy, "Body one", "Arms shy", "Arms shy back", "Tail");
 		AddClothes(EPoses.Standing, EClothes.Dress, "Dress").AsShirt().AsPants();
 		AddClothes(EPoses.Standing, EClothes.SkimpyDress, "Skimpy Dress").AsShirt().AsPants();
-		AddClothes(EPoses.Standing, EClothes.SportsBra, "Sports Bra").AsShirt().AsCensoredShirt();
-		AddClothes(EPoses.Standing, EClothes.SportsShorts, "Sports Shorts").AsPants().AsCensoredPants();
+		AddClothes(EPoses.Standing, EClothes.SportsBra, "Sports Bra").AsShirt().AsCensoringShirt();
+		AddClothes(EPoses.Standing, EClothes.SportsShorts, "Sports Shorts").AsPants().AsCensoringPants();
 		AddClothes(EPoses.Standing, EClothes.Necklace, "Necklace");
 		AddClothes(EPoses.ArmsShy, EClothes.Dress, "Dress").AsShirt().AsPants();
 		AddClothes(EPoses.ArmsShy, EClothes.SkimpyDress, "Skimpy Dress").AsShirt().AsPants();
-		AddClothes(EPoses.ArmsShy, EClothes.SportsBra, "Sports Bra").AsShirt().AsCensoredShirt();
-		AddClothes(EPoses.ArmsShy, EClothes.SportsShorts, "Sports Shorts").AsPants().AsCensoredPants();
+		AddClothes(EPoses.ArmsShy, EClothes.SportsBra, "Sports Bra").AsShirt().AsCensoringShirt();
+		AddClothes(EPoses.ArmsShy, EClothes.SportsShorts, "Sports Shorts").AsPants().AsCensoringPants();
 		AddClothes(EPoses.ArmsShy, EClothes.Necklace, "Necklace");
 		NudesBehindShirt = true;
 		NudesBehindPants = true;

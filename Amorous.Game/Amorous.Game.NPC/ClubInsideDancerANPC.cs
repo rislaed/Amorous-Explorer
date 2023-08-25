@@ -23,13 +23,13 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 		Pants
 	}
 
-	private int _countDanceA, _countDanceB;
-	private int _offset;
+	private int schemeDanceA, schemeDanceB;
+	private int loops;
 
 	public ClubInsideDancerANPC(IAmorous game)
 		: base(game, "Assets/NPC/ClubInsideStatic/Dancer A", 0.8f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("Dance_B");
+		base.Skeleton.StartAnimationWithLooping("Dance_B");
 		AddEmotion(EHeads.Happy, "Eye", "Head", "Jaw", "Pupil").WithBlinking("Blink");
 		AddPose(EPoses.Dancing, "Arm left", "Character", "Forearm right", "Leg left", "Leg right", "Tail", "shoulder right").AddNudes("Cock");
 		AddClothes(EPoses.Dancing, EClothes.Shirt, "Shirt").AsShirt().AsNudes();
@@ -40,22 +40,22 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 
 	public void SetDanceScheme(int danceA, int danceB)
 	{
-		_countDanceA = danceA;
-		_countDanceB = danceB;
-		base.Spine.SetMix("Dance_A", "Dance_B", 0.5f);
-		base.Spine.SetMix("Dance_B", "Dance_A", 0.5f);
-		_offset = _countDanceA;
+		schemeDanceA = danceA;
+		schemeDanceB = danceB;
+		base.Skeleton.SetMix("Dance_A", "Dance_B", 0.5f);
+		base.Skeleton.SetMix("Dance_B", "Dance_A", 0.5f);
+		loops = schemeDanceA;
 		StartDanceA();
 	}
 
 	public void StartDanceA()
 	{
-		base.Spine.AddAnimation("Dance_A", looping: true, 0f, delegate
+		base.Skeleton.AddAnimation("Dance_A", loop: true, 0f, delegate
 		{
-			_offset--;
-			if (_offset <= 0)
+			loops--;
+			if (loops <= 0)
 			{
-				_offset = _countDanceB;
+				loops = schemeDanceB;
 				StartDanceB();
 			}
 		});
@@ -63,12 +63,12 @@ public class ClubInsideDancerANPC : SpineNPC<ClubInsideDancerANPC.EHeads, ClubIn
 
 	public void StartDanceB()
 	{
-		base.Spine.AddAnimation("Dance_B", looping: true, 0f, delegate
+		base.Skeleton.AddAnimation("Dance_B", loop: true, 0f, delegate
 		{
-			_offset--;
-			if (_offset <= 0)
+			loops--;
+			if (loops <= 0)
 			{
-				_offset = _countDanceA;
+				loops = schemeDanceA;
 				StartDanceA();
 			}
 		});

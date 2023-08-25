@@ -5,18 +5,17 @@ namespace Amorous.Game.Scenes;
 
 public class SaveMigrationScene : AbstractScene
 {
-	private readonly string _cutscene;
-	private readonly string _scene;
-	private bool _started;
+	private readonly string cutscene;
+	private readonly string scene;
+	private bool completed;
 
-	public SaveMigrationScene(IAmorous game, string cutscene, string scene)
-		: base(game)
+	public SaveMigrationScene(IAmorous game, string cutscene, string scene) : base(game)
 	{
-		_cutscene = cutscene;
-		_scene = scene;
+		this.cutscene = cutscene;
+		this.scene = scene;
 		AddSpriteLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
 		AddSpriteLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
-		AddForegroundSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
+		AddSpriteLayerAbove("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
 	}
 
@@ -32,19 +31,19 @@ public class SaveMigrationScene : AbstractScene
 		couplesRight.Y = 1090f;
 		couplesRight.SetPose(CoupleBNPC.EPoses.Waving);
 		couplesRight.SetClothes(CoupleBNPC.EClothes.Shirt, CoupleBNPC.EClothes.Pants);
-		if (_cutscene != null)
+		if (cutscene != null)
 		{
-			base.Game.PlayCutscene(_cutscene);
+			base.Game.PlayCutscene(cutscene);
 		}
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		if (!_started && !base.Game.InPendingScene && base.Game.Cutscene == null)
+		if (!completed && !base.Game.IsScenePending && base.Game.Cutscene == null)
 		{
-			_started = true;
-			base.Game.StartScene(_scene);
+			completed = true;
+			base.Game.StartScene(scene);
 		}
 	}
 }

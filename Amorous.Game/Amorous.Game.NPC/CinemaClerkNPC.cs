@@ -26,8 +26,7 @@ public class CinemaClerkNPC : LayerNPC<CinemaClerkNPC.EHeads, CinemaClerkNPC.EPo
 	public static string Name = "Cryptic";
 	public static Color Color = new Color(255, 24, 24);
 
-	public CinemaClerkNPC(IAmorous game)
-		: base(game, "Assets/NPC/CinemaClerk", 1f)
+	public CinemaClerkNPC(IAmorous game) : base(game, "Assets/NPC/CinemaClerk", 1f)
 	{
 		AddPose(EPoses.Standing, "Cinema Clerk Expressions");
 		AddClothes(EPoses.Standing, EClothes.Pants, "Cinema Clerk Expressions - Pants").AsPants().AsCloth();

@@ -2,8 +2,7 @@ namespace Amorous.Game.Scenes;
 
 public class PhoneShootingRangeMiniGameScene : ShootingRangeMiniGameScene
 {
-	public PhoneShootingRangeMiniGameScene(IAmorous game)
-		: base(game)
+	public PhoneShootingRangeMiniGameScene(IAmorous game) : base(game)
 	{
 		base.ExitWhenEscape = true;
 	}

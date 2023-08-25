@@ -5,18 +5,18 @@ namespace Amorous.Game.Scenes;
 
 internal class PlayerDataProxy : IPlayerData
 {
-	private readonly PlayerData _data;
+	private readonly PlayerData playerData;
 
 	public string Name
 	{
 		get
 		{
-			return _data.Name;
+			return playerData.Name;
 		}
 		set
 		{
-			_data.Name = value;
-			InvokeOnChange();
+			playerData.Name = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -24,12 +24,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BodyType;
+			return playerData.BodyType;
 		}
 		set
 		{
-			_data.BodyType = value;
-			InvokeOnChange();
+			playerData.BodyType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -37,12 +37,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BodyColor;
+			return playerData.BodyColor;
 		}
 		set
 		{
-			_data.BodyColor = value;
-			InvokeOnChange();
+			playerData.BodyColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -50,12 +50,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShowNails;
+			return playerData.ShowNails;
 		}
 		set
 		{
-			_data.ShowNails = value;
-			InvokeOnChange();
+			playerData.ShowNails = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -63,12 +63,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.NailColor;
+			return playerData.NailColor;
 		}
 		set
 		{
-			_data.NailColor = value;
-			InvokeOnChange();
+			playerData.NailColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -76,12 +76,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadType;
+			return playerData.HeadType;
 		}
 		set
 		{
-			_data.HeadType = value;
-			InvokeOnChange();
+			playerData.HeadType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -89,12 +89,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadColor;
+			return playerData.HeadColor;
 		}
 		set
 		{
-			_data.HeadColor = value;
-			InvokeOnChange();
+			playerData.HeadColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -102,12 +102,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.PaperBagColor;
+			return playerData.PaperBagColor;
 		}
 		set
 		{
-			_data.PaperBagColor = value;
-			InvokeOnChange();
+			playerData.PaperBagColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -115,12 +115,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.PaperBagEyesColor;
+			return playerData.PaperBagEyesColor;
 		}
 		set
 		{
-			_data.PaperBagEyesColor = value;
-			InvokeOnChange();
+			playerData.PaperBagEyesColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -128,12 +128,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadMarkingsType;
+			return playerData.HeadMarkingsType;
 		}
 		set
 		{
-			_data.HeadMarkingsType = value;
-			InvokeOnChange();
+			playerData.HeadMarkingsType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -141,12 +141,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadGauntColor;
+			return playerData.HeadGauntColor;
 		}
 		set
 		{
-			_data.HeadGauntColor = value;
-			InvokeOnChange();
+			playerData.HeadGauntColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -154,12 +154,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadScruffyColor;
+			return playerData.HeadScruffyColor;
 		}
 		set
 		{
-			_data.HeadScruffyColor = value;
-			InvokeOnChange();
+			playerData.HeadScruffyColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -167,12 +167,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadSnoutColor;
+			return playerData.HeadSnoutColor;
 		}
 		set
 		{
-			_data.HeadSnoutColor = value;
-			InvokeOnChange();
+			playerData.HeadSnoutColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -180,12 +180,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadStripesColor;
+			return playerData.HeadStripesColor;
 		}
 		set
 		{
-			_data.HeadStripesColor = value;
-			InvokeOnChange();
+			playerData.HeadStripesColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -193,12 +193,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadAccessoriesType;
+			return playerData.HeadAccessoriesType;
 		}
 		set
 		{
-			_data.HeadAccessoriesType = value;
-			InvokeOnChange();
+			playerData.HeadAccessoriesType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -206,12 +206,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HeadHornsColor;
+			return playerData.HeadHornsColor;
 		}
 		set
 		{
-			_data.HeadHornsColor = value;
-			InvokeOnChange();
+			playerData.HeadHornsColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -219,12 +219,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.EarColor;
+			return playerData.EarColor;
 		}
 		set
 		{
-			_data.EarColor = value;
-			InvokeOnChange();
+			playerData.EarColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -232,12 +232,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.EarInnerColor;
+			return playerData.EarInnerColor;
 		}
 		set
 		{
-			_data.EarInnerColor = value;
-			InvokeOnChange();
+			playerData.EarInnerColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -245,12 +245,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.EyesType;
+			return playerData.EyesType;
 		}
 		set
 		{
-			_data.EyesType = value;
-			InvokeOnChange();
+			playerData.EyesType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -258,12 +258,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.EyesBackColor;
+			return playerData.EyesBackColor;
 		}
 		set
 		{
-			_data.EyesBackColor = value;
-			InvokeOnChange();
+			playerData.EyesBackColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -271,12 +271,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.EyesFrontColor;
+			return playerData.EyesFrontColor;
 		}
 		set
 		{
-			_data.EyesFrontColor = value;
-			InvokeOnChange();
+			playerData.EyesFrontColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -284,12 +284,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BrowType;
+			return playerData.BrowType;
 		}
 		set
 		{
-			_data.BrowType = value;
-			InvokeOnChange();
+			playerData.BrowType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -297,12 +297,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BrowColor;
+			return playerData.BrowColor;
 		}
 		set
 		{
-			_data.BrowColor = value;
-			InvokeOnChange();
+			playerData.BrowColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -310,12 +310,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.MuzzleType;
+			return playerData.MuzzleType;
 		}
 		set
 		{
-			_data.MuzzleType = value;
-			InvokeOnChange();
+			playerData.MuzzleType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -323,12 +323,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.MuzzleColor;
+			return playerData.MuzzleColor;
 		}
 		set
 		{
-			_data.MuzzleColor = value;
-			InvokeOnChange();
+			playerData.MuzzleColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -336,12 +336,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.NoseColor;
+			return playerData.NoseColor;
 		}
 		set
 		{
-			_data.NoseColor = value;
-			InvokeOnChange();
+			playerData.NoseColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -349,12 +349,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.TeethColor;
+			return playerData.TeethColor;
 		}
 		set
 		{
-			_data.TeethColor = value;
-			InvokeOnChange();
+			playerData.TeethColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -362,12 +362,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShowMuzzleHorn;
+			return playerData.ShowMuzzleHorn;
 		}
 		set
 		{
-			_data.ShowMuzzleHorn = value;
-			InvokeOnChange();
+			playerData.ShowMuzzleHorn = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -375,12 +375,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.MuzzleHornColor;
+			return playerData.MuzzleHornColor;
 		}
 		set
 		{
-			_data.MuzzleHornColor = value;
-			InvokeOnChange();
+			playerData.MuzzleHornColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -388,12 +388,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShowMuzzleMask;
+			return playerData.ShowMuzzleMask;
 		}
 		set
 		{
-			_data.ShowMuzzleMask = value;
-			InvokeOnChange();
+			playerData.ShowMuzzleMask = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -401,12 +401,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.MuzzleMaskColor;
+			return playerData.MuzzleMaskColor;
 		}
 		set
 		{
-			_data.MuzzleMaskColor = value;
-			InvokeOnChange();
+			playerData.MuzzleMaskColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -414,12 +414,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HairstyleType;
+			return playerData.HairstyleType;
 		}
 		set
 		{
-			_data.HairstyleType = value;
-			InvokeOnChange();
+			playerData.HairstyleType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -427,12 +427,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.HairColor;
+			return playerData.HairColor;
 		}
 		set
 		{
-			_data.HairColor = value;
-			InvokeOnChange();
+			playerData.HairColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -440,12 +440,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.FringeType;
+			return playerData.FringeType;
 		}
 		set
 		{
-			_data.FringeType = value;
-			InvokeOnChange();
+			playerData.FringeType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -453,12 +453,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.FringeColor;
+			return playerData.FringeColor;
 		}
 		set
 		{
-			_data.FringeColor = value;
-			InvokeOnChange();
+			playerData.FringeColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -466,12 +466,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.FeetType;
+			return playerData.FeetType;
 		}
 		set
 		{
-			_data.FeetType = value;
-			InvokeOnChange();
+			playerData.FeetType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -479,12 +479,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.FeetColor;
+			return playerData.FeetColor;
 		}
 		set
 		{
-			_data.FeetColor = value;
-			InvokeOnChange();
+			playerData.FeetColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -492,12 +492,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.TailType;
+			return playerData.TailType;
 		}
 		set
 		{
-			_data.TailType = value;
-			InvokeOnChange();
+			playerData.TailType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -505,12 +505,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.TailColor;
+			return playerData.TailColor;
 		}
 		set
 		{
-			_data.TailColor = value;
-			InvokeOnChange();
+			playerData.TailColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -518,12 +518,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShowTailPartOne;
+			return playerData.ShowTailPartOne;
 		}
 		set
 		{
-			_data.ShowTailPartOne = value;
-			InvokeOnChange();
+			playerData.ShowTailPartOne = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -531,12 +531,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.TailPartOneColor;
+			return playerData.TailPartOneColor;
 		}
 		set
 		{
-			_data.TailPartOneColor = value;
-			InvokeOnChange();
+			playerData.TailPartOneColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -544,12 +544,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShowTailPartTwo;
+			return playerData.ShowTailPartTwo;
 		}
 		set
 		{
-			_data.ShowTailPartTwo = value;
-			InvokeOnChange();
+			playerData.ShowTailPartTwo = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -557,12 +557,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.TailPartTwoColor;
+			return playerData.TailPartTwoColor;
 		}
 		set
 		{
-			_data.TailPartTwoColor = value;
-			InvokeOnChange();
+			playerData.TailPartTwoColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -570,12 +570,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.MarkingsType;
+			return playerData.MarkingsType;
 		}
 		set
 		{
-			_data.MarkingsType = value;
-			InvokeOnChange();
+			playerData.MarkingsType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -583,12 +583,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.UnderbellyColor;
+			return playerData.UnderbellyColor;
 		}
 		set
 		{
-			_data.UnderbellyColor = value;
-			InvokeOnChange();
+			playerData.UnderbellyColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -596,12 +596,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.UnderthighColor;
+			return playerData.UnderthighColor;
 		}
 		set
 		{
-			_data.UnderthighColor = value;
-			InvokeOnChange();
+			playerData.UnderthighColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -609,12 +609,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.StripesColor;
+			return playerData.StripesColor;
 		}
 		set
 		{
-			_data.StripesColor = value;
-			InvokeOnChange();
+			playerData.StripesColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -622,12 +622,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.LongForearmColor;
+			return playerData.LongForearmColor;
 		}
 		set
 		{
-			_data.LongForearmColor = value;
-			InvokeOnChange();
+			playerData.LongForearmColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -635,12 +635,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShortForearmColor;
+			return playerData.ShortForearmColor;
 		}
 		set
 		{
-			_data.ShortForearmColor = value;
-			InvokeOnChange();
+			playerData.ShortForearmColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -648,12 +648,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.AvianForearmColor;
+			return playerData.AvianForearmColor;
 		}
 		set
 		{
-			_data.AvianForearmColor = value;
-			InvokeOnChange();
+			playerData.AvianForearmColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -661,12 +661,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.LongShinColor;
+			return playerData.LongShinColor;
 		}
 		set
 		{
-			_data.LongShinColor = value;
-			InvokeOnChange();
+			playerData.LongShinColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -674,12 +674,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShortShinColor;
+			return playerData.ShortShinColor;
 		}
 		set
 		{
-			_data.ShortShinColor = value;
-			InvokeOnChange();
+			playerData.ShortShinColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -687,12 +687,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.AvianShinColor;
+			return playerData.AvianShinColor;
 		}
 		set
 		{
-			_data.AvianShinColor = value;
-			InvokeOnChange();
+			playerData.AvianShinColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -700,12 +700,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.CockType;
+			return playerData.CockType;
 		}
 		set
 		{
-			_data.CockType = value;
-			InvokeOnChange();
+			playerData.CockType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -713,12 +713,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.GenitaliaColor;
+			return playerData.GenitaliaColor;
 		}
 		set
 		{
-			_data.GenitaliaColor = value;
-			InvokeOnChange();
+			playerData.GenitaliaColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -726,12 +726,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.GenitaliaFleshColor;
+			return playerData.GenitaliaFleshColor;
 		}
 		set
 		{
-			_data.GenitaliaFleshColor = value;
-			InvokeOnChange();
+			playerData.GenitaliaFleshColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -739,12 +739,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BallsType;
+			return playerData.BallsType;
 		}
 		set
 		{
-			_data.BallsType = value;
-			InvokeOnChange();
+			playerData.BallsType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -752,12 +752,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BallsColor;
+			return playerData.BallsColor;
 		}
 		set
 		{
-			_data.BallsColor = value;
-			InvokeOnChange();
+			playerData.BallsColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -765,12 +765,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BreastsType;
+			return playerData.BreastsType;
 		}
 		set
 		{
-			_data.BreastsType = value;
-			InvokeOnChange();
+			playerData.BreastsType = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -778,12 +778,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.BreastsColor;
+			return playerData.BreastsColor;
 		}
 		set
 		{
-			_data.BreastsColor = value;
-			InvokeOnChange();
+			playerData.BreastsColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -791,12 +791,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.ShowNipples;
+			return playerData.ShowNipples;
 		}
 		set
 		{
-			_data.ShowNipples = value;
-			InvokeOnChange();
+			playerData.ShowNipples = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -804,12 +804,12 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.NipplesColor;
+			return playerData.NipplesColor;
 		}
 		set
 		{
-			_data.NipplesColor = value;
-			InvokeOnChange();
+			playerData.NipplesColor = value;
+			InvokeDataChanged();
 		}
 	}
 
@@ -817,34 +817,34 @@ internal class PlayerDataProxy : IPlayerData
 	{
 		get
 		{
-			return _data.PhoneColor;
+			return playerData.PhoneColor;
 		}
 		set
 		{
-			_data.PhoneColor = value;
-			InvokeOnChange();
+			playerData.PhoneColor = value;
+			InvokeDataChanged();
 		}
 	}
 
-	public event Action OnChange;
+	public event Action DataChanged;
 
 	public PlayerDataProxy(PlayerData data)
 	{
-		_data = data;
+		playerData = data;
 	}
 
-	public bool GetFlag(string key)
+	public bool HasFlag(string key)
 	{
-		return _data.GetFlag(key);
+		return playerData.HasFlag(key);
 	}
 
 	public PlayerData GetPlayerData()
 	{
-		return _data;
+		return playerData;
 	}
 
-	private void InvokeOnChange()
+	private void InvokeDataChanged()
 	{
-		this.OnChange?.Invoke();
+		this.DataChanged?.Invoke();
 	}
 }

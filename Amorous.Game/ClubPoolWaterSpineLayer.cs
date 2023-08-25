@@ -4,17 +4,17 @@ using Spine;
 
 public class ClubPoolWaterSpineLayer : SpineDrawableLayer
 { // _jOXcj4HBkU5j6LOJprpiXLCcLR0
-	private readonly SpineRenderer _spine;
+	private readonly SkeletonRenderer skeleton;
 
 	public override float OffsetX
 	{
 		get
 		{
-			return _spine.X;
+			return skeleton.X;
 		}
 		set
 		{
-			_spine.X = value;
+			skeleton.X = value;
 		}
 	}
 
@@ -22,11 +22,11 @@ public class ClubPoolWaterSpineLayer : SpineDrawableLayer
 	{
 		get
 		{
-			return _spine.Y;
+			return skeleton.Y;
 		}
 		set
 		{
-			_spine.Y = value;
+			skeleton.Y = value;
 		}
 	}
 
@@ -39,14 +39,14 @@ public class ClubPoolWaterSpineLayer : SpineDrawableLayer
 		Texture2D waves = base.Scene.Game.Content.Load<Texture2D>("Assets/Scenes/ClubPool/Wave Mask");
 		base.OnUpdate = delegate(GameTime gameTime)
 		{
-			self._spine.Update(gameTime);
+			self.skeleton.Update(gameTime);
 		};
 		base.OnSpineDraw = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 		{
 			RenderTargetBinding[] renderTargets = self.Scene.Game.Graphics.GetRenderTargets();
 			self.Scene.Game.Graphics.SetRenderTarget(target);
 			self.Scene.Game.Graphics.Clear(Color.Transparent);
-			self._spine.Draw(skeletonMeshRenderer, null, null, null, self.Scale);
+			self.skeleton.Draw(skeletonMeshRenderer, null, null, null, self.Scale);
 			self.Scene.Game.Graphics.SetRenderTargets(renderTargets);
 			spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
 			float cycle = offset + (float)waves.Height;
@@ -61,9 +61,9 @@ public class ClubPoolWaterSpineLayer : SpineDrawableLayer
 			spriteBatch.Draw(target, new Vector2(location.X, location.Y), Color.White);
 			spriteBatch.End();
 		};
-		_spine = scene.Game.Content.LoadSkeleton("Assets/Scenes/ClubPool/Club Pool water");
-		_spine.X = 0f;
-		_spine.Y = 0f;
-		_spine.StartAnimationWithLooping("animation");
+		skeleton = scene.Game.Content.LoadSkeleton("Assets/Scenes/ClubPool/Club Pool water");
+		skeleton.X = 0f;
+		skeleton.Y = 0f;
+		skeleton.StartAnimationWithLooping("animation");
 	}
 }

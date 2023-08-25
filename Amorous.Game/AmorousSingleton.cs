@@ -17,37 +17,37 @@ using Squid;
 
 public class AmorousSingleton : IAmorous
 { // _bj8iyyk84DtxcxcHgAHHFGgq8oN
-	private readonly Game _game;
-	private readonly GraphicsDeviceManager _display;
-	private SpriteBatch _batch;
-	private SkeletonMeshRenderer _spines;
-	private CanvasObserver _canvas;
-	private RenderTarget2D _target;
-	private Microsoft.Xna.Framework.Rectangle _destinationRectangle;
-	private ScreenFader _fader;
-	private FadingMediaPlayer _media;
-	private SpineTextureLoader _resources;
-	private ControllerObserver _controller;
-	private Notifications _notifier;
-	private Achievements _achievements;
-	private SteamObserver _steam;
-	private Action _pendingSceneThen;
-	private AbstractScene _scene;
-	private AbstractScene _pendingScene;
-	private PlayerPreferences _player;
-	private PhoneOverlay _phone;
-	private TypingDialogue _writer;
-	private Cutscene _cutscene;
-	private AbstractSexscene _sexscene;
-	private InteractableOverlay _overlay;
-	private Texture2D _cursorTexture;
-	private SpriteFont _font;
+	private readonly Game game;
+	private readonly GraphicsDeviceManager graphicsDevice;
+	private SpriteBatch spriteBatch;
+	private SkeletonMeshRenderer skeletonRenderer;
+	private CanvasObserver canvas;
+	private RenderTarget2D renderTarget;
+	private Microsoft.Xna.Framework.Rectangle destinationRectangle;
+	private ScreenFader screenFader;
+	private FadingMediaPlayer mediaPlayer;
+	private SpineTextureLoader textureLoader;
+	private ControllerObserver controller;
+	private Notifications notifications;
+	private Achievements achievements;
+	private SteamObserver steam;
+	private Action sceneAfterChanging;
+	private AbstractScene scene;
+	private AbstractScene pendingToScene;
+	private PlayerPreferences preferences;
+	private PhoneOverlay phone;
+	private TypingDialogue typingDialogue;
+	private Cutscene cutscene;
+	private AbstractSexscene sexscene;
+	private InteractableOverlay overlay;
+	private Texture2D cursorOverlay;
+	private SpriteFont debuggingFont;
 
-	private bool _hasControls;
-	private bool _debugger;
-	private bool _pendingScreenshot;
+	private bool showControls;
+	private bool showDebugging;
+	private bool requestedScreenshot;
 
-	private static readonly string[] _nonContextualPlaces = new string[8]
+	private static readonly string[] accessibleScenes = new string[8]
 	{
 		typeof(BedroomScene).Name,
 		typeof(LivingRoomScene).Name,
@@ -59,33 +59,33 @@ public class AmorousSingleton : IAmorous
 		typeof(ClubUpstairsScene).Name
 	};
 
-	private Microsoft.Xna.Framework.Input.Keys[] _keyboard;
-	private string[] _debuggerCutscene;
-	private Vector2 _debuggerPoint;
+	private Microsoft.Xna.Framework.Input.Keys[] keyboardKeys;
+	private string[] debuggingOfCutscene;
+	private Vector2 debuggingOffset;
 
-	public GameWindow Window => _game.Window;
-	public GraphicsDevice Graphics => _game.GraphicsDevice;
-	public ContentManager Content => _game.Content;
-	public ControllerObserver Controller => _controller;
-	public CanvasObserver Canvas => _canvas;
-	public AbstractScene Scene => _scene;
-	public AbstractSexscene Sexscene => _sexscene;
-	public Cutscene Cutscene => _cutscene;
-	public ScreenFader Fader => _fader;
-	public InteractableOverlay Overlay => _overlay;
-	public IAchievements Achievements => _achievements;
-	public bool IsFullscreen => _display.IsFullScreen;
-	public bool InPendingScene { get; set; }
+	public GameWindow Window => game.Window;
+	public GraphicsDevice Graphics => game.GraphicsDevice;
+	public ContentManager Content => game.Content;
+	public ControllerObserver Controller => controller;
+	public CanvasObserver Canvas => canvas;
+	public AbstractScene Scene => scene;
+	public AbstractSexscene Sexscene => sexscene;
+	public Cutscene Cutscene => cutscene;
+	public ScreenFader Fader => screenFader;
+	public InteractableOverlay Overlay => overlay;
+	public IAchievements Achievements => achievements;
+	public bool IsFullscreen => graphicsDevice.IsFullScreen;
+	public bool IsScenePending { get; set; }
 	public bool IsRenderingCursor { get; set; }
-	public bool IsControlsOnScreen => _hasControls;
+	public bool IsShowingControls => showControls;
 
 	public AmorousSingleton(Game game, bool safemode)
 	{
-		_game = game;
+		this.game = game;
 		Options.Read();
 		if (safemode)
 		{
-			_display = new GraphicsDeviceManager(game)
+			graphicsDevice = new GraphicsDeviceManager(game)
 			{
 				IsFullScreen = false,
 				PreferredBackBufferWidth = 1024,
@@ -96,7 +96,7 @@ public class AmorousSingleton : IAmorous
 		else if (!Options.ContainsResolution())
 		{
 			DisplayMode currentDisplayMode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
-			_display = new GraphicsDeviceManager(game)
+			graphicsDevice = new GraphicsDeviceManager(game)
 			{
 				IsFullScreen = true,
 				PreferredBackBufferWidth = currentDisplayMode.Width,
@@ -106,84 +106,84 @@ public class AmorousSingleton : IAmorous
 		}
 		else
 		{
-			_display = new GraphicsDeviceManager(game)
+			graphicsDevice = new GraphicsDeviceManager(game)
 			{
-				IsFullScreen = Options.Data.Fullscreen,
-				PreferredBackBufferWidth = Options.Data.ResolutionWidth,
-				PreferredBackBufferHeight = Options.Data.ResolutionHeight,
+				IsFullScreen = Options.Config.Fullscreen,
+				PreferredBackBufferWidth = Options.Config.ResolutionWidth,
+				PreferredBackBufferHeight = Options.Config.ResolutionHeight,
 				SynchronizeWithVerticalRetrace = true
 			};
 		}
 		Content.RootDirectory = "Content-Release";
-		_game.Content = new CompressableContentManager(Content.ServiceProvider, Content.RootDirectory);
+		this.game.Content = new CompressableContentManager(Content.ServiceProvider, Content.RootDirectory);
 	}
 
 	public void Initialize()
 	{
-		_game.Disposed += delegate
+		game.Disposed += delegate
 		{
 			Options.Save();
 		};
 		Gui.GetClipboardCallback = (Func<string>)Delegate.Combine(Gui.GetClipboardCallback, new Func<string>(SDL.SDL_GetClipboardText));
-		Gui.SetClipboardCallback = (Action<string>)Delegate.Combine(Gui.SetClipboardCallback, (Action<string>)delegate(string string_0)
+		Gui.SetClipboardCallback = (Action<string>)Delegate.Combine(Gui.SetClipboardCallback, (Action<string>)delegate(string text)
 		{
-			SDL.SDL_SetClipboardText(string_0);
+			SDL.SDL_SetClipboardText(text);
 		});
-		string pathNonSteam = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NonSteam");
-		if (!File.Exists(pathNonSteam) && !File.Exists(pathNonSteam + ".txt"))
+		string nonSteamFlag = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NonSteam");
+		if (!File.Exists(nonSteamFlag) && !File.Exists(nonSteamFlag + ".txt"))
 		{
-			_steam = new SteamObserver();
-			if (!_steam.Initialize(AmorousData.Code, this))
+			steam = new SteamObserver();
+			if (!steam.Initialize(AmorousData.Code, this))
 			{
-				_steam = null;
+				steam = null;
 			}
 		}
-		_achievements = new Achievements(this, _steam);
+		achievements = new Achievements(this, steam);
 	}
 
 	public void LoadContent()
 	{
-		string bootiesPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ShowMeSomeBooty");
-		Censorship.SetBooties(File.Exists(bootiesPath) || File.Exists(bootiesPath + ".txt"));
-		_controller = new ControllerObserver(this);
-		_keyboard = (Microsoft.Xna.Framework.Input.Keys[])Enum.GetValues(typeof(Microsoft.Xna.Framework.Input.Keys));
+		string bootiesFlag = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ShowMeSomeBooty");
+		Censorship.SetBooties(File.Exists(bootiesFlag) || File.Exists(bootiesFlag + ".txt"));
+		controller = new ControllerObserver(this);
+		keyboardKeys = (Microsoft.Xna.Framework.Input.Keys[])Enum.GetValues(typeof(Microsoft.Xna.Framework.Input.Keys));
 		Controller.Grabbed = true;
-		_batch = new SpriteBatch(_game.GraphicsDevice);
-		_spines = new SkeletonMeshRenderer(_game.GraphicsDevice);
-		_canvas = new CanvasObserver(this, 1920, 1080);
-		_canvas.SetResolution(_display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
-		_target = new RenderTarget2D(_game.GraphicsDevice, 1920, 1080);
-		_target.SetUsage(RenderTargetUsage.PreserveContents);
-		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_canvas.RelativeX, _canvas.RelativeY, _canvas.RelativeWidth, _canvas.RelativeHeight);
-		Gui.Renderer = new SquidRenderer(_game);
-		Gui.Renderer.SetTexture("PhoneScreen", _game.Content.Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
-		Gui.Renderer.SetTexture("Contact_DJ", _game.Content.Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
-		Overlays.WhenReturnToMenu = ReturnToMenu;
-		_player = new PlayerPreferences();
-		_fader = new ScreenFader(_game.GraphicsDevice);
-		_media = new FadingMediaPlayer(_game.Content);
-		_resources = new SpineTextureLoader(_game.Content);
-		_notifier = new Notifications();
-		Texture2D dialogueTexture = _game.Content.Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
-		Texture2D buttonTexture = _game.Content.Load<Texture2D>("Assets/GUI/Dialogue/button");
-		_cursorTexture = _game.Content.Load<Texture2D>("Assets/GUI/Squid/DefaultCursor");
+		spriteBatch = new SpriteBatch(game.GraphicsDevice);
+		skeletonRenderer = new SkeletonMeshRenderer(game.GraphicsDevice);
+		canvas = new CanvasObserver(this, 1920, 1080);
+		canvas.ChangeResolution(graphicsDevice.PreferredBackBufferWidth, graphicsDevice.PreferredBackBufferHeight, graphicsDevice.PreferredBackBufferWidth, graphicsDevice.PreferredBackBufferHeight);
+		renderTarget = new RenderTarget2D(game.GraphicsDevice, 1920, 1080);
+		renderTarget.SetUsage(RenderTargetUsage.PreserveContents);
+		destinationRectangle = new Microsoft.Xna.Framework.Rectangle(canvas.OffsetX, canvas.OffsetY, canvas.Width, canvas.Height);
+		Gui.Renderer = new XnaSquidRenderer(game);
+		Gui.Renderer.SetTexture("PhoneScreen", game.Content.Load<Texture2D>("Assets/GUI/Phone/PhoneScreen"));
+		Gui.Renderer.SetTexture("Contact_DJ", game.Content.Load<Texture2D>("Assets/GUI/Phone/Contacts/DJ"));
+		Overlays.ExitWithoutSavingChanges = ReturnToMenu;
+		preferences = new PlayerPreferences();
+		screenFader = new ScreenFader(game.GraphicsDevice);
+		mediaPlayer = new FadingMediaPlayer(game.Content);
+		textureLoader = new SpineTextureLoader(game.Content);
+		notifications = new Notifications();
+		Texture2D dialogueTexture = game.Content.Load<Texture2D>("Assets/GUI/Dialogue/dialogue");
+		Texture2D buttonTexture = game.Content.Load<Texture2D>("Assets/GUI/Dialogue/button");
+		cursorOverlay = game.Content.Load<Texture2D>("Assets/GUI/Squid/DefaultCursor");
 		IsRenderingCursor = true;
-		_font = _game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		SpriteFont italicFont = _game.Content.Load<SpriteFont>("Assets/GUI/Fonts/BoldItalic-26");
-		_writer = new TypingDialogue(this, dialogueTexture, buttonTexture, _font, italicFont);
-		Saves.Pointer pointer = Saves.GetLastPointer();
-		if (!pointer.IsEmpty)
+		debuggingFont = game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		SpriteFont italicFont = game.Content.Load<SpriteFont>("Assets/GUI/Fonts/BoldItalic-26");
+		typingDialogue = new TypingDialogue(this, dialogueTexture, buttonTexture, debuggingFont, italicFont);
+		Saves.Item item = Saves.GetLastItem();
+		if (!item.IsEmpty)
 		{
-			SaveData save = (pointer.IsAutosave ? Saves.ReadAutosave(pointer.Index) : Saves.Read(pointer.Index));
+			SaveData save = (item.IsAutosave ? Saves.ReadAutosave(item.Index) : Saves.Read(item.Index));
 			if (save != null)
 			{
 				PlayerPreferences.Singleton.Data = save.PlayerData;
 			}
 		}
-		_phone = new PhoneOverlay(this, _game.Content);
+		phone = new PhoneOverlay(this, game.Content);
 		Clocks.InRealTime = true;
-		Clocks.UpdateTime();
-		_hasControls = true;
+		Clocks.Update();
+		showControls = true;
 		Gui.Renderer.SetTexture(AmorousData.MessageIconCoby, Content.Load<Texture2D>(AmorousData.AchievementCoby));
 		Gui.Renderer.SetTexture(AmorousData.MessageIconDustin, Content.Load<Texture2D>("Assets/GUI/Achievements/Achievement_Dustin"));
 		Gui.Renderer.SetTexture(AmorousData.MessageIconJax, Content.Load<Texture2D>(AmorousData.AchievementJax));
@@ -202,101 +202,99 @@ public class AmorousSingleton : IAmorous
 
 	protected virtual void Start()
 	{
-		_scene = new EmptyScene(this);
-		Fader.ApplyNow(new Color(0, 0, 0, 255));
+		scene = new EmptyScene(this);
+		Fader.ApplyWithoutFading(new Color(0, 0, 0, 255));
 		SwitchToScene<MainMenuScene>(delegate
 		{
 			Fader.FadeIn();
 		});
 	}
 
-	public void UnloadContent()
-	{
-	}
+	public void UnloadContent() {}
 
 	public void Update(GameTime gameTime)
 	{
-		if (InPendingScene && _pendingScene == null)
+		if (IsScenePending && pendingToScene == null)
 		{
-			InPendingScene = false;
-			if (_pendingSceneThen != null)
+			IsScenePending = false;
+			if (sceneAfterChanging != null)
 			{
-				Action action = _pendingSceneThen;
-				_pendingSceneThen = null;
+				Action action = sceneAfterChanging;
+				sceneAfterChanging = null;
 				action();
 			}
 		}
-		_controller.Update();
+		controller.Update();
 		if (Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.F1))
 		{
-			_hasControls = !_hasControls;
+			showControls = !showControls;
 		}
 		if ((Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.LeftAlt) && Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Enter)) || Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.F2))
 		{
 			RefreshDisplay();
 		}
-		if (_steam == null && (Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.F12) || Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.PrintScreen)))
+		if (steam == null && (Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.F12) || Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.PrintScreen)))
 		{
 			RequestScreenshot();
 		}
 		if (Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Tab))
 		{
-			_debugger = !_debugger;
+			showDebugging = !showDebugging;
 		}
-		_canvas.Update(gameTime);
-		_fader.Update(gameTime);
-		_media.Update(gameTime);
-		_media.InterpolateVolume();
-		if (_pendingScene != null)
+		canvas.Update(gameTime);
+		screenFader.Update(gameTime);
+		mediaPlayer.Update(gameTime);
+		mediaPlayer.InterpolateVolume();
+		if (pendingToScene != null)
 		{
-			if (_scene != null)
+			if (scene != null)
 			{
-				Logger.Log(ConsoleColor.White, "Debug", "Changing to pending scene '{0}' -> '{1}'", _scene.GetType().Name, _pendingScene.GetType().Name);
-				_scene.End();
+				Logger.Debug("Changing to pending scene '{0}' -> '{1}'", scene.GetType().Name, pendingToScene.GetType().Name);
+				scene.End();
 			}
 			else
 			{
-				Logger.Log(ConsoleColor.White, "Debug", "Starting pending scene '{0}'", _pendingScene.GetType().Name);
+				Logger.Debug("Starting pending scene '{0}'", pendingToScene.GetType().Name);
 			}
-			_scene = _pendingScene;
-			_pendingScene = null;
-			_scene.Start();
+			scene = pendingToScene;
+			pendingToScene = null;
+			scene.Start();
 		}
-		_scene.Update(gameTime);
-		_player.Update(gameTime);
-		_phone.Update(gameTime, _canvas);
-		_writer.Update(gameTime);
-		if (_cutscene != null)
+		scene.Update(gameTime);
+		preferences.Update(gameTime);
+		phone.Update(gameTime, canvas);
+		typingDialogue.Update(gameTime);
+		if (cutscene != null)
 		{
-			_cutscene.Update(gameTime);
-			if (!_cutscene.Active)
+			cutscene.Update(gameTime);
+			if (!cutscene.IsActive)
 			{
-				_debuggerCutscene = _cutscene.ToString(5);
-				Logger.Log(ConsoleColor.White, "Debug", "Finishing cutscene '{0}' ({1})", _cutscene.Data.Name, string.Join(", ", _debuggerCutscene).Trim(new char[] { ' ', ',' }));
-				_cutscene = null;
+				debuggingOfCutscene = cutscene.ToString(5);
+				Logger.Debug("Finishing cutscene '{0}' ({1})", cutscene.Data.Name, debuggingOfCutscene != null ? string.Join(", ", debuggingOfCutscene).Trim(new char[] { ' ', ',' }) : "...");
+				cutscene = null;
 			}
 		}
-		if (_sexscene != null)
+		if (sexscene != null)
 		{
-			_sexscene.Update(gameTime);
+			sexscene.Update(gameTime);
 		}
-		if (_overlay != null)
+		if (overlay != null)
 		{
-			_overlay.Update(gameTime);
+			overlay.Update(gameTime);
 		}
-		_notifier.Update(gameTime);
-		Microsoft.Xna.Framework.Point point = _canvas.GlobalToContent(Controller.Cursor);
-		List<KeyData> list = new List<KeyData>();
-		foreach (Microsoft.Xna.Framework.Input.Keys keys in _keyboard)
+		notifications.Update(gameTime);
+		Microsoft.Xna.Framework.Point cursor = canvas.GlobalToContent(Controller.Cursor);
+		List<KeyData> touchedKeys = new List<KeyData>();
+		foreach (Microsoft.Xna.Framework.Input.Keys keys in keyboardKeys)
 		{
 			bool pressed = Controller.IsPressed(keys);
 			bool released = Controller.IsReleasing(keys);
 			if (pressed || released)
 			{
-				Squid.Keys? availables = SquidDesktop.Keys[Keyboard.GetKeyFromScancodeEXT(keys)];
+				Squid.Keys? availables = SquidExtensions.Keys[Keyboard.GetKeyFromScancodeEXT(keys)];
 				if (availables.HasValue)
 				{
-					list.Add(new KeyData
+					touchedKeys.Add(new KeyData
 					{
 						Scancode = (int)availables.Value,
 						Char = keys.ChangeKeyboard(Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.LeftShift) || Controller.IsHolding(Microsoft.Xna.Framework.Input.Keys.RightShift)),
@@ -306,102 +304,102 @@ public class AmorousSingleton : IAmorous
 				}
 			}
 		}
-		Gui.SetKeyboard(list.ToArray());
+		Gui.SetKeyboard(touchedKeys.ToArray());
 		Gui.SetButtons(Controller.IsHolding(ControllerButtonType.LeftButton), Controller.IsHolding(ControllerButtonType.RightButton));
-		Gui.SetMouse(point.X, point.Y, Controller.Scroll);
+		Gui.SetMouse(cursor.X, cursor.Y, Controller.ScrollWheel);
 		Gui.TimeElapsed = gameTime.ElapsedGameTime.Milliseconds;
-		if (_steam != null)
+		if (steam != null)
 		{
-			_steam.Update();
+			steam.Update();
 		}
 	}
 
 	public void Draw(GameTime gameTime)
 	{
 		Utils.Date = (float)gameTime.TotalGameTime.TotalSeconds;
-		_game.GraphicsDevice.SetRenderTarget(_target);
-		_game.GraphicsDevice.Clear(Color.Black);
-		_scene.Draw(_batch, _spines, _canvas.OverscrollNoneMatrix);
-		if (_canvas.OverscrollRight)
+		game.GraphicsDevice.SetRenderTarget(renderTarget);
+		game.GraphicsDevice.Clear(Color.Black);
+		scene.Draw(spriteBatch, skeletonRenderer, canvas.OverscrollNoneMatrix);
+		if (canvas.IsOverscrolledToRight)
 		{
-			_scene.Draw(_batch, _spines, _canvas.OverscrollRightMatrix);
+			scene.Draw(spriteBatch, skeletonRenderer, canvas.OverscrollRightMatrix);
 		}
-		else if (_canvas.OverscrollLeft)
+		else if (canvas.IsOverscrolledToLeft)
 		{
-			_scene.Draw(_batch, _spines, _canvas.OverscrollLeftMatrix);
+			scene.Draw(spriteBatch, skeletonRenderer, canvas.OverscrollLeftMatrix);
 		}
-		if (_sexscene != null)
+		if (sexscene != null)
 		{
-			_sexscene.Draw(_batch, _spines);
+			sexscene.Draw(spriteBatch, skeletonRenderer);
 		}
-		if (_hasControls)
+		if (showControls)
 		{
-			_phone.Draw(_batch, _spines);
+			phone.Draw(spriteBatch, skeletonRenderer);
 		}
-		if (_overlay != null)
+		if (overlay != null)
 		{
-			_overlay.Draw(_batch);
+			overlay.Draw(spriteBatch);
 		}
-		_scene.DrawOverlay(_batch);
-		_fader.Draw(_batch, _canvas);
-		if (_hasControls)
+		scene.DrawOverlay(spriteBatch);
+		screenFader.Draw(spriteBatch, canvas);
+		if (showControls)
 		{
-			_writer.Draw(_batch);
+			typingDialogue.Draw(spriteBatch);
 		}
-		_notifier.Draw(_batch);
-		if (_debugger)
+		notifications.Draw(spriteBatch);
+		if (showDebugging)
 		{
 			object sceneName = null;
-			if (_cutscene != null)
+			if (cutscene != null)
 			{
-				_debuggerCutscene = _cutscene.ToString(5);
+				debuggingOfCutscene = cutscene.ToString(5);
 			}
-			_debuggerPoint.X = 10f;
-			_debuggerPoint.Y = 10f;
-			_batch.Begin();
-			_batch.DrawString(_font, "[Generic]", _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			if (_scene != null)
+			debuggingOffset.X = 10f;
+			debuggingOffset.Y = 10f;
+			spriteBatch.Begin();
+			spriteBatch.DrawString(debuggingFont, "[Generic]", debuggingOffset, Color.White);
+			debuggingOffset.Y += 40f;
+			if (scene != null)
 			{
-				sceneName = _scene.GetType().Name;
+				sceneName = scene.GetType().Name;
 			}
 			if (sceneName == null)
 			{
 				sceneName = "None";
 			}
-			_batch.DrawString(_font, "Scene: " + sceneName, _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			_batch.DrawString(_font, "ScreenFader: " + _fader.State.A, _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			_debuggerPoint.Y += 40f;
-			_batch.DrawString(_font, "[Cutscenes]", _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			_batch.DrawString(_font, string.Format("Cutscene in progress: {0}", (_cutscene == null) ? "No" : "Yes"), _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			if (_debuggerCutscene != null)
+			spriteBatch.DrawString(debuggingFont, "Scene: " + sceneName, debuggingOffset, Color.White);
+			debuggingOffset.Y += 40f;
+			spriteBatch.DrawString(debuggingFont, "ScreenFader: " + screenFader.Value.A, debuggingOffset, Color.White);
+			debuggingOffset.Y += 40f;
+			debuggingOffset.Y += 40f;
+			spriteBatch.DrawString(debuggingFont, "[Cutscenes]", debuggingOffset, Color.White);
+			debuggingOffset.Y += 40f;
+			spriteBatch.DrawString(debuggingFont, string.Format("Cutscene in progress: {0}", (cutscene == null) ? "No" : "Yes"), debuggingOffset, Color.White);
+			debuggingOffset.Y += 40f;
+			if (debuggingOfCutscene != null)
 			{
-				_batch.DrawString(_font, "Cutscene: " + _debuggerCutscene[0], _debuggerPoint, Color.White);
-				_debuggerPoint.Y += 40f;
-				_batch.DrawString(_font, "Stage: " + _debuggerCutscene[1], _debuggerPoint, Color.White);
-				_debuggerPoint.Y += 40f;
-				_batch.DrawString(_font, "Path: " + _debuggerCutscene[2], _debuggerPoint, Color.White);
-				_debuggerPoint.Y += 40f;
-				_batch.DrawString(_font, "Current: " + _debuggerCutscene[3], _debuggerPoint, Color.White);
-				_debuggerPoint.Y += 40f;
+				spriteBatch.DrawString(debuggingFont, "Cutscene: " + debuggingOfCutscene[0], debuggingOffset, Color.White);
+				debuggingOffset.Y += 40f;
+				spriteBatch.DrawString(debuggingFont, "Stage: " + debuggingOfCutscene[1], debuggingOffset, Color.White);
+				debuggingOffset.Y += 40f;
+				spriteBatch.DrawString(debuggingFont, "Path: " + debuggingOfCutscene[2], debuggingOffset, Color.White);
+				debuggingOffset.Y += 40f;
+				spriteBatch.DrawString(debuggingFont, "Current: " + debuggingOfCutscene[3], debuggingOffset, Color.White);
+				debuggingOffset.Y += 40f;
 			}
 			else
 			{
-				_batch.DrawString(_font, "Cutscene: None", _debuggerPoint, Color.White);
-				_debuggerPoint.Y += 40f;
+				spriteBatch.DrawString(debuggingFont, "Cutscene: None", debuggingOffset, Color.White);
+				debuggingOffset.Y += 40f;
 			}
-			_debuggerPoint.Y += 40f;
-			_batch.DrawString(_font, "Press Tab to toggle", _debuggerPoint, Color.White);
-			_debuggerPoint.Y += 40f;
-			_batch.End();
+			debuggingOffset.Y += 40f;
+			spriteBatch.DrawString(debuggingFont, "Press Tab to toggle", debuggingOffset, Color.White);
+			debuggingOffset.Y += 40f;
+			spriteBatch.End();
 		}
-		if (_pendingScreenshot)
+		if (requestedScreenshot)
 		{
-			_pendingScreenshot = false;
+			requestedScreenshot = false;
 			if (!Directory.Exists("Screenshots"))
 			{
 				Directory.CreateDirectory("Screenshots");
@@ -410,19 +408,19 @@ public class AmorousSingleton : IAmorous
 			string screenshotPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, screenshotDirectory);
 			using (Stream stream = File.OpenWrite(screenshotPath))
 			{
-				_target.SaveAsPng(stream, _canvas.Width, _canvas.Height);
+				renderTarget.SaveAsPng(stream, canvas.AbsoluteWidth, canvas.AbsoluteHeight);
 			}
-			if (_steam != null)
+			if (steam != null)
 			{
-				_steam.AddScreenshotToLibrary(screenshotPath, _canvas.Width, _canvas.Height);
+				steam.AddScreenshotToLibrary(screenshotPath, canvas.AbsoluteWidth, canvas.AbsoluteHeight);
 			}
-			if (_debugger && _debuggerCutscene != null)
+			if (showDebugging && debuggingOfCutscene != null)
 			{
 				string scenePath = $"{screenshotPath}.txt";
 				object sceneName = null;
-				if (_scene != null)
+				if (scene != null)
 				{
-					sceneName = _scene.GetType().Name;
+					sceneName = scene.GetType().Name;
 				}
 				if (sceneName == null)
 				{
@@ -430,37 +428,37 @@ public class AmorousSingleton : IAmorous
 				}
 				object[] sceneInformation = new object[5];
 				sceneInformation[0] = sceneName;
-				sceneInformation[1] = _debuggerCutscene[0];
-				sceneInformation[2] = _debuggerCutscene[1];
-				sceneInformation[3] = _debuggerCutscene[2];
-				sceneInformation[4] = _debuggerCutscene[3];
+				sceneInformation[1] = debuggingOfCutscene[0];
+				sceneInformation[2] = debuggingOfCutscene[1];
+				sceneInformation[3] = debuggingOfCutscene[2];
+				sceneInformation[4] = debuggingOfCutscene[3];
 				File.WriteAllText(scenePath, string.Format("Scene: {0}\r\nCutscene: {1}\r\nStage: {2}\r\nPath: {3}\r\nCurrent: {4}", sceneInformation));
 			}
 		}
-		_game.GraphicsDevice.SetRenderTarget(null);
-		_game.GraphicsDevice.Clear(Color.Black);
-		_batch.Begin();
-		_batch.Draw(_target, _destinationRectangle, Color.White);
+		game.GraphicsDevice.SetRenderTarget(null);
+		game.GraphicsDevice.Clear(Color.Black);
+		spriteBatch.Begin();
+		spriteBatch.Draw(renderTarget, destinationRectangle, Color.White);
 		if (IsRenderingCursor)
 		{
-			_batch.Draw(_cursorTexture, Controller.CursorVector, _player.Data.PhoneColor);
+			spriteBatch.Draw(cursorOverlay, Controller.VectorOfCursor, preferences.Data.PhoneColor);
 		}
-		_batch.End();
+		spriteBatch.End();
 	}
 
 	public void RefreshDisplay()
 	{
-		SetDisplay(_canvas.CanvasWidth, _canvas.CanvasHeight, !_display.IsFullScreen);
+		SetDisplay(canvas.ModeWidth, canvas.ModeHeight, !graphicsDevice.IsFullScreen);
 	}
 
 	public void RequestScreenshot()
 	{
-		_pendingScreenshot = true;
+		requestedScreenshot = true;
 	}
 
 	public bool OpenUrl(string url)
 	{
-		if (_steam == null)
+		if (steam == null)
 		{
 			try
 			{
@@ -472,102 +470,102 @@ public class AmorousSingleton : IAmorous
 				return false;
 			}
 		}
-		_steam.OpenUrl(url);
+		steam.OpenUrl(url);
 		return true;
 	}
 
 	public void SetDisplay(int width, int height)
 	{
-		SetDisplay(width, height, _display.IsFullScreen);
+		SetDisplay(width, height, graphicsDevice.IsFullScreen);
 	}
 
 	public void SetDisplay(int width, int height, bool fullscreen)
 	{
-		_display.IsFullScreen = fullscreen;
-		_display.PreferredBackBufferWidth = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width : width);
-		_display.PreferredBackBufferHeight = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height : height);
-		_display.GraphicsDevice.Viewport = new Viewport(0, 0, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
-		_canvas.SetResolution(width, height, _display.PreferredBackBufferWidth, _display.PreferredBackBufferHeight);
-		_destinationRectangle = new Microsoft.Xna.Framework.Rectangle(_canvas.RelativeX, _canvas.RelativeY, _canvas.RelativeWidth, _canvas.RelativeHeight);
-		_display.ApplyChanges();
+		graphicsDevice.IsFullScreen = fullscreen;
+		graphicsDevice.PreferredBackBufferWidth = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width : width);
+		graphicsDevice.PreferredBackBufferHeight = (fullscreen ? GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height : height);
+		graphicsDevice.GraphicsDevice.Viewport = new Viewport(0, 0, graphicsDevice.PreferredBackBufferWidth, graphicsDevice.PreferredBackBufferHeight);
+		canvas.ChangeResolution(width, height, graphicsDevice.PreferredBackBufferWidth, graphicsDevice.PreferredBackBufferHeight);
+		destinationRectangle = new Microsoft.Xna.Framework.Rectangle(canvas.OffsetX, canvas.OffsetY, canvas.Width, canvas.Height);
+		graphicsDevice.ApplyChanges();
 	}
 
 	public void Exit()
 	{
-		_game.Exit();
+		game.Exit();
 	}
 
 	public void StartScene<T>() where T : AbstractScene
 	{
-		_fader.FadeOut(delegate
+		screenFader.FadeOut(delegate
 		{
 			SwitchToScene<T>(delegate
 			{
-				_fader.FadeIn();
+				screenFader.FadeIn();
 			});
 		});
 	}
 
 	public void StartScene(string name)
 	{
-		_fader.FadeOut(delegate
+		screenFader.FadeOut(delegate
 		{
 			SwitchToScene(name, delegate
 			{
-				_fader.FadeIn();
+				screenFader.FadeIn();
 			});
 		});
 	}
 
 	public void StartScene(AbstractScene scene)
 	{
-		_fader.FadeOut(delegate
+		screenFader.FadeOut(delegate
 		{
 			SwitchToScene(scene, delegate
 			{
-				_fader.FadeIn();
+				screenFader.FadeIn();
 			});
 		});
 	}
 
 	public void SwitchToScene<T>(Action then = null) where T : AbstractScene
 	{
-		if (_pendingSceneThen != null)
+		if (sceneAfterChanging != null)
 		{
-			Action action = _pendingSceneThen;
-			_pendingSceneThen = null;
+			Action action = sceneAfterChanging;
+			sceneAfterChanging = null;
 			action();
 		}
-		_pendingSceneThen = then;
-		_canvas.ResetOverscroll();
+		sceneAfterChanging = then;
+		canvas.ResetOverscroll();
 		PlayerPreferences.SetPlayerOverlay(null);
-		_overlay = null;
-		_sexscene = null;
-		_pendingScene = Activator.CreateInstance(typeof(T), this) as AbstractScene;
-		InPendingScene = true;
+		overlay = null;
+		sexscene = null;
+		pendingToScene = Activator.CreateInstance(typeof(T), this) as AbstractScene;
+		IsScenePending = true;
 	}
 
 	public void SwitchToScene(string name, Action then = null)
 	{
-		if (_pendingSceneThen != null)
+		if (sceneAfterChanging != null)
 		{
-			Action action = _pendingSceneThen;
-			_pendingSceneThen = null;
+			Action action = sceneAfterChanging;
+			sceneAfterChanging = null;
 			action();
 		}
-		_pendingSceneThen = then;
+		sceneAfterChanging = then;
 		IEnumerable<Type> source = from scene in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
 			where typeof(AbstractScene).IsAssignableFrom(scene)
 			select scene;
 		Type type = source.FirstOrDefault((Type scene) => scene.Name == name);
 		if (!(type == null))
 		{
-			_canvas.ResetOverscroll();
+			canvas.ResetOverscroll();
 			PlayerPreferences.SetPlayerOverlay(null);
-			_overlay = null;
-			_sexscene = null;
-			_pendingScene = Activator.CreateInstance(type, this) as AbstractScene;
-			InPendingScene = true;
+			overlay = null;
+			sexscene = null;
+			pendingToScene = Activator.CreateInstance(type, this) as AbstractScene;
+			IsScenePending = true;
 		}
 		else
 		{
@@ -577,19 +575,19 @@ public class AmorousSingleton : IAmorous
 
 	public void SwitchToScene(AbstractScene scene, Action then = null)
 	{
-		if (_pendingSceneThen != null)
+		if (sceneAfterChanging != null)
 		{
-			Action action = _pendingSceneThen;
-			_pendingSceneThen = null;
+			Action action = sceneAfterChanging;
+			sceneAfterChanging = null;
 			action();
 		}
-		_pendingSceneThen = then;
-		_canvas.ResetOverscroll();
+		sceneAfterChanging = then;
+		canvas.ResetOverscroll();
 		PlayerPreferences.SetPlayerOverlay(null);
-		_overlay = null;
-		_sexscene = null;
-		_pendingScene = scene;
-		InPendingScene = true;
+		overlay = null;
+		sexscene = null;
+		pendingToScene = scene;
+		IsScenePending = true;
 	}
 
 	public void PlaySexscene(string name)
@@ -600,15 +598,15 @@ public class AmorousSingleton : IAmorous
 		Type type = source.FirstOrDefault((Type sexscene) => sexscene.Name == name);
 		if (!(type == null))
 		{
-			if (_sexscene != null)
+			if (sexscene != null)
 			{
-				Logger.Log(ConsoleColor.White, "Debug", "Changing to sexscene '{0}' -> '{1}'", _sexscene.GetType().Name, type.Name);
+				Logger.Debug("Changing to sexscene '{0}' -> '{1}'", sexscene.GetType().Name, type.Name);
 			}
 			else
 			{
-				Logger.Log(ConsoleColor.White, "Debug", "Starting sexscene '{0}'", type.Name);
+				Logger.Debug("Starting sexscene '{0}'", type.Name);
 			}
-			_sexscene = Activator.CreateInstance(type, _game.Content) as AbstractSexscene;
+			sexscene = Activator.CreateInstance(type, game.Content) as AbstractSexscene;
 		}
 		else
 		{
@@ -618,7 +616,7 @@ public class AmorousSingleton : IAmorous
 
 	public void ResetSexscene()
 	{
-		_sexscene = null;
+		sexscene = null;
 	}
 
 	public void PlayCutscene(string name)
@@ -630,18 +628,18 @@ public class AmorousSingleton : IAmorous
 	{
 		if (cutscene != null)
 		{
-			if (_cutscene != null)
+			if (this.cutscene != null)
 			{
-				Logger.Log(ConsoleColor.White, "Debug", "Changing to cutscene '{0}' -> '{1}'", _cutscene.Data.Name, cutscene.Data.Name);
+                Logger.Debug("Changing to cutscene '{0}' -> '{1}'", this.cutscene.Data.Name, cutscene.Data.Name);
 			}
 			else
 			{
-				Logger.Log(ConsoleColor.White, "Debug", "Starting cutscene '{0}'", cutscene.Data.Name);
+                Logger.Debug("Starting cutscene '{0}'", cutscene.Data.Name);
 			}
-			_cutscene = cutscene;
-			int stage = _player.Data.GetState(cutscene.Data.Name);
+			this.cutscene = cutscene;
+			int stage = preferences.Data.GetStage(cutscene.Data.Name);
 			PhoneOverlay.Hide();
-			_cutscene.Start(stage);
+			this.cutscene.Start(stage);
 		}
 	}
 
@@ -678,18 +676,18 @@ public class AmorousSingleton : IAmorous
 			CutsceneState state = new CutsceneState
 			{
 				Name = Cutscene.Data.Name,
-				Stage = Cutscene.State.Data.Stage,
-				ID = Cutscene.State.State.ID,
+				Stage = Cutscene.Stage.StageData.Stage,
+				ID = Cutscene.Stage.EventData.ID,
 				Scene = Scene.GetType().Name,
 				Subscene = Scene.Subscene,
 				Sexscene = Sexscene?.GetType().Name,
-				SexscenePhase = (Sexscene?.State ?? AbstractSexscene.Phase.Idle),
+				SexscenePhase = (Sexscene?.Phase ?? AbstractSexscene.EPhase.Idle),
 				SexsceneFinished = (Sexscene?.Exploded ?? false),
-				FadedOut = (Fader.State.A > 0)
+				FadedOut = (Fader.Value.A > 0)
 			};
-			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Left));
-			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Middle));
-			state.SaveNPCLayer(_scene.GetNPCLayer(NPCLocation.Right));
+			state.SaveNPCLayer(scene.GetNPCLayer(NPCLocation.Left));
+			state.SaveNPCLayer(scene.GetNPCLayer(NPCLocation.Middle));
+			state.SaveNPCLayer(scene.GetNPCLayer(NPCLocation.Right));
 			return state;
 		}
 		return null;
@@ -717,20 +715,20 @@ public class AmorousSingleton : IAmorous
 					{
 						AbstractNPC npc = GetNPCLayerAt(item.Name, LayerOrder.Background);
 						npc.Apply(item.Location, item.Head, item.Pose, item.Clothes);
-						NPCLayer NPCLayer = _scene.GetNPCLayer(item.Name);
+						NPCLayer NPCLayer = scene.GetNPCLayer(item.Name);
 						NPCLayer.LayerOrder = item.LayerOrder;
 					}
 					if (state.FadedOut)
 					{
-						_cutscene = cutscene;
-						_cutscene.Start(state.Stage, state.ID);
+						this.cutscene = cutscene;
+						this.cutscene.Start(state.Stage, state.ID);
 					}
 					else
 					{
 						Fader.FadeIn(delegate
 						{
-							_cutscene = cutscene;
-							_cutscene.Start(state.Stage, state.ID);
+							this.cutscene = cutscene;
+							this.cutscene.Start(state.Stage, state.ID);
 						});
 					}
 				});
@@ -741,48 +739,48 @@ public class AmorousSingleton : IAmorous
 	public void Autosave()
 	{
 		AutosaveAtSlot(0);
-		ResetInGameDrawing();
-		_scene.Autosave();
+		ResetCutscene();
+		scene.Autosave();
 	}
 
 	public void SetOverlay<T>() where T : InteractableOverlay
 	{
-		_overlay = Activator.CreateInstance(typeof(T), this) as InteractableOverlay;
+		overlay = Activator.CreateInstance(typeof(T), this) as InteractableOverlay;
 	}
 
 	public void SetOverlay<T>(T overlay) where T : InteractableOverlay
 	{
-		_overlay = overlay;
+		this.overlay = overlay;
 	}
 
 	public void ResetOverlay()
 	{
-		_overlay = null;
+		overlay = null;
 	}
 
 	public AbstractNPC GetNPCLayer(string name)
 	{
-		if (_scene == null)
+		if (scene == null)
 		{
 			return null;
 		}
-		return _scene.GetNPCLayer(name)?.NPC;
+		return scene.GetNPCLayer(name)?.NPC;
 	}
 
 	public AbstractNPC GetNPCLayer(NPCLocation location)
 	{
-		if (_scene == null)
+		if (scene == null)
 		{
 			return null;
 		}
-		return _scene.GetNPCLayer(location)?.NPC;
+		return scene.GetNPCLayer(location)?.NPC;
 	}
 
 	public AbstractNPC GetNPCLayerAt(string name, LayerOrder order)
 	{
-		if (_scene != null)
+		if (scene != null)
 		{
-			NPCLayer NPCLayer = _scene.GetNPCLayer(name);
+			NPCLayer NPCLayer = scene.GetNPCLayer(name);
 			if (NPCLayer == null)
 			{
 				IEnumerable<Type> source = from npc in Assembly.GetAssembly(typeof(AmorousSingleton))!.GetTypes()
@@ -795,7 +793,7 @@ public class AmorousSingleton : IAmorous
 					{
 						npc.Game = this;
 						npc.Start();
-						_scene.AddNPC(npc, (order == LayerOrder.None) ? LayerOrder.Background : order);
+						scene.AddNPC(npc, (order == LayerOrder.None) ? LayerOrder.Background : order);
 						return npc;
 					}
 					Logger.Error("Failed to instance npc '{0}'", name);
@@ -805,13 +803,13 @@ public class AmorousSingleton : IAmorous
 				return null;
 			}
 			AbstractNPC NPC = NPCLayer.NPC;
-			if (NPC != null && NPC.LockedInLayer)
+			if (NPC != null && NPC.IsFixedOrder)
 			{
 				return null;
 			}
 			NPCLayer.Layer = ((order == LayerOrder.None) ? NPCLayer.Layer : order);
 			NPCLayer.ZOrder = ((NPCLayer.Layer == LayerOrder.Background) ? 1 : 3);
-			_scene.RefreshLayerOrdering();
+			scene.RefreshLayerOrdering();
 			return NPCLayer.NPC;
 		}
 		return null;
@@ -826,10 +824,10 @@ public class AmorousSingleton : IAmorous
 	{
 		Saves.Save(slot, new SaveData
 		{
-			Version = SavesMigration.CurrentlyVersion,
-			PlayerData = _player.Data,
+			Version = SavesMigration.CURRENTLY_VERSION,
+			PlayerData = preferences.Data,
 			CutsceneState = GetCutsceneState(),
-			SceneName = _scene.GetType().Name,
+			SceneName = scene.GetType().Name,
 			PhoneEnabled = PhoneOverlay.Enabled
 		});
 	}
@@ -838,32 +836,32 @@ public class AmorousSingleton : IAmorous
 	{
 		Saves.Autosave(slot, new SaveData
 		{
-			Version = SavesMigration.CurrentlyVersion,
-			PlayerData = _player.Data,
-			SceneName = _scene.GetType().Name,
+			Version = SavesMigration.CURRENTLY_VERSION,
+			PlayerData = preferences.Data,
+			SceneName = scene.GetType().Name,
 			PhoneEnabled = PhoneOverlay.Enabled
 		});
 	}
 
 	public bool ReadFromSlot(int slot)
 	{
-		ResetInGameDrawing();
+		ResetCutscene();
 		SaveData save = Saves.Read(slot);
 		if (save != null)
 		{
 			SavesMigration.RestoreSaveData(save);
-			_player.Data = save.PlayerData;
+			preferences.Data = save.PlayerData;
 			PhoneOverlay.Enabled = save.PhoneEnabled;
-			PhoneOverlay.Get().RefreshSkin();
-			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
-			TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
+			PhoneOverlay.GetSingleton().RefreshSkin();
+			TypingDialogue.Speed = Options.Config.DialogueTextSpeed;
+			TypingDialogue.AutoSkip = Options.Config.DialogueAutoSkip;
 			if (save.CutsceneState != null)
 			{
 				LoadCutscene(save.CutsceneState);
 			}
 			else
 			{
-				if (!_nonContextualPlaces.Contains(save.SceneName))
+				if (!accessibleScenes.Contains(save.SceneName))
 				{
 					save.SceneName = typeof(ClubInsideScene).Name;
 				}
@@ -879,17 +877,17 @@ public class AmorousSingleton : IAmorous
 
 	public bool ReadFromAutosaveSlot(int slot)
 	{
-		ResetInGameDrawing();
+		ResetCutscene();
 		SaveData save = Saves.ReadAutosave(slot);
 		if (save != null)
 		{
 			SavesMigration.RestoreSaveData(save);
-			_player.Data = save.PlayerData;
+			preferences.Data = save.PlayerData;
 			PhoneOverlay.Enabled = save.PhoneEnabled;
-			PhoneOverlay.Get().RefreshSkin();
-			TypingDialogue.Speed = Options.Data.DialogueTextSpeed;
-			TypingDialogue.AutoSkip = Options.Data.DialogueAutoSkip;
-			if (!_nonContextualPlaces.Contains(save.SceneName))
+			PhoneOverlay.GetSingleton().RefreshSkin();
+			TypingDialogue.Speed = Options.Config.DialogueTextSpeed;
+			TypingDialogue.AutoSkip = Options.Config.DialogueAutoSkip;
+			if (!accessibleScenes.Contains(save.SceneName))
 			{
 				save.SceneName = typeof(ClubInsideScene).Name;
 			}
@@ -911,25 +909,25 @@ public class AmorousSingleton : IAmorous
 			Message = message,
 			Date = DateTime.Now
 		});
-		_notifier.ShowMessage(icon, title, message);
+		notifications.ShowMessage(icon, title, message);
 	}
 
 	private void ReturnToMenu()
 	{
-		ResetInGameDrawing();
+		ResetCutscene();
 		StartScene<MainMenuScene>();
 	}
 
-	private void ResetInGameDrawing()
+	private void ResetCutscene()
 	{
 		if (Cutscene != null)
 		{
 			Cutscene.ResetState();
 		}
 		PhoneOverlay.Hide();
-		PhoneOverlay.Get().ResetState();
+		PhoneOverlay.GetSingleton().Reset();
 		TypingDialogue.Unselect();
 		TypingDialogue.Complete();
-		_fader.ApplyNow(new Color(0, 0, 0, 0));
+		screenFader.ApplyWithoutFading(new Color(0, 0, 0, 0));
 	}
 }

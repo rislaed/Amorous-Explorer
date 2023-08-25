@@ -4,29 +4,28 @@ namespace Amorous.Game.Scenes;
 
 public class MakeoutPointScene : TimeOfDayScene
 {
-	private readonly SpriteLayer _backgroundDay;
-	private readonly SpriteLayer _backgroundNight;
+	private readonly SpriteLayer backgroundOfDay;
+	private readonly SpriteLayer backgroundOfNight;
 
-	public MakeoutPointScene(IAmorous game)
-		: base(game)
+	public MakeoutPointScene(IAmorous game) : base(game)
 	{
-		_backgroundDay = AddSpriteLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
-		_backgroundNight = AddSpriteLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
+		backgroundOfDay = AddSpriteLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Day)", 0, 0);
+		backgroundOfNight = AddSpriteLayer("Background", "Assets/Scenes/MakeoutPoint/Makeout Point (Night)", 0, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.SimulateTrack, 0.4f);
 	}
 
 	public override void SwitchToSubscene(string daytime)
 	{
 		base.SwitchToSubscene(daytime);
-		if (daytime == VariantNight)
+		if (daytime == VARIANT_NIGHT)
 		{
-			_backgroundNight.Color.A = byte.MaxValue;
-			_backgroundDay.Color.A = 0;
+			backgroundOfNight.Color.A = byte.MaxValue;
+			backgroundOfDay.Color.A = 0;
 		}
 		else
 		{
-			_backgroundNight.Color.A = 0;
-			_backgroundDay.Color.A = byte.MaxValue;
+			backgroundOfNight.Color.A = 0;
+			backgroundOfDay.Color.A = byte.MaxValue;
 		}
 	}
 

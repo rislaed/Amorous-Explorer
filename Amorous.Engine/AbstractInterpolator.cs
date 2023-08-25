@@ -3,14 +3,14 @@ using Microsoft.Xna.Framework;
 
 public abstract class AbstractInterpolator<T>
 { // _RlrsL89bialFQa9mzWurgsdr6FK
-	private T _value, _from, _to;
-	private int _ticks;
-	private Action _then;
+	private T value, from, to;
+	private int ticks;
+	private Action then;
 
 	protected int Ticks { get; set; }
 
-	public T State => _value;
-	public bool IsAnimating => _ticks > 0;
+	public T Value => value;
+	public bool IsAnimating => ticks > 0;
 
 	protected AbstractInterpolator()
 	{
@@ -19,55 +19,55 @@ public abstract class AbstractInterpolator<T>
 
 	public void Update(GameTime gameTime)
 	{
-		if (_ticks <= 0)
+		if (ticks <= 0)
 		{
 			return;
 		}
-		_ticks -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_ticks <= 0)
+		ticks -= gameTime.ElapsedGameTime.Milliseconds;
+		if (ticks <= 0)
 		{
-			_ticks = 0;
-			_value = _to;
-			if (_then != null)
+			ticks = 0;
+			value = to;
+			if (then != null)
 			{
-				_then();
-				_then = null;
+				then();
+				then = null;
 			}
 		}
 		else
 		{
-			float interpolation = 1f - (float)_ticks / (float)Ticks;
-			_value = Interpolate(_from, _to, interpolation);
+			float amount = 1f - (float)ticks / (float)Ticks;
+			value = Interpolate(from, to, amount);
 		}
 	}
 
-	protected abstract T Interpolate(T value1, T value2, float interpolation);
+	protected abstract T Interpolate(T value1, T value2, float amount);
 
-	protected void To(T value, Action then)
+	protected void Begin(T value, Action then)
 	{
-		if (_then != null)
+		if (this.then != null)
 		{
-			Action action = _then;
-			_then = null;
+			Action action = this.then;
+			this.then = null;
 			action();
 		}
-		_from = _to;
-		_to = value;
-		_ticks = Ticks;
-		_then = then;
+		from = to;
+		to = value;
+		ticks = Ticks;
+		this.then = then;
 	}
 
-	protected void Set(T value)
+	protected void End(T value)
 	{
-		if (_then != null)
+		if (then != null)
 		{
-			Action action = _then;
-			_then = null;
+			Action action = then;
+			then = null;
 			action();
 		}
-		_to = value;
-		_value = value;
-		_ticks = 0;
-		_then = null;
+		to = value;
+		this.value = value;
+		ticks = 0;
+		then = null;
 	}
 }

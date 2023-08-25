@@ -34,7 +34,7 @@ public class SethNPC : SpineNPC<SethNPC.EHeads, SethNPC.EPoses, SethNPC.EClothes
 	public SethNPC(IAmorous game)
 		: base(game, "Assets/NPC/Seth/Seth", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("Idle");
+		base.Skeleton.StartAnimationWithLooping("Idle");
 		AddEmotion(EHeads.Blush, "Blush head", "Blush pupils", "Blush eyeback");
 		AddEmotion(EHeads.Happy, "Happy head", "Happy Pupils", "Happy eyeback", "Happy jaw").WithBlinking("Happy blink");
 		AddEmotion(EHeads.Sad, "Sad head", "Sad pupils", "Sad eye back").WithBlinking("Sad blink");

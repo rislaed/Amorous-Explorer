@@ -6,8 +6,7 @@ public class SetFlagEvent : AbstractEvent<SetFlagEventData>
 	public string Flag { get; private set; }
 	public bool Value { get; private set; }
 
-	public SetFlagEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public SetFlagEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(SetFlagEventData eventData)
 	{
@@ -19,12 +18,12 @@ public class SetFlagEvent : AbstractEvent<SetFlagEventData>
 	public override void Start()
 	{
 		base.Start();
-		PlayerPreferences.GetPlayerData().SetFlag(Flag, Value);
-		base.Cutscene.Game.Achievements.SetFlag(Flag, Value);
+		PlayerPreferences.GetPlayerData().InsertFlag(Flag, Value);
+		base.Cutscene.Game.Achievements.InsertFlag(Flag, Value);
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

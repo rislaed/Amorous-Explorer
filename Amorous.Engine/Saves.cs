@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 public class Saves
 { // _DW9IcpdMEINZmuzfrqmwsduBGih
-	public class Pointer
+	public class Item
 	{
 		public bool IsEmpty { get; set; }
 		public bool IsAutosave { get; set; }
@@ -13,10 +13,10 @@ public class Saves
 		public int Index { get; set; }
 	}
 
-	private const int SavesCount = 10;
-	private const int AutosavesCount = 1;
+	private const int SAVE_COUNT = 10;
+	private const int AUTOSAVE_COUNT = 1;
 
-	private static readonly string SavesDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
+	private static readonly string SAVES_DIRECTORY = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
 
 	private static readonly JsonSerializerSettings ExtendedSerializers = new JsonSerializerSettings
 	{
@@ -24,14 +24,13 @@ public class Saves
 		Converters = { (JsonConverter)new ColorJsonConverter() }
 	};
 
-	private static string _lastType;
-	private static int? _lastIndex;
+	private static string typeLast;
+	private static int? indexLast;
 
 	public static void Save(int state, SaveData save, string type = "save")
 	{
 		string contents = JsonConvert.SerializeObject(save, Formatting.Indented, ExtendedSerializers);
-		string path = GetPath(state, type);
-		File.WriteAllText(path, contents);
+		File.WriteAllText(GetPath(state, type), contents);
 	}
 
 	public static void Autosave(int state, SaveData save)
@@ -41,8 +40,7 @@ public class Saves
 
 	public static SaveData Read(int state, string type = "save")
 	{
-		string path = GetPath(state, type);
-		string value = File.ReadAllText(path);
+		string value = File.ReadAllText(GetPath(state, type));
 		SaveData save;
 		try
 		{
@@ -61,8 +59,8 @@ public class Saves
 			Logger.Warning("Failed to load save: {0}", ex.ToString());
 			save = null;
 		}
-		_lastType = type;
-		_lastIndex = state;
+		typeLast = type;
+		indexLast = state;
 		return save;
 	}
 
@@ -78,25 +76,25 @@ public class Saves
 
 	public static string GetPath(int state, string type = "save")
 	{
-		if (!Directory.Exists(SavesDirectory))
+		if (!Directory.Exists(SAVES_DIRECTORY))
 		{
-			Directory.CreateDirectory(SavesDirectory);
+			Directory.CreateDirectory(SAVES_DIRECTORY);
 		}
-		return Path.Combine(SavesDirectory, $"{type}_{state}.sav");
+		return Path.Combine(SAVES_DIRECTORY, $"{type}_{state}.sav");
 	}
 
-	public static List<Pointer> GetPointers(bool excludeAutosaves)
+	public static List<Item> GetItems(bool excludeAutosaves)
 	{
-		List<Pointer> list = new List<Pointer>();
+		List<Item> list = new List<Item>();
 		if (!excludeAutosaves)
 		{
-			for (int i = 0; i < AutosavesCount; i++)
+			for (int i = 0; i < AUTOSAVE_COUNT; i++)
 			{
 				string path = GetPath(0, "autosave");
 				if (File.Exists(path))
 				{
 					DateTime lastWriteTime = File.GetLastWriteTime(path);
-					list.Add(new Pointer
+					list.Add(new Item
 					{
 						IsEmpty = false,
 						IsAutosave = true,
@@ -106,7 +104,7 @@ public class Saves
 				}
 				else
 				{
-					list.Add(new Pointer
+					list.Add(new Item
 					{
 						IsEmpty = true,
 						IsAutosave = true,
@@ -116,13 +114,13 @@ public class Saves
 				}
 			}
 		}
-		for (int j = 0; j < SavesCount; j++)
+		for (int j = 0; j < SAVE_COUNT; j++)
 		{
 			string path = GetPath(j);
 			if (File.Exists(path))
 			{
 				DateTime lastWriteTime = File.GetLastWriteTime(path);
-				list.Add(new Pointer
+				list.Add(new Item
 				{
 					IsEmpty = false,
 					IsAutosave = false,
@@ -132,7 +130,7 @@ public class Saves
 			}
 			else
 			{
-				list.Add(new Pointer
+				list.Add(new Item
 				{
 					IsEmpty = true,
 					IsAutosave = false,
@@ -144,22 +142,22 @@ public class Saves
 		return list;
 	}
 
-	public static Pointer GetLastPointer()
+	public static Item GetLastItem()
 	{
-		if (_lastIndex.HasValue)
+		if (indexLast.HasValue)
 		{
-			return new Pointer
+			return new Item
 			{
 				IsEmpty = false,
-				IsAutosave = (_lastType == "autosave"),
+				IsAutosave = (typeLast == "autosave"),
 				Name = string.Empty,
-				Index = _lastIndex.Value
+				Index = indexLast.Value
 			};
 		}
 		bool autosave = false;
 		DateTime? dateTime = null;
 		int index = -1;
-		for (int i = 0; i < SavesCount; i++)
+		for (int i = 0; i < SAVE_COUNT; i++)
 		{
 			string path = GetPath(i);
 			if (File.Exists(path))
@@ -172,7 +170,7 @@ public class Saves
 				}
 			}
 		}
-		for (int j = 0; j < AutosavesCount; j++)
+		for (int j = 0; j < AUTOSAVE_COUNT; j++)
 		{
 			string path = GetPath(j, "autosave");
 			if (File.Exists(path))
@@ -186,7 +184,7 @@ public class Saves
 				}
 			}
 		}
-		return new Pointer
+		return new Item
 		{
 			IsEmpty = (index < 0),
 			IsAutosave = autosave,

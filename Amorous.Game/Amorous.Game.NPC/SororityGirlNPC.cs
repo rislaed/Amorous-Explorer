@@ -26,8 +26,7 @@ public class SororityGirlNPC : LayerNPC<SororityGirlNPC.EHeads, SororityGirlNPC.
 	public static string Name = "Lunar";
 	public static Color Color = new Color(221, 110, 218);
 
-	public SororityGirlNPC(IAmorous game)
-		: base(game, "Assets/NPC/SororityGirl", 1f)
+	public SororityGirlNPC(IAmorous game) : base(game, "Assets/NPC/SororityGirl", 1f)
 	{
 		AddPose(EPoses.Standing, "Sorority Girl Body");
 		AddClothes(EPoses.Standing, EClothes.Pants, "Sorority Girl Pants").AsPants().AsCloth();

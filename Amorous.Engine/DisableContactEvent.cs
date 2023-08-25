@@ -6,8 +6,7 @@ public class DisableContactEvent : AbstractEvent<DisableContactEventData>
 { // _RXkY1nA34kgK019S1RLCVdAAPPD
 	public PlayerData.EPhoneContacts Contact { get; private set; }
 
-	public DisableContactEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public DisableContactEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(DisableContactEventData eventData)
 	{
@@ -23,6 +22,6 @@ public class DisableContactEvent : AbstractEvent<DisableContactEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

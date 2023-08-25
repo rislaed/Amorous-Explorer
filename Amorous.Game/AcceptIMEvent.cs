@@ -2,12 +2,11 @@ using Amorous.Game.Data.Cutscenes;
 
 public class AcceptIMEvent : AbstractContactEvent<AcceptIMEventData>
 { // _VRytu7PQHrCSnlldjNfLtYOf9uA
-	public AcceptIMEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public AcceptIMEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void Start()
 	{
 		base.Start();
-		PhoneOverlay.Get().AcceptIM(Contact);
+		PhoneOverlay.GetSingleton().AcceptIM(Contact);
 	}
 }

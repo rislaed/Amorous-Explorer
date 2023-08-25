@@ -11,7 +11,7 @@ public abstract class AbstractLayer
 	public string Name { get; private set; }
 	public bool Updatable { get; set; }
 	public bool Visible { get; set; }
-	public bool Removable { get; set; }
+	public bool Disposable { get; set; }
 
 	public float X
 	{
@@ -54,7 +54,7 @@ public abstract class AbstractLayer
 	public abstract void Draw(SpriteBatch spriteBatch);
 	public virtual bool Click() => false;
 	public virtual void Continue() {}
-	public virtual void Hover() {}
-	public virtual void Unhover() {}
+	public virtual void Enter() {}
+	public virtual void Leave() {}
 	public virtual void Remove() {}
 }

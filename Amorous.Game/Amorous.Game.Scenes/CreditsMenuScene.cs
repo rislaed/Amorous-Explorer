@@ -9,63 +9,61 @@ namespace Amorous.Game.Scenes;
 
 public class CreditsMenuScene : AbstractScene
 {
-	private readonly SpriteFont _bold26;
-	private readonly float _heightBold26;
-	private readonly SpriteFont _bold20;
-	private readonly float _heightBold20;
-	private readonly SpriteFont _bold14;
-	private readonly float _heightBold14;
+	private readonly SpriteFont largeFont;
+	private readonly float largeFontHeight;
+	private readonly SpriteFont mediumFont;
+	private readonly float mediumFontHeight;
+	private readonly SpriteFont smallFont;
+	private readonly float smallFontHeight;
 
-	private const float ScrollingSpeed = 100f;
-	private const float HoldingScrollingSpeed = 300f;
+	private const float SCROLLING_SPEED = 100f;
+	private const float HOLDING_SCROLLING_SPEED = 300f;
 
-	private readonly string[] _credits;
-	private Matrix _offsetMatrix;
-	private float _offset;
-	private float _length;
-	private float _scrollingSpeed;
+	private readonly string[] credits;
+	private Matrix transformationMatrix;
+	private float offset;
+	private float length;
+	private float scrollingSpeed;
 
 	protected Type PendingScene { get; set; }
 	protected string ReturnToSceneText { get; set; }
 
-	public CreditsMenuScene(IAmorous game)
-		: base(game)
+	public CreditsMenuScene(IAmorous game) : base(game)
 	{
-		CreditsMenuScene self = this;
 		base.Blending = BlendState.AlphaBlend;
 		PendingScene = typeof(MainMenuScene);
 		ReturnToSceneText = "Press Escape or Left-click here to return to the Main Menu.";
 		AddSpriteLayer("Background", "Assets/Scenes/CreditsMenu/Background", 0, 0);
-		AddForegroundSpriteLayer("Overlay", "Assets/Scenes/CreditsMenu/Overlay", 0, 0);
-		_bold26 = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
-		_bold20 = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-20");
-		_bold14 = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
-		_heightBold26 = _bold26.MeasureString("Test").Y;
-		_heightBold20 = _bold20.MeasureString("Test").Y;
-		_heightBold14 = _bold14.MeasureString("Test").Y;
-		Vector2 bounds26 = new Vector2(50f, 1080f - _heightBold26 - 40f);
+		AddSpriteLayerAbove("Overlay", "Assets/Scenes/CreditsMenu/Overlay", 0, 0);
+		largeFont = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		mediumFont = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-20");
+		smallFont = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-14");
+		largeFontHeight = largeFont.MeasureString("Test").Y;
+		mediumFontHeight = mediumFont.MeasureString("Test").Y;
+		smallFontHeight = smallFont.MeasureString("Test").Y;
+		Vector2 largeFontOffset = new Vector2(50f, 1080f - largeFontHeight - 40f);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.HappyJazzShitTrack, 0.4f);
-		_credits = Compressions.ReadStreamAsText(Path.Combine(Game.Content.RootDirectory, "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
+		credits = Compressions.ReadStreamAsText(Path.Combine(Game.Content.RootDirectory, "Data/credits.txt")).Replace("\r", string.Empty).Split(new char[1] { '\n' });
 		DrawableLayer creditsLayer = new DrawableLayer(this, "Credits")
 		{
-			OnUpdate = UpdateCredits,
-			OnDraw = DrawCredits
+			OnUpdate = UpdateInternal,
+			OnDraw = DrawInternal
 		};
 		AddLayer(creditsLayer, 0);
 		bool hovered = false;
-		Vector2 bounds14 = _bold14.MeasureString(ReturnToSceneText);
+		Vector2 bounds14 = smallFont.MeasureString(ReturnToSceneText);
 		Point boundsOfBack = base.Game.Canvas.RelativeToContent(new Point((int)bounds14.X, (int)bounds14.Y));
 		AddLayer(new DrawableLayer(this, "GoBackText")
 		{
 			OnUpdate = delegate
 			{
-				Point point = self.Game.Canvas.GlobalToContent(self.Game.Controller.Cursor);
-				if ((float)point.X >= bounds26.X && (float)point.X <= bounds26.X + (float)boundsOfBack.X && (float)point.Y >= bounds26.Y && (float)point.Y <= bounds26.Y + (float)boundsOfBack.Y)
+				Point cursor = this.Game.Canvas.GlobalToContent(this.Game.Controller.Cursor);
+				if ((float)cursor.X >= largeFontOffset.X && (float)cursor.X <= largeFontOffset.X + (float)boundsOfBack.X && (float)cursor.Y >= largeFontOffset.Y && (float)cursor.Y <= largeFontOffset.Y + (float)boundsOfBack.Y)
 				{
 					hovered = true;
-					if (self.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
+					if (this.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 					{
-						self.Game.StartScene(self.PendingScene.Name);
+						this.Game.StartScene(this.PendingScene.Name);
 					}
 				}
 				else
@@ -76,7 +74,7 @@ public class CreditsMenuScene : AbstractScene
 			OnDraw = delegate(SpriteBatch spriteBatch)
 			{
 				spriteBatch.Begin();
-				spriteBatch.DrawString(self._bold26, self.ReturnToSceneText, bounds26, hovered ? Color.Red : Color.White);
+				spriteBatch.DrawString(this.largeFont, this.ReturnToSceneText, largeFontOffset, hovered ? Color.Red : Color.White);
 				spriteBatch.End();
 			}
 		}, 2);
@@ -100,32 +98,32 @@ public class CreditsMenuScene : AbstractScene
 			y = 105;
 			scale = 2f;
 		}
-		AnimatedLayer skyeLayer = AddForegroundAnimatedLayer("Skye", x, y, 16, textures.ToArray());
+		AnimatedLayer skyeLayer = AddAnimatedLayerAbove("Skye", x, y, 16, textures.ToArray());
 		skyeLayer.Scale = scale;
-		_offset = 960f;
-		_scrollingSpeed = ScrollingSpeed;
+		offset = 960f;
+		scrollingSpeed = SCROLLING_SPEED;
 	}
 
-	public void UpdateCredits(GameTime gameTime)
+	public void UpdateInternal(GameTime gameTime)
 	{
-		_offsetMatrix = Matrix.CreateTranslation(100f, _offset, 0f);
-		if (_offset > _length)
+		transformationMatrix = Matrix.CreateTranslation(100f, offset, 0f);
+		if (offset > length)
 		{
-			_offset -= (float)gameTime.ElapsedGameTime.Milliseconds / 1000f * _scrollingSpeed;
+			offset -= (float)gameTime.ElapsedGameTime.Milliseconds / 1000f * scrollingSpeed;
 		}
 		else
 		{
-			_offset = 960f;
+			offset = 960f;
 		}
 	}
 
-	public void DrawCredits(SpriteBatch spriteBatch)
+	public void DrawInternal(SpriteBatch spriteBatch)
 	{
 		Vector2 position = Vector2.Zero;
 		float offset = 10f;
 		float height = 0f;
-		spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, _offsetMatrix);
-		foreach (string text in _credits)
+		spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, transformationMatrix);
+		foreach (string text in credits)
 		{
 			if (string.IsNullOrWhiteSpace(text))
 			{
@@ -135,23 +133,23 @@ public class CreditsMenuScene : AbstractScene
 			{
 				if (text.StartsWith("#"))
 				{
-					spriteBatch.DrawString(_bold26, text.Substring(1), position, Color.SkyBlue);
-					height += _heightBold26 + offset;
+					spriteBatch.DrawString(largeFont, text.Substring(1), position, Color.SkyBlue);
+					height += largeFontHeight + offset;
 				}
 				else
 				{
-					spriteBatch.DrawString(_bold14, text, position, Color.White);
-					height += _heightBold14 + offset;
+					spriteBatch.DrawString(smallFont, text, position, Color.White);
+					height += smallFontHeight + offset;
 				}
 			}
 			else
 			{
-				spriteBatch.DrawString(_bold20, text.Substring(2), position, Color.Pink);
-				height += _heightBold20 + offset;
+				spriteBatch.DrawString(mediumFont, text.Substring(2), position, Color.Pink);
+				height += mediumFontHeight + offset;
 			}
 			position.Y = height;
 		}
-		_length = -height;
+		length = -height;
 		spriteBatch.End();
 	}
 
@@ -159,7 +157,7 @@ public class CreditsMenuScene : AbstractScene
 	{
 		if (!base.Game.Controller.IsPressed(Keys.Escape))
 		{
-			_scrollingSpeed = ((!base.Game.Controller.IsHolding(Keys.Space)) ? ScrollingSpeed : HoldingScrollingSpeed);
+			scrollingSpeed = ((!base.Game.Controller.IsHolding(Keys.Space)) ? SCROLLING_SPEED : HOLDING_SCROLLING_SPEED);
 			base.Update(gameTime);
 		}
 		else

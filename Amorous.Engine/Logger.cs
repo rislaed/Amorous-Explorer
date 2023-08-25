@@ -7,12 +7,12 @@ using System.Reflection;
 
 public static class Logger
 { // _ETHljYp3aQy9GQ1ZAzhfOYDI1sO
-	private static Stopwatch _stopwatch;
+	private static Stopwatch stopwatch;
 
 	public static void Initialize()
 	{
-		_stopwatch = new Stopwatch();
-		_stopwatch.Start();
+		stopwatch = new Stopwatch();
+		stopwatch.Start();
 		string text = Assembly.GetEntryAssembly()!.GetName().Name!.ToLower();
 		string arg = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, text);
 		Trace.Listeners.Clear();
@@ -21,7 +21,7 @@ public static class Logger
 			File.Move($"{arg}-log.txt", $"{arg}-log-backup-{DateTime.Now:yyyy.MM.dd-HH.mm.ss}.txt");
 		}
 		string[] files = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, $"{text}-log-backup-*.txt");
-		foreach (string item in files.OrderByDescending((string string_0) => string_0).Skip(10))
+		foreach (string item in files.OrderByDescending((string path) => path).Skip(10))
 		{
 			File.Delete(item);
 		}
@@ -34,12 +34,18 @@ public static class Logger
 	{
 		if (formatting.Length != 0)
 		{
-			Trace.WriteLine($"[{(float)_stopwatch.ElapsedMilliseconds / 1000f:0000.00}] {tag}: {string.Format(message, formatting)}");
+			Trace.WriteLine($"[{(float)stopwatch.ElapsedMilliseconds / 1000f:0000.00}] {tag}: {string.Format(message, formatting)}");
 		}
 		else
 		{
-			Trace.WriteLine($"[{(float)_stopwatch.ElapsedMilliseconds / 1000f:0000.00}] {tag}: {message}");
+			Trace.WriteLine($"[{(float)stopwatch.ElapsedMilliseconds / 1000f:0000.00}] {tag}: {message}");
 		}
+	}
+
+	[Conditional("DEBUG")]
+	public static void Debug(string message, params object[] formatting)
+	{
+		Log(ConsoleColor.White, "Debug", message, formatting);
 	}
 
 	public static void Log(string message, params object[] formatting)

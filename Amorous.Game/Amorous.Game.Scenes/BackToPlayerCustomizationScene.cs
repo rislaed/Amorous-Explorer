@@ -4,12 +4,11 @@ namespace Amorous.Game.Scenes;
 
 public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 {
-	private bool _updatable;
+	private bool completed;
 
-	override protected string ReturnToGameText => "Back to Club";
+	protected override string ReturnToGameText => "Back to Club";
 
-	public BackToPlayerCustomizationScene(IAmorous game)
-		: base(game)
+	public BackToPlayerCustomizationScene(IAmorous game) : base(game)
 	{
 		MightEnterName = true;
 		PhoneOverlay.Enabled = false;
@@ -19,16 +18,16 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 
 	protected override void ShowExit()
 	{
-		base.Squid.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.WideDialogueOffset, delegate(int answer)
+		base.Desktop.ShowSelection("Are you sure this how you want to look in the Game?", new string[2] { "Oops, my bad!", "Yes please!" }, AmorousData.ShortDialogueWidth, delegate(int answer)
 		{
 			if (answer == 1)
 			{
 				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric1);
-				PlayerPreferences.GetPlayerData().SetStage(AmorousData.Gender, 10);
+				PlayerPreferences.GetPlayerData().InsertStage(AmorousData.Gender, 10);
 				PlayerPreferences.GetPlayerData().Remove("Player.Gender");
 				PlayerPreferences.GetPlayerData().Remove("Player.No");
 				base.Game.PlayCutscene(AmorousData.Gender);
-				_updatable = true;
+				completed = true;
 			}
 		});
 	}
@@ -36,11 +35,11 @@ public class BackToPlayerCustomizationScene : PlayerCustomizationScene
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		if (_updatable && !base.Game.InPendingScene && base.Game.Cutscene == null)
+		if (completed && !base.Game.IsScenePending && base.Game.Cutscene == null)
 		{
-			_updatable = false;
+			completed = false;
 			PhoneOverlay.Enabled = true;
-			PhoneOverlay.Get().RefreshSkin();
+			PhoneOverlay.GetSingleton().RefreshSkin();
 			base.Game.StartScene<ClubEntranceScene>();
 		}
 	}

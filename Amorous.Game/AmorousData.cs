@@ -219,8 +219,8 @@ public static class AmorousData
 	public const string TowerTrack = "Assets/Music/Mittsies - Tower";
 	public const string VentusTrack = "Assets/Music/Mittsies - Ventus";
 
-	public const int ShortDialogueOffset = Overlays.ShortDialogueOffset;
-	public const int WideDialogueOffset = Overlays.WideDialogueOffset;
+	public const int WideDialogueWidth = Overlays.WideDialogueWidth;
+	public const int ShortDialogueWidth = Overlays.ShortDialogueWidth;
 	public const int ButtonHeight = 30;
 
 	public const string Prologue = "Prologue";

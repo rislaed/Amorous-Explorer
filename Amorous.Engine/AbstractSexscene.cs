@@ -7,7 +7,7 @@ using Spine;
 
 public abstract class AbstractSexscene
 { // _TwlwMC1hhdSzamwGWEBxuUkz1gH
-	public enum Phase
+	public enum EPhase
 	{
 		Idle,
 		Slow,
@@ -15,49 +15,49 @@ public abstract class AbstractSexscene
 		Fast
 	}
 
-	public const string EventThrustStart = "ThrustStart";
-	public const string EventThrustEnd = "ThrustEnd";
-	public const string EventMoan = "Moan";
+	public const string EVENT_THRUST_START = "ThrustStart";
+	public const string EVENT_THRUST_END = "ThrustEnd";
+	public const string EVENT_MOAN = "Moan";
 
-	public const float IdlePhase = 2000f;
-	public const float SlowPhase = 1000f;
-	public const float MediumPhase = 500f;
-	public const float FastPhase = 300f;
+	public const float IDLE_PHASE = 2000f;
+	public const float SLOW_PHASE = 1000f;
+	public const float MEDIUM_PHASE = 500f;
+	public const float FAST_PHASE = 300f;
 
-	protected float Ticks = 1000f;
-	protected float TickToPhase = 1000f;
+	protected float PhaseTicks = 1000f;
+	protected float ToPhaseTicks = 1000f;
 
-	private float _interpolation, _targetInterpolation;
-	private int _moanTo, _moanWhen;
-	private bool _explodedMoans;
+	private float explosionAlpha, explosionAlphaTo;
+	private int ticksMoaning, ticksMoaningTo;
+	private bool requiresLoudMoans;
 
 	public bool Muted { get; set; }
-	public SpineRenderer Spine { get; private set; }
+	public SkeletonRenderer Skeleton { get; private set; }
 	public Texture2D Background { get; private set; }
 	public Texture2D Overlay { get; protected set; }
 
-	protected List<string> ExplosionBones { get; private set; }
+	protected List<string> ExplosionSlots { get; private set; }
 	protected AbstractSexsceneSounds Sounds { get; set; }
 	protected ContentManager Content { get; set; }
 
-	public Phase State { get; private set; }
+	public EPhase Phase { get; private set; }
 	public bool Exploded { get; private set; }
 	public string Subscene { get; set; }
-	public Texture2D Skin { get; set; }
+	public Texture2D Texture { get; set; }
 
 	protected AbstractSexscene(ContentManager contentManager, string spine, string background, string overlay = null, float scale = 1f, bool premultipliedAlpha = true, List<SkeletonJson.SpineEvent> events = null, AbstractSexsceneSounds sounds = null)
 	{
 		Content = contentManager;
-		ExplosionBones = new List<string>();
-		Spine = contentManager.LoadSkeleton(spine, scale, premultipliedAlpha, events);
+		ExplosionSlots = new List<string>();
+		Skeleton = contentManager.LoadSkeleton(spine, scale, premultipliedAlpha, events);
 		Sounds = sounds;
 		if (events != null)
 		{
-			Spine.OnAnimationFrame = (Action<string>)Delegate.Combine(Spine.OnAnimationFrame, new Action<string>(PlaySounds));
+			Skeleton.OnAnimationFrame = (Action<string>)Delegate.Combine(Skeleton.OnAnimationFrame, new Action<string>(PlayMoaningSlappingAndSquishing));
 		}
-		Spine.SetVisibility(0f);
-		ResetPhase();
-		RefreshSubscene();
+		Skeleton.SetVisibility(0f);
+		Reset();
+		Refresh();
 		Background = contentManager.Load<Texture2D>(background);
 		if (!string.IsNullOrEmpty(overlay))
 		{
@@ -65,12 +65,12 @@ public abstract class AbstractSexscene
 		}
 	}
 
-	public void RefreshSubscene()
+	public void Refresh()
 	{
-		RefreshData(PlayerPreferences.GetPlayerData());
+		RefreshInternal(PlayerPreferences.GetPlayerData());
 	}
 
-	private void PlaySounds(string moanOrThrust)
+	private void PlayMoaningSlappingAndSquishing(string moanOrThrust)
 	{
 		if (Muted || Sounds == null)
 		{
@@ -78,45 +78,45 @@ public abstract class AbstractSexscene
 		}
 		switch (moanOrThrust)
 		{
-			case EventThrustStart:
+			case EVENT_THRUST_START:
 				Sounds.Squishing.PlayNext();
 				break;
-			case EventThrustEnd:
-				switch (State)
+			case EVENT_THRUST_END:
+				switch (Phase)
 				{
-				case Phase.Slow:
+				case EPhase.Slow:
 					Sounds.SlappingMedium.PlayNext();
 					break;
-				case Phase.Medium:
-				case Phase.Fast:
+				case EPhase.Medium:
+				case EPhase.Fast:
 					Sounds.SlappingFast.PlayNext();
 					break;
 				}
 				break;
-			case EventMoan:
+			case EVENT_MOAN:
 			{
-				Phase phase = State;
-				if (_explodedMoans)
+				EPhase phase = Phase;
+				if (requiresLoudMoans)
 				{
-					phase = Phase.Fast;
+					phase = EPhase.Fast;
 				}
-				_moanTo++;
-				if (_moanTo > _moanWhen)
+				ticksMoaning++;
+				if (ticksMoaning > ticksMoaningTo)
 				{
-					_moanWhen = Utils.Random(1, 3);
-					_moanTo = 0;
+					ticksMoaningTo = Utils.Random(1, 3);
+					ticksMoaning = 0;
 					switch (phase)
 					{
-						case Phase.Idle:
+						case EPhase.Idle:
 							Sounds.MoaningSlow.PlayNext();
 							break;
-						case Phase.Slow:
+						case EPhase.Slow:
 							Sounds.MoaningMedium.PlayNext();
 							break;
-						case Phase.Medium:
+						case EPhase.Medium:
 							Sounds.MoaningFast.PlayNext();
 							break;
-						case Phase.Fast:
+						case EPhase.Fast:
 							Sounds.MoaningRapid.PlayNext();
 							break;
 					}
@@ -136,43 +136,43 @@ public abstract class AbstractSexscene
 		Subscene = subscene;
 	}
 
-	protected virtual void RefreshData(PlayerData data) {}
+	protected virtual void RefreshInternal(PlayerData data) {}
 
 	public virtual void Update(GameTime gameTime)
 	{
-		if (Ticks < TickToPhase)
+		if (PhaseTicks < ToPhaseTicks)
 		{
-			Ticks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+			PhaseTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 		}
-		else if (Ticks > TickToPhase)
+		else if (PhaseTicks > ToPhaseTicks)
 		{
-			Ticks -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+			PhaseTicks -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 		}
-		if (_interpolation < _targetInterpolation)
+		if (explosionAlpha < explosionAlphaTo)
 		{
-			_interpolation += (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
-			foreach (string bone in ExplosionBones)
+			explosionAlpha += (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
+			foreach (string slotName in ExplosionSlots)
 			{
-				Spine.SetAlpha(bone, _interpolation);
+				Skeleton.SetAlpha(slotName, explosionAlpha);
 			}
-			if (_interpolation > _targetInterpolation)
+			if (explosionAlpha > explosionAlphaTo)
 			{
-				_interpolation = _targetInterpolation;
-			}
-		}
-		else if (_interpolation > _targetInterpolation)
-		{
-			_interpolation -= (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
-			foreach (string bone in ExplosionBones)
-			{
-				Spine.SetAlpha(bone, _interpolation);
-			}
-			if (_interpolation < _targetInterpolation)
-			{
-				_interpolation = _targetInterpolation;
+				explosionAlpha = explosionAlphaTo;
 			}
 		}
-		Spine.Update(gameTime, Ticks);
+		else if (explosionAlpha > explosionAlphaTo)
+		{
+			explosionAlpha -= (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.0010000000474974513);
+			foreach (string slotName in ExplosionSlots)
+			{
+				Skeleton.SetAlpha(slotName, explosionAlpha);
+			}
+			if (explosionAlpha < explosionAlphaTo)
+			{
+				explosionAlpha = explosionAlphaTo;
+			}
+		}
+		Skeleton.Update(gameTime, PhaseTicks);
 	}
 
 	public virtual void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
@@ -183,7 +183,7 @@ public abstract class AbstractSexscene
 			spriteBatch.Draw(Background, Vector2.Zero, Color.White);
 			spriteBatch.End();
 		}
-		Spine.Draw(skeletonMeshRenderer, Skin);
+		Skeleton.Draw(skeletonMeshRenderer, Texture);
 		if (Overlay != null)
 		{
 			spriteBatch.Begin();
@@ -192,74 +192,74 @@ public abstract class AbstractSexscene
 		}
 	}
 
-	public virtual void ResetPhase()
+	public virtual void Reset()
 	{
-		ToPhase(1, setTo: true);
-		_interpolation = 0f;
+		PhaseTo(1, setTo: true);
+		explosionAlpha = 0f;
 	}
 
-	public virtual void ProgressSexscene()
+	public virtual void Progress()
 	{
-		if (State == Phase.Fast)
+		if (Phase == EPhase.Fast)
 		{
 			Explode();
 		}
 		else
 		{
-			ToPhase(1);
+			PhaseTo(1);
 		}
 	}
 
-	public virtual void ToPhase(int state, bool setTo = false)
+	public virtual void PhaseTo(int state, bool setTo = false)
 	{
-		State = (Phase)(setTo ? state : Math.Max(0, Math.Min((int)(State + state), 3)));
-		switch (State)
+		Phase = (EPhase)(setTo ? state : Math.Max(0, Math.Min((int)(Phase + state), 3)));
+		switch (Phase)
 		{
-			case Phase.Idle:
-				TickToPhase = IdlePhase;
+			case EPhase.Idle:
+				ToPhaseTicks = IDLE_PHASE;
 				break;
-			case Phase.Slow:
-				TickToPhase = SlowPhase;
+			case EPhase.Slow:
+				ToPhaseTicks = SLOW_PHASE;
 				break;
-			case Phase.Medium:
-				TickToPhase = MediumPhase;
+			case EPhase.Medium:
+				ToPhaseTicks = MEDIUM_PHASE;
 				break;
-			case Phase.Fast:
-				TickToPhase = FastPhase;
+			case EPhase.Fast:
+				ToPhaseTicks = FAST_PHASE;
 				break;
 		}
 	}
 
-	public virtual void ExplodeNow()
+	public virtual void ExplodeWithoutFading()
 	{
 		Exploded = true;
-		_targetInterpolation = 1f;
-		_explodedMoans = true;
-		_moanTo = _moanWhen;
+		explosionAlphaTo = 1f;
+		requiresLoudMoans = true;
+		ticksMoaning = ticksMoaningTo;
 	}
 
 	public virtual void Explode()
 	{
 		Exploded = true;
-		_targetInterpolation = 1f;
-		_explodedMoans = true;
-		_moanTo = _moanWhen;
-		ToPhase(0, setTo: true);
+		explosionAlphaTo = 1f;
+		requiresLoudMoans = true;
+		ticksMoaning = ticksMoaningTo;
+		PhaseTo(0, setTo: true);
 	}
 
 	public virtual void Clean()
 	{
 		Exploded = false;
-		_targetInterpolation = 0f;
-		_explodedMoans = false;
+		explosionAlphaTo = 0f;
+		requiresLoudMoans = false;
 	}
 
-	public virtual void LoadPhase(Phase phase, bool explode)
+	public virtual void LoadPhase(EPhase phase, bool explode)
 	{
-		ToPhase((int)phase, setTo: true);
+		PhaseTo((int)phase, setTo: true);
 		if (explode)
 		{
-			ExplodeNow();
+			ExplodeWithoutFading();
 		}
 	}
 }

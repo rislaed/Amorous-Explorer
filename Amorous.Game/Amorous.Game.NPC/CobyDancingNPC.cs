@@ -32,7 +32,7 @@ public class CobyDancingNPC : SpineNPC<CobyDancingNPC.EHeads, CobyDancingNPC.EPo
 	{
 		Width = 600;
 		Height = 800;
-		base.Spine.StartAnimationWithLooping("animation");
+		base.Skeleton.StartAnimationWithLooping("animation");
 		AddEmotion(EHeads.Happy, "Eyes Back", "Pupil", "Jaw", "Head");
 		AddPose(EPoses.Dancing, "Tail", "Leg right", "Arm right", "Body", "left leg", "Arm left").AddNudes("Balls", "Cock");
 		AddClothes(EPoses.Dancing, EClothes.Shirt, "Shirt").AsShirt().AsNudes();

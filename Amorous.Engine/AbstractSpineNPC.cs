@@ -6,21 +6,21 @@ using Spine;
 
 public abstract class AbstractSpineNPC : AbstractNPC
 { // _tfDAeR6npiqJMLRSXPO1DxGA0TgA
-	private class RenderStage
+	private class RenderTarget
 	{
 		public Vector2 Location { get; set; }
 		public RenderTarget2D Target { get; set; }
 		public float Alpha { get; set; }
 	}
 
-	private readonly SpineBounds _bounds;
-	private bool _drawable;
-	private int? _stage;
-	private bool _updatable;
-	private readonly RenderStage[] _stages;
-	private NPCLocation _location;
+	private readonly SpineRectangle bounds;
+	private bool drawable;
+	private int? target;
+	private bool updatable;
+	private readonly RenderTarget[] targets;
+	private NPCLocation location;
 
-	public SpineRenderer Spine { get; private set; }
+	public SkeletonRenderer Skeleton { get; private set; }
 	public override float X { get; set; }
 	public override float Y { get; set; }
 
@@ -28,33 +28,32 @@ public abstract class AbstractSpineNPC : AbstractNPC
 	{
 		get
 		{
-			return Spine.FlipX;
+			return Skeleton.FlipX;
 		}
 		set
 		{
-			Spine.FlipX = value;
+			Skeleton.FlipX = value;
 		}
 	}
 
-	public Texture2D Skin { get; set; }
+	public Texture2D Texture { get; set; }
 	public Func<int, string, bool> BeforeRenderSlot { get; set; }
 
-	protected AbstractSpineNPC(IAmorous game, string path, float scale = 1f, bool premultipliedAlpha = true)
-		: base(game)
+	protected AbstractSpineNPC(IAmorous game, string path, float scale = 1f, bool premultipliedAlpha = true) : base(game)
 	{
-		Spine = base.Game.Content.LoadSkeleton(path, scale, premultipliedAlpha);
-		Spine.SetVisibility(0f);
+		Skeleton = base.Game.Content.LoadSkeleton(path, scale, premultipliedAlpha);
+		Skeleton.SetVisibility(0f);
 		base.Scale = scale;
-		_bounds = new SpineBounds();
-		_stages = new RenderStage[2];
-		_updatable = true;
+		bounds = new SpineRectangle();
+		targets = new RenderTarget[2];
+		updatable = true;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		if (_updatable)
+		if (updatable)
 		{
-			Spine.Update(gameTime);
+			Skeleton.Update(gameTime);
 		}
 		base.Update(gameTime);
 	}
@@ -62,12 +61,12 @@ public abstract class AbstractSpineNPC : AbstractNPC
 	public void Draw(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 	{
 		base.Draw();
-		if (_drawable)
+		if (drawable)
 		{
-			DrawStage(skeletonMeshRenderer);
+			DrawInternal(skeletonMeshRenderer);
 			spriteBatch.Begin();
 			Color color = (IsHovered ? Color.Red : Color.White);
-			foreach (RenderStage stage in _stages)
+			foreach (RenderTarget stage in targets)
 			{
 				if (stage != null)
 				{
@@ -78,99 +77,99 @@ public abstract class AbstractSpineNPC : AbstractNPC
 		}
 		else
 		{
-			Spine.X = X;
-			Spine.Y = Y;
-			Spine.Draw(skeletonMeshRenderer, scale: base.Scale, overrideTexture: Skin, beforeRenderSlot: BeforeRenderSlot, overrideColor: IsHovered ? new Color?(new Color(1, 0, 0, 1)) : null);
+			Skeleton.X = X;
+			Skeleton.Y = Y;
+			Skeleton.Draw(skeletonMeshRenderer, scale: base.Scale, overrideTexture: Texture, beforeRenderSlot: BeforeRenderSlot, overrideColor: IsHovered ? new Color?(new Color(1, 0, 0, 1)) : null);
 		}
 	}
 
-	protected override void SetAlpha(string bone, float alpha)
+	protected override void SetAlpha(string slotName, float alpha)
 	{
-		Spine.SetAlpha(bone, alpha);
+		Skeleton.SetAlpha(slotName, alpha);
 	}
 
-	private void DrawStage(SkeletonMeshRenderer skeletonMeshRenderer)
+	private void DrawInternal(SkeletonMeshRenderer skeletonMeshRenderer)
 	{
-		if (_stage.HasValue && _stages[_stage.Value] != null)
+		if (target.HasValue && targets[target.Value] != null)
 		{
-			RenderStage stage = _stages[_stage.Value];
+            RenderTarget stage = this.targets[target.Value];
 			RenderTargetBinding[] targets = base.Game.Graphics.GetRenderTargets();
 			base.Game.Graphics.SetRenderTarget(stage.Target);
 			base.Game.Graphics.Clear(Color.Transparent);
-			Spine.X = stage.Location.X;
-			Spine.Y = stage.Location.Y;
-			Spine.Draw(skeletonMeshRenderer, scale: base.Scale, overrideTexture: Skin, beforeRenderSlot: BeforeRenderSlot);
+			Skeleton.X = stage.Location.X;
+			Skeleton.Y = stage.Location.Y;
+			Skeleton.Draw(skeletonMeshRenderer, scale: base.Scale, overrideTexture: Texture, beforeRenderSlot: BeforeRenderSlot);
 			base.Game.Graphics.SetRenderTargets(targets);
 		}
 	}
 
-	protected override bool Refresh(int stage)
+	protected override bool Refresh(int target)
 	{
-		if (stage == 0)
+		if (target == 0)
 		{
-			_location = base.Location;
+			location = base.Location;
 		}
-		else if (stage != 1)
+		else if (target != 1)
 		{
-			if (stage >= 2)
+			if (target >= 2)
 			{
-				_stage = null;
+				this.target = null;
 				return false;
 			}
 		}
-		else if (_location == base.Location)
+		else if (location == base.Location)
 		{
 			return false;
 		}
-		_drawable = true;
-		_stage = stage;
-		_updatable = false;
-		Spine.X = 0f;
-		Spine.Y = 0f;
-		_bounds.Update(Spine.Spine);
-		Vector2 bounds = new Vector2((int)_bounds.Width, (int)_bounds.Height);
-		if (!(bounds.X <= 0f) && bounds.Y > 0f)
+		drawable = true;
+		this.target = target;
+		updatable = false;
+		Skeleton.X = 0f;
+		Skeleton.Y = 0f;
+		bounds.Update(Skeleton.Skeleton);
+		Vector2 size = new Vector2((int)bounds.Width, (int)bounds.Height);
+		if (!(size.X <= 0f) && size.Y > 0f)
 		{
-			_stages[stage] = new RenderStage
+			targets[target] = new RenderTarget
 			{
-				Location = new Vector2(Spine.Spine.RootBone.WorldX - _bounds.X1, Spine.Spine.RootBone.WorldY - _bounds.Y1),
-				Target = new RenderTarget2D(base.Game.Graphics, (int)bounds.X, (int)bounds.Y),
-				Alpha = ((stage == 0) ? 1f : 0f)
+				Location = new Vector2(Skeleton.Skeleton.RootBone.WorldX - bounds.Left, Skeleton.Skeleton.RootBone.WorldY - bounds.Top),
+				Target = new RenderTarget2D(base.Game.Graphics, (int)size.X, (int)size.Y),
+				Alpha = ((target == 0) ? 1f : 0f)
 			};
 		}
 		else
 		{
-			_stages[stage] = null;
+			targets[target] = null;
 		}
 		return true;
 	}
 
-	protected override void Fade(float percent)
+	protected override void Fade(float amount)
 	{
-		if (_stages[0] != null)
+		if (targets[0] != null)
 		{
-			_stages[0].Alpha = percent;
+			targets[0].Alpha = amount;
 		}
-		if (_stages[1] != null)
+		if (targets[1] != null)
 		{
-			_stages[1].Alpha = 1f - percent;
+			targets[1].Alpha = 1f - amount;
 		}
 	}
 
 	protected override void Dispose()
 	{
-		_drawable = false;
-		_stage = null;
-		_updatable = true;
-		if (_stages[0] != null)
+		drawable = false;
+		target = null;
+		updatable = true;
+		if (targets[0] != null)
 		{
-			_stages[0].Target.Dispose();
-			_stages[0] = null;
+			targets[0].Target.Dispose();
+			targets[0] = null;
 		}
-		if (_stages[1] != null)
+		if (targets[1] != null)
 		{
-			_stages[1].Target.Dispose();
-			_stages[1] = null;
+			targets[1].Target.Dispose();
+			targets[1] = null;
 		}
 	}
 }

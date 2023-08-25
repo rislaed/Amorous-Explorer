@@ -4,17 +4,17 @@ using Spine;
 
 public class ClubPoolSpineLayer : SpineDrawableLayer
 { // _lnXs1JfCeIBNCpFYs8XVRorc0h4
-	private readonly SpineRenderer _spine;
+	private readonly SkeletonRenderer skeleton;
 
 	public override float OffsetX
 	{
 		get
 		{
-			return _spine.X;
+			return skeleton.X;
 		}
 		set
 		{
-			_spine.X = value;
+			skeleton.X = value;
 		}
 	}
 
@@ -22,28 +22,27 @@ public class ClubPoolSpineLayer : SpineDrawableLayer
 	{
 		get
 		{
-			return _spine.Y;
+			return skeleton.Y;
 		}
 		set
 		{
-			_spine.Y = value;
+			skeleton.Y = value;
 		}
 	}
 
-	public ClubPoolSpineLayer(AbstractScene scene)
-		: base(scene, "Pool Water")
+	public ClubPoolSpineLayer(AbstractScene scene) : base(scene, "Pool Water")
 	{
 		base.OnUpdate = delegate(GameTime gameTime)
 		{
-			_spine.Update(gameTime);
+			skeleton.Update(gameTime);
 		};
 		base.OnSpineDraw = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 		{
-			_spine.Draw(skeletonMeshRenderer, null, null, null, Scale);
+			skeleton.Draw(skeletonMeshRenderer, null, null, null, Scale);
 		};
-		_spine = scene.Game.Content.LoadSkeleton("Assets/Scenes/ClubPool/Club Pool water");
-		_spine.X = 0f;
-		_spine.Y = 0f;
-		_spine.StartAnimationWithLooping("animation");
+		skeleton = scene.Game.Content.LoadSkeleton("Assets/Scenes/ClubPool/Club Pool water");
+		skeleton.X = 0f;
+		skeleton.Y = 0f;
+		skeleton.StartAnimationWithLooping("animation");
 	}
 }

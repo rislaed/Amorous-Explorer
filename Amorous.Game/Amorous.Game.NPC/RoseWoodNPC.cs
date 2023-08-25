@@ -26,8 +26,7 @@ public class RoseWoodNPC : LayerNPC<RoseWoodNPC.EHeads, RoseWoodNPC.EPoses, Rose
 	public static string Name = "Rose Wood";
 	public static Color Color = new Color(195, 69, 81);
 
-	public RoseWoodNPC(IAmorous game)
-		: base(game, "Assets/NPC/RoseWood", 1f)
+	public RoseWoodNPC(IAmorous game) : base(game, "Assets/NPC/RoseWood", 1f)
 	{
 		AddPose(EPoses.Standing, "Rose Wood Body");
 		AddClothes(EPoses.Standing, EClothes.Shorts, "Rose Wood Shorts").AsPants().AsCloth();

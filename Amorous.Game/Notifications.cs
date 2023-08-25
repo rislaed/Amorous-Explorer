@@ -14,34 +14,34 @@ public class Notifications
 
 	private const float BetweenDelay = 5f;
 
-	private readonly Desktop _squid;
-	private readonly Frame _overlay;
-	private readonly List<Message> _messages;
-	private bool _completed;
+	private readonly Desktop desktop;
+	private readonly Frame container;
+	private readonly List<Message> messages;
+	private bool completed;
 
 	public Notifications()
 	{
-		_squid = new Desktop
+		desktop = new Desktop
 		{
 			Skin = Gui.GenerateStandardSkin(),
 			Size = new Squid.Point(1920, 1080)
 		};
-		_squid.SetSkin("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
+		desktop.SetSkin("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 		ControlStyle value = new ControlStyle
 		{
 			Font = "Assets/Gui/Fonts/Bold-16"
 		};
-		_squid.Skin["window"].Tint = ColorInt.ARGB(0.75f, 1f, 1f, 1f);
-		_squid.Skin.Add("header", value);
-		_overlay = new Frame
+		desktop.Skin["window"].Tint = ColorInt.ARGB(0.75f, 1f, 1f, 1f);
+		desktop.Skin.Add("header", value);
+		container = new Frame
 		{
 			Dock = DockStyle.Right,
 			Size = new Squid.Point(600, 1080),
 			Margin = new Margin(0, 0, 10, 0)
 		};
-		_squid.Controls.Add(_overlay);
-		_messages = new List<Message>();
-		_completed = false;
+		desktop.Controls.Add(container);
+		messages = new List<Message>();
+		completed = false;
 	}
 
 	public void ShowMessage(string icon, string title, string message)
@@ -82,8 +82,8 @@ public class Notifications
 		contentFrame.Controls.Add(textFrame);
 		textFrame.Controls.Add(headerText);
 		textFrame.Controls.Add(messageText);
-		_overlay.Controls.Add(contentFrame);
-		_messages.Add(new Message
+		container.Controls.Add(contentFrame);
+		messages.Add(new Message
 		{
 			Control = contentFrame
 		});
@@ -91,21 +91,21 @@ public class Notifications
 
 	public void Update(GameTime gameTime)
 	{
-		_squid.Update();
+		desktop.Update();
 		float ticks = (float)(gameTime.ElapsedGameTime.TotalMilliseconds / 1000.0);
-		foreach (Message message in _messages)
+		foreach (Message message in messages)
 		{
 			message.Date += ticks;
 			if (message.Date >= BetweenDelay)
 			{
-				_overlay.Controls.Remove(message.Control);
-				_completed = true;
+				container.Controls.Remove(message.Control);
+				completed = true;
 			}
 		}
-		if (_completed)
+		if (completed)
 		{
-			_completed = false;
-			_messages.RemoveAll((Message message) => message.Date >= BetweenDelay);
+			completed = false;
+			messages.RemoveAll((Message message) => message.Date >= BetweenDelay);
 		}
 	}
 
@@ -113,7 +113,7 @@ public class Notifications
 	{
 		try
 		{
-			_squid.Draw();
+			desktop.Draw();
 		}
 		catch (Exception)
 		{

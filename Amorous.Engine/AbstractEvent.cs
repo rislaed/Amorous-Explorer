@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 public abstract class AbstractEvent<T> : IEvent where T : EventData
 { // _5EDaN9V3lc2jRRTcL6GvzBbV7kU
 	public Cutscene Cutscene { get; private set; }
-	public bool Completable { get; protected set; }
+	public bool IsCompleted { get; protected set; }
 	public int ID { get; private set; }
 	public int NextID { get; protected set; }
 
@@ -14,7 +14,7 @@ public abstract class AbstractEvent<T> : IEvent where T : EventData
 
 	public virtual void Start()
 	{
-		Completable = false;
+		IsCompleted = false;
 	}
 
 	public virtual bool Next()

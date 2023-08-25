@@ -3,53 +3,53 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class InteractableLayer : AbstractLayer
 { // _x1wxbalqqw8qtEqHC1UaGdv59Od
-	public Vector2 ActivePoint;
+	public Vector2 TouchLocation;
 
-	private bool _hovered, _captured;
+	private bool hovered, captured;
 
 	public Texture2D Texture { get; private set; }
-	public Texture2D ActiveTexture { get; private set; }
+	public Texture2D HoveredTexture { get; private set; }
 	public string Text { get; private set; }
 
-	public float ActiveX
+	public float TouchX
 	{
 		get
 		{
-			return ActivePoint.X;
+			return TouchLocation.X;
 		}
 		set
 		{
-			ActivePoint.X = value;
+			TouchLocation.X = value;
 		}
 	}
 
-	public float ActiveY
+	public float TouchY
 	{
 		get
 		{
-			return ActivePoint.Y;
+			return TouchLocation.Y;
 		}
 		set
 		{
-			ActivePoint.Y = value;
+			TouchLocation.Y = value;
 		}
 	}
 
-	public InteractableLayer(AbstractScene scene, string name, Texture2D texture, Texture2D activeTexture, string text)
+	public InteractableLayer(AbstractScene scene, string name, Texture2D texture, Texture2D hoveredTexture, string text)
 		: base(scene, name)
 	{
 		Texture = texture;
 		base.Width = texture.Width;
 		base.Height = texture.Height;
-		ActiveTexture = activeTexture;
+		HoveredTexture = hoveredTexture;
 		Text = text;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		if (_captured && TypingDialogue.Completable)
+		if (captured && TypingDialogue.IsCompleted)
 		{
-			_captured = false;
+			captured = false;
 		}
 	}
 
@@ -57,10 +57,10 @@ public class InteractableLayer : AbstractLayer
 	{
 		if (Color.A != 0)
 		{
-			Color color = (_hovered ? Color.Red : Color);
-			if (_captured && ActiveTexture != null)
+			Color color = (hovered ? Color.Red : Color);
+			if (captured && HoveredTexture != null)
 			{
-				spriteBatch.Draw(ActiveTexture, ActivePoint, null, color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+				spriteBatch.Draw(HoveredTexture, TouchLocation, null, color, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 			}
 			else
 			{
@@ -72,27 +72,27 @@ public class InteractableLayer : AbstractLayer
 	public override bool Click()
 	{
 		TypingDialogue.Type(Text, string.Empty, Color.White);
-		_captured = true;
-		_hovered = false;
+		captured = true;
+		hovered = false;
 		return true;
 	}
 
 	public override void Continue()
 	{
 		TypingDialogue.Complete();
-		_captured = false;
+		captured = false;
 	}
 
-	public override void Hover()
+	public override void Enter()
 	{
-		if (!_captured)
+		if (!captured)
 		{
-			_hovered = true;
+			hovered = true;
 		}
 	}
 
-	public override void Unhover()
+	public override void Leave()
 	{
-		_hovered = false;
+		hovered = false;
 	}
 }

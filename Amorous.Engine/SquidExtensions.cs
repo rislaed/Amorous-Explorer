@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Squid;
 
-public static class SquidDesktop
+public static class SquidExtensions
 { // _o0Y4SOgMHY7iQXRQkPwaQ9pMBBl
 	public static readonly Dictionary<Microsoft.Xna.Framework.Input.Keys, Squid.Keys?> Keys = new Dictionary<Microsoft.Xna.Framework.Input.Keys,Squid.Keys?>
 	{
@@ -740,14 +740,14 @@ public static class SquidDesktop
 		}
 	}
 
-	public static void ShowConfirm(this Desktop desktop, string message, int offset, string buttonText = "OK", Action confirm = null)
+	public static void ShowConfirm(this Desktop desktop, string message, int width, string buttonText = "OK", Action confirm = null)
 	{
 		Window container = new Window
 		{
 			Modal = true,
 			Dock = DockStyle.Center,
 			Padding = new Margin(15),
-			Size = new Point(offset, 0),
+			Size = new Point(width,0),
 			AutoSize = AutoSize.Vertical
 		};
 		container.Controls.Add(new Label
@@ -779,14 +779,14 @@ public static class SquidDesktop
 		container.Show(desktop);
 	}
 
-	public static void ShowSelection(this Desktop desktop, string message, string[] variants, int int_0, Action<int> select)
+	public static void ShowSelection(this Desktop desktop, string message, string[] variants, int width, Action<int> select)
 	{
 		Window container = new Window
 		{
 			Modal = true,
 			Dock = DockStyle.Center,
 			Padding = new Margin(15),
-			Size = new Point(int_0,0),
+			Size = new Point(width,0),
 			AutoSize = AutoSize.Vertical
 		};
 		container.Controls.Add(new Label

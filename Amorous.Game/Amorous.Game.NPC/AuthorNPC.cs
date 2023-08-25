@@ -26,8 +26,7 @@ public class AuthorNPC : LayerNPC<AuthorNPC.EHeads, AuthorNPC.EPoses, AuthorNPC.
 	public static string Name = "Nik Kovak";
 	public static Color Color = new Color(145, 109, 236);
 
-	public AuthorNPC(IAmorous game)
-		: base(game, "Assets/NPC/Author", 1f)
+	public AuthorNPC(IAmorous game) : base(game, "Assets/NPC/Author", 1f)
 	{
 		AddPose(EPoses.Reading, "Sonic Fox Expressions");
 		AddClothes(EPoses.Reading, EClothes.Pants, "Sonic Fox Expressions - Pants").AsPants().AsCloth();

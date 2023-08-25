@@ -5,15 +5,15 @@ using Microsoft.Xna.Framework.Graphics;
 
 public abstract class AbstractPlayerOverlay
 { // _21uBmerICJi18moE2gpxlEipBgz
-	private IAmorous _game;
+	private IAmorous game;
 
 	public List<AbstractLayer> Layers { get; private set; }
 
-	protected IAmorous Game => _game;
+	protected IAmorous Game => game;
 
 	protected AbstractPlayerOverlay(IAmorous game)
 	{
-		_game = game;
+		this.game = game;
 		Layers = new List<AbstractLayer>();
 	}
 
@@ -22,12 +22,12 @@ public abstract class AbstractPlayerOverlay
 		return Layers.FirstOrDefault((AbstractLayer layer) => layer.Name == name);
 	}
 
-	public SpriteLayer NewSpriteLayer(string name, string texture, int x, int y, int zorder = 0, float scale = 1f)
+	public SpriteLayer AddSpriteLayer(string name, string texture, int x, int y, int zorder = 0, float scale = 1f)
 	{
-		Texture2D texture2D = _game.Content.Load<Texture2D>(texture);
+		Texture2D texture2D = game.Content.Load<Texture2D>(texture);
 		SpriteLayer layer = new SpriteLayer(Game.Scene, name, texture2D)
 		{
-			Removable = true,
+			Disposable = true,
 			X = x,
 			Y = y,
 			ZOrder = zorder,
@@ -63,7 +63,7 @@ public abstract class AbstractPlayerOverlay
 	{
 		foreach (AbstractLayer layer in Layers)
 		{
-			if (layer.Removable)
+			if (layer.Disposable)
 			{
 				layer.Remove();
 			}

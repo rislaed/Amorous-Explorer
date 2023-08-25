@@ -3,29 +3,29 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class TexturedSequenceLayer : AbstractLayer
 { // _Yu3OngEjZbsgelWEySu6GE7aoYg
-	private int _state;
+	private int frame;
 
 	public Texture2D[] Textures { get; private set; }
 
-	public int State
+	public int Frame
 	{
 		get
 		{
-			return _state;
+			return frame;
 		}
 		set
 		{
 			if (value < 0)
 			{
-				_state = 0;
+				frame = 0;
 			}
 			else if (value < Textures.Length)
 			{
-				_state = value;
+				frame = value;
 			}
 			else
 			{
-				_state = Textures.Length - 1;
+				frame = Textures.Length - 1;
 			}
 		}
 	}
@@ -40,7 +40,7 @@ public class TexturedSequenceLayer : AbstractLayer
 
 	public override void Draw(SpriteBatch spriteBatch)
 	{
-		spriteBatch.Draw(Textures[State], Location, Color);
+		spriteBatch.Draw(Textures[frame], Location, Color);
 	}
 
 	public override void Remove()

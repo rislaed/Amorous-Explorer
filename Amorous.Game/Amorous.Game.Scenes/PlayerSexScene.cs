@@ -8,13 +8,12 @@ namespace Amorous.Game.Scenes;
 public class PlayerSexScene : AbstractScene
 {
 	private bool showHelp;
-	private SpriteFont _font;
+	private SpriteFont font;
 
-	public PlayerSexScene(IAmorous game)
-		: base(game)
+	public PlayerSexScene(IAmorous game) : base(game)
 	{
 		showHelp = true;
-		_font = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
+		font = Game.Content.Load<SpriteFont>("Assets/GUI/Fonts/Bold-26");
 		FadingMediaPlayer.Complete();
 	}
 
@@ -52,11 +51,11 @@ public class PlayerSexScene : AbstractScene
 		{
 			if (base.Game.Controller.IsPressed(Keys.Space))
 			{
-				base.Game.Sexscene.ToPhase(1);
+				base.Game.Sexscene.PhaseTo(1);
 			}
 			if (base.Game.Controller.IsPressed(Keys.LeftControl))
 			{
-				base.Game.Sexscene.ToPhase(-1);
+				base.Game.Sexscene.PhaseTo(-1);
 			}
 			if (base.Game.Sexscene.Exploded && base.Game.Controller.IsPressed(Keys.X))
 			{
@@ -64,7 +63,7 @@ public class PlayerSexScene : AbstractScene
 			}
 			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.IsPressed(Keys.C))
 			{
-				base.Game.Sexscene.ExplodeNow();
+				base.Game.Sexscene.ExplodeWithoutFading();
 			}
 			else if (!base.Game.Sexscene.Exploded && base.Game.Controller.IsPressed(Keys.V))
 			{
@@ -76,7 +75,7 @@ public class PlayerSexScene : AbstractScene
 	public override void DrawOverlay(SpriteBatch spriteBatch)
 	{
 		base.DrawOverlay(spriteBatch);
-		if (!base.Game.IsControlsOnScreen)
+		if (!base.Game.IsShowingControls)
 		{
 			return;
 		}
@@ -86,28 +85,28 @@ public class PlayerSexScene : AbstractScene
 			int offset = 10;
 			if (base.Game.Sexscene != null && base.Game.Sexscene.GetSubscenes().Length != 0)
 			{
-				spriteBatch.DrawString(_font, "Cycle skin (S)", new Vector2(10f, offset), Color.White);
+				spriteBatch.DrawString(font, "Cycle skin (S)", new Vector2(10f, offset), Color.White);
 				offset += 40;
 			}
-			spriteBatch.DrawString(_font, "Toggle phone (Escape or Shift)", new Vector2(10f, offset), Color.White);
+			spriteBatch.DrawString(font, "Toggle phone (Escape or Shift)", new Vector2(10f, offset), Color.White);
 		}
 		else if (!showHelp)
 		{
-			spriteBatch.DrawString(_font, "Show help (Z)", new Vector2(10f, 10f), Color.White);
+			spriteBatch.DrawString(font, "Show help (Z)", new Vector2(10f, 10f), Color.White);
 		}
 		else
 		{
-			spriteBatch.DrawString(_font, "Speed up (Space)", new Vector2(10f, 10f), Color.White);
-			spriteBatch.DrawString(_font, "Slow down (Left Ctrl)", new Vector2(10f, 50f), Color.White);
-			spriteBatch.DrawString(_font, "Clean mess (X)", new Vector2(10f, 90f), Color.White);
-			spriteBatch.DrawString(_font, "Insta-mess (C)", new Vector2(10f, 130f), Color.White);
-			spriteBatch.DrawString(_font, "Finish it! (V)", new Vector2(10f, 170f), Color.White);
+			spriteBatch.DrawString(font, "Speed up (Space)", new Vector2(10f, 10f), Color.White);
+			spriteBatch.DrawString(font, "Slow down (Left Ctrl)", new Vector2(10f, 50f), Color.White);
+			spriteBatch.DrawString(font, "Clean mess (X)", new Vector2(10f, 90f), Color.White);
+			spriteBatch.DrawString(font, "Insta-mess (C)", new Vector2(10f, 130f), Color.White);
+			spriteBatch.DrawString(font, "Finish it! (V)", new Vector2(10f, 170f), Color.White);
 			if (base.Game.Sexscene != null && base.Game.Sexscene.GetSubscenes().Length != 0)
 			{
-				spriteBatch.DrawString(_font, "Cycle skin (S)", new Vector2(10f, 250f), Color.White);
+				spriteBatch.DrawString(font, "Cycle skin (S)", new Vector2(10f, 250f), Color.White);
 			}
-			spriteBatch.DrawString(_font, "Toggle phone (Escape or Shift)", new Vector2(10f, 290f), Color.White);
-			spriteBatch.DrawString(_font, "Hide help (Z)", new Vector2(10f, 330f), Color.White);
+			spriteBatch.DrawString(font, "Toggle phone (Escape or Shift)", new Vector2(10f, 290f), Color.White);
+			spriteBatch.DrawString(font, "Hide help (Z)", new Vector2(10f, 330f), Color.White);
 		}
 		spriteBatch.End();
 	}

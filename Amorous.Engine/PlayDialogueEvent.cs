@@ -3,14 +3,13 @@ using Microsoft.Xna.Framework;
 
 public class PlayDialogueEvent : AbstractEvent<PlayDialogueEventData>
 { // _xGEYVq41yf0ul2Cmx7FszeTIVuf
-	private bool _completable;
+	private bool completed;
 
 	public string Text { get; private set; }
 	public string Title { get; private set; }
 	public Color Color { get; private set; }
 
-	public PlayDialogueEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public PlayDialogueEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(PlayDialogueEventData eventData)
 	{
@@ -18,7 +17,7 @@ public class PlayDialogueEvent : AbstractEvent<PlayDialogueEventData>
 		Text = eventData.Text;
 		Title = eventData.Title;
 		Color = eventData.Color;
-		_completable = false;
+		completed = false;
 	}
 
 	public override void Start()
@@ -29,13 +28,13 @@ public class PlayDialogueEvent : AbstractEvent<PlayDialogueEventData>
 
 	public override bool Next()
 	{
-		if (_completable)
+		if (completed)
 		{
-			base.Completable = true;
+			base.IsCompleted = true;
 		}
 		else
 		{
-			_completable = true;
+			completed = true;
 			TypingDialogue.SkipToNext();
 		}
 		return false;
@@ -43,6 +42,6 @@ public class PlayDialogueEvent : AbstractEvent<PlayDialogueEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = TypingDialogue.Completable;
+		base.IsCompleted = TypingDialogue.IsCompleted;
 	}
 }

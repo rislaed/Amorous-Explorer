@@ -7,8 +7,7 @@ public class ConditionalBranchEvent : AbstractEvent<ConditionalBranchEventData>
 	public int TrueID { get; private set; }
 	public int FalseID { get; private set; }
 
-	public ConditionalBranchEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public ConditionalBranchEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(ConditionalBranchEventData eventData)
 	{
@@ -20,8 +19,8 @@ public class ConditionalBranchEvent : AbstractEvent<ConditionalBranchEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
-		bool flag = PlayerPreferences.GetPlayerData().GetFlag(Flag);
+		base.IsCompleted = true;
+		bool flag = PlayerPreferences.GetPlayerData().HasFlag(Flag);
 		base.NextID = (flag ? TrueID : FalseID);
 	}
 }

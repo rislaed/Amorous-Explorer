@@ -1,45 +1,45 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Amorous.Engine.NPC;
 using Microsoft.Xna.Framework;
 
 public abstract class AbstractNPC
 { // _QGGOTxZ8aNWGh0hc26wcmx8wmwT
-	private NPCLocation _location;
-	private FilterableEmotion _emotion;
-	private FilterablePose _pose;
-	private readonly List<string> _clothes;
-	private readonly Random _random;
+	private NPCLocation location;
+	private FilterableEmotion emotion;
+	private FilterablePose pose;
+	private readonly List<string> clothes;
+	private readonly Random blinkingRandom;
+	private bool blinked;
+	private int blinkingTicks;
+	private int ticksBetweenBlinking;
 
-	private bool _blink;
-	private int _blinkTicks;
-	private int _timeToBlink;
+	private const int BLINKING_IN = 375;
+	private const int BLINKING_DELAY = 625;
+	private const int BLINKING_OUT = 1000;
 
-	private const int BlinkingIn = 375;
-	private const int BlinkingDelay = 625;
-	private const int BlinkingOut = 1000;
+	private Action update;
+	private Action draw;
+	private int fadingTicks;
 
-	private Action _update;
-	private Action _draw;
-	private int _fading;
-
-	private const int FadingDelay = 500;
+	private const int FADING_DELAY = 500;
 
 	protected bool NudesBehindShirt;
 	protected bool NudesBehindPants;
 
-	public bool LockedInLayer;
+	public bool IsFixedOrder;
 	public IAmorous Game { get; set; }
-	public NPCLocation Location => _location;
+	public NPCLocation Location => location;
 
 	public string Head
 	{
 		get
 		{
-			if (_emotion != null)
+			if (emotion != null)
 			{
-				return _emotion.Name;
+				return emotion.Name;
 			}
 			return null;
 		}
@@ -49,15 +49,15 @@ public abstract class AbstractNPC
 	{
 		get
 		{
-			if (_pose != null)
+			if (pose != null)
 			{
-				return _pose.Name;
+				return pose.Name;
 			}
 			return null;
 		}
 	}
 
-	public string[] Clothes => _clothes.ToArray();
+	public string[] Clothes => clothes.ToArray();
 	public bool IsRefreshing { get; private set; }
 	public List<FilterableEmotion> Emotions { get; private set; }
 	public List<FilterablePose> Poses { get; private set; }
@@ -67,7 +67,7 @@ public abstract class AbstractNPC
 	public virtual int Height { get; protected set; }
 	public float Scale { get; set; }
 	public virtual bool FlipX { get; set; }
-	public virtual bool InTalking { get; set; }
+	public virtual bool LockedOnScreen { get; set; }
 	public virtual bool IsHovered { get; set; }
 	public virtual Action Click { get; set; }
 	public Type[] Variations { get; set; }
@@ -75,14 +75,14 @@ public abstract class AbstractNPC
 	protected AbstractNPC(IAmorous game)
 	{
 		Scale = 1f;
-		_clothes = new List<string>();
+		clothes = new List<string>();
 		Game = game;
 		Emotions = new List<FilterableEmotion>();
 		Poses = new List<FilterablePose>();
-		_random = new Random();
-		_blink = false;
-		_blinkTicks = 0;
-		_timeToBlink = 4000;
+		blinkingRandom = new Random();
+		blinked = false;
+		blinkingTicks = 0;
+		ticksBetweenBlinking = 4000;
 	}
 
 	public virtual void Start() {}
@@ -111,11 +111,11 @@ public abstract class AbstractNPC
 
 	public virtual void Update(GameTime gameTime)
 	{
-		if (_emotion != null && !string.IsNullOrEmpty(_emotion.Blink))
+		if (emotion != null && !string.IsNullOrEmpty(emotion.Blink))
 		{
 			UpdateBlinking(gameTime);
 		}
-		UpdateData(gameTime);
+		UpdateFading(gameTime);
 	}
 
 	public virtual void Draw()
@@ -125,40 +125,40 @@ public abstract class AbstractNPC
 
 	private void UpdateBlinking(GameTime gameTime)
 	{
-		if (_fading > 0)
+		if (fadingTicks > 0)
 		{
 			return;
 		}
-		if (!_blink)
+		if (!blinked)
 		{
-			_timeToBlink -= gameTime.ElapsedGameTime.Milliseconds;
-			if (_timeToBlink <= 0)
+			ticksBetweenBlinking -= gameTime.ElapsedGameTime.Milliseconds;
+			if (ticksBetweenBlinking <= 0)
 			{
-				_blink = true;
-				_blinkTicks = 0;
+				blinked = true;
+				blinkingTicks = 0;
 			}
 			return;
 		}
-		_blinkTicks += gameTime.ElapsedGameTime.Milliseconds;
+		blinkingTicks += gameTime.ElapsedGameTime.Milliseconds;
 		float alpha = 0f;
-		if (_blinkTicks < BlinkingIn)
+		if (blinkingTicks < BLINKING_IN)
 		{
-			alpha = (float)_blinkTicks / BlinkingIn;
+			alpha = (float)blinkingTicks / BLINKING_IN;
 		}
-		else if (_blinkTicks >= BlinkingIn && _blinkTicks < BlinkingDelay)
+		else if (blinkingTicks >= BLINKING_IN && blinkingTicks < BLINKING_DELAY)
 		{
 			alpha = 1f;
 		}
-		else if (_blinkTicks >= BlinkingDelay && _blinkTicks < BlinkingOut)
+		else if (blinkingTicks >= BLINKING_DELAY && blinkingTicks < BLINKING_OUT)
 		{
-			alpha = 1f - (float)(_blinkTicks - BlinkingDelay) / BlinkingIn;
+			alpha = 1f - (float)(blinkingTicks - BLINKING_DELAY) / BLINKING_IN;
 		}
-		else if (_blinkTicks >= BlinkingOut)
+		else if (blinkingTicks >= BLINKING_OUT)
 		{
-			_blink = false;
-			_timeToBlink = _random.Next(3, 6) * BlinkingOut;
+			blinked = false;
+			ticksBetweenBlinking = blinkingRandom.Next(3, 6) * BLINKING_OUT;
 		}
-		SetAlpha(_emotion.Blink, alpha);
+		SetAlpha(emotion.Blink, alpha);
 	}
 
 	protected void SetAlpha(IFilterable piece, float alpha)
@@ -187,21 +187,21 @@ public abstract class AbstractNPC
 
 	public virtual void SetLocation(NPCLocation location)
 	{
-		_location = location;
+		this.location = location;
 	}
 
 	public void SetEmotion(string name)
 	{
 		FilterableEmotion emotion = Emotions.FirstOrDefault((FilterableEmotion emotion) => emotion.Name == name);
-		if (_emotion != null)
+		if (this.emotion != null)
 		{
-			Hide(_emotion);
-			if (_emotion.Blink != null)
+            Hide(this.emotion);
+			if (this.emotion.Blink != null)
 			{
-				SetAlpha(_emotion.Blink, 0f);
+                SetAlpha(this.emotion.Blink, 0f);
 			}
 		}
-		_emotion = emotion;
+		this.emotion = emotion;
 		if (emotion != null)
 		{
 			Show(emotion);
@@ -211,39 +211,39 @@ public abstract class AbstractNPC
 	public void SetPose(string name)
 	{
 		FilterablePose pose = Poses.FirstOrDefault((FilterablePose pose) => pose.Name == name);
-		if (_pose != null)
+		if (this.pose != null)
 		{
-			Hide(_pose);
+            Hide(this.pose);
 		}
-		_pose = pose;
+		this.pose = pose;
 		if (pose != null)
 		{
-			SetClothes(_clothes.ToArray());
+			SetClothes(clothes.ToArray());
 		}
 	}
 
 	public void SetClothes(params string[] names)
 	{
-		if (_pose == null)
+		if (pose == null)
 		{
 			return;
 		}
-		_clothes.Clear();
-		Hide(_pose);
+		clothes.Clear();
+		Hide(pose);
 		FilterableClothes shirt = null;
 		FilterableClothes pants = null;
 		bool withShirt = false;
 		bool withPants = false;
-		foreach (FilterableClothes cloth in _pose.Clothes)
+		foreach (FilterableClothes cloth in pose.Clothes)
 		{
 			cloth.Updatable = names?.Contains(cloth.Name) ?? false;
 			if (Censorship.Censored)
 			{
-				if (NudesBehindShirt && cloth.IsShirt && (shirt == null || cloth.IsCensoringShirt))
+				if (NudesBehindShirt && cloth.IsShirt && (shirt == null || cloth.CensoringShirt))
 				{
 					shirt = cloth;
 				}
-				if (NudesBehindPants && cloth.IsPants && (pants == null || cloth.IsCensoringPants))
+				if (NudesBehindPants && cloth.IsPants && (pants == null || cloth.CensoringPants))
 				{
 					pants = cloth;
 				}
@@ -265,62 +265,62 @@ public abstract class AbstractNPC
 				withShirt |= cloth.IsShirt;
 				withPants |= cloth.IsPants;
 			}
-			_clothes.Add(cloth.Name);
+			clothes.Add(cloth.Name);
 		}
 		if (Censorship.Censored)
 		{
 			if (NudesBehindShirt && !withShirt && shirt != null)
 			{
 				shirt.Updatable = true;
-				_clothes.Add(shirt.Name);
+				clothes.Add(shirt.Name);
 			}
 			if (NudesBehindPants && !withPants && pants != null)
 			{
 				pants.Updatable = true;
-				_clothes.Add(pants.Name);
+				clothes.Add(pants.Name);
 			}
 		}
-		Show(_pose);
+		Show(pose);
 	}
 
 	public void Apply(NPCLocation location, string head, string pose, params string[] clothes)
 	{
-		if (_fading > 0)
+		if (fadingTicks > 0)
 		{
 			ApplyScheduledEvents();
 			Dispose();
 		}
 		IsRefreshing = true;
-		_update = delegate
+		update = delegate
 		{
-			_update = null;
-			SetState(location, head ?? Head, pose ?? Pose, clothes ?? Clothes);
+			update = null;
+			RequestSpawn(location, head ?? Head, pose ?? Pose, clothes ?? Clothes);
 		};
-		_fading = FadingDelay;
+		fadingTicks = FADING_DELAY;
 	}
 
 	public void Reset()
 	{
-		if (_fading > 0)
+		if (fadingTicks > 0)
 		{
 			ApplyScheduledEvents();
 			Dispose();
 		}
 		IsRefreshing = true;
-		_update = delegate
+		update = delegate
 		{
-			_update = null;
-			SetState(NPCLocation.None, null, null, null);
+			update = null;
+			RequestSpawn(NPCLocation.None, null, null, null);
 		};
-		_fading = FadingDelay;
+		fadingTicks = FADING_DELAY;
 	}
 
-	private void SetState(NPCLocation location, string head, string pose, string[] clothes)
+	private void RequestSpawn(NPCLocation location, string head, string pose, string[] clothes)
 	{
-		_draw = delegate
+		draw = delegate
 		{
 			Refresh(0);
-			_draw = delegate
+			draw = delegate
 			{
 				IsRefreshing = false;
 				SetLocation(location);
@@ -329,36 +329,36 @@ public abstract class AbstractNPC
 				SetClothes(clothes);
 				if (Refresh(1))
 				{
-					_draw = delegate
+					draw = delegate
 					{
-						_draw = null;
+						draw = null;
 						Refresh(2);
 					};
 				}
 				else
 				{
-					_draw = null;
+					draw = null;
 					Dispose();
 				}
 			};
 		};
 	}
 
-	private void UpdateData(GameTime gameTime)
+	private void UpdateFading(GameTime gameTime)
 	{
-		if (_fading <= 0)
+		if (fadingTicks <= 0)
 		{
 			return;
 		}
-		if (_update != null)
+		if (update != null)
 		{
-			_update();
+			update();
 			return;
 		}
-		_fading -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_fading > 0)
+		fadingTicks -= gameTime.ElapsedGameTime.Milliseconds;
+		if (fadingTicks > 0)
 		{
-			Fade((float)_fading / FadingDelay);
+			Fade((float)fadingTicks / FADING_DELAY);
 		}
 		else
 		{
@@ -366,32 +366,37 @@ public abstract class AbstractNPC
 		}
 	}
 
+	[Conditional("DEBUG")]
+	private void PreserveDrawPending()
+	{
+		if (fadingTicks <= 0 && IsRefreshing)
+		{
+			Logger.Debug("Overticking scheduled updates at {0} ticks, originally it stucks here!", -fadingTicks);
+			fadingTicks = FADING_DELAY;
+		}
+	}
+
 	private void DrawPending()
 	{
-		if (_fading > 0)
+		if (fadingTicks > 0)
 		{
-			if (_draw != null)
+			if (draw != null)
 			{
-				_draw();
+				draw();
 			}
 		}
-		else if (IsRefreshing) // ?
-		{
-			Logger.Log(ConsoleColor.White, "Debug", "Overticking scheduled updates at {0} ticks, originally it stucks!", -_fading);
-			Game.ShowMessage("Assets/Gui/Achievements/Achievement_ShootingRange_2", "Locked", "Scheduled NPC events timeout!");
-			_fading = FadingDelay;
-		}
+		PreserveDrawPending();
 	}
 
 	private void ApplyScheduledEvents()
 	{
-		if (_update != null)
+		if (update != null)
 		{
-			_update();
+			update();
 		}
-		while (_draw != null)
+		while (draw != null)
 		{
-			_draw();
+			draw();
 		}
 	}
 

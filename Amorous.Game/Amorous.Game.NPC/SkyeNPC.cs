@@ -42,7 +42,7 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 			typeof(SkyeBlueNPC),
 			typeof(SkyeGrayNPC)
 		};
-		base.Spine.StartAnimationWithLooping("Idle");
+		base.Skeleton.StartAnimationWithLooping("Idle");
 		AddEmotion(EHeads.Angry, "Angry Head", "Angry pupil", "Angry eyeback");
 		AddEmotion(EHeads.Blush, "Blush head", "Blush pupils", "Blush eye back");
 		AddEmotion(EHeads.Sad, "Sad Head", "Sad pupil", "Sad eye back");
@@ -50,12 +50,12 @@ public class SkyeNPC : SpineNPC<SkyeNPC.EHeads, SkyeNPC.EPoses, SkyeNPC.EClothes
 		AddEmotion(EHeads.Neutral, "Neutral head", "Neutral pupil", "Neutral eye back", "Neutral jaw").WithBlinking("Neutral blink");
 		AddPose(EPoses.Suggestive, "Suggestive Body", "Suggestive boobs", "Suggestive Tail");
 		AddPose(EPoses.Guarded, "Guarded body", "Guarded boobs", "Guarded boob cover", "Guarded tail");
-		AddClothes(EPoses.Suggestive, EClothes.Hoodie, "Suggestive hoodie").AsShirt().AsCensoredShirt().AsNudes();
+		AddClothes(EPoses.Suggestive, EClothes.Hoodie, "Suggestive hoodie").AsShirt().AsCensoringShirt().AsNudes();
 		AddClothes(EPoses.Suggestive, EClothes.Shirt, "Suggestive shirt").AsShirt().AsNudes();
-		AddClothes(EPoses.Suggestive, EClothes.Shorts, "Suggestive shorts").AsPants().AsCensoredPants().AsCloth();
-		AddClothes(EPoses.Guarded, EClothes.Hoodie, "Guarded hoodie").AsShirt().AsCensoredShirt().AsNudes();
+		AddClothes(EPoses.Suggestive, EClothes.Shorts, "Suggestive shorts").AsPants().AsCensoringPants().AsCloth();
+		AddClothes(EPoses.Guarded, EClothes.Hoodie, "Guarded hoodie").AsShirt().AsCensoringShirt().AsNudes();
 		AddClothes(EPoses.Guarded, EClothes.Shirt, "Guarded shirt").AsShirt().AsNudes();
-		AddClothes(EPoses.Guarded, EClothes.Shorts, "Guarded shorts").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Guarded, EClothes.Shorts, "Guarded shorts").AsPants().AsCensoringPants().AsCloth();
 		NudesBehindShirt = true;
 		NudesBehindPants = true;
 	}

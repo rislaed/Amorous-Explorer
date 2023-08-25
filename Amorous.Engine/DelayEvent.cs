@@ -3,12 +3,11 @@ using Microsoft.Xna.Framework;
 
 public class DelayEvent : AbstractEvent<DelayEventData>
 { // _yy7ao0ygzMkDh6MgDHs7gTimjsy
-	private int _ticks;
+	private int ticks;
 
 	public int Delay { get; private set; }
 
-	public DelayEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public DelayEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(DelayEventData eventData)
 	{
@@ -19,15 +18,15 @@ public class DelayEvent : AbstractEvent<DelayEventData>
 	public override void Start()
 	{
 		base.Start();
-		_ticks = Delay;
+		ticks = Delay;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
-		_ticks -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_ticks <= 0)
+		ticks -= gameTime.ElapsedGameTime.Milliseconds;
+		if (ticks <= 0)
 		{
-			base.Completable = true;
+			base.IsCompleted = true;
 		}
 	}
 }

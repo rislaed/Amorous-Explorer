@@ -6,8 +6,7 @@ public class CensorCheckEvent : AbstractEvent<CensorCheckEventData>
 	public int SFWID { get; private set; }
 	public int NSFWID { get; private set; }
 
-	public CensorCheckEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public CensorCheckEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(CensorCheckEventData eventData)
 	{
@@ -18,7 +17,7 @@ public class CensorCheckEvent : AbstractEvent<CensorCheckEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 		base.NextID = (Censorship.Censored ? SFWID : NSFWID);
 	}
 }

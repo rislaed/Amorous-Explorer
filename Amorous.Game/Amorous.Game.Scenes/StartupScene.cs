@@ -36,17 +36,16 @@ public class StartupScene : AbstractScene
 		public string hash { get; set; }
 	}
 
-	private static readonly string LoginCredentials = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "username.txt");
+	private static readonly string LOGIN_CREDENTIALS = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "username.txt");
 
-	private readonly TextBox usernameBox;
-	private readonly CheckBox rememberUsernameBox;
+	private readonly TextBox usernameText;
+	private readonly CheckBox rememberUsernameCheck;
 
-	public StartupScene(IAmorous game)
-		: base(game)
+	public StartupScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/Intro/Background", 0, -540);
 		AddSpriteLayer("Background", "Assets/Scenes/Intro/Scenery", 0, -170);
-		AddForegroundSpriteLayer("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
+		AddSpriteLayerAbove("Title", "Assets/Scenes/MainMenu/Logo", 616, 50);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.TheNightSkyTrack, 0.4f);
 		Window container = new Window
 		{
@@ -65,15 +64,15 @@ public class StartupScene : AbstractScene
 			AutoSize = AutoSize.HorizontalVertical,
 			Text = "Username:"
 		};
-		usernameBox = new TextBox
+		usernameText = new TextBox
 		{
 			Position = new Point(140, 130),
 			Size = new Point(200, AmorousData.ButtonHeight),
 			TabIndex = 1
 		};
-		if (File.Exists(LoginCredentials))
+		if (File.Exists(LOGIN_CREDENTIALS))
 		{
-			usernameBox.Text = File.ReadAllText(LoginCredentials);
+			usernameText.Text = File.ReadAllText(LOGIN_CREDENTIALS);
 		}
 		Label passwordLabel = new Label
 		{
@@ -88,7 +87,7 @@ public class StartupScene : AbstractScene
 			TabIndex = 2,
 			IsPassword = true
 		};
-		rememberUsernameBox = new CheckBox
+		rememberUsernameCheck = new CheckBox
 		{
 			Position = new Point(15, 200),
 			Size = new Point(300, AmorousData.ButtonHeight),
@@ -110,7 +109,7 @@ public class StartupScene : AbstractScene
 				{
 					loginData.Write(JsonConvert.SerializeObject(new ApiLogin
 					{
-						username = usernameBox.Text,
+						username = usernameText.Text,
 						password = passwordBox.Text
 					}));
 				}
@@ -118,24 +117,24 @@ public class StartupScene : AbstractScene
 				ApiReponse apiReponse = JsonConvert.DeserializeObject<ApiReponse>(loginAnswer.ReadToEnd());
 				if (!apiReponse.error)
 				{
-					string text = Utils.GetMD5(usernameBox.Text + passwordBox.Text + apiReponse.message + apiReponse.timestamp);
+					string text = Utils.GetMD5(usernameText.Text + passwordBox.Text + apiReponse.message + apiReponse.timestamp);
 					if (text == apiReponse.hash)
 					{
 						Login();
 					}
 					else
 					{
-						base.Squid.ShowConfirm("Sorry, please try again!", AmorousData.WideDialogueOffset);
+						base.Desktop.ShowConfirm("Sorry, please try again!", AmorousData.ShortDialogueWidth);
 					}
 				}
 				else
 				{
-					base.Squid.ShowConfirm(apiReponse.message, AmorousData.ShortDialogueOffset);
+					base.Desktop.ShowConfirm(apiReponse.message, AmorousData.WideDialogueWidth);
 				}
 			}
 			catch (Exception)
 			{
-				base.Squid.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", AmorousData.ShortDialogueOffset);
+				base.Desktop.ShowConfirm("Sorry, an unexpected exception occured, see log-file for more details!", AmorousData.WideDialogueWidth);
 			}
 		};
 		Button forgotPasswordButton = new Button
@@ -150,13 +149,13 @@ public class StartupScene : AbstractScene
 		};
 		container.Controls.Add(informationLabel);
 		container.Controls.Add(usernameLabel);
-		container.Controls.Add(usernameBox);
+		container.Controls.Add(usernameText);
 		container.Controls.Add(passwordLabel);
 		container.Controls.Add(passwordBox);
-		container.Controls.Add(rememberUsernameBox);
+		container.Controls.Add(rememberUsernameCheck);
 		container.Controls.Add(loginButton);
 		container.Controls.Add(forgotPasswordButton);
-		base.Squid.Controls.Add(container);
+		base.Desktop.Controls.Add(container);
 	}
 
 	public override void Start()
@@ -175,9 +174,9 @@ public class StartupScene : AbstractScene
 
 	private void Login()
 	{
-		if (rememberUsernameBox.Checked)
+		if (rememberUsernameCheck.Checked)
 		{
-			File.WriteAllText(LoginCredentials, usernameBox.Text);
+			File.WriteAllText(LOGIN_CREDENTIALS, usernameText.Text);
 		}
 		base.Game.StartScene<MainMenuScene>();
 	}

@@ -2,13 +2,12 @@ namespace Amorous.Game.Scenes;
 
 public class SkyeBedroomScene : AbstractScene
 {
-	public SkyeBedroomScene(IAmorous game)
-		: base(game)
+	public SkyeBedroomScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/SkyeBedroom/interactable bedroom - Backround", 0, 0);
 		AddClickableLayer("Door", "Assets/Scenes/SkyeBedroom/interactable bedroom - Door", 1534, 70, delegate
 		{
-			if (PlayerPreferences.GetPlayerData().GetState(AmorousData.SkyeDate) == 55)
+			if (PlayerPreferences.GetPlayerData().GetStage(AmorousData.SkyeDate) == 55)
 			{
 				Game.PlayCutscene(AmorousData.SkyeDate);
 			}

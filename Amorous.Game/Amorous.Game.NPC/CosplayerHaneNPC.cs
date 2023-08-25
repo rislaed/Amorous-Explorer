@@ -25,8 +25,7 @@ public class CosplayerHaneNPC : LayerNPC<CosplayerHaneNPC.EHeads, CosplayerHaneN
 	public static string Name = "Hane Maxwell";
 	public static Color Color = new Color(186, 78, 60);
 
-	public CosplayerHaneNPC(IAmorous game)
-		: base(game, "Assets/NPC/CosplayerHane", 1f)
+	public CosplayerHaneNPC(IAmorous game) : base(game, "Assets/NPC/CosplayerHane", 1f)
 	{
 		AddPose(EPoses.Standing, "Hane Maxwell Cosplayer (nude)");
 		AddClothes(EPoses.Standing, EClothes.Jacket, "Hane Maxwell Cosplayer (clothed)").AsShirt().AsNudes();

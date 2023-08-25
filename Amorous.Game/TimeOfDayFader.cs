@@ -3,48 +3,48 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class TimeOfDayFader
 { // _G2GbwTTqXkVDMUL6fDmljsAPB4s
-	private static readonly Color MorningColor = new Color(50, 45, 0, 50);
-	private static readonly Color DayColor = new Color(0, 0, 0, 0);
-	private static readonly Color SunsetColor = new Color(65, 15, 0, 50);
-	private static readonly Color NightColor = new Color(20, 0, 90, 50);
+	private static readonly Color MORNING_COLOR = new Color(50, 45, 0, 50);
+	private static readonly Color DAY_COLOR = new Color(0, 0, 0, 0);
+	private static readonly Color SUNSET_COLOR = new Color(65, 15, 0, 50);
+	private static readonly Color NIGHT_COLOR = new Color(20, 0, 90, 50);
 
-	private readonly ScreenFader _fader;
-	private TimeOfDay? _time;
+	private readonly ScreenFader screenFader;
+	private TimeOfDay? timeOfDay;
 
 	public TimeOfDayFader(IAmorous game)
 	{
-		_fader = new ScreenFader(game.Graphics);
+		screenFader = new ScreenFader(game.Graphics);
 	}
 
 	public void Update(GameTime gameTime)
 	{
-		_fader.Update(gameTime);
-		UpdateTime();
+		screenFader.Update(gameTime);
+		UpdateInternal();
 	}
 
-	public void Draw(SpriteBatch spriteBatch, CanvasObserver mouse)
+	public void Draw(SpriteBatch spriteBatch, CanvasObserver canvas)
 	{
-		_fader.Draw(spriteBatch, mouse);
+		screenFader.Draw(spriteBatch, canvas);
 	}
 
-	private void UpdateTime()
+	private void UpdateInternal()
 	{
-		if (_time != Clocks.Date)
+		if (timeOfDay != Clocks.Date)
 		{
-			_time = Clocks.Date;
+			timeOfDay = Clocks.Date;
 			switch (Clocks.Date)
 			{
 				default:
-					_fader.Apply(NightColor);
+					screenFader.Apply(NIGHT_COLOR);
 					break;
 				case TimeOfDay.Morning:
-					_fader.Apply(MorningColor);
+					screenFader.Apply(MORNING_COLOR);
 					break;
 				case TimeOfDay.Day:
-					_fader.Apply(DayColor);
+					screenFader.Apply(DAY_COLOR);
 					break;
 				case TimeOfDay.Sunset:
-					_fader.Apply(SunsetColor);
+					screenFader.Apply(SUNSET_COLOR);
 					break;
 			}
 		}

@@ -8,14 +8,14 @@ using Squid;
 
 public class TypingDialogue
 { // _nkzqFdEfDyLcyGikIKGcHjklI4y
-	private enum OverlayState
+	private enum EState
 	{
 		None,
 		Started,
 		Visible
 	}
 
-	private enum TypingPhase
+	private enum EPhase
 	{
 		None,
 		Started,
@@ -28,10 +28,10 @@ public class TypingDialogue
 
 	private class TypingOverlay
 	{
-		private readonly List<TypingOverlayChunk> _chunks;
-		private int _chunk;
+		private readonly List<TypingOverlayChunk> chunks;
+		private int chunk;
 
-		public bool Completable => _chunk >= _chunks.Count;
+		public bool IsCompleted => chunk >= chunks.Count;
 		public string Message { get; }
 		public string Author { get; }
 		public Color Color { get; }
@@ -48,13 +48,13 @@ public class TypingDialogue
 				Author = PlayerPreferences.GetPlayerData().Name;
 			}
 			Color = color;
-			_chunks = new List<TypingOverlayChunk>();
+			chunks = new List<TypingOverlayChunk>();
 		}
 
 		public void Begin(SpriteFont font, SpriteFont italicFont)
 		{
-			_chunks.Clear();
-			_chunk = 0;
+			chunks.Clear();
+			chunk = 0;
 			if (string.IsNullOrEmpty(Message))
 			{
 				return;
@@ -75,7 +75,7 @@ public class TypingDialogue
 				{
 					if (text.Length > 0)
 					{
-						_chunks.Add(new TypingOverlayChunk(text, lineEnding: false, isItalic, isBold, offset));
+						chunks.Add(new TypingOverlayChunk(text, lineEnding: false, isItalic, isBold, offset));
 						text = string.Empty;
 						offset = width;
 					}
@@ -113,14 +113,14 @@ public class TypingDialogue
 					}
 					if (text.Length == 0)
 					{
-						if (_chunks.Count > 0)
+						if (chunks.Count > 0)
 						{
-							_chunks[_chunks.Count - 1].IsLineEnding = true;
+							chunks[chunks.Count - 1].IsLineEnding = true;
 						}
 					}
 					else
 					{
-						_chunks.Add(new TypingOverlayChunk(text, lineEnding: true, isItalic, isBold, offset));
+						chunks.Add(new TypingOverlayChunk(text, lineEnding: true, isItalic, isBold, offset));
 						text = string.Empty;
 					}
 					offset = 0;
@@ -130,7 +130,7 @@ public class TypingDialogue
 				{
 					if (text.Length > 0)
 					{
-						_chunks.Add(new TypingOverlayChunk(text, lineEnding: true, isItalic, isBold, offset));
+						chunks.Add(new TypingOverlayChunk(text, lineEnding: true, isItalic, isBold, offset));
 						text = string.Empty;
 						offset = 0;
 					}
@@ -139,7 +139,7 @@ public class TypingDialogue
 			}
 			if (text.Length > 0)
 			{
-				_chunks.Add(new TypingOverlayChunk(text, lineEnding: false, isItalic, isBold, offset));
+				chunks.Add(new TypingOverlayChunk(text, lineEnding: false, isItalic, isBold, offset));
 			}
 		}
 
@@ -193,28 +193,28 @@ public class TypingDialogue
 
 		public void SkipToNext()
 		{
-			if (Completable)
+			if (IsCompleted)
 			{
 				return;
 			}
-			foreach (TypingOverlayChunk chunk in _chunks)
+			foreach (TypingOverlayChunk chunk in chunks)
 			{
 				chunk.Complete();
 			}
-			_chunk = _chunks.Count;
+			chunk = chunks.Count;
 		}
 
 		public char GetCharacter()
 		{
-			if (Completable)
+			if (IsCompleted)
 			{
 				return ' ';
 			}
-			TypingOverlayChunk chunk = _chunks[_chunk];
-			char symbol = chunk.ComputeCharacter();
-			if (chunk.Completable)
+			TypingOverlayChunk subchunk = chunks[chunk];
+			char symbol = subchunk.ComputeCharacter();
+			if (subchunk.IsCompleted)
 			{
-				_chunk++;
+				chunk++;
 			}
 			return symbol;
 		}
@@ -222,7 +222,7 @@ public class TypingDialogue
 		public void Draw(SpriteBatch spriteBatch, SpriteFont font, SpriteFont italicFont, Vector2[] lineLocations)
 		{
 			int line = 0;
-			foreach (TypingOverlayChunk chunk in _chunks)
+			foreach (TypingOverlayChunk chunk in chunks)
 			{
 				if (line < lineLocations.Length)
 				{
@@ -240,10 +240,10 @@ public class TypingDialogue
 
 	private class TypingOverlayChunk
 	{
-		private int _position;
-		private readonly Vector2 _offset;
+		private int index;
+		private readonly Vector2 offset;
 
-		public bool Completable => _position >= Text.Length;
+		public bool IsCompleted => index >= Text.Length;
 		public string Text { get; }
 		public bool IsLineEnding { get; set; }
 		public bool IsItalic { get; }
@@ -255,46 +255,46 @@ public class TypingDialogue
 			IsLineEnding = lineEnding;
 			IsItalic = italic;
 			IsBold = bold;
-			_offset = new Vector2(offset, 0f);
+			this.offset = new Vector2(offset, 0f);
 		}
 
 		public void Complete()
 		{
-			_position = Text.Length;
+			index = Text.Length;
 		}
 
 		public char ComputeCharacter()
 		{
-			if (Completable)
+			if (IsCompleted)
 			{
 				return ' ';
 			}
-			return Text[_position++];
+			return Text[index++];
 		}
 
-		public void Draw(SpriteBatch spriteBatch, SpriteFont font, SpriteFont _italicFont, Vector2 location, Color color)
+		public void Draw(SpriteBatch spriteBatch, SpriteFont font, SpriteFont italicFont, Vector2 location, Color color)
 		{
 			string text = ComputeText();
 			if (!string.IsNullOrEmpty(text))
 			{
 				if (IsItalic)
 				{
-					spriteBatch.DrawString(_italicFont, text, location + _offset, color);
+					spriteBatch.DrawString(italicFont, text, location + offset, color);
 				}
 				else
 				{
-					spriteBatch.DrawString(font, text, location + _offset, color);
+					spriteBatch.DrawString(font, text, location + offset, color);
 				}
 			}
 		}
 
 		private string ComputeText()
 		{
-			if (_position == 0)
+			if (this.index == 0)
 			{
 				return string.Empty;
 			}
-			string buffer = ((_position >= Text.Length) ? Text : Text.Substring(0, _position));
+			string buffer = ((this.index >= Text.Length) ? Text : Text.Substring(0, this.index));
 			string text = string.Empty;
 			int index = 0;
 			for (int count = buffer.IndexOf('░'); count >= 0; count = buffer.IndexOf('░', index))
@@ -312,23 +312,22 @@ public class TypingDialogue
 
 	private class ChoiceOverlay : InteractableOverlay
 	{
-		private readonly ButtonInteractable[] _variants;
-		private int _count;
+		private readonly ButtonInteractable[] choices;
+		private int count;
 
 		public int Which { get; private set; }
-		public bool Outgoing { get; private set; }
+		public bool Visible { get; private set; }
 
-		public ChoiceOverlay(IAmorous game, Texture2D buttonTexture, Texture2D backgroundButtonTexture, SpriteFont font)
-			: base(game)
+		public ChoiceOverlay(IAmorous game, Texture2D buttonTexture, Texture2D backgroundButtonTexture, SpriteFont font) : base(game)
 		{
-			_variants = new ButtonInteractable[5];
+			choices = new ButtonInteractable[5];
 			Which = -1;
-			_count = 0;
-			_variants[0] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 1", new Color(250, 251, 162), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceFirst);
-			_variants[1] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 2", new Color(165, 250, 171), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceSecond);
-			_variants[2] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 3", new Color(171, 199, 255), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceThird);
-			_variants[3] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 4", new Color(228, 187, 253), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceForth);
-			_variants[4] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 5", new Color(255, 171, 179), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceFifth);
+			count = 0;
+			choices[0] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 1", new Color(250, 251, 162), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceFirst);
+			choices[1] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 2", new Color(165, 250, 171), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceSecond);
+			choices[2] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 3", new Color(171, 199, 255), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceThird);
+			choices[3] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 4", new Color(228, 187, 253), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceFourth);
+			choices[4] = AddButtonInteractable(buttonTexture, backgroundButtonTexture, font, "Choice 5", new Color(255, 171, 179), 0, 0, new Microsoft.Xna.Framework.Rectangle(0, 0, buttonTexture.Width, buttonTexture.Height), ChoiceFifth);
 			Select(-1);
 		}
 
@@ -336,36 +335,36 @@ public class TypingDialogue
 		{
 			if (variants.Length != 0)
 			{
-				Outgoing = true;
+				Visible = true;
 				Which = 0;
-				_count = 0;
-				for (int i = 0; i < variants.Length && i < _variants.Length; i++)
+				count = 0;
+				for (int i = 0; i < variants.Length && i < choices.Length; i++)
 				{
-					_variants[i].Text = variants[i];
-					_variants[i].Visible = true;
-					_count++;
+					choices[i].Text = variants[i];
+					choices[i].IsVisible = true;
+					count++;
 				}
-				for (int j = variants.Length; j < _variants.Length; j++)
+				for (int j = variants.Length; j < choices.Length; j++)
 				{
-					_variants[j].Visible = false;
+					choices[j].IsVisible = false;
 				}
-				int y = (int)(30f + (float)(690 - _variants[0].Bounds.Height - (_variants[0].Bounds.Height + 15) * (_count - 1)) / 2f);
-				for (int k = 0; k < _count; k++)
+				int y = (int)(30f + (float)(690 - choices[0].Bounds.Height - (choices[0].Bounds.Height + 15) * (count - 1)) / 2f);
+				for (int k = 0; k < count; k++)
 				{
-					_variants[k].X = (int)((float)(1920 - _variants[k].Bounds.Width) / 2f);
-					_variants[k].Y = y + (_variants[k].Bounds.Height + 15) * k;
+					choices[k].X = (int)((float)(1920 - choices[k].Bounds.Width) / 2f);
+					choices[k].Y = y + (choices[k].Bounds.Height + 15) * k;
 				}
 			}
 		}
 
 		public void Select(int which)
 		{
-			Outgoing = false;
+			Visible = false;
 			Which = which;
-			_count = 0;
-			foreach (ButtonInteractable button in _variants)
+			count = 0;
+			foreach (ButtonInteractable button in choices)
 			{
-				button.Visible = false;
+				button.IsVisible = false;
 			}
 		}
 
@@ -384,7 +383,7 @@ public class TypingDialogue
 			Select(3);
 		}
 
-		private void ChoiceForth()
+		private void ChoiceFourth()
 		{
 			Select(4);
 		}
@@ -397,72 +396,72 @@ public class TypingDialogue
 
 	private struct TypingSpeed
 	{
-		public static readonly TypingSpeed Slow = new TypingSpeed(100, 750, 2000);
-		public static readonly TypingSpeed Normal = new TypingSpeed(60, 450, 1500);
-		public static readonly TypingSpeed Fast = new TypingSpeed(30, 300, 1000);
-		public static readonly TypingSpeed Instant = new TypingSpeed(0, 0, 1000);
+		public static readonly TypingSpeed SLOW = new TypingSpeed(100, 750, 2000);
+		public static readonly TypingSpeed NORMAL = new TypingSpeed(60, 450, 1500);
+		public static readonly TypingSpeed FAST = new TypingSpeed(30, 300, 1000);
+		public static readonly TypingSpeed INSTANT = new TypingSpeed(0, 0, 1000);
 
 		public int WhitespaceDelay { get; }
 		public int CharacterDelay { get; }
 		public int AutoSkipDelay { get; }
 
-		private TypingSpeed(int whitespace, int character, int autoSkip)
+		private TypingSpeed(int whitespace, int character, int autoskip)
 		{
 			WhitespaceDelay = whitespace;
 			CharacterDelay = character;
-			AutoSkipDelay = autoSkip;
+			AutoSkipDelay = autoskip;
 		}
 	}
 
-	private static TypingDialogue _singleton;
-	private readonly IAmorous _game;
-	private readonly Texture2D _dialogueTexture;
-	private readonly SpriteFont _font, _italicFont;
-	private readonly Vector2 _backgroundLocation;
-	private readonly Vector2 _controlBounds;
-	private readonly Vector2[] _lineLocations;
-	private readonly ChoiceOverlay _choiceOverlay;
-	private Desktop _squid;
-	private DialogueSpeed _dialogueSpeed;
-	private TypingSpeed _speed;
-	private DropDownList _speedDropDown;
-	private bool _autoSkip;
-	private CheckBox _autoSkipBox;
-	private OverlayState _overlayState;
-	private TypingPhase _phase;
-	private TypingPhase _pendingPhase;
-	private int _ticks;
-	private TypingOverlay _dialogue;
+	private static TypingDialogue singleton;
+	private readonly IAmorous game;
+	private readonly Texture2D dialogueTexture;
+	private readonly SpriteFont font, italicFont;
+	private readonly Vector2 backgroundLocation;
+	private readonly Vector2 optionBounds;
+	private readonly Vector2[] lineLocations;
+	private readonly ChoiceOverlay choiceOverlay;
+	private Desktop desktop;
+	private DialogueSpeed dialogueSpeed;
+	private TypingSpeed speed;
+	private DropDownList speedDropDown;
+	private bool autoskip;
+	private CheckBox autoskipBox;
+	private EState overlayState;
+	private EPhase phase;
+	private EPhase pendingPhase;
+	private int ticks;
+	private TypingOverlay dialogue;
 
-	public static bool Completable => _singleton._phase == TypingPhase.Done;
-	public static bool Outgoing => _singleton._choiceOverlay.Outgoing;
-	public static int Which => _singleton._choiceOverlay.Which;
+	public static bool IsCompleted => singleton.phase == EPhase.Done;
+	public static bool Visible => singleton.choiceOverlay.Visible;
+	public static int Which => singleton.choiceOverlay.Which;
 
 	public static DialogueSpeed Speed
 	{
 		get
 		{
-			return _singleton._dialogueSpeed;
+			return singleton.dialogueSpeed;
 		}
 		set
 		{
-			_singleton._dialogueSpeed = value;
-			switch (_singleton._dialogueSpeed)
+			singleton.dialogueSpeed = value;
+			switch (singleton.dialogueSpeed)
 			{
 				case DialogueSpeed.Slow:
-					_singleton._speed = TypingSpeed.Slow;
+					singleton.speed = TypingSpeed.SLOW;
 					break;
 				case DialogueSpeed.Normal:
-					_singleton._speed = TypingSpeed.Normal;
+					singleton.speed = TypingSpeed.NORMAL;
 					break;
 				case DialogueSpeed.Fast:
-					_singleton._speed = TypingSpeed.Fast;
+					singleton.speed = TypingSpeed.FAST;
 					break;
 				case DialogueSpeed.Instant:
-					_singleton._speed = TypingSpeed.Instant;
+					singleton.speed = TypingSpeed.INSTANT;
 					break;
 			}
-			_singleton.UpdateSelectedSpeed();
+			singleton.UpdateSelectedSpeed();
 		}
 	}
 
@@ -470,25 +469,25 @@ public class TypingDialogue
 	{
 		get
 		{
-			return _singleton._autoSkip;
+			return singleton.autoskip;
 		}
 		set
 		{
-			_singleton._autoSkip = value;
-			_singleton.UpdateCheckedAutoSkip();
+			singleton.autoskip = value;
+			singleton.UpdateCheckedAutoSkip();
 		}
 	}
 
 	public TypingDialogue(IAmorous game, Texture2D dialogueTexture, Texture2D buttonTexture, SpriteFont font, SpriteFont italicFont)
 	{
-		_singleton = this;
-		_game = game;
-		_dialogueTexture = dialogueTexture;
-		_font = font;
-		_italicFont = italicFont;
-		_backgroundLocation = new Vector2((float)(dialogueTexture.Width - 1920) / 2f, 1080 - dialogueTexture.Height);
-		_controlBounds = new Vector2(75f, 625f);
-		_lineLocations = new Vector2[6]
+		singleton = this;
+		this.game = game;
+		this.dialogueTexture = dialogueTexture;
+		this.font = font;
+		this.italicFont = italicFont;
+		backgroundLocation = new Vector2((float)(dialogueTexture.Width - 1920) / 2f, 1080 - dialogueTexture.Height);
+		optionBounds = new Vector2(75f, 625f);
+		lineLocations = new Vector2[6]
 		{
 			new Vector2(75f, 720f),
 			new Vector2(75f, 770f),
@@ -497,22 +496,22 @@ public class TypingDialogue
 			new Vector2(75f, 920f),
 			new Vector2(75f, 970f)
 		};
-		_choiceOverlay = new ChoiceOverlay(game, buttonTexture, null, font);
+		choiceOverlay = new ChoiceOverlay(game, buttonTexture, null, font);
 		Speed = DialogueSpeed.Normal;
 		CreateOverlay();
 	}
 
 	private void CreateOverlay()
 	{
-		_squid = new Desktop
+		desktop = new Desktop
 		{
 			Skin = Gui.GenerateStandardSkin(),
 			Size = new Squid.Point(1920, 1080)
 		};
-		_squid.SetSkin("Assets/GUI/Squid/DefaultSkin");
+		desktop.SetSkin("Assets/GUI/Squid/DefaultSkin");
 		FlowLayoutFrame container = new FlowLayoutFrame
 		{
-			Position = new Squid.Point(1220, (int)_controlBounds.Y + 10),
+			Position = new Squid.Point(1220, (int)optionBounds.Y + 10),
 			FlowDirection = FlowDirection.LeftToRight,
 			Margin = new Margin(0, 0, 100, 0),
 			HSpacing = 10,
@@ -526,9 +525,9 @@ public class TypingDialogue
 		};
 		saveButton.MouseClick += delegate
 		{
-			_game.ShowSave(_squid, delegate(bool toggle)
+			game.ShowSave(desktop, delegate(bool toggle)
 			{
-				_choiceOverlay.Touchable = toggle;
+				choiceOverlay.Touchable = toggle;
 			});
 		};
 		Button loadButton = new Button
@@ -539,9 +538,9 @@ public class TypingDialogue
 		};
 		loadButton.MouseClick += delegate
 		{
-			_game.ShowLoad(_squid, delegate(bool toggle)
+			game.ShowLoad(desktop, delegate(bool toggle)
 			{
-				_choiceOverlay.Touchable = toggle;
+				choiceOverlay.Touchable = toggle;
 			});
 		};
 		Button exitButton = new Button
@@ -552,86 +551,86 @@ public class TypingDialogue
 		};
 		exitButton.MouseClick += delegate
 		{
-			_game.ShowExit(_squid, delegate(bool toggle)
+			game.ShowExit(desktop, delegate(bool toggle)
 			{
-				_choiceOverlay.Touchable = toggle;
+				choiceOverlay.Touchable = toggle;
 			});
 		};
-		_speedDropDown = new DropDownList();
-		_speedDropDown.Style = "button";
-		_speedDropDown.Size = new Squid.Point(120, 30);
-		_speedDropDown.DropdownAbove = true;
-		_speedDropDown.Label.TextAlign = Alignment.MiddleCenter;
-		_speedDropDown.Label.AutoEllipsis = false;
-		_speedDropDown.Dropdown.Resizable = false;
-		_speedDropDown.Button.Visible = false;
-		_speedDropDown.Listbox.Scrollbar.ButtonUp.Visible = false;
-		_speedDropDown.Listbox.Scrollbar.ButtonDown.Visible = false;
+		speedDropDown = new DropDownList();
+		speedDropDown.Style = "button";
+		speedDropDown.Size = new Squid.Point(120, 30);
+		speedDropDown.DropdownAbove = true;
+		speedDropDown.Label.TextAlign = Alignment.MiddleCenter;
+		speedDropDown.Label.AutoEllipsis = false;
+		speedDropDown.Dropdown.Resizable = false;
+		speedDropDown.Button.Visible = false;
+		speedDropDown.Listbox.Scrollbar.ButtonUp.Visible = false;
+		speedDropDown.Listbox.Scrollbar.ButtonDown.Visible = false;
 		foreach (DialogueSpeed speed in Enum.GetValues(typeof(DialogueSpeed)))
 		{
-			_speedDropDown.Items.Add(new ListBoxItem
+			speedDropDown.Items.Add(new ListBoxItem
 			{
 				Text = speed.ToString(),
 				Size = new Squid.Point(0, 30),
 				Value = speed
 			});
 		}
-		_speedDropDown.SelectedItemChanged += delegate(Control container, ListBoxItem box)
+		speedDropDown.SelectedItemChanged += delegate(Control container, ListBoxItem box)
 		{
 			Speed = (DialogueSpeed)box.Value;
-			Options.Data.DialogueTextSpeed = _dialogueSpeed;
+			Options.Config.DialogueTextSpeed = dialogueSpeed;
 		};
-		_autoSkipBox = new CheckBox
+		autoskipBox = new CheckBox
 		{
 			Text = "Auto-skip",
 			Size = new Squid.Point(140, 30),
 			Checked = AutoSkip
 		};
-		_autoSkipBox.CheckedChanged += delegate
+		autoskipBox.CheckedChanged += delegate
 		{
-			AutoSkip = _autoSkipBox.Checked;
-			Options.Data.DialogueAutoSkip = _autoSkip;
+			AutoSkip = autoskipBox.Checked;
+			Options.Config.DialogueAutoSkip = autoskip;
 		};
 		container.Controls.Add(saveButton);
 		container.Controls.Add(loadButton);
 		container.Controls.Add(exitButton);
-		container.Controls.Add(_autoSkipBox);
-		container.Controls.Add(_speedDropDown);
-		_squid.Controls.Add(container);
+		container.Controls.Add(autoskipBox);
+		container.Controls.Add(speedDropDown);
+		desktop.Controls.Add(container);
 	}
 
 	private void UpdateSelectedSpeed()
 	{
-		if (_singleton._speedDropDown != null)
+		if (singleton.speedDropDown != null)
 		{
-			_singleton._speedDropDown.SelectedItem = _singleton._speedDropDown.Items.First((ListBoxItem box) => (DialogueSpeed)box.Value == _dialogueSpeed);
+			singleton.speedDropDown.SelectedItem = singleton.speedDropDown.Items.First((ListBoxItem box) => (DialogueSpeed)box.Value == dialogueSpeed);
 		}
 	}
 
 	private void UpdateCheckedAutoSkip()
 	{
-		if (_singleton._autoSkipBox != null)
+		if (singleton.autoskipBox != null)
 		{
-			_singleton._autoSkipBox.Checked = _autoSkip;
+			singleton.autoskipBox.Checked = autoskip;
 		}
 	}
 
 	public void Update(GameTime gameTime)
 	{
-		switch (_overlayState)
+		switch (overlayState)
 		{
-			case OverlayState.None:
+			case EState.None:
 				return;
-			case OverlayState.Started:
-				_overlayState = OverlayState.Visible;
+			case EState.Started:
+				overlayState = EState.Visible;
 				return;
 		}
-		_choiceOverlay.Update(gameTime);
-		if (_game.Cutscene != null)
+		choiceOverlay.Update(gameTime);
+		if (game.Cutscene != null)
 		{
-			_squid.Update();
+			desktop.Update();
 		}
-		if (_choiceOverlay.Touchable)
+		if (choiceOverlay.Touchable)
 		{
 			Interact(gameTime);
 		}
@@ -639,108 +638,108 @@ public class TypingDialogue
 
 	private void Interact(GameTime gameTime)
 	{
-		if (_phase == TypingPhase.Done)
+		if (phase == EPhase.Done)
 		{
-			if (_game.Cutscene == null)
+			if (game.Cutscene == null)
 			{
 				Reset();
 			}
 			return;
 		}
-		if ((_phase == TypingPhase.Waiting || _phase == TypingPhase.Typing || _phase == TypingPhase.WaitForSkip) && IsPressedSkip())
+		if ((phase == EPhase.Waiting || phase == EPhase.Typing || phase == EPhase.WaitForSkip) && IsPressedSkip())
 		{
 			SkipToNext();
-			if (_pendingPhase != 0)
+			if (pendingPhase != 0)
 			{
-				_phase = _pendingPhase;
-				_pendingPhase = TypingPhase.None;
+				phase = pendingPhase;
+				pendingPhase = EPhase.None;
 			}
 			else if (!AutoSkip)
 			{
-				_phase = TypingPhase.WaitForSkip;
-				_pendingPhase = TypingPhase.Skip;
+				phase = EPhase.WaitForSkip;
+				pendingPhase = EPhase.Skip;
 			}
 			else
 			{
-				_ticks = _speed.AutoSkipDelay;
-				_phase = TypingPhase.Waiting;
-				_pendingPhase = TypingPhase.Skip;
+				ticks = speed.AutoSkipDelay;
+				phase = EPhase.Waiting;
+				pendingPhase = EPhase.Skip;
 			}
 		}
-		switch (_phase)
+		switch (phase)
 		{
-			case TypingPhase.Started:
-				if (_speed.WhitespaceDelay != 0)
+			case EPhase.Started:
+				if (speed.WhitespaceDelay != 0)
 				{
-					_phase = TypingPhase.Typing;
-					_pendingPhase = TypingPhase.None;
+					phase = EPhase.Typing;
+					pendingPhase = EPhase.None;
 				}
 				else
 				{
 					SkipToNext();
-					_phase = TypingPhase.WaitForSkip;
-					_pendingPhase = TypingPhase.Skip;
+					phase = EPhase.WaitForSkip;
+					pendingPhase = EPhase.Skip;
 				}
 				break;
-			case TypingPhase.Typing:
+			case EPhase.Typing:
 			{
-				char c = _dialogue.GetCharacter();
-				if (_dialogue.Completable)
+				char c = dialogue.GetCharacter();
+				if (dialogue.IsCompleted)
 				{
 					if (!AutoSkip)
 					{
-						_phase = TypingPhase.WaitForSkip;
+						phase = EPhase.WaitForSkip;
 					}
 					else
 					{
-						_ticks = _speed.AutoSkipDelay;
-						_phase = TypingPhase.Waiting;
+						ticks = speed.AutoSkipDelay;
+						phase = EPhase.Waiting;
 					}
-					_pendingPhase = TypingPhase.Skip;
+					pendingPhase = EPhase.Skip;
 				}
 				else
 				{
 					if (c != '░')
 					{
-						_ticks = _speed.WhitespaceDelay;
+						ticks = speed.WhitespaceDelay;
 					}
 					else
 					{
-						_ticks = _speed.CharacterDelay;
+						ticks = speed.CharacterDelay;
 					}
-					_phase = TypingPhase.Waiting;
-					_pendingPhase = TypingPhase.Typing;
+					phase = EPhase.Waiting;
+					pendingPhase = EPhase.Typing;
 				}
 				break;
 			}
-			case TypingPhase.Waiting:
-				_ticks -= gameTime.ElapsedGameTime.Milliseconds;
-				if (_ticks <= 0)
+			case EPhase.Waiting:
+				ticks -= gameTime.ElapsedGameTime.Milliseconds;
+				if (ticks <= 0)
 				{
-					_ticks = 0;
-					_phase = _pendingPhase;
-					_pendingPhase = TypingPhase.None;
+					ticks = 0;
+					phase = pendingPhase;
+					pendingPhase = EPhase.None;
 				}
 				break;
-			case TypingPhase.Skip:
-				_phase = TypingPhase.Done;
-				_pendingPhase = TypingPhase.None;
+			case EPhase.Skip:
+				phase = EPhase.Done;
+				pendingPhase = EPhase.None;
 				break;
-			case TypingPhase.WaitForSkip:
+			case EPhase.WaitForSkip:
 				break;
 		}
 	}
 
 	private bool IsPressedSkip()
 	{
-		if (_game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space))
+		if (game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space))
 		{
 			return true;
 		}
-		if (_game.Controller.IsPressed(ControllerButtonType.LeftButton))
+		if (game.Controller.IsPressed(ControllerButtonType.LeftButton))
 		{
-			Microsoft.Xna.Framework.Point cursor = _game.Canvas.GlobalToContent(_game.Controller.Cursor);
-			if ((float)cursor.Y >= _backgroundLocation.Y + 10f && cursor.Y <= 1080)
+			Microsoft.Xna.Framework.Point cursor = game.Canvas.GlobalToContent(game.Controller.Cursor);
+			if ((float)cursor.Y >= backgroundLocation.Y + 10f && cursor.Y <= 1080)
 			{
 				return true;
 			}
@@ -748,89 +747,89 @@ public class TypingDialogue
 		return false;
 	}
 
-	private void TypeNow(TypingOverlay dialogue)
+	private void TypeWithoutDelay(TypingOverlay dialogue)
 	{
-		_dialogue = dialogue;
-		_dialogue.Begin(_font, _italicFont);
-		_dialogue.SkipToNext();
-		_overlayState = OverlayState.Started;
-		_phase = TypingPhase.Started;
-		_pendingPhase = TypingPhase.None;
+		this.dialogue = dialogue;
+		this.dialogue.Begin(font, italicFont);
+		this.dialogue.SkipToNext();
+		overlayState = EState.Started;
+		phase = EPhase.Started;
+		pendingPhase = EPhase.None;
 	}
 
 	private void Type(TypingOverlay dialogue)
 	{
-		_dialogue = dialogue;
-		_dialogue.Begin(_font, _italicFont);
-		_ticks = 150;
-		_overlayState = OverlayState.Started;
-		_phase = TypingPhase.Started;
-		_pendingPhase = TypingPhase.None;
+		this.dialogue = dialogue;
+		this.dialogue.Begin(font, italicFont);
+		ticks = 150;
+		overlayState = EState.Started;
+		phase = EPhase.Started;
+		pendingPhase = EPhase.None;
 	}
 
 	public void Draw(SpriteBatch spriteBatch)
 	{
-		if (_overlayState == OverlayState.None)
+		if (overlayState == EState.None)
 		{
 			return;
 		}
-		_choiceOverlay.Draw(spriteBatch);
-		if (_dialogue != null)
+		choiceOverlay.Draw(spriteBatch);
+		if (dialogue != null)
 		{
 			spriteBatch.Begin();
-			spriteBatch.Draw(_dialogueTexture, _backgroundLocation, _dialogue.Color);
-			if (!string.IsNullOrEmpty(_dialogue.Author))
+			spriteBatch.Draw(dialogueTexture, backgroundLocation, dialogue.Color);
+			if (!string.IsNullOrEmpty(dialogue.Author))
 			{
-				spriteBatch.DrawString(_font, _dialogue.Author, _controlBounds, _dialogue.Color);
+				spriteBatch.DrawString(font, dialogue.Author, optionBounds, dialogue.Color);
 			}
-			_dialogue.Draw(spriteBatch, _font, _italicFont, _lineLocations);
+			dialogue.Draw(spriteBatch, font, italicFont, lineLocations);
 			spriteBatch.End();
-			if (_game.Cutscene != null)
+			if (game.Cutscene != null)
 			{
-				_squid.Draw();
+				desktop.Draw();
 			}
 		}
 	}
 
 	public void Reset()
 	{
-		_dialogue = null;
-		_ticks = 0;
-		_overlayState = OverlayState.None;
-		_phase = TypingPhase.None;
-		_pendingPhase = TypingPhase.None;
+		dialogue = null;
+		ticks = 0;
+		overlayState = EState.None;
+		phase = EPhase.None;
+		pendingPhase = EPhase.None;
 	}
 
-	public static void TypeNow(string message, string author, Color color)
+	public static void TypeWithoutDelay(string message, string author, Color color)
 	{
-		_singleton.TypeNow(new TypingOverlay(message, author, color));
+		singleton.TypeWithoutDelay(new TypingOverlay(message, author, color));
 	}
 
 	public static void Type(string message, string author, Color color)
 	{
-		_singleton.Type(new TypingOverlay(message, author, color));
+		singleton.Type(new TypingOverlay(message, author, color));
 	}
 
 	public static void SkipToNext()
 	{
-		if (_singleton._dialogue != null)
+		if (singleton.dialogue != null)
 		{
-			_singleton._dialogue.SkipToNext();
+			singleton.dialogue.SkipToNext();
 		}
 	}
 
 	public static void Choice(params string[] variants)
 	{
-		_singleton._choiceOverlay.ShowChoice(variants);
+		singleton.choiceOverlay.ShowChoice(variants);
 	}
 
 	public static void Unselect()
 	{
-		_singleton._choiceOverlay.Select(0);
+		singleton.choiceOverlay.Select(0);
 	}
 
 	public static void Complete()
 	{
-		_singleton.Reset();
+		singleton.Reset();
 	}
 }

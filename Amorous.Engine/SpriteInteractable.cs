@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class SpriteInteractable : AbstractInteractable
 { // _d4ad1i8rcZMvfN9iaxggA1KtVgx
-	private readonly Action _click;
+	private readonly Action click;
 
 	public Texture2D Sprite { get; private set; }
 	public Texture2D HoveredSprite { get; private set; }
@@ -15,20 +15,20 @@ public class SpriteInteractable : AbstractInteractable
 		Sprite = sprite;
 		HoveredSprite = hoveredSprite;
 		Blending = Color.White;
-		_click = click;
+		this.click = click;
 	}
 
 	public override void Click()
 	{
-		if (_click != null)
+		if (click != null)
 		{
-			_click();
+			click();
 		}
 	}
 
 	public override void Draw(SpriteBatch spriteBatch)
 	{
-		if (base.Hovered)
+		if (base.IsHovered)
 		{
 			spriteBatch.Draw(HoveredSprite ?? Sprite, Location, Blending);
 			return;

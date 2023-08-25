@@ -7,26 +7,26 @@ using Newtonsoft.Json;
 
 public class CustomizablePlayerSkin : AbstractPlayerOverlay
 { // _MqMsYrF1I2ghuKhx3f6aKuRGquq
-	public const int MaxHeight = 1040;
-	public const int MinHeight = 960;
+	public const int MAX_HEIGHT = 1040;
+	public const int MIN_HEIGHT = 960;
 	private const int ZoomHeight = 350;
 
-	private static readonly string SavesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
-	private static readonly string PlayerTemplatesFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves/playertemplates.json");
+	private static readonly string SAVES_DIRECTORY = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves");
+	private static readonly string PLAYER_TEMPLATES = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Saves/playertemplates.json");
 
-	private readonly CustomizationData _customizationData;
-	private readonly List<PlayerCustomizationData> _stockTemplates = new List<PlayerCustomizationData>();
-	private List<PlayerCustomizationData> _customTemplates = new List<PlayerCustomizationData>();
-	private bool _zoomed;
-	private float _zoomScale;
-	private int _zoomOffsetX;
-	private int _zoomOffsetY;
-	private int _height = 1000;
-	private int _zoomInterpolation;
-	private float _targetZoomScale;
-	private float _previousZoomScale;
-	private int _targetZoomOffsetY;
-	private int _previousZoomOffsetY;
+	private readonly CustomizationData customizationData;
+	private readonly List<PlayerCustomizationData> stockTemplates = new List<PlayerCustomizationData>();
+	private List<PlayerCustomizationData> customTemplates = new List<PlayerCustomizationData>();
+	private bool zoomed;
+	private float zoomScale;
+	private int zoomOffsetX;
+	private int zoomOffsetY;
+	private int height = 1000;
+	private int zoomAmount;
+	private float targetZoomingScale;
+	private float lastZoomingScale;
+	private int targetZoomingOffsetY;
+	private int lastZoomingOffsetY;
 
 	private readonly JsonSerializerSettings ExtendedSerializers = new JsonSerializerSettings
 	{
@@ -34,68 +34,66 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 		Converters = { (JsonConverter)new ColorJsonConverter() }
 	};
 
-	private int _spriteIndex;
-	private int _previousCursorY { get; set; }
+	private int indexOfLayer;
+	private int cursorLastY { get; set; }
 
 	public int Height
 	{
 		get
 		{
-			return _height;
+			return height;
 		}
 		set
 		{
-			if (_zoomInterpolation > 0 || _zoomed)
+			if (zoomAmount > 0 || zoomed)
 			{
 				return;
 			}
-			if (value <= MaxHeight)
+			if (value <= MAX_HEIGHT)
 			{
-				if (value < MinHeight)
+				if (value < MIN_HEIGHT)
 				{
-					_height = MinHeight;
+					height = MIN_HEIGHT;
 				}
 				else
 				{
-					_height = value;
+					height = value;
 				}
 			}
 			else
 			{
-				_height = MaxHeight;
+				height = MAX_HEIGHT;
 			}
-			_zoomScale = (float)_height / (float)_customizationData.Height;
-			_zoomOffsetY = 1080 - _height - 20;
+			zoomScale = (float)height / (float)customizationData.Height;
+			zoomOffsetY = 1080 - height - 20;
 			UpdateZooming();
 		}
 	}
 
-	public bool IsZoomed => _zoomed;
-	public IEnumerable<PlayerCustomizationData> StockTemplates => _stockTemplates;
-	public IEnumerable<PlayerCustomizationData> CustomTemplates => _customTemplates;
+	public bool IsZoomed => zoomed;
+	public IEnumerable<PlayerCustomizationData> StockTemplates => stockTemplates;
+	public IEnumerable<PlayerCustomizationData> CustomTemplates => customTemplates;
 
-	public CustomizablePlayerSkin(IAmorous game)
-		: base(game)
+	public CustomizablePlayerSkin(IAmorous game) : base(game)
 	{
 		string value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/Customization.json"));
-		_customizationData = JsonConvert.DeserializeObject<CustomizationData>(value, ExtendedSerializers);
+		customizationData = JsonConvert.DeserializeObject<CustomizationData>(value, ExtendedSerializers);
 		value = Compressions.ReadStreamAsText(Path.Combine(base.Game.Content.RootDirectory, "Data/PlayerCustomization/DefaultTemplates.json"));
 		PlayerCustomizationTemplatesData templatesData = JsonConvert.DeserializeObject<PlayerCustomizationTemplatesData>(value, ExtendedSerializers);
-		_stockTemplates.AddRange(templatesData.Templates);
+		stockTemplates.AddRange(templatesData.Templates);
 		Load();
-		_zoomScale = (float)_height / (float)_customizationData.Height;
-		_zoomOffsetX = 400;
-		_zoomOffsetY = 1080 - _height - 20;
+		zoomScale = (float)height / (float)customizationData.Height;
+		zoomOffsetX = 400;
+		zoomOffsetY = 1080 - height - 20;
 	}
 
-	public CustomizablePlayerSkin(IAmorous game, CustomizationData data, IEnumerable<PlayerCustomizationData> prototype)
-		: base(game)
+	public CustomizablePlayerSkin(IAmorous game, CustomizationData data, IEnumerable<PlayerCustomizationData> prototype) : base(game)
 	{
-		_customizationData = data;
-		_stockTemplates.AddRange(prototype);
-		_zoomScale = (float)_height / (float)_customizationData.Height;
-		_zoomOffsetX = 400;
-		_zoomOffsetY = 1080 - _height - 20;
+		customizationData = data;
+		stockTemplates.AddRange(prototype);
+		zoomScale = (float)height / (float)customizationData.Height;
+		zoomOffsetX = 400;
+		zoomOffsetY = 1080 - height - 20;
 	}
 
 	public PlayerCustomizationData Validate(PlayerCustomizationData data)
@@ -105,88 +103,88 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 
 	public void AddCustomTemplate(string name, PlayerData data)
 	{
-		_customTemplates.Add(data.NewCustomizationData(name));
+		customTemplates.Add(data.NewCustomizationData(name));
 		Save();
 	}
 
 	public void AddCustomTemplateAtIndex(string name, int index, PlayerData data)
 	{
-		if (index >= 0 && index < _customTemplates.Count)
+		if (index >= 0 && index < customTemplates.Count)
 		{
-			_customTemplates[index] = data.NewCustomizationData(name);
+			customTemplates[index] = data.NewCustomizationData(name);
 			Save();
 		}
 	}
 
 	public void ResetCustomTemplate(int index)
 	{
-		if (index >= 0 && index < _customTemplates.Count)
+		if (index >= 0 && index < customTemplates.Count)
 		{
-			PlayerPreferences.GetPlayerData().CloneCustomizationData(_customTemplates[index]);
+			PlayerPreferences.GetPlayerData().CloneCustomizationData(customTemplates[index]);
 			Refresh();
 		}
 	}
 
 	public void RemoveCustomTemplate(int index)
 	{
-		if (index >= 0 && index < _customTemplates.Count)
+		if (index >= 0 && index < customTemplates.Count)
 		{
-			_customTemplates.RemoveAt(index);
+			customTemplates.RemoveAt(index);
 			Save();
 		}
 	}
 
 	public void CloneStockTemplate(int index)
 	{
-		if (index >= 0 && index < _stockTemplates.Count)
+		if (index >= 0 && index < stockTemplates.Count)
 		{
-			PlayerPreferences.GetPlayerData().CloneCustomizationData(_stockTemplates[index]);
+			PlayerPreferences.GetPlayerData().CloneCustomizationData(stockTemplates[index]);
 			Refresh();
 		}
 	}
 
 	public void CloneCustomTemplate(int index)
 	{
-		if (index >= 0 && index < _customTemplates.Count)
+		if (index >= 0 && index < customTemplates.Count)
 		{
-			PlayerPreferences.GetPlayerData().CloneCustomizationData(_customTemplates[index]);
+			PlayerPreferences.GetPlayerData().CloneCustomizationData(customTemplates[index]);
 			Refresh();
 		}
 	}
 
 	public string GetCustomTemplateName(int index)
 	{
-		if (index >= 0 && index < _customTemplates.Count)
+		if (index >= 0 && index < customTemplates.Count)
 		{
-			return _customTemplates[index].Name;
+			return customTemplates[index].Name;
 		}
 		return string.Empty;
 	}
 
 	private void Save()
 	{
-		if (!Directory.Exists(SavesFolder))
+		if (!Directory.Exists(SAVES_DIRECTORY))
 		{
-			Directory.CreateDirectory(SavesFolder);
+			Directory.CreateDirectory(SAVES_DIRECTORY);
 		}
-		File.WriteAllText(PlayerTemplatesFile, JsonConvert.SerializeObject(_customTemplates, ExtendedSerializers));
+		File.WriteAllText(PLAYER_TEMPLATES, JsonConvert.SerializeObject(customTemplates, ExtendedSerializers));
 	}
 
 	private void Load()
 	{
-		if (File.Exists(PlayerTemplatesFile))
+		if (File.Exists(PLAYER_TEMPLATES))
 		{
-			List<PlayerCustomizationData> templates = JsonConvert.DeserializeObject<List<PlayerCustomizationData>>(File.ReadAllText(PlayerTemplatesFile), ExtendedSerializers);
+			List<PlayerCustomizationData> templates = JsonConvert.DeserializeObject<List<PlayerCustomizationData>>(File.ReadAllText(PLAYER_TEMPLATES), ExtendedSerializers);
 			if (templates != null)
 			{
-				_customTemplates = templates;
+				customTemplates = templates;
 			}
 		}
 	}
 
 	public void Refresh()
 	{
-		foreach (CustomizationGroupData item in _customizationData.Groups)
+		foreach (CustomizationGroupData item in customizationData.Groups)
 		{
 			foreach (CustomizationLayerData item2 in item.Layers)
 			{
@@ -197,7 +195,7 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 			}
 		}
 		Initialize(PlayerPreferences.GetPlayerData());
-		foreach (CustomizationGroupData item3 in _customizationData.Groups)
+		foreach (CustomizationGroupData item3 in customizationData.Groups)
 		{
 			foreach (CustomizationLayerData item4 in item3.Layers)
 			{
@@ -213,13 +211,13 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 
 	private void CreateLayerSprite(CustomizationGroupData groupData, CustomizationLayerData layerData)
 	{
-		layerData.Layer = NewSpriteLayer(layerData.AssetName, $"Assets/PlayerCustomization/{groupData.Name}/{layerData.AssetName}", layerData.X + _zoomOffsetX, layerData.Y + _zoomOffsetY, layerData.ZOrder, _zoomScale);
+		layerData.Layer = AddSpriteLayer(layerData.AssetName, $"Assets/PlayerCustomization/{groupData.Name}/{layerData.AssetName}", layerData.X + zoomOffsetX, layerData.Y + zoomOffsetY, layerData.ZOrder, zoomScale);
 		layerData.Layer.Visible = false;
 	}
 
 	private void SerializeColor(string group, string tag, Color color)
 	{
-		CustomizationGroupData groupData = _customizationData.Groups.FirstOrDefault((CustomizationGroupData data) => data.Name == group);
+		CustomizationGroupData groupData = customizationData.Groups.FirstOrDefault((CustomizationGroupData data) => data.Name == group);
 		if (groupData == null)
 		{
 			return;
@@ -234,14 +232,14 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 				}
 				layerData.Layer.Visible = true;
 				layerData.Layer.Color = color;
-				layerData.Layer.LayerOrder = _spriteIndex++;
+				layerData.Layer.LayerOrder = indexOfLayer++;
 			}
 		}
 	}
 
 	public override void Initialize(PlayerData data)
 	{
-		_spriteIndex = 0;
+		indexOfLayer = 0;
 		SerializeColor("BodyTypes", data.BodyType.ToString(), data.BodyColor);
 		if (data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Underbelly))
 		{
@@ -363,33 +361,33 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 
 	public void ZoomIn()
 	{
-		if (!_zoomed)
+		if (!zoomed)
 		{
-			_zoomed = true;
-			_zoomInterpolation = ZoomHeight - _zoomInterpolation;
-			_targetZoomScale = _zoomScale;
-			_targetZoomOffsetY = _zoomOffsetY;
-			_previousZoomScale = 1f;
-			_previousZoomOffsetY = 0;
+			zoomed = true;
+			zoomAmount = ZoomHeight - zoomAmount;
+			targetZoomingScale = zoomScale;
+			targetZoomingOffsetY = zoomOffsetY;
+			lastZoomingScale = 1f;
+			lastZoomingOffsetY = 0;
 		}
 	}
 
 	public void ZoomOut()
 	{
-		if (_zoomed)
+		if (zoomed)
 		{
-			_zoomed = false;
-			_zoomInterpolation = ZoomHeight - _zoomInterpolation;
-			_targetZoomScale = _zoomScale;
-			_targetZoomOffsetY = _zoomOffsetY;
-			_previousZoomScale = (float)_height / (float)_customizationData.Height;
-			_previousZoomOffsetY = 1080 - _height - 20;
+			zoomed = false;
+			zoomAmount = ZoomHeight - zoomAmount;
+			targetZoomingScale = zoomScale;
+			targetZoomingOffsetY = zoomOffsetY;
+			lastZoomingScale = (float)height / (float)customizationData.Height;
+			lastZoomingOffsetY = 1080 - height - 20;
 		}
 	}
 
 	public void ToggleZoom()
 	{
-		if (_zoomed)
+		if (zoomed)
 		{
 			ZoomOut();
 		}
@@ -402,35 +400,35 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 	public override void Update(GameTime gameTime)
 	{
 		int y = base.Game.Controller.Cursor.Y;
-		if (_zoomInterpolation <= 0)
+		if (zoomAmount <= 0)
 		{
 			if (IsZoomed && base.Game.Controller.IsHolding(ControllerButtonType.LeftButton))
 			{
-				int offset = y - _previousCursorY;
+				int offset = y - cursorLastY;
 				if (offset != 0)
 				{
-					_zoomOffsetY = Math.Min(Math.Max(-1600, _zoomOffsetY + offset), 0);
+					zoomOffsetY = Math.Min(Math.Max(-1600, zoomOffsetY + offset), 0);
 					UpdateZooming();
 				}
 			}
-			_previousCursorY = y;
+			cursorLastY = y;
 			return;
 		}
-		_zoomInterpolation -= gameTime.ElapsedGameTime.Milliseconds;
-		if (_zoomInterpolation <= 0)
+		zoomAmount -= gameTime.ElapsedGameTime.Milliseconds;
+		if (zoomAmount <= 0)
 		{
-			_zoomInterpolation = 0;
-			_zoomScale = _previousZoomScale;
-			_zoomOffsetY = _previousZoomOffsetY;
+			zoomAmount = 0;
+			zoomScale = lastZoomingScale;
+			zoomOffsetY = lastZoomingOffsetY;
 		}
 		else
 		{
-			float amount = (float)_zoomInterpolation / 350f;
-			_zoomScale = MathHelper.Lerp(_previousZoomScale, _targetZoomScale, amount);
-			_zoomOffsetY = (int)MathHelper.Lerp(_previousZoomOffsetY, _targetZoomOffsetY, amount);
+			float amount = (float)zoomAmount / 350f;
+			zoomScale = MathHelper.Lerp(lastZoomingScale, targetZoomingScale, amount);
+			zoomOffsetY = (int)MathHelper.Lerp(lastZoomingOffsetY, targetZoomingOffsetY, amount);
 		}
 		UpdateZooming();
-		_previousCursorY = y;
+		cursorLastY = y;
 	}
 
 	private void UpdateZooming()
@@ -438,8 +436,8 @@ public class CustomizablePlayerSkin : AbstractPlayerOverlay
 		using List<AbstractLayer>.Enumerator layers = base.Layers.GetEnumerator();
 		while (layers.MoveNext())
 		{
-			layers.Current.Scale = _zoomScale;
-			layers.Current.Y = _zoomOffsetY;
+			layers.Current.Scale = zoomScale;
+			layers.Current.Y = zoomOffsetY;
 		}
 	}
 }

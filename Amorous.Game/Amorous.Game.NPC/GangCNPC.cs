@@ -26,8 +26,7 @@ public class GangCNPC : LayerNPC<GangCNPC.EHeads, GangCNPC.EPoses, GangCNPC.EClo
 	public static string Name = "Jade";
 	public static Color Color = new Color(98, 178, 17);
 
-	public GangCNPC(IAmorous game)
-		: base(game, "Assets/NPC/GangC", 1f)
+	public GangCNPC(IAmorous game) : base(game, "Assets/NPC/GangC", 1f)
 	{
 		Width = 610;
 		Height = 1002;

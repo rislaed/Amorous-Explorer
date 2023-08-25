@@ -39,7 +39,7 @@ public class RemyNPC : SpineNPC<RemyNPC.EHeads, RemyNPC.EPoses, RemyNPC.EClothes
 	public RemyNPC(IAmorous game)
 		: base(game, "Assets/NPC/Remy/Remy", 0.75f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("animation");
+		base.Skeleton.StartAnimationWithLooping("animation");
 		string[] first = new string[5] { "Fringe", "Ponytail", "Ear left", "Ear right", "Eyes back" };
 		AddEmotion(EHeads.Blushing, first.Union(new string[2] { "Head Blush", "Default pupils" }).ToArray()).WithBlinking("Head blush blink");
 		AddEmotion(EHeads.Happy, first.Union(new string[2] { "Head Happy", "Default pupils" }).ToArray()).WithBlinking("Head happy blink");
@@ -51,20 +51,20 @@ public class RemyNPC : SpineNPC<RemyNPC.EHeads, RemyNPC.EPoses, RemyNPC.EClothes
 		AddPose(EPoses.BothArms, first2.Union(new string[5] { "Gesture forearm left", "Gesture hand left", "Gesture shoulder left", "Gesture forearm right", "Gesture hand right" }).ToArray());
 		AddPose(EPoses.Shy, first2.Union(new string[1] { "Shy arms back" }).ToArray());
 		AddClothes(EPoses.LeftArm, EClothes.Apron, "Apron").AsShirt().AsPants();
-		AddClothes(EPoses.LeftArm, EClothes.Pants, "Pants").AsPants().AsCensoredPants();
-		AddClothes(EPoses.LeftArm, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater Gesture shoulder left").AsShirt().AsCensoredShirt();
+		AddClothes(EPoses.LeftArm, EClothes.Pants, "Pants").AsPants().AsCensoringPants();
+		AddClothes(EPoses.LeftArm, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater Gesture shoulder left").AsShirt().AsCensoringShirt();
 		AddClothes(EPoses.LeftArm, EClothes.Swimsuit, "Swimsuit").AsShirt().AsPants();
 		AddClothes(EPoses.RightArm, EClothes.Apron, "Apron").AsShirt().AsPants();
-		AddClothes(EPoses.RightArm, EClothes.Pants, "Pants").AsPants().AsCensoredPants();
-		AddClothes(EPoses.RightArm, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater shy arms back", "Sweater Gesture forearm right").AsShirt().AsCensoredShirt();
+		AddClothes(EPoses.RightArm, EClothes.Pants, "Pants").AsPants().AsCensoringPants();
+		AddClothes(EPoses.RightArm, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater shy arms back", "Sweater Gesture forearm right").AsShirt().AsCensoringShirt();
 		AddClothes(EPoses.RightArm, EClothes.Swimsuit, "Swimsuit").AsShirt().AsPants();
 		AddClothes(EPoses.BothArms, EClothes.Apron, "Apron").AsShirt().AsPants();
-		AddClothes(EPoses.BothArms, EClothes.Pants, "Pants").AsPants().AsCensoredPants();
-		AddClothes(EPoses.BothArms, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater Gesture shoulder left", "Sweater Gesture forearm right").AsShirt().AsCensoredShirt();
+		AddClothes(EPoses.BothArms, EClothes.Pants, "Pants").AsPants().AsCensoringPants();
+		AddClothes(EPoses.BothArms, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater Gesture shoulder left", "Sweater Gesture forearm right").AsShirt().AsCensoringShirt();
 		AddClothes(EPoses.BothArms, EClothes.Swimsuit, "Swimsuit").AsShirt().AsPants();
 		AddClothes(EPoses.Shy, EClothes.Apron, "Apron").AsShirt().AsPants();
-		AddClothes(EPoses.Shy, EClothes.Pants, "Pants").AsPants().AsCensoredPants();
-		AddClothes(EPoses.Shy, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater shy arms back").AsShirt().AsCensoredShirt();
+		AddClothes(EPoses.Shy, EClothes.Pants, "Pants").AsPants().AsCensoringPants();
+		AddClothes(EPoses.Shy, EClothes.Sweater, "Sweater body", "Sweater breasts", "Sweater torso", "Sweater shy arms back").AsShirt().AsCensoringShirt();
 		AddClothes(EPoses.Shy, EClothes.Swimsuit, "Swimsuit").AsShirt().AsPants();
 		NudesBehindShirt = true;
 		NudesBehindPants = true;

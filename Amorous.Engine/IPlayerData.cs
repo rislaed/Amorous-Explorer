@@ -65,5 +65,5 @@ public interface IPlayerData
 	bool ShowNipples { get; set; }
 	Color NipplesColor { get; set; }
 	Color PhoneColor { get; set; }
-	bool GetFlag(string string_0);
+	bool HasFlag(string flag);
 }

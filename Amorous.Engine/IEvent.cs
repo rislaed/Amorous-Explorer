@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 
 public interface IEvent
 { // _UuyKVad9AT7C3U33zYrtkLcKlQI
-	bool Completable { get; }
+	bool IsCompleted { get; }
 	int ID { get; }
 	int NextID { get; }
 	void Start();

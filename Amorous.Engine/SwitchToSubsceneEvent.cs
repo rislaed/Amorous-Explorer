@@ -5,8 +5,7 @@ public class SwitchToSubsceneEvent : AbstractEvent<SwitchToSubsceneEventData>
 { // _ZXdfBmHEapkc67visJnDe1hgtuz
 	public string SubsceneName { get; private set; }
 
-	public SwitchToSubsceneEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public SwitchToSubsceneEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(SwitchToSubsceneEventData eventData)
 	{
@@ -22,6 +21,6 @@ public class SwitchToSubsceneEvent : AbstractEvent<SwitchToSubsceneEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 public static class AmorousLifecycle
 { // _teqj4nlfsRIR7hafjKGQ9NYjEZe
-	private const int AppDomainLibraries = 4096;
+	private const int APP_DOMAIN_LIBRARIES = 4096;
 
 	[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
 	[return: MarshalAs(UnmanagedType.Bool)]
@@ -38,7 +38,7 @@ public static class AmorousLifecycle
 		{
 			try
 			{
-				SetDefaultDllDirectories(AppDomainLibraries);
+				SetDefaultDllDirectories(APP_DOMAIN_LIBRARIES);
 				AddDllDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Environment.Is64BitProcess ? "x64" : "x86"));
 			}
 			catch

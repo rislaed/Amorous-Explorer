@@ -35,7 +35,7 @@ public class ZenithNPC : SpineNPC<ZenithNPC.EHeads, ZenithNPC.EPoses, ZenithNPC.
 	public ZenithNPC(IAmorous game)
 		: base(game, "Assets/NPC/Zenith/Zenith", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("animation");
+		base.Skeleton.StartAnimationWithLooping("animation");
 		AddEmotion(EHeads.Angry, "Head angry", "Eye Back", "Pupils").WithBlinking("Blink");
 		AddEmotion(EHeads.Blush, "Head Blush", "Eye Back", "Pupils").WithBlinking("Blink");
 		AddEmotion(EHeads.Happy, "Head Happy", "Eye Back", "Pupils").WithBlinking("Blink");

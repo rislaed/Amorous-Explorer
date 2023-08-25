@@ -6,8 +6,7 @@ public class DialogueChoiceEvent : AbstractEvent<DialogueChoiceEventData>
 { // _HNKZHPtLme6iaFiaVC67QqNpYAi
 	public DialogueChoiceItem[] Choices { get; private set; }
 
-	public DialogueChoiceEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public DialogueChoiceEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(DialogueChoiceEventData eventData)
 	{
@@ -23,8 +22,8 @@ public class DialogueChoiceEvent : AbstractEvent<DialogueChoiceEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = !TypingDialogue.Outgoing;
-		if (base.Completable)
+		base.IsCompleted = !TypingDialogue.Visible;
+		if (base.IsCompleted)
 		{
 			int which = TypingDialogue.Which - 1;
 			if (which >= 0 && which < Choices.Length)

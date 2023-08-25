@@ -6,8 +6,7 @@ public abstract class AbstractContactEvent<T> : AbstractEvent<T> where T : Unloc
 { // _0feLylFvn7NOajSXvkEDMJIATof
 	protected PlayerData.EPhoneContacts Contact;
 
-	protected AbstractContactEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	protected AbstractContactEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(T eventData)
 	{
@@ -17,6 +16,6 @@ public abstract class AbstractContactEvent<T> : AbstractEvent<T> where T : Unloc
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = true;
+		base.IsCompleted = true;
 	}
 }

@@ -5,8 +5,7 @@ public class SwitchToSceneEvent : AbstractEvent<SwitchToSceneEventData>
 { // _mLFPVyMd2qINchMJaXDDCacB1B5
 	public string SceneName { get; private set; }
 
-	public SwitchToSceneEvent(Cutscene cutscene)
-		: base(cutscene) {}
+	public SwitchToSceneEvent(Cutscene cutscene) : base(cutscene) {}
 
 	public override void SetData(SwitchToSceneEventData eventData)
 	{
@@ -22,6 +21,6 @@ public class SwitchToSceneEvent : AbstractEvent<SwitchToSceneEventData>
 
 	public override void Update(GameTime gameTime)
 	{
-		base.Completable = !base.Cutscene.Game.InPendingScene;
+		base.IsCompleted = !base.Cutscene.Game.IsScenePending;
 	}
 }

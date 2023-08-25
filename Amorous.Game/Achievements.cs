@@ -4,7 +4,7 @@ using Amorous.Game.NPC;
 
 public class Achievements : IAchievements
 { // _bm5ybW5ND5sDF6bvP0sbYyOpvP
-	public enum AchievementType
+	public enum EType
 	{
 		Generic,
 		Contact
@@ -14,11 +14,11 @@ public class Achievements : IAchievements
 	{
 		public string Key { get; }
 		public string ID { get; }
-		public AchievementType Type { get; }
+		public EType Type { get; }
 		public string Icon { get; }
 		public string Title { get; }
 
-		public AchievementData(string key, string id, string title, string icon = AmorousData.MessageIconGeneric, AchievementType type = AchievementType.Generic)
+		public AchievementData(string key, string id, string title, string icon = AmorousData.MessageIconGeneric, EType type = EType.Generic)
 		{
 			Key = key;
 			ID = id;
@@ -74,17 +74,17 @@ public class Achievements : IAchievements
 	public const string AchievementGeneric10 = "AchievementGeneric10";
 	public const string AchievementGeneric11 = "AchievementGeneric11";
 
-	private static readonly List<AchievementData> _achievementDatas = new List<AchievementData>
+	private static readonly List<AchievementData> achievementsData = new List<AchievementData>
 	{
-		new AchievementData(AchievementPhonenumberCoby, "ACHIEVEMENT_PHONENUMBER_COBY", "Coby", AmorousData.MessageIconCoby, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberJax, "ACHIEVEMENT_PHONENUMBER_JAX", "Jax", AmorousData.MessageIconJax, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberSeth, "ACHIEVEMENT_PHONENUMBER_SETH", "Seth", AmorousData.MessageIconSeth, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberSkye, "ACHIEVEMENT_PHONENUMBER_SKYE", "Skye", AmorousData.MessageIconSkye, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberDustin, "ACHIEVEMENT_PHONENUMBER_DUSTIN", "Dustin", AmorousData.MessageIconDustin, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberZenith, "ACHIEVEMENT_PHONENUMBER_ZENITH", "Zenith", AmorousData.MessageIconZenith, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberMercy, "ACHIEVEMENT_PHONENUMBER_MERCY", "Mercy", AmorousData.MessageIconMercy, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberRemy, "ACHIEVEMENT_PHONENUMBER_REMY", "Remy", AmorousData.MessageIconRemy, AchievementType.Contact),
-		new AchievementData(AchievementPhonenumberLex, "ACHIEVEMENT_PHONENUMBER_LEX", "Lex", AmorousData.MessageIconLex, AchievementType.Contact),
+		new AchievementData(AchievementPhonenumberCoby, "ACHIEVEMENT_PHONENUMBER_COBY", "Coby", AmorousData.MessageIconCoby, EType.Contact),
+		new AchievementData(AchievementPhonenumberJax, "ACHIEVEMENT_PHONENUMBER_JAX", "Jax", AmorousData.MessageIconJax, EType.Contact),
+		new AchievementData(AchievementPhonenumberSeth, "ACHIEVEMENT_PHONENUMBER_SETH", "Seth", AmorousData.MessageIconSeth, EType.Contact),
+		new AchievementData(AchievementPhonenumberSkye, "ACHIEVEMENT_PHONENUMBER_SKYE", "Skye", AmorousData.MessageIconSkye, EType.Contact),
+		new AchievementData(AchievementPhonenumberDustin, "ACHIEVEMENT_PHONENUMBER_DUSTIN", "Dustin", AmorousData.MessageIconDustin, EType.Contact),
+		new AchievementData(AchievementPhonenumberZenith, "ACHIEVEMENT_PHONENUMBER_ZENITH", "Zenith", AmorousData.MessageIconZenith, EType.Contact),
+		new AchievementData(AchievementPhonenumberMercy, "ACHIEVEMENT_PHONENUMBER_MERCY", "Mercy", AmorousData.MessageIconMercy, EType.Contact),
+		new AchievementData(AchievementPhonenumberRemy, "ACHIEVEMENT_PHONENUMBER_REMY", "Remy", AmorousData.MessageIconRemy, EType.Contact),
+		new AchievementData(AchievementPhonenumberLex, "ACHIEVEMENT_PHONENUMBER_LEX", "Lex", AmorousData.MessageIconLex, EType.Contact),
 		new AchievementData(AchievementDate1Coby, "ACHIEVEMENT_DATE1_COBY", "Oh, Brother!", AmorousData.MessageIconCoby),
 		new AchievementData(AchievementDate1Jax, "ACHIEVEMENT_DATE1_JAX", "Testing the Waters", AmorousData.MessageIconJax),
 		new AchievementData(AchievementDate2Jax, "ACHIEVEMENT_DATE2_JAX", "Someone Likes You", AmorousData.MessageIconJax),
@@ -123,21 +123,21 @@ public class Achievements : IAchievements
 		new AchievementData(AchievementGeneric11, "ACHIEVEMENT_GENERIC11", "Yes Chef!", AmorousData.MessageIconCooking)
 	};
 
-	private static readonly Dictionary<string, AchievementData> AchievementsData = _achievementDatas.ToDictionary((AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0.Key, (AchievementData _eT2GJReQj8Acaq2A0H0eUir97Qf_0) => _eT2GJReQj8Acaq2A0H0eUir97Qf_0);
+	private static readonly Dictionary<string, AchievementData> AchievementsData = achievementsData.ToDictionary((AchievementData data) => data.Key, (AchievementData data) => data);
 
 	public const string MessageTutorial1 = "MessageTutorial1";
 
-	private readonly IAmorous _game;
-	private readonly SteamObserver _steam;
+	private readonly IAmorous game;
+	private readonly SteamObserver steam;
 
-	public static List<AchievementData> Achievables => _achievementDatas;
+	public static List<AchievementData> Achievables => achievementsData;
 
-	public bool IsSteamSupported => _steam != null;
+	public bool IsSteamSupported => steam != null;
 
 	public Achievements(IAmorous game, SteamObserver client)
 	{
-		_game = game;
-		_steam = client;
+		this.game = game;
+		steam = client;
 	}
 
 	public void TriggerCutsceneStageAchievement(string cutscene, int stage)
@@ -160,7 +160,7 @@ public class Achievements : IAchievements
 		}
 	}
 
-	public void SetStage(string key, int stage)
+	public void InsertStage(string key, int stage)
 	{
 		if (key == AmorousData.JaxDate && stage == 20)
 		{
@@ -275,7 +275,7 @@ public class Achievements : IAchievements
 		}
 	}
 
-	public void SetFlag(string key, bool flag)
+	public void InsertFlag(string key, bool flag)
 	{
 	}
 
@@ -316,18 +316,18 @@ public class Achievements : IAchievements
 	public void TriggerAchievement(string name)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetFlag(name))
+		if (data.HasFlag(name))
 		{
 			return;
 		}
-		data.SetFlag(name, flag: true);
+		data.InsertFlag(name, flag: true);
 		if (AchievementsData.TryGetValue(name, out var achievement))
 		{
-			if (_steam != null)
+			if (steam != null)
 			{
-				_steam.TriggerAchievement(achievement.ID);
+				steam.TriggerAchievement(achievement.ID);
 			}
-			if (achievement.Type != AchievementType.Contact)
+			if (achievement.Type != EType.Contact)
 			{
 				NotifyAchievedGeneric(achievement.Icon, achievement.Title);
 			}
@@ -340,32 +340,32 @@ public class Achievements : IAchievements
 
 	private void NotifyAchievedGeneric(string icon, string achievement)
 	{
-		_game.ShowMessage(icon, "Achievement", "Congratulations, you've unlocked the '" + achievement + "'-achievement!");
+		game.ShowMessage(icon, "Achievement", "Congratulations, you've unlocked the '" + achievement + "'-achievement!");
 	}
 
 	private void NotifyAchievedContact(string icon, string name)
 	{
-		_game.ShowMessage(icon, "Contact", "The phonenumber of " + name + " has been added to your contacts!");
+		game.ShowMessage(icon, "Contact", "The phonenumber of " + name + " has been added to your contacts!");
 	}
 
 	public void TriggerTutorialAchievement(string key)
 	{
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (!data.GetFlag(key))
+		if (!data.HasFlag(key))
 		{
-			data.SetFlag(key, flag: true);
+			data.InsertFlag(key, flag: true);
 			if (key == MessageTutorial1)
 			{
-				_game.ShowMessage(AmorousData.MessageIconGeneric, "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
+				game.ShowMessage(AmorousData.MessageIconGeneric, "Tutorial", "You've finished the prologue and went home. Your phone is your most important asset. Open it by pressing SHIFT!");
 			}
 		}
 	}
 
 	public void OpenAchievements()
 	{
-		if (_steam != null)
+		if (steam != null)
 		{
-			_steam.OpenAchievements();
+			steam.OpenAchievements();
 		}
 	}
 }

@@ -3,45 +3,45 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class PlayerPreferences
 { // _Z6EKIW3ycAwV2npYuxbFLcnCTrJ
-	private static PlayerPreferences _singleton;
+	private static PlayerPreferences singleton;
 
-	public static PlayerPreferences Singleton => _singleton;
-	public AbstractPlayerOverlay PlayerSkin { get; private set; }
+	public static PlayerPreferences Singleton => singleton;
+	public AbstractPlayerOverlay PlayerOverlay { get; private set; }
 	public PlayerData Data { get; set; }
 
 	public PlayerPreferences()
 	{
-		_singleton = this;
+		singleton = this;
 		Data = new PlayerData();
 	}
 
 	public void Update(GameTime gameTime)
 	{
-		if (PlayerSkin != null)
+		if (PlayerOverlay != null)
 		{
-			PlayerSkin.Update(gameTime);
+			PlayerOverlay.Update(gameTime);
 		}
 	}
 
 	public void Draw(SpriteBatch spriteBatch, Effect effect = null)
 	{
-		if (PlayerSkin != null)
+		if (PlayerOverlay != null)
 		{
 			spriteBatch.Begin(SpriteSortMode.Immediate, null, null, null, null, null, Matrix.CreateRotationZ(MathHelper.ToRadians(0f)));
 			effect?.CurrentTechnique.Passes[0].Apply();
-			PlayerSkin.Draw(spriteBatch);
+			PlayerOverlay.Draw(spriteBatch);
 			spriteBatch.End();
 		}
 	}
 
 	public static void SetPlayerOverlay(AbstractPlayerOverlay skin)
 	{
-		_singleton.PlayerSkin = skin;
-		skin?.Initialize(_singleton.Data);
+		singleton.PlayerOverlay = skin;
+		skin?.Initialize(singleton.Data);
 	}
 
 	public static PlayerData GetPlayerData()
 	{
-		return _singleton.Data;
+		return singleton.Data;
 	}
 }

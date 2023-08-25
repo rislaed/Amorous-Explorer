@@ -12,7 +12,7 @@ using Squid;
 
 public class PhoneOverlay
 { // _poenyHBGUusBcnNcTFB9MQBV72R
-	public enum ArmPose
+	public enum EArmPose
 	{
 		ArmDown,
 		ArmUp,
@@ -20,7 +20,7 @@ public class PhoneOverlay
 		ArmUpRequested
 	}
 
-	public enum PhoneScreen
+	public enum EPhoneScreen
 	{
 		Home,
 		Contacts,
@@ -39,7 +39,7 @@ public class PhoneOverlay
 		Power
 	}
 
-	public enum PhoneIndicator
+	public enum EPhoneState
 	{
 		None,
 		NoMessage,
@@ -48,10 +48,10 @@ public class PhoneOverlay
 		MessageUrgent
 	}
 
-	private bool _phoneSomewhileOpened;
-	private bool _inPendingLoading;
+	private bool phoneSometimeOpened;
+	private bool inPendingLoading;
 
-	private readonly Dictionary<PlayerData.EPhoneContacts, Squid.Rectangle> _contactBounds = new Dictionary<PlayerData.EPhoneContacts, Squid.Rectangle>
+	private readonly Dictionary<PlayerData.EPhoneContacts, Squid.Rectangle> contactBounds = new Dictionary<PlayerData.EPhoneContacts, Squid.Rectangle>
 	{
 		{
 			PlayerData.EPhoneContacts.Coby,
@@ -91,7 +91,7 @@ public class PhoneOverlay
 		}
 	};
 
-	private readonly Dictionary<PlayerData.EPhoneContacts, string> _contactSexscenes = new Dictionary<PlayerData.EPhoneContacts, string>
+	private readonly Dictionary<PlayerData.EPhoneContacts, string> contactSexscenes = new Dictionary<PlayerData.EPhoneContacts, string>
 	{
 		{
 			PlayerData.EPhoneContacts.Coby,
@@ -131,16 +131,16 @@ public class PhoneOverlay
 		}
 	};
 
-	private PlayerData.EPhoneContacts _selectedContact;
-	private PhoneMessage _selectedMessage;
-	private readonly string[] _dialogueDJ = new string[5] { "That song is awesome!", "This one is so underrated!", "Haven't heard that one in a while!", "Always gives me goosebumbs!", "The beat in this one is just amazing!" };
-	private static PhoneOverlay _singleton;
-	private readonly IAmorous _game;
-	private readonly SpineRenderer _interactionSpine;
-	private readonly SpineRenderer _phoneOverlaySpine;
-	private readonly SpineRenderer _phoneActionSpine;
+	private PlayerData.EPhoneContacts selectedContact;
+	private PhoneMessage selectedMessage;
+	private readonly string[] dialogueDJ = new string[5] { "That song is awesome!", "This one is so underrated!", "Haven't heard that one in a while!", "Always gives me goosebumbs!", "The beat in this one is just amazing!" };
+	private static PhoneOverlay singleton;
+	private readonly IAmorous game;
+	private readonly SkeletonRenderer interactionSkeleton;
+	private readonly SkeletonRenderer phoneOverlaySkeleton;
+	private readonly SkeletonRenderer phoneSkeleton;
 
-	private readonly Dictionary<string, bool> _visibleContactParts = new Dictionary<string, bool>
+	private readonly Dictionary<string, bool> contactSlots = new Dictionary<string, bool>
 	{
 		{ "Alex", false },
 		{ "Alex image", false },
@@ -168,84 +168,84 @@ public class PhoneOverlay
 		{ "Zenith image", false }
 	};
 
-	private readonly Dictionary<string, bool> _visibleActionParts = new Dictionary<string, bool>
+	private readonly Dictionary<string, bool> interactionSlots = new Dictionary<string, bool>
 	{
 		{ "reject call with message", true },
 		{ "Incoming call", true }
 	};
 
-	private PhoneIndicator _indicator;
-	private bool _isChangingState, _requestedRise, _requestedHang;
+	private EPhoneState state;
+	private bool changingState, requestedRise, requestedHang;
 
-	private static readonly string[] GameboxSprites = new string[6] { "Marlboro", "Angry Curds", "God of Warfare Modern War", "Inanimate 3", "The Blinding of Blissac", "Traffic Controller" };
-	private static readonly string[] RemyNudes = new string[4] { "Nude1", "Nude2", "Nude3", "Nude4" };
-	private static readonly string[] PlayerNails = new string[4] { "Pinky Nail", "Ring Nail", "Rude Nail", "Index Nail" };
+	private static readonly string[] GAMEBOX_SPRITES = new string[6] { "Marlboro", "Angry Curds", "God of Warfare Modern War", "Inanimate 3", "The Blinding of Blissac", "Traffic Controller" };
+	private static readonly string[] REMY_NUDES = new string[4] { "Nude1", "Nude2", "Nude3", "Nude4" };
+	private static readonly string[] PLAYER_NAILS = new string[4] { "Pinky Nail", "Ring Nail", "Rude Nail", "Index Nail" };
 
-	private readonly Desktop _squid;
-	private readonly RenderTarget2D _phoneScreenTarget, _phoneActionTarget;
-	private Texture2D _spriteActiveGamebox, _spriteActiveRemyNude;
-	private bool _blocked;
-	private bool _hiddenPhoneScreen, _hiddenPhoneAction;
-	private bool _hiddenGameBox, _hiddenRemyNudes;
-	private int _currentlyGame, _currentlyNude;
-	private static PhoneScreen _screen;
-	private static Stack<PhoneScreen> _screenHistory;
-	private static bool _enabled;
+	private readonly Desktop desktop;
+	private readonly RenderTarget2D phoneScreenTarget, phoneTarget;
+	private Texture2D spriteOfActiveGamebox, spriteOfActiveRemyNude;
+	private bool blocked;
+	private bool hiddenPhoneScreen, hiddenPhone;
+	private bool hiddenGameBox, hiddenRemyNudes;
+	private int selectedGamebox, selectedNude;
+	private static EPhoneScreen screen;
+	private static Stack<EPhoneScreen> screenStack;
+	private static bool enabled;
 
-	private const float RiseDownDuration = 1000f;
-	private const float RiseUpDuration = 5000f;
+	private const float RISE_DOWN = 1000f;
+	private const float RISE_UP = 5000f;
 
-	private bool _interactable;
-	private float _duration = 1f;
-	private bool _closeableOutside;
+	private bool interactable;
+	private float duration = 1f;
+	private bool closeableOutside;
 
-	public ArmPose Pose { get; private set; }
+	public EArmPose ArmPose { get; private set; }
 
 	public static bool Enabled
 	{
 		get
 		{
-			return _enabled;
+			return enabled;
 		}
 		set
 		{
-			_enabled = value;
-			if (!_enabled)
+			enabled = value;
+			if (!enabled)
 			{
-				Indicator = PhoneIndicator.None;
+				State = EPhoneState.None;
 			}
 			else
 			{
-				Indicator = PhoneIndicator.NoMessage;
+				State = EPhoneState.NoMessage;
 			}
 		}
 	}
 
-	public static PhoneIndicator Indicator
+	public static EPhoneState State
 	{
 		get
 		{
-			return _singleton._indicator;
+			return singleton.state;
 		}
 		set
 		{
-			if (value != _singleton._indicator)
+			if (value != singleton.state)
 			{
-				_singleton._indicator = value;
+				singleton.state = value;
 				switch (value)
 				{
-					case PhoneIndicator.NoMessage:
-						_singleton._phoneOverlaySpine.StartAnimationWithLooping("No message");
-						_singleton.RefreshPhoneSkin();
+					case EPhoneState.NoMessage:
+						singleton.phoneOverlaySkeleton.StartAnimationWithLooping("No message");
+						singleton.RefreshPhoneSkin();
 						break;
-					case PhoneIndicator.MessageNew:
-						_singleton._phoneOverlaySpine.StartAnimationWithLooping("Message new");
+					case EPhoneState.MessageNew:
+						singleton.phoneOverlaySkeleton.StartAnimationWithLooping("Message new");
 						break;
-					case PhoneIndicator.MessageIdle:
-						_singleton._phoneOverlaySpine.StartAnimationWithLooping("Message idle");
+					case EPhoneState.MessageIdle:
+						singleton.phoneOverlaySkeleton.StartAnimationWithLooping("Message idle");
 						break;
-					case PhoneIndicator.MessageUrgent:
-						_singleton._phoneOverlaySpine.StartAnimationWithLooping("Urgent message");
+					case EPhoneState.MessageUrgent:
+						singleton.phoneOverlaySkeleton.StartAnimationWithLooping("Urgent message");
 						break;
 				}
 			}
@@ -254,51 +254,51 @@ public class PhoneOverlay
 
 	public PhoneOverlay(IAmorous game, ContentManager content)
 	{
-		_singleton = this;
-		_game = game;
-		_interactionSpine = content.LoadSkeleton("Assets/GUI/Phone/Phone");
-		_interactionSpine.ApplyFrame("Arm rise", 0f);
-		_interactionSpine.SetVisibility(0f);
-		_interactionSpine.X = 0f;
-		_interactionSpine.Y = 1200f;
-		_phoneOverlaySpine = content.LoadSkeleton("Assets/GUI/Phone/PhoneHUD", 0.5f);
-		_phoneOverlaySpine.StartAnimationWithLooping("No message");
-		_phoneOverlaySpine.X = 1845f;
-		_phoneOverlaySpine.Y = 1060f;
-		_phoneActionSpine = content.LoadSkeleton("Assets/GUI/Phone/PhoneScreen");
-		_phoneActionSpine.X = 135f;
-		_phoneActionSpine.Y = 190f;
-		_hiddenPhoneAction = true;
+		singleton = this;
+		this.game = game;
+		interactionSkeleton = content.LoadSkeleton("Assets/GUI/Phone/Phone");
+		interactionSkeleton.ApplyTime("Arm rise", 0f);
+		interactionSkeleton.SetVisibility(0f);
+		interactionSkeleton.X = 0f;
+		interactionSkeleton.Y = 1200f;
+		phoneOverlaySkeleton = content.LoadSkeleton("Assets/GUI/Phone/PhoneHUD", 0.5f);
+		phoneOverlaySkeleton.StartAnimationWithLooping("No message");
+		phoneOverlaySkeleton.X = 1845f;
+		phoneOverlaySkeleton.Y = 1060f;
+		phoneSkeleton = content.LoadSkeleton("Assets/GUI/Phone/PhoneScreen");
+		phoneSkeleton.X = 135f;
+		phoneSkeleton.Y = 190f;
+		hiddenPhone = true;
 		RefreshSkin();
-		_squid = new Desktop
+		desktop = new Desktop
 		{
 			Skin = Gui.GenerateStandardSkin(),
 			Size = new Squid.Point(270, 380)
 		};
-		_squid.SetSkin("Assets/GUI/Squid/DefaultSkin");
-		_squid.ModalColor = ColorInt.ARGB(0.9f, 0f, 0f, 0f);
-		_squid.MouseTransformFunc = delegate(Squid.Point point_0)
+		desktop.SetSkin("Assets/GUI/Squid/DefaultSkin");
+		desktop.ModalColor = ColorInt.ARGB(0.9f, 0f, 0f, 0f);
+		desktop.MouseTransformFunc = delegate(Squid.Point cursor)
 		{
 			double depth;
-			Microsoft.Xna.Framework.Point sheen = _interactionSpine.GetDistanceDepth("Sheen Two", out depth);
+			Microsoft.Xna.Framework.Point sheen = interactionSkeleton.GetDistanceDepth("Sheen Two", out depth);
 			Matrix matrix = Matrix.CreateTranslation(-sheen.X, -sheen.Y, 0f) * Matrix.CreateRotationZ((float)(-depth));
-			Vector2 vector = Vector2.Transform(new Vector2(point_0.x, point_0.y), matrix);
+			Vector2 vector = Vector2.Transform(new Vector2(cursor.x, cursor.y), matrix);
 			return new Squid.Point((int)vector.X, (int)vector.Y);
 		};
-		_phoneScreenTarget = new RenderTarget2D(_game.Graphics, 270, 380);
-		_phoneActionTarget = new RenderTarget2D(_game.Graphics, 270, 380);
-		_screenHistory = new Stack<PhoneScreen>();
-		_hiddenGameBox = true;
-		_hiddenRemyNudes = true;
+        phoneScreenTarget = new RenderTarget2D(this.game.Graphics, 270, 380);
+        phoneTarget = new RenderTarget2D(this.game.Graphics, 270, 380);
+		screenStack = new Stack<EPhoneScreen>();
+		hiddenGameBox = true;
+		hiddenRemyNudes = true;
 	}
 
 	public void AcceptCall(PlayerData.EPhoneContacts contact)
 	{
 		ShowContact(contact);
-		_phoneActionSpine.RestartAnimation();
-		_phoneActionSpine.StartAnimation("Phone answer start", delegate
+		phoneSkeleton.RestartAnimation();
+		phoneSkeleton.StartAnimation("Phone answer start", delegate
 		{
-			_phoneActionSpine.StartAnimationWithLooping("Phone answer loop");
+			phoneSkeleton.StartAnimationWithLooping("Phone answer loop");
 		});
 		StartSwipeAnimation();
 	}
@@ -306,22 +306,22 @@ public class PhoneOverlay
 	public void AcceptIM(PlayerData.EPhoneContacts contact)
 	{
 		ShowContact(contact);
-		_phoneActionSpine.StartAnimation("Phone IM accept", delegate
+		phoneSkeleton.StartAnimation("Phone IM accept", delegate
 		{
-			_phoneActionSpine.StartAnimationWithLooping("Phone IM idle");
+			phoneSkeleton.StartAnimationWithLooping("Phone IM idle");
 		});
 		StartSwipeAnimation();
 	}
 
 	public void DeclineCall(PlayerData.EPhoneContacts contact)
 	{
-		_hiddenPhoneAction = true;
+		hiddenPhone = true;
 		StartSwipeAnimation();
 	}
 
 	public void DeclineIM(PlayerData.EPhoneContacts contact)
 	{
-		_hiddenPhoneAction = true;
+		hiddenPhone = true;
 		StartSwipeAnimation();
 	}
 
@@ -329,10 +329,10 @@ public class PhoneOverlay
 	{
 		ShowContact(contact);
 		ApplyCallingScreen(state: true);
-		_phoneActionSpine.RestartAnimation();
-		_phoneActionSpine.StartAnimation("Phone Call start", delegate
+		phoneSkeleton.RestartAnimation();
+		phoneSkeleton.StartAnimation("Phone Call start", delegate
 		{
-			_phoneActionSpine.StartAnimationWithLooping("Phone Call loop");
+			phoneSkeleton.StartAnimationWithLooping("Phone Call loop");
 		});
 		StartSwipeAnimation();
 	}
@@ -345,7 +345,7 @@ public class PhoneOverlay
 	public void OpenIM(PlayerData.EPhoneContacts contact)
 	{
 		ShowContact(contact);
-		_phoneActionSpine.StartAnimationWithLooping("Phone IM idle");
+		phoneSkeleton.StartAnimationWithLooping("Phone IM idle");
 		StartSwipeAnimation();
 	}
 
@@ -362,9 +362,9 @@ public class PhoneOverlay
 	public void TypeIM(PlayerData.EPhoneContacts contact)
 	{
 		ShowContact(contact);
-		_phoneActionSpine.StartAnimation("Phone IM messaging loop", delegate
+		phoneSkeleton.StartAnimation("Phone IM messaging loop", delegate
 		{
-			_phoneActionSpine.StartAnimationWithLooping("Phone IM idle");
+			phoneSkeleton.StartAnimationWithLooping("Phone IM idle");
 		});
 		StartTypingAnimation();
 	}
@@ -373,76 +373,76 @@ public class PhoneOverlay
 	{
 		ShowContact(contact);
 		ApplyCallingScreen(state: false);
-		_phoneActionSpine.RestartAnimation();
-		_phoneActionSpine.StartAnimation("Phone Call start", delegate
+		phoneSkeleton.RestartAnimation();
+		phoneSkeleton.StartAnimation("Phone Call start", delegate
 		{
-			_phoneActionSpine.StartAnimationWithLooping("Phone Call loop");
+			phoneSkeleton.StartAnimationWithLooping("Phone Call loop");
 		});
 		StartSwipeAnimation();
 	}
 
 	public void ShowGameBox()
 	{
-		_hiddenGameBox = false;
-		_spriteActiveGamebox = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gameboxes/" + GameboxSprites[_currentlyGame]);
-		_currentlyGame++;
-		if (_currentlyGame >= GameboxSprites.Length)
+		hiddenGameBox = false;
+		spriteOfActiveGamebox = game.Content.Load<Texture2D>("Assets/GUI/Phone/Gameboxes/" + GAMEBOX_SPRITES[selectedGamebox]);
+		selectedGamebox++;
+		if (selectedGamebox >= GAMEBOX_SPRITES.Length)
 		{
-			_currentlyGame = 0;
+			selectedGamebox = 0;
 		}
 	}
 
 	public void HideGameBox()
 	{
-		_hiddenGameBox = true;
-		_currentlyGame = 0;
+		hiddenGameBox = true;
+		selectedGamebox = 0;
 	}
 
 	public void UpdateRemyNudes()
 	{
-		_hiddenRemyNudes = false;
-		_spriteActiveRemyNude = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + RemyNudes[_currentlyNude]);
-		_currentlyNude++;
-		if (_currentlyNude >= RemyNudes.Length)
+		hiddenRemyNudes = false;
+		spriteOfActiveRemyNude = game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + REMY_NUDES[selectedNude]);
+		selectedNude++;
+		if (selectedNude >= REMY_NUDES.Length)
 		{
-			_currentlyNude = 0;
+			selectedNude = 0;
 		}
 		StartSwipeAnimation();
 	}
 
 	public void UpdateRemyNudes(int index)
 	{
-		_hiddenRemyNudes = false;
-		_spriteActiveRemyNude = _game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + RemyNudes[index]);
+		hiddenRemyNudes = false;
+		spriteOfActiveRemyNude = game.Content.Load<Texture2D>("Assets/GUI/Phone/Gallery/Remy/" + REMY_NUDES[index]);
 		StartSwipeAnimation();
 	}
 
 	public void HideRemyNudes()
 	{
-		_hiddenRemyNudes = true;
-		_currentlyNude = 0;
+		hiddenRemyNudes = true;
+		selectedNude = 0;
 		StartSwipeAnimation();
 	}
 
 	public void HideActions()
 	{
-		_hiddenPhoneAction = true;
+		hiddenPhone = true;
 	}
 
-	public void ResetState()
+	public void Reset()
 	{
-		_hiddenPhoneAction = true;
-		_hiddenGameBox = true;
-		_currentlyGame = 0;
-		_hiddenRemyNudes = true;
-		_currentlyNude = 0;
+		hiddenPhone = true;
+		hiddenGameBox = true;
+		selectedGamebox = 0;
+		hiddenRemyNudes = true;
+		selectedNude = 0;
 	}
 
 	public static void Rise()
 	{
-		if (_singleton._game.Cutscene == null && !_singleton._isChangingState)
+		if (singleton.game.Cutscene == null && !singleton.changingState)
 		{
-			if (_singleton.Pose == ArmPose.ArmUp)
+			if (singleton.ArmPose == EArmPose.ArmUp)
 			{
 				Hide();
 			}
@@ -457,135 +457,135 @@ public class PhoneOverlay
 	{
 		if (Enabled)
 		{
-			if (!_singleton._phoneSomewhileOpened)
+			if (!singleton.phoneSometimeOpened)
 			{
-				_singleton._phoneSomewhileOpened = true;
-				_singleton._game.Achievements.TriggerAchievement(Achievements.AchievementGeneric5);
+				singleton.phoneSometimeOpened = true;
+				singleton.game.Achievements.TriggerAchievement(Achievements.AchievementGeneric5);
 			}
-			_singleton._game.Canvas.Captured = true;
+			singleton.game.Canvas.Captured = true;
 			AbstractScene.CapturedByOverlay = true;
-			_singleton._blocked = preserveHiding;
-			if (!_singleton._isChangingState && _singleton.Pose == ArmPose.ArmDown)
+			singleton.blocked = preserveHiding;
+			if (!singleton.changingState && singleton.ArmPose == EArmPose.ArmDown)
 			{
-				_singleton.Pose = ArmPose.ArmUpRequested;
-				_singleton._requestedRise = true;
-				_screenHistory.Clear();
-				OpenScreen(PhoneScreen.Home);
+				singleton.ArmPose = EArmPose.ArmUpRequested;
+				singleton.requestedRise = true;
+				screenStack.Clear();
+				Open(EPhoneScreen.Home);
 			}
 		}
 	}
 
 	public static void Hide()
 	{
-		if (Enabled && !_singleton._inPendingLoading)
+		if (Enabled && !singleton.inPendingLoading)
 		{
-			_singleton._game.Canvas.Captured = false;
+			singleton.game.Canvas.Captured = false;
 			AbstractScene.CapturedByOverlay = false;
-			_singleton._blocked = false;
-			if (!_singleton._isChangingState && _singleton.Pose == ArmPose.ArmUp)
+			singleton.blocked = false;
+			if (!singleton.changingState && singleton.ArmPose == EArmPose.ArmUp)
 			{
-				_singleton.Pose = ArmPose.ArmDownRequested;
-				_singleton._requestedHang = true;
+				singleton.ArmPose = EArmPose.ArmDownRequested;
+				singleton.requestedHang = true;
 			}
 		}
 	}
 
-	public static void OpenScreen(PhoneScreen screen)
+	public static void Open(EPhoneScreen screen)
 	{
 		if (screen != 0)
 		{
-			_screenHistory.Push(_screen);
-			_singleton.StartSwipeAnimation();
+            screenStack.Push(PhoneOverlay.screen);
+			singleton.StartSwipeAnimation();
 		}
-		_screen = screen;
-		_singleton.ReattachScreen();
+        PhoneOverlay.screen = screen;
+		singleton.ReattachScreen();
 	}
 
-	public static void Swipe(PhoneScreen screen)
+	public static void Swipe(EPhoneScreen screen)
 	{
-		_singleton.StartSwipeAnimation();
-		_singleton.ReattachScreen();
+		singleton.StartSwipeAnimation();
+		singleton.ReattachScreen();
 	}
 
 	public static void Back()
 	{
-		_screen = _screenHistory.Pop();
-		_singleton.ReattachScreen();
-		_singleton.StartSwipeAnimation();
+		screen = screenStack.Pop();
+		singleton.ReattachScreen();
+		singleton.StartSwipeAnimation();
 	}
 
 	private void StartSwipeAnimation()
 	{
-		_interactable = false;
-		_singleton._interactionSpine.StartAnimation("Swipe", StartHoldingAnimation);
+		interactable = false;
+		singleton.interactionSkeleton.StartAnimation("Swipe", StartHoldingAnimation);
 	}
 
 	private void StartTypingAnimation()
 	{
-		_interactable = false;
-		_singleton._interactionSpine.StartAnimation("Typing", StartHoldingAnimation);
+		interactable = false;
+		singleton.interactionSkeleton.StartAnimation("Typing", StartHoldingAnimation);
 	}
 
 	private void StartHoldingAnimation()
 	{
-		_singleton._interactionSpine.StartAnimationWithLooping("Idle");
-		_interactable = true;
+		singleton.interactionSkeleton.StartAnimationWithLooping("Idle");
+		interactable = true;
 	}
 
 	private void ReattachScreen()
 	{
 		Control container;
-		switch (_screen)
+		switch (screen)
 		{
 			default:
-				_hiddenPhoneScreen = true;
+				hiddenPhoneScreen = true;
 				return;
-			case PhoneScreen.Contacts:
+			case EPhoneScreen.Contacts:
 				container = CreateContactsScreen();
 				break;
-			case PhoneScreen.ContactsInformation:
+			case EPhoneScreen.ContactsInformation:
 				container = CreateContactsInformationScreen();
 				break;
-			case PhoneScreen.ContactsInformationDJ:
+			case EPhoneScreen.ContactsInformationDJ:
 				container = CreateContactsInformationDJScreen();
 				break;
-			case PhoneScreen.Soundtrack:
+			case EPhoneScreen.Soundtrack:
 				container = CreateSoundtrackScreen();
 				break;
-			case PhoneScreen.Diary:
+			case EPhoneScreen.Diary:
 				container = CreateDiaryScreen();
 				break;
-			case PhoneScreen.DiaryMessages:
+			case EPhoneScreen.DiaryMessages:
 				container = CreateDiaryMessagesScreen();
 				break;
-			case PhoneScreen.DiaryMessagesInformation:
+			case EPhoneScreen.DiaryMessagesInformation:
 				container = CreateDiaryMessagesInformationScreen();
 				break;
-			case PhoneScreen.DiaryAchievements:
+			case EPhoneScreen.DiaryAchievements:
 				container = CreateDiaryAchievementsScreen();
 				break;
-			case PhoneScreen.DiarySave:
+			case EPhoneScreen.DiarySave:
 				container = CreateDiarySaveScreen();
 				break;
-			case PhoneScreen.DiaryLoad:
+			case EPhoneScreen.DiaryLoad:
 				container = CreateDiaryLoadScreen();
 				break;
-			case PhoneScreen.Audio:
+			case EPhoneScreen.Audio:
 				container = CreateAudioScreen();
 				break;
-			case PhoneScreen.ChatSettings:
+			case EPhoneScreen.ChatSettings:
 				container = CreateChatSettingsScreen();
 				break;
-			case PhoneScreen.Gallery:
+			case EPhoneScreen.Gallery:
 				container = CreateGalleryScreen();
 				break;
-			case PhoneScreen.Power:
+			case EPhoneScreen.Power:
 				container = CreatePowerScreen();
 				break;
 		}
-		_hiddenPhoneScreen = false;
-		_squid.Controls.Clear();
-		_squid.Controls.Add(container);
+		hiddenPhoneScreen = false;
+		desktop.Controls.Clear();
+		desktop.Controls.Add(container);
 	}
 
 	private ListBox CreateApplicationListBox()
@@ -602,7 +602,7 @@ public class PhoneOverlay
 	{
 		ListBox container = CreateApplicationListBox();
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetState(AmorousData.DJ) == AmorousData.UnlockedContactDJ)
+		if (data.GetStage(AmorousData.DJ) == AmorousData.UnlockedContactDJ)
 		{
 			float width = 189.6f;
 			float x = (268f - width) / 2f;
@@ -628,24 +628,24 @@ public class PhoneOverlay
 			};
 			contactContainer.MouseClick += delegate
 			{
-				OpenScreen(PhoneScreen.ContactsInformationDJ);
+				Open(EPhoneScreen.ContactsInformationDJ);
 			};
 			contactContainer.Controls.Add(contactImage);
 			contactContainer.Controls.Add(contactLabel);
 			container.ItemContainer.Controls.Add(contactContainer);
 		}
 		List<string> contactNames = Enum.GetNames(typeof(PlayerData.EPhoneContacts)).Except(new string[1] { "None" }).ToList();
-		PlayerData.EPhoneContacts _contact;
+		PlayerData.EPhoneContacts contact;
 		Tuple<string, PlayerData.EPhoneContacts>[] contacts = (from name in contactNames
-			select Enum.TryParse<PlayerData.EPhoneContacts>(name, out _contact) ? (
-				(!data.Contacts.HasFlag(_contact)) ? null : new Tuple<string, PlayerData.EPhoneContacts>(name, _contact)
+			select Enum.TryParse<PlayerData.EPhoneContacts>(name, out contact) ? (
+				(!data.Contacts.HasFlag(contact)) ? null : new Tuple<string, PlayerData.EPhoneContacts>(name, contact)
 			) : null into tuple
 			where tuple != null
 			orderby tuple.Item1
 			select tuple).ToArray();
-		foreach (Tuple<string, PlayerData.EPhoneContacts> contact in contacts)
+		foreach (Tuple<string, PlayerData.EPhoneContacts> subcontact in contacts)
 		{
-			Squid.Rectangle bounds = _contactBounds[contact.Item2];
+			Squid.Rectangle bounds = contactBounds[subcontact.Item2];
 			float width = (float)bounds.Height * 1.2f;
 			float x = ((float)bounds.Width - width) / 2f;
 			ImageControl contactImage = new ImageControl
@@ -659,7 +659,7 @@ public class PhoneOverlay
 			Label contactLabel = new Label
 			{
 				Dock = DockStyle.Fill,
-				Text = contact.Item1,
+				Text = subcontact.Item1,
 				TextAlign = Alignment.MiddleCenter,
 				NoEvents = true
 			};
@@ -667,12 +667,12 @@ public class PhoneOverlay
 			{
 				Size = new Squid.Point(0, 60),
 				Padding = new Margin(2),
-				Value = contact.Item2
+				Value = subcontact.Item2
 			};
 			contactContainer.MouseClick += delegate
 			{
-				_selectedContact = (PlayerData.EPhoneContacts)contactContainer.Value;
-				OpenScreen(PhoneScreen.ContactsInformation);
+				selectedContact = (PlayerData.EPhoneContacts)contactContainer.Value;
+				Open(EPhoneScreen.ContactsInformation);
 			};
 			contactContainer.Controls.Add(contactImage);
 			contactContainer.Controls.Add(contactLabel);
@@ -691,7 +691,7 @@ public class PhoneOverlay
 		Label contactLabel = new Label
 		{
 			Dock = DockStyle.Top,
-			Text = _selectedContact.ToString(),
+			Text = selectedContact.ToString(),
 			Style = "button",
 			Size = new Squid.Point(0, 40),
 			NoEvents = true
@@ -700,7 +700,7 @@ public class PhoneOverlay
 		{
 			Dock = DockStyle.Top,
 			Texture = "PhoneScreen",
-			TextureRect = _contactBounds[_selectedContact]
+			TextureRect = contactBounds[selectedContact]
 		};
 		container.Content.Controls.Add(contactLabel);
 		container.Content.Controls.Add(contactImage);
@@ -712,22 +712,22 @@ public class PhoneOverlay
 		};
 		resetButton.MouseClick += delegate
 		{
-			_blocked = true;
-			_squid.ShowSelection($"Are you sure you wish to remove {_selectedContact}? This will reset all progression!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.WideDialogueOffset, delegate(int answer)
+			blocked = true;
+			desktop.ShowSelection($"Are you sure you wish to remove {selectedContact}? This will reset all progression!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.ShortDialogueWidth, delegate(int answer)
 			{
 				if (answer == 1)
 				{
-					PlayerPreferences.GetPlayerData().DisableContact(_selectedContact);
-					_squid.ShowConfirm($"{_selectedContact} will be available again after you went home.", AmorousData.WideDialogueOffset, "OK", delegate
+					PlayerPreferences.GetPlayerData().DisableContact(selectedContact);
+					desktop.ShowConfirm($"{selectedContact} will be available again after you went home.", AmorousData.ShortDialogueWidth, "OK", delegate
 					{
 						Back();
-						_blocked = false;
+						blocked = false;
 					});
 				}
 				else
 				{
 					Back();
-					_blocked = false;
+					blocked = false;
 				}
 			});
 		};
@@ -740,11 +740,11 @@ public class PhoneOverlay
 		};
 		callButton.MouseClick += delegate
 		{
-			string scene = _game.Scene.GetType().Name;
-			string sexscene = _game.Sexscene?.GetType().Name;
-			if (scene == AmorousData.PlayerSexScene && sexscene == _contactSexscenes[_selectedContact])
+			string scene = game.Scene.GetType().Name;
+			string sexscene = game.Sexscene?.GetType().Name;
+			if (scene == AmorousData.PlayerSexScene && sexscene == contactSexscenes[selectedContact])
 			{
-				TypingDialogue.Type("<i>" + _selectedContact.ToString() + " is kind of... preoccupied right now.</i>", "%playername%", Color.White);
+				TypingDialogue.Type("<i>" + selectedContact.ToString() + " is kind of... preoccupied right now.</i>", "%playername%", Color.White);
 			}
 			else if (scene != AmorousData.BedroomScene && scene != AmorousData.LivingRoomScene)
 			{
@@ -752,11 +752,11 @@ public class PhoneOverlay
 			}
 			else
 			{
-				RequestContactCall(_selectedContact);
+				RequestContactCall(selectedContact);
 			}
 		};
 		container.Content.Controls.Add(callButton);
-		if (_selectedContact == PlayerData.EPhoneContacts.Zenith && data.GetState(AmorousData.ZenithDate) > 20)
+		if (selectedContact == PlayerData.EPhoneContacts.Zenith && data.GetStage(AmorousData.ZenithDate) > 20)
 		{
 			Button shootingRangeButton = new Button
 			{
@@ -767,11 +767,11 @@ public class PhoneOverlay
 			shootingRangeButton.MouseClick += delegate
 			{
 				Hide();
-				_game.StartScene<PhoneShootingRangeMiniGameScene>();
+				game.StartScene<PhoneShootingRangeMiniGameScene>();
 			};
 			container.Content.Controls.Add(shootingRangeButton);
 		}
-		if (_selectedContact == PlayerData.EPhoneContacts.Remy && data.GetState(AmorousData.RemyDate) > 20)
+		if (selectedContact == PlayerData.EPhoneContacts.Remy && data.GetStage(AmorousData.RemyDate) > 20)
 		{
 			Button cookingButton = new Button
 			{
@@ -781,12 +781,12 @@ public class PhoneOverlay
 			};
 			cookingButton.MouseClick += delegate
 			{
-				_game.PlayCutscene(AmorousData.MiniGameCooking);
+				game.PlayCutscene(AmorousData.MiniGameCooking);
 				Hide();
 			};
 			container.Content.Controls.Add(cookingButton);
 		}
-		if (!Censorship.Censored && _selectedContact == PlayerData.EPhoneContacts.Remy && data.GetState(AmorousData.RemyDate) > 30)
+		if (!Censorship.Censored && selectedContact == PlayerData.EPhoneContacts.Remy && data.GetStage(AmorousData.RemyDate) > 30)
 		{
 			Button remyNudesButton = new Button
 			{
@@ -796,37 +796,37 @@ public class PhoneOverlay
 			};
 			remyNudesButton.MouseClick += delegate
 			{
-				_game.PlayCutscene(AmorousData.NudesRemy);
+				game.PlayCutscene(AmorousData.NudesRemy);
 				Hide();
 			};
 			container.Content.Controls.Add(remyNudesButton);
 		}
 		string sexscene = null;
-		if (_selectedContact == PlayerData.EPhoneContacts.Coby && data.GetState(AmorousData.CobyDate) == AmorousData.CobyStateCompleted)
+		if (selectedContact == PlayerData.EPhoneContacts.Coby && data.GetStage(AmorousData.CobyDate) == AmorousData.CobyStateCompleted)
 		{
 			sexscene = AmorousData.CobySexscene;
 		}
-		else if (_selectedContact == PlayerData.EPhoneContacts.Dustin && data.GetState(AmorousData.DustinDate) == AmorousData.DustinStateCompleted)
+		else if (selectedContact == PlayerData.EPhoneContacts.Dustin && data.GetStage(AmorousData.DustinDate) == AmorousData.DustinStateCompleted)
 		{
 			sexscene = AmorousData.DustinPostDate;
 		}
-		else if (_selectedContact != PlayerData.EPhoneContacts.Jax || data.GetState(AmorousData.JaxDate) != AmorousData.JaxStateCompleted)
+		else if (selectedContact != PlayerData.EPhoneContacts.Jax || data.GetStage(AmorousData.JaxDate) != AmorousData.JaxStateCompleted)
 		{
-			if (_selectedContact != PlayerData.EPhoneContacts.Lex || data.GetState(AmorousData.LexDate) != AmorousData.LexStateCompleted)
+			if (selectedContact != PlayerData.EPhoneContacts.Lex || data.GetStage(AmorousData.LexDate) != AmorousData.LexStateCompleted)
 			{
-				if (_selectedContact == PlayerData.EPhoneContacts.Mercy && data.GetState(AmorousData.MercyDate) == AmorousData.MercyStateCompleted)
+				if (selectedContact == PlayerData.EPhoneContacts.Mercy && data.GetStage(AmorousData.MercyDate) == AmorousData.MercyStateCompleted)
 				{
 					sexscene = AmorousData.MercyPostDate;
 				}
-				else if (_selectedContact != PlayerData.EPhoneContacts.Remy || data.GetState(AmorousData.RemyDate) != AmorousData.RemyStateCompleted)
+				else if (selectedContact != PlayerData.EPhoneContacts.Remy || data.GetStage(AmorousData.RemyDate) != AmorousData.RemyStateCompleted)
 				{
-					if (_selectedContact != PlayerData.EPhoneContacts.Seth || data.GetState(AmorousData.SethDate) != AmorousData.SethStateCompleted)
+					if (selectedContact != PlayerData.EPhoneContacts.Seth || data.GetStage(AmorousData.SethDate) != AmorousData.SethStateCompleted)
 					{
-						if (_selectedContact == PlayerData.EPhoneContacts.Skye && data.GetState(AmorousData.SkyeDate) == AmorousData.SkyeStateCompleted)
+						if (selectedContact == PlayerData.EPhoneContacts.Skye && data.GetStage(AmorousData.SkyeDate) == AmorousData.SkyeStateCompleted)
 						{
 							sexscene = AmorousData.SkyePostDate;
 						}
-						else if (_selectedContact == PlayerData.EPhoneContacts.Zenith && data.GetState(AmorousData.ZenithDate) == AmorousData.ZenithStateCompleted)
+						else if (selectedContact == PlayerData.EPhoneContacts.Zenith && data.GetStage(AmorousData.ZenithDate) == AmorousData.ZenithStateCompleted)
 						{
 							sexscene = AmorousData.ZenithPostDate;
 						}
@@ -895,10 +895,10 @@ public class PhoneOverlay
 		};
 		requestButton.MouseClick += delegate
 		{
-			string scene = _game.Scene.GetType().Name;
+			string scene = game.Scene.GetType().Name;
 			if (scene.StartsWith("Club"))
 			{
-				OpenScreen(PhoneScreen.Soundtrack);
+				Open(EPhoneScreen.Soundtrack);
 			}
 			else
 			{
@@ -914,7 +914,7 @@ public class PhoneOverlay
 	private ListBox CreateSoundtrackScreen()
 	{
 		ListBox container = CreateApplicationListBox();
-		List<AmorousData.Soundtrack> soundtracks = AmorousData.Soundtracks.OrderBy((AmorousData.Soundtrack _vNekDVpW2fr7UkjA16E9ifFmD9s_0) => _vNekDVpW2fr7UkjA16E9ifFmD9s_0.Title).ToList();
+		List<AmorousData.Soundtrack> soundtracks = AmorousData.Soundtracks.OrderBy((AmorousData.Soundtrack soundtrack) => soundtrack.Title).ToList();
 		foreach (AmorousData.Soundtrack soundtrack in soundtracks)
 		{
 			CustomListBoxItem soundtrackContainer = new CustomListBoxItem
@@ -944,10 +944,10 @@ public class PhoneOverlay
 			soundtrackContainer.Controls.Add(soundtrackArtistLabel);
 			soundtrackContainer.MouseClick += delegate
 			{
-				int dialogue = Utils.Random(0, _dialogueDJ.Length);
-				TypingDialogue.Type(_dialogueDJ[dialogue], ClubDJNPC.Name, ClubDJNPC.Color);
+				int dialogue = Utils.Random(0, dialogueDJ.Length);
+				TypingDialogue.Type(dialogueDJ[dialogue], ClubDJNPC.Name, ClubDJNPC.Color);
 				FadingMediaPlayer.Play(soundtrack.AssetName, 0.3f, repeat: false);
-				_game.Achievements.TriggerAchievement(Achievements.AchievementGeneric3);
+				game.Achievements.TriggerAchievement(Achievements.AchievementGeneric3);
 			};
 			container.ItemContainer.Controls.Add(soundtrackContainer);
 		}
@@ -964,7 +964,7 @@ public class PhoneOverlay
 		};
 		messagesBox.MouseClick += delegate
 		{
-			OpenScreen(PhoneScreen.DiaryMessages);
+			Open(EPhoneScreen.DiaryMessages);
 		};
 		ListBoxItem achievementsBox = new ListBoxItem
 		{
@@ -973,7 +973,7 @@ public class PhoneOverlay
 		};
 		achievementsBox.MouseClick += delegate
 		{
-			OpenScreen(PhoneScreen.DiaryAchievements);
+			Open(EPhoneScreen.DiaryAchievements);
 		};
 		ListBoxItem saveBox = new ListBoxItem
 		{
@@ -982,7 +982,7 @@ public class PhoneOverlay
 		};
 		saveBox.MouseClick += delegate
 		{
-			OpenScreen(PhoneScreen.DiarySave);
+			Open(EPhoneScreen.DiarySave);
 		};
 		ListBoxItem loadBox = new ListBoxItem
 		{
@@ -991,10 +991,10 @@ public class PhoneOverlay
 		};
 		loadBox.MouseClick += delegate
 		{
-			OpenScreen(PhoneScreen.DiaryLoad);
+			Open(EPhoneScreen.DiaryLoad);
 		};
 		container.Items.Add(messagesBox);
-		if (_game.Achievements.IsSteamSupported)
+		if (game.Achievements.IsSteamSupported)
 		{
 			ListBoxItem steamAchievementsBox = new ListBoxItem
 			{
@@ -1003,7 +1003,7 @@ public class PhoneOverlay
 			};
 			steamAchievementsBox.MouseClick += delegate
 			{
-				_game.Achievements.OpenAchievements();
+				game.Achievements.OpenAchievements();
 			};
 			container.Items.Add(steamAchievementsBox);
 		}
@@ -1045,8 +1045,8 @@ public class PhoneOverlay
 				};
 				messageContainer.MouseClick += delegate
 				{
-					_selectedMessage = message;
-					OpenScreen(PhoneScreen.DiaryMessagesInformation);
+					selectedMessage = message;
+					Open(EPhoneScreen.DiaryMessagesInformation);
 				};
 				messageContainer.Controls.Add(messageImage);
 				messageContainer.Controls.Add(messageLabel);
@@ -1089,7 +1089,7 @@ public class PhoneOverlay
 				Size = new Squid.Point(0, 60),
 				Padding = new Margin(2),
 				NoEvents = true,
-				Opacity = (data.GetFlag(achievement.Key) ? 1f : 0.5f)
+				Opacity = (data.HasFlag(achievement.Key) ? 1f : 0.5f)
 			};
 			achievementContainer.Controls.Add(achievementImage);
 			achievementContainer.Controls.Add(achievementLabel);
@@ -1107,13 +1107,13 @@ public class PhoneOverlay
 		ImageControl messageImage = new ImageControl
 		{
 			Dock = DockStyle.Left,
-			Texture = _selectedMessage.Icon,
+			Texture = selectedMessage.Icon,
 			Size = new Squid.Point(60, 50)
 		};
 		Label messageTitleLabel = new Label
 		{
 			Dock = DockStyle.Fill,
-			Text = _selectedMessage.Title + "\r\n" + _selectedMessage.Date.ToShortDateString(),
+			Text = selectedMessage.Title + "\r\n" + selectedMessage.Date.ToShortDateString(),
 			TextAlign = Alignment.MiddleLeft,
 			Margin = new Margin(10, 0, 10, 0),
 			AutoEllipsis = true,
@@ -1132,7 +1132,7 @@ public class PhoneOverlay
 		Label messageLabel = new Label
 		{
 			Dock = DockStyle.Top,
-			Text = _selectedMessage.Message,
+			Text = selectedMessage.Message,
 			Margin = new Margin(10),
 			TextAlign = Alignment.MiddleCenter,
 			AutoSize = AutoSize.Vertical,
@@ -1147,17 +1147,17 @@ public class PhoneOverlay
 		};
 		removeButton.MouseClick += delegate
 		{
-			_blocked = true;
-			_squid.ShowSelection("Are you sure you wish to remove this message?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.WideDialogueOffset, delegate(int answer)
+			blocked = true;
+			desktop.ShowSelection("Are you sure you wish to remove this message?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.ShortDialogueWidth, delegate(int answer)
 			{
 				if (answer == 1)
 				{
 					PlayerData data = PlayerPreferences.GetPlayerData();
-					data.Messages.Remove(_selectedMessage);
-					_selectedMessage = null;
+					data.Messages.Remove(selectedMessage);
+					selectedMessage = null;
 					Back();
 				}
-				_blocked = false;
+				blocked = false;
 			});
 		};
 		container.Content.Controls.Add(controlPanel);
@@ -1169,8 +1169,8 @@ public class PhoneOverlay
 	private ListBox CreateDiarySaveScreen()
 	{
 		ListBox container = CreateApplicationListBox();
-		List<Saves.Pointer> pointers = Saves.GetPointers(excludeAutosaves: true);
-		foreach (Saves.Pointer pointer in pointers)
+		List<Saves.Item> pointers = Saves.GetItems(excludeAutosaves: true);
+		foreach (Saves.Item pointer in pointers)
 		{
 			int separator = pointer.Name.IndexOf('-');
 			string name = pointer.Name.Substring(0, separator).Trim();
@@ -1184,20 +1184,20 @@ public class PhoneOverlay
 			{
 				if (pointer.IsEmpty)
 				{
-					_game.SaveAtSlot(pointer.Index);
-					_singleton.ReattachScreen();
+					game.SaveAtSlot(pointer.Index);
+					singleton.ReattachScreen();
 				}
 				else
 				{
-					_blocked = true;
-					_squid.ShowSelection($"Are you sure you wish to overwrite slot #{pointer.Index + 1}?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.WideDialogueOffset, delegate(int answer)
+					blocked = true;
+					desktop.ShowSelection($"Are you sure you wish to overwrite slot #{pointer.Index + 1}?", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.ShortDialogueWidth, delegate(int answer)
 					{
 						if (answer == 1)
 						{
-							_game.SaveAtSlot(pointer.Index);
-							_singleton.ReattachScreen();
+							game.SaveAtSlot(pointer.Index);
+							singleton.ReattachScreen();
 						}
-						_blocked = false;
+						blocked = false;
 					});
 				}
 			};
@@ -1209,8 +1209,8 @@ public class PhoneOverlay
 	private ListBox CreateDiaryLoadScreen()
 	{
 		ListBox container = CreateApplicationListBox();
-		List<Saves.Pointer> pointers = Saves.GetPointers(excludeAutosaves: false);
-		foreach (Saves.Pointer pointer in pointers)
+		List<Saves.Item> pointers = Saves.GetItems(excludeAutosaves: false);
+		foreach (Saves.Item pointer in pointers)
 		{
 			int separator = pointer.Name.IndexOf('-');
 			string name = pointer.Name.Substring(0, separator).Trim();
@@ -1224,39 +1224,39 @@ public class PhoneOverlay
 			{
 				if (!pointer.IsEmpty)
 				{
-					_blocked = true;
-					_squid.ShowSelection(string.Format("Are you sure you wish to load {0}slot #{1}?", (!pointer.IsAutosave) ? string.Empty : "autosave ", pointer.Index + 1), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.WideDialogueOffset, delegate(int answer)
+					blocked = true;
+					desktop.ShowSelection(string.Format("Are you sure you wish to load {0}slot #{1}?", (!pointer.IsAutosave) ? string.Empty : "autosave ", pointer.Index + 1), new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.ShortDialogueWidth, delegate(int answer)
 					{
 						if (answer == 1)
 						{
-							_inPendingLoading = true;
-							if (pointer.IsAutosave ? _game.ReadFromAutosaveSlot(pointer.Index) : _game.ReadFromSlot(pointer.Index))
+							inPendingLoading = true;
+							if (pointer.IsAutosave ? game.ReadFromAutosaveSlot(pointer.Index) : game.ReadFromSlot(pointer.Index))
 							{
-								_inPendingLoading = false;
-								_blocked = false;
+								inPendingLoading = false;
+								blocked = false;
 								Hide();
 							}
 							else
 							{
-								_squid.ShowConfirm("Failed to load save, it's most likely corrupted.", AmorousData.WideDialogueOffset, "OK", delegate
+								desktop.ShowConfirm("Failed to load save, it's most likely corrupted.", AmorousData.ShortDialogueWidth, "OK", delegate
 								{
-									_inPendingLoading = false;
-									_blocked = false;
+									inPendingLoading = false;
+									blocked = false;
 								});
 							}
 						}
 						else
 						{
-							_blocked = false;
+							blocked = false;
 						}
 					});
 				}
 				else
 				{
-					_blocked = true;
-					_squid.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", pointer.IsAutosave ? "autosave " : string.Empty, pointer.Index + 1), AmorousData.WideDialogueOffset, "OK", delegate
+					blocked = true;
+					desktop.ShowConfirm(string.Format("There is no save in {0}slot #{1}!", pointer.IsAutosave ? "autosave " : string.Empty, pointer.Index + 1), AmorousData.ShortDialogueWidth, "OK", delegate
 					{
-						_blocked = false;
+						blocked = false;
 					});
 				}
 			};
@@ -1281,13 +1281,13 @@ public class PhoneOverlay
 		volumeSlider.Dock = DockStyle.Top;
 		volumeSlider.Orientation = Orientation.Horizontal;
 		volumeSlider.Steps = 100f;
-		volumeSlider.Value = Options.Data.MasterVolume * 100f;
+		volumeSlider.Value = Options.Config.MasterVolume * 100f;
 		volumeSlider.Style = "scrollSlider";
 		volumeSlider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
 		volumeSlider.Button.Style = "scrollSliderButton";
 		volumeSlider.ValueChanged += delegate
 		{
-			Options.Data.MasterVolume = volumeSlider.Value / 100f;
+			Options.Config.MasterVolume = volumeSlider.Value / 100f;
 		};
 		Label musicVolumeLabel = new Label
 		{
@@ -1298,13 +1298,13 @@ public class PhoneOverlay
 		musicVolumeSlider.Dock = DockStyle.Top;
 		musicVolumeSlider.Orientation = Orientation.Horizontal;
 		musicVolumeSlider.Steps = 100f;
-		musicVolumeSlider.Value = Options.Data.MusicVolume * 100f;
+		musicVolumeSlider.Value = Options.Config.MusicVolume * 100f;
 		musicVolumeSlider.Style = "scrollSlider";
 		musicVolumeSlider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
 		musicVolumeSlider.Button.Style = "scrollSliderButton";
 		musicVolumeSlider.ValueChanged += delegate
 		{
-			Options.Data.MusicVolume = musicVolumeSlider.Value / 100f;
+			Options.Config.MusicVolume = musicVolumeSlider.Value / 100f;
 		};
 		Label soundVolumeLabel = new Label
 		{
@@ -1315,13 +1315,13 @@ public class PhoneOverlay
 		soundVolumeSlider.Dock = DockStyle.Top;
 		soundVolumeSlider.Orientation = Orientation.Horizontal;
 		soundVolumeSlider.Steps = 100f;
-		soundVolumeSlider.Value = Options.Data.SfxVolume * 100f;
+		soundVolumeSlider.Value = Options.Config.SfxVolume * 100f;
 		soundVolumeSlider.Style = "scrollSlider";
 		soundVolumeSlider.Size = new Squid.Point(0, AmorousData.ButtonHeight);
 		soundVolumeSlider.Button.Style = "scrollSliderButton";
 		soundVolumeSlider.ValueChanged += delegate
 		{
-			Options.Data.SfxVolume = soundVolumeSlider.Value / 100f;
+			Options.Config.SfxVolume = soundVolumeSlider.Value / 100f;
 		};
 		container.Content.Controls.Add(volumeLabel);
 		container.Content.Controls.Add(volumeSlider);
@@ -1339,20 +1339,20 @@ public class PhoneOverlay
 			Dock = DockStyle.Fill,
 			Margin = new Margin(10)
 		};
-		AttachDropDownList(container.Content.Controls, "Dialogue Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Data.DialogueTextSpeed, delegate(int answer)
+		AttachDropDownList(container.Content.Controls, "Dialogue Text Speed", new string[4] { "Slow", "Normal", "Fast", "Instant" }, (int)Options.Config.DialogueTextSpeed, delegate(int answer)
 		{
-			Options.Data.DialogueTextSpeed = (DialogueSpeed)answer;
+			Options.Config.DialogueTextSpeed = (DialogueSpeed)answer;
 			TypingDialogue.Speed = (DialogueSpeed)answer;
 		});
 		CheckBox dialogueSkipBox = new CheckBox
 		{
 			Dock = DockStyle.Top,
 			Text = "Dialogue Auto-skip",
-			Checked = Options.Data.DialogueAutoSkip
+			Checked = Options.Config.DialogueAutoSkip
 		};
 		dialogueSkipBox.CheckedChanged += delegate
 		{
-			Options.Data.DialogueAutoSkip = dialogueSkipBox.Checked;
+			Options.Config.DialogueAutoSkip = dialogueSkipBox.Checked;
 			TypingDialogue.AutoSkip = dialogueSkipBox.Checked;
 		};
 		container.Content.Controls.Add(dialogueSkipBox);
@@ -1402,15 +1402,15 @@ public class PhoneOverlay
 		};
 		playerCustomizationBox.MouseClick += delegate
 		{
-			_blocked = true;
-			_squid.ShowSelection("Are you sure you wish to customize your character? This may break some active dates even if make no changes!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.WideDialogueOffset, delegate(int answer)
+			blocked = true;
+			desktop.ShowSelection("Are you sure you wish to customize your character? This may break some active dates even if make no changes!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.ShortDialogueWidth, delegate(int answer)
 			{
 				if (answer == 1)
 				{
 					Hide();
-					_game.StartScene<BackToPlayerCustomizationScene>();
+					game.StartScene<BackToPlayerCustomizationScene>();
 				}
-				_blocked = false;
+				blocked = false;
 			});
 		};
 		container.Items.Add(playerCustomizationBox);
@@ -1446,28 +1446,28 @@ public class PhoneOverlay
 
 	private void ReloadSceneWith(Action then)
 	{
-		_game.Fader.FadeOut(delegate
+		game.Fader.FadeOut(delegate
 		{
-			string sceneName = _game.Sexscene?.GetType().Name;
+			string sceneName = game.Sexscene?.GetType().Name;
 			if (sceneName != null)
 			{
-				_game.ResetSexscene();
+				game.ResetSexscene();
 			}
 			then();
-			_game.SwitchToScene(_game.Scene.GetType().Name, delegate
+			game.SwitchToScene(game.Scene.GetType().Name, delegate
 			{
 				if (sceneName != null)
 				{
-					_game.PlaySexscene(sceneName);
+					game.PlaySexscene(sceneName);
 				}
-				_game.Fader.FadeIn();
+				game.Fader.FadeIn();
 			});
 		});
 	}
 
 	private void RequestSexscene(string name)
 	{
-		_game.PlayCutscene(name);
+		game.PlayCutscene(name);
 		Hide();
 	}
 
@@ -1475,7 +1475,7 @@ public class PhoneOverlay
 	{
 		ListBox container = CreateApplicationListBox();
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		if (data.GetState(AmorousData.Prologue) == AmorousData.PrologueStateCompleted)
+		if (data.GetStage(AmorousData.Prologue) == AmorousData.PrologueStateCompleted)
 		{
 			ListBoxItem wentHomeButton = new ListBoxItem
 			{
@@ -1492,12 +1492,12 @@ public class PhoneOverlay
 			wentHomeButton.MouseClick += delegate
 			{
 				Hide();
-				_game.StartScene<BedroomScene>();
+				game.StartScene<BedroomScene>();
 			};
 			wentClubButton.MouseClick += delegate
 			{
 				Hide();
-				_game.StartScene<ClubInsideScene>();
+				game.StartScene<ClubInsideScene>();
 			};
 			container.Items.Add(new ListBoxItem
 			{
@@ -1514,7 +1514,7 @@ public class PhoneOverlay
 		{
 			Hide();
 			Enabled = false;
-			_game.StartScene<MainMenuScene>();
+			game.StartScene<MainMenuScene>();
 		};
 		ListBoxItem quitButton = new ListBoxItem
 		{
@@ -1523,14 +1523,14 @@ public class PhoneOverlay
 		};
 		quitButton.MouseClick += delegate
 		{
-			_blocked = true;
-			_squid.ShowSelection("Are you sure you wish to quit the Game? All unsaved progress will be lost!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.WideDialogueOffset, delegate(int answer)
+			blocked = true;
+			desktop.ShowSelection("Are you sure you wish to quit the Game? All unsaved progress will be lost!", new string[2] { "Oh no, abort!", "Yes, I'm very sure!" }, AmorousData.ShortDialogueWidth, delegate(int answer)
 			{
 				if (answer == 1)
 				{
-					_game.Exit();
+					game.Exit();
 				}
-				_blocked = false;
+				blocked = false;
 			});
 		};
 		container.Items.Add(leaveButton);
@@ -1576,9 +1576,9 @@ public class PhoneOverlay
 		switch (contact)
 		{
 			case PlayerData.EPhoneContacts.Dustin:
-				if (data.GetState(AmorousData.DustinDate) != AmorousData.DustinStateCompleted)
+				if (data.GetStage(AmorousData.DustinDate) != AmorousData.DustinStateCompleted)
 				{
-					_game.PlayCutscene(AmorousData.DustinDate);
+					game.PlayCutscene(AmorousData.DustinDate);
 					Hide();
 				}
 				else
@@ -1587,9 +1587,9 @@ public class PhoneOverlay
 				}
 				break;
 			case PlayerData.EPhoneContacts.Remy:
-				if (data.GetState(AmorousData.RemyDate) != AmorousData.RemyStateCompleted)
+				if (data.GetStage(AmorousData.RemyDate) != AmorousData.RemyStateCompleted)
 				{
-					_game.PlayCutscene(AmorousData.RemyDate);
+					game.PlayCutscene(AmorousData.RemyDate);
 					Hide();
 				}
 				else
@@ -1598,18 +1598,18 @@ public class PhoneOverlay
 				}
 				break;
 			case PlayerData.EPhoneContacts.Seth:
-				if (data.GetState(AmorousData.SethDate) == AmorousData.SethStateCompleted)
+				if (data.GetStage(AmorousData.SethDate) == AmorousData.SethStateCompleted)
 				{
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.PlayCutscene(AmorousData.SethDate);
+				game.PlayCutscene(AmorousData.SethDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Skye:
-				if (data.GetState(AmorousData.SkyeDate) != AmorousData.SkyeStateCompleted)
+				if (data.GetStage(AmorousData.SkyeDate) != AmorousData.SkyeStateCompleted)
 				{
-					_game.PlayCutscene(AmorousData.SkyeDate);
+					game.PlayCutscene(AmorousData.SkyeDate);
 					Hide();
 				}
 				else
@@ -1618,18 +1618,18 @@ public class PhoneOverlay
 				}
 				break;
 			case PlayerData.EPhoneContacts.Zenith:
-				if (PlayerPreferences.GetPlayerData().GetState(AmorousData.ZenithDate) == AmorousData.ZenithStateCompleted)
+				if (PlayerPreferences.GetPlayerData().GetStage(AmorousData.ZenithDate) == AmorousData.ZenithStateCompleted)
 				{
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.PlayCutscene(AmorousData.ZenithDate);
+				game.PlayCutscene(AmorousData.ZenithDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Mercy:
-				if (data.GetState(AmorousData.MercyDate) != AmorousData.MercyStateCompleted)
+				if (data.GetStage(AmorousData.MercyDate) != AmorousData.MercyStateCompleted)
 				{
-					_game.PlayCutscene(AmorousData.MercyDate);
+					game.PlayCutscene(AmorousData.MercyDate);
 					Hide();
 				}
 				else
@@ -1638,32 +1638,32 @@ public class PhoneOverlay
 				}
 				break;
 			case PlayerData.EPhoneContacts.Lex:
-				if (data.GetState(AmorousData.LexDate) == AmorousData.LexStateCompleted)
+				if (data.GetStage(AmorousData.LexDate) == AmorousData.LexStateCompleted)
 				{
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.PlayCutscene(AmorousData.LexDate);
+				game.PlayCutscene(AmorousData.LexDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Jax:
-				if (data.GetState(AmorousData.JaxDate) == AmorousData.JaxStateCompleted)
+				if (data.GetStage(AmorousData.JaxDate) == AmorousData.JaxStateCompleted)
 				{
 					ShowDatesCompleted(contact);
 					break;
 				}
-				_game.PlayCutscene(AmorousData.JaxDate);
+				game.PlayCutscene(AmorousData.JaxDate);
 				Hide();
 				break;
 			case PlayerData.EPhoneContacts.Coby:
-				if (data.GetState(AmorousData.CobyDate) < AmorousData.CobyStateCompleted)
+				if (data.GetStage(AmorousData.CobyDate) < AmorousData.CobyStateCompleted)
 				{
-					_game.PlayCutscene(AmorousData.CobyDate);
+					game.PlayCutscene(AmorousData.CobyDate);
 					Hide();
 				}
 				else
 				{
-					_game.PlayCutscene(AmorousData.CobyPostDate);
+					game.PlayCutscene(AmorousData.CobyPostDate);
 				}
 				break;
 		}
@@ -1671,10 +1671,10 @@ public class PhoneOverlay
 
 	private void ShowDatesCompleted(PlayerData.EPhoneContacts contact)
 	{
-		_blocked = true;
-		_squid.ShowConfirm($"You finished all dates with {contact.ToString()}!", AmorousData.WideDialogueOffset, "Gotcha!", delegate
+		blocked = true;
+		desktop.ShowConfirm($"You finished all dates with {contact.ToString()}!", AmorousData.ShortDialogueWidth, "Gotcha!", delegate
 		{
-			_blocked = false;
+			blocked = false;
 		});
 	}
 
@@ -1684,241 +1684,241 @@ public class PhoneOverlay
 		bool hasLongMarkings = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.LongForearm);
 		bool hasShortMarkings = data.MarkingsType.HasFlag(PlayerData.EMarkingsType.ShortForearm);
 		Color markingColor = hasShortMarkings ? data.ShortForearmColor : (hasLongMarkings ? data.LongForearmColor : Color.White);
-		_interactionSpine.SetAlpha("Hoody Sleeve", 0f);
-		_interactionSpine.SetAlpha("Default Forearm", 1f);
-		_interactionSpine.SetColor("Default Forearm", data.BodyColor);
-		_interactionSpine.SetAlpha("Marking Forearm", (hasShortMarkings || hasLongMarkings) ? 1 : 0);
-		_interactionSpine.SetColor("Marking Forearm", markingColor);
-		_interactionSpine.SetAlpha("Striped forearm", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1 : 0);
-		_interactionSpine.SetColor("Striped forearm", data.StripesColor);
-		_interactionSpine.SetAlpha("Avian Forearm", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-		_interactionSpine.SetColor("Avian Forearm", data.AvianForearmColor);
-		_interactionSpine.SetAlpha("Hand", 1f);
-		_interactionSpine.SetColor("Hand", data.BodyColor);
-		_interactionSpine.SetAlpha("Marking Hand", (hasShortMarkings || hasLongMarkings) ? 1 : 0);
-		_interactionSpine.SetColor("Marking Hand", markingColor);
-		_interactionSpine.SetAlpha("Avian Hand", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-		_interactionSpine.SetColor("Avian Hand", data.AvianForearmColor);
-		_interactionSpine.SetAlpha("Index", 1f);
-		_interactionSpine.SetColor("Index", data.BodyColor);
-		_interactionSpine.SetAlpha("Avian index", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-		_interactionSpine.SetColor("Avian index", data.AvianForearmColor);
-		_interactionSpine.SetAlpha("Pinky", 1f);
-		_interactionSpine.SetColor("Pinky", data.BodyColor);
-		_interactionSpine.SetAlpha("Avian Pinky", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-		_interactionSpine.SetColor("Avian Pinky", data.AvianForearmColor);
-		_interactionSpine.SetAlpha("Ring", 1f);
-		_interactionSpine.SetColor("Ring", data.BodyColor);
-		_interactionSpine.SetAlpha("Avian ring", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-		_interactionSpine.SetColor("Avian ring", data.AvianForearmColor);
-		_interactionSpine.SetAlpha("Rude", 1f);
-		_interactionSpine.SetColor("Rude", data.BodyColor);
-		_interactionSpine.SetAlpha("Avian Rude", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-		_interactionSpine.SetColor("Avian Rude", data.AvianForearmColor);
-		_interactionSpine.SetAlpha("Thumb", 1f);
-		_interactionSpine.SetColor("Thumb", data.BodyColor);
-		_interactionSpine.SetAlpha("Avian Thumb", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
-		_interactionSpine.SetColor("Avian Thumb", data.AvianForearmColor);
-		_interactionSpine.SetAlpha("Pinky Nail", data.ShowNails ? 1 : 0);
-		_interactionSpine.SetColor("Pinky Nail", data.NailColor);
-		_interactionSpine.SetAlpha("Ring Nail", data.ShowNails ? 1 : 0);
-		_interactionSpine.SetColor("Ring Nail", data.NailColor);
-		_interactionSpine.SetAlpha("Rude Nail", data.ShowNails ? 1 : 0);
-		_interactionSpine.SetColor("Rude Nail", data.NailColor);
-		_interactionSpine.SetAlpha("Index Nail", data.ShowNails ? 1 : 0);
-		_interactionSpine.SetColor("Index Nail", data.NailColor);
-		_interactionSpine.SetAlpha("Thumb Nail", data.ShowNails ? 1 : 0);
-		_interactionSpine.SetColor("Thumb Nail", data.NailColor);
-		_interactionSpine.SetAlpha("Phone lines", 1f);
-		_interactionSpine.SetColor("Phone lines", data.PhoneColor);
-		_interactionSpine.SetAlpha("Phone Colour", 1f);
-		_interactionSpine.SetAlpha("Phone Shadow", 1f);
-		_interactionSpine.SetAlpha("BG CONTACTS", 0f);
-		_interactionSpine.SetAlpha("BG DIARY", 0f);
-		_interactionSpine.SetAlpha("BG AUDIO", 0f);
-		_interactionSpine.SetAlpha("BG CHAT SETTINGS", 0f);
-		_interactionSpine.SetAlpha("BG GALLERY", 0f);
-		_interactionSpine.SetAlpha("BG POWER", 0f);
-		_interactionSpine.SetAlpha("Phone Default Background", 1f);
-		_interactionSpine.SetAlpha("CONTACTS", 1f);
-		_interactionSpine.SetAlpha("Diary", 1f);
-		_interactionSpine.SetAlpha("Audio", 1f);
-		_interactionSpine.SetAlpha("Chat Settings", 1f);
-		_interactionSpine.SetAlpha("Gallery", 1f);
-		_interactionSpine.SetAlpha("Power", 1f);
-		_interactionSpine.SetAlpha("white screen", 1f);
-		_interactionSpine.SetAlpha("black screen", 1f);
-		_interactionSpine.SetAlpha("Power", 1f);
-		_interactionSpine.SetAlpha("Sheen Two", 1f);
+		interactionSkeleton.SetAlpha("Hoody Sleeve", 0f);
+		interactionSkeleton.SetAlpha("Default Forearm", 1f);
+		interactionSkeleton.SetColor("Default Forearm", data.BodyColor);
+		interactionSkeleton.SetAlpha("Marking Forearm", (hasShortMarkings || hasLongMarkings) ? 1 : 0);
+		interactionSkeleton.SetColor("Marking Forearm", markingColor);
+		interactionSkeleton.SetAlpha("Striped forearm", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.Stripes) ? 1 : 0);
+		interactionSkeleton.SetColor("Striped forearm", data.StripesColor);
+		interactionSkeleton.SetAlpha("Avian Forearm", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+		interactionSkeleton.SetColor("Avian Forearm", data.AvianForearmColor);
+		interactionSkeleton.SetAlpha("Hand", 1f);
+		interactionSkeleton.SetColor("Hand", data.BodyColor);
+		interactionSkeleton.SetAlpha("Marking Hand", (hasShortMarkings || hasLongMarkings) ? 1 : 0);
+		interactionSkeleton.SetColor("Marking Hand", markingColor);
+		interactionSkeleton.SetAlpha("Avian Hand", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+		interactionSkeleton.SetColor("Avian Hand", data.AvianForearmColor);
+		interactionSkeleton.SetAlpha("Index", 1f);
+		interactionSkeleton.SetColor("Index", data.BodyColor);
+		interactionSkeleton.SetAlpha("Avian index", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+		interactionSkeleton.SetColor("Avian index", data.AvianForearmColor);
+		interactionSkeleton.SetAlpha("Pinky", 1f);
+		interactionSkeleton.SetColor("Pinky", data.BodyColor);
+		interactionSkeleton.SetAlpha("Avian Pinky", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+		interactionSkeleton.SetColor("Avian Pinky", data.AvianForearmColor);
+		interactionSkeleton.SetAlpha("Ring", 1f);
+		interactionSkeleton.SetColor("Ring", data.BodyColor);
+		interactionSkeleton.SetAlpha("Avian ring", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+		interactionSkeleton.SetColor("Avian ring", data.AvianForearmColor);
+		interactionSkeleton.SetAlpha("Rude", 1f);
+		interactionSkeleton.SetColor("Rude", data.BodyColor);
+		interactionSkeleton.SetAlpha("Avian Rude", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+		interactionSkeleton.SetColor("Avian Rude", data.AvianForearmColor);
+		interactionSkeleton.SetAlpha("Thumb", 1f);
+		interactionSkeleton.SetColor("Thumb", data.BodyColor);
+		interactionSkeleton.SetAlpha("Avian Thumb", data.MarkingsType.HasFlag(PlayerData.EMarkingsType.AvianForearm) ? 1 : 0);
+		interactionSkeleton.SetColor("Avian Thumb", data.AvianForearmColor);
+		interactionSkeleton.SetAlpha("Pinky Nail", data.ShowNails ? 1 : 0);
+		interactionSkeleton.SetColor("Pinky Nail", data.NailColor);
+		interactionSkeleton.SetAlpha("Ring Nail", data.ShowNails ? 1 : 0);
+		interactionSkeleton.SetColor("Ring Nail", data.NailColor);
+		interactionSkeleton.SetAlpha("Rude Nail", data.ShowNails ? 1 : 0);
+		interactionSkeleton.SetColor("Rude Nail", data.NailColor);
+		interactionSkeleton.SetAlpha("Index Nail", data.ShowNails ? 1 : 0);
+		interactionSkeleton.SetColor("Index Nail", data.NailColor);
+		interactionSkeleton.SetAlpha("Thumb Nail", data.ShowNails ? 1 : 0);
+		interactionSkeleton.SetColor("Thumb Nail", data.NailColor);
+		interactionSkeleton.SetAlpha("Phone lines", 1f);
+		interactionSkeleton.SetColor("Phone lines", data.PhoneColor);
+		interactionSkeleton.SetAlpha("Phone Colour", 1f);
+		interactionSkeleton.SetAlpha("Phone Shadow", 1f);
+		interactionSkeleton.SetAlpha("BG CONTACTS", 0f);
+		interactionSkeleton.SetAlpha("BG DIARY", 0f);
+		interactionSkeleton.SetAlpha("BG AUDIO", 0f);
+		interactionSkeleton.SetAlpha("BG CHAT SETTINGS", 0f);
+		interactionSkeleton.SetAlpha("BG GALLERY", 0f);
+		interactionSkeleton.SetAlpha("BG POWER", 0f);
+		interactionSkeleton.SetAlpha("Phone Default Background", 1f);
+		interactionSkeleton.SetAlpha("CONTACTS", 1f);
+		interactionSkeleton.SetAlpha("Diary", 1f);
+		interactionSkeleton.SetAlpha("Audio", 1f);
+		interactionSkeleton.SetAlpha("Chat Settings", 1f);
+		interactionSkeleton.SetAlpha("Gallery", 1f);
+		interactionSkeleton.SetAlpha("Power", 1f);
+		interactionSkeleton.SetAlpha("white screen", 1f);
+		interactionSkeleton.SetAlpha("black screen", 1f);
+		interactionSkeleton.SetAlpha("Power", 1f);
+		interactionSkeleton.SetAlpha("Sheen Two", 1f);
 		RefreshPhoneSkin();
 	}
 
 	private void RefreshPhoneSkin()
 	{
-		_phoneOverlaySpine.SetColor("Phone", PlayerPreferences.GetPlayerData().PhoneColor);
+		phoneOverlaySkeleton.SetColor("Phone", PlayerPreferences.GetPlayerData().PhoneColor);
 	}
 
-	public static PhoneOverlay Get()
+	public static PhoneOverlay GetSingleton()
 	{
-		return _singleton;
+		return singleton;
 	}
 
 	private void ShowContact(PlayerData.EPhoneContacts contact)
 	{
-		_hiddenPhoneAction = false;
-		foreach (string key in _visibleContactParts.Keys.ToList())
+		hiddenPhone = false;
+		foreach (string key in contactSlots.Keys.ToList())
 		{
-			_visibleContactParts[key] = false;
+			contactSlots[key] = false;
 		}
 		if (contact == PlayerData.EPhoneContacts.Lex)
 		{
-			_visibleContactParts["Alex"] = true;
-			_visibleContactParts["Alex image"] = true;
+			contactSlots["Alex"] = true;
+			contactSlots["Alex image"] = true;
 		}
 		else
 		{
-			_visibleContactParts[contact.ToString()] = true;
-			_visibleContactParts[contact.ToString() + " image"] = true;
+			contactSlots[contact.ToString()] = true;
+			contactSlots[contact.ToString() + " image"] = true;
 		}
 	}
 
 	private void ApplyCallingScreen(bool state)
 	{
-		_visibleActionParts["reject call with message"] = state;
-		_visibleActionParts["Incoming call"] = state;
+		interactionSlots["reject call with message"] = state;
+		interactionSlots["Incoming call"] = state;
 	}
 
 	public void Update(GameTime gameTime, CanvasObserver canvas)
 	{
-		if (_game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Escape) || _game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift))
+		if (game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.Escape) || game.Controller.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift))
 		{
 			Rise();
 		}
-		_interactionSpine.Update(gameTime, (_game.Cutscene != null || !_interactable) ? RiseDownDuration : _duration);
-		_phoneOverlaySpine.Update(gameTime);
-		_phoneActionSpine.Update(gameTime);
+		interactionSkeleton.Update(gameTime, (game.Cutscene != null || !interactable) ? RISE_DOWN : duration);
+		phoneOverlaySkeleton.Update(gameTime);
+		phoneSkeleton.Update(gameTime);
 		ResolvePendingRequests();
 		UpdateOverlayButton(canvas);
 		UpdateOverlayScreen(canvas);
-		if (!_hiddenPhoneScreen)
+		if (!hiddenPhoneScreen)
 		{
-			_squid.Update();
+			desktop.Update();
 		}
 	}
 
 	private void ResolvePendingRequests()
 	{
-		if (_isChangingState)
+		if (changingState)
 		{
 			return;
 		}
-		if (_requestedRise)
+		if (requestedRise)
 		{
-			_interactable = false;
-			_requestedRise = false;
-			_isChangingState = true;
-			_interactionSpine.StartAnimation("Arm rise", delegate
+			interactable = false;
+			requestedRise = false;
+			changingState = true;
+			interactionSkeleton.StartAnimation("Arm rise", delegate
 			{
-				_isChangingState = false;
-				Pose = ArmPose.ArmUp;
+				changingState = false;
+				ArmPose = EArmPose.ArmUp;
 				StartHoldingAnimation();
 			});
 		}
-		else if (_requestedHang)
+		else if (requestedHang)
 		{
-			_interactable = false;
-			_requestedHang = false;
-			_isChangingState = true;
-			_interactionSpine.StartAnimation("Arm lower", delegate
+			interactable = false;
+			requestedHang = false;
+			changingState = true;
+			interactionSkeleton.StartAnimation("Arm lower", delegate
 			{
-				_isChangingState = false;
-				Pose = ArmPose.ArmDown;
+				changingState = false;
+				ArmPose = EArmPose.ArmDown;
 			});
 		}
 	}
 
 	private void UpdateOverlayButton(CanvasObserver canvas)
 	{
-		if (Indicator == PhoneIndicator.None || _game.Cutscene != null || _blocked)
+		if (State == EPhoneState.None || game.Cutscene != null || blocked)
 		{
 			return;
 		}
-		Microsoft.Xna.Framework.Point cursor = canvas.GlobalToContent(_game.Controller.Cursor);
-		if (_phoneOverlaySpine.InAttachment("Phone", cursor.X, cursor.Y))
+		Microsoft.Xna.Framework.Point cursor = canvas.GlobalToContent(game.Controller.Cursor);
+		if (phoneOverlaySkeleton.Innersects("Phone", cursor.X, cursor.Y))
 		{
-			_phoneOverlaySpine.SetColor("Phone", Color.Red);
+			phoneOverlaySkeleton.SetColor("Phone", Color.Red);
 			AbstractScene.CapturedByOverlay = true;
-			if (_game.Controller.IsPressed(ControllerButtonType.LeftButton))
+			if (game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				Rise();
 			}
-			_closeableOutside = true;
+			closeableOutside = true;
 		}
-		else if (_closeableOutside)
+		else if (closeableOutside)
 		{
-			_phoneOverlaySpine.SetColor("Phone", PlayerPreferences.GetPlayerData().PhoneColor);
-			if (Pose == ArmPose.ArmDown || Pose == ArmPose.ArmDownRequested)
+			phoneOverlaySkeleton.SetColor("Phone", PlayerPreferences.GetPlayerData().PhoneColor);
+			if (ArmPose == EArmPose.ArmDown || ArmPose == EArmPose.ArmDownRequested)
 			{
 				AbstractScene.CapturedByOverlay = false;
 			}
-			_closeableOutside = false;
+			closeableOutside = false;
 		}
 	}
 
 	private void UpdateOverlayScreen(CanvasObserver canvas)
 	{
-		if (Pose != ArmPose.ArmUp || _game.Cutscene != null || _blocked)
+		if (ArmPose != EArmPose.ArmUp || game.Cutscene != null || blocked)
 		{
 			return;
 		}
-		Microsoft.Xna.Framework.Point cursor = canvas.GlobalToContent(_game.Controller.Cursor);
-		bool captured = _interactionSpine.InAttachment("Phone Colour", cursor.X, cursor.Y);
-		_duration = (captured ? RiseUpDuration : RiseDownDuration);
+		Microsoft.Xna.Framework.Point cursor = canvas.GlobalToContent(game.Controller.Cursor);
+		bool captured = interactionSkeleton.Innersects("Phone Colour", cursor.X, cursor.Y);
+		duration = (captured ? RISE_UP : RISE_DOWN);
 		if (!captured)
 		{
 			return;
 		}
-		if (_game.Controller.IsPressed(ControllerButtonType.LeftButton))
+		if (game.Controller.IsPressed(ControllerButtonType.LeftButton))
 		{
-			if (_screen == PhoneScreen.Home)
+			if (screen == EPhoneScreen.Home)
 			{
-				if (_interactionSpine.InAttachment("CONTACTS", cursor.X, cursor.Y))
+				if (interactionSkeleton.Innersects("CONTACTS", cursor.X, cursor.Y))
 				{
-					OpenScreen(PhoneScreen.Contacts);
+					Open(EPhoneScreen.Contacts);
 				}
-				else if (_interactionSpine.InAttachment("Diary", cursor.X, cursor.Y))
+				else if (interactionSkeleton.Innersects("Diary", cursor.X, cursor.Y))
 				{
-					OpenScreen(PhoneScreen.Diary);
+					Open(EPhoneScreen.Diary);
 				}
-				else if (_interactionSpine.InAttachment("Audio", cursor.X, cursor.Y))
+				else if (interactionSkeleton.Innersects("Audio", cursor.X, cursor.Y))
 				{
-					OpenScreen(PhoneScreen.Audio);
+					Open(EPhoneScreen.Audio);
 				}
-				else if (_interactionSpine.InAttachment("Chat Settings", cursor.X, cursor.Y))
+				else if (interactionSkeleton.Innersects("Chat Settings", cursor.X, cursor.Y))
 				{
-					OpenScreen(PhoneScreen.ChatSettings);
+					Open(EPhoneScreen.ChatSettings);
 				}
-				else if (_interactionSpine.InAttachment("Gallery", cursor.X, cursor.Y))
+				else if (interactionSkeleton.Innersects("Gallery", cursor.X, cursor.Y))
 				{
-					OpenScreen(PhoneScreen.Gallery);
+					Open(EPhoneScreen.Gallery);
 				}
-				else if (_interactionSpine.InAttachment("Power", cursor.X, cursor.Y))
+				else if (interactionSkeleton.Innersects("Power", cursor.X, cursor.Y))
 				{
-					OpenScreen(PhoneScreen.Power);
+					Open(EPhoneScreen.Power);
 				}
-				else if (!_interactionSpine.InAttachment("Phone Default Background", cursor.X, cursor.Y))
+				else if (!interactionSkeleton.Innersects("Phone Default Background", cursor.X, cursor.Y))
 				{
 					Hide();
 				}
 			}
-			else if (!_interactionSpine.InAttachment("Phone Default Background", cursor.X, cursor.Y))
+			else if (!interactionSkeleton.Innersects("Phone Default Background", cursor.X, cursor.Y))
 			{
 				Back();
 			}
 		}
-		if (_game.Controller.IsPressed(ControllerButtonType.RightButton))
+		if (game.Controller.IsPressed(ControllerButtonType.RightButton))
 		{
-			if (_screen != 0)
+			if (screen != 0)
 			{
 				Back();
 			}
@@ -1935,65 +1935,65 @@ public class PhoneOverlay
 		{
 			return;
 		}
-		if (_isChangingState || Pose == ArmPose.ArmUp)
+		if (changingState || ArmPose == EArmPose.ArmUp)
 		{
-			RenderTargetBinding[] targets = _game.Graphics.GetRenderTargets();
-			_game.Graphics.SetRenderTarget(_phoneScreenTarget);
-			_squid.Draw();
-			_game.Graphics.SetRenderTarget(_phoneActionTarget);
-			_phoneActionSpine.Draw(skeletonMeshRenderer, null, delegate(int answer, string string_0)
+			RenderTargetBinding[] targets = game.Graphics.GetRenderTargets();
+			game.Graphics.SetRenderTarget(phoneScreenTarget);
+			desktop.Draw();
+			game.Graphics.SetRenderTarget(phoneTarget);
+			phoneSkeleton.Draw(skeletonMeshRenderer, null, delegate(int answer, string slotName)
 			{
-				if (_visibleContactParts.ContainsKey(string_0))
+				if (contactSlots.ContainsKey(slotName))
 				{
-					return _visibleContactParts[string_0];
+					return contactSlots[slotName];
 				}
-				return !_visibleActionParts.ContainsKey(string_0) || _visibleActionParts[string_0];
+				return !interactionSlots.ContainsKey(slotName) || interactionSlots[slotName];
 			});
-			_game.Graphics.SetRenderTargets(targets);
+			game.Graphics.SetRenderTargets(targets);
 			double depth;
-			Microsoft.Xna.Framework.Point sheen = _interactionSpine.GetDistanceDepth("Sheen Two", out depth);
-			_interactionSpine.Draw(skeletonMeshRenderer, null, delegate(int index, string bone)
+			Microsoft.Xna.Framework.Point sheen = interactionSkeleton.GetDistanceDepth("Sheen Two", out depth);
+			interactionSkeleton.Draw(skeletonMeshRenderer, null, delegate(int index, string slotName)
 			{
-				if (bone == "Sheen Two")
+				if (slotName == "Sheen Two")
 				{
 					skeletonMeshRenderer.End();
 					spriteBatch.Begin();
-					if (!_hiddenPhoneScreen)
+					if (!hiddenPhoneScreen)
 					{
-						spriteBatch.Draw(_phoneScreenTarget, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
+						spriteBatch.Draw(phoneScreenTarget, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
 					}
-					if (!_hiddenPhoneAction)
+					if (!hiddenPhone)
 					{
-						spriteBatch.Draw(_phoneActionTarget, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
+						spriteBatch.Draw(phoneTarget, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
 					}
-					if (!_hiddenRemyNudes)
+					if (!hiddenRemyNudes)
 					{
-						spriteBatch.Draw(_spriteActiveRemyNude, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
+						spriteBatch.Draw(spriteOfActiveRemyNude, new Vector2(sheen.X, sheen.Y), null, null, null, (float)depth);
 					}
 					spriteBatch.End();
 					skeletonMeshRenderer.Begin();
 				}
-				else if (bone == "Thumb")
+				else if (slotName == "Thumb")
 				{
-					if (!_hiddenGameBox)
+					if (!hiddenGameBox)
 					{
 						skeletonMeshRenderer.End();
 						spriteBatch.Begin();
-						spriteBatch.Draw(_spriteActiveGamebox, new Vector2(sheen.X - 16, sheen.Y - 128), null, null, null, (float)depth);
+						spriteBatch.Draw(spriteOfActiveGamebox, new Vector2(sheen.X - 16, sheen.Y - 128), null, null, null, (float)depth);
 						spriteBatch.End();
 						skeletonMeshRenderer.Begin();
 					}
 				}
-				else if (!_hiddenGameBox && PlayerNails.Contains(bone))
+				else if (!hiddenGameBox && PLAYER_NAILS.Contains(slotName))
 				{
 					return false;
 				}
 				return true;
 			});
 		}
-		if (_indicator != 0 && _game.Cutscene == null)
+		if (state != 0 && game.Cutscene == null)
 		{
-			_phoneOverlaySpine.Draw(skeletonMeshRenderer);
+			phoneOverlaySkeleton.Draw(skeletonMeshRenderer);
 		}
 	}
 }

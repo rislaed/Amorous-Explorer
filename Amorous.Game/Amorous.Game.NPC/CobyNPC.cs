@@ -37,7 +37,7 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 	public CobyNPC(IAmorous game)
 		: base(game, "Assets/NPC/Coby/Coby", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("Breathing");
+		base.Skeleton.StartAnimationWithLooping("Breathing");
 		AddEmotion(EHeads.Sad, "Sad Head", "Sad Pupils", "Sad Eye back").WithBlinking("Sad Blink");
 		AddEmotion(EHeads.Cocky, "Cocky Head", "Cocky Pupils", "Cocky Black eye back", "Cocky Jaw").WithBlinking("Cocky Blink");
 		AddEmotion(EHeads.Flirty, "Flirty Head", "Flirty Pupils", "Flirty Black eye back", "Flirty Jaw").WithBlinking("Flirty Blink");
@@ -46,17 +46,17 @@ public class CobyNPC : SpineNPC<CobyNPC.EHeads, CobyNPC.EPoses, CobyNPC.EClothes
 		AddPose(EPoses.Shy, "Neck puff", "Shy Bod").AddNudes("Chill/Shy Cock");
 		AddPose(EPoses.Chill, "Neck puff", "Chill Bod").AddNudes("Chill cock");
 		AddClothes(EPoses.Flirty, EClothes.Shirt, "Flirty shirt only").AsShirt().AsNudes();
-		AddClothes(EPoses.Flirty, EClothes.Shorts, "Flirty outfit").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Flirty, EClothes.Shorts, "Flirty outfit").AsPants().AsCensoringPants().AsCloth();
 		AddClothes(EPoses.Flirty, EClothes.Sleeves, "Flirty Sleeves").AsShirt().AsNudes();
 		AddClothes(EPoses.Flirty, EClothes.Underwear, "Flirty underwear").AsPants().AsCloth();
 		AddClothes(EPoses.Shy, EClothes.Shirt, "Shy shirt only").AsShirt().AsNudes();
-		AddClothes(EPoses.Shy, EClothes.Shorts, "Shy outfit").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Shy, EClothes.Shorts, "Shy outfit").AsPants().AsCensoringPants().AsCloth();
 		AddClothes(EPoses.Shy, EClothes.Sleeves, "Shy sleeves").AsShirt().AsNudes();
 		AddClothes(EPoses.Shy, EClothes.Underwear, "Shy underwear").AsPants().AsCloth();
 		AddClothes(EPoses.Chill, EClothes.Shirt, "Chill shirt only").AsShirt().AsNudes();
-		AddClothes(EPoses.Chill, EClothes.Shorts, "Chil outfit").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Chill, EClothes.Shorts, "Chil outfit").AsPants().AsCensoringPants().AsCloth();
 		AddClothes(EPoses.Chill, EClothes.Sleeves, "Chill Sleeves").AsShirt().AsNudes();
-		AddClothes(EPoses.Chill, EClothes.Underwear, "Chill underwear").AsPants().AsCensoredPants().AsCloth();
+		AddClothes(EPoses.Chill, EClothes.Underwear, "Chill underwear").AsPants().AsCensoringPants().AsCloth();
 		NudesBehindShirt = false;
 		NudesBehindPants = true;
 	}

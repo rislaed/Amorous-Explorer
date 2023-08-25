@@ -22,8 +22,7 @@ public class ClubLoungeEFNPC : LayerNPC<ClubLoungeEFNPC.EHeads, ClubLoungeEFNPC.
 		Pants
 	}
 
-	public ClubLoungeEFNPC(IAmorous game)
-		: base(game, "Assets/NPC/ClubLoungeStatic", 1f)
+	public ClubLoungeEFNPC(IAmorous game) : base(game, "Assets/NPC/ClubLoungeStatic", 1f)
 	{
 		AddPose(EPoses.Sitting, "E F club nude").AddNudes("E F club nude cock");
 		AddClothes(EPoses.Sitting, EClothes.Shirt, "E F club shirt").AsShirt().AsNudes();

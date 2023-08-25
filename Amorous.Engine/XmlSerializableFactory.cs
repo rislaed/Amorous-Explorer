@@ -7,38 +7,38 @@ using Squid;
 
 public class XmlSerializableFactory
 { // _JQQysO7uwugUSzo1g63o3jzSP4H
-	private XmlSerializableDictionary<string, Rectangle> _rectangles;
-	private readonly Rectangle _fallbackRectangle = new Rectangle(0, 0, 1, 1);
+	private XmlSerializableDictionary<string, Rectangle> rectangles;
+	private readonly Rectangle FALLBACK = new Rectangle(0, 0, 1, 1);
 
 	public XmlSerializableFactory()
 	{
-		_rectangles = new XmlSerializableDictionary<string, Rectangle>();
+		rectangles = new XmlSerializableDictionary<string, Rectangle>();
 	}
 
 	public void Add(string key, Rectangle rectangle)
 	{
-		if (_rectangles.ContainsKey(key))
+		if (rectangles.ContainsKey(key))
 		{
-			_rectangles[key] = rectangle;
+			rectangles[key] = rectangle;
 		}
 		else
 		{
-			_rectangles.Add(key, rectangle);
+			rectangles.Add(key, rectangle);
 		}
 	}
 
 	public bool ContainsKey(string key)
 	{
-		return _rectangles.ContainsKey(key);
+		return rectangles.ContainsKey(key);
 	}
 
 	public Rectangle Get(string key)
 	{
-		if (_rectangles.ContainsKey(key))
+		if (rectangles.ContainsKey(key))
 		{
-			return _rectangles[key];
+			return rectangles[key];
 		}
-		return _fallbackRectangle;
+		return FALLBACK;
 	}
 
 	public void ReadBytes(byte[] bytes)
@@ -46,7 +46,7 @@ public class XmlSerializableFactory
 		Type dictionary = typeof(XmlSerializableDictionary<string, Rectangle>);
 		XmlSerializer serializer = new XmlSerializer(dictionary);
 		StringReader reader = new StringReader(Encoding.UTF8.GetString(bytes));
-		_rectangles = serializer.Deserialize(reader) as XmlSerializableDictionary<string, Rectangle>;
+		rectangles = serializer.Deserialize(reader) as XmlSerializableDictionary<string, Rectangle>;
 	}
 
 	public void Read(string path)
@@ -54,7 +54,7 @@ public class XmlSerializableFactory
 		Type dictionary = typeof(XmlSerializableDictionary<string, Rectangle>);
 		XmlSerializer serializer = new XmlSerializer(dictionary);
 		StringReader reader = new StringReader(File.ReadAllText(path));
-		_rectangles = serializer.Deserialize(reader) as XmlSerializableDictionary<string, Rectangle>;
+		rectangles = serializer.Deserialize(reader) as XmlSerializableDictionary<string, Rectangle>;
 	}
 
 	public void ReadString(string xml)
@@ -62,7 +62,7 @@ public class XmlSerializableFactory
 		Type dictionary = typeof(XmlSerializableDictionary<string, Rectangle>);
 		XmlSerializer serializer = new XmlSerializer(dictionary);
 		StringReader reader = new StringReader(xml);
-		_rectangles = serializer.Deserialize(reader) as XmlSerializableDictionary<string, Rectangle>;
+		rectangles = serializer.Deserialize(reader) as XmlSerializableDictionary<string, Rectangle>;
 	}
 
 	public void Write(string path)
@@ -77,7 +77,7 @@ public class XmlSerializableFactory
 		writer.WriteRaw("");
 		XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
 		namespaces.Add("", "");
-		serializer.Serialize(writer, _rectangles, namespaces);
+		serializer.Serialize(writer, rectangles, namespaces);
 		File.WriteAllText(path, stringWriter.ToString());
 		stringWriter.Close();
 		serializer = null;

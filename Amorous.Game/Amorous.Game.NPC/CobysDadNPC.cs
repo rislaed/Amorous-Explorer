@@ -27,8 +27,7 @@ public class CobysDadNPC : LayerNPC<CobysDadNPC.EHeads, CobysDadNPC.EPoses, Coby
 	public static string Name = "Coby's Dad";
 	public static Color Color = new Color(176, 206, 255);
 
-	public CobysDadNPC(IAmorous game)
-		: base(game, "Assets/NPC/CobysDad", 1f)
+	public CobysDadNPC(IAmorous game) : base(game, "Assets/NPC/CobysDad", 1f)
 	{
 		AddEmotion(EHeads.Stern, "Coby's Dad eye", "Coby's Dad Head");
 		AddPose(EPoses.Standing, "Coby's Dad Body");

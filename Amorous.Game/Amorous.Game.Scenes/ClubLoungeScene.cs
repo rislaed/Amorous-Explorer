@@ -4,12 +4,11 @@ namespace Amorous.Game.Scenes;
 
 public class ClubLoungeScene : AbstractScene
 {
-	private ClubStaticDustinNPC _dustin;
-	private ClubStaticMercyNPC _mercy;
-	private readonly bool _showDustin, _showMercy;
+	private ClubStaticDustinNPC dustin;
+	private ClubStaticMercyNPC mercy;
+	private readonly bool showDustin, showMercy;
 
-	public ClubLoungeScene(IAmorous game)
-		: base(game)
+	public ClubLoungeScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/ClubLounge/Lounge Main", -1295, 0);
 		AddAnimatedLayer("Lights", 638, 0, 500, "Assets/Scenes/ClubLounge/Lights Green Flicker", "Assets/Scenes/ClubLounge/Lights Yellow Flicker");
@@ -19,17 +18,17 @@ public class ClubLoungeScene : AbstractScene
 		AddClickableLayer("Stairs", "Assets/Scenes/ClubLounge/Stairs selectable", -242, 0, OnUpstairsClick);
 		AddClickableLayer("Door", "Assets/Scenes/ClubLounge/Exit door selectable", 235, 0, OnDoorClick);
 		AddAnimatedClickableLayer("Club", 2588, 0, OnClubClick, 1200, "Assets/Scenes/ClubLounge/Main Room Blue", "Assets/Scenes/ClubLounge/Main Room Green");
-		AddForegroundSpriteLayer("Couches", "Assets/Scenes/ClubLounge/Foreground couches", -1295, 758);
+		AddSpriteLayerAbove("Couches", "Assets/Scenes/ClubLounge/Foreground couches", -1295, 758);
 		Game.Canvas.SetOverscroll(-1295, 1295, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showDustin = !data.GetFlag(AmorousData.DustinLeftClub);
-		_showMercy = !data.GetFlag(AmorousData.MercyLeftClub);
-		if (_showDustin)
+		showDustin = !data.HasFlag(AmorousData.DustinLeftClub);
+		showMercy = !data.HasFlag(AmorousData.MercyLeftClub);
+		if (showDustin)
 		{
 			AddSpriteLayer("Shadow", "Assets/Scenes/ClubLounge/ShadowDustin", -426, 259);
 		}
-		if (_showMercy)
+		if (showMercy)
 		{
 			AddSpriteLayer("Shadow", "Assets/Scenes/ClubLounge/ShadowMercy", 2333, 448);
 		}
@@ -64,19 +63,19 @@ public class ClubLoungeScene : AbstractScene
 		clubLoungeDancerANPC.SetClothes(ClubLoungeDancerANPC.EClothes.Shirt, ClubLoungeDancerANPC.EClothes.Shorts);
 		clubLoungeDancerANPC.X = 1450f;
 		clubLoungeDancerANPC.Y = 1000f;
-		if (_showDustin)
+		if (showDustin)
 		{
-			_dustin = base.Game.GetNPCLayerAt<ClubStaticDustinNPC>(LayerOrder.Foreground);
-			_dustin.X = -370f;
-			_dustin.Y = 246f;
-			_dustin.Click = OnDustinClick;
+			dustin = base.Game.GetNPCLayerAt<ClubStaticDustinNPC>(LayerOrder.Foreground);
+			dustin.X = -370f;
+			dustin.Y = 246f;
+			dustin.Click = OnDustinClick;
 		}
-		if (_showMercy)
+		if (showMercy)
 		{
-			_mercy = base.Game.GetNPCLayerAt<ClubStaticMercyNPC>(LayerOrder.Foreground);
-			_mercy.X = 2300f;
-			_mercy.Y = 225f;
-			_mercy.Click = OnMercyClick;
+			mercy = base.Game.GetNPCLayerAt<ClubStaticMercyNPC>(LayerOrder.Foreground);
+			mercy.X = 2300f;
+			mercy.Y = 225f;
+			mercy.Click = OnMercyClick;
 		}
 	}
 

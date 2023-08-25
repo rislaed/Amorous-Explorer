@@ -34,7 +34,7 @@ public class DustinNPC : SpineNPC<DustinNPC.EHeads, DustinNPC.EPoses, DustinNPC.
 	public DustinNPC(IAmorous game)
 		: base(game, "Assets/NPC/Dustin/Dustin", 1f, premultipliedAlpha: true)
 	{
-		base.Spine.StartAnimationWithLooping("Idle");
+		base.Skeleton.StartAnimationWithLooping("Idle");
 		AddEmotion(EHeads.Neutral, "Neutral Mane", "Neutral eye back", "Neutral pupil", "Neutral jaw", "Neutral head").WithBlinking("Neutral blink");
 		AddEmotion(EHeads.Angry, "Angry mane", "Angry eyeback", "Angry pupil", "Angry head").WithBlinking("Angry blink");
 		AddEmotion(EHeads.Blush, "Blush mane", "Blush eye back", "Blush pupil", "Blush head").WithBlinking("Blush blink");

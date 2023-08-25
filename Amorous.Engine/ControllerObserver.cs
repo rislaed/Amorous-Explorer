@@ -6,63 +6,63 @@ using SDL2;
 
 public class ControllerObserver
 { // _3FFZvGWTAe7rsviKkDPTXEVjxWf
-	private readonly IAmorous _game;
-	private Vector2 _cursorVector;
-	private Point _cursorPoint;
-	private bool _grabbed;
-	private KeyboardState _keyboardPrevious;
-	private KeyboardState _keyboard;
-	private GamePadState _gamepadPrevious;
-	private GamePadState _gamepad;
-	private MouseState _mousePrevious;
-	private MouseState _mouse;
+	private readonly IAmorous game;
+	private Vector2 vectorOfCursor;
+	private Point cursor;
+	private bool grabbed;
+	private KeyboardState keyboardStateLast;
+	private KeyboardState keyboardState;
+	private GamePadState gamepadStateLast;
+	private GamePadState gamepadState;
+	private MouseState mouseStateLast;
+	private MouseState mouseState;
 
-	public Vector2 CursorVector => _cursorVector;
-	public Point Cursor => _cursorPoint;
-	public int Scroll => Math.Max(-1, Math.Min(_mousePrevious.ScrollWheelValue - _mouse.ScrollWheelValue, 1));
+	public Vector2 VectorOfCursor => vectorOfCursor;
+	public Point Cursor => cursor;
+	public int ScrollWheel => Math.Max(-1, Math.Min(mouseStateLast.ScrollWheelValue - mouseState.ScrollWheelValue, 1));
 
 	public bool Grabbed
 	{
 		get
 		{
-			return _grabbed;
+			return grabbed;
 		}
 		set
 		{
-			SDL.SDL_SetWindowGrab(_game.Window.Handle, value ? SDL.SDL_bool.SDL_TRUE : SDL.SDL_bool.SDL_FALSE);
-			_grabbed = value;
+			SDL.SDL_SetWindowGrab(game.Window.Handle, value ? SDL.SDL_bool.SDL_TRUE : SDL.SDL_bool.SDL_FALSE);
+			grabbed = value;
 		}
 	}
 
 	public ControllerObserver(IAmorous game)
 	{
-		_game = game;
+		this.game = game;
 	}
 
 	public void Update()
 	{
-		_keyboardPrevious = _keyboard;
-		_keyboard = Keyboard.GetState();
-		_gamepadPrevious = _gamepad;
-		_gamepad = GamePad.GetState(PlayerIndex.One);
-		_mousePrevious = _mouse;
-		_mouse = Mouse.GetState();
-		_cursorVector.X = Math.Max(0, Math.Min(_mouse.X, _game.Canvas.DisplayWidth));
-		_cursorVector.Y = Math.Max(0, Math.Min(_mouse.Y, _game.Canvas.DisplayHeight));
-		_cursorPoint.X = (int)_cursorVector.X;
-		_cursorPoint.Y = (int)_cursorVector.Y;
+		keyboardStateLast = keyboardState;
+		keyboardState = Keyboard.GetState();
+		gamepadStateLast = gamepadState;
+		gamepadState = GamePad.GetState(PlayerIndex.One);
+		mouseStateLast = mouseState;
+		mouseState = Mouse.GetState();
+		vectorOfCursor.X = Math.Max(0, Math.Min(mouseState.X, game.Canvas.WindowWidth));
+		vectorOfCursor.Y = Math.Max(0, Math.Min(mouseState.Y, game.Canvas.WindowHeight));
+		cursor.X = (int)vectorOfCursor.X;
+		cursor.Y = (int)vectorOfCursor.Y;
 	}
 
 	public bool IsHolding(Keys keys)
 	{
-		return _keyboard[keys] == KeyState.Down;
+		return keyboardState[keys] == KeyState.Down;
 	}
 
 	public bool IsHolding(Buttons buttons)
 	{
-		if (_gamepad.IsConnected)
+		if (gamepadState.IsConnected)
 		{
-			return _gamepad.IsButtonDown(buttons);
+			return gamepadState.IsButtonDown(buttons);
 		}
 		return false;
 	}
@@ -71,27 +71,27 @@ public class ControllerObserver
 	{
 		return type switch
 		{
-			ControllerButtonType.LeftButton => _mouse.LeftButton == ButtonState.Pressed, 
-			ControllerButtonType.MiddleButton => _mouse.MiddleButton == ButtonState.Pressed, 
-			ControllerButtonType.RightButton => _mouse.RightButton == ButtonState.Pressed, 
-			ControllerButtonType.WheelUp => _mouse.ScrollWheelValue > _mousePrevious.ScrollWheelValue, 
-			ControllerButtonType.WheelDown => _mouse.ScrollWheelValue < _mousePrevious.ScrollWheelValue, 
-			ControllerButtonType.XButton1 => _mouse.XButton1 == ButtonState.Pressed, 
-			ControllerButtonType.XButton2 => _mouse.XButton2 == ButtonState.Pressed, 
+			ControllerButtonType.LeftButton => mouseState.LeftButton == ButtonState.Pressed, 
+			ControllerButtonType.MiddleButton => mouseState.MiddleButton == ButtonState.Pressed, 
+			ControllerButtonType.RightButton => mouseState.RightButton == ButtonState.Pressed, 
+			ControllerButtonType.WheelUp => mouseState.ScrollWheelValue > mouseStateLast.ScrollWheelValue, 
+			ControllerButtonType.WheelDown => mouseState.ScrollWheelValue < mouseStateLast.ScrollWheelValue, 
+			ControllerButtonType.XButton1 => mouseState.XButton1 == ButtonState.Pressed, 
+			ControllerButtonType.XButton2 => mouseState.XButton2 == ButtonState.Pressed, 
 			_ => false, 
 		};
 	}
 
 	public bool IsReleased(Keys keys)
 	{
-		return _keyboard[keys] == KeyState.Up;
+		return keyboardState[keys] == KeyState.Up;
 	}
 
 	public bool IsReleased(Buttons buttons)
 	{
-		if (_gamepad.IsConnected)
+		if (gamepadState.IsConnected)
 		{
-			return _gamepad.IsButtonUp(buttons);
+			return gamepadState.IsButtonUp(buttons);
 		}
 		return true;
 	}
@@ -103,39 +103,39 @@ public class ControllerObserver
 			default:
 				return true;
 			case ControllerButtonType.LeftButton:
-				return _mouse.LeftButton == ButtonState.Released;
+				return mouseState.LeftButton == ButtonState.Released;
 			case ControllerButtonType.MiddleButton:
-				return _mouse.MiddleButton == ButtonState.Released;
+				return mouseState.MiddleButton == ButtonState.Released;
 			case ControllerButtonType.RightButton:
-				return _mouse.RightButton == ButtonState.Released;
+				return mouseState.RightButton == ButtonState.Released;
 			case ControllerButtonType.WheelUp:
 			case ControllerButtonType.WheelDown:
-				return _mouse.ScrollWheelValue - _mousePrevious.ScrollWheelValue == 0;
+				return mouseState.ScrollWheelValue - mouseStateLast.ScrollWheelValue == 0;
 			case ControllerButtonType.XButton1:
-				return _mouse.XButton1 == ButtonState.Released;
+				return mouseState.XButton1 == ButtonState.Released;
 			case ControllerButtonType.XButton2:
-				return _mouse.XButton2 == ButtonState.Released;
+				return mouseState.XButton2 == ButtonState.Released;
 		}
 	}
 
 	public bool IsPressed(Keys keys)
 	{
-		if (_keyboardPrevious[keys] == KeyState.Up)
+		if (keyboardStateLast[keys] == KeyState.Up)
 		{
-			return _keyboard[keys] == KeyState.Down;
+			return keyboardState[keys] == KeyState.Down;
 		}
 		return false;
 	}
 
 	public bool IsPressed(Buttons buttons)
 	{
-		if (_gamepadPrevious.IsConnected && _gamepad.IsConnected)
+		if (gamepadStateLast.IsConnected && gamepadState.IsConnected)
 		{
-			if (!_gamepadPrevious.IsButtonUp(buttons))
+			if (!gamepadStateLast.IsButtonUp(buttons))
 			{
 				return false;
 			}
-			return _gamepad.IsButtonDown(buttons);
+			return gamepadState.IsButtonDown(buttons);
 		}
 		return false;
 	}
@@ -147,37 +147,37 @@ public class ControllerObserver
 			default:
 				return false;
 			case ControllerButtonType.LeftButton:
-				if (_mousePrevious.LeftButton != 0)
+				if (mouseStateLast.LeftButton != 0)
 				{
 					return false;
 				}
-				return _mouse.LeftButton == ButtonState.Pressed;
+				return mouseState.LeftButton == ButtonState.Pressed;
 			case ControllerButtonType.MiddleButton:
-				if (_mousePrevious.MiddleButton == ButtonState.Released)
+				if (mouseStateLast.MiddleButton == ButtonState.Released)
 				{
-					return _mouse.MiddleButton == ButtonState.Pressed;
+					return mouseState.MiddleButton == ButtonState.Pressed;
 				}
 				return false;
 			case ControllerButtonType.RightButton:
-				if (_mousePrevious.RightButton != 0)
+				if (mouseStateLast.RightButton != 0)
 				{
 					return false;
 				}
-				return _mouse.RightButton == ButtonState.Pressed;
+				return mouseState.RightButton == ButtonState.Pressed;
 			case ControllerButtonType.WheelUp:
-				return _mouse.ScrollWheelValue > _mousePrevious.ScrollWheelValue;
+				return mouseState.ScrollWheelValue > mouseStateLast.ScrollWheelValue;
 			case ControllerButtonType.WheelDown:
-				return _mouse.ScrollWheelValue < _mousePrevious.ScrollWheelValue;
+				return mouseState.ScrollWheelValue < mouseStateLast.ScrollWheelValue;
 			case ControllerButtonType.XButton1:
-				if (_mousePrevious.XButton1 != 0)
+				if (mouseStateLast.XButton1 != 0)
 				{
 					return false;
 				}
-				return _mouse.XButton1 == ButtonState.Pressed;
+				return mouseState.XButton1 == ButtonState.Pressed;
 			case ControllerButtonType.XButton2:
-				if (_mousePrevious.XButton2 == ButtonState.Released)
+				if (mouseStateLast.XButton2 == ButtonState.Released)
 				{
-					return _mouse.XButton2 == ButtonState.Pressed;
+					return mouseState.XButton2 == ButtonState.Pressed;
 				}
 				return false;
 		}
@@ -185,22 +185,22 @@ public class ControllerObserver
 
 	public bool IsReleasing(Keys keys)
 	{
-		if (_keyboardPrevious[keys] == KeyState.Down)
+		if (keyboardStateLast[keys] == KeyState.Down)
 		{
-			return _keyboard[keys] == KeyState.Up;
+			return keyboardState[keys] == KeyState.Up;
 		}
 		return false;
 	}
 
 	public bool IsReleasing(Buttons buttons)
 	{
-		if (_gamepadPrevious.IsConnected && _gamepad.IsConnected)
+		if (gamepadStateLast.IsConnected && gamepadState.IsConnected)
 		{
-			if (!_gamepadPrevious.IsButtonDown(buttons))
+			if (!gamepadStateLast.IsButtonDown(buttons))
 			{
 				return false;
 			}
-			return _gamepad.IsButtonUp(buttons);
+			return gamepadState.IsButtonUp(buttons);
 		}
 		return false;
 	}
@@ -212,60 +212,60 @@ public class ControllerObserver
 			default:
 				return false;
 			case ControllerButtonType.LeftButton:
-				if (_mousePrevious.LeftButton == ButtonState.Pressed)
+				if (mouseStateLast.LeftButton == ButtonState.Pressed)
 				{
-					return _mouse.LeftButton == ButtonState.Released;
+					return mouseState.LeftButton == ButtonState.Released;
 				}
 				return false;
 			case ControllerButtonType.MiddleButton:
-				if (_mousePrevious.MiddleButton != ButtonState.Pressed)
+				if (mouseStateLast.MiddleButton != ButtonState.Pressed)
 				{
 					return false;
 				}
-				return _mouse.MiddleButton == ButtonState.Released;
+				return mouseState.MiddleButton == ButtonState.Released;
 			case ControllerButtonType.RightButton:
-				if (_mousePrevious.RightButton == ButtonState.Pressed)
+				if (mouseStateLast.RightButton == ButtonState.Pressed)
 				{
-					return _mouse.RightButton == ButtonState.Released;
+					return mouseState.RightButton == ButtonState.Released;
 				}
 				return false;
 			case ControllerButtonType.WheelUp:
-				return _mouse.ScrollWheelValue > _mousePrevious.ScrollWheelValue;
+				return mouseState.ScrollWheelValue > mouseStateLast.ScrollWheelValue;
 			case ControllerButtonType.WheelDown:
-				return _mouse.ScrollWheelValue < _mousePrevious.ScrollWheelValue;
+				return mouseState.ScrollWheelValue < mouseStateLast.ScrollWheelValue;
 			case ControllerButtonType.XButton1:
-				if (_mousePrevious.XButton1 == ButtonState.Pressed)
+				if (mouseStateLast.XButton1 == ButtonState.Pressed)
 				{
-					return _mouse.XButton1 == ButtonState.Released;
+					return mouseState.XButton1 == ButtonState.Released;
 				}
 				return false;
 			case ControllerButtonType.XButton2:
-				if (_mousePrevious.XButton2 != ButtonState.Pressed)
+				if (mouseStateLast.XButton2 != ButtonState.Pressed)
 				{
 					return false;
 				}
-				return _mouse.XButton2 == ButtonState.Released;
+				return mouseState.XButton2 == ButtonState.Released;
 		}
 	}
 
-	public bool InInteraction()
+	public bool IsHolding()
 	{
-		if (_keyboard.GetPressedKeys().Length != 0)
+		if (keyboardState.GetPressedKeys().Length != 0)
 		{
 			return true;
 		}
-		Array values = Enum.GetValues(typeof(Buttons));
-		foreach (Buttons item in values)
+		Array buttons = Enum.GetValues(typeof(Buttons));
+		foreach (Buttons button in buttons)
 		{
-			if (IsHolding(item))
+			if (IsHolding(button))
 			{
 				return true;
 			}
 		}
-		values = Enum.GetValues(typeof(ControllerButtonType));
-		foreach (ControllerButtonType item in values)
+		buttons = Enum.GetValues(typeof(ControllerButtonType));
+		foreach (ControllerButtonType button in buttons)
 		{
-			if (IsHolding(item))
+			if (IsHolding(button))
 			{
 				return true;
 			}
@@ -273,10 +273,10 @@ public class ControllerObserver
 		return false;
 	}
 
-	public Keys[] IsPressed()
+	public Keys[] IsPressing()
 	{
-		Keys[] previousKeys = _keyboardPrevious.GetPressedKeys();
-		Keys[] keys = _keyboard.GetPressedKeys();
-		return keys.Where((Keys to) => previousKeys.Contains(to)).ToArray();
+		Keys[] lastKeys = keyboardStateLast.GetPressedKeys();
+		Keys[] keys = keyboardState.GetPressedKeys();
+		return keys.Where((Keys key) => lastKeys.Contains(key)).ToArray();
 	}
 }

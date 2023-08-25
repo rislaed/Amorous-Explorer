@@ -4,11 +4,10 @@ namespace Amorous.Game.Scenes;
 
 public class ClubBackScene : AbstractScene
 {
-	private ClubStaticLexNPC _lex;
-	private readonly bool _showLex;
+	private ClubStaticLexNPC lex;
+	private readonly bool showLex;
 
-	public ClubBackScene(IAmorous game)
-		: base(game)
+	public ClubBackScene(IAmorous game) : base(game)
 	{
 		AddSpriteLayer("Background", "Assets/Scenes/ClubBack/Club back main", -535, 0);
 		AddSpriteLayer("Background", "Assets/Scenes/ClubBack/Club back bodies", 1313, 486);
@@ -26,17 +25,17 @@ public class ClubBackScene : AbstractScene
 		Game.Canvas.SetOverscroll(-535, 535, 0, 0);
 		FadingMediaPlayer.Play(AmorousData.ClubTracks, 0.4f, repeat: true, oneOf: true);
 		PlayerData data = PlayerPreferences.GetPlayerData();
-		_showLex = !data.GetFlag(AmorousData.LexLeftClub);
+		showLex = !data.HasFlag(AmorousData.LexLeftClub);
 	}
 
 	public override void Start()
 	{
-		if (_showLex)
+		if (showLex)
 		{
-			_lex = base.Game.GetNPCLayerAt<ClubStaticLexNPC>(LayerOrder.Foreground);
-			_lex.X = -535f;
-			_lex.Y = 250f;
-			_lex.Click = OnLexClick;
+			lex = base.Game.GetNPCLayerAt<ClubStaticLexNPC>(LayerOrder.Foreground);
+			lex.X = -535f;
+			lex.Y = 250f;
+			lex.Click = OnLexClick;
 		}
 	}
 

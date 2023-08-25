@@ -10,21 +10,20 @@ public class CookingMiniGameScene : AbstractScene
 {
 	private class GUI : InteractableOverlay
 	{
-		private readonly ButtonInteractable _completeButton;
+		private readonly ButtonInteractable interactable;
 
 		public bool IsVisible
 		{
 			set
 			{
-				_completeButton.Visible = value;
+				interactable.IsVisible = value;
 			}
 		}
 
-		public GUI(IAmorous game, Action click)
-			: base(game)
+		public GUI(IAmorous game, Action action) : base(game)
 		{
-			_completeButton = AddButtonInteractable("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/Gui/Fonts/Bold-26", "Stop cooking!", Color.White, 832, 970, new Rectangle(832, 970, 256, 102), click);
-			_completeButton.Visible = false;
+			interactable = AddButtonInteractable("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/Gui/Fonts/Bold-26", "Stop cooking!", Color.White, 832, 970, new Rectangle(832, 970, 256, 102), action);
+			interactable.IsVisible = false;
 		}
 	}
 
@@ -39,229 +38,228 @@ public class CookingMiniGameScene : AbstractScene
 		None
 	}
 
-	private const int IngrediantCount = 5;
-	private const float ColdTime = 2.5f;
-	private const float FryTime = 4.5f;
+	private const int INGREDIANTS = 5;
+	private const float COLD_TIME = 2.5f;
+	private const float FRY_TIME = 4.5f;
 
-	private readonly GUI _overlay;
-	private readonly SpineRenderer _spine;
-	private readonly RandomSoundEffect _soundsOfSpan;
-	private readonly RandomSoundEffect _soundsOfAdd;
-	private readonly RandomSoundEffect _soundsOfOnion;
-	private readonly RandomSoundEffect _soundsOfBeef;
-	private readonly RandomSoundEffect _soundsOfCarrots;
-	private readonly RandomSoundEffect _soundsOfTomatoe;
-	private readonly RandomSoundEffect _soundsOfBay;
-	private readonly RandomSoundEffect _soundsOfBurning;
-	private readonly RandomSoundEffect _soundsOfDrum;
-	private readonly RandomSoundEffect _soundsOfBad;
-	private readonly RandomSoundEffect _soundsOfOkay;
-	private readonly RandomSoundEffect _soundsOfGreat;
-	private readonly AbstractLayer _backgroundBad;
-	private readonly AbstractLayer _backgroundOkay;
-	private readonly AbstractLayer _backgroundGreat;
-	private bool _pastaAppeared;
-	private bool _addedOnions;
-	private bool _addedBeef;
-	private bool _addedCarrots;
-	private bool _addedTomatoe;
-	private bool _addedBayleaves;
-	private EIngrediants _pendingIngrediant;
-	private bool _burned;
-	private float _ticks;
-	private bool _spawning;
-	private bool _mixing;
-	private bool _requestedResult;
-	private float _fadingOut;
-	private List<EIngrediants> _ingrediants;
-	private float _time;
+	private readonly GUI overlay;
+	private readonly SkeletonRenderer skeleton;
+	private readonly RandomSoundEffect soundsOfSpan;
+	private readonly RandomSoundEffect soundsOfAdd;
+	private readonly RandomSoundEffect soundsOfOnion;
+	private readonly RandomSoundEffect soundsOfBeef;
+	private readonly RandomSoundEffect soundsOfCarrots;
+	private readonly RandomSoundEffect soundsOfTomatoe;
+	private readonly RandomSoundEffect soundsOfBay;
+	private readonly RandomSoundEffect soundsOfBurning;
+	private readonly RandomSoundEffect soundsOfDrum;
+	private readonly RandomSoundEffect soundsOfBad;
+	private readonly RandomSoundEffect soundsOfOkay;
+	private readonly RandomSoundEffect soundsOfGreat;
+	private readonly AbstractLayer badOverlayLayer;
+	private readonly AbstractLayer okayOverlayLayer;
+	private readonly AbstractLayer greatOverlayLayer;
+	private bool pastaAppeared;
+	private bool addedOnions;
+	private bool addedBeef;
+	private bool addedCarrots;
+	private bool addedTomatoe;
+	private bool addedBayleaves;
+	private EIngrediants pendingIngrediant;
+	private bool burned;
+	private float ticks;
+	private bool spawning;
+	private bool mixing;
+	private bool requestedResult;
+	private float fadingOut;
+	private List<EIngrediants> ingrediants;
+	private float seconds;
 
 	public bool IsSelectingIngredient { get; set; }
-	public bool Completable { get; set; }
-	public bool IsDone { get; set; }
+	public bool IsSelectingIngredientCompleted { get; set; }
+	public bool IsShowingResultCompleted { get; set; }
 
-	public CookingMiniGameScene(IAmorous game)
-		: base(game)
+	public CookingMiniGameScene(IAmorous game) : base(game)
 	{
-		_overlay = new GUI(game, Click);
-		base.Game.SetOverlay(_overlay);
+		overlay = new GUI(game, Click);
+		base.Game.SetOverlay(overlay);
 		AddSpriteLayer("Background", "Assets/Scenes/Cooking/Background", 0, 0);
-		_backgroundBad = AddForegroundSpriteLayer("Background", "Assets/Scenes/Cooking/Bad", 0, 0);
-		_backgroundBad.Visible = false;
-		_backgroundOkay = AddForegroundSpriteLayer("Background", "Assets/Scenes/Cooking/Okay", 0, 0);
-		_backgroundOkay.Visible = false;
-		_backgroundGreat = AddForegroundSpriteLayer("Background", "Assets/Scenes/Cooking/Excellent", 0, 0);
-		_backgroundGreat.Visible = false;
+		badOverlayLayer = AddSpriteLayerAbove("Background", "Assets/Scenes/Cooking/Bad", 0, 0);
+		badOverlayLayer.Visible = false;
+		okayOverlayLayer = AddSpriteLayerAbove("Background", "Assets/Scenes/Cooking/Okay", 0, 0);
+		okayOverlayLayer.Visible = false;
+		greatOverlayLayer = AddSpriteLayerAbove("Background", "Assets/Scenes/Cooking/Excellent", 0, 0);
+		greatOverlayLayer.Visible = false;
 		SpineDrawableLayer spineLayer = new SpineDrawableLayer(this, "Cooking");
-		_spine = game.Content.LoadSkeleton("Assets/Scenes/Cooking/Cooking");
-		_spine.X = 960f;
-		_spine.Y = 540f;
-		_soundsOfSpan = new RandomSoundEffect(game.Content);
-		_soundsOfSpan.Append("Assets/Sounds/MiniGames/Cooking/Pan spawn");
-		_soundsOfAdd = new RandomSoundEffect(game.Content);
-		_soundsOfAdd.Append("Assets/Sounds/MiniGames/Cooking/Add ingrediant");
-		_soundsOfOnion = new RandomSoundEffect(game.Content);
-		_soundsOfOnion.Append("Assets/Sounds/MiniGames/Cooking/Onion");
-		_soundsOfBeef = new RandomSoundEffect(game.Content);
-		_soundsOfBeef.Append("Assets/Sounds/MiniGames/Cooking/Beef");
-		_soundsOfCarrots = new RandomSoundEffect(game.Content);
-		_soundsOfCarrots.Append("Assets/Sounds/MiniGames/Cooking/Carrots");
-		_soundsOfTomatoe = new RandomSoundEffect(game.Content);
-		_soundsOfTomatoe.Append("Assets/Sounds/MiniGames/Cooking/Tomatoe");
-		_soundsOfBay = new RandomSoundEffect(game.Content);
-		_soundsOfBay.Append("Assets/Sounds/MiniGames/Cooking/Bay leaves");
-		_soundsOfBurning = new RandomSoundEffect(game.Content);
-		_soundsOfBurning.Append("Assets/Sounds/MiniGames/Cooking/Burning");
-		_soundsOfDrum = new RandomSoundEffect(game.Content);
-		_soundsOfDrum.Append("Assets/Sounds/MiniGames/Cooking/Drum roll");
-		_soundsOfBad = new RandomSoundEffect(game.Content);
-		_soundsOfBad.Append("Assets/Sounds/MiniGames/Cooking/Bad food");
-		_soundsOfOkay = new RandomSoundEffect(game.Content);
-		_soundsOfOkay.Append("Assets/Sounds/MiniGames/Cooking/Ok food");
-		_soundsOfGreat = new RandomSoundEffect(game.Content);
-		_soundsOfGreat.Append("Assets/Sounds/MiniGames/Cooking/Great food");
+		skeleton = game.Content.LoadSkeleton("Assets/Scenes/Cooking/Cooking");
+		skeleton.X = 960f;
+		skeleton.Y = 540f;
+		soundsOfSpan = new RandomSoundEffect(game.Content);
+		soundsOfSpan.Append("Assets/Sounds/MiniGames/Cooking/Pan spawn");
+		soundsOfAdd = new RandomSoundEffect(game.Content);
+		soundsOfAdd.Append("Assets/Sounds/MiniGames/Cooking/Add ingrediant");
+		soundsOfOnion = new RandomSoundEffect(game.Content);
+		soundsOfOnion.Append("Assets/Sounds/MiniGames/Cooking/Onion");
+		soundsOfBeef = new RandomSoundEffect(game.Content);
+		soundsOfBeef.Append("Assets/Sounds/MiniGames/Cooking/Beef");
+		soundsOfCarrots = new RandomSoundEffect(game.Content);
+		soundsOfCarrots.Append("Assets/Sounds/MiniGames/Cooking/Carrots");
+		soundsOfTomatoe = new RandomSoundEffect(game.Content);
+		soundsOfTomatoe.Append("Assets/Sounds/MiniGames/Cooking/Tomatoe");
+		soundsOfBay = new RandomSoundEffect(game.Content);
+		soundsOfBay.Append("Assets/Sounds/MiniGames/Cooking/Bay leaves");
+		soundsOfBurning = new RandomSoundEffect(game.Content);
+		soundsOfBurning.Append("Assets/Sounds/MiniGames/Cooking/Burning");
+		soundsOfDrum = new RandomSoundEffect(game.Content);
+		soundsOfDrum.Append("Assets/Sounds/MiniGames/Cooking/Drum roll");
+		soundsOfBad = new RandomSoundEffect(game.Content);
+		soundsOfBad.Append("Assets/Sounds/MiniGames/Cooking/Bad food");
+		soundsOfOkay = new RandomSoundEffect(game.Content);
+		soundsOfOkay.Append("Assets/Sounds/MiniGames/Cooking/Ok food");
+		soundsOfGreat = new RandomSoundEffect(game.Content);
+		soundsOfGreat.Append("Assets/Sounds/MiniGames/Cooking/Great food");
 		RefreshSubscene();
 		spineLayer.OnUpdate = delegate(GameTime gameTime)
 		{
-			_spine.Update(gameTime);
+			skeleton.Update(gameTime);
 		};
 		spineLayer.OnSpineDraw = delegate(SpriteBatch spriteBatch, SkeletonMeshRenderer skeletonMeshRenderer)
 		{
-			_spine.Draw(skeletonMeshRenderer, null, BeforeRenderSlot);
+			skeleton.Draw(skeletonMeshRenderer, null, BeforeRenderSlot);
 		};
 		AddLayer(spineLayer, 0);
 		FadingMediaPlayer.PlayOnRepeat(AmorousData.FreeFloatingTrack, 0.1f);
 	}
 
-	private bool BeforeRenderSlot(int index, string bone)
+	private bool BeforeRenderSlot(int index, string slotName)
 	{
-		switch (bone)
+		switch (slotName)
 		{
 			case "Pasta":
-				return _pastaAppeared;
+				return pastaAppeared;
 			case "Onions bowl shadow":
 			case "Onions bowl glow":
 			case "Onions bowl":
-				return !_addedOnions;
+				return !addedOnions;
 			default:
 				return true;
 			case "BayThyme 1":
 			case "BayThyme 2":
-				return _addedBayleaves;
+				return addedBayleaves;
 			case "Bayleaves bowl shadow":
 			case "Bayleaves bowl glow":
 			case "Bayleaves bowl":
-				return !_addedBayleaves;
+				return !addedBayleaves;
 			case "Sauce 1":
 			case "Sauce 2":
-				return _addedTomatoe;
+				return addedTomatoe;
 			case "Tomatoe bowl shadow":
 			case "Tomatoe bowl glow":
 			case "Tomatoe bowl":
-				return !_addedTomatoe;
+				return !addedTomatoe;
 			case "Carrots 1":
 			case "Carrots 2":
-				return _addedCarrots;
+				return addedCarrots;
 			case "Carrot bowl shadow":
 			case "Carrot bowl glow":
 			case "Carrot bowl":
-				return !_addedCarrots;
+				return !addedCarrots;
 			case "Ground Beef 1":
 			case "Ground Beef 2":
-				return _addedBeef;
+				return addedBeef;
 			case "Ground beef bowl shadow":
 			case "Ground beef bowl glow":
 			case "Ground beef bowl":
-				return !_addedBeef;
+				return !addedBeef;
 			case "OnionsGarlic 1":
 			case "OnionsGarlic 2":
-				return _addedOnions;
+				return addedOnions;
 		}
 	}
 
 	private void RefreshSubscene()
 	{
-		_spawning = true;
-		_pastaAppeared = false;
-		_addedOnions = false;
-		_addedBeef = false;
-		_addedCarrots = false;
-		_addedTomatoe = false;
-		_addedBayleaves = false;
-		_ingrediants = new List<EIngrediants>();
-		_spine.SetVisibility(0f);
-		_soundsOfSpan.PlayNext();
-		_spine.StartAnimation("Pan spawn", delegate
+		spawning = true;
+		pastaAppeared = false;
+		addedOnions = false;
+		addedBeef = false;
+		addedCarrots = false;
+		addedTomatoe = false;
+		addedBayleaves = false;
+		ingrediants = new List<EIngrediants>();
+		skeleton.SetVisibility(0f);
+		soundsOfSpan.PlayNext();
+		skeleton.StartAnimation("Pan spawn", delegate
 		{
-			_spawning = false;
+			spawning = false;
 		});
-		_pendingIngrediant = EIngrediants.None;
+		pendingIngrediant = EIngrediants.None;
 	}
 
 	public override void Update(GameTime gameTime)
 	{
 		base.Update(gameTime);
-		if (_requestedResult)
+		if (requestedResult)
 		{
-			_fadingOut += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-			if (_fadingOut > 3f)
+			fadingOut += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
+			if (fadingOut > 3f)
 			{
-				_requestedResult = false;
+				requestedResult = false;
 				ApplyResultWithFade();
 			}
 		}
-		if (Completable || !IsSelectingIngredient)
+		if (IsSelectingIngredientCompleted || !IsSelectingIngredient)
 		{
 			return;
 		}
-		if (_burned)
+		if (burned)
 		{
-			_ticks += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
+			ticks += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
 		}
-		if (_spawning || _mixing || _pastaAppeared)
+		if (spawning || mixing || pastaAppeared)
 		{
 			return;
 		}
-		Point point = base.Game.Canvas.GlobalToContent(base.Game.Controller.Cursor);
-		if (_addedOnions || !_spine.InAttachment("Onions bowl glow", point.X, point.Y))
+		Point cursor = base.Game.Canvas.GlobalToContent(base.Game.Controller.Cursor);
+		if (addedOnions || !skeleton.Innersects("Onions bowl glow", cursor.X, cursor.Y))
 		{
-			_spine.SetAlpha("Onions bowl glow", 0f);
+			skeleton.SetAlpha("Onions bowl glow", 0f);
 		}
 		else
 		{
-			SelectIngrediant("OnionsGarlic highlight", EIngrediants.OnionsGarlic, _soundsOfOnion);
+			SelectIngrediant("OnionsGarlic highlight", EIngrediants.OnionsGarlic, soundsOfOnion);
 			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				AddOnions();
 			}
 		}
-		if (_addedBeef || !_spine.InAttachment("Ground beef bowl glow", point.X, point.Y))
+		if (addedBeef || !skeleton.Innersects("Ground beef bowl glow", cursor.X, cursor.Y))
 		{
-			_spine.SetAlpha("Ground beef bowl glow", 0f);
+			skeleton.SetAlpha("Ground beef bowl glow", 0f);
 		}
 		else
 		{
-			SelectIngrediant("Ground beef highlight", EIngrediants.GroundBeef, _soundsOfBeef);
+			SelectIngrediant("Ground beef highlight", EIngrediants.GroundBeef, soundsOfBeef);
 			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				AddBeef();
 			}
 		}
-		if (_addedCarrots || !_spine.InAttachment("Carrot bowl gold", point.X, point.Y))
+		if (addedCarrots || !skeleton.Innersects("Carrot bowl gold", cursor.X, cursor.Y))
 		{
-			_spine.SetAlpha("Carrot bowl gold", 0f);
+			skeleton.SetAlpha("Carrot bowl gold", 0f);
 		}
 		else
 		{
-			SelectIngrediant("Carrot highlight", EIngrediants.Carrots, _soundsOfCarrots);
+			SelectIngrediant("Carrot highlight", EIngrediants.Carrots, soundsOfCarrots);
 			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				AddCarrots();
 			}
 		}
-		if (!_addedTomatoe && _spine.InAttachment("Tomatoe bowl gold", point.X, point.Y))
+		if (!addedTomatoe && skeleton.Innersects("Tomatoe bowl gold", cursor.X, cursor.Y))
 		{
-			SelectIngrediant("Tomatoe highlight", EIngrediants.TinnedTomatoes, _soundsOfTomatoe);
+			SelectIngrediant("Tomatoe highlight", EIngrediants.TinnedTomatoes, soundsOfTomatoe);
 			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				AddTomatoe();
@@ -269,11 +267,11 @@ public class CookingMiniGameScene : AbstractScene
 		}
 		else
 		{
-			_spine.SetAlpha("Tomatoe bowl gold", 0f);
+			skeleton.SetAlpha("Tomatoe bowl gold", 0f);
 		}
-		if (!_addedBayleaves && _spine.InAttachment("Bayleaves bowl glow", point.X, point.Y))
+		if (!addedBayleaves && skeleton.Innersects("Bayleaves bowl glow", cursor.X, cursor.Y))
 		{
-			SelectIngrediant("Bay highlight", EIngrediants.Herbs, _soundsOfBay);
+			SelectIngrediant("Bay highlight", EIngrediants.Herbs, soundsOfBay);
 			if (base.Game.Controller.IsPressed(ControllerButtonType.LeftButton))
 			{
 				AddBayleaves();
@@ -281,29 +279,29 @@ public class CookingMiniGameScene : AbstractScene
 		}
 		else
 		{
-			_spine.SetAlpha("Bayleaves bowl glow", 0f);
+			skeleton.SetAlpha("Bayleaves bowl glow", 0f);
 		}
 	}
 
 	private void SelectIngrediant(string animation, EIngrediants ingrediant, RandomSoundEffect sounds)
 	{
-		if (_pendingIngrediant != ingrediant)
+		if (pendingIngrediant != ingrediant)
 		{
 			sounds.PlayNext();
-			_spine.StartAnimation(animation);
+			skeleton.StartAnimation(animation);
 		}
-		_pendingIngrediant = ingrediant;
+		pendingIngrediant = ingrediant;
 	}
 
 	public void AddOnions()
 	{
-		if (!_mixing && !_addedOnions)
+		if (!mixing && !addedOnions)
 		{
-			_mixing = true;
-			_soundsOfAdd.PlayNext();
-			_spine.StartAnimation("OnionsGarlic toss", delegate
+			mixing = true;
+			soundsOfAdd.PlayNext();
+			skeleton.StartAnimation("OnionsGarlic toss", delegate
 			{
-				_addedOnions = true;
+				addedOnions = true;
 				MixIngrediant(EIngrediants.OnionsGarlic);
 			});
 		}
@@ -311,13 +309,13 @@ public class CookingMiniGameScene : AbstractScene
 
 	public void AddBeef()
 	{
-		if (!_mixing && !_addedBeef)
+		if (!mixing && !addedBeef)
 		{
-			_mixing = true;
-			_soundsOfAdd.PlayNext();
-			_spine.StartAnimation("Ground beef toss", delegate
+			mixing = true;
+			soundsOfAdd.PlayNext();
+			skeleton.StartAnimation("Ground beef toss", delegate
 			{
-				_addedBeef = true;
+				addedBeef = true;
 				MixIngrediant(EIngrediants.GroundBeef);
 			});
 		}
@@ -325,13 +323,13 @@ public class CookingMiniGameScene : AbstractScene
 
 	public void AddCarrots()
 	{
-		if (!_mixing && !_addedCarrots)
+		if (!mixing && !addedCarrots)
 		{
-			_mixing = true;
-			_soundsOfAdd.PlayNext();
-			_spine.StartAnimation("Carrot toss", delegate
+			mixing = true;
+			soundsOfAdd.PlayNext();
+			skeleton.StartAnimation("Carrot toss", delegate
 			{
-				_addedCarrots = true;
+				addedCarrots = true;
 				MixIngrediant(EIngrediants.Carrots);
 			});
 		}
@@ -339,13 +337,13 @@ public class CookingMiniGameScene : AbstractScene
 
 	public void AddTomatoe()
 	{
-		if (!_mixing && !_addedTomatoe)
+		if (!mixing && !addedTomatoe)
 		{
-			_mixing = true;
-			_soundsOfAdd.PlayNext();
-			_spine.StartAnimation("Tomatoe toss", delegate
+			mixing = true;
+			soundsOfAdd.PlayNext();
+			skeleton.StartAnimation("Tomatoe toss", delegate
 			{
-				_addedTomatoe = true;
+				addedTomatoe = true;
 				MixIngrediant(EIngrediants.TinnedTomatoes);
 			});
 		}
@@ -353,13 +351,13 @@ public class CookingMiniGameScene : AbstractScene
 
 	public void AddBayleaves()
 	{
-		if (!_mixing && !_addedBayleaves)
+		if (!mixing && !addedBayleaves)
 		{
-			_mixing = true;
-			_soundsOfAdd.PlayNext();
-			_spine.StartAnimation("Bay toss", delegate
+			mixing = true;
+			soundsOfAdd.PlayNext();
+			skeleton.StartAnimation("Bay toss", delegate
 			{
-				_addedBayleaves = true;
+				addedBayleaves = true;
 				MixIngrediant(EIngrediants.Herbs);
 			});
 		}
@@ -367,79 +365,79 @@ public class CookingMiniGameScene : AbstractScene
 
 	private void MixIngrediant(EIngrediants ingrediant)
 	{
-		_spine.RestartAnimation();
+		skeleton.RestartAnimation();
 		if (ingrediant == EIngrediants.Pasta)
 		{
-			_spine.StartAnimation("Ingrediant mixing", delegate
+			skeleton.StartAnimation("Ingrediant mixing", delegate
 			{
 				MakeBurned();
-				_spine.StartAnimation("Shits burning", Click);
+				skeleton.StartAnimation("Shits burning", Click);
 			});
 		}
 		else
 		{
-			_ingrediants.Add(ingrediant);
-			_spine.StartAnimation("Ingrediant mixing", EndAnimation);
+			ingrediants.Add(ingrediant);
+			skeleton.StartAnimation("Ingrediant mixing", EndAnimation);
 		}
 	}
 
 	private void MakeBurned()
 	{
-		_soundsOfBurning.PlayNext();
-		_burned = true;
-		_ticks = 0f;
-		_overlay.IsVisible = true;
+		soundsOfBurning.PlayNext();
+		burned = true;
+		ticks = 0f;
+		overlay.IsVisible = true;
 	}
 
 	private void Click()
 	{
-		_burned = false;
-		_overlay.IsVisible = false;
-		_time = _ticks;
-		_spine.ResetAnimation();
+		burned = false;
+		overlay.IsVisible = false;
+		seconds = ticks;
+		skeleton.ResetAnimation();
 		EndAnimation();
 	}
 
 	private void EndAnimation()
 	{
-		if (_pastaAppeared)
+		if (pastaAppeared)
 		{
-			Completable = true;
+			IsSelectingIngredientCompleted = true;
 		}
-		else if (_ingrediants.Count >= IngrediantCount)
+		else if (ingrediants.Count >= INGREDIANTS)
 		{
 			AddPasta();
 		}
 		else
 		{
-			_mixing = false;
+			mixing = false;
 		}
 	}
 
 	private void AddPasta()
 	{
-		_pastaAppeared = true;
-		_soundsOfAdd.PlayNext();
+		pastaAppeared = true;
+		soundsOfAdd.PlayNext();
 		MixIngrediant(EIngrediants.Pasta);
 	}
 
 	public void ShowResult()
 	{
-		IsDone = false;
-		FadingMediaPlayer.ApplyNow(0f);
+		IsShowingResultCompleted = false;
+		FadingMediaPlayer.ApplyWithoutFading(0f);
 		base.Game.Fader.FadeOut(delegate
 		{
-			_soundsOfDrum.PlayNext();
-			_requestedResult = true;
+			soundsOfDrum.PlayNext();
+			requestedResult = true;
 		});
 	}
 
 	private void ApplyResultWithFade()
 	{
 		int fails = 0;
-		for (int i = 0, j = 0; i < _ingrediants.Count; i++)
+		for (int i = 0, j = 0; i < ingrediants.Count; i++)
 		{
-			EIngrediants ingrediant = _ingrediants[i];
+			EIngrediants ingrediant = ingrediants[i];
 			if (ingrediant == (EIngrediants)j)
 			{
 				j++;
@@ -451,7 +449,7 @@ public class CookingMiniGameScene : AbstractScene
 		}
 		bool isPoor;
 		bool isPerfect;
-		if (!(_time < ColdTime) && _time <= FryTime)
+		if (!(seconds < COLD_TIME) && seconds <= FRY_TIME)
 		{
 			switch (fails)
 			{
@@ -475,27 +473,27 @@ public class CookingMiniGameScene : AbstractScene
 			isPoor = true;
 			isPerfect = false;
 		}
-		PlayerPreferences.GetPlayerData().SetFlag("Pasta.Poor", isPoor);
-		PlayerPreferences.GetPlayerData().SetFlag("Pasta.Perfect", isPerfect);
-		_backgroundBad.Visible = isPoor;
-		_backgroundOkay.Visible = !isPoor && !isPerfect;
-		_backgroundGreat.Visible = isPerfect;
+		PlayerPreferences.GetPlayerData().InsertFlag("Pasta.Poor", isPoor);
+		PlayerPreferences.GetPlayerData().InsertFlag("Pasta.Perfect", isPerfect);
+		badOverlayLayer.Visible = isPoor;
+		okayOverlayLayer.Visible = !isPoor && !isPerfect;
+		greatOverlayLayer.Visible = isPerfect;
 		base.Game.Fader.FadeIn(delegate
 		{
 			if (isPerfect)
 			{
 				base.Game.Achievements.TriggerAchievement(Achievements.AchievementGeneric11);
-				_soundsOfGreat.PlayNext();
+				soundsOfGreat.PlayNext();
 			}
 			else if (isPoor)
 			{
-				_soundsOfBad.PlayNext();
+				soundsOfBad.PlayNext();
 			}
 			else
 			{
-				_soundsOfOkay.PlayNext();
+				soundsOfOkay.PlayNext();
 			}
-			IsDone = true;
+			IsShowingResultCompleted = true;
 		});
 	}
 }

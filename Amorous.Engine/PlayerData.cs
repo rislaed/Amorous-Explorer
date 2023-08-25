@@ -496,17 +496,17 @@ public class PlayerData : IPlayerData
 		Flags.Clear();
 	}
 
-	public int GetState(string key)
+	public int GetStage(string key)
 	{
 		if (!QuestStages.ContainsKey(key))
 		{
-			SetStage(key, 10);
+			InsertStage(key, 10);
 			return 10;
 		}
 		return QuestStages[key];
 	}
 
-	public void SetStage(string key, int stage)
+	public void InsertStage(string key, int stage)
 	{
 		if (key != null)
 		{
@@ -534,7 +534,7 @@ public class PlayerData : IPlayerData
 		}
 	}
 
-	public void ResetDeletedContacts()
+	public void ResetDisabledContacts()
 	{
 		DisabledContacts = EPhoneContacts.None;
 	}
@@ -552,16 +552,16 @@ public class PlayerData : IPlayerData
 		return count;
 	}
 
-	public bool GetFlag(string key)
+	public bool HasFlag(string key)
 	{
 		if (!Flags.ContainsKey(key))
 		{
-			return HasChanged(key);
+			return HasInternalFlag(key);
 		}
 		return Flags[key];
 	}
 
-	private bool HasChanged(string key)
+	private bool HasInternalFlag(string key)
 	{
 		if (key.StartsWith("Player."))
 		{
@@ -607,7 +607,7 @@ public class PlayerData : IPlayerData
 			string[] parts = key.Split(new char[1] { '.' });
 			if (parts.Length > 2 && int.TryParse(parts[2], out var state))
 			{
-				return GetState(parts[1]) == state;
+				return GetStage(parts[1]) == state;
 			}
 		}
 		return key switch
@@ -621,7 +621,7 @@ public class PlayerData : IPlayerData
 		};
 	}
 
-	public void SetFlag(string key, bool flag)
+	public void InsertFlag(string key, bool flag)
 	{
 		if (key.StartsWith("Player."))
 		{
@@ -644,9 +644,9 @@ public class PlayerData : IPlayerData
 		Flags[key] = flag;
 	}
 
-	public void Remove(string key, bool same = true)
+	public void Remove(string key, bool exactMatch = true)
 	{
-		Flags.Keys.Where((string next) => (!same) ? (key == next) : next.StartsWith(key)).ToList().ForEach(delegate(string key)
+		Flags.Keys.Where((string next) => (!exactMatch) ? (key == next) : next.StartsWith(key)).ToList().ForEach(delegate(string key)
 		{
 			Flags.Remove(key);
 		});

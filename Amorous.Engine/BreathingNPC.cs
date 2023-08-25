@@ -10,10 +10,10 @@ public abstract class BreathingNPC : AbstractNPC
 { // _xZgbANe7gi6i2DAhBEkKpR1QFLe
 	private class SpritePiece
 	{
-		private readonly BreathingNPC _npc;
-		private Color _mask = Color.White;
-		private float _alpha;
-		private readonly Texture2D _texture;
+		private readonly BreathingNPC npc;
+		private Color color = Color.White;
+		private float alpha;
+		private readonly Texture2D texture;
 
 		public string Name { get; private set; }
 
@@ -23,59 +23,59 @@ public abstract class BreathingNPC : AbstractNPC
 			{
 				if (value < 0f)
 				{
-					_alpha = 0f;
+					alpha = 0f;
 				}
 				else if (value <= 1f)
 				{
-					_alpha = value;
+					alpha = value;
 				}
 				else
 				{
-					_alpha = 1f;
+					alpha = 1f;
 				}
-				_mask.A = (byte)(255f * _alpha);
+				color.A = (byte)(255f * alpha);
 			}
 		}
 
 		public SpritePiece(BreathingNPC npc, string name, Texture2D texture)
 		{
-			_npc = npc;
+			this.npc = npc;
 			Name = name;
-			_texture = texture;
+			this.texture = texture;
 			Alpha = 0f;
 		}
 
 		public void Draw(SpriteBatch spriteBatch, float scale, bool hovered)
 		{
-			if (_mask.A != 0)
+			if (color.A != 0)
 			{
-				_mask.G = (byte)((!hovered) ? byte.MaxValue : 0);
-				_mask.B = (byte)((!hovered) ? byte.MaxValue : 0);
-				spriteBatch.Draw(_texture, _npc._location, (Rectangle?)null, _mask, 0f, Vector2.Zero, scale, (SpriteEffects)(_npc.FlipX ? 1 : 0), 0f);
+				color.G = (byte)((!hovered) ? byte.MaxValue : 0);
+				color.B = (byte)((!hovered) ? byte.MaxValue : 0);
+				spriteBatch.Draw(texture, npc.location, (Rectangle?)null, color, 0f, Vector2.Zero, scale, (SpriteEffects)(npc.FlipX ? 1 : 0), 0f);
 			}
 		}
 	}
 
-	private readonly string _sprite;
-	private List<SpritePiece> _pieces;
-	private Vector2 _location = Vector2.Zero;
+	private readonly string path;
+	private List<SpritePiece> pieces;
+	private Vector2 location = Vector2.Zero;
 
 	public bool Breathing = true;
 
 	protected readonly float BreathingOffset = Utils.RandomFloat(0f, (float)Math.PI * 2f);
 	protected float BreathingSpeed = 1f;
 
-	private readonly Effect _effect;
+	private readonly Effect effect;
 
 	public override float X
 	{
 		get
 		{
-			return _location.X;
+			return location.X;
 		}
 		set
 		{
-			_location.X = value;
+			location.X = value;
 		}
 	}
 
@@ -83,21 +83,20 @@ public abstract class BreathingNPC : AbstractNPC
 	{
 		get
 		{
-			return _location.Y;
+			return location.Y;
 		}
 		set
 		{
-			_location.Y = value;
+			location.Y = value;
 		}
 	}
 
-	protected BreathingNPC(IAmorous game, string sprite, float scale = 1f)
-		: base(game)
+	protected BreathingNPC(IAmorous game, string path, float scale = 1f) : base(game)
 	{
-		_sprite = sprite;
-		_pieces = new List<SpritePiece>();
+		this.path = path;
+		pieces = new List<SpritePiece>();
 		base.Scale = scale;
-		_effect = base.Game.Content.Load<Effect>("Assets/Shaders/Breathing");
+		effect = base.Game.Content.Load<Effect>("Assets/Shaders/Breathing");
 	}
 
 	public override void Start()
@@ -136,18 +135,18 @@ public abstract class BreathingNPC : AbstractNPC
 		{
 			return;
 		}
-		List<SpritePiece> pieces = new List<SpritePiece>();
+		List<SpritePiece> sprites = new List<SpritePiece>();
 		foreach (string name in pending)
 		{
-			SpritePiece piece = _pieces.FirstOrDefault((SpritePiece piece) => piece.Name == name);
+			SpritePiece piece = pieces.FirstOrDefault((SpritePiece piece) => piece.Name == name);
 			if (piece != null)
 			{
-				pieces.Add(piece);
-				_pieces.Remove(piece);
+				sprites.Add(piece);
+				pieces.Remove(piece);
 			}
 		}
-		pieces.AddRange(_pieces);
-		_pieces = pieces;
+		sprites.AddRange(pieces);
+		pieces = sprites;
 	}
 
 	protected virtual string[] GetPieces()
@@ -157,8 +156,8 @@ public abstract class BreathingNPC : AbstractNPC
 
 	private void LoadAsset(ContentManager content, string name)
 	{
-		Texture2D texture = content.Load<Texture2D>(Path.Combine(_sprite, name));
-		_pieces.Add(new SpritePiece(this, name, texture));
+		Texture2D texture = content.Load<Texture2D>(Path.Combine(path, name));
+		pieces.Add(new SpritePiece(this, name, texture));
 	}
 
 	public virtual void Draw(SpriteBatch spriteBatch)
@@ -166,17 +165,17 @@ public abstract class BreathingNPC : AbstractNPC
 		base.Draw();
 		if (Breathing)
 		{
-			_effect.Parameters["Time"].SetValue(Utils.Date);
-			_effect.Parameters["BreathingOffset"].SetValue(BreathingOffset);
-			_effect.Parameters["BreathingSpeed"].SetValue(BreathingSpeed);
-			_effect.CurrentTechnique.Passes[0].Apply();
+			effect.Parameters["Time"].SetValue(Utils.Date);
+			effect.Parameters["BreathingOffset"].SetValue(BreathingOffset);
+			effect.Parameters["BreathingSpeed"].SetValue(BreathingSpeed);
+			effect.CurrentTechnique.Passes[0].Apply();
 		}
 		DrawPieces(spriteBatch);
 	}
 
 	protected void DrawPieces(SpriteBatch spriteBatch)
 	{
-		using List<SpritePiece>.Enumerator enumerator = _pieces.GetEnumerator();
+		using List<SpritePiece>.Enumerator enumerator = pieces.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			enumerator.Current.Draw(spriteBatch, base.Scale, IsHovered);
@@ -185,7 +184,7 @@ public abstract class BreathingNPC : AbstractNPC
 
 	protected override void SetAlpha(string name, float alpha)
 	{
-		SpritePiece piece = _pieces.FirstOrDefault((SpritePiece piece) => piece.Name == name);
+		SpritePiece piece = pieces.FirstOrDefault((SpritePiece piece) => piece.Name == name);
 		if (piece != null)
 		{
 			piece.Alpha = alpha;
@@ -193,6 +192,6 @@ public abstract class BreathingNPC : AbstractNPC
 	}
 
 	protected override bool Refresh(int stage) => true;
-	protected override void Fade(float percent) {}
+	protected override void Fade(float amount) {}
 	protected override void Dispose() {}
 }

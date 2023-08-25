@@ -42,6 +42,6 @@ public abstract class ClubStaticSpineNPC : SpineNPC<ClubStaticSpineNPC.EHeads, C
 		SetEmotion(EHeads.None);
 		SetPose(EPoses.Nude);
 		SetClothes(EClothes.Shirt, EClothes.Pants);
-		base.Spine.StartAnimationWithLooping("animation");
+		base.Skeleton.StartAnimationWithLooping("animation");
 	}
 }
