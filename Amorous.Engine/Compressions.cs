@@ -18,7 +18,12 @@ public static class Compressions
 
 	public static string ReadStreamAsText(string path)
 	{
-		using StreamReader streamReader = new StreamReader(ReadStream(path));
+		return ReadStreamAsText(ReadStream(path));
+	}
+
+	public static string ReadStreamAsText(Stream stream)
+	{
+		using StreamReader streamReader = new StreamReader(stream);
 		return streamReader.ReadToEnd();
 	}
 }

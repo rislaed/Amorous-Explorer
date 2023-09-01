@@ -14,34 +14,12 @@
 			"problemMatcher": "$msCompile"
 		},
 		{
-			"label": "publish (Windows)",
+			"label": "publish",
 			"command": "dotnet",
 			"type": "process",
 			"args": [
 				"publish",
 				"${workspaceFolder}/Amorous.sln",
-				"--runtime",
-				"win-x64",
-				"--framework",
-				"net40",
-				"--self-contained",
-				"/property:GenerateFullPaths=true",
-				"/consoleloggerparameters:NoSummary"
-			],
-			"problemMatcher": "$msCompile"
-		},
-		{
-			"label": "publish (Linux)",
-			"command": "dotnet",
-			"type": "process",
-			"args": [
-				"publish",
-				"${workspaceFolder}/Amorous.sln",
-				"--runtime",
-				"linux-x64",
-				"--framework",
-				"net6.0",
-				"--self-contained",
 				"/property:GenerateFullPaths=true",
 				"/consoleloggerparameters:NoSummary"
 			],

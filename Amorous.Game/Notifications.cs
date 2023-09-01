@@ -29,7 +29,7 @@ public class Notifications
 		desktop.SetSkin("Assets/GUI/Squid/DefaultSkin", "Assets/GUI/Squid/DefaultSkin - Blue");
 		ControlStyle value = new ControlStyle
 		{
-			Font = "Assets/Gui/Fonts/Bold-16"
+			Font = "Assets/GUI/Fonts/Bold-16"
 		};
 		desktop.Skin["window"].Tint = ColorInt.ARGB(0.75f, 1f, 1f, 1f);
 		desktop.Skin.Add("header", value);

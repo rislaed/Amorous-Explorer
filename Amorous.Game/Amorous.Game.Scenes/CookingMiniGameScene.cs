@@ -22,7 +22,7 @@ public class CookingMiniGameScene : AbstractScene
 
 		public GUI(IAmorous game, Action action) : base(game)
 		{
-			interactable = AddButtonInteractable("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/Gui/Fonts/Bold-26", "Stop cooking!", Color.White, 832, 970, new Rectangle(832, 970, 256, 102), action);
+			interactable = AddButtonInteractable("Assets/Scenes/Cooking/Button", "Assets/Scenes/Cooking/Button hover", "Assets/GUI/Fonts/Bold-26", "Stop cooking!", Color.White, 832, 970, new Rectangle(832, 970, 256, 102), action);
 			interactable.IsVisible = false;
 		}
 	}

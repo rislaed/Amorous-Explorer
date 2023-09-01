@@ -1,2 +1,7 @@
+# Compiled files
 obj/
 bin/
+
+# Footage internals
+/Content*/
+/Saves/

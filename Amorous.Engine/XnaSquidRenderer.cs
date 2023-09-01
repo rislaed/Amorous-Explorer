@@ -15,7 +15,7 @@ public class XnaSquidRenderer : IDisposable, ISquidRenderer
 	private readonly SpriteBatch spriteBatch;
 	private readonly Texture2D fallback;
 	private readonly RasterizerState rasterizerState;
-	private readonly string fallbackFontAssetName = "Assets/Gui/Fonts/Bold-14";
+	private readonly string fallbackFontAssetName = "Assets/GUI/Fonts/Bold-14";
 	private int internalIndex;
 	private SpriteFont internalFont;
 	private Texture2D internalTexture;
