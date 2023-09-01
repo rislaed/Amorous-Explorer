@@ -1,0 +1,35 @@
+name: Deploy
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0
+
+      - name: Publish
+        run: dotnet publish Amorous.sln /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary
+
+      - name: Cleaning
+        working-directory: Amorous.Explorer/bin/Debug/net40/publish
+        run: |
+          del Facepunch.Steamworks.dll
+          del FNA.dll
+          del FNA.dll.config
+          del Newtonsoft.Json.dll
+          del Spine.dll
+          del Squid.dll
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Amorous.Explorer-${{ github.run_number }}
+          path: Amorous.Explorer/bin/Debug/net40/publish
+          if-no-files-found: error

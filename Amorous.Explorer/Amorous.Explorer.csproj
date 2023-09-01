@@ -23,14 +23,12 @@
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 	</PropertyGroup>
 	<ItemGroup>
-		<!-- Reference Include="Amorous.Engine">
+		<Reference Include="Amorous.Engine">
 			<HintPath>../Amorous.Engine.dll</HintPath>
 		</Reference>
 		<Reference Include="Amorous.Game">
 			<HintPath>../Amorous.Game.dll</HintPath>
-		</Reference -->
-		<ProjectReference Include="../Amorous.Engine/Amorous.Engine.csproj" />
-		<ProjectReference Include="../Amorous.Game/Amorous.Game.csproj" />
+		</Reference>
 		<Reference Include="FNA">
 			<HintPath>../FNA.dll</HintPath>
 		</Reference>
