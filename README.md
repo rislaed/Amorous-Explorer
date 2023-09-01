@@ -4,7 +4,11 @@ Thrust yourself to the front of the line of [Amorous](https://store.steampowered
 
 ## Installing
 
-First of all, start by finding folder with your game, for Steam it is usually enough to [open the local Amorous folder in library](https://savelocation.net/steam-game-folder). Download [an artifact from recent runs](https://github.com/rislaed/amorous-explorer/actions/workflows/deploy.yml), resulting archive contains necessary libraries and executables. Duplicate game folder to any other location (for example, to desktop) by unpacking contents of downloaded archive into it and agreeing to replacing or merging. When installing on any Unix-like system, rename ALL files Amorous.Game.Unix.\* to Amorous.Explorer.\* (e.g., Amorous.Game.Unix.bin.osx -> Amorous.Explorer.bin.osx), also change references in renamed Amorous.Explorer executable. Run Amorous.Explorer.exe or Amorous.Explorer and you've done!
+1. Open folder with game installation, for Steam it is usually enough to [open the local Amorous folder in library](https://savelocation.net/steam-game-folder).
+2. Download [an artifact from recent runs](https://github.com/rislaed/amorous-explorer/actions/workflows/deploy.yml), resulting archive contains necessary libraries and executables.
+3. Duplicate game folder to any other location (for example, to desktop) by unpacking contents of downloaded archive into it and agreeing to replacing or merging.
+4. When installing on any Unix-like system, rename ALL files Amorous.Game.Unix.\* to Amorous.Explorer.\* (e.g., Amorous.Game.Unix.bin.osx -> Amorous.Explorer.bin.osx), also change references in renamed Amorous.Explorer executable.
+5. Run Amorous.Explorer.exe or Amorous.Explorer and you've done!
 
 ## What it can do?
 
