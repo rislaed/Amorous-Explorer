@@ -32,6 +32,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 #if WINDOWS_STOREAPP
 using System.Threading.Tasks;
@@ -56,37 +57,38 @@ namespace Spine {
 		#if !(UNITY_5 || UNITY_4 || UNITY_WSA || UNITY_WP8 || UNITY_WP8_1)
 		#if WINDOWS_STOREAPP
 
-		private async Task<SkeletonData> ReadFile(string path) {
+		private async Task<SkeletonData> ReadFile(string path, List<AnimationStateEvent> events = null) {
 			var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
 			var file = await folder.GetFileAsync(path).AsTask().ConfigureAwait(false);
-			using (var reader = new StreamReader(await file.OpenStreamForReadAsync().ConfigureAwait(false))) {
-				SkeletonData skeletonData = ReadSkeletonData(reader);
-				skeletonData.Name = Path.GetFileNameWithoutExtension(path);
-				return skeletonData;
-			}
+			var stream = await file.OpenStreamForReadAsync().ConfigureAwait(false);
+			return ReadSkeletonData(stream, Path.GetFileNameWithoutExtension(path), events);
 		}
 
-		public SkeletonData ReadSkeletonData (String path) {
-			return this.ReadFile(path).Result;
+		public SkeletonData ReadSkeletonData (String path, List<AnimationStateEvent> events = null) {
+			return this.ReadFile(path, events).Result;
 		}
 		#else
-		public SkeletonData ReadSkeletonData (String path) {
-			#if WINDOWS_PHONE
-			Stream stream = Microsoft.Xna.Framework.TitleContainer.OpenStream(path);
-			using (StreamReader reader = new StreamReader(stream)) {
-			#else
-			using (StreamReader reader = new StreamReader(path)) {
-			#endif // WINDOWS_PHONE
-				SkeletonData skeletonData = ReadSkeletonData(reader);
-				skeletonData.name = Path.GetFileNameWithoutExtension(path);
-				return skeletonData;
-			}
+		public SkeletonData ReadSkeletonData (String path, List<AnimationStateEvent> events = null) {
+		#if WINDOWS_PHONE
+			var stream = Microsoft.Xna.Framework.TitleContainer.OpenStream(path);
+		#else
+			var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+		#endif
+			return ReadSkeletonData(stream, Path.GetFileNameWithoutExtension(path), events);
 		}
 
 		#endif // WINDOWS_STOREAPP
 		#endif // !UNITY
 
-		public SkeletonData ReadSkeletonData (TextReader reader) {
+		public SkeletonData ReadSkeletonData (Stream stream, string skeletonName, List<AnimationStateEvent> events = null) {
+			using (var reader = new StreamReader(stream)) {
+				SkeletonData skeletonData = ReadSkeletonData(reader, events);
+				skeletonData.name = skeletonName;
+				return skeletonData;
+			}
+		}
+
+		public SkeletonData ReadSkeletonData (TextReader reader, List<AnimationStateEvent> events = null) {
 			if (reader == null) throw new ArgumentNullException("reader cannot be null.");
 
 			var skeletonData = new SkeletonData();
@@ -206,10 +208,17 @@ namespace Spine {
 				}
 			}
 
+			// State events.
+			if (events != null) {
+				foreach (string data in events.Select((AnimationStateEvent se) => se.EventName).Distinct()) {
+					skeletonData.events.Add(new EventData(data));
+				}
+			}
+
 			// Animations.
 			if (root.ContainsKey("animations")) {
 				foreach (KeyValuePair<String, Object> entry in (Dictionary<String, Object>)root["animations"])
-					ReadAnimation(entry.Key, (Dictionary<String, Object>)entry.Value, skeletonData);
+					ReadAnimation(entry.Key, (Dictionary<String, Object>)entry.Value, skeletonData, events);
 			}
 
 			skeletonData.bones.TrimExcess();
@@ -383,7 +392,7 @@ namespace Spine {
 			return Convert.ToInt32(hexString.Substring(colorIndex * 2, 2), 16) / (float)255;
 		}
 
-		private void ReadAnimation (String name, Dictionary<String, Object> map, SkeletonData skeletonData) {
+		private void ReadAnimation (String name, Dictionary<String, Object> map, SkeletonData skeletonData, List<AnimationStateEvent> events = null) {
 			var timelines = new ExposedList<Timeline>();
 			float duration = 0;
 			float scale = Scale;
@@ -627,6 +636,19 @@ namespace Spine {
 				}
 				timelines.Add(timeline);
 				duration = Math.Max(duration, timeline.frames[timeline.FrameCount - 1]);
+			}
+
+			// State event timeline.
+			if (events != null && events.Any((AnimationStateEvent se) => se.AnimationName == name)) {
+				foreach (AnimationStateEvent state in events.Where((AnimationStateEvent se) => se.AnimationName == name).ToList()) {
+					EventTimeline timeline = new EventTimeline(state.FrameTimes.Length);
+					EventData data = skeletonData.FindEvent(state.EventName);
+					for (int offset = 0; offset < state.FrameTimes.Length; offset++) {
+						timeline.SetFrame(offset, state.FrameTimes[offset], new Event(data));
+					}
+					timelines.Add(timeline);
+					duration = Math.Max(duration, timeline.frames[timeline.FrameCount - 1]);
+				}
 			}
 
 			timelines.TrimExcess();

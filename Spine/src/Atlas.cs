@@ -50,13 +50,8 @@ namespace Spine {
 		private async Task ReadFile(string path, TextureLoader textureLoader) {
 			var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
 			var file = await folder.GetFileAsync(path).AsTask().ConfigureAwait(false);
-			using (var reader = new StreamReader(await file.OpenStreamForReadAsync().ConfigureAwait(false))) {
-				try {
-					Load(reader, Path.GetDirectoryName(path), textureLoader);
-				} catch (Exception ex) {
-					throw new Exception("Error reading atlas file: " + path, ex);
-				}
-			}
+			var stream = await file.OpenStreamForReadAsync().ConfigureAwait(false);
+			return LoadStream(stream, path, textureLoader);
 		}
 
 		public Atlas(String path, TextureLoader textureLoader) {
@@ -67,23 +62,20 @@ namespace Spine {
 		public Atlas (String path, TextureLoader textureLoader) {
 
 			#if WINDOWS_PHONE
-			Stream stream = Microsoft.Xna.Framework.TitleContainer.OpenStream(path);
-			using (StreamReader reader = new StreamReader(stream)) {
+			var stream = Microsoft.Xna.Framework.TitleContainer.OpenStream(path);
 			#else
-			using (StreamReader reader = new StreamReader(path)) {
+			var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
 			#endif // WINDOWS_PHONE
 
-				try {
-					Load(reader, Path.GetDirectoryName(path), textureLoader);
-				} catch (Exception ex) {
-					throw new Exception("Error reading atlas file: " + path, ex);
-				}
-
-			}
+			LoadStream(stream, path, textureLoader);
 		}
 		#endif // WINDOWS_STOREAPP
 
 		#endif // !(UNITY)
+
+		public Atlas (Stream stream, string path, TextureLoader textureLoader) {
+			LoadStream(stream, path, textureLoader);
+		}
 
 		public Atlas (TextReader reader, String dir, TextureLoader textureLoader) {
 			Load(reader, dir, textureLoader);
@@ -93,6 +85,16 @@ namespace Spine {
 			this.pages = pages;
 			this.regions = regions;
 			this.textureLoader = null;
+		}
+
+		private void LoadStream (Stream stream, string path, TextureLoader textureLoader) {
+			using (var reader = new StreamReader(stream)) {
+				try {
+					Load(reader, Path.GetDirectoryName(path), textureLoader);
+				} catch (Exception ex) {
+					throw new Exception("Error reading atlas file: " + path, ex);
+				}
+			}
 		}
 
 		private void Load (TextReader reader, String imagesDir, TextureLoader textureLoader) {
