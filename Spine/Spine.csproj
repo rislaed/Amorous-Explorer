@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{94144E22-2431-4A8F-AC04-DEC22F7EDD8F}</ProjectGuid>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spine</RootNamespace>
+    <AssemblyName>Spine</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+</Project>
