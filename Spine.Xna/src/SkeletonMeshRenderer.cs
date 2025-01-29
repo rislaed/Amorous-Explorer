@@ -72,13 +72,14 @@ namespace Spine {
 			Bone.yDown = true;
 		}
 
-		public void Begin () {
+		public void Begin (float x = 0f, float y = 0f, float scale = 1f) {
 			defaultBlendState = premultipliedAlpha ? BlendState.AlphaBlend : BlendState.NonPremultiplied;
 
 			device.RasterizerState = rasterizerState;
 			device.BlendState = defaultBlendState;
 
 			effect.Projection = Matrix.CreateOrthographicOffCenter(0, device.Viewport.Width, device.Viewport.Height, 0, 1, 0);
+			effect.View = Matrix.CreateTranslation(0 - x, 0 - y, 0) * Matrix.CreateScale(scale, scale, 1) * Matrix.CreateTranslation(x, y, 0);
 		}
 
 		public void End () {
@@ -88,13 +89,16 @@ namespace Spine {
 			}
 		}
 
-		public void Draw (Skeleton skeleton) {
+		public void Draw (Skeleton skeleton, Texture2D overrideTexture = null, Func<int, string, bool> beforeRenderSlot = null, Color? overrideColor = null) {
 			float[] vertices = this.vertices;
 			var drawOrder = skeleton.DrawOrder;
 			var drawOrderItems = skeleton.DrawOrder.Items;
 			float skeletonR = skeleton.R, skeletonG = skeleton.G, skeletonB = skeleton.B, skeletonA = skeleton.A;
 			for (int i = 0, n = drawOrder.Count; i < n; i++) {
 				Slot slot = drawOrderItems[i];
+				if (beforeRenderSlot != null && !beforeRenderSlot(i, slot.Data.Name)) {
+					continue;
+				}
 				Attachment attachment = slot.Attachment;
 				if (attachment is RegionAttachment) {
 					RegionAttachment regionAttachment = (RegionAttachment)attachment;
@@ -108,8 +112,12 @@ namespace Spine {
 					item.triangles = quadTriangles;
 					VertexPositionColorTexture[] itemVertices = item.vertices;
 
-					AtlasRegion region = (AtlasRegion)regionAttachment.RendererObject;
-					item.texture = (Texture2D)region.page.rendererObject;
+					if (overrideTexture != null) {
+						item.texture = overrideTexture;
+					} else {
+						AtlasRegion region = (AtlasRegion)regionAttachment.RendererObject;
+						item.texture = (Texture2D)region.page.rendererObject;
+					}
 
 					Color color;
 					float a = skeletonA * slot.A * regionAttachment.A;
@@ -124,6 +132,12 @@ namespace Spine {
 								skeletonG * slot.G * regionAttachment.G,
 								skeletonB * slot.B * regionAttachment.B, a);
 					}
+					if (overrideColor.HasValue) {
+						color.R *= overrideColor.Value.R;
+						color.G *= overrideColor.Value.G;
+						color.B *= overrideColor.Value.B;
+					}
+
 					itemVertices[TL].Color = color;
 					itemVertices[BL].Color = color;
 					itemVertices[BR].Color = color;
@@ -162,8 +176,12 @@ namespace Spine {
 					MeshItem item = batcher.NextItem(vertexCount, triangles.Length);
 					item.triangles = triangles;
 
-					AtlasRegion region = (AtlasRegion)mesh.RendererObject;
-					item.texture = (Texture2D)region.page.rendererObject;
+					if (overrideTexture != null) {
+						item.texture = overrideTexture;
+					} else {
+						AtlasRegion region = (AtlasRegion)mesh.RendererObject;
+						item.texture = (Texture2D)region.page.rendererObject;
+					}
 
 					Color color;
 					float a = skeletonA * slot.A * mesh.A;
@@ -177,6 +195,11 @@ namespace Spine {
 								skeletonR * slot.R * mesh.R,
 								skeletonG * slot.G * mesh.G,
 								skeletonB * slot.B * mesh.B, a);
+					}
+					if (overrideColor.HasValue) {
+						color.R *= overrideColor.Value.R;
+						color.G *= overrideColor.Value.G;
+						color.B *= overrideColor.Value.B;
 					}
 
 					float[] uvs = mesh.UVs;
@@ -199,8 +222,12 @@ namespace Spine {
 					MeshItem item = batcher.NextItem(vertexCount, triangles.Length);
 					item.triangles = triangles;
 
-					AtlasRegion region = (AtlasRegion)mesh.RendererObject;
-					item.texture = (Texture2D)region.page.rendererObject;
+					if (overrideTexture != null) {
+						item.texture = overrideTexture;
+					} else {
+						AtlasRegion region = (AtlasRegion)mesh.RendererObject;
+						item.texture = (Texture2D)region.page.rendererObject;
+					}
 
 					Color color;
 					float a = skeletonA * slot.A * mesh.A;
@@ -214,6 +241,11 @@ namespace Spine {
 								skeletonR * slot.R * mesh.R,
 								skeletonG * slot.G * mesh.G,
 								skeletonB * slot.B * mesh.B, a);
+					}
+					if (overrideColor.HasValue) {
+						color.R *= overrideColor.Value.R;
+						color.G *= overrideColor.Value.G;
+						color.B *= overrideColor.Value.B;
 					}
 
 					float[] uvs = mesh.UVs;
