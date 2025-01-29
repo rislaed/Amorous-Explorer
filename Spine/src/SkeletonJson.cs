@@ -57,7 +57,7 @@ namespace Spine {
 		#if !(UNITY_5 || UNITY_4 || UNITY_WSA || UNITY_WP8 || UNITY_WP8_1)
 		#if WINDOWS_STOREAPP
 
-		private async Task<SkeletonData> ReadFile(string path, List<AnimationStateEvent> events = null) {
+		private async Task<SkeletonData> ReadFile (String path, List<AnimationStateEvent> events = null) {
 			var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
 			var file = await folder.GetFileAsync(path).AsTask().ConfigureAwait(false);
 			var stream = await file.OpenStreamForReadAsync().ConfigureAwait(false);
@@ -80,7 +80,7 @@ namespace Spine {
 		#endif // WINDOWS_STOREAPP
 		#endif // !UNITY
 
-		public SkeletonData ReadSkeletonData (Stream stream, string skeletonName, List<AnimationStateEvent> events = null) {
+		public SkeletonData ReadSkeletonData (Stream stream, String skeletonName, List<AnimationStateEvent> events = null) {
 			using (var reader = new StreamReader(stream)) {
 				SkeletonData skeletonData = ReadSkeletonData(reader, events);
 				skeletonData.name = skeletonName;
@@ -210,7 +210,7 @@ namespace Spine {
 
 			// State events.
 			if (events != null) {
-				foreach (string data in events.Select((AnimationStateEvent se) => se.EventName).Distinct()) {
+				foreach (String data in events.Select((AnimationStateEvent se) => se.EventName).Distinct()) {
 					skeletonData.events.Add(new EventData(data));
 				}
 			}
@@ -235,8 +235,11 @@ namespace Spine {
 				name = (String)map["name"];
 
 			var type = AttachmentType.region;
-			if (map.ContainsKey("type"))
-				type = (AttachmentType)Enum.Parse(typeof(AttachmentType), (String)map["type"], false);
+			if (map.ContainsKey("type")) {
+				String attachmentType = (String)map["type"];
+				if (attachmentType == "weightedmesh") attachmentType = "skinnedmesh";
+				type = (AttachmentType)Enum.Parse(typeof(AttachmentType), attachmentType, false);
+			}
 
 			String path = name;
 			if (map.ContainsKey("path"))
@@ -265,14 +268,19 @@ namespace Spine {
 				}
 
 				return region;
-			case AttachmentType.mesh: {
+			case AttachmentType.mesh:
+			case AttachmentType.skinnedmesh:
+				var uvs = GetFloatArray(map, "uvs", 1);
+				var vertices = GetFloatArray(map, "vertices", 1);
+
+				if (uvs.Length == vertices.Length) {
 					MeshAttachment mesh = attachmentLoader.NewMeshAttachment(skin, name, path);
 					if (mesh == null) return null;
 
 					mesh.Path = path;
 					mesh.vertices = GetFloatArray(map, "vertices", Scale);
 					mesh.triangles = GetIntArray(map, "triangles");
-					mesh.regionUVs = GetFloatArray(map, "uvs", 1);
+					mesh.regionUVs = uvs;
 					mesh.UpdateUVs();
 
 					if (map.ContainsKey("color")) {
@@ -289,14 +297,11 @@ namespace Spine {
 					mesh.Height = GetInt(map, "height", 0) * Scale;
 
 					return mesh;
-				}
-			case AttachmentType.skinnedmesh: {
+				} else {
 					SkinnedMeshAttachment mesh = attachmentLoader.NewSkinnedMeshAttachment(skin, name, path);
 					if (mesh == null) return null;
 
 					mesh.Path = path;
-					float[] uvs = GetFloatArray(map, "uvs", 1);
-					float[] vertices = GetFloatArray(map, "vertices", 1);
 					var weights = new List<float>(uvs.Length * 3 * 3);
 					var bones = new List<int>(uvs.Length * 3);
 					float scale = Scale;
