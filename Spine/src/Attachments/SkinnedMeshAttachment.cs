@@ -30,17 +30,20 @@
  *****************************************************************************/
 
 using System;
+using System.Collections.Generic;
 
 namespace Spine {
 	/// <summary>Attachment that displays a texture region.</summary>
-	public class MeshAttachment : Attachment {
-		internal float[] vertices, uvs, regionUVs;
+	public class SkinnedMeshAttachment : Attachment {
+		internal int[] bones;
+		internal float[] weights, uvs, regionUVs;
 		internal int[] triangles;
 		internal float regionOffsetX, regionOffsetY, regionWidth, regionHeight, regionOriginalWidth, regionOriginalHeight;
 		internal float r = 1, g = 1, b = 1, a = 1;
 
 		public int HullLength { get; set; }
-		public float[] Vertices { get { return vertices; } set { vertices = value; } }
+		public int[] Bones { get { return bones; } set { bones = value; } }
+		public float[] Weights { get { return weights; } set { weights = value; } }
 		public float[] RegionUVs { get { return regionUVs; } set { regionUVs = value; } }
 		public float[] UVs { get { return uvs; } set { uvs = value; } }
 		public int[] Triangles { get { return triangles; } set { triangles = value; } }
@@ -69,7 +72,7 @@ namespace Spine {
 		public float Width { get; set; }
 		public float Height { get; set; }
 
-		public MeshAttachment (string name)
+		public SkinnedMeshAttachment (string name)
 			: base(name) {
 		}
 
@@ -92,17 +95,38 @@ namespace Spine {
 		}
 
 		public void ComputeWorldVertices (Slot slot, float[] worldVertices) {
-			Bone bone = slot.bone;
-			float x = bone.skeleton.x + bone.worldX, y = bone.skeleton.y + bone.worldY;
-			float m00 = bone.m00, m01 = bone.m01, m10 = bone.m10, m11 = bone.m11;
-			float[] vertices = this.vertices;
-			int verticesCount = vertices.Length;
-			if (slot.attachmentVerticesCount == verticesCount) vertices = slot.AttachmentVertices;
-			for (int i = 0; i < verticesCount; i += 2) {
-				float vx = vertices[i];
-				float vy = vertices[i + 1];
-				worldVertices[i] = vx * m00 + vy * m01 + x;
-				worldVertices[i + 1] = vx * m10 + vy * m11 + y;
+			Skeleton skeleton = slot.bone.skeleton;
+			ExposedList<Bone> skeletonBones = skeleton.bones;
+			float x = skeleton.x, y = skeleton.y;
+			float[] weights = this.weights;
+			int[] bones = this.bones;
+			if (slot.attachmentVerticesCount == 0) {
+				for (int w = 0, v = 0, b = 0, n = bones.Length; v < n; w += 2) {
+					float wx = 0, wy = 0;
+					int nn = bones[v++] + v;
+					for (; v < nn; v++, b += 3) {
+						Bone bone = skeletonBones.Items[bones[v]];
+						float vx = weights[b], vy = weights[b + 1], weight = weights[b + 2];
+						wx += (vx * bone.m00 + vy * bone.m01 + bone.worldX) * weight;
+						wy += (vx * bone.m10 + vy * bone.m11 + bone.worldY) * weight;
+					}
+					worldVertices[w] = wx + x;
+					worldVertices[w + 1] = wy + y;
+				}
+			} else {
+				float[] ffd = slot.AttachmentVertices;
+				for (int w = 0, v = 0, b = 0, f = 0, n = bones.Length; v < n; w += 2) {
+					float wx = 0, wy = 0;
+					int nn = bones[v++] + v;
+					for (; v < nn; v++, b += 3, f += 2) {
+						Bone bone = skeletonBones.Items[bones[v]];
+						float vx = weights[b] + ffd[f], vy = weights[b + 1] + ffd[f + 1], weight = weights[b + 2];
+						wx += (vx * bone.m00 + vy * bone.m01 + bone.worldX) * weight;
+						wy += (vx * bone.m10 + vy * bone.m11 + bone.worldY) * weight;
+					}
+					worldVertices[w] = wx + x;
+					worldVertices[w + 1] = wy + y;
+				}
 			}
 		}
 	}
