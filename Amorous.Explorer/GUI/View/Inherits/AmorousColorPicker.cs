@@ -37,7 +37,7 @@ public class AmorousColorPicker : Window, IText
 	}
 	public Color Color
 	{
-		get => new Color(color, color.A);
+		get => new Color(color.ToVector4());
 		set
 		{
 			if (color == value)
