@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationId>io.github.rislaed.amorous</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <AcceptAndroidSDKLicenses>True</AcceptAndroidSDKLicenses>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\Content-Release\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Link="Content-Release\%(RecursiveDir)\%(Filename)%(Extension)" />
+    <AndroidAsset Include="..\Amorous.Explorer.png" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Link="%(RecursiveDir)\%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+		<ProjectReference Include="..\Amorous.Explorer\Amorous.Explorer.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FNA.NET" Version="1.0.15.2403" />
+  </ItemGroup>
+</Project>
