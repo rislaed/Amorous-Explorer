@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Amorous.Engine</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFrameworks>net8.0;net8.0-android</TargetFrameworks>
+    <AcceptAndroidSDKLicenses>True</AcceptAndroidSDKLicenses>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GeneratedAssemblyInfoFile>Properties/AssemblyInfo.cs</GeneratedAssemblyInfoFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+		<ProjectReference Include="..\Spine.Xna\Spine.Xna.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+		<Reference Include="Squid">
+			<HintPath>..\Squid.dll</HintPath>
+		</Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FNA.NET" Version="1.0.15.2403" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>
