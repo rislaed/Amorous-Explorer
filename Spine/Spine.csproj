@@ -7,6 +7,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Spine</RootNamespace>
     <AssemblyName>Spine</AssemblyName>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net8.0;net8.0-android</TargetFrameworks>
+    <AcceptAndroidSDKLicenses>True</AcceptAndroidSDKLicenses>
   </PropertyGroup>
 </Project>

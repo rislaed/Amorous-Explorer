@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Amorous.Explorer.Windows</AssemblyName>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+		<OutputType>Exe</OutputType>
+		<FileAlignment>512</FileAlignment>
+    <DefineTrace>true</DefineTrace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Product>Amorous.Explorer.Windows</Product>
+    <Copyright>RislaeD</Copyright>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\Content-Release\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Link="Content-Release\%(RecursiveDir)\%(Filename)%(Extension)" />
+    <Content Include="..\Amorous.Explorer.png" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Link="%(RecursiveDir)\%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+		<ProjectReference Include="..\Amorous.Explorer\Amorous.Explorer.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FNA.NET" Version="1.0.15.2403" />
+  </ItemGroup>
+</Project>
